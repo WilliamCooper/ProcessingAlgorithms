@@ -1,0 +1,2887 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+hanging
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+AEROSOL PARTICLE MEASUREMENTS
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:AEROSOL-PARTICLE-MEASUREMENTS"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Condensation Nucleus Counters
+\end_layout
+
+\begin_layout Standard
+RAF uses two modified TSI, Inc.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "condensation nucleus counters"
+target "http://www.eol.ucar.edu/instruments/condensation-nucleus-counter-water-or-butanol"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+condensation nucleus counter|see 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{CN counter}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CN counter
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+concentration!aerosol
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+concentration!ultrafine particles
+\end_layout
+
+\end_inset
+
+ to measure the total concentration of ultrafine particles
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+particles!ultrafine
+\end_layout
+
+\end_inset
+
+ in the atmosphere, a 3760A
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CN counter!3760A
+\end_layout
+
+\end_inset
+
+ using n-butyl alcohol and a water-based 3786
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CN counter!3786
+\end_layout
+
+\end_inset
+
+ WCN (water condensation nucleus) counter.
+ Both are sensitive to particles in the approximate diameter range from
+ 0.010–3
+\begin_inset space ~
+\end_inset
+
+μm.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+RAF uses a modified TSI, Inc.
+ Model 3760 condensation nucleus counter to measure the concentration of
+ particulates in the atmosphere larger than about 0.01 
+\begin_inset Formula $\mu m$
+\end_inset
+
+ diameter.
+ Individual inlets have been designed for each research aircraft that provide
+ approximately isokinetic flow at research airspeeds.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+can we claim this for the HIMIL?
+\end_layout
+
+\end_inset
+
+ The CN counter is often used as a stand-alone instrument, but it also can
+ be placed downstream of various instruments, such as a counterflow virtual
+ impactor or differential mobility analyzer.
+ It is useful at altitudes up to about 11km.
+ It operates by condensing n-butyl alcohol on the particles as they pass
+ through a cooling/condenser tube where supersaturation of a few hundred
+ percent is produced.
+ The particles grow large enough to be seen by a laser-diode optical detector,
+ and the pulses from that detector are counted to obtain an estimate of
+ the total concentration of aerosol particles.
+ The counter does not resolve particle concentration by size; the lower
+ size limit of the TSI 3760 is about XXX 
+\begin_inset Formula $\mu m$
+\end_inset
+
+, and all particles above that size enter the measurement of the total concentra
+tion.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+fill in XXX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+If large concentrations are encountered, two or more particles may be present
+ in the viewing volume at once and will produce only a single pulse from
+ the photodetector.
+ This 
+\begin_inset Quotes eld
+\end_inset
+
+coincidence
+\begin_inset Quotes erd
+\end_inset
+
+ error, which increases from about 0.6% at a total concentration of 
+\begin_inset Formula $10^{3}/cm^{3}$
+\end_inset
+
+to about 6% at 
+\begin_inset Formula $10^{4}$
+\end_inset
+
+cm
+\begin_inset Formula $^{-3}$
+\end_inset
+
+; a correction for these effects of coincidence is applied, but for concentratio
+ns above about 
+\begin_inset Formula $2\times10^{4}$
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+cm
+\begin_inset Formula $^{-3}$
+\end_inset
+
+ effects of coincidence become large enough that the correction introduces
+ significant uncertainty in the measurements.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+The variables associated with these measurements of condensation-nucleus
+ concentrations are discussed in the remainder of this section.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+section needs attention to indexing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+CN Counter Inlet Pressure (hPa): 
+\bar under
+PCN
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+PCN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PCN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The absolute pressure inside the inlet tube of the instrument.
+
+\emph default
+ It
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pressure!inlet
+\end_layout
+
+\end_inset
+
+ as measured by a Heise Model 623 pressure sensor for the 3760A, and internally
+ by the 3786 WCN..
+ The measurement is used to convert the measured mass flow (FCN or XICN)
+ to volumetric flow and to convert measured particle concentration to equivalent
+ ambient concentration.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+CN Counter Inlet Temperature (
+\begin_inset Formula $^{\circ}C$
+\end_inset
+
+): 
+\bar under
+CNTEMP
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+CNTEMP
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CNTEMP
+\end_layout
+
+\end_inset
+
+
+\bar under
+,
+\bar default
+ 
+\series bold
+\bar under
+TEMP1
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TEMP1
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+TEMP1
+\end_layout
+
+\end_inset
+
+, 
+\bar under
+TEMP2
+\series medium
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TEMP2
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+TEMP2
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The sample air tempeerature measured at the intake of the 3760A or within
+ the 3786.
+
+\emph default
+ The value
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+temperature!inlet
+\end_layout
+
+\end_inset
+
+ is used to convert the measured mass flow (FCN or XICN) to true volumetric
+ flow and to convert measured particle concentration to equivalent ambient
+ concentration.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+concentration!ambient
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+\noindent
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Raw CN Counter Sample Flow Rate (SLPM): 
+\bar under
+FCN
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+FCN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FCN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Corrected CN Counter Sample Flow Rate (VLPM): 
+\bar under
+FCNC
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+FCNC
+\end_layout
+
+\end_inset
+
+
+\series bold
+\bar under
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+FCNC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The raw and corrected sample flows in the CN counters
+\emph default
+ are treated differently for the two models of CN counter.
+ In the 3760A, FCN is measured in standard liters per minute (SLPM) with
+ a mass flow meter.
+ The flow meter gives the volumetric flow rate that would apply under standard
+ conditions of 1013.25
+\begin_inset space ~
+\end_inset
+
+hPa and 21
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CN counter!flow rate
+\end_layout
+
+\end_inset
+
+ FCNC is the corrected sample flow rate in volumetric liters per minute
+ (VLPM) 
+\emph on
+at instrument pressure and temperature
+\emph default
+.
+ For the 3760A:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+FCN is the raw sample flow rate in standard liters per minute (SLPM) measured
+ with a Sierra 830 Mass Flow meter.
+ The flow meter measures the flow rate that would apply under 
+\begin_inset Quotes eld
+\end_inset
+
+standard
+\begin_inset Quotes erd
+\end_inset
+
+ conditions; i.e., pressure of 1013.25 and temperature of 
+\begin_inset Formula $0^{\circ}C$
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+why is this calculated in terms of the instrument P and T instead of ambient
+ P and T – or should it be left in terms of SLPM? I left it as it was for
+ now but need to check the processing code.
+ Why is the reference T 21.11 C?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+FCNC is the sample flow rate in VLPM (volumetric liters per minute) corrected
+ for pressure and temperature.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+PCN = pressure at the inlet to the CN counter (hPa)
+\begin_inset Newline newline
+\end_inset
+
+CNTEMP = temperature at the inlet of the sample tube (
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $p_{std}$
+\end_inset
+
+ = 
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+Pstd@
+\begin_inset Formula $p_{std}$
+\end_inset
+
+=standard pressure
+\end_layout
+
+\end_inset
+
+standard reference pressure, 1013.25
+\begin_inset space ~
+\end_inset
+
+hPa
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{std}$
+\end_inset
+
+ = 
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+Tstd@
+\begin_inset Formula $T_{std}$
+\end_inset
+
+=standard temperature
+\end_layout
+
+\end_inset
+
+standard reference temperature, 294.15 K 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+??
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ = 273.15
+\begin_inset space ~
+\end_inset
+
+K
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathrm{FCNC=\{FCN\}}\frac{p_{std}}{\mathrm{\{PCN\}}}\frac{(\{\mathrm{CNTEMP\}}+T_{0})}{T_{std}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+In the 3786, flows are determined in volumetric cm
+\begin_inset Formula $^{3}\thinspace\mathrm{min}^{-1}$
+\end_inset
+
+ from the pressure drop across an orifice.
+ The 3786 firmware makes density corrections internally, so its reported
+ sample flow is brought directly into the variable FCNC in units of VLPM.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+eject
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Raw CN Isokinetic Side Flow Rate (SLPM): 
+\bar under
+XICN
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XICN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+XICN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Corrected CN Isokinetic Side Flow Rate (VLPM): 
+\bar under
+XICNC
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XICNC
+\end_layout
+
+\end_inset
+
+
+\series bold
+\bar under
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+XICNC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+XICN is the raw isokinetic side flow rate in standard liters per minute
+ (SLPM) measured with a 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Sierra 830 Mass Flow
+\end_layout
+
+\end_inset
+
+mass flow meter, and XICNC is that flow corrected for pressure and temperature
+ to be the true volumetric flow.
+
+\emph default
+ The side flow
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CN counter!side flow
+\end_layout
+
+\end_inset
+
+ is adjusted for isokinetic sampling at the inlet, but it is not used further
+ in processing.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+For isokinetic sampling, the flow rate at the inlet entrance needs to equal
+ the true airspeed, and for proper operation the flow rate through the CN
+ counter should be at least 1.2 VLPM.
+ A side flow of filtered air
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+check this: filtered? Wasn't in B9, seems necessary
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+is added so both of these conditions can be met.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+XICN = side-flow rate (SLPM)
+\end_layout
+
+\begin_layout Plain Layout
+PCN = pressure at the inlet to the CN counter (hPa)
+\begin_inset Newline newline
+\end_inset
+
+CNTEMP = temperature at the inlet of the sample tube (
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $p_{std}$
+\end_inset
+
+ = standard reference pressure, 1013.25 mb
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{std}$
+\end_inset
+
+
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+Tr@
+\begin_inset Formula $T_{std}$
+\end_inset
+
+= absolute reference temperature, STP
+\end_layout
+
+\end_inset
+
+ = 294.15 K 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+??
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ = 273.15
+\begin_inset space ~
+\end_inset
+
+K
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathrm{XICNC=\{XICN\}}\frac{pP_{std}}{\mathrm{\{PCN\}}}\frac{(\{\mathrm{CNTEMP\}}+T_{0})}{T_{std}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+CN Counter Output (counts per sample interval); 
+\bar under
+CNTS
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+CNTS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CNTS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The raw output count from the condensation nucleus counter.
+
+\emph default
+ For the 3760A condensation nucleus counter, the project-dependent sample
+ rate may be chosen in the range from 1–50
+\begin_inset space ~
+\end_inset
+
+Hz but it is typically 10
+\begin_inset space ~
+\end_inset
+
+Hz..
+ In some unusual cases the counts are divided by a selected power of two
+ to keep the counter from overflowing; see project documentation.
+ The 3786 WCN may be programmed to report data at intervals from 0.1–3600
+\begin_inset space ~
+\end_inset
+
+s.
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:7-1"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+but is typically set to 0.1
+\begin_inset space ~
+\end_inset
+
+s?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Condensation Nucleus (CN) Concentration (cm
+\begin_inset Formula $^{-3}$
+\end_inset
+
+): 
+\bar under
+CONCN
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+CONCN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CONCN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The number concentration of condensation nuclei
+\emph default
+ in units of particles per cm
+\begin_inset Formula $^{3}$
+\end_inset
+
+ 
+\emph on
+in the ambient air
+\emph default
+ at flight level.
+
+\emph on
+ 
+\emph default
+The calculation leading to CONCN
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+concentration!CN
+\end_layout
+
+\end_inset
+
+ includes two corrections.
+ The first
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CN counter!coincidence in
+\end_layout
+
+\end_inset
+
+ accounts for coincidence of particles in the viewing volume at high concentrati
+ons and is handled differently in the two types of CN counter.
+ For the 3760A, a statistical adjustment is made based on the average time
+ of a particle in the viewing volume.
+ This correction increases from about 1% at a total concentration of 10
+\begin_inset Formula $^{3}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+cm
+\begin_inset Formula $^{-3}$
+\end_inset
+
+ to nearly 11% at 10
+\begin_inset Formula $^{4}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+cm
+\begin_inset Formula $^{-3}$
+\end_inset
+
+, but for concentrations above about 2×10
+\begin_inset Formula $^{4}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+cm
+\begin_inset Formula $^{-3}$
+\end_inset
+
+ significant uncertainty remains.
+ The 3786 instead measures the time each detected particle occupies the
+ viewing volume, and this
+\emph on
+ 
+\emph default
+accumulated “dead time”
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CN counter!dead time
+\end_layout
+
+\end_inset
+
+ in each sampling interval is subtracted from the elapsed time yielding
+ a “live time” for the determination of sample volume.
+ With this correction an accuracy of 12%, not including statistical counting
+ error, is specified by the manufacturer at concentrations up to 10
+\begin_inset Formula $^{5}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+cm
+\begin_inset Formula $^{-3}$
+\end_inset
+
+.
+ The second correction, applied to all CN counters, is a conversion from
+ instrument to ambient conditions.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Prior to Dec.
+\begin_inset space ~
+\end_inset
+
+2007 the conversion to ambient concentration was not made and concentration
+ was reported for instrument conditions.
+\end_layout
+
+\end_inset
+
+ In the following formulae, the corrected flow FCNC in VLPM is explicitly
+ converted to cm
+\begin_inset Formula $^{3}$
+\end_inset
+
+s
+\begin_inset Formula $^{-1}$
+\end_inset
+
+ by the factor (1000/60).
+\emph on
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+For the 3760A:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+CNTS = particle counts per sample interval from the CN counter
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CNTS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ = 
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+Deltat@
+\begin_inset Formula $\Delta t$
+\end_inset
+
+=time interval
+\end_layout
+
+\end_inset
+
+interval between recorded samples (s)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $D$
+\end_inset
+
+ = scale factor (legacy; normally 1)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $C_{flow}$
+\end_inset
+
+ = 
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+Cflow@
+\begin_inset Formula $C_{flow}$
+\end_inset
+
+ = flow conversion factor
+\end_layout
+
+\end_inset
+
+conversion factor, (1000/60) cm
+\begin_inset Formula $^{3}$
+\end_inset
+
+L
+\begin_inset Formula $^{-1}$
+\end_inset
+
+min s
+\begin_inset Formula $^{-1}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+FCNC = corrected sample flow rate (VLPM) for instrument conditions
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FCNC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $t_{vv}$
+\end_inset
+
+ = average time a particle is in the view volume = 0.4
+\begin_inset Formula $\times10^{-6}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+s
+\begin_inset Newline newline
+\end_inset
+
+PCN = pressure at the inlet to the CN counter (hPa)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PCN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+CNTEMP = temperature at the inlet of the sample tube (
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CNTEMP
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+PSXC = corrected ambient pressure (hPa)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PSXC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ATX = ambient temperature (
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ATX
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ = 273.15
+\begin_inset space ~
+\end_inset
+
+K
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathrm{A=\frac{\{CNTS\}}{\mathrm{(\{FCNC\}\times C_{flow})}\Delta t}\,D}
+\]
+
+\end_inset
+
+The flow under instrument conditions, corrected for coincidence, is then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B\mathrm{=A}\,e^{At_{vv}(\mathrm{\{FCNC\}\times C_{flow})}}
+\]
+
+\end_inset
+
+and the concentration under ambient conditions is
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CONCN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\{CONCN\}}=B\frac{\mathrm{\{PSXC\}}}{\mathrm{\{PCN\}}}\frac{\mathrm{(\{CNTEMP\}}+T_{0})}{(\mathrm{\{ATX\}}+T_{0})}\label{eq:12.1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+For the 3786 WCN:
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+CNTS = particle counts per sample interval from the CN counter
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ = 
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+Deltat@
+\begin_inset Formula $\Delta t$
+\end_inset
+
+=time interval
+\end_layout
+
+\end_inset
+
+interval between recorded samples (s)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $t_{d}$
+\end_inset
+
+ = cumulative dead time during the sampling interval (s)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $C_{flow}$
+\end_inset
+
+ [see preceding box]
+\begin_inset Newline newline
+\end_inset
+
+FCNC = corrected sample flow rate (VLPM) for instrument conditions
+\begin_inset Newline newline
+\end_inset
+
+PCN = internal pressure of the CN counter (hPa)
+\begin_inset Newline newline
+\end_inset
+
+CNTEMP = temperature of the optics block (
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C)
+\begin_inset Newline newline
+\end_inset
+
+PSXC = corrected ambient pressure (hPa)
+\begin_inset Newline newline
+\end_inset
+
+ATX = ambient temperature (
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ = 273.15
+\begin_inset space ~
+\end_inset
+
+K
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CONCN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathrm{A=\frac{\{CNTS\}}{\mathrm{(\{FCNC\}\times C_{flow})}(\Delta t-t_{d})}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\{CONCN\}}=A\frac{\mathrm{\{PSXC\}}}{\mathrm{\{PCN\}}}\frac{\mathrm{(\{CNTEMP\}}+T_{0})}{(\mathrm{\{ATX\}}+T_{0})}\label{eq:12.2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Need to add references here to UHSAS and PCASP discussions in section 11,
+ maybe also CDP etc.
+ Or put more here.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\backslash
+eject
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Aerosol Spectrometers
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+aerosol!spectrometer
+\end_layout
+
+\end_inset
+
+For size-resolved measurements of the concentration of aerosol particles,
+ RAF deploys two instruments.
+ The 
+\begin_inset CommandInset href
+LatexCommand href
+name "Ultra High Sensitivity Aerosol Spectrometer"
+target "https://www.eol.ucar.edu/instruments/ultra-high-sensitivity-aerosol-spectrometer"
+
+\end_inset
+
+ (UHSAS)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+UHSAS
+\end_layout
+
+\end_inset
+
+ sizes particles in 99 bins from 0.06 to 1.0
+\begin_inset space ~
+\end_inset
+
+μm diameter, and the 
+\begin_inset CommandInset href
+LatexCommand href
+name "Passive Cavity Aerosol Spectrometer Probe"
+target "http://www.eol.ucar.edu/instruments/passive-cavity-aerosol-spectrometer-probe"
+
+\end_inset
+
+ (PCASP)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PCASP
+\end_layout
+
+\end_inset
+
+ has 31 channels covering the diameter range 0.1 to 3
+\begin_inset space ~
+\end_inset
+
+μm.
+ Flow and total concentration variables for these instruments are described
+ in this section, while additional variables are covered along with other
+ 1-D probes in Sect.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:1DProbes"
+
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+Sensors of individual Particles (1-D Probes).
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+UHSAS Absolute Pressure in Canister (hPa): 
+\bar under
+UPRESS
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+UPRESS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+UPRESS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The pressure internal to the UHSAS instrument.
+ This is an analog measurement with calibration coefficients as recorded
+ in the attributes for the variable.
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:7-2"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+the attributes for this variable say the units are kPa; is that incorrect?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Raw Sample Flow Rate (cm
+\begin_inset Formula $^{3}$
+\end_inset
+
+s
+\begin_inset Formula $^{-1}$
+\end_inset
+
+): 
+\bar under
+USMPFLW
+\bar default
+, 
+\bar under
+PFLW
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PFLW
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+USMPFLW
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+PFLW
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+USMPFLW
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Corrected Sample Flow Rate (cm
+\begin_inset Formula $^{3}$
+\end_inset
+
+s
+\begin_inset Formula $^{-1}$
+\end_inset
+
+): 
+\bar under
+USFLWC
+\bar default
+, 
+\bar under
+PFLWC
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PFLWC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+USFLWC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+PFLWC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+USFLWC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Unlike the other 1-d probes, both UHSAS and PCASP have internal pumps so
+ their sample volumes are determined from the measured flows and do not
+ depend on true air speed.
+ The UHSAS measures volumetric flow
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+UHSAS!flow
+\end_layout
+
+\end_inset
+
+ directly, and it is adjusted to ambient conditions for the calculation
+ of ambient concentration.
+ The PCASP
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+flow!PCASP
+\end_layout
+
+\end_inset
+
+ returns a mass flow referenced to standard conditions, and this also is
+ converted to equivalent ambient volumetric flow.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+UPRESS = internal UHSAS pressure (hPa)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+UPRESS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+USMPFLW = measured volumetric sample flow (cm
+\begin_inset Formula $^{3}$
+\end_inset
+
+s
+\begin_inset Formula $^{-1}$
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+PFLW = sample mass flow referenced to standard conditions (cm
+\begin_inset Formula $^{3}$
+\end_inset
+
+s
+\begin_inset Formula $^{-1}$
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{blk}$
+\end_inset
+
+ = UHSAS optical block temperature, 305 K
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $p_{std}$
+\end_inset
+
+ = standard pressure, 1013.25 hPa
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{std}$
+\end_inset
+
+ = standard temperature, 298.15 K
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+UHSAS!STP
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+PSXC = corrected ambient pressure (hPa)
+\begin_inset Newline newline
+\end_inset
+
+ATX = ambient temperature (
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ = 273.15
+\begin_inset space ~
+\end_inset
+
+K
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\{PFLWC\}}=\mathrm{\{PFLW\}}\frac{p_{std}}{\mathrm{\{PSXC\}}}\frac{(\mathrm{\{ATX\}}+T_{0})}{T_{std}}\label{eq:12.3}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\{USFLWC\}}=\mathrm{\{USMPFLW\}}\frac{\mathrm{\{UPRESS\}}}{\mathrm{\{PSXC\}}}\frac{\mathrm{(\{ATX\}}+T_{0})}{T_{blk}}\label{eq:12.4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Total particle counts per sample interval, UHSAS or PCASP: 
+\bar under
+TCNTU
+\bar default
+, 
+\bar under
+TCNTP
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TCNTP
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TCNTU
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TCNTP
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TCNTU
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The total particle counts in each sample interval for, respectively, the
+ UHSAS and PCASP instruments.
+ These values are the sum of counts in all cells of the spectrometers, as
+ represented in the vector variables CUHSAS or CS200.
+ See the discussion of these variables in Sect.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:1DProbes"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand vpageref
+reference "CUHSAS"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Concentration, sum over all channels (cm
+\begin_inset Formula $^{3}$
+\end_inset
+
+s
+\begin_inset Formula $^{-1}$
+\end_inset
+
+): 
+\bar under
+
+\begin_inset Newline newline
+\end_inset
+
+CONCU
+\bar default
+, 
+\bar under
+CONCP
+\bar default
+, 
+\bar under
+CONCU100
+\bar default
+, 
+\bar under
+CONCU500
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CONCU
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CONCP
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CONCU100
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CONCU500
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+CONCU
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+CONCP
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+CONCU100
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+CONCU500
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The particle concentrations summed over all or a subset of channels.
+
+\emph default
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+concentration!particle
+\end_layout
+
+\end_inset
+
+CONCU and CONCP are summed over all channels in the UHSAS
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+UHSAS
+\end_layout
+
+\end_inset
+
+ and PCASP
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PCASP
+\end_layout
+
+\end_inset
+
+, respectively, and are calculated as in the following boxed equations.
+ CONCU100 and CONCU500 are concentrations summed over channels in the UHSAS
+ giving particle concentrations for diameters greater than or equal to 100
+\begin_inset space ~
+\end_inset
+
+nm and 500
+\begin_inset space ~
+\end_inset
+
+nm, respectively, and are calculated as for CONCU except with TCNTU replaced
+ by the sum over the appropriate channels.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+TCNTU = total particle counts per sample interval, UHSAS
+\end_layout
+
+\begin_layout Plain Layout
+TCNTP = total particle counts per sample interval, PCASP
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ = 
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+Deltat@
+\begin_inset Formula $\Delta t$
+\end_inset
+
+=time interval 
+\end_layout
+
+\end_inset
+
+sample interval (s)
+\end_layout
+
+\begin_layout Plain Layout
+USFLWC = corrected sample flow rate, UHSAS (cm
+\begin_inset Formula $^{3}$
+\end_inset
+
+s
+\begin_inset Formula $^{-1}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+PFLWC = corrected sample flow rate, PCASP (cm
+\begin_inset Formula $^{3}$
+\end_inset
+
+s
+\begin_inset Formula $^{-1}$
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\{CONCU\}}=\frac{\mathrm{\{TCNTU\}}}{\mathrm{\{USFLWC\}}\Delta t}\label{eq:12.5}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\{CONCP\}}=\frac{\mathrm{\{TCNTP\}}}{\mathrm{\{PFLWC\}}\Delta t}\label{eq:12.6}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Other Specialized Aerosol Measurements
+\end_layout
+
+\begin_layout Hanging
+Data from an aerosol mass spectrometer
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+spectrometer!aerosol mass
+\end_layout
+
+\end_inset
+
+, a scanning mobility particle spectrometer
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SMPS
+\end_layout
+
+\end_inset
+
+, and a giant nucleus impactor
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+impactor!giant nucleus
+\end_layout
+
+\end_inset
+
+ are recorded by these instruments in separate data files and are not recorded
+ by the aircraft data system.
+ The ancillary
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+aerosol!ancillary datasets
+\end_layout
+
+\end_inset
+
+ data sets are not merged into the netCDF archives produced by EOL, so the
+ special data files must be used for these measurements, The data formats
+ are described with the instruments at the references given below:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Aerosol Mass Spectrometer (AMS) data files
+\series default
+ contain size-segregated chemical composition of non-refractory, submicron
+ aerosol particles.
+ The instrument is described here: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.eol.ucar.edu/instruments/time-flight-aerosol-mass-spectrometer"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Scanning Mobility Particle Spectrometer (SMPS) files
+\series default
+ contain fine particle differential size distributions.
+ The number of channels and covered size range are variable.
+ Diameter ranges from about 7.5
+\begin_inset space ~
+\end_inset
+
+nm up to about 500
+\begin_inset space ~
+\end_inset
+
+nm (pressure-dependent), and 15 size bins are typical.
+ The instrument is described here: 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.eol.ucar.edu/instruments/scanning-mobility-particle-spectrometer"
+target "https://www.eol.ucar.edu/instruments/scanning-mobility-particle-spectrometer"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Auto-GNI, GNI Giant Nuclei Impactor (GNI) files
+\series default
+ contain dry differential particle size distributions.
+ The instrument is described here: 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.eol.ucar.edu/instruments/giant-nuclei-impactor "
+target "https://www.eol.ucar.edu/instruments/giant-nuclei-impactor "
+
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

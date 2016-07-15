@@ -1,0 +1,2438 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+hanging
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+RADIATION VARIABLES
+\end_layout
+
+\begin_layout Subsection
+Measurements of Irradiance
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+irradiance
+\end_layout
+
+\end_inset
+
+ and Radiometric Temperature
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+temperature!radiometric
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following references, although in part obsolete now, have additional
+ information on radiation
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+radiation
+\end_layout
+
+\end_inset
+
+ measurements from NCAR aircraft: 
+\begin_inset CommandInset href
+LatexCommand href
+name "RAF Bulletin 25"
+target "http://www.eol.ucar.edu/raf/Bulletins/bulletin25.html"
+
+\end_inset
+
+,
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Bulletin 25
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "Bannehr and Glover, 1991, NCAR Technical Note NCAR/TN-364+STR"
+target "http://nldr.library.ucar.edu/repository/assets/technotes/TECH-NOTE-000-000-000-175.pdf"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset href
+LatexCommand href
+name "Albrecht and Cox, 1977"
+target "http://journals.ametsoc.org/doi/pdf/10.1175/1520-0450%281977%29016%3C0190%3APFIPP%3E2.0.CO%3B2"
+
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Albrecht, B.
+ and Cox, S.K.: 1977, Procedure for Improving Pyrgeometer Performance, J
+\emph on
+.
+ Appl.
+ Meteorol.
+\emph default
+, 
+\series bold
+16, 
+\series default
+188–197.
+\end_layout
+
+\end_inset
+
+ The instruments
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+instruments!radiation
+\end_layout
+
+\end_inset
+
+ are described in the 
+\begin_inset Quotes eld
+\end_inset
+
+Radiation
+\begin_inset Quotes erd
+\end_inset
+
+ section on 
+\begin_inset CommandInset href
+LatexCommand href
+name "the EOL web site"
+target "https://www.eol.ucar.edu/aircraft-instrumentation"
+
+\end_inset
+
+.
+ Some other radiometric measurements appear in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:State Variables"
+
+\end_inset
+
+ because the measurements fit better there with measurements of state variables
+ for the atmosphere; these include two measurements of air temperature by
+ radiometric thermometers, AT_ITR (p.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "AT_ITR"
+
+\end_inset
+
+), OAT (p.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "OAT"
+
+\end_inset
+
+), and the Microwave Temperature Profiler (MTP, p.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "subsec:MTP"
+
+\end_inset
+
+) that measures temperature profiles above and below the aircraft by radiometric
+ measurements.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Radiometric (Surface or Sky/Cloud-Base) Temperature (
+\begin_inset Formula $^{\circ}C$
+\end_inset
+
+): 
+\bar under
+RSTx
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+RSTx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RSTx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The equivalent black body temperature measured by an infrared radiometer.
+
+\emph default
+ The radiometers
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+radiometers
+\end_layout
+
+\end_inset
+
+ used on the GV and C-130 are Heimann
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+radiometer!Heimann
+\end_layout
+
+\end_inset
+
+ Model KT-19.85 precision radiation thermometers.
+ The KT19.85 spectral band extends from 9.6 to 11.5 µm, and it has a 2 ̊ field
+ of view.
+ The x in the variable name denotes the instrument location on either the
+ bottom (B) or top (T) of the aircraft.
+ The KT-19.85 instruments are calibrated using a black-body source manufactured
+ by Eppley.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Some archived projects used this variable name for measurements from a narrow
+ bandwidth, narrow field-of-view (2
+\begin_inset Formula $\text{º}$
+\end_inset
+
+) Barnes Engineering Model PRT-5 precision radiation thermometer.
+ This instrument is now retired.
+ The spectral bandwidth available was either 8 to 14 
+\begin_inset Formula $\mu m$
+\end_inset
+
+ or 9.5 to 11.5 
+\begin_inset Formula $\mu m$
+\end_inset
+
+.
+ Its cavity temperature was monitored and recorded as either TCAVB
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TCAVB
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TCAVB
+\end_layout
+
+\end_inset
+
+ or TCAVT.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TCAVT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TCAVT
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Radiometer Sensor Head Temperature (
+\begin_inset Formula $^{\circ}C$
+\end_inset
+
+): 
+\bar under
+TRSTx
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TRSTB, TRSTT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TRSTB, TRSTT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The temperature of the sensing head of the KT19.85 radiometer sensing head
+\emph default
+,
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Heimann radiometer
+\end_layout
+
+\end_inset
+
+ usually applying to RSTB, the primary down-looking instrument.
+ The down-looking instrument is normally heated to maintain a sensor-head
+ temperature near the scene temperature.
+ Consult the archived netCDF files or project reports for the calibration
+ coefficients used, which often varied among projects.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Pyrgeometer Output (V): 
+\bar under
+IRxV
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+IRxV
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+IRXV
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The voltage representing long-wave irradiance,
+\emph default
+ from a pyrgeometer
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pyrgeometer
+\end_layout
+
+\end_inset
+
+ manufactured by Kipp & Zonen.
+ The CGR4 model used on the GV and C-130 includes a meniscus dome that provides
+ a 180º field of view with negligible directional response error over the
+ spectral range of 4.2 to 45 µm.
+ The thermal stability of the dome construction and coupling to the instrument
+ body eliminates the need for dome temperature measurements or dome shading.
+ It is calibrated at the Naval Research Lab over a range of temperatures
+ encountered during flight according to procedures specified by Bucholtz
+ et al.
+ (2008).
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pyrgeometer!calibration
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fn:Bucholtz-2008"
+
+\end_inset
+
+Bucholtz , Anthony, Robert T.
+ Bluth , Ben Kelly, Scott Taylor, Keir Batson, Anthony W.
+ Sarto , Tim P.
+ Tooman , Robert F.
+ McCoy, 2008: The Stabilized Radiometer Platform (STRAP) — An Actively Stabilize
+d Horizontally Level Platform for Improved Aircraft Irradiance Measurements.
+ 
+\emph on
+J.
+ Atmos.
+ Oceanic Technol.
+ 
+\emph default
+, 
+\series bold
+25,
+\series default
+ 2161 – 2175.
+\end_layout
+
+\end_inset
+
+ The pyrgeometers are usually flown in pairs, one looking upward and one
+ looking downward.
+ The letter ’x’ denotes location on either bottom (B) or top (T) of the
+ aircraft.
+ The primary derived variable from this instrument is IRxC, below.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Pyrgeometer Housing Temperature (
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C): 
+\bar under
+IRxHT
+\series default
+\bar default
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+IRxHT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+IRxHT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The temperature of the modified pyrgeometer housing,
+\emph default
+ measured by a platinum resistance temperature sensor.
+ The calibrated temperature (IRxHT) is derived from the raw signal (IRxHTV)
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+IRxHTV
+\end_layout
+
+\end_inset
+
+ as described below:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+IRxHTV = 
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "85col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+voltage from a platinum resistance thermometer attached to the housing of
+ the pyrgeometer (V)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\{a_{4},\,a_{5}\}$
+\end_inset
+
+ = calibration coefficients [
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C]
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $V_{1}$
+\end_inset
+
+ = 1 V (for consistency of units) 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\mathrm{IRxHT}=a_{4}+a_{5}\log_{10}(\mathrm{\{IRxHTV\}/V_{1})}\label{eq:pyrgeometerHousingT}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Calibrated Infrared Irradiance (W
+\begin_inset space ~
+\end_inset
+
+m
+\begin_inset Formula $^{-2}$
+\end_inset
+
+): 
+\bar under
+IRxC
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+IRxC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+IRxC
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The infrared irradiance measured by a Kipp & Zonen CGR4 instrument,
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Prior to 2009, IRx and IRxC were used to denote measurements from Eppley
+ pyrgeometers.
+ Processing methods for these obsolete variables are described in Section
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:OBSOLETE-VARIABLES"
+
+\end_inset
+
+; see p.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "EppleyReference"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ 
+\emph default
+after application of a calibration function.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+irradiance!long-wave
+\end_layout
+
+\end_inset
+
+ The relationship between IRxV (V) and IRxC (W m
+\begin_inset Formula $^{-2}$
+\end_inset
+
+) is determined by a calibration in which the CGR4 views a NIST-referenced
+ source over a range of sensor temperatures controlled by a cold bath.
+ The processing algorithm is described in the following box:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+IRxV
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+IRxV
+\end_layout
+
+\end_inset
+
+ = pyrgeometer output voltage (V)
+\begin_inset Newline newline
+\end_inset
+
+IRxHT
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+IRxHT
+\end_layout
+
+\end_inset
+
+ = temperature of the instrument housing (
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+ C)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ = 273.15
+\begin_inset space ~
+\end_inset
+
+K
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\{a_{1},\,a_{2},\,a_{3}\}$
+\end_inset
+
+ = calibration coefficients 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+\begin_inset Formula 
+\begin{equation}
+\mathrm{IRxC}=(a_{1}\mathrm{\{IRxV\}}+a_{2})+a_{3}(\mathrm{\{IRxHT\}}+T_{0})^{4}\label{eq:pyrgeometerCalibration}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Pyranometer Output (V): 
+\bar under
+VISxV
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+VISxV
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+VISxV
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The voltage from a pyranometer,
+\emph default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pyranometer
+\end_layout
+
+\end_inset
+
+ representing visible irradiance.
+ On the GV and C-130, Kipp & Zonen CMP22 pyranometers
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+radiometer!Kipp & Zonen
+\end_layout
+
+\end_inset
+
+ measure visible irradiance.
+ A high-quality quartz dome allows for a wide spectral range, improved direction
+al response, and reduced thermal offsets.
+ The spectral range is 0.32 to 3.6 µm.
+ The pyranometers are usually flown in pairs, one looking upward and one
+ downward.
+ On the C-130, these sensors are mounted on stabilized platforms
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+platform!stabilized
+\end_layout
+
+\end_inset
+
+ that remain level during aircraft pitch and roll variations.
+ They are calibrated
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pyranometer!calibration
+\end_layout
+
+\end_inset
+
+ pre- and post-project at the Naval Research Lab (Bucholtz et al, 2008;
+ see footnote 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fn:Bucholtz-2008"
+
+\end_inset
+
+ on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "fn:Bucholtz-2008"
+
+\end_inset
+
+) using a sun-tracking shadow device and diffuse sunlight as a source.
+ The letter ’x’ denotes either bottom (B, nadir-viewing) or top (T, zenith-viewi
+ng).
+ The primary derived variable from this instrument is VISxC, below.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Pyranometer Housing Temperature (
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C): 
+\bar under
+VISxHT
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+VISxHT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+VISxHT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The temperature of the modified housing unit of a pyranometer,
+\emph default
+ measured by a platinum resistance temperature sensor.
+ A calibrated temperature (VISxHT) is derived from the raw signal, VISxHTV,
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+VISxHTV
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+VISxHTV
+\end_layout
+
+\end_inset
+
+ which is normally not included in archive netCDF files.
+ The equation used for the calibration is VISxHT = 
+\begin_inset Formula $a_{1}+a_{2}\log_{10}$
+\end_inset
+
+({VISxHTV}/
+\begin_inset Formula $V_{1}$
+\end_inset
+
+) where 
+\begin_inset Formula $V_{1}$
+\end_inset
+
+is 1
+\begin_inset space ~
+\end_inset
+
+V and 
+\begin_inset Formula $\{a_{1},\,a_{2}\}$
+\end_inset
+
+ are calibration coefficients having dimensions of [
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C].
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Calibrated Visible Irradiance (W
+\begin_inset space ~
+\end_inset
+
+m
+\begin_inset Formula $^{-2}$
+\end_inset
+
+): 
+\bar under
+VISxC
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+VISxC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+VISxC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The visible irradiance
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+irradiance!visible
+\end_layout
+
+\end_inset
+
+ measured by a Kipp & Zonen CMP22 pyranometer.
+
+\emph default
+ The relationship between VISxV (V) and VISxC (W m
+\begin_inset Formula $^{-2}$
+\end_inset
+
+) is determined by calibration procedures in which the CMP22 views a clear
+ sky source while a sun-tracking device blocks direct solar radiation.
+ The normal processing algorithm is to apply a simple linear calibration,
+ as follows:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+VISxV = voltage output by a pyranometer (V)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $a_{1}$
+\end_inset
+
+ = linear calibration coefficient [W
+\begin_inset space ~
+\end_inset
+
+m
+\begin_inset Formula $^{-2}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+V
+\begin_inset Formula $^{-1}$
+\end_inset
+
+]
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\mathrm{VISxC=a_{1}\{VISxV\}}\label{eq:pyranometerCalibration}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Stabilized Platform Angles (
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+): SPxPitch,
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SPxPitch
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+SPxPitch
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+SPxRoll
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SPxRoll
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+SPxRoll
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The pitch and roll angles of the stabilized platforms, relative to the aircraft
+ reference frame.
+
+\emph default
+ Upward- and downward-looking pyrgeometers and pyranometers on the C-130
+ are mounted on stabilized platforms
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+platform!stabilized
+\end_layout
+
+\end_inset
+
+ that compensate for aircraft pitch and roll.
+ These variables record the movement of the top (x=T) and bottom (x=B) platforms
+ in response to aircraft pitch and roll changes.
+ The platforms are mounted with 2.85
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+ downward pitch angle to compensate for the normal upward pitch of the aircraft.
+ The range of motion is 
+\begin_inset Formula $\pm5^{\circ}$
+\end_inset
+
+ in pitch and 
+\begin_inset Formula $\pm10^{\circ}$
+\end_inset
+
+ in roll.
+ The sign convention is that of the aircraft, for which nose-upward pitch
+ and right-wing-down roll are positive.
+\end_layout
+
+\begin_layout Hanging
+
+\end_layout
+
+\begin_layout Subsection
+Spectral Irradiance and Actinic Flux
+\end_layout
+
+\begin_layout Standard
+The HIAPER Atmospheric Radiation Package (HARP)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+HIAPER Atmospheric Radiation Package
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+HARP|see 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{HIAPER Atmospheric Radiation Package}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ includes separate components that measure spectral irradiance (both upwelling
+ and downwelling) and actinic flux.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+flux!actinic
+\end_layout
+
+\end_inset
+
+ The instrument is described at 
+\begin_inset CommandInset href
+LatexCommand href
+name "this URL"
+target "http://www.eol.ucar.edu/instruments/hiaper-airborne-radiation-package"
+
+\end_inset
+
+.
+ Data are recorded on dedicated disk drives associated with the instrument,
+ not in the standard aircraft data-system files.
+ This is an ancillary data set, for which special Matlab and IDL analysis
+ routines have been developed, but the measurements are not merged into
+ the netCDF archives produced by EOL.
+ For data access and assistance with analysis routines, contact EOL/RAF
+ data managers at 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+mailto:raf-dm@eol.ucar.edu
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Solar Angles
+\end_layout
+
+\begin_layout Standard
+The calculations
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+angles!solar
+\end_layout
+
+\end_inset
+
+ described in this group are used primarily when interpreting the calibrated
+ visible irradiance (VISxC) but can be used by themselves or in conjunction
+ with other measurements that need them.
+ For additional documentation see 
+\begin_inset CommandInset href
+LatexCommand href
+name "Bannehr and Glover, 1991, NCAR Technical Note NCAR/TN-364+STR"
+target "http://nldr.library.ucar.edu/repository/assets/technotes/TECH-NOTE-000-000-000-175.pdf"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "this NOAA web site"
+target "http://www.esrl.noaa.gov/gmd/grad/solcalc/calcdetails.html"
+
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+The descriptions of SOLZE, SOLEL, and SOLAZ in Bulletin 9 were incorrect,
+ but the code in use has been consistent and correct and continues to be
+ used unchanged.
+ For reference, that code is contained in the nimbus subroutine 'solang.c'.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Bulletin 25
+\end_layout
+
+\end_inset
+
+ The calculator at 
+\begin_inset CommandInset href
+LatexCommand href
+name "this link"
+target "http://www.esrl.noaa.gov/gmd/grad/solcalc/"
+
+\end_inset
+
+ can also be used to find these angles from the position and time in data
+ files.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Solar Declination Angle (radians): 
+\bar under
+SOLDE
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+SOLDE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+SOLDE
+\end_layout
+
+\end_inset
+
+
+\series default
+\bar default
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "SOLDE"
+
+\end_inset
+
+
+\emph on
+The solar declination angle
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+angle!solar declination
+\end_layout
+
+\end_inset
+
+, the angular distance of the sun north of the earth's equator.
+
+\emph default
+ (Negative values are south.) To obtain this, the solar hour angle is calculated
+ (taking leap years into account).
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $N$
+\end_inset
+
+ = day number
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+N@
+\begin_inset Formula $N$
+\end_inset
+
+=day number
+\end_layout
+
+\end_inset
+
+ = 
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+number of days (corrected for leap years) since 1 January 1980
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+(including fractional day from UTC time)
+\begin_inset Newline newline
+\end_inset
+
+= 
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+(year-1980)*365+(int)(year-1980)/4+day
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
++(hour+min/60.+sec/3600.)/24.+
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+where 
+\begin_inset Formula $M$
+\end_inset
+
+=(int)(
+\begin_inset Formula $k+$
+\end_inset
+
+(int)((month-i)*30.6+
+\begin_inset Formula $b$
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+with {i,b,k}={1,0.5,0} for month <= 2 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+and otherwise {3, 59.5, (1 for leap years, else 0)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta_{h}$
+\end_inset
+
+= UTC time expressed as radians after solar noon
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ = internal-calculation variables
+\begin_inset Newline newline
+\end_inset
+
+{SOLDE} = solar declination angle
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula 
+\begin{equation}
+\theta_{h}=2\pi\frac{N}{365.25}\label{eq:HourAngle}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f=-0.031271-4.53963\times10^{-7}N+\theta_{h}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+\alpha & = & \theta_{h}+4.900968+0.000349\,\sin(2f)+3.67474\times10^{-7}N\nonumber \\
+ &  & +(0.033434-2.3\times10^{-9}N)\,\sin(f)\label{eq:SOLDEalpha}
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\epsilon=0.409140-6.2149\times10^{-9}N\label{eq:SOLDEeps}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathrm{{\{SOLDE\}}=}\arcsin(\sin\alpha\sin\epsilon)\label{eq:SOLDE}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Solar Elevation Angle (radians): 
+\bar under
+SOLEL
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+SOLEL
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SOLEL
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The solar elevation angle
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+angle!solar elevation
+\end_layout
+
+\end_inset
+
+, describing how high the sun appears in the sky.
+
+\emph default
+ The angle is measured between a line from the observer to the sun and the
+ horizontal plane on which the observer is standing.
+ The elevation angle is negative when the sun drops below the horizon, and
+ the sum of the elevation angle and the zenith angle is 
+\begin_inset Formula $\pi/2.$
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Bulletin 9 had SOLEL and SOLZE reversed; code was OK
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta_{G}$
+\end_inset
+
+ = Greenwich hour angle
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+thetaG@
+\begin_inset Formula $\theta_{G}$
+\end_inset
+
+=Greenwich hour angle
+\end_layout
+
+\end_inset
+
+ (radians)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\theta_{L}$
+\end_inset
+
+ = local hour angle
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+thetaL@
+\begin_inset Formula $\theta_{L}$
+\end_inset
+
+=local hour angle
+\end_layout
+
+\end_inset
+
+ (radians)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $N$
+\end_inset
+
+ = day number (see SOLDE box above)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $Y$
+\end_inset
+
+ = year (format as in 1980)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda$
+\end_inset
+
+ = latitude
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+lambda@
+\begin_inset Formula $\lambda$
+\end_inset
+
+=latitude
+\end_layout
+
+\end_inset
+
+ (radians)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\psi$
+\end_inset
+
+ = longitude
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+psi@
+\begin_inset Formula $\psi$
+\end_inset
+
+=longitude
+\end_layout
+
+\end_inset
+
+ (radians)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $h$
+\end_inset
+
+ = fractional hour = (hour + minute/60.
+ + second/3600.)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+see (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SOLDEalpha"
+
+\end_inset
+
+) in the SOLDE box above
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\epsilon$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+see (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SOLDEeps"
+
+\end_inset
+
+) in the SOLDE box
+\begin_inset Newline newline
+\end_inset
+
+{SOLDE} = solar declination angle (radians) described above (Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SOLDE"
+
+\end_inset
+
+, p.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "SOLDE"
+
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula 
+\begin{equation}
+\theta_{G}=\arctan(\frac{\sin\alpha\cos\epsilon}{\cos\alpha})\label{eq:GreenichHourAngle}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+\theta_{L} & = & \theta_{G}+\psi-2\pi\frac{h}{24}-1.759335\label{eq:LHA}\\
+ &  & -2\pi(\frac{N}{365}-Y+1980)-3.694\times10^{-7}N\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\mathrm{\{SOLEL\}}=\arcsin\left(\sin\lambda\sin\mathrm{\{SOLDE\}+\cos\lambda}\cos\mathrm{\{SOLDE\}}\cos\theta_{L}\right)}\label{eq:SOLEL}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Solar Zenith Angle (radians): 
+\bar under
+SOLZE
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+SOLZE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SOLZE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The angle of the sun from the zenith
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+angle!solar zenith
+\end_layout
+
+\end_inset
+
+, or the solar zenith angle.
+ 
+\emph default
+Cf.
+ also the discussion of the solar elevation angle, SOLEL.
+ 
+\begin_inset Formula $\mathrm{\{SOLZE\}=(\pi/2)-\mathrm{\{SOLEL\}}}$
+\end_inset
+
+ with {SOLEL} given by (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SOLEL"
+
+\end_inset
+
+) above.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Solar Azimuth Angle (radians): 
+\bar under
+SOLAZ
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+SOLAZ
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SOLAZ
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The solar azimuth angle
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+angle!solar azimuth
+\end_layout
+
+\end_inset
+
+, the angular distance between due south and the projection of the line
+ of sight to the sun on the ground.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Bulletin 9 erroneously had SOLZE in the denominator; the present code in
+ solang.c is correct
+\end_layout
+
+\end_inset
+
+
+\emph default
+ A positive solar azimuth angle indicates a position east of south (i.e.,
+ morning).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta_{L}$
+\end_inset
+
+ = local hour angle (radians): see (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LHA"
+
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+{SOLDE} = solar declination angle (radians): see (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SOLDE"
+
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+{SOLEL} = solar elevation angle (radians): see (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SOLEL"
+
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+{SOLAZ} = solar azimuth angle (radians)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula 
+\begin{equation}
+\mathrm{\{SOLAZ\}=\arcsin\left(\frac{\cos\mathrm{\{SOLDE\}\sin\theta_{L}}}{\cos\mathrm{\{SOLEL\}}}\right)}\label{eq:SOLAZ}
+\end{equation}
+
+\end_inset
+
+If sin({SOLAZ}) < sin({SOLDE})/sin(
+\begin_inset Formula $\phi):$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout LyX-Code
+      {SOLAZ} 
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+
+\begin_inset Formula $\pi/2-$
+\end_inset
+
+{SOLAZ}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

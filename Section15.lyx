@@ -1,0 +1,5058 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+hanging
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+OBSOLETE VARIABLES
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:OBSOLETE-VARIABLES"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+RAF retired the 
+\begin_inset Quotes eld
+\end_inset
+
+GENPRO
+\begin_inset Quotes erd
+\end_inset
+
+ processor, the software program previously used to produce data sets, in
+ 1993, but data files produced by that processor are still retained and
+ available for use.
+ Also, there are some instruments that are now retired but provided measurements
+ in some archived data files.
+ Obsolete variable names that are associated only with GENPRO or a retired
+ instrument are discussed below, for reference and to facilitate use of
+ old data files.
+ 
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Unaltered Tape Time (s): 
+\bar under
+TPTIME
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TPTIME (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TPTIME
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This variable is derived by converting the HOUR, MINUTE and SECOND to elapsed
+ seconds after midnight of the current day.
+ If time increments to the next day, its value is not reset to zero, but
+ 86400 seconds are added to produce ever-increasing values for the data
+ set.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Processor Time (s): 
+\bar under
+PTIME
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+PTIME (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PTIME
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This is an internal time variable created by the GENPRO processor.
+ It represents elapsed seconds after midnight.
+ It differs from TPTIME in that, after it has been set at the beginning
+ of the data set, it is incremented internally for each second of data processed.
+ If duplicate or missing raw data records exist, it can differ from TPTIME.
+ It is guaranteed to be a monotonically increasing and continuous series
+ of values.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+INS: Data System Time Lag (s): 
+\bar under
+TMLAG
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TMLAG (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TMLAG
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+TMLAG is the amount of time between the reference time of a Litton LTN-5l
+ Inertial Navigation System (INS) and the data system clock, in seconds.
+ TMLAG will always be greater than zero and less than 2.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+LORAN-C Latitude (
+\series default
+
+\begin_inset Formula $\text{º}$
+\end_inset
+
+
+\series bold
+): 
+\bar under
+CLAT
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+CLAT (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+CLAT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+LORAN-C Longitude (
+\series default
+
+\begin_inset Formula $\text{º}$
+\end_inset
+
+
+\series bold
+): 
+\bar under
+CLON
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+CLON (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+CLON
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+LORAN-C Circular Error of Probability (n mi): 
+\bar under
+CCEP
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+CCEP (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+CCEP
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+LORAN-C Ground Speed (m/s): 
+\bar under
+CGS
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+CGS (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+CGS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+LORAN-C Time (s): 
+\bar under
+CSEC
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+CSEC (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+CSEC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+LORAN-C Fractional Time (s): 
+\bar under
+CFSEC
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+CFSEC (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+CFSEC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+Before the advent of GPS, NCAR/RAF operated a LORAN-C receiver that provided
+ information on the position and groundspeed of the aircraft.
+ The measurements of latitude and longitude from this system are CLAT and
+ CLON, measured at 1 Hz and with positive values of longitude to the east
+ and positive values of latitude to the north.
+ and CCEP provides an estimate of the uncertainty in those measurements
+ (in units of nautical miles).
+ A status word, CSTAT, was used to record a value of 15 when the system
+ was operational.
+ The ground speed and reference times were also recorded in the above correspond
+ing variables.
+ The sum of CSEC and CFSEC represented the time of the measurement, which
+ was not always the time in the data file when the measurements were recorded,
+ 
+\end_layout
+
+\begin_layout Hanging
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+INS Latitude (
+\series default
+
+\begin_inset Formula $\text{º}$
+\end_inset
+
+
+\series bold
+): 
+\bar under
+ALAT
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+ALAT (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+ALAT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+INS Longitude (
+\series default
+
+\begin_inset Formula $\text{º}$
+\end_inset
+
+
+\series bold
+): 
+\bar under
+ALON
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+ALON (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+ALON
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Raw INS Ground Speed X Component (m/s): 
+\bar under
+XVI
+\series medium
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XVI (obsolete)
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XVI
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Raw INS Ground Speed Y Component (m/s): 
+\bar under
+YVI
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+YVI (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+YVI
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Raw INS True Heading (
+\series default
+
+\begin_inset Formula $\text{º}$
+\end_inset
+
+
+\series bold
+): 
+\bar under
+THI
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+THI (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+THI
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+INS Wander Angle (
+\series default
+
+\begin_inset Formula $\text{º}$
+\end_inset
+
+
+\series bold
+): 
+\bar under
+ALPHA
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+ALPHA (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+ALPHA
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+INS Platform Heading (
+\series default
+
+\begin_inset Formula $\text{º}$
+\end_inset
+
+
+\series bold
+): 
+\bar under
+PHDG
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+PHDG (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+PHDG
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "LTN51"
+
+\end_inset
+
+These variables from the Litton LTN-51 Inertial Navigation System
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+IRU!Litton LTN-51
+\end_layout
+
+\end_inset
+
+ (INS) are analogous to the modern variables discussed in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:INS"
+
+\end_inset
+
+.
+ The measurements of latitude and longitude were provided with 1-Hz frequency
+ and had a resolution of 0.0014
+\begin_inset Formula $\text{º}$
+\end_inset
+
+, while the ground speed components were provided at 10 Hz and had resolution
+ equal to 0.012 m/s.
+ The X component of the ground speed was along the longitudinal axis of
+ the aircraft 
+\emph on
+at the time of alignment,
+\emph default
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+check this: did it stay with this orientation, or was it converted to new
+ aircraft longitudinal axis?
+\end_layout
+
+\end_inset
+
+ and the Y axis was in the starboard direction at the time of alignment.
+ PHDG recorded the orientation of the platform relative to true north, with
+ resolution 0.0028
+\begin_inset Formula $\text{º}$
+\end_inset
+
+.
+ THI was the true heading of the aircraft, produced at 5 Hz with resolution
+ of 0.0014
+\begin_inset Formula $\text{º}$
+\end_inset
+
+.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+wander angle
+\begin_inset Quotes erd
+\end_inset
+
+ is an INS-only variable that recorded the angle of the INS platform x-axis
+ relative to its original orientation; it 
+\begin_inset Quotes eld
+\end_inset
+
+wandered
+\begin_inset Quotes erd
+\end_inset
+
+ in response to east-west motion of the aircraft on a spherical Earth.
+ 
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Raw Aircraft Vertical Velocity (m/s): 
+\bar under
+VZI
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+VZI (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+VZI
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This is an integrated output from an up/down binary counter connected to
+ the INS vertical accelerometer.
+ Resolution is 0.012 m/s.
+ Due to changes in local gravity and accumulated errors, this often develops
+ a significant offset during flight.
+ 
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Aircraft True Heading (
+\series default
+
+\begin_inset Formula $\text{º}$
+\end_inset
+
+
+\series bold
+): 
+\bar under
+THF
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+THF (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+THF
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This measurement of aircraft heading was derived from the angle between
+ the horizontal projection of the aircraft center and true north: THF =
+ PHDG + ALPHA.
+ Resolution is 0.0028
+\begin_inset Formula $\text{º}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Hanging
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Aircraft Ground Speed (m/s): 
+\bar under
+GSF
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+GSF (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+GSF
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Aircraft Ground Speed East Component (m/s): 
+\bar under
+VEW
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+VEW (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+VEW
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Aircraft Ground Speed North Component (m/s): 
+\bar under
+VNS
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+VNS (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+VNS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+These variables have the same names as the modern variables for ground speed.
+ (Cf.
+\begin_inset space ~
+\end_inset
+
+section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:INS"
+
+\end_inset
+
+.) GSF is the magnitude of the ground speed determined by the INS, as derived
+ from XVI and YVI: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathrm{GSF=\sqrt{\{XVI\}^{2}+\{YVI\}^{2}}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+VEW and VNS are the east and north projections of this ground speed, derived
+ using THF for the aircraft heading.
+\end_layout
+
+\begin_layout Hanging
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Wind Speed (m/s): 
+\bar under
+WSPD
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+WSPD (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+WSPD
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Wind Direction (
+\series default
+
+\begin_inset Formula $\text{º}$
+\end_inset
+
+
+\series bold
+): 
+\bar under
+WDRCTN
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+WDRCTN (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+WDRCTN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+These variables are calculated from UI and VI, the east and north components
+ of the wind determined as described in RAF Bulletin No.
+\begin_inset space ~
+\end_inset
+
+23 and summarized in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:WIND"
+
+\end_inset
+
+:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+check signs here; this differs from the section-9 equation ...
+ ??
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:10-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathrm{WS} & = & \sqrt{\mathrm{\{UI\}^{2}+\{VI\}^{2}}}\\
+\mathrm{WD} & = & \mathrm{\frac{180^{\circ}}{\pi}atan2(-\{UI\},}-\{VI\})+180^{\circ}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Raw Attack Force (Fixed Vane) (g): 
+\bar under
+AFIXx
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+AFIXx (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+AFIXx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+AFIXx is an amplified output from a strain-gauge, fixed-vane sensor mounted
+ in the horizontal plane of the aircraft at the end of a gust boom.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+force
+\begin_inset Quotes erd
+\end_inset
+
+ on the vane (calibrated in 
+\begin_inset Quotes eld
+\end_inset
+
+equivalent grams
+\begin_inset Quotes erd
+\end_inset
+
+ at Jefferson County Airport gravity) varies as a function of the aircraft
+ attack angle and dynamic pressure.
+ Here x refers to left or right.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Raw Sideslip Force(Fixed Vane) (g): 
+\bar under
+BFIXx
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+BFIXx (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+BFIXx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+BFIXx is an amplified output from a strain-gauge, fixed-vane sensor mounted
+ in the vertical plane of the aircraft at the end of a gust boom.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+force
+\begin_inset Quotes erd
+\end_inset
+
+ on the vane (calibrated in 
+\begin_inset Quotes eld
+\end_inset
+
+equivalent grams
+\begin_inset Quotes erd
+\end_inset
+
+ at Jefferson County Airport gravity) varies as a function of the aircraft
+ sideslip angle and dynamic pressure.
+ Here x refers to top or bottom.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Attack Angle (Fixed Vane) (
+\series default
+
+\begin_inset Formula $\text{º}$
+\end_inset
+
+
+\series bold
+): 
+\bar under
+AKFXx
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+AKFXx (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+AKFXx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+AKFXx is the angle of attack, computed from AFIXx and QCx (either boom or
+ gust dynamic pressure).
+ An empirically derived function, HSSATK,
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+can I find this?
+\end_layout
+
+\end_inset
+
+ is used to determine the attack angle based upon wind tunnel test data.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Sideslip Angle (Fixed Vane) (
+\series default
+
+\begin_inset Formula $\text{º}$
+\end_inset
+
+
+\series bold
+): 
+\bar under
+SSFXx
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+SSFXx (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SSFXx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+SSFXx is the sideslip angle, computed from BFIXx, and QCx (either boom or
+ gust dynamic pressure).
+ An empirically derived function, HSSATK, is used to determine the sideslip
+ angle based upon wind tunnel test data.
+\end_layout
+
+\begin_layout Hanging
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Dynamic Pressure (Boom) (mb): 
+\bar under
+QCB
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+QCB (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+QCB
+\end_layout
+
+\end_inset
+
+, 
+\bar under
+QCBC
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+QCBC (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+QCBC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Dynamic Pressure (Gust Probe) (mb): 
+\bar under
+QCG
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+QCG (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+QCG
+\end_layout
+
+\end_inset
+
+, 
+\bar under
+QCGC
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+QCGC (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+QCGC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+These variables, measured by a differential pressure gauge, record the differenc
+e between a pitot (total) pressure and a static pressure.
+ The QCBC and QCGC values are corrected for local flow-field distortion.
+ The boom and gust probe measurements referred to the same aircraft structure.
+ The different designations used for those measurements specified the transducer
+ used and its location.
+ In the gust probe dynamic pressure measurement (QCG), a Rosemount Model
+ 1332 differential pressure transducer was located closer to the sensor
+ in the gust probe itself, whereas in the boom measurement (QCB), a Rosemount
+ Model 1221 pressure transducer was typically located in the aircraft nose.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Ambient Temperature 
+\series default
+(
+\begin_inset Formula $^{\circ}C$
+\end_inset
+
+):
+\series bold
+\bar under
+ ATC
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+ATC
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+ATC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+A variable obtained by combining the avionics temperature on the GV, AT_A,
+ with a Rosemount temperature, so that the absolute value tracked AT_A but
+ faster response was provided by the Rosemount temperature.
+ This was used in some early GV projects because there were unresolved problems
+ with the data-system temperature sensors and it was thought that AT_A provided
+ a more accurate result, but AT_A was filtered to have slow response to
+ it was combined with the faster-response signal from the Rosemount sensor.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Total Temperature (
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C): TTx
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+TTx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+TTx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+This variable was used before 2014 for measurements of the recovery temperature,
+ for which the variable is now 
+\series bold
+RTx
+\series default
+.
+ Because the quantity measured is not the total temperature,
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+temperature!total
+\end_layout
+
+\end_inset
+
+ the variables TTx were replaced by RTx, but the meaning historically was
+ the same as that now described for 
+\series bold
+RTX
+\series default
+, apart from how humidity is now handled.
+ 
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Total Temperature, Reverse Flow (
+\begin_inset Formula $^{\circ}C$
+\end_inset
+
+): 
+\bar under
+TTRF
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TTRF (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TTRF
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+TTRF is the recovery temperature from a calibrated NCAR reverse-flow temperature
+ sensor
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+reverse-flow temperature sensor
+\end_layout
+
+\end_inset
+
+, for which the housing was designed to separate water droplets and protect
+ the element from wetting in cloud.
+ 
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Total Temperature (Fast Response) (
+\begin_inset Formula $^{\circ}C$
+\end_inset
+
+): 
+\bar under
+TTKP
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TTKP (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TTKP
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This is the output of recovery temperature from the NCAR fast-response temperatu
+re probe, originally designed by Karl Danninger.
+ (See discussion of total temperature in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:PTq"
+
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Ambient Temperature (
+\begin_inset Formula $^{\circ}C$
+\end_inset
+
+): 
+\bar under
+ATRF
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+ATRF (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ATRF
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The ambient temperature computed using the NCAR reverse-flow temperature
+ sensor.
+ (See discussion in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:PTq"
+
+\end_inset
+
+ above.)
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Ambient Temperature (Fast Response) (
+\begin_inset Formula $^{\circ}C$
+\end_inset
+
+): 
+\bar under
+ATKP
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+ATKP (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ATKP
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The ambient temperature computed using the fast-response temperature probe.
+ (See discussion of ambient temperature in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:PTq"
+
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Raw Cloud Technology (Johnson-Williams) 
+\begin_inset Newline newline
+\end_inset
+
+Liquid Water Content (
+\begin_inset Formula $g/m^{3}$
+\end_inset
+
+): 
+\bar under
+LWC
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+LWC (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+LWC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This is the raw output of a Johnson-Williams
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Johnson-Williams sensor
+\end_layout
+
+\end_inset
+
+ liquid water content sensor converted to units of grams per cubic meter.
+ The Johnson-Williams indicator measures the evaporative cooling caused
+ by the latent heat of vaporization of droplets contacting the heated sensing
+ element by sensing changes in its resistance as it cools.
+ Through calibration this resistance is converted to a liquid water content.
+ A 
+\begin_inset Quotes eld
+\end_inset
+
+compensation
+\begin_inset Quotes erd
+\end_inset
+
+ wire is also mounted in the J-W sensor, parallel to the droplet stream,
+ to compensate for cooling effects of the airstream.
+ Typically the instrument is set for a true airspeed of 200 knots.
+ The instrument must be zeroed in 
+\begin_inset Quotes eld
+\end_inset
+
+cloud-free air.
+\begin_inset Quotes erd
+\end_inset
+
+ The Johnson-Williams liquid water content sensor is designed for the cloud
+ droplet spectrum.
+ There is some evidence to indicate that droplets larger than 30 
+\begin_inset Formula $\mu m$
+\end_inset
+
+ are shed before completely vaporizing on the sensor element.
+ This tends to underestimate the liquid water content.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Corrected Cloud Technology (Johnson-Williams) 
+\begin_inset Newline newline
+\end_inset
+
+Liquid Water Content (g/M3): 
+\bar under
+LWCC
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+LWCC (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+LWCC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This is the corrected liquid water content obtained by using the aircraft's
+ true airspeed after removing the zero offset: LWCC=LWC
+\begin_inset Formula $U_{a}/U_{ref}$
+\end_inset
+
+ where 
+\begin_inset Formula $U_{a}$
+\end_inset
+
+ is the true airspeed of the aircraft and 
+\begin_inset Formula $U_{ref}$
+\end_inset
+
+ is the true airspeed set on the dial of the instrument.
+ 
+\begin_inset Formula $U_{ref}$
+\end_inset
+
+ was normally 200 kts = 102.88889 m/s.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Indicated Airspeed (knots): 
+\bar under
+IAS
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+indicated airspeed
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+airspeed!indicated
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+IAS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+\bar default
+In some old data files, a variable representing the indicated airspeed was
+ included because this was used for some derived variables.
+ The indicated airspeed is the airspeed that would produce the observed
+ difference between dynamic and static pressure under standard conditions
+ of 1013.25 mb and 
+\begin_inset Formula $15^{\circ}$
+\end_inset
+
+C.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Water Vapor Pressure (mb): 
+\bar under
+EDPC
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+EDPC (obsolete)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+EDPC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This is a derived intermediate variable used in the calculation of several
+ derived thermodynamic variables.
+ The vapor pressure over a plane water surface is obtained by the method
+ of Paul R.
+ Lowe (1977), a derived, sixth-order, Chebyshev polynomial fit to the Goff-Gratc
+h Formulation (1946) as a function of temperature expressed in 
+\begin_inset Formula $^{\circ}C$
+\end_inset
+
+.
+ The error is much less than 1% over the range -50
+\begin_inset Formula $\text{º}$
+\end_inset
+
+C to +50
+\begin_inset Formula $\text{º}$
+\end_inset
+
+C.
+ EDPC was calculated using this method for most RAF research projects between
+ 1993 and 1996.
+ This variable did not have the enhancement factor applied that was discussed
+ in Appendix C of Bulletin 9.
+ A variable of the same name but calculated differently replaced this in
+ 1996, and with changes described in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:State Variables"
+
+\end_inset
+
+ continues in use, recently replaced by EWx.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+the <-50 branch looks suspicious and needs checking
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:10-2"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+A.
+ T 
+\begin_inset Formula $<$
+\end_inset
+
+ -50 C:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathrm{EDPC} & = & 4.4685+T(0.27347+T\{6.83811\times10^{-3}\\
+ & + & T[8.7094x10^{-5}+T(5.63513x10^{-7}+T\,1.47796\times10^{\mbox{-9}})]\})
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+B.
+ T 
+\begin_inset Formula $>$
+\end_inset
+
+= -50
+\begin_inset Formula $\text{º}$
+\end_inset
+
+C:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathrm{EDPC} & = & 6.107799961+T\,[0.4436518521+T(0.01428945805\\
+ & + & T\{2.650648471\times10^{-4}+T\,[3.031240396\times10^{-6}\\
+ & + & T(2.034080948\times10^{-8}+T\,6.136820929\times10^{-11})]\})]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Cryogenic Hygrometer Inlet Pressure (hPa) and Frost Point Temperature (
+\begin_inset Formula $^{\circ}C$
+\end_inset
+
+): 
+\bar under
+CRHP
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+CRHP
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+CRHP
+\end_layout
+
+\end_inset
+
+
+\series default
+\bar default
+ 
+\series bold
+and 
+\bar under
+VCRH
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+VCRH
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+VCRH
+\end_layout
+
+\end_inset
+
+ (obsolete)
+\begin_inset Newline newline
+\end_inset
+
+These are measurements made directly in the chamber of the cryogenic hygrometer
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+hygrometer!cryogenic
+\end_layout
+
+\end_inset
+
+, a now obsolete cabin-mounted instrument connected to outside air by an
+ inlet line.
+ CRHP is the pressure and VCRH is the frost-point temperature measured inside
+ that chamber.
+ VCRH is determined from a third-order calibration equation applied to the
+ voltage measured by the instrument.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+find and include the 3rd-order equation
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:10-3"
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+need new CR2 discussion here
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Corrected Cryogenic Frost Point Temperature and Dew Point Temperature (
+\begin_inset Formula $\text{º}$
+\end_inset
+
+C): 
+\bar under
+FPCRC
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+FPCRC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+FPCRC
+\end_layout
+
+\end_inset
+
+
+\bar default
+ and 
+\bar under
+DPCRC
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+DPCRC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+DPCRC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The frost point or dew point determined after corrections are applied to
+ the direct measurements from a cryogenic hygrometer.
+ 
+\emph default
+These measurements were from a now obsolete instrument but the variables
+ are included here because they appear in some old data files.
+ To obtain estimates of the ambient frost point and dew point, the measurements
+ made inside the chamber of the cryogenic hygrometer (CVRH and CRHP) must
+ be corrected for the difference in water vapor pressure between that chamber
+ and ambient conditions.
+ The ratio of the chamber pressure to the ambient pressure is assumed to
+ be the same as the ratio of the chamber vapor pressure to the ambient vapor
+ pressure.
+ The vapor pressure in the chamber was determined from the Goff-Gratch (1946)
+ equation
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Goff, J.
+ A., and S.
+ Gratch (1946) Low-pressure properties of water from −160 to 212 °F, referenced
+ and used in the Smithsonian Tables (List, 1980).
+\end_layout
+
+\end_inset
+
+ for saturation vapor pressure with respect to a plane ice surface.
+ This vapor pressure was then used with CRHP and a measure of the ambient
+ pressure (PSXC) to determine the vapor pressure in the outside air, and
+ this was converted to an equivalent dew-point.
+ The instrument was only used for measurements of frost point
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+frost point
+\end_layout
+
+\end_inset
+
+ less than -15
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C because it did not function well above that frost point.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+check G-G formulas; there was some ambiguity in what was in B9
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:10-4"
+
+\end_inset
+
+The steps are documented below:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+VCRH = frost point inside the cryogenic hygrometer (
+\begin_inset Formula $^{\circ}C$
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+CRHP = pressure inside the chamber of the cryogenic hygrometer (hPa)
+\begin_inset Newline newline
+\end_inset
+
+PSXC = reference ambient pressure (hPa)
+\begin_inset Newline newline
+\end_inset
+
+f
+\begin_inset Formula $_{i}$
+\end_inset
+
+ = enhancement factor (see Appendix C of Bulletin 9)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $F_{1}$
+\end_inset
+
+(
+\begin_inset Formula $T_{d}$
+\end_inset
+
+) =Goff-Gratch formula for vapor pressure at dew point 
+\begin_inset Formula $T_{d}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $F_{2}(T_{f})$
+\end_inset
+
+ = Goff-Gratch formula for vapor pressure at frost point 
+\begin_inset Formula $T_{f}$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{3}$
+\end_inset
+
+ = temperature at the triple point of water = 273.16 K
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+chamber vapor pressure 
+\begin_inset Formula $e_{ic}$
+\end_inset
+
+ (hPa):
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+e_{ic}=(6.1071\,\mathrm{mb})\times10^{A}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathrm{where}\,\,\,A & = & -9.09718\left(\frac{T_{3}}{\mathrm{VCRH}+T_{3}}-1\right)\\
+ & + & 3.56654\log_{10}\left(\frac{T_{3}}{\mathrm{VCRH}+T_{3}}\right)\\
+ & + & 0.876793\left(1-\frac{\mathrm{VCRH}+T_{3}}{T_{3}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+ambient vapor pressure 
+\begin_inset Formula $e_{a}$
+\end_inset
+
+ (hPa):
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+e_{a}=e_{ic}\left(\frac{\mathrm{PSXC}}{\mathrm{CRHP}}\right)f_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+ambient dew and frost point DPCRC and FPCRC: (iterative solution)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+e_{a} & = & F_{1}\left(\mathrm{DPCRC}\right)\\
+ & = & F_{2}\left(\mathrm{FPCRC}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Voltage Output From the Lyman-alpha Sensor (V): 
+\bar under
+VLA
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+VLA
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+VLA
+\end_layout
+
+\end_inset
+
+, 
+\bar under
+VLA1
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+VLA1
+\end_layout
+
+\end_inset
+
+ (obsolete)
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The voltage output from the Lyman-alpha absorption hygrometer
+\emph default
+.
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+hygrometer!Lyman-alpha
+\end_layout
+
+\end_inset
+
+ This instrument provided fast-response, high-resolution measurements of
+ water vapor density.
+ (If a second sensor was used, a 1 was added to the variable name associated
+ with the second sensor.) The sensors are now obsolete.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Voltage Output from the UV Hygrometer (V): 
+\bar under
+XUVI
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XUVI
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XUVI
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+change XUVI name?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+hygrometer!UV
+\end_layout
+
+\end_inset
+
+
+\emph on
+The voltage from a modern (as of 2009) version of the Lyman-alpha hygrometer,
+ which provides a signal that represents water vapor density.
+
+\emph default
+ The instrument also provides measurements of pressure and temperature inside
+ the sensing cavity; they are, respectively, 
+\series bold
+\bar under
+XUVP
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XUVP
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XUVP
+\end_layout
+
+\end_inset
+
+
+\series default
+ and 
+\series bold
+\bar under
+XUVT
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XUVT
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XUVT
+\end_layout
+
+\end_inset
+
+
+\series default
+.
+ These variables and the processing algorithm below have now been replaced
+ by XSIGV_UVH and the algorithm discussed  with the variable EW_UVH.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+XUVI = output from the UV Hygrometer, after application of calibration coefficie
+nts
+\begin_inset Newline newline
+\end_inset
+
+DPXC
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+DPXC
+\end_layout
+
+\end_inset
+
+ = corrected dewpoint from some preferred source, 
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C
+\begin_inset Newline newline
+\end_inset
+
+ATX
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ATX
+\end_layout
+
+\end_inset
+
+ = preferred temperature, 
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C
+\begin_inset Newline newline
+\end_inset
+
+RHODT
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RHODT
+\end_layout
+
+\end_inset
+
+ =water vapor density determined by a chilled-mirror sensor
+\begin_inset Newline newline
+\end_inset
+
+Tau = time constant for the exponential update (typically 300 s)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+For valid measurements:
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+i.e., DPXC<ATX and XUVI and RHODT are not missing
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout LyX-Code
+    Offset += (RHODT-XUVI-Offset)/Tau
+\begin_inset Newline newline
+\end_inset
+
+RHOUV = XUVI + Offset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Raw Pyrgeometer Output (W
+\begin_inset space \thinspace{}
+\end_inset
+
+m
+\begin_inset Formula $^{-2}$
+\end_inset
+
+): 
+\bar under
+IRx
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+IRx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+IRx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "EppleyReference"
+
+\end_inset
+
+A pyrgeometer
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pyrgeometer
+\end_layout
+
+\end_inset
+
+ manufactured by Eppley Laboratory, Inc.
+ measures 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+radiation!long-wave
+\end_layout
+
+\end_inset
+
+long-wave irradiance using a calibrated thermopile.
+ It has a coated glass hemisphere that transmits radiation in a bandwidth
+ between 3.5 
+\begin_inset Formula $\mu m$
+\end_inset
+
+ and 50 
+\begin_inset Formula $\mu m$
+\end_inset
+
+.
+ It is calibrated at RAF according to procedures specified by Albrecht and
+ Cox (1977).
+ (See the reference in the next paragraph.) The pyrgeometers are usually
+ flown in pairs, one up-looking and one down-looking.
+ The letter 'x' denotes either bottom (B) or top (T).
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Corrected Infrared Irradiance (W
+\begin_inset space \thinspace{}
+\end_inset
+
+m
+\begin_inset Formula $^{-2}$
+\end_inset
+
+): 
+\bar under
+IRxC
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+IRxC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+IRxC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Because the pyrgeometer measures net radiation, IRx must be corrected for
+ emission from the dome covering the sensor and for emission from the thermopile
+ itself.
+ IRxC is the corrected infrared irradiance, determined following procedures
+ of 
+\begin_inset CommandInset href
+LatexCommand href
+name "Albrecht and Cox, 1977"
+target "http://journals.ametsoc.org/doi/pdf/10.1175/1520-0450%281977%29016%3C0190%3APFIPP%3E2.0.CO%3B2"
+
+\end_inset
+
+.
+ .
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I think the previous references to the Boltzmann constant should be to the
+ Stephan-Boltzmann constant, conventionally 
+\backslash
+sigma.Also, need values for the emissivity and empirical constant – OK
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+is this really obsolete? Change specified here was made in 2011.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+IRx = raw pyrgeometer output [W
+\begin_inset space \thinspace{}
+\end_inset
+
+m
+\begin_inset Formula $^{-2}$
+\end_inset
+
+]
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{D}$
+\end_inset
+
+ = dome temperature [K]
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{S}$
+\end_inset
+
+ = 
+\begin_inset Quotes eld
+\end_inset
+
+sink
+\begin_inset Quotes erd
+\end_inset
+
+ temperature (approx.
+\begin_inset space ~
+\end_inset
+
+the thermopile temperature) [K]
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ = emissivity of the thermopile (dimensionless) = 0.986
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\beta$
+\end_inset
+
+ = empirical constant dependent on the dome type = 5.5
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\sigma$
+\end_inset
+
+ = Stephan-Boltzmann constant
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+code has 5.6686e-8; the value that follows is from the NIST summary of physical
+ constants
+\end_layout
+
+\end_inset
+
+ = 5.6704
+\begin_inset Formula $\times10^{-8}$
+\end_inset
+
+ W
+\begin_inset space \thinspace{}
+\end_inset
+
+m
+\begin_inset Formula $^{-2}$
+\end_inset
+
+K
+\begin_inset Formula $^{-4}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathrm{IRxC}=\mathrm{IRx}-\beta\sigma(T_{D}^{4}-T_{S}^{4})+\epsilon\sigma T_{S}^{4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Shortwave Irradiance (W/m
+\begin_inset Formula $^{2}$
+\end_inset
+
+): 
+\bar under
+SWx
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+SWx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SWx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+An Eppley Laboratory, Inc., pyranometer
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pyranometer
+\end_layout
+
+\end_inset
+
+ measures 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+radiation!short wave
+\end_layout
+
+\end_inset
+
+short-wave irradiance.
+ The dome normally used is UG295 glass, which gives wide coverage of the
+ solar spectrum (from 0.285 
+\begin_inset Formula $\mu m$
+\end_inset
+
+ to 2.8 
+\begin_inset Formula $\mu m$
+\end_inset
+
+).
+ Different bandwidths can be obtained by use of different glass domes, available
+ from RAF upon request.
+ (See Bulletin No.
+ 25.) The pyranometers are usually flown in pairs, one up-looking and one
+ down-looking.
+ They are calibrated periodically at the NOAA Solar Radiation Facility in
+ Boulder, Colorado.
+ The letter 'x' denotes either bottom (B) or top (T).
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Corrected Incoming Shortwave Irradiance (W/m
+\begin_inset Formula $^{2}$
+\end_inset
+
+): 
+\bar under
+SWTC
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+SWTC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SWTC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The down-welling shortwave irradiance measured by the difference between
+ SWT and SWB) is corrected to take into account the sun angle and small
+ variations in the aircraft attitude angles (pitch and roll).
+ The correction is limited to 
+\begin_inset Formula $\pm6^{\circ}$
+\end_inset
+
+ in either angle, so these measurements should be considered invalid beyond
+ these limits.
+ This is the derived output of incoming (down-welling) shortwave irradiance,
+ taking into account both solar position (sun angle) and modest variations
+ in aircraft attitude (at present, restricted to less than 6
+\begin_inset Formula $\text{º}$
+\end_inset
+
+ in pitch and/or roll).
+ (For more information, refer to 
+\begin_inset CommandInset href
+LatexCommand href
+name "RAF Bulletin 25"
+target "http://www.eol.ucar.edu/raf/Bulletins/bulletin25.html"
+
+\end_inset
+
+.)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Bulletin 25
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+should include basic equation here
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:10-5"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Ultraviolet Irradiance (W/m
+\begin_inset Formula $^{2}$
+\end_inset
+
+): UVx
+\series default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+UVx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+UVx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+A pair of UV radiometer/photometers measure either down-welling (x=T) or
+ up-welling (x=B) irradiance in the ultraviolet, approximately from 0.295
+ 
+\begin_inset Formula $\mu m$
+\end_inset
+
+ to 0.385 
+\begin_inset Formula $\mu m$
+\end_inset
+
+.
+ These units are periodically returned to the Eppley Laboratories for recalibrat
+ion.
+ 
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Raw Carbon Monoxide Concentration (ppb): 
+\bar under
+CO
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CO
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+CO
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+CO is the uncorrected output of the TECO model 48 CO analyzer.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+is the direct measurement (ppb) a mass ratio? Need explanation here if so
+ to describe difference between ppb and ppbv
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:10-6"
+
+\end_inset
+
+This instrument measures the concentration of CO by gas filter correlation.
+ The optics of the version operated by the RAF have been modified to increase
+ the light through the absorption cell, and a zero trap has been added that
+ periodically removes CO from the sample air stream to obtain an accurate
+ zero.
+ This permits correction for the significant temperature-dependent drift
+ of the zero level of the measurement.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+This is compensated by making a measurement for five minutes then making
+ a zero measurement for two minutes.
+\begin_inset Quotes erd
+\end_inset
+
+ – I took this out because that is not how it operates now
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Carbon Monoxide Analyzer Status (V): 
+\bar under
+CMODE
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CMODE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+CMODE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Carbon Monoxide Baseline Zero Signal (V): 
+\bar under
+COZRO
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+COZRO
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+COZRO
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+Raw Carbon Monoxide, Baseline Corrected (V): 
+\bar under
+COCOR
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+COCOR
+\end_layout
+
+\end_inset
+
+
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+COCOR
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+CMODE records if the CO analyzer is supplied with air from which CO has
+ been removed and so is recording its zero level.
+ When CMODE is less than 0.2 V, the instrument is in the normal operational
+ mode, and when CMODE is greater than 8.0 V the instrument is in the 
+\begin_inset Quotes eld
+\end_inset
+
+zero
+\begin_inset Quotes erd
+\end_inset
+
+ mode.
+ When measurements are processed, the zero-mode signals are represented
+ by a cubic spline to obtain a reference baseline for the signal (COZRO),
+ and this baseline is subtracted from the measured value (CO) to obtain
+ COCOR.
+ This variable still jumps to zero periodically and does not include the
+ calibration that enters the following variable, COCAL.
+ 
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Corrected Carbon Monoxide Concentration (ppmv): 
+\bar under
+COCAL
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+COCAL
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+COCAL
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+how does this differ from XCOMR?
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:10-7"
+
+\end_inset
+
+The calibrated signal from the CO instrument after correction for drift
+ of the baseline and after application of the appropriate calibration coefficien
+ts to produce units of ppmv.
+ The quality of the baseline fit can be judged by examining the offset at
+ the zero points.
+ If there are relatively small changes in the baseline, the zero offset
+ will be only a few ppbv.
+ If there have been rapid changes in the baseline, the zero offset can be
+ up to 50 ppbv.
+ The magnitude of the offset at the zero values gives a good measure of
+ uncertainty in the data set.
+ The detection limit is 10 ppbv, with an uncertainty of 
+\begin_inset Formula $\pm15\%$
+\end_inset
+
+.
+ At 1 Hz, data will have considerable variability, so 10-s averaging is
+ often useful when the measurements are used for analysis.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+should we output a 10-s average?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Raw Chemiluminescent Ozone Signal (V): 
+\bar under
+O3FS
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+O3FS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+O3FS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+Voltage output from the chemiluminescence ozone instrument,
+\emph default
+ which operates on the basis of reacting nitric oxide with ozone and detecting
+ the resulting chemiluminescence.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Derived Supercooled Liquid Water Content (g/m
+\begin_inset Formula $^{3}$
+\end_inset
+
+): 
+\bar under
+SCLWC
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+SCLWC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SCLWC
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "SCLWC"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This variable is the supercooled liquid water content obtained from the
+ change in accreted mass on the Rosemount 871F ice-accretion probe over
+ one second.
+ The output is not valid during the probe deicing cycle.
+ This cycle is apparent in the RICE output (a peak followed by a decrease
+ to near zero).
+ Supercooled liquid water content is determined by first calculating a water
+ drop impingement rate which is a function of the effective surface area,
+ the collection efficiency, the true airspeed, and the supercooled liquid
+ water content.
+ The impingement rate obtained is equated to the accreted mass of ice collected
+ by the probe in one second (empirical voltage/mass relationship).
+ The resulting equation is solved for supercooled water content.
+ This calculation is not included in normal processing or special processing,
+ but some users of the instrument use an approach like the following to
+ calculate supercooled liquid water:
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+this is missing crucial information like how accreted mass is obtained from
+ voltage
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:10-8"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+A = 
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+A=area
+\end_layout
+
+\end_inset
+
+effective surface area of the probe (m
+\begin_inset Formula $^{2}$
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ = time interval
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+Deltat@
+\begin_inset Formula $\Delta t$
+\end_inset
+
+=time interval
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+t@
+\begin_inset Formula $t$
+\end_inset
+
+=time
+\end_layout
+
+\end_inset
+
+ during which an increment of mass accretes (s)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Delta m$
+\end_inset
+
+ = mass
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+m@
+\begin_inset Formula $m$
+\end_inset
+
+=mass
+\end_layout
+
+\end_inset
+
+ of ice accreted on the probe in the time interval 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ (g)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $U_{a}$
+\end_inset
+
+ = true airspeed (m/s)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\mathrm{SCLWC}=AU_{a}\frac{\Delta m}{\Delta t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+FSSP-100 Fast Resets 
+\series default
+(number per sample interval):
+\series bold
+ 
+\bar under
+FRST
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+FRST
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+FRST
+\end_layout
+
+\end_inset
+
+, 
+\bar under
+FRESET
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+FRESET
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+FRESET
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+\emph on
+The rate at which fast resets occur in an FSSP-100 probe.
+ 
+\emph default
+The FSSP-100
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FSSP-100!fast resets
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+resets!FSSP-100
+\end_layout
+
+\end_inset
+
+ records events called 
+\begin_inset Quotes eld
+\end_inset
+
+fast resets
+\begin_inset Quotes erd
+\end_inset
+
+ that occur when a particle traverses the beam outside the depth-of-field
+ and therefore is not accepted for sizing.
+ To avoid the processing time associated with sizing, the probe resets quickly
+ in this case, but there is still some dead time
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FSSP-100!dead time
+\end_layout
+
+\end_inset
+
+ when the probe cannot record another event.
+ Fast resets consume a time determined by circuit characteristics, and that
+ time has been determined in laboratory tests of the FSSP circuitry.
+ This variable is needed in addition to the 
+\begin_inset Quotes eld
+\end_inset
+
+Total Stobes
+\begin_inset Quotes erd
+\end_inset
+
+ to determine what fraction of the time the probe is unable to accept another
+ particle, and this 
+\begin_inset Quotes eld
+\end_inset
+
+dead time
+\begin_inset Quotes erd
+\end_inset
+
+ enters calculation of the concentration for the original (old) FSSP.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+where to find values used?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+FSSP-100 Total Strobes 
+\series default
+(number per sample interval)
+\series bold
+: 
+\bar under
+FSTB
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+FSTB
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+FSTB
+\end_layout
+
+\end_inset
+
+, 
+\bar under
+FSTROB
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+FSTROB
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FSTROB
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The rate at which strobes are generated in an FSSP-100 probe.
+ 
+\emph default
+A 
+\begin_inset Quotes eld
+\end_inset
+
+strobe
+\begin_inset Quotes erd
+\end_inset
+
+ is generated in the FSSP-100
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FSSP-100!total strobes
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+strobes!FSSP
+\end_layout
+
+\end_inset
+
+ whenever a particle is detected within its depth-of-field.
+ Not all such particles are accepted for inclusion in the size distribution,
+ however, because some pass through the outer regions of the illuminating
+ laser beam and therefore produce shorter and smaller-amplitude pulses than
+ those passing through the center of the beam.
+ The probe maintains a running estimate of the average transit time and
+ rejects particles with transit times shorter than this average.
+ The total number of strobes recorded is therefore more than the number
+ of sized particles, and the ratio of strobes to accepted particles can
+ indicate quality of operation of the probe.
+ Also, the strobes require processing and so contribute to the dead time
+ of the probe, affecting the concentration unless a correction is made.
+ See 
+\begin_inset CommandInset href
+LatexCommand href
+name "RAF Bulletin 24"
+target "http://www.eol.ucar.edu/raf/Bulletins/bulletin24.html"
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Bulletin 24
+\end_layout
+
+\end_inset
+
+ for more discussion on the operation of the 
+\begin_inset Quotes eld
+\end_inset
+
+old
+\begin_inset Quotes erd
+\end_inset
+
+ FSSP.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+FSSP-100 Beam Fraction 
+\series default
+(dimensionless)
+\series bold
+: 
+\bar under
+FBMFR
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+FBMFR
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FBMFR
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FSSP-100!beam fraction
+\end_layout
+
+\end_inset
+
+
+\emph on
+The ratio of the number of velocity-accepted particles (particles that pass
+ through the effective beam diameter) to the total number of particles detected
+ in the depth-of-field of the beam (the total strobes).
+
+\emph default
+ See the discussion of Total Strobes for more information.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+check this: previous B9 has FSSP/FSTROB – what is FSSP?
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "90text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+{AFSSP}
+\begin_inset Formula $_{i}$
+\end_inset
+
+ = valid particles sized in size interval i
+\begin_inset Newline newline
+\end_inset
+
+{FSTROB} = strobes generated by particles in the depth-of-field, 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space \hspace*{}
+\length 0.7in
+\end_inset
+
+per sample interval
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathrm{FBMFR=\{AFSSP\}/\{FSTROB\}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+FSSP-100 Calculated Activity Fraction
+\series default
+ (dimensionless):
+\series bold
+ 
+\bar under
+FACT
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FACT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+FACT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This variable
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FSSP-100!activity
+\end_layout
+
+\end_inset
+
+ represents the fraction of the time that the FSSP is unable to count and
+ size particles (its 
+\begin_inset Quotes eld
+\end_inset
+
+dead time
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+dead time!FSSP
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FSSP-100!dead time
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+).
+ The activity fraction is not measured directly but is estimated from fast
+ resets and total strobes along with measurements of the dead times associated
+ with each (as determined in laboratory tests).
+ The characteristic times are in the NetCDF header (for recent projects).
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This is perhaps a little confusing as to dimensions, although 
+\begin_inset Quotes eld
+\end_inset
+
+per sample interval
+\begin_inset Quotes erd
+\end_inset
+
+ appropriately takes care of dimensions.
+ is it possible to provide representative values? Are they recorded in the
+ header?
+\end_layout
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+FSTROB = strobes generated by particles in the depth-of-field, 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space \hspace*{}
+\length 0.7in
+\end_inset
+
+per sample interval
+\begin_inset Newline newline
+\end_inset
+
+FRESET = 
+\begin_inset Quotes eld
+\end_inset
+
+fast resets
+\begin_inset Quotes erd
+\end_inset
+
+ generated per sample interval
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $t_{1}$
+\end_inset
+
+ = slow reset time (for each strobe)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $t_{2}$
+\end_inset
+
+ - fast reset time (for each fast reset)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+FACT=\{FSTROB\}\,t_{1}+\mathrm{\{FRESET\}}\,t_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+PCAS Raw Activity 
+\series default
+(dimensionless):
+\series bold
+ 
+\bar under
+AACT
+\series default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\bar no
+AACT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\bar no
+AACT
+\end_layout
+
+\end_inset
+
+, 
+\series bold
+PACT
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+PACT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PACT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+this doesn't appear in recent files; why not? Didn't find this code.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The PCAS probe provides this measure of dead time, the time that the probe
+ is unable to sample particles because the electronics are occupied with
+ processing particles.
+ The manufacturer suggests that the actual dead time (
+\begin_inset Formula $f_{PCAS}$
+\end_inset
+
+) is given by the following formula, which is used in determining concentrations
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+concentration!PCAS
+\end_layout
+
+\end_inset
+
+ for the PCAS:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f_{PCAS}=0.52\frac{\mathrm{\{PACT\}}}{F_{PCAS}}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+where 
+\begin_inset Formula $F_{PCAS}=1024\,s^{-1}$
+\end_inset
+
+.
+ However, PACT (or AACT) is the variable archived in the data files.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+there was inconsistency in the explanation because it was claimed that 1024
+ corresponds to 100% dead time but the formula gives 52% dead time for that
+ raw activity – check processing to see if this is really done this way.
+ The original was also confusing as to sample rate, with sample rate in
+ the numerator – I kept this, but need to check if it is right
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,699 @@
+
+\section{CLOUD PHYSICS VARIABLES}
+
+\subsection{Measurements of Liquid Water Content}
+\begin{hangparagraphs}
+\textbf{Raw Output PMS/CSIRO (King) Liquid Water Content} (W):\textbf{
+}\textbf{\uline{PLWC}}\sindex[var]{PLWC}\textbf{\index{PLWC},
+}\textbf{\uline{PLWC1}}\index{PLWC1}\sindex[var]{PLWC1}\label{punch:5-3}\\
+\emph{The power\index{King probe} dissipated by the sensor of a PMS/CSIRO
+(King) liquid water\index{liquid water content} probe (in watts).
+}PLWC is the power required to maintain constant temperature in a
+heated element as that element is cooled by convection and evaporation
+of impinging liquid water. The convective heat losses are determined
+by calibration in dry air over a range of airspeeds and temperatures,
+so that the remaining power can be related to the liquid water content.
+The instrument is described in \href{http://www.eol.ucar.edu/raf/Bulletins/bulletin24.html}{RAF Bulletin 24}\index{Bulletin 24}
+and at \href{http://www.eol.ucar.edu/instruments/king-csiro-liquid-water-sensor}{this URL}.
+See \nameref{PLWCC} (which follows) for processing.\\
+
+\textbf{\label{PLWCC}PMS/CSIRO (King) Liquid Water Content} (g/m$^{3}$):\textbf{
+}\textbf{\uline{PLWCC}}\sindex[var]{PLWCC}\textbf{\index{PLWCC},
+}\textbf{\uline{PLWCC1}}\index{PLWCC1}\sindex[var]{PLWC1}\\
+\emph{The liquid water content}\index{liquid water content!King probe}
+\emph{measured by a King probe.} This is calculated by relating the
+power consumption required to maintain a constant temperature to the
+liquid water content, taking into account the effect of convective
+heat losses. The instrument and processing are described by King et
+al. (1978)\footnote{King, W. D., D. A. Parkin and R. J. Handsworth, 1978 A hot-wire liquid
+water device having fully calculable response characteristics. J.
+Appl. Meteorol., 17, 1809\textendash 1813. See also Bradley, S. G.,
+and W. D. King, 1979 Frequency response of the CSIRO Liquid Water
+Probe. J. Appl. Meteorol., 18, 361\textendash 366.} and in a note available at \href{https://drive.google.com/open?id=0B1kIUH45ca5AUkFDWmRwci12eVU}{this URL}.
+Because the temperature of the sensing wire is typically well above
+the boiling point of water\index{water!boiling point}, the assumption
+made in processing is that the water collected on the sensing wire
+is vaporized at the boiling point $T_{b}$. The boiling point is represented
+as a function of pressure as described below. \\
+\\
+\\
+\\
+{[}see the algorithmn box on the next page{]}\\
+\vfill
+
+~~\\
+\fbox{\begin{minipage}[t]{0.95\textwidth}%
+PLWC = total power dissipated by the probe (W)\\
+$P_{D}$ = power dissipated\index{King probe!power dissipated}\sindex[lis]{Power@$P$=power}
+by the cooling effect of dry air alone\\
+$P_{W}$ = power needed to heat and vaporize the liquid water that
+hits the probe element\\
+$L$ = length\sindex[lis]{L@$L$ =length (of a King-probe element)}
+of the probe sensitive element\index{King probe!element dimensions},
+typically 0.021\,m\\
+$d$= diameter\sindex[lis]{d@$d$=diameter} of the probe sensitive
+element, typically 1.805$\times10^{-3}$m\\
+$T_{s}$= sensor temperature\index{King probe!sensor temperature}\sindex[lis]{Ts@$T_{s}$=temperature of a sensor}
+($^{\circ}$C)\\
+$T_{a}$= ambient temperature ($^{\circ}$C) = ATX\\
+$T_{b}$\sindex[lis]{Tb@$T_{b}$= boiling temperature of water} =
+boiling temperature of water (dependent on pressure): 
+
+~~~~~~~~~with $x=\log_{10}(p/(1$hPa)), $B=1^{\circ}C$,
+and \{$b_{0},$ $b_{1}$, $b_{2}$, $b_{3}$\} = \{0.03366503, 1.34236135,
+-0.33479451, 0.0351934\}: $T_{b}=B\times10^{(b_{0}+b_{1}x+b_{2}x^{2}+b_{3}x^{3})}$\\
+$T_{m}=(T_{a}+T_{s})/2$ = mean temperature for air properties\\
+$L_{v}(T_{b})$ = latent heat of vaporization of water\sindex[lis]{Lv@$L_{v}$=latent heat of vaporization of water}\index{latent heat of vaporization}
+= (2.501-0.00237$T_{b}$)$\times10^{6}$J\,kg$^{-1}$\\
+$c_{w}$\sindex[lis]{cw@$c_{w}$= specific heat of liquid water} =
+specific heat of water = 4190~J\,kg$^{-1}$K$^{-1}$ (mean value,
+0\textendash 90$^{\circ}$C)\\
+$U_{a}$ = true airspeed (m/s) = TASX\\
+$\lambda_{c}$\sindex[lis]{lambdac@$\lambda_{c}$= thermal conductivity, dry air}
+= thermal conductivity\index{thermal conductivity|see {conductivity, thermal}}\index{conductivity!thermal}
+of dry air (2.38+0.0071$T_{m}$)$\times10^{-2}$J\,m$^{-1}$s$^{-1}$K$^{-1}$\\
+$\mu$\sindex[lis]{mu_{a}= dynamic viscosity of air@$\mu_{a}$= dynamic viscosity of air}
+=viscosity of air =\index{viscosity} (1.718+0.0049$T_{m})\times10^{-5}$
+kg\,~m$^{-1}$s$^{-1}$\\
+$\rho_{a}$\sindex[lis]{rhoa@$\rho_{a}$= density of air} = density
+of air = $p/(R_{d}(T_{a}+T_{0}))$\\
+Re\sindex[lis]{Re= Reynolds number} = Reynolds number = $\rho_{a}U_{a}d/\mu_{a}$\\
+Nu\sindex[lis]{Nu= Nusselt number} = Nusselt Number relating conduction
+heat loss to the total heat loss for dry air: 
+
+~~~~~~~~~~%
+\fbox{\begin{minipage}[t]{0.9\textwidth}%
+typically Nu=$a_{0}\mathrm{Re}^{a_{1}}$ where, for the GV, $\{a_{0},\,a_{1}\}=1.868,\,0.343$
+for Re<7244 and $\{0.135,\,0.638\}$ otherwise, except when TASX <
+150 m/s; then use $\{0.133,\,0.382\}$. For the C-130 $\{a_{0},\,a_{1}\}=\{0.118,\,0.675\}$.%
+\end{minipage}}, \\
+$C_{kg2g}=1000$\sindex[lis]{Ckg2g@$C_{kg2g}$= conversion factor, g to kg}
+= grams per kilogram 
+
+~~~~~~~~~~(unit conversion to conventional units for liquid
+water content)\\
+$\chi$ \sindex[lis]{chi@$\chi$=liquid water content}= liquid water
+content (g/m$^{3}$) = PLWCC
+
+\rule[0.5ex]{1\linewidth}{1pt}
+\[
+\mathrm{PLWC}=P_{D}+P_{W}
+\]
+where
+\[
+P_{D}=\pi\mathrm{Nu}\,L\lambda_{c}(T_{s}-T_{a})
+\]
+\[
+P_{W}=L\,d[L_{v}(T_{b})+c_{w}(T_{b}-T_{a})]\,U_{a}\chi
+\]
+Result:
+\[
+\mathrm{PLWCC}=\chi=\frac{C_{kg2g}(\mathrm{\{PLWC\}}-P_{D})}{L\,d\,U_{a}[L_{v}(T_{b})+c_{w}(T_{b}-T_{a})]}
+\]
+%
+\end{minipage}}\\
+\\
+In addition, a processing step is used to remove drift by calculating
+the offset required to zero measurements obtained outside cloud. This
+is done by adjusting the coefficient $a_{0}$ by nudging toward the
+value required to give zero liquid water content outside cloud (as
+indicated by another instrument, often a CDP showing droplet concentration
+of <1 cm$^{-3}$). Specifically, when out-of-cloud, Nu$^{\prime}$
+is calculated from Nu$^{\prime}=\mathrm{\{PLWC\}}/(\pi L\lambda_{c}(T_{s}-T_{a}))$.
+Then the value of $a_{0}$ is updated via $a_{0}$ += (Nu$^{\prime}/Re^{a_{1}}-a_{0})/\tau$
+(using, for the GV, separate coefficients for each of the three branches).
+In this formula, $\tau$ should be the number of updates in a fixed
+period, e.g., for a 100 s time constant and for 25-Hz processing,
+$\tau=100\times25$. In addition, to avoid jumps when switching among
+the branches, the linear coefficients \{$a_{0}$\} are adjusted with
+each transition between branches to provide a continuous estimate
+of the zero value.
+
+\textbf{PVM-100 Liquid Water Content} (g/m$^{-3}$):\textbf{ }\textbf{\uline{PLWCG}}\textbf{\sindex[var]{PLWCG}}\index{PLWCG}\\
+\emph{Cloud liquid water content for cloud droplets in the approximate
+size range from 3\textendash 50 $\mu$m. }The PVM produces a measure
+of the liquid water content directly, but a baseline value is sometimes
+subtracted by reference to another cloud droplet instrument such as
+an FSSP or CDP, such that when the other instrument measures a very
+low droplet concentration the baseline value for the PVM-100 is updated
+at the corresponding time and that average is then subtracted from
+the measurements directly produced by the PVM-100.\label{punch:5-1}
+
+\textbf{Rosemount Icing Detector Signal} (V):\textbf{ }\textbf{\uline{RICE}}\sindex[var]{RICE}\index{RICE}\\
+\emph{The voltage related to loading on the element of a Rosemount
+871F\index{Rosemount 871F icing probe} ice-accretion probe.} This
+instrument (see \href{http://www.eol.ucar.edu/instruments/rosemount-icing-probe}{this URL})
+consists of a rod set in vibration by a piezoelectric crystal. The
+oscillation frequency of the probe changes with ice loading, so in
+supercooled cloud ice accumulates on the sensor and the change in
+oscillation frequency is transmitted as a DC voltage. When the rod
+loads to a trigger point, the probe heats the rod to remove the ice.
+The rate of voltage change can be converted to an estimate of the
+supercooled liquid water content\index{liquid water content!supercooled},
+as described in connection with the obsolete variable SCLWC. This
+calculation is no longer provided routinely but can be duplicated
+by a user on the basis of the SCLWC algorithm (see page \pageref{SCLWC})
+or one of several other published algorithms.
+\end{hangparagraphs}
+
+
+\subsection{Sensors of Individual Particles (1-D Probes)\label{subsec:1DProbes}}
+
+The RAF operates a set of hydrometeor detectors\index{hydrometeor detector}
+that provide single-dimension measurements (i.e., not images) of individual
+particle sizes. \href{http://www.eol.ucar.edu/raf/Bulletins/bulletin24.html}{RAF Bulletin 24}
+contains extensive information on the operating principles and characteristics
+of some of the older instruments. Here the focus will be on the meanings
+of the variables in the archived data files.\index{Bulletin 24}\label{punch:5-2}
+
+\label{VariableNames1DProbes}Four- and five-character variable names\index{variable names!hydrometeor probes}
+shown in this section are generic. The actual names appearing in NIMBUS-generated
+production output data sets have appended to them an underscore (\_)
+and three or four more characters that indicate a probe's specific
+aircraft mounting location. For example, AFSSP\_RPI refers to a variable
+from an FSSP-100 probe mounted on the inboard, right-side pod. The
+codes presently in use are given in the following table. For the GV,
+there are 12 locations available, characterized by three letters.
+The first is the wing (\{L,R\} for \{port,starboard\}), the second
+is the pylon (\{I,M,O\} for inboard, middle, outboard\}), the third
+is which of the two possible canister locations at the pylon is used
+(\{I,O\} for \{inboard, outboard\}).
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+\textbf{Code} & \textbf{Location} & \textbf{Aircraft}\tabularnewline
+\hline 
+\hline 
+OBL  & Outboard Left  & C-130Q \tabularnewline
+\hline 
+IBL  & Inboard Left  & C-130Q \tabularnewline
+\hline 
+OBR  & Outboard Right  & C-130Q \tabularnewline
+\hline 
+IBR  & Inboard Right  & C-130Q \tabularnewline
+\hline 
+LPO  & Left Pod Outboard  & C-130Q \tabularnewline
+\hline 
+LPI  & Left Pod Inboard  & C-130Q \tabularnewline
+\hline 
+LPC  & Left Pod Center  & C-130Q \tabularnewline
+\hline 
+RPO  & Right Pod Outboard  & C-130Q \tabularnewline
+\hline 
+RPI  & Right Pod Inboard  & C-130Q \tabularnewline
+\hline 
+RPC  & Right Pod Center  & C-130Q \tabularnewline
+\hline 
+OBL  & Left Wing  & Electra \tabularnewline
+\hline 
+IBL  & Left Pylon  & Electra \tabularnewline
+\hline 
+WDL  & Window Left  & Electra \tabularnewline
+\hline 
+OBR  & Right Wing  & Electra \tabularnewline
+\hline 
+IBR  & Right Pylon  & Electra \tabularnewline
+\hline 
+WDR  & Window Right  & Electra \tabularnewline
+\hline 
+\{L,R\}W\{I,M,O\}\{I,O\} & see discussion above & GV\tabularnewline
+\hline 
+\end{tabular}
+\par\end{center}
+
+The probe type also is coded into each variable's name, sometimes
+using four characters, sometimes only one: FSSP-100 (FSSP or F), FSSP-300
+(F300 or 3), CDP (CDP or D), UHSAS (UHSAS or U), PCASP (PCAS or P),
+OAP-200X (200X or X), OAP-260X (260X or 6) and OAP-200Y (200Y or Y).
+Prefix letters are used to identify the type of measurement (A=accumulated
+particle counts per time interval per channel, C = concentration per
+channel, CONC = Concentration from all channels, DBAR = mean diameter,
+DISP = dispersion, PLWC =liquid water content, DBZ = radar reflectivity
+factor).
+
+Some of the probes discussed in this section are primarily aerosol
+spectrometers but are described here, rather than in Section \ref{sec:AEROSOL-PARTICLE-MEASUREMENTS},
+because they are similar to the hydrometeor spectrometers and so are
+most economically discussed here. However, see Sect.~\ref{sec:AEROSOL-PARTICLE-MEASUREMENTS}
+for the processing algorithms that lead to concentrations from the
+UHSAS, PCASP, and F300. The following table and discussion includes
+some obsolete variables (for the 200X and 200Y) for the same reason.
+The table also includes some variables derived from imaging spectrometers
+(the 2DC and 2DP probes) to highlight that the primary variables are
+similar to those discussed in this sub-section. Those variables are
+discussed in the next sub-section. In two cases, the FSSP and PCASP,
+two versions are listed, an obsolete version and a current version
+with a revised processing package (SPP-100 for the FSSP, SPP-200 for
+the PCASP). Both are included for historical completeness, but algorithms
+in this document discuss the current versions.
+
+The archived data files sometimes have ``housekeeping'' variables\index{housekeeping variables}
+included that provide information on the operating state and data
+quality from the probes. For example, the CDP provides information
+on the average transit time, the voltage from the nominal 5-V source,
+the control board temperature, the laser block temperature, the laser
+current, the laser power monitor, the qualifier bandwidth, the qualifier
+baseline, the qualifier threshold, the sizer baseline, the wing-board
+temperature, an A-to-D overflow flag, and a count of particles rejected
+as being outside the depth of field. The netCDF variables and attributes
+should be consulted for this housekeeping information. The large number
+of housekeeping variables will not be included in this document, so
+appropriate manuals and the netCDF files should be consulted when
+interpreting this information.
+
+\index{hydrometeor probes!table of}
+
+\begin{center}
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{center}
+\textbf{Probes that produce size distributions of particles (with
+links to descriptions):\label{TableOfProbes}}
+\par\end{center}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+\textbf{\small{}Generic Name} &  & \textbf{\small{}Probe} & \textbf{\small{}Channels} & \textbf{\small{}Usable}\footnote{Channels may be unusable because the first channel is a historical
+carry-over and should be ignored, or because in the case of 2D probes
+the entire-in sizing technique reduces the number of bins where particles
+can be sized. Also, when some channels have been considered unreliable
+the netCDF header may specify that the usable bins are smaller than
+indicated here.} & \textbf{\small{}Diameter Range} & \textbf{\small{}Bin Width}\tabularnewline
+\hline 
+\hline 
+{\small{}FSSP-100/original} & {\small{}F} & {\small{}\href{http://www.eol.ucar.edu/raf/Bulletins/B24/fssp100.html}{FSSP-100}}\footnote{Now obsolete but present in many archived data sets} & {\small{}0\textendash 15} & {\small{}1-{}-15} & \multicolumn{2}{c|}{{\small{}(See FRNG below)}}\tabularnewline
+\hline 
+FSSP/SPP-100 & F & \href{http://www.eol.ucar.edu/instruments/forward-scattering-spectrometer-probe-model-100}{SPP-100} & 0\textendash 30 & 1-{}-30 & \multicolumn{1}{c||}{3\textendash 45 $\mu$m } & 3 $\mu$m (typ.)\tabularnewline
+\hline 
+UHSAS & U & \href{https://www.eol.ucar.edu/instruments/ultra-high-sensitivity-aerosol-spectrometer}{UHSAS} & 0\textendash 99 & 1-{}-99 & \multicolumn{1}{c||}{0.06\textendash 1.0 $\mu$m} & variable\tabularnewline
+\hline 
+CDP & D & \href{https://www.eol.ucar.edu/instruments/cloud-droplet-probe}{CDP} & 0\textendash 30 & 1-\textendash 30 & \multicolumn{1}{c||}{2.0\textendash 50} & variable\tabularnewline
+\hline 
+{\small{}F300} & {\small{}3} & {\small{}\href{https://www.eol.ucar.edu/instruments/forward-scattering-spectrometer-probe-model-300}{FSSP-300}$^{b}$} & {\small{}0\textendash 30} & {\small{}1-{}-30} & {\small{}0.3\textendash 20.0 $\mu m$} & {\small{}variable}\tabularnewline
+\hline 
+PCASP/original & P & \href{http://www.eol.ucar.edu/raf/Bulletins/B24/pcasp100.html}{PCASP}$^{b}$ & 0\textendash 15 & 1-{}-15 & 0.1\textendash 3.0 $\mu$m & variable\tabularnewline
+\hline 
+PCASP/SPP-200 & P & {\small{}\href{https://www.eol.ucar.edu/instruments/signal-processing-package-200-passive-cavity-aerosol-spectrometer-probe}{SPP-200}} & {\small{}0\textendash 31} & {\small{}1-{}-31} & {\small{}0.1\textendash 3.0 $\mu m$} & {\small{}variable}\tabularnewline
+\hline 
+{\small{}200X} & {\small{}X} & OAP-200X{\small{}$^{b}$} & {\small{}0\textendash 15} & {\small{}1-{}-15} & {\small{}40\textendash 280 $\mu m$} & {\small{}10 $\mu m$}\tabularnewline
+\hline 
+{\small{}260X} & {\small{}6} & \href{http://www.eol.ucar.edu/raf/Bulletins/B24/260X.html}{OAP-260X} & {\small{}0-63} & {\small{}3-{}-62} & {\small{}40-620 $\mu m$} & {\small{}10 $\mu m$}\tabularnewline
+\hline 
+{\small{}200Y} & {\small{}Y} & {\small{}OAP-200Y$^{b}$} & {\small{}0-15} & {\small{}1-{}-15} & {\small{}300\textendash 4500 $\mu m$} & {\small{}300 $\mu m$}\tabularnewline
+\hline 
+1DC\footnote{See p.~\pageref{Despite-the-'1D'} for an explanation of this name
+convention}  &  & \href{http://www.eol.ucar.edu/raf/Bulletins/B24/2dProbes.html}{2DC}$^{b,}$\footnote{Measurements from this and the next three 2D probes are discussed
+in section \vref{subsec:Hydrometeor-Imaging-Probes}} (old) & 0-32 & 1-30$^{e}$ & 25\textendash 800 $\mu$m  & 25 $\mu$m\tabularnewline
+\hline 
+1DP &  & \href{http://www.eol.ucar.edu/raf/Bulletins/B24/2dProbes.html}{2DP}$^{b}$
+(old) & 0-32 & 1-30 & 200\textendash 6400 $\mu$m & 200 $\mu$m\tabularnewline
+\hline 
+1DC  &  & \href{https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud-probe}{2DC}
+(fast) & 0-63 & 1-62\footnote{Some of the lowest channels are often considered unreliable and excluded
+in processing} & 25\textendash 1600 $\mu$m & 25 $\mu$m\tabularnewline
+\hline 
+1DP &  & \href{https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-precipitation-probe}{2DP}
+(new) & 0-63 & 1-62 & 100\textendash 6400 $\mu$m & 100 $\mu$m\tabularnewline
+\hline 
+\end{tabular}
+\par\end{center}%
+\end{minipage}\\
+\par\end{center}
+\begin{hangparagraphs}
+\textbf{Count Rate Per Channel }(number per time interval):\textbf{\uline{\label{punch:5-4}\label{punch:5-7}}}\\
+\textbf{\uline{AFSSP}}\textbf{\sindex[var]{AFSSP}\index{AFSSP},
+}\textbf{\uline{AS100\index{AS100}}}\sindex[var]{AS100}\textbf{\uline{,
+AF300}}\sindex[var]{AF300}\textbf{\index{AF300}, }\textbf{\uline{APCAS}}\textbf{\sindex[var]{APCAS}\index{APCAS},
+}\textbf{\uline{A200X}}\textbf{\sindex[var]{A200X}\index{A200X},
+}\textbf{\uline{A260X}}\textbf{\sindex[var]{A260X}\index{A260X},
+}\textbf{\uline{A200Y}}\sindex[var]{A200Y}\index{A200Y}, \textbf{\uline{ACDP}}\sindex[var]{ACDP}\index{ACDP},
+\textbf{\uline{AUHSAS\sindex[var]{AUHSAS}\index{AUHSAS}}}\\
+\emph{The size distribution of the number of particles detected by
+a 1D hydrometeor probe per unit time.} These measurements have ``vector''
+character in the NetCDF\index{NetCDF!vector} output files, with dimension
+equal to the number of channels in the table above and with one entry
+per channel. The first element in the vector is a historical remnant
+from a time when housekeeping information was stored here and should
+be ignored. For the size limits of the channels, see the netCDF attributes
+of the following variables for ``Size Distribution''.
+
+\textbf{}%
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\textbf{Size Distribution} ($\mathrm{cm}{}^{-3}$channel$^{-1}$)\textbf{:
+}\textbf{\uline{CFSSP}}\textbf{\index{CFSSP}\sindex[var]{CFSSP},
+}\textbf{\uline{CS100}}\textbf{\index{CS100}}\sindex[var]{CS100}\textbf{,
+}\textbf{\uline{CF300}}\textbf{\index{CF300}\sindex[var]{CF300},
+}\textbf{\uline{CPCAS\index{CPCAS}}}\textbf{\sindex[var]{CPCAS},
+}\textbf{\uline{CCDP\index{CCDP}\sindex[var]{CCDP}}}\textbf{,
+}\textbf{\uline{CUHSAS\index{CUHSAS}\sindex[var]{CUHSAS}}}\\
+\textbf{Size Distribution }(L\textbf{$^{-1}$}channel$^{-1}$):\textbf{
+}\textbf{\uline{C200X}}\textbf{\index{C200X}\sindex[var]{C200X},
+}\textbf{\uline{C260X}}\textbf{\index{C260X}\sindex[var]{C260X},
+}\textbf{\uline{C200Y\index{C200Y}\sindex[var]{C200Y}}}%
+\end{minipage}\textbf{\label{CUHSAS}}\\
+\emph{The particle concentrations}\index{concentration!hydrometeor}\index{concentration!hydrometeor, size distribution}\index{FSSP-100!size distribution}
+\emph{in each usable bin of the probe.} These netCDF variables have
+``vector'' character with dimension equal to the number of channels
+in the table above. The first vector member should be ignored. For
+some scattering spectrometer\index{spectrometer!hydrometeor}\index{hydrometeor spectrometer}
+probes (FSSP-100, FSSP-300\index{FSSP-300}, PCASP\index{PCASP})
+the concentration value is modified by the probe activity (FACT, PACT)
+as described below. The concentration is obtained from the total number
+of particles detected and a calculated, probe-dependent sample volume
+that is specified in recent projects by attributes (e.g., depth of
+field and beam diameter) of this variable in the netCDF file. For
+additional details, see the links in the table \vpageref{TableOfProbes}
+or, for older probes, \href{http://www.eol.ucar.edu/raf/Bulletins/bulletin24.html}{RAF Bulletin 24}\index{Bulletin 24}.
+
+\begin{singlespace}
+\textbf{}%
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\begin{hangparagraphs}
+\begin{singlespace}
+\textbf{Concentration }(cm$^{-3}$):\textbf{ }\textbf{\uline{CONCF}}\textbf{\sindex[var]{CONCF}\index{CONCF},
+}\textbf{\uline{CONC3}}\sindex[var]{CONC3}\textbf{\index{CONC3},
+}\textbf{\uline{CONCP\sindex[var]{CONCP}\index{CONCP}, CONCD\sindex[var]{CONCD}\index{CONCD}}}\textbf{,
+}\textbf{\uline{CONCU\sindex[var]{CONCU}\index{CONCU}}}
+
+\textbf{Concentration (}L\textbf{$^{-1}$): }\textbf{\uline{CONCX}}\textbf{\sindex[var]{CONCX}\index{CONCX},
+}\textbf{\uline{CONC6}}\sindex[var]{CONC6}\textbf{\index{CONC6},
+}\textbf{\uline{CONCY\sindex[var]{CONCY}\index{CONCY}}}
+\end{singlespace}
+\end{hangparagraphs}
+
+%
+\end{minipage}\textbf{}\\
+\emph{The particle concentrations}\index{FSSP-100!concentration}\index{concentration!FSSP}
+\emph{summed over all channels to give the total concentration in
+the size range of the probe.} For example, \{CONCF\} = $\sum_{i}\mathrm{\{CFSSP\}_{i}}$.
+For additional details, see \href{http://www.eol.ucar.edu/raf/Bulletins/bulletin24.html}{RAF Bulletin 24}.\\
+
+\end{singlespace}
+
+\textbf{Mean Diameter }($\mu m$):\textbf{ }\textbf{\uline{DBARF}}\textbf{\index{DBARF},
+}\textbf{\uline{DBAR3}}\textbf{\index{DBAR3}, }\textbf{\uline{DBARP}}\textbf{\index{DBARP},
+}\textbf{\uline{DBARX}}\textbf{\index{DBARX}, }\textbf{\uline{DBAR6}}\textbf{\index{DBAR6},
+}\textbf{\uline{DBARY}}\index{DBARY}, \textbf{\uline{DBARD}}\index{DBARD},
+\textbf{\uline{}}\\
+\textbf{\uline{DBARU}}\index{DBARU}\\
+\emph{The arithmetic average of all measured particle diameters from
+a particular probe.}\index{diameter!mean, 1D probes}\index{FSSP-100!mean diameter}
+This mean is calculated as follows: \\
+\\
+\fbox{\begin{minipage}[t]{0.9\textwidth}%
+\{Cy$_{i}$\} = concentration\sindex[lis]{Cyi@$Cy_{i}$= concentration from hydrometeor probe y in channel i}
+from probe y in channel i\label{MeanDiameter}\\
+\hspace*{0.6cm}(e.g., y=FSSP to calculate DBARF)\\
+i1 = lowest usable channel for the probe\\
+i2 = highest usable channel for the probe\\
+$d_{i}$\sindex[lis]{di@$d_{i}$= diameter of hydrometeor in channel $i$}
+= diameter of particles in channel i for this probe ($\mu m$)\\
+\hspace*{0.6cm}(calculated as the average of the lower and upper
+size limits for the channel)\\
+\rule[0.5ex]{1\linewidth}{1pt}
+
+\begin{equation}
+\mathrm{\{DBARx\}}=\frac{{\textstyle \sum_{i=i1}^{i2}}{\displaystyle {\displaystyle \left\{ \mathrm{Cy}_{i}\right\} d_{i}}}}{\sum_{i=i1}^{i2}\left\{ \mathrm{Cy}_{i}\right\} }\label{eq:dbar1d}
+\end{equation}
+%
+\end{minipage}}\\
+
+\textbf{Dispersion }(dimensionless)\textbf{: }\textbf{\uline{DISPF}}\textbf{\sindex[var]{DISPF}\index{DISPF},
+}\textbf{\uline{DISP3}}\textbf{\sindex[var]{DISP3}\index{DISP3},
+}\textbf{\uline{DISPP}}\textbf{\sindex[var]{DISPP}\index{DISPP},
+}\textbf{\uline{DISPX}}\textbf{\sindex[var]{DISPX}\index{DISPX},
+}\textbf{\uline{DISP6}}\textbf{\sindex[var]{DISP6}\index{DISP6},
+}\textbf{\uline{DISPY}}\sindex[var]{DISPY}\index{DISPY}, \textbf{\uline{DISPD}}\sindex[var]{DISPD}\index{DISPD},
+\textbf{\uline{}}\\
+\textbf{\uline{DISPU}}\sindex[var]{DISPU}\index{DISPU}\\
+\index{dispersion}\emph{The ratio of the standard deviation of particle
+diameters to the mean particle diameter.}\index{FSSP-100!dispersion}\index{dispersion!1D probes}
+\\
+\\
+\fbox{\begin{minipage}[t]{0.9\textwidth}%
+\{DBARx\} = mean particle diameter ($\mu m$)\\
+\{Cy$_{i}$\}, i1, i2, $d_{i}$ as for mean diameter \mbox{\vpageref{MeanDiameter}}\\
+\rule[0.5ex]{1\linewidth}{1pt}
+
+\begin{equation}
+\mathrm{\{DISPx\}}==\frac{1}{\{\mathrm{DBARx}\}}\,\left\{ \frac{{\textstyle \sum_{i=i1}^{i2}}{\displaystyle {\displaystyle \left\{ \mathrm{Cy}_{i}\right\} d_{i}^{2}}}}{\sum_{i=i1}^{i2}\left\{ \mathrm{Cy}_{i}\right\} }-\{\mathrm{DBARx}\}^{2}\right\} ^{1/2}\label{eq:disp1d}
+\end{equation}
+%
+\end{minipage}}
+
+\textbf{Liquid Water Content }(g\,m\textbf{$^{-3}$}):\textbf{ }\textbf{\uline{PLWCF}}\textbf{\sindex[var]{PLWCF}\index{PLWCF},
+}\textbf{\uline{PLWCX}}\textbf{\sindex[var]{PLWCX}\index{PLWCX},
+}\textbf{\uline{PLWC6}}\textbf{\sindex[var]{PLWC6}\index{PLWC6},
+}\textbf{\uline{PLWCY}}\sindex[var]{PLWCY}\index{PLWCY}, \textbf{\uline{PLWCD}}\sindex[var]{PLWCD}\index{PLWCD}\\
+\index{liquid water content!1D probes}\emph{The density of liquid
+water represented by the size distribution measured by a hydrometeor
+probe.}\index{liquid water content}\index{FSSP-100!liquid water content}\index{liquid water content!FSSP-100}
+These variables are calculated from the measured concentration (CONCx)
+and the third moment of the particle diameter, with the assumption
+that the particle is a water drop. The following box describes the
+calculation in terms of an equivalent droplet diameter\index{diameter!equivalent},
+the diameter that represents the mass in the detected particle. The
+equivalent droplet diameter is normally the measured diameter for
+liquid hydrometeors, but some processing has used other assumptions
+and this is a choice that can be made based on project needs. Using
+this definition allows for the approximate estimation of \index{ice water content}ice
+water content in cases where it is known that all hydrometeors are
+ice. \\
+:\\
+\fbox{\begin{minipage}[t]{0.9\textwidth}%
+$d_{e,i}$\sindex[lis]{dei@$d_{e,i}$= equivalent melted diameter for channel i of a hydrometeor
+spectrometer} = equivalent melted diameter for channel $i$ of probe x\\
+\{Cy$_{i}$\}, i1, i2 as for mean diameter \vpageref{MeanDiameter}\\
+$\varrho_{w}$\sindex[lis]{rhow@$\rho_{w}$= density of liquid water}
+= density of water ( $10^{3}kg/m^{3}$)\\
+\rule[0.5ex]{1\linewidth}{1pt}
+\begin{equation}
+\mathrm{\{PLWCx\}}=\frac{\pi\varrho_{w}}{6}{\textstyle \sum_{i=i1}^{i2}}{\displaystyle {\displaystyle \left\{ \mathrm{Cy}_{i}\right\} d_{e,i}^{3}}}\label{eq:lwc1d}
+\end{equation}
+(units and a scale factor are selected so that the output variable
+is in units of g\,m$^{-3}$)%
+\end{minipage}}\\
+
+\textbf{Radar Reflectivity Factor }(dbZ)\textbf{: }\textbf{\uline{DBZF}}\textbf{\sindex[var]{DBZF}\index{DBZF},
+}\textbf{\uline{DBZX}}\textbf{\sindex[var]{DBZX}\index{DBZX},
+}\textbf{\uline{DBZ6}}\textbf{\sindex[var]{DBZ6}\index{DBZ6},
+}\textbf{\uline{DBZY}}\sindex[var]{DBZY}\index{DBZY}, \textbf{\uline{DBZD\sindex[var]{DBZD}\index{DBZD}}}\\
+\emph{The radar reflectivity factor}\index{reflectivity factor}\index{dBz}\index{radar reflectivity factor!1D probes}
+\emph{calculated from the measured size distribution from a hydrometeor
+probe.} This is calculated from the measured concentration and the
+sixth moment of the size distribution, with the assumption that the
+particles are water drops. An equivalent radar reflectivity factor
+can be calculated from the hydrometeor size distribution if another
+assumption is made about composition of the particles, but this variable
+is not part of normal data files. The radar reflectivity factor is
+a characteristic only of the hydrometeor size distribution; it is
+\emph{not }a measure of radar reflectivity, because the latter also
+depends on wavelength, dielectric constant, and other characteristics
+of the hydrometeors. The normally used radar reflectivity factor is
+measured on a logarithmic scale that depends on a particular choice
+of units, so (although it is not conventional) an appropriate scale
+factor $Z_{r}$ is included in the following equation to satisfy the
+convention that arguments of logarithms should be dimensionless\index{dimensions in equations}.
+\\
+\\
+\fbox{\begin{minipage}[t]{0.9\textwidth}%
+$d_{i}$ = diameter for channel $i$ of probe x\\
+\{Cy$_{i}$\}, i1, and i2 as for mean diameter \vpageref{MeanDiameter}\\
+$Z_{r}$ \sindex[lis]{Zr@$Z_{r}$= scale factor for calculation of the radar reflectivity
+factor}= reference factor for units = 1~mm$^{6}$m$^{-3}$\\
+\rule[0.5ex]{1\linewidth}{1pt}
+
+\begin{equation}
+\mathrm{\{DBZx\}}=10\log_{10}\left({\textstyle \frac{1}{Z_{r}}\sum_{i=i1}^{i2}}{\displaystyle {\displaystyle \left\{ \mathrm{Cy}_{i}\right\} d_{i}^{6}}}\right)\label{eq:dbz1d}
+\end{equation}
+%
+\end{minipage}}
+
+\label{punch:5-5}
+
+\textbf{Effective Radius }($\mu$m): \textbf{\uline{REFFD}}\index{REFFD}\sindex[var]{REFFD}\textbf{\uline{,
+REFFF}}\index{REFFF}\sindex[var]{REFFF}\\
+\index{radius, effective}\emph{One-half the ratio of the third moment
+of the diameter measurements to the second moment.} This variable
+is useful in some calculations that relate the liquid water content
+of a cloud layer to its optical properties.\\
+\fbox{\begin{minipage}[t]{0.9\textwidth}%
+$d_{i}$ = diameter for channel $i$ of probe x\\
+\{Cy$_{i}$\}, i1, and i2 as for mean diameter \vpageref{MeanDiameter}\\
+\rule[0.5ex]{1\linewidth}{1pt}
+
+\begin{equation}
+\mathrm{\{REFFx\}}=\frac{1}{2}\frac{\sum{\displaystyle {\displaystyle \left\{ \mathrm{Cy}_{i}\right\} d_{i}^{3}}}}{\sum{\displaystyle {\displaystyle \left\{ \mathrm{Cy}_{i}\right\} d_{i}^{2}}}}\label{eq:reff1d}
+\end{equation}
+%
+\end{minipage}}
+
+\textbf{FSSP-100 Range }(dimensionless):\textbf{ }\textbf{\uline{FRNG}}\textbf{\sindex[var]{FRNG}\index{FRNG},
+}\textbf{\uline{FRANGE}}\sindex[var]{FRANGE}\index{FRANGE}\\
+\emph{The size range in use for the FSSP-100}\index{FSSP-100!range}\index{range!FSSP}
+\emph{probe}.
+
+\begin{minipage}[t]{0.9\textwidth}%
+\hspace*{0.7in}%
+\begin{tabular}{|c|c|c|}
+\hline 
+Range & \textbf{Nominal Size Range} & \textbf{Nominal Bin Width}\tabularnewline
+\hline 
+\hline 
+0 & 2\textendash 47 $\mu m$ & 3 $\mu m$\tabularnewline
+\hline 
+1 & 2\textendash 32 $\mu m$ & 2 $\mu m$\tabularnewline
+\hline 
+2 & 1\textendash 15 $\mu m$ & 1 $\mu m$\tabularnewline
+\hline 
+3 & 0.5\textendash 7.5 $\mu m$ & 0.5 $\mu m$\tabularnewline
+\hline 
+\end{tabular}%
+\end{minipage}\\
+\\
+In recent NETCDF data files, the actual bin boundaries used for processing
+are recorded in the header. That header should be consulted because
+processing sometimes uses non-standard sizes selected to adjust for
+Mie scattering, which causes departures from the nominal linear bins.
+Recent projects have all used range 0, but other choices have been
+made in some older projects and other ranges are still available to
+future projects.
+\end{hangparagraphs}
+
+
+\subsection{Hydrometeor Imaging Probes\label{subsec:Hydrometeor-Imaging-Probes}}
+
+Instruments used to obtain hydrometeor images include the two-dimensional
+imaging probes (\href{https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud-probe}{2DC}
+and \href{https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-precipitation-probe}{2DP})
+and some others that require special processing and separate data
+records. The former are described in this subsection. The latter include
+a three-view cloud particle imager (\href{https://www.eol.ucar.edu/instruments/three-view-cloud-particle-imager}{3V-CPI}),
+a small ice detector (\href{https://www.eol.ucar.edu/instruments/small-ice-detector-version-2-hiaper}{SID-2H}),
+and a holographic imager (\href{https://www.eol.ucar.edu/instruments/holographic-detector-clouds}{HOLODEC}).
+For information regarding use of data from the latter set of instruments,
+consult EOL/RAF data management via \href{mailto:mailto:raf-dm@eol.ucar.edu}{this email address}.
+
+In addition to the standard processing that produces the variables
+in this subsection, an alternate processor is available that provides
+some additional options and capabilities, including the production
+of two sets of variables that include either all particles or all
+particles that pass a roundness test. Additional options include different
+ways of defining the particle size (including circle fitting or sizing
+based on the dimension along the direction of flight. Corrections
+to sizing are made to account for diffraction, and a shattering correction
+can be applied based on interarrival times. Some categories of spurious
+images (e.g., ``streakers'') can be recognized and rejected. This
+processing is described in \href{https://drive.google.com/open?id=0B1kIUH45ca5AOFpZUGxGVUg3VWc}{this document}
+and at \href{https://www.eol.ucar.edu/software/process2d}{this web page}
+and is made available by special arrangement. 
+
+Measurements based on the two 2D probes will be discussed together
+in this section because the 2DC and 2DP probes function similarly,
+differing primarily in the size resolution (typically 25 $\mu$m or
+less for the 2DC and 100 or 200 $\mu$m for the 2DP). The following
+variables have names like CONC1DC or CONC1DP to designate the two
+types of hydrometeor imagers. In addition, variables normally have
+location designations like '\_LWIO' as described at the beginning
+of section \prettyref{subsec:1DProbes}; see page \pageref{VariableNames1DProbes}.
+In the following 'y' is sometimes used to designate either 'C' or
+'P'.
+
+For the images from the 2D probes, separate data files need to be
+used. RAF provides a routine ``\href{https://www.eol.ucar.edu/software/xpms2d}{XPMS2D}''
+that can be used to view the images and calculate various properties
+of the hydrometeor population based on these separate  files.
+
+\label{Despite-the-'1D'}Despite the '1D' nomenclature, the following
+variables are measured by 2D instruments; the '1D' designation is
+used to indicate that this is the dimension that would be sized by
+an equivalent 1D probe using a test that requires unshadowed end diodes
+so that the full dimension of the particle can be determined. As a
+consequence, the effective sample volume becomes smaller as the measured
+dimension increases.
+\begin{hangparagraphs}
+\textbf{2D Count Rate Per Channel }(count per time interval)\textbf{:
+}\textbf{\uline{A1DC}}\index{A1DC}\sindex[var]{AIDC}, \textbf{\uline{A1DP}}\index{A1DP}\sindex[var]{AIDP}\\
+\index{count rate!2D}\emph{The number of particles counted by a 2D
+probe in each of 62 size bins in a specified time interval, usually
+1 s.} These are used to calculate the derived variables like CONC1DC,
+C1DC, and others that follow, but are provided to allow re-calculation
+if a user wants to use different sample volumes or sizing assumptions.\\
+
+\textbf{2D Size Distribution }(L$^{-1}$channel$^{-1}$):\textbf{
+}\textbf{\uline{C1DC}}\index{C1DC}\sindex[var]{C1DC}, \textbf{\uline{C1DP}}\index{C1DP}\sindex[var]{C1DP}\\
+\index{size distribution!2D}\emph{The concentration of particles
+measured by a 2D probe in each of 62 bins in a specified time interval,
+usually 1 s.} These are calculated from A1DC by application of an
+assumed size-dependent sample volume based on probe characteristics
+and the flight speed. These are provided in a 64-element array for
+historical convention; the first element should be ignored, and the
+technique requires that the end elements be unshadowed and so precludes
+any measurement with width of 63 bins, so the 64-element vector has
+valid information only in bins 1\textendash 63. The cell boundaries
+are specified in the netCDF header as an attribute of C1DC or C1DP,
+and they specify the end points of the bin; e.g,, in the 64-element
+array of provided cell boundaries, the first element is the lower
+size limit of the first data cell which is the second element in C1DC.
+For a typical 2DC with 25-$\mu$m size resolution, the cell sizes
+increase by 25 $\mu$m per bin for each of the C1DC bins. Also included
+as attributes with the netCDF variable C1DC or C1DP are the size-dependent
+depth of field (mm) and effective sample area\footnote{commonly called ``EffectiveAreaWidth'' in the netCDF files}
+(mm), the latter having values of zero for the first and last elements
+in the 64-value vector. \\
+
+\textbf{2D Concentration }(L$^{-1}$):\textbf{ }\textbf{\uline{CONC1DC}}\textbf{\index{CONC1DC}\sindex[var]{CONC1DC},
+}\textbf{\uline{CONC1DC100}}\textbf{\sindex[var]{CONC1DC100},
+}\textbf{\uline{CONC1DC150\sindex[var]{CONC1DC150},}}\textbf{
+}\textbf{\uline{CONC1DP}}\textbf{\index{CONC1DP}\sindex[var]{CONC1DP}}\textbf{\uline{}}\\
+\index{concentration!2D}\emph{The total concentration of all particles
+detected by a 2D hydrometeor imager,} or in the case of CONC1DC100
+or CONC1DC150, the concentration of all particles sized to be at least
+xxx $\mu$m in the dimension perpendicular to the direction of flight,
+where xxx may be 100 150. These concentrations are the sum of the
+particle size distribution given below (C1DC or C1DP), with appropriate
+channels excluded for CONC1DC100 and CONC1DC150.\\
+
+\textbf{2D Dead Time }(ms):\textbf{ }\textbf{\uline{DT1DC}}\index{DT1DC}\sindex[var]{DT1DC}\\
+\index{dead time}\emph{The time in the sample interval during which
+the data rate exceeded the recording capability of a 2DC probe.} This
+is used as a correction factor when concentrations like CONC1DC or
+C1DC are calculated. The variable does not apply to measurements from
+a 2DP probe.\\
+
+\textbf{2D Mean Diameter }($\mu$m):\textbf{ }\textbf{\uline{DBAR1DC}}\index{DBAR1DC}\sindex[var]{DBAR1DC},
+\textbf{\uline{DBAR1DP}}\index{DBAR1DP}\sindex[var]{DBAR1DP}\\
+\index{diameter!mean, 2D probes}\emph{The mean diameter calculated
+from the measured size distribution. }In this calculation, the bin
+sizes are taken to be the averages of the lower and upper limits of
+the size bins\emph{. }The calculation is as described by \eqref{eq:dbar1d}.\emph{
+}\\
+
+\textbf{2D Dispersion (dimensionless): }\textbf{\uline{DISP1DC}}\index{DISP1DC}\sindex[var]{DISP1DC},
+\textbf{\uline{DISP1DP}}\index{DISP1DP}\sindex[var]{DISP1DP}\\
+\index{dispersion}\emph{The standard deviation in particle diameter
+divided by the mean diameter.} The formula used is given by \eqref{eq:disp1d}.\\
+
+\textbf{2D Liquid Water Content} (g\,m$^{-3}$):\textbf{ }\textbf{\uline{PLWC1DC}}\index{PLWC1DC}\sindex[var]{PLWC1DC},
+\textbf{\uline{PLWC1DP}}\index{PLWC1DP}\sindex[var]{PLWC1DP}\\
+\emph{\index{liquid water content}The liquid water content (mass
+per volume) calculated from C1DC or C1DP.} The calculation is as described
+by \eqref{eq:lwc1d}, To conform to common usage, the liquid water
+content is expressed in non-MKS units of g\,m$^{-3}$. \\
+
+\textbf{2D Radar Reflectivity Factor (dBZ): }\textbf{\uline{DBZ1DC}}\index{DBZ1DC}\sindex[var]{DBZ1DC},
+\textbf{\uline{DBZ1DP}}\index{DBZ1DP}\sindex[var]{DBZ1DP}\\
+\index{radar reflectivity factor}\emph{The radar reflectivity factor
+calculated from the measured size distribution under the assumption
+that all particles are spherical water drops. }The calculation is
+as described by\emph{ }\eqref{eq:dbz1d}.\\
+
+\textbf{2D Effective Radius ($\mu$m): }\textbf{\uline{REFF2DC}}\index{REFF2DC}\sindex[var]{REFF2DC},
+\textbf{\uline{REFF2DP}}\index{REFF2DP}\sindex[var]{REFF2DP}\\
+\index{radius, effective}\emph{One-half the ratio of the third moment
+of the particle diameter to the second moment. }The formula used is
+given by \eqref{eq:reff1d}.\label{punch:5-6}\\
+ 
+\end{hangparagraphs}
+
+

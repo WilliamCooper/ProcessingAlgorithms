@@ -1,0 +1,284 @@
+
+\section{AIR CHEMISTRY MEASUREMENTS}
+
+\subsection{Variables in Standard Data Files\label{punch:6-1}}
+\begin{hangparagraphs}
+\textbf{Carbon Monoxide Preliminary Mixing Ratio (ppbv): }\textbf{\uline{CORAW\_AL}}\textbf{\sindex[var]{CORAW_AL@CORAW\_AL}\index{CORAW_AL@CORAW\_AL}}\\
+\emph{The preliminary measurement of CO mixing ratio from the Aero-Laser
+model AL-5002 CO analyzer, before final calibrations are applied.}
+This instrument measures CO\index{CO} by vacuum ultraviolet resonance
+fluorescence. It is a commercial version of the instrument described
+by Gerbig et al.\footnote{Journal of Geophysical Research, Vol. 104, No. D1, 1699-1704, 1999}
+The instrument is described further at \href{https://www.eol.ucar.edu/instruments/aero-laser-vuv-resonance-fluorescence-carbon-monoxide-instrument}{this URL}.
+The time resolution is 1 second. This variable is sometimes present
+in flight and in preliminary ground processing, but normally it is
+replaced by COMR\_AL in final processing.
+
+\textbf{Carbon Monoxide Mixing Ratio (ppbv): }\textbf{\uline{COMR\_AL}}\textbf{\sindex[var]{COMR_AL@COMR\_AL}\index{COMR_AL@COMR\_AL}}\\
+\emph{The mixing ratio measured by the Aero-Laser model AL-5002 CO
+analyzer.} See also CORAW\_AL above. The calculation of COMR\_AL is
+based on in-flight calibrations conducted 1-2 times per hour, when
+a gas of known concentration\index{concentration!calibration gas}
+is supplied to the instrument and then a catalyst trap removes CO
+to provide a zero reference. The calibration\index{calibration!gas}
+results in a sensitivity and zero that are then used to convert the
+measurements from the instrument (recorded as counts per second) to
+a mixing ratio in units of ppbv. Time-dependent sensitivity and zero
+coefficients are computed post-flight as a linear interpolation between
+flight calibrations. This variable normally appears in final data
+sets for a project.\footnote{In isolated cases XCOMR\sindex[var]{XCOMR} or XCOMR\_AL\sindex[var]{AL}
+was used for this variable name.} The algorithm is described in the following box:\\
+\\
+\fbox{\begin{minipage}[t]{0.95\columnwidth}%
+CPS\index{CPS=counts per second} = counts per second from the instrument\\
+S(t) = sensitivity\sindex[lis]{S(t)=sensitivity function, calibration}
+at time t = (CPS when exposed to cal gas) / concentration of cal gas
+
+Z(t) = zero\sindex[lis]{Z(t)=zero function, calibration} at time
+t = CPS when exposed to air passing through the catalyst trap
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+\begin{equation}
+\{\mathrm{COMR\_AL}\}=(\mathrm{\{\mathrm{CPS}\}-Z(t))/S(t)}\label{eq:COMR}
+\end{equation}
+%
+\end{minipage}}\\
+See also the obsolete variables in Section \ref{sec:OBSOLETE-VARIABLES},
+where variables from an earlier TECO Model 48 CO analyzer, in use
+before 2000, are described.
+
+\textbf{}%
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\textbf{Carbon Dioxide Mixing Ratio (ppmv): }\textbf{\uline{CO2\_PIC}}\uline{x}\index{CO2_PICx@CO2\_PICx}\sindex[var]{CO2_PICx@CO2\_PICx}\\
+\textbf{Methane Mixing Ratio (ppmv): }\textbf{\uline{CH4\_PICx}}\index{CH4_PICx@CH4\_PICx}\sindex[var]{CH4_PICx@CH4\_PICx}%
+\end{minipage}\textbf{}\\
+\emph{Respectively, the carbon dioxide and methane mixing ratio measured
+by a Picarro CO2/CH4 instrument.} The letter 'x' may be replaced by
+the model number of the instrument (e.g., 1301) or it may be blank.
+The Picarro CO2/CH4 G1301-f flight analyzer is a fast response trace
+gas monitor that measures CO$_{2}$ and CH$_{4}$ using wavelength-scanned
+cavity ring-down spectroscopy. The time resolution is 0.2 \textendash{}
+1 seconds. Additional information characterizing the instrument can
+be found at \href{https://www.eol.ucar.edu/instruments/picarro-instrument-airborne-measurement-co2-and-ch4}{this URL}.
+During flight, both measurements are calibrated 1-2 times per hour
+via sampling of a working standard, and linear calibration coefficients
+are applied based on multi-point lab calibration data and in-flight
+calibration checks. The procedure is analogous to that used for COMR\_AL,
+as described immediately above. When water vapor is not removed from
+the ambient sample stream (the normal case), a correction factor for
+water present in the sensing cell must be applied following the approach
+of Richardson et al.,\footnote{Richardson, S.~J., N.~L.~Miles, K.~J.~Davis, E.~R.~Crosson,
+C.~W.~Rella, and A.~E.~Andrews, 2012\emph{: }Field testing of
+cavity ring-down spectroscopy analyzers measuring carbon dioxide and
+water vapor.\emph{ J.~Atmos.~Oceanic\_Technol, }\textbf{\emph{29,}}\emph{
+397\textendash 406.}} as follows: \\
+\\
+\noindent\fbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 2\fboxrule}%
+{[}CO$_{2}${]}$_{wet}$ = carbon dioxide mixing ratio as measured
+in the sensing cell (with water)
+
+{[}CO$_{2}${]}$_{dry}$ = carbon dioxide mixing ratio in dry air,
+corrected for the effects of water vapor
+
+{[}CH$_{4}${]}$_{wet}$ = methane mixing ratio as measured in the
+sensing cell (with water)
+
+{[}CH$_{4}${]}$_{dry}$ = methane mixing ratio in dry air, corrected
+for the effects of water vapor
+
+$W$ = water vapor mixing ratio measured in the instrument cell (percent
+by volume)
+
+\{$c_{0}$, $c_{1}$\} = \{-0.01200, -2.674$\times10^{-4}$\} (dimensionless)
+
+\{$d_{0}$, $d_{1}$\} = \{-0.00982, -2.393$\times10^{-4}$\} (dimensionless)
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+\begin{equation}
+\{\mathrm{CO2\_PICX\}}=[\mathrm{CO_{2}]_{dry}=}\frac{[\mathrm{CO_{2}]_{wet}}}{1+c_{0}W+c_{1}W^{2}}\label{eq:CO2pic}
+\end{equation}
+\begin{equation}
+\{\mathrm{CH4\_PICX\}}=[\mathrm{CH_{4}]_{dry}=}\frac{[\mathrm{CH_{4}]_{wet}}}{1+d_{0}W+d_{1}W^{2}}\label{eq:CH4pic}
+\end{equation}
+%
+\end{minipage}}
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\textbf{Chemiluminescent Ozone Sample Flow Rate (sccm): }\textbf{\uline{XFO3FS}}\textbf{\index{XFO3FS}\sindex[var]{XFO3FS}}\\
+\textbf{Chemiluminescent Ozone Nitric Oxide Flow Rate (sccm): }\textbf{\uline{XFO3FN}}\textbf{O\index{XFO3FNO}\sindex[var]{XFO3FNO}}\\
+\textbf{Chemiluminescent Ozone Sample Pressure (mb): }\textbf{\uline{XFO3P\index{XFO3P}\sindex[var]{XFO3P}}}%
+\end{minipage}\\
+\emph{Flows and pressure within the chemiluminescence ozone sensor.}
+The sample rate, in standard $cm^{3}/s$, is XFO3FS, while XFO3FNO
+gives the NO flow rate in the same units and XFO3P is the pressure
+in the ozone sample cell. These variables apply to measurements made
+by an earlier version of the fast ozone instrument. They have not
+been present in projects since 2006.
+
+\textbf{Fast response NO chemiluminescence ozone mixing ratio (ppbv):
+}\textbf{\uline{FO3\_ACD}}\textbf{, }\textbf{\uline{FO3\_CL}},
+\textbf{XO3, O3MR\_CL\sindex[var]{O3MR_CL@O3MR\_CL}\index{O3MR_CL@O3MR\_CL}\sindex[var]{XO3}}\index{XO3}\index{FO3_x@FO3\_x}\sindex[var]{FO3_x@FO3\_x}\index{FO3_ACD@FO3\_ACD}\index{FO3_CL@FO3\_CL}\sindex[var]{FO3_ACD@FO3\_ACD}\sindex[var]{FO3_CL@FO3\_CL}\\
+\emph{The ozone mixing ratio (by volume) measured by an NO chemiluminescence
+instrument. } The instrument detects chemiluminescence from the reaction
+of nitric oxide (NO) with ambient ozone, using a dry-ice cooled, red-sensitive
+photomultiplier employing photon-counting electronics. The measurement
+principle is described by Ridley et al.~(1992)\footnote{Ridley, B.~A., F.~E.~Grahek, and J.~G.~Walega, 1992: A small,
+high-sensitivity, medium-response ozone detector suitable for measurements
+from light aircraft. \emph{J.~Atmos.~Oceanic Technol., }\textbf{9,
+}142\textendash 148. }, and there is additional information describing the instrument at
+\href{https://www.eol.ucar.edu/instruments/nitric-oxide-chemiluminescence-ozone-instrument}{this URL}.
+The time resolution is 0.2 seconds, and typical uncertainty is 5\%.
+The background signal is measured 1-2 times hourly during flights.
+Linear calibration coefficients are applied to the photon count rate
+to produce mixing ratios, and a correction is applied for water vapor
+during final processing, as follows: \\
+\noindent\fbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 2\fboxrule}%
+CPS\index{CPS=counts per second} = counts per second from the instrument\\
+{[}O$_{3}${]}$_{wet}$ = ozone mixing ratio as measured in the sensing
+cell (with water)
+
+{[}O$_{3}${]}$_{dry}$ = ozone mixing ratio in dry air, corrected
+for the effects of water vapor\\
+$S(t)$ = sensitivity at time t = (\{CPS\} when exposed to cal gas)
+/ concentration of cal gas
+
+$Z(t)$ = background at time t = \{CPS\} when exposed to zero-ozone
+air
+
+$W^{\prime}$ = water vapor mixing ratio by volume\sindex[lis]{rv@$r_{v}$=water vapor mixing ratio by volume}
+(expressed as a fraction; dimensionless)
+
+$\kappa$ = correction factor for water vapor = 4.3 (dimensionless)
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+\begin{equation}
+[\mathrm{O}_{3}]_{wet}=\frac{\{\mathrm{CPS}\}-Z(t)}{S(t)}\label{eq:FO3}
+\end{equation}
+\begin{equation}
+\{\mathrm{F03\_ACD}\}=[\mathrm{O_{3}]}_{dry}=[\mathrm{O_{3}]}_{wet}\times(1+\kappa r_{v})\label{eq:FO3WaterCorr}
+\end{equation}
+%
+\end{minipage}}
+
+\textbf{Uncorrected TECO Ozone Mixing Ratio (ppb): }\textbf{\uline{TEO3}}\index{TEO3}\sindex[var]{TEO3}\\
+\emph{The uncorrected ozone mixing ratio output from the TECO model
+49c UV ozone analyzer.} See TEO3C. 
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\textbf{Internal TECO Ozone Sampling Pressure (hPa): }\textbf{\uline{TEP}}\textbf{\index{TEP}\sindex[var]{TEP},
+}\textbf{\uline{TEO3P}}\index{TEO3P}\sindex[var]{TEO3P}\\
+\textbf{Internal TECO Ozone Sampling Temperature ($^{\circ}C$): }\textbf{\uline{TET\index{TET}}}\sindex[var]{TET}%
+\end{minipage}\\
+\emph{The pressure (TEP) or temperature (TET) inside the detection
+cell of the TECO 49 UV ozone analyzer.} These are used to convert
+the measurements from the instrument to units of ppbv. In many projects,
+the cell temperature was not recorded so an expected cell temperature
+in the aircraft cabin must be used in processing.
+
+\textbf{Corrected TECO Ozone Mixing Ratio (ppbv): }\textbf{\uline{TEO3C}}\index{TEO3C}\sindex[var]{TEO3C}\\
+\emph{The ozone mixing ratio (by volume) determined by the TECO model
+49c UV ozone analyzer (cf.~\href{https://www.eol.ucar.edu/instruments/thermo-environmental-instruments-model-49-ozone-analyzer}{this description})
+after correction for the pressure and temperature in the cell by application
+of the ideal gas law.} Because the basic measurement is ozone density
+in the chamber, this measurement must be converted to a mixing ratio
+by dividing by the air density, calculated from the pressure and temperature
+measured in the chamber (TEP and TET respectively).\label{punch:6-3}
+The instrument provides output only each ten seconds, and measurements
+are collected in the 3 s preceding the update. The measurements may
+be artificially high or low when rapid changes in humidity are present,
+as may occur when crossing the top of the boundary layer or when going
+through clouds. In operation on the ground prior to takeoff or immediately
+after landing, a high concentration of hydrocarbons can cause spuriously
+high measurements. The detection limit is 1 ppbv with an uncertainty
+of $\pm$5\%. This instrument is seldom used as of 2014 and may soon
+be classified as obsolete.
+
+\textbf{}%
+\noindent\begin{minipage}[t]{1\columnwidth}%
+\textbf{NO Raw Counts (counts per sample interval): }\textbf{\uline{XNO}}\textbf{\index{XNO}}\sindex[var]{XNO}\textbf{}\\
+\textbf{NOy Raw Counts (counts per sample interval): }\textbf{\uline{XNOY\index{XNOY}}}\sindex[var]{XNOY}\textbf{\uline{}}\\
+\textbf{NO Calibration Flow (SLPM): }\textbf{\uline{XNOCF}}\textbf{\index{XNOCF}}\sindex[var]{XNOCF}\textbf{}\\
+\textbf{NOy Calibration Flow (SLPM): }\textbf{\uline{XNCLF}}\textbf{\index{XNCLF}}\sindex[var]{XNCLF}\textbf{}\\
+\textbf{NO, NOy Measurement Status (dimensionless): }\textbf{\uline{XNST}}\textbf{\index{XNST}}\sindex[var]{XNST}\textbf{}\\
+\textbf{NO Zero Air Flow (SLPM): }\textbf{\uline{XNOZA}}\textbf{\index{XNOZA}}\sindex[var]{XNOZA}\textbf{}\\
+\textbf{NOy Zero Air Flow (SLPM): }\textbf{\uline{XNZAF}}\textbf{\index{XNZAF}}\sindex[var]{XNZAF}\textbf{}\\
+\textbf{NO Sample Flow (SLPM): }\textbf{\uline{XNOSF}}\textbf{\index{XNOSF}}\sindex[var]{XNOSF}\textbf{}\\
+\textbf{NOy Sample Flow (SLPM): }\textbf{\uline{XNSAF}}\textbf{\index{XNSAF}}\sindex[var]{XNSAF}\textbf{}\\
+\textbf{NOy Reaction Chamber Pressure (mb): }\textbf{\uline{XNOYP}}\textbf{\index{XNOYP}}\sindex[var]{XNOYP}\textbf{}\\
+\textbf{Gold NOy Converter Temperature ($\text{º}$C): }\textbf{\uline{XNMBT\index{XNMBT}}}\sindex[var]{XNMBT}%
+\end{minipage}\\
+\emph{The measurements provided by the NO+NO$_{2}$ instrument, }which
+is described at \href{https://www.eol.ucar.edu/instruments/no-no2-instrument}{this link}\emph{.}
+XNO and XNOY are the raw data counts from the NO and NO$_{2}$ instruments,
+respectively, and XNCLF and XNOCF are the respective calibration flows
+for these instruments. \label{punch:6-2} XNST records the status
+for both instruments: In measurement mode, XNST is 0, while XNST is
+5 when the instruments are in zero mode and 10 when the instruments
+are in calibration mode. the NOy and NO instruments. The instrument
+is in the measure mode for XNST of 0. For a XNST reading of 5 the
+instruments are in the zero mode. XNST value of 10 is the calibration
+mode. XNOZA and XNZAF are flow rates for zero air used to back flush
+inlets, typically at takeoff and landing, and for calibration using
+``zero'' air. Even if the status, XNST, is 0, indicating the instrument
+is in the measurement mode, when XNOZA and XNZAF are approximately
+1 SLPM the instrument is measuring zero air and not ambient air. \label{punch:6-4}
+XNOSF and XNSAF are the sample flow rates through the NO and NO$_{2}$
+instruments respectively. These values are typically about 1 SLPM.
+XNMBT is the temperature of the gold NO$_{2}$ converter.
+
+\noindent\begin{minipage}[t]{1\columnwidth}%
+C\textbf{orrected NO Mixing Ratio (ppbv): }\textbf{\uline{XNOCAL}}\textbf{\index{XNOCAL}}\\
+\textbf{Corrected NO$_{2}$ Mixing Ratio (ppbv): }\textbf{\uline{XNYCAL\index{XNYCAL}}}%
+\end{minipage}\\
+\emph{The calibrated NO and NO$_{2}$ volumetric mixing ratio, respectively,
+measured by the NO-NO$_{2}$ instrument.} See \href{https://www.eol.ucar.edu/instruments/nitric-oxide-chemiluminescence-ozone-instrument}{this link}
+for a description of the instrument.\label{punch:6-5} The NO and
+NO$_{2}$ data are represented by a cubic spline for baseline subtraction,
+and then the calibration coefficients are applied and the measurements
+are converted to units of ppbv. The quality of the data can be assessed
+by examining the accuracy of the zero correction. This instrument
+\label{punch:6-6} adds water vapor to the sample stream to reduce
+the effect of ambient water on the final signal. The water vapor addition
+is not sufficient to saturate the sample stream, but enough to remove
+much of the interference. The detection limits of the NO,NO$_{2}$
+instruments are 50 ppbv for a one-second averaging time. The uncertainty
+is $\pm$ 5\%.
+\end{hangparagraphs}
+
+
+\subsection{Variables in Special Data Sets}
+
+Research projects often incorporate user-supplied instruments into
+payloads, and those instruments produce data files that are either
+recorded independently or merged into the standard netCDF data files
+for the projects. In addition, NCAR offers a set of instruments that
+require additional data processing and analysis, often because the
+measurements require special interpretation to obtain the desired
+measurements. The following instruments can provide such air-chemistry
+measurements: 
+
+\fbox{\begin{minipage}[t]{0.98\columnwidth}%
+\begin{itemize}
+\item \setlength{\itemsep}{-1\parsep}Advanced Whole Air Sampler (\href{http://www.eol.ucar.edu/instruments/advanced-whole-air-sampler}{AWAS})\index{AWAS}
+\item Chemical Ionization Mass Spectrometer (\href{http://www.eol.ucar.edu/instruments/georgia-tech-chemical-ionization-mass-spectrometer}{CIMS})\index{CIMS}
+\item Quantum Cascade Laser Spectrometer (\href{http://www.eol.ucar.edu/instruments/quantum-cascade-laser-spectrometer}{QCLS})\index{QCLS}
+\item Trace Organic Gas Analyzer (\href{http://www.eol.ucar.edu/instruments/trace-organic-gas-analyzer}{TOGA})\index{TOGA}
+\end{itemize}
+%
+\end{minipage}}\\
+Follow the links in the box to descriptions of these instruments on
+the EOL web site. Those descriptions include brief explanations of
+how data are acquired and handled. The process varies with instrument;
+The CIMS and QCLS instruments produce variables that are often merged
+into the standard netCDF archived data files for projects, the AWAS
+collects samples that are later analyzed using ground-based instruments
+but result in a special dataset dependent on analysis technique and
+sample location and duration, while the TOGA is usually analyzed to
+produce dozens of trace-gas measurements, some of which can be merged
+into standard netCDF files. 
+
+Users interested in using these measurements should contact \href{mailto:mailto:raf-dm@eol.ucar.edu}{EOL/RAF data management}
+for data access and assistance.

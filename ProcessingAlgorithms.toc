@@ -1,0 +1,50 @@
+\select@language {english}
+\contentsline {section}{Table of Contents}{iii}{section*.1}
+\contentsline {section}{\numberline {1}INTRODUCTION}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Background Information}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Alphabetical List of Variables }{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Constants and Symbols}{3}{subsection.1.3}
+\contentsline {section}{\numberline {2}GENERAL INFORMATION}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}System of Units}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Variables Used To Denote Time}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Synchronization of Measurements}{7}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Other Comments On Terminology}{8}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Variable Names In Equations}{8}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Distinction Between Original Measurements and Derived Variables}{8}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Dimensions in Equations}{9}{subsubsection.2.4.3}
+\contentsline {section}{\numberline {3}THE STATE OF THE AIRCRAFT}{10}{section.3}
+\contentsline {subsection}{\numberline {3.1}Inertial Reference Systems}{10}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Global Positioning Systems}{15}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Other Measurements of Aircraft Altitude}{19}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Combining IRS and GPS Measurements}{21}{subsection.3.4}
+\contentsline {section}{\numberline {4}THE STATE OF THE ATMOSPHERE}{27}{section.4}
+\contentsline {subsection}{\numberline {4.1}Information on Instruments and Calibrations}{27}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Variable Names}{27}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Pressure}{27}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Temperature}{30}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Humidity}{35}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Derived Thermodynamic Variables}{44}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Wind}{49}{subsection.4.7}
+\contentsline {subsubsection}{\numberline {4.7.1}Relative Wind}{50}{subsubsection.4.7.1}
+\contentsline {subsubsection}{\numberline {4.7.2}Wind Components and the Wind Vector}{52}{subsubsection.4.7.2}
+\contentsline {subsection}{\numberline {4.8}Special-Use Remote Sensors}{54}{subsection.4.8}
+\contentsline {section}{\numberline {5}CLOUD PHYSICS VARIABLES}{56}{section.5}
+\contentsline {subsection}{\numberline {5.1}Measurements of Liquid Water Content}{56}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Sensors of Individual Particles (1-D Probes)}{58}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Hydrometeor Imaging Probes}{63}{subsection.5.3}
+\contentsline {section}{\numberline {6}AIR CHEMISTRY MEASUREMENTS}{66}{section.6}
+\contentsline {subsection}{\numberline {6.1}Variables in Standard Data Files}{66}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Variables in Special Data Sets}{69}{subsection.6.2}
+\contentsline {section}{\numberline {7}AEROSOL PARTICLE MEASUREMENTS}{71}{section.7}
+\contentsline {subsection}{\numberline {7.1}Condensation Nucleus Counters}{71}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Aerosol Spectrometers}{74}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Other Specialized Aerosol Measurements}{75}{subsection.7.3}
+\contentsline {section}{\numberline {8}RADIATION VARIABLES}{76}{section.8}
+\contentsline {subsection}{\numberline {8.1}Measurements of Irradiance and Radiometric Temperature}{76}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Spectral Irradiance and Actinic Flux}{78}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Solar Angles}{79}{subsection.8.3}
+\contentsline {section}{\numberline {9}EXPERIMENTAL VARIABLES}{82}{section.9}
+\contentsline {section}{\numberline {10}OBSOLETE VARIABLES}{83}{section.10}
+\contentsline {section}{List of Symbols}{94}{section*.4}
+\contentsline {section}{Variable Names}{96}{section*.6}
+\contentsline {section}{Index}{101}{section*.8}

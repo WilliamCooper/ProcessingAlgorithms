@@ -1,0 +1,2352 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+hanging
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+AIR CHEMISTRY MEASUREMENTS
+\end_layout
+
+\begin_layout Subsection
+Variables in Standard Data Files
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:6-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Carbon Monoxide Preliminary Mixing Ratio (ppbv): 
+\bar under
+CORAW_AL
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+CORAW_AL
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+CORAW_AL
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+\emph on
+The preliminary measurement of CO mixing ratio from the Aero-Laser model
+ AL-5002 CO analyzer, before final calibrations are applied.
+
+\emph default
+ This instrument measures CO
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CO
+\end_layout
+
+\end_inset
+
+ by vacuum ultraviolet resonance fluorescence.
+ It is a commercial version of the instrument described by Gerbig et al.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Journal of Geophysical Research, Vol.
+ 104, No.
+ D1, 1699-1704, 1999
+\end_layout
+
+\end_inset
+
+ The instrument is described further at 
+\begin_inset CommandInset href
+LatexCommand href
+name "this URL"
+target "https://www.eol.ucar.edu/instruments/aero-laser-vuv-resonance-fluorescence-carbon-monoxide-instrument"
+
+\end_inset
+
+.
+ The time resolution is 1 second.
+ This variable is sometimes present in flight and in preliminary ground
+ processing, but normally it is replaced by COMR_AL in final processing.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Carbon Monoxide Mixing Ratio (ppbv): 
+\bar under
+COMR_AL
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+COMR_AL
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+COMR_AL
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+\emph on
+The mixing ratio measured by the Aero-Laser model AL-5002 CO analyzer.
+
+\emph default
+ See also CORAW_AL above.
+ The calculation of COMR_AL is based on in-flight calibrations conducted
+ 1-2 times per hour, when a gas of known concentration
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+concentration!calibration gas
+\end_layout
+
+\end_inset
+
+ is supplied to the instrument and then a catalyst trap removes CO to provide
+ a zero reference.
+ The calibration
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+calibration!gas
+\end_layout
+
+\end_inset
+
+ results in a sensitivity and zero that are then used to convert the measurement
+s from the instrument (recorded as counts per second) to a mixing ratio
+ in units of ppbv.
+ Time-dependent sensitivity and zero coefficients are computed post-flight
+ as a linear interpolation between flight calibrations.
+ This variable normally appears in final data sets for a project.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+In isolated cases XCOMR
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XCOMR
+\end_layout
+
+\end_inset
+
+ or XCOMR_AL
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+AL
+\end_layout
+
+\end_inset
+
+ was used for this variable name.
+\end_layout
+
+\end_inset
+
+ The algorithm is described in the following box:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+CPS
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CPS=counts per second
+\end_layout
+
+\end_inset
+
+ = counts per second from the instrument
+\begin_inset Newline newline
+\end_inset
+
+S(t) = sensitivity
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+S(t)=sensitivity function, calibration
+\end_layout
+
+\end_inset
+
+ at time t = (CPS when exposed to cal gas) / concentration of cal gas
+\end_layout
+
+\begin_layout Plain Layout
+Z(t) = zero
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+Z(t)=zero function, calibration
+\end_layout
+
+\end_inset
+
+ at time t = CPS when exposed to air passing through the catalyst trap
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\{\mathrm{COMR\_AL}\}=(\mathrm{\{\mathrm{CPS}\}-Z(t))/S(t)}\label{eq:COMR}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+See also the obsolete variables in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:OBSOLETE-VARIABLES"
+
+\end_inset
+
+, where variables from an earlier TECO Model 48 CO analyzer, in use before
+ 2000, are described.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Carbon Dioxide Mixing Ratio (ppmv): 
+\bar under
+CO2_PIC
+\series default
+x
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CO2_PICx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+CO2_PICx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Methane Mixing Ratio (ppmv): 
+\bar under
+CH4_PICx
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CH4_PICx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+CH4_PICx
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+\emph on
+Respectively, the carbon dioxide and methane mixing ratio measured by a
+ Picarro CO2/CH4 instrument.
+
+\emph default
+ The letter 'x' may be replaced by the model number of the instrument (e.g.,
+ 1301) or it may be blank.
+ The Picarro CO2/CH4 G1301-f flight analyzer is a fast response trace gas
+ monitor that measures CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ and CH
+\begin_inset Formula $_{4}$
+\end_inset
+
+ using wavelength-scanned cavity ring-down spectroscopy.
+ The time resolution is 0.2 – 1 seconds.
+ Additional information characterizing the instrument can be found at 
+\begin_inset CommandInset href
+LatexCommand href
+name "this URL"
+target "https://www.eol.ucar.edu/instruments/picarro-instrument-airborne-measurement-co2-and-ch4"
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Precision specifications at the highest temporal resolution are 0.25 ppbv
+ CO2 and 3 ppbv methane.
+ 
+\end_layout
+
+\end_inset
+
+During flight, both measurements are calibrated 1-2 times per hour via sampling
+ of a working standard, and linear calibration coefficients are applied
+ based on multi-point lab calibration data and in-flight calibration checks.
+ The procedure is analogous to that used for COMR_AL, as described immediately
+ above.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+CO2_needs a name that is not cumbersome = a0 + CO2_PIC1301 * a1 CH4_ditto
+ = b0 + CH4_PIC1301 * b1
+\end_layout
+
+\end_inset
+
+When water vapor is not removed from the ambient sample stream (the normal
+ case), a correction factor for water present in the sensing cell must be
+ applied following the approach of Richardson et al.,
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Richardson, S.
+\begin_inset space ~
+\end_inset
+
+J., N.
+\begin_inset space ~
+\end_inset
+
+L.
+\begin_inset space ~
+\end_inset
+
+Miles, K.
+\begin_inset space ~
+\end_inset
+
+J.
+\begin_inset space ~
+\end_inset
+
+Davis, E.
+\begin_inset space ~
+\end_inset
+
+R.
+\begin_inset space ~
+\end_inset
+
+Crosson, C.
+\begin_inset space ~
+\end_inset
+
+W.
+\begin_inset space ~
+\end_inset
+
+Rella, and A.
+\begin_inset space ~
+\end_inset
+
+E.
+\begin_inset space ~
+\end_inset
+
+Andrews, 2012
+\emph on
+: 
+\emph default
+Field testing of cavity ring-down spectroscopy analyzers measuring carbon
+ dioxide and water vapor.
+
+\emph on
+ J.
+\begin_inset space ~
+\end_inset
+
+Atmos.
+\begin_inset space ~
+\end_inset
+
+Oceanic_Technol, 
+\series bold
+29,
+\series default
+ 397–406.
+\end_layout
+
+\end_inset
+
+ as follows: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+[CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+]
+\begin_inset Formula $_{wet}$
+\end_inset
+
+ = carbon dioxide mixing ratio as measured in the sensing cell (with water)
+\end_layout
+
+\begin_layout Plain Layout
+[CO
+\begin_inset Formula $_{2}$
+\end_inset
+
+]
+\begin_inset Formula $_{dry}$
+\end_inset
+
+ = carbon dioxide mixing ratio in dry air, corrected for the effects of
+ water vapor
+\end_layout
+
+\begin_layout Plain Layout
+[CH
+\begin_inset Formula $_{4}$
+\end_inset
+
+]
+\begin_inset Formula $_{wet}$
+\end_inset
+
+ = methane mixing ratio as measured in the sensing cell (with water)
+\end_layout
+
+\begin_layout Plain Layout
+[CH
+\begin_inset Formula $_{4}$
+\end_inset
+
+]
+\begin_inset Formula $_{dry}$
+\end_inset
+
+ = methane mixing ratio in dry air, corrected for the effects of water vapor
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $W$
+\end_inset
+
+ = water vapor mixing ratio measured in the instrument cell (percent by
+ volume)
+\end_layout
+
+\begin_layout Plain Layout
+{
+\begin_inset Formula $c_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+} = {-0.01200, -2.674
+\begin_inset Formula $\times10^{-4}$
+\end_inset
+
+} (dimensionless)
+\end_layout
+
+\begin_layout Plain Layout
+{
+\begin_inset Formula $d_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $d_{1}$
+\end_inset
+
+} = {-0.00982, -2.393
+\begin_inset Formula $\times10^{-4}$
+\end_inset
+
+} (dimensionless)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+\{\mathrm{CO2\_PICX\}}=[\mathrm{CO_{2}]_{dry}=}\frac{[\mathrm{CO_{2}]_{wet}}}{1+c_{0}W+c_{1}W^{2}}\label{eq:CO2pic}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\{\mathrm{CH4\_PICX\}}=[\mathrm{CH_{4}]_{dry}=}\frac{[\mathrm{CH_{4}]_{wet}}}{1+d_{0}W+d_{1}W^{2}}\label{eq:CH4pic}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Chemiluminescent Ozone Sample Flow Rate (sccm): 
+\bar under
+XFO3FS
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XFO3FS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XFO3FS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Chemiluminescent Ozone Nitric Oxide Flow Rate (sccm): 
+\bar under
+XFO3FN
+\bar default
+O
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XFO3FNO
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XFO3FNO
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Chemiluminescent Ozone Sample Pressure (mb): 
+\bar under
+XFO3P
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+XFO3P
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+XFO3P
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+Flows and pressure within the chemiluminescence ozone sensor.
+
+\emph default
+ The sample rate, in standard 
+\begin_inset Formula $cm^{3}/s$
+\end_inset
+
+, is XFO3FS, while XFO3FNO gives the NO flow rate in the same units and
+ XFO3P is the pressure in the ozone sample cell.
+ These variables apply to measurements made by an earlier version of the
+ fast ozone instrument.
+ They have not been present in projects since 2006.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Fast response NO chemiluminescence ozone mixing ratio (ppbv): 
+\bar under
+FO3_ACD
+\bar default
+, 
+\bar under
+FO3_CL
+\series default
+\bar default
+, 
+\series bold
+XO3, O3MR_CL
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+O3MR_CL
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+O3MR_CL
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XO3
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+XO3
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FO3_x
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+FO3_x
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FO3_ACD
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+FO3_CL
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+FO3_ACD
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+FO3_CL
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The ozone mixing ratio (by volume) measured by an NO chemiluminescence instrumen
+t.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+ 
+\emph default
+need Teresa to check this section
+\end_layout
+
+\end_inset
+
+
+\emph default
+ The instrument detects chemiluminescence from the reaction of nitric oxide
+ (NO) with ambient ozone, using a dry-ice cooled, red-sensitive photomultiplier
+ employing photon-counting electronics.
+ The measurement principle is described by Ridley et al.
+\begin_inset space ~
+\end_inset
+
+(1992)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Ridley, B.
+\begin_inset space ~
+\end_inset
+
+A., F.
+\begin_inset space ~
+\end_inset
+
+E.
+\begin_inset space ~
+\end_inset
+
+Grahek, and J.
+\begin_inset space ~
+\end_inset
+
+G.
+\begin_inset space ~
+\end_inset
+
+Walega, 1992: A small, high-sensitivity, medium-response ozone detector
+ suitable for measurements from light aircraft.
+ 
+\emph on
+J.
+\begin_inset space ~
+\end_inset
+
+Atmos.
+\begin_inset space ~
+\end_inset
+
+Oceanic Technol., 
+\series bold
+\emph default
+9, 
+\series default
+142–148.
+ 
+\end_layout
+
+\end_inset
+
+, and there is additional information describing the instrument at 
+\begin_inset CommandInset href
+LatexCommand href
+name "this URL"
+target "https://www.eol.ucar.edu/instruments/nitric-oxide-chemiluminescence-ozone-instrument"
+
+\end_inset
+
+.
+ The time resolution is 0.2 seconds, and typical uncertainty is 5%.
+ The background signal is measured 1-2 times hourly during flights.
+ Linear calibration coefficients are applied to the photon count rate to
+ produce mixing ratios, and a correction is applied for water vapor during
+ final processing, as follows: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+CPS
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CPS=counts per second
+\end_layout
+
+\end_inset
+
+ = counts per second from the instrument
+\begin_inset Newline newline
+\end_inset
+
+[O
+\begin_inset Formula $_{3}$
+\end_inset
+
+]
+\begin_inset Formula $_{wet}$
+\end_inset
+
+ = ozone mixing ratio as measured in the sensing cell (with water)
+\end_layout
+
+\begin_layout Plain Layout
+[O
+\begin_inset Formula $_{3}$
+\end_inset
+
+]
+\begin_inset Formula $_{dry}$
+\end_inset
+
+ = ozone mixing ratio in dry air, corrected for the effects of water vapor
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $S(t)$
+\end_inset
+
+ = sensitivity at time t = ({CPS} when exposed to cal gas) / concentration
+ of cal gas
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $Z(t)$
+\end_inset
+
+ = background at time t = {CPS} when exposed to zero-ozone air
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $W^{\prime}$
+\end_inset
+
+ = water vapor mixing ratio by volume
+\begin_inset Index lis
+status open
+
+\begin_layout Plain Layout
+rv@
+\begin_inset Formula $r_{v}$
+\end_inset
+
+=water vapor mixing ratio by volume
+\end_layout
+
+\end_inset
+
+ (expressed as a fraction; dimensionless)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\kappa$
+\end_inset
+
+ = correction factor for water vapor = 4.3 (dimensionless)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{equation}
+[\mathrm{O}_{3}]_{wet}=\frac{\{\mathrm{CPS}\}-Z(t)}{S(t)}\label{eq:FO3}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\{\mathrm{F03\_ACD}\}=[\mathrm{O_{3}]}_{dry}=[\mathrm{O_{3}]}_{wet}\times(1+\kappa r_{v})\label{eq:FO3WaterCorr}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Uncorrected TECO Ozone Mixing Ratio (ppb): 
+\bar under
+TEO3
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TEO3
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TEO3
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The uncorrected ozone mixing ratio output from the TECO model 49c UV ozone
+ analyzer.
+
+\emph default
+ See TEO3C.
+ 
+\end_layout
+
+\begin_layout Hanging
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Internal TECO Ozone Sampling Pressure (hPa): 
+\bar under
+TEP
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+TEP
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+TEP
+\end_layout
+
+\end_inset
+
+, 
+\bar under
+TEO3P
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TEO3P
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TEO3P
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Internal TECO Ozone Sampling Temperature (
+\begin_inset Formula $^{\circ}C$
+\end_inset
+
+): 
+\bar under
+TET
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+TET
+\end_layout
+
+\end_inset
+
+
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TET
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The pressure (TEP) or temperature (TET) inside the detection cell of the
+ TECO 49 UV ozone analyzer.
+
+\emph default
+ These are used to convert the measurements from the instrument to units
+ of ppbv.
+ In many projects, the cell temperature was not recorded so an expected
+ cell temperature in the aircraft cabin must be used in processing.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Corrected TECO Ozone Mixing Ratio (ppbv): 
+\bar under
+TEO3C
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TEO3C
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+TEO3C
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The ozone mixing ratio (by volume) determined by the TECO model 49c UV ozone
+ analyzer (cf.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "this description"
+target "https://www.eol.ucar.edu/instruments/thermo-environmental-instruments-model-49-ozone-analyzer"
+
+\end_inset
+
+) after correction for the pressure and temperature in the cell by application
+ of the ideal gas law.
+
+\emph default
+ Because the basic measurement is ozone density in the chamber, this measurement
+ must be converted to a mixing ratio by dividing by the air density, calculated
+ from the pressure and temperature measured in the chamber (TEP and TET
+ respectively).
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+need to understand what teo3c.c does
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:6-3"
+
+\end_inset
+
+ The instrument provides output only each ten seconds, and measurements
+ are collected in the 3 s preceding the update.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+check: still right?
+\end_layout
+
+\end_inset
+
+The measurements may be artificially high or low when rapid changes in humidity
+ are present, as may occur when crossing the top of the boundary layer or
+ when going through clouds.
+ In operation on the ground prior to takeoff or immediately after landing,
+ a high concentration of hydrocarbons can cause spuriously high measurements.
+ The detection limit is 1 ppbv with an uncertainty of 
+\begin_inset Formula $\pm$
+\end_inset
+
+5%.
+ This instrument is seldom used as of 2014 and may soon be classified as
+ obsolete.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+NO Raw Counts (counts per sample interval): 
+\bar under
+XNO
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XNO
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XNO
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+NOy Raw Counts (counts per sample interval): 
+\bar under
+XNOY
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+XNOY
+\end_layout
+
+\end_inset
+
+
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XNOY
+\end_layout
+
+\end_inset
+
+
+\series bold
+\bar under
+
+\begin_inset Newline newline
+\end_inset
+
+
+\bar default
+NO Calibration Flow (SLPM): 
+\bar under
+XNOCF
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XNOCF
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XNOCF
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+NOy Calibration Flow (SLPM): 
+\bar under
+XNCLF
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XNCLF
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XNCLF
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+NO, NOy Measurement Status (dimensionless): 
+\bar under
+XNST
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XNST
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XNST
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+NO Zero Air Flow (SLPM): 
+\bar under
+XNOZA
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XNOZA
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XNOZA
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+NOy Zero Air Flow (SLPM): 
+\bar under
+XNZAF
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XNZAF
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XNZAF
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+NO Sample Flow (SLPM): 
+\bar under
+XNOSF
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XNOSF
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XNOSF
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+NOy Sample Flow (SLPM): 
+\bar under
+XNSAF
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XNSAF
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XNSAF
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+NOy Reaction Chamber Pressure (mb): 
+\bar under
+XNOYP
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XNOYP
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XNOYP
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+Gold NOy Converter Temperature (
+\begin_inset Formula $\text{º}$
+\end_inset
+
+C): 
+\bar under
+XNMBT
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+XNMBT
+\end_layout
+
+\end_inset
+
+
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+XNMBT
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The measurements provided by the NO+NO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ instrument, 
+\emph default
+which is described at 
+\begin_inset CommandInset href
+LatexCommand href
+name "this link"
+target "https://www.eol.ucar.edu/instruments/no-no2-instrument"
+
+\end_inset
+
+
+\emph on
+.
+
+\emph default
+ XNO and XNOY are the raw data counts from the NO and NO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ instruments, respectively, and XNCLF and XNOCF are the respective calibration
+ flows for these instruments.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+is this right? The one named NO2 is actually for NOy?
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:6-2"
+
+\end_inset
+
+ XNST records the status for both instruments: In measurement mode, XNST
+ is 0, while XNST is 5 when the instruments are in zero mode and 10 when
+ the instruments are in calibration mode.
+ the NOy and NO instruments.
+ The instrument is in the measure mode for XNST of 0.
+ For a XNST reading of 5 the instruments are in the zero mode.
+ XNST value of 10 is the calibration mode.
+ XNOZA and XNZAF are flow rates for zero air used to back flush inlets,
+ typically at takeoff and landing, and for calibration using 
+\begin_inset Quotes eld
+\end_inset
+
+zero
+\begin_inset Quotes erd
+\end_inset
+
+ air.
+ Even if the status, XNST, is 0, indicating the instrument is in the measurement
+ mode, when XNOZA and XNZAF are approximately 1 SLPM the instrument is measuring
+ zero air and not ambient air.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+In true measurement mode, XNOZA and XNZAF will be near zero – is this right?
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:6-4"
+
+\end_inset
+
+ XNOSF and XNSAF are the sample flow rates through the NO and NO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ instruments respectively.
+ These values are typically about 1 SLPM.
+ XNMBT is the temperature of the gold NO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ converter.
+\end_layout
+
+\begin_layout Hanging
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+C
+\series bold
+orrected NO Mixing Ratio (ppbv): 
+\bar under
+XNOCAL
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+XNOCAL
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Corrected NO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ Mixing Ratio (ppbv): 
+\bar under
+XNYCAL
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+\bar no
+XNYCAL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The calibrated NO and NO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ volumetric mixing ratio, respectively, measured by the NO-NO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ instrument.
+
+\emph default
+ See 
+\begin_inset CommandInset href
+LatexCommand href
+name "this link"
+target "https://www.eol.ucar.edu/instruments/nitric-oxide-chemiluminescence-ozone-instrument"
+
+\end_inset
+
+ for a description of the instrument.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I think this needs revision
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:6-5"
+
+\end_inset
+
+ The NO and NO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ data are represented by a cubic spline for baseline subtraction, and then
+ the calibration coefficients are applied and the measurements are converted
+ to units of ppbv.
+ The quality of the data can be assessed by examining the accuracy of the
+ zero correction.
+ This instrument 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset Quotes eld
+\end_inset
+
+has the provision for the addition of water vapor 
+\begin_inset Quotes erd
+\end_inset
+
+ – does that mean this is always done, or only sometimes?
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "punch:6-6"
+
+\end_inset
+
+ adds water vapor to the sample stream to reduce the effect of ambient water
+ on the final signal.
+ The water vapor addition is not sufficient to saturate the sample stream,
+ but enough to remove much of the interference.
+ The detection limits of the NO,NO
+\begin_inset Formula $_{2}$
+\end_inset
+
+ instruments are 50 ppbv for a one-second averaging time.
+ The uncertainty is 
+\begin_inset Formula $\pm$
+\end_inset
+
+ 5%.
+\end_layout
+
+\begin_layout Subsection
+Variables in Special Data Sets
+\end_layout
+
+\begin_layout Standard
+Research projects often incorporate user-supplied instruments into payloads,
+ and those instruments produce data files that are either recorded independently
+ or merged into the standard netCDF data files for the projects.
+ In addition, NCAR offers a set of instruments that require additional data
+ processing and analysis, often because the measurements require special
+ interpretation to obtain the desired measurements.
+ The following instruments can provide such air-chemistry measurements:
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "98col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+itemsep}{-1
+\backslash
+parsep}
+\end_layout
+
+\end_inset
+
+Advanced Whole Air Sampler (
+\begin_inset CommandInset href
+LatexCommand href
+name "AWAS"
+target "http://www.eol.ucar.edu/instruments/advanced-whole-air-sampler"
+
+\end_inset
+
+)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+AWAS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Chemical Ionization Mass Spectrometer (
+\begin_inset CommandInset href
+LatexCommand href
+name "CIMS"
+target "http://www.eol.ucar.edu/instruments/georgia-tech-chemical-ionization-mass-spectrometer"
+
+\end_inset
+
+)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CIMS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Quantum Cascade Laser Spectrometer (
+\begin_inset CommandInset href
+LatexCommand href
+name "QCLS"
+target "http://www.eol.ucar.edu/instruments/quantum-cascade-laser-spectrometer"
+
+\end_inset
+
+)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+QCLS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Trace Organic Gas Analyzer (
+\begin_inset CommandInset href
+LatexCommand href
+name "TOGA"
+target "http://www.eol.ucar.edu/instruments/trace-organic-gas-analyzer"
+
+\end_inset
+
+)
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+TOGA
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Follow the links in the box to descriptions of these instruments on the
+ EOL web site.
+ Those descriptions include brief explanations of how data are acquired
+ and handled.
+ The process varies with instrument; The CIMS and QCLS instruments produce
+ variables that are often merged into the standard netCDF archived data
+ files for projects, the AWAS collects samples that are later analyzed using
+ ground-based instruments but result in a special dataset dependent on analysis
+ technique and sample location and duration, while the TOGA is usually analyzed
+ to produce dozens of trace-gas measurements, some of which can be merged
+ into standard netCDF files.
+ 
+\end_layout
+
+\begin_layout Standard
+Users interested in using these measurements should contact 
+\begin_inset CommandInset href
+LatexCommand href
+name "EOL/RAF data management"
+target "mailto:raf-dm@eol.ucar.edu"
+type "mailto:"
+
+\end_inset
+
+ for data access and assistance.
+\end_layout
+
+\end_body
+\end_document
