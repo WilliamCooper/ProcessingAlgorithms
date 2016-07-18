@@ -263,6 +263,7 @@
 \indexentry{PSx|hyperpage}{27}
 \indexentry{PSxC|hyperpage}{27}
 \indexentry{PS_A@PS\_A|hyperpage}{27}
+\indexentry{PSX|hyperpage}{27}
 \indexentry{PSXC|hyperpage}{27}
 \indexentry{PSFD|hyperpage}{27}
 \indexentry{PSFRD|hyperpage}{27}
@@ -285,6 +286,7 @@
 \indexentry{QCXC|hyperpage}{29}
 \indexentry{QCx|hyperpage}{29}
 \indexentry{QCxC|hyperpage}{29}
+\indexentry{QCX|hyperpage}{29}
 \indexentry{pressure!dynamic|hyperpage}{29}
 \indexentry{pressure!dynamic!corrected|hyperpage}{29}
 \indexentry{LAMS|hyperpage}{29}
@@ -325,6 +327,7 @@
 \indexentry{RTx|hyperpage}{30}
 \indexentry{RTxH|hyperpage}{30}
 \indexentry{RTHRx|hyperpage}{30}
+\indexentry{RTX|hyperpage}{30}
 \indexentry{temperature!recovery|hyperpage}{30}
 \indexentry{temperature!ambient|hyperpage}{30}
 \indexentry{TTx|hyperpage}{30}
@@ -337,7 +340,9 @@
 \indexentry{TTRF|hyperpage}{30}
 \indexentry{TTKP|hyperpage}{30}
 \indexentry{ATx|hyperpage}{30}
+\indexentry{ATX|hyperpage}{30}
 \indexentry{ATxH|hyperpage}{30}
+\indexentry{ATxD|hyperpage}{30}
 \indexentry{ATxD|hyperpage}{30}
 \indexentry{temperature!total|hyperpage}{30}
 \indexentry{variables!obsolete!TTx|hyperpage}{30}
@@ -405,6 +410,7 @@
 \indexentry{frost point|hyperpage}{35}
 \indexentry{hygrometer!dew point|hyperpage}{35}
 \indexentry{DPxC|hyperpage}{36}
+\indexentry{DPXC|hyperpage}{36}
 \indexentry{dew point!corrected|hyperpage}{36}
 \indexentry{frost point|hyperpage}{36}
 \indexentry{pressure!water vapor!equilibrium|hyperpage}{36}
@@ -438,17 +444,17 @@
 \indexentry{concentration!water vapor|hyperpage}{40}
 \indexentry{hygrometer!UV|hyperpage}{40}
 \indexentry{XSIGV_UVH@XSIGV\_UVH|hyperpage}{40}
+\indexentry{CONCH_UVH@CONCH\_UVH|hyperpage}{40}
 \indexentry{Avogadro constant|hyperpage}{40}
-\indexentry{CONCH_UVH@CONCH\_UVH|hyperpage}{41}
 \indexentry{EWx|hyperpage}{41}
 \indexentry{EWX|hyperpage}{41}
 \indexentry{EW_UVH@EW\_UVH|hyperpage}{41}
 \indexentry{EDPC|hyperpage}{41}
 \indexentry{DPXC|hyperpage}{41}
 \indexentry{enhancement factor|hyperpage}{41}
-\indexentry{RHUM|hyperpage}{42}
-\indexentry{humidity!relative|hyperpage}{42}
-\indexentry{relative humidity|hyperindexformat{\see {humidity, relative}}}{42}
+\indexentry{RHUM|hyperpage}{41}
+\indexentry{humidity!relative|hyperpage}{41}
+\indexentry{relative humidity|hyperindexformat{\see {humidity, relative}}}{41}
 \indexentry{EWX|hyperpage}{42}
 \indexentry{ATX|hyperpage}{42}
 \indexentry{pressure!water vapor!equilibrium|hyperpage}{42}
@@ -532,6 +538,7 @@
 \indexentry{dynamic pressure|hyperpage}{50}
 \indexentry{gust probe!858AJ|hyperpage}{50}
 \indexentry{MACHx|hyperpage}{50}
+\indexentry{MACHX|hyperpage}{50}
 \indexentry{XMACH2|hyperpage}{50}
 \indexentry{TASx|hyperpage}{50}
 \indexentry{TASxD|hyperpage}{50}

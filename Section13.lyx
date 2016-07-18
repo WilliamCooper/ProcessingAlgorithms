@@ -92,7 +92,24 @@ name "punch:6-1"
 \begin_layout Hanging
 
 \series bold
-Carbon Monoxide Preliminary Mixing Ratio (ppbv): 
+Carbon Monoxide Preliminary Mixing Ratio (ppbv):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CORAW_AL}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 CORAW_AL
 \bar default
@@ -171,7 +188,24 @@ target "https://www.eol.ucar.edu/instruments/aero-laser-vuv-resonance-fluorescen
 \begin_layout Hanging
 
 \series bold
-Carbon Monoxide Mixing Ratio (ppbv): 
+Carbon Monoxide Mixing Ratio (ppbv):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{COMR_AL}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 COMR_AL
 \bar default
@@ -401,7 +435,24 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-Carbon Dioxide Mixing Ratio (ppmv): 
+Carbon Dioxide Mixing Ratio (ppmv):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CO2_PIC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 CO2_PIC
 \series default
@@ -774,7 +825,24 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-Chemiluminescent Ozone Sample Flow Rate (sccm): 
+Chemiluminescent Ozone Sample Flow Rate (sccm):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XFO3FS}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XFO3FS
 \bar default
@@ -806,7 +874,24 @@ XFO3FS
 \begin_inset Newline newline
 \end_inset
 
-Chemiluminescent Ozone Nitric Oxide Flow Rate (sccm): 
+Chemiluminescent Ozone Nitric Oxide Flow Rate (sccm):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XFO3FNO}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XFO3FN
 \bar default
@@ -838,7 +923,24 @@ XFO3FNO
 \begin_inset Newline newline
 \end_inset
 
-Chemiluminescent Ozone Sample Pressure (mb): 
+Chemiluminescent Ozone Sample Pressure (mb):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XFO3P}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XFO3P
 \begin_inset Index idx
@@ -891,7 +993,63 @@ Flows and pressure within the chemiluminescence ozone sensor.
 \begin_layout Hanging
 
 \series bold
-Fast response NO chemiluminescence ozone mixing ratio (ppbv): 
+Fast response NO chemiluminescence ozone mixing ratio (ppbv):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{FO3_ACD}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{FO3_CL}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{O3MR_CL}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XO3}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 FO3_ACD
 \bar default
@@ -1246,7 +1404,24 @@ height "1pt"
 \begin_layout Hanging
 
 \series bold
-Uncorrected TECO Ozone Mixing Ratio (ppb): 
+Uncorrected TECO Ozone Mixing Ratio (ppb):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TEO3}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 TEO3
 \series default
@@ -1307,7 +1482,37 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-Internal TECO Ozone Sampling Pressure (hPa): 
+Internal TECO Ozone Sampling Pressure (hPa):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TEP}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TEO3P}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 TEP
 \bar default
@@ -1370,7 +1575,24 @@ Internal TECO Ozone Sampling Temperature (
 \begin_inset Formula $^{\circ}C$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TET}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 TET
 \begin_inset Index idx
@@ -1422,7 +1644,24 @@ The pressure (TEP) or temperature (TET) inside the detection cell of the
 \begin_layout Hanging
 
 \series bold
-Corrected TECO Ozone Mixing Ratio (ppbv): 
+Corrected TECO Ozone Mixing Ratio (ppbv):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TEO3C}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 TEO3C
 \series default
@@ -1540,7 +1779,24 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-NO Raw Counts (counts per sample interval): 
+NO Raw Counts (counts per sample interval):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XNO}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XNO
 \bar default
@@ -1574,7 +1830,24 @@ XNO
 \begin_inset Newline newline
 \end_inset
 
-NOy Raw Counts (counts per sample interval): 
+NOy Raw Counts (counts per sample interval):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XNOY}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XNOY
 \begin_inset Index idx
@@ -1611,7 +1884,24 @@ XNOY
 
 
 \bar default
-NO Calibration Flow (SLPM): 
+NO Calibration Flow (SLPM):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XNOCF}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XNOCF
 \bar default
@@ -1645,7 +1935,24 @@ XNOCF
 \begin_inset Newline newline
 \end_inset
 
-NOy Calibration Flow (SLPM): 
+NOy Calibration Flow (SLPM):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XNCLF}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XNCLF
 \bar default
@@ -1679,7 +1986,24 @@ XNCLF
 \begin_inset Newline newline
 \end_inset
 
-NO, NOy Measurement Status (dimensionless): 
+NO, NOy Measurement Status (dimensionless):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XNST}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XNST
 \bar default
@@ -1713,7 +2037,24 @@ XNST
 \begin_inset Newline newline
 \end_inset
 
-NO Zero Air Flow (SLPM): 
+NO Zero Air Flow (SLPM):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XNOZA}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XNOZA
 \bar default
@@ -1747,7 +2088,24 @@ XNOZA
 \begin_inset Newline newline
 \end_inset
 
-NOy Zero Air Flow (SLPM): 
+NOy Zero Air Flow (SLPM):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XNZAF}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XNZAF
 \bar default
@@ -1781,7 +2139,24 @@ XNZAF
 \begin_inset Newline newline
 \end_inset
 
-NO Sample Flow (SLPM): 
+NO Sample Flow (SLPM):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XNOSF}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XNOSF
 \bar default
@@ -1815,7 +2190,24 @@ XNOSF
 \begin_inset Newline newline
 \end_inset
 
-NOy Sample Flow (SLPM): 
+NOy Sample Flow (SLPM):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XNSAF}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XNSAF
 \bar default
@@ -1849,7 +2241,24 @@ XNSAF
 \begin_inset Newline newline
 \end_inset
 
-NOy Reaction Chamber Pressure (mb): 
+NOy Reaction Chamber Pressure (mb):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XNOYP}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XNOYP
 \bar default
@@ -1887,7 +2296,24 @@ Gold NOy Converter Temperature (
 \begin_inset Formula $\text{º}$
 \end_inset
 
-C): 
+C):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XNMBT}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XNMBT
 \begin_inset Index idx
@@ -2042,7 +2468,24 @@ status open
 \begin_layout Plain Layout
 C
 \series bold
-orrected NO Mixing Ratio (ppbv): 
+orrected NO Mixing Ratio (ppbv):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XNOCAL}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XNOCAL
 \bar default
@@ -2066,7 +2509,24 @@ Corrected NO
 \begin_inset Formula $_{2}$
 \end_inset
 
- Mixing Ratio (ppbv): 
+ Mixing Ratio (ppbv):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XNYCAL}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XNYCAL
 \begin_inset Index idx

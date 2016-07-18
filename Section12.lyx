@@ -311,7 +311,24 @@ section needs attention to indexing
 \begin_layout Hanging
 
 \series bold
-CN Counter Inlet Pressure (hPa): 
+CN Counter Inlet Pressure (hPa):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PCN}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 PCN
 \series default
@@ -366,10 +383,53 @@ pressure!inlet
 
 \series bold
 CN Counter Inlet Temperature (
-\begin_inset Formula $^{\circ}C$
+\begin_inset Formula $^{\circ}$
 \end_inset
 
-): 
+C):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CNTEMP}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TEMP1}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TEMP2}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 CNTEMP
 \series default
@@ -519,7 +579,24 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-Raw CN Counter Sample Flow Rate (SLPM): 
+Raw CN Counter Sample Flow Rate (SLPM):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{FCN}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 FCN
 \series default
@@ -550,7 +627,24 @@ FCN
 
 
 \series bold
-Corrected CN Counter Sample Flow Rate (VLPM): 
+Corrected CN Counter Sample Flow Rate (VLPM):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{FCNC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 FCNC
 \series default
@@ -859,7 +953,24 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-Raw CN Isokinetic Side Flow Rate (SLPM): 
+Raw CN Isokinetic Side Flow Rate (SLPM):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XICN}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XICN
 \series default
@@ -890,7 +1001,24 @@ XICN
 
 
 \series bold
-Corrected CN Isokinetic Side Flow Rate (VLPM): 
+Corrected CN Isokinetic Side Flow Rate (VLPM):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XICNC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XICNC
 \series default
@@ -1123,7 +1251,24 @@ height "1pt"
 \begin_layout Hanging
 
 \series bold
-CN Counter Output (counts per sample interval); 
+CN Counter Output (counts per sample interval):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CNTS}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 CNTS
 \series default
@@ -1204,7 +1349,24 @@ Condensation Nucleus (CN) Concentration (cm
 \begin_inset Formula $^{-3}$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONCN}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 CONCN
 \series default
@@ -1994,7 +2156,24 @@ Sensors of individual Particles (1-D Probes).
 \begin_layout Hanging
 
 \series bold
-UHSAS Absolute Pressure in Canister (hPa): 
+UHSAS Absolute Pressure in Canister (hPa):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{UPRESS}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 UPRESS
 \series default
@@ -2075,7 +2254,37 @@ s
 \begin_inset Formula $^{-1}$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{USMPFLW}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PFLW}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 USMPFLW
 \bar default
@@ -2138,7 +2347,37 @@ s
 \begin_inset Formula $^{-1}$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{USFLWC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PFLWC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 USFLWC
 \bar default
@@ -2397,7 +2636,37 @@ height "1pt"
 \begin_layout Hanging
 
 \series bold
-Total particle counts per sample interval, UHSAS or PCASP: 
+Total particle counts per sample interval, UHSAS or PCASP:
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TCNTL}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TCHTP}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 TCNTU
 \bar default
@@ -2486,7 +2755,63 @@ s
 \begin_inset Formula $^{-1}$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONCU}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONCP}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONCU100}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONCU500}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 
 \begin_inset Newline newline

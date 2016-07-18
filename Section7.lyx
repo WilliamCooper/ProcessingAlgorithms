@@ -458,7 +458,102 @@ pressure
 \begin_layout Hanging
 
 \series bold
-Static Pressure (hPa): 
+Static Pressure (hPa):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PSxC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PSXC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PSx}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PSX}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PS_A}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PSFD}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PSFRD}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 PSx
 \bar default
@@ -540,6 +635,34 @@ PS_A
 
 \series bold
 , 
+\bar under
+PSX
+\series default
+,
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+PSX
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+PSX
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 PSXC
 \series default
@@ -1331,9 +1454,80 @@ M=\left\{ \left(\frac{2c_{v}}{R}\right)\left[\left(\frac{p+q}{p}\right)^{R/c_{p}
 \begin_layout Hanging
 
 \series bold
-Dynamic Pressure (hPa): QCx, QCxC, QCXC
+Dynamic Pressure (hPa):
 \series default
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{QCx}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{QCxC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{QCX}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{QCXC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
+\bar under
+QCx
+\bar default
+, 
+\bar under
+QCxC
+\bar default
+, 
+\bar under
+QCX
+\bar default
+, 
+\bar under
+QCXC
+\series default
+\bar default
+
 \begin_inset Index idx
 status open
 
@@ -1389,6 +1583,26 @@ status open
 
 \begin_layout Plain Layout
 QCXC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+QCX
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+QCX
 \end_layout
 
 \end_inset
@@ -1852,7 +2066,28 @@ Mach number
 \begin_layout Hanging
 
 \series bold
-D-Value (m): DVALUE
+D-Value (m):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DVALUE}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
+\bar under
+DVALUE
+\bar default
+
 \begin_inset Index idx
 status open
 
@@ -1920,7 +2155,63 @@ altitude!pressure
 \begin_layout Hanging
 
 \series bold
-Special Pressure Measurements (hPa): 
+Special Pressure Measurements (hPa):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PSDPx}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CAVP_x}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PCAB}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PSURF}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 PSDPx
 \bar default
@@ -2400,7 +2691,63 @@ Recovery Temperature (
 \begin_inset Formula $\text{º}$
 \end_inset
 
-C): 
+C):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{RTx}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{RTxH}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{RTHRx}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{RTX}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 RTx
 \bar default
@@ -2475,6 +2822,32 @@ status open
 
 \begin_layout Plain Layout
 RTHRx
+\end_layout
+
+\end_inset
+
+, 
+\series bold
+\bar under
+RTX
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+RTX
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+RTX
 \end_layout
 
 \end_inset
@@ -2733,10 +3106,66 @@ TTx
 
 \series bold
 Ambient Temperature (
-\begin_inset Formula $º$
+\begin_inset Formula $^{\circ}$
 \end_inset
 
-C): 
+C):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{ATx}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{ATX}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{ATxJ}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{ATxD}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 ATx
 \bar default
@@ -2765,6 +3194,33 @@ ATx
 \end_inset
 
 , 
+\bar under
+ATX
+\series default
+\bar default
+,
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ATX
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+ATX
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 ATxH
 \series default
@@ -2794,9 +3250,10 @@ ATxH
 , 
 \bar under
 ATxD
+\series default
 \bar default
 
-\begin_inset Index var
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -2805,8 +3262,6 @@ ATxD
 
 \end_inset
 
-
-\series default
 
 \begin_inset Index idx
 status open
@@ -4559,6 +5014,19 @@ In-cloud Air Temperature, Radiometric (
 
 C):
 \series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{AT_ITR}{}
+\end_layout
+
+\end_inset
+
  
 \series bold
 \bar under
@@ -4671,7 +5139,24 @@ Ophir Air Temperature (
 \begin_inset Formula $^{\circ}$
 \end_inset
 
-C): 
+C):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{OAT}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 OAT
 \series default
@@ -4748,7 +5233,50 @@ Dew/Frost Point (
 \begin_inset Formula $\text{º}$
 \end_inset
 
-C): 
+C):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DPx}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DP_x}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{MIRRTMP_DPX}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 DPx
 \series default
@@ -4900,8 +5428,45 @@ C
 \begin_layout Hanging
 
 \series bold
-Corrected Dew Point (C): DPxC
+Corrected Dew Point (C):
 \series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DPxC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DPXC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
+\bar under
+DPXC
+\bar default
+, 
+\bar under
+DPxC
+\series default
+\bar default
 
 \begin_inset Index var
 status open
@@ -4918,6 +5483,26 @@ status open
 
 \begin_layout Plain Layout
 DPxC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+DPXC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+DPXC
 \end_layout
 
 \end_inset
@@ -7402,7 +7987,24 @@ Dew Point Determined from the VCSEL Hygrometer (
 \begin_inset Formula $^{\circ}$
 \end_inset
 
-C): 
+C):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DP_VXL}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 DP_VXL
 \series default
@@ -7543,7 +8145,37 @@ Frost Point Temperature from the CR2 Cryogenic Hygrometer (
 \begin_inset Formula $^{\circ}$
 \end_inset
 
-C): 
+C):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{FP_CR2}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{MIRRORT_CR2}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 FP_CR2
 \begin_inset Index var
@@ -7658,7 +8290,24 @@ Corrected Dew Point Temperature from the CR2 Cryogenic Hygrometer (
 \begin_inset Formula $^{\circ}$
 \end_inset
 
-C): 
+C):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DP_CR2C}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 DP_CR2C
 \series default
@@ -7726,7 +8375,24 @@ Uncorrected Water Vapor Number Density from the VCSEL Hygrometer (molecules
 \begin_inset Formula $^{-3}$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{RAWCONC_VXL}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 RAWCONC_VXL
 \series default
@@ -7811,7 +8477,24 @@ Corrected Water Vapor Concentration from the VCSEL Hygrometer (molecules
 \begin_inset Formula $^{-3}$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONCV_VXL}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 CONCV_VXL
 \series default
@@ -7888,7 +8571,24 @@ target "https://www.eol.ucar.edu/instruments/vertical-cavity-surface-emitting-la
 \begin_layout Hanging
 
 \series bold
-Voltage Output from the UV Hygrometer (V): 
+Voltage Output from the UV Hygrometer (V):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{XSIGV_UHV}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 XSIGV_UVH
 \bar default
@@ -7950,7 +8650,24 @@ Water Vapor Number Density from the UV Hygrometer (molecules cm
 \begin_inset Formula $^{-3}$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONCH_UVH}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 CONCH_UVH
 \series default
@@ -7996,7 +8713,63 @@ Water vapor number density (or concentration of molecules) measured by the
 \begin_layout Hanging
 
 \series bold
-Water Vapor Pressure (hPa): 
+Water Vapor Pressure (hPa):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{EWx}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{EWX}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{EW_UHV}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{EDPC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 EWx
 \bar default
@@ -8289,7 +9062,24 @@ DOI: 10.1175/JTECH-D-11-00141.1
 \begin_layout Hanging
 
 \series bold
-Relative Humidity (per cent or Pa/hPa): 
+Relative Humidity (per cent or Pa/hPa):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{RHUM}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 RHUM
 \series default
@@ -8605,7 +9395,24 @@ reference "eq:8.16RHUM-1"
 \begin_layout Hanging
 
 \series bold
-Relative Humidity with respect to Ice (per cent or Pa/hPa): 
+Relative Humidity with respect to Ice (per cent or Pa/hPa):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{RHUMI}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 RHUMI
 \series default
@@ -8902,7 +9709,24 @@ Absolute Humidity, Water Vapor Density (g/m
 \begin_inset Formula $^{3}$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{RHOx}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 RHOx
 \series default
@@ -9329,7 +10153,24 @@ ha hygrometers.
 \begin_layout Hanging
 
 \series bold
-Specific Humidity (g/kg): 
+Specific Humidity (g/kg):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{SPHUM}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 SPHUM
 \series default
@@ -9527,7 +10368,76 @@ height "1pt"
 \begin_layout Hanging
 
 \series bold
-Mixing Ratio (g/kg): 
+Mixing Ratio (g/kg):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{MR}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{MRCR}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{MRLA}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{MRLH}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{MRVCL}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 
 \begin_inset CommandInset label
@@ -9953,7 +10863,24 @@ derived variables
 \begin_layout Hanging
 
 \series bold
-Potential Temperature (K): 
+Potential Temperature (K):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{THETA}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 THETA
 \series default
@@ -10199,7 +11126,37 @@ height "1pt"
 \begin_layout Hanging
 
 \series bold
-Pseudo-Adiabatic Equivalent Potential Temperature (K): 
+Pseudo-Adiabatic Equivalent Potential Temperature (K):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{THETAP}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{THETAE}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 THETAP
 \series default
@@ -10811,7 +11768,24 @@ Virtual Temperature (
 \begin_inset Formula $\text{º}$
 \end_inset
 
-C): 
+C):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TVIR}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 
 \begin_inset CommandInset label
@@ -10973,7 +11947,24 @@ height "1pt"
 \begin_layout Hanging
 
 \series bold
-Virtual Potential Temperature (K): 
+Virtual Potential Temperature (K):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{THETAV}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 THETAV
 \series default
@@ -11171,7 +12162,24 @@ type "file:"
 \begin_layout Hanging
 
 \series bold
-Wet-Equivalent Potential Temperature (K): 
+Wet-Equivalent Potential Temperature (K):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{THETAQ}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 THETAQ
 \series default

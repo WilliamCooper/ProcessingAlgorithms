@@ -3044,13 +3044,80 @@ d by running LyX.
 \end_layout
 
 \begin_layout Section*
-\begin_inset CommandInset href
-LatexCommand href
-name "this URL"
-target "https://drive.google.com/open?id=0B1kIUH45ca5AeG1nY1k2X2d2Z2s"
+How to Reference Specific Sections or Pages of this Document:
+\end_layout
 
+\begin_layout Subsection*
+Variables
+\end_layout
+
+\begin_layout Standard
+The document includes named destinations for each variable name, so when
+ used in a URL that destination can be reached.
+ This is done differently in different browsers or PDF viewers:
+\end_layout
+
+\begin_layout Itemize
+For a web browser like Chrome or Firefox, use the 
+\begin_inset Quotes eld
 \end_inset
 
+nameddest
+\begin_inset Quotes erd
+\end_inset
+
+ reference; e.g., for the discussion of variable ATX, use
+\begin_inset Newline newline
+\end_inset
+
+
+\family typewriter
+firefox http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf#nameddest=ATX
+\end_layout
+
+\begin_layout Itemize
+For a pdf viewer like evince, use this syntax:
+\begin_inset Newline newline
+\end_inset
+
+
+\family typewriter
+evince -n ATX http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf
+\end_layout
+
+\begin_layout Subsection*
+Page Numbers
+\end_layout
+
+\begin_layout Standard
+To reference a specific page in the document, use a web reference like this:
+\begin_inset Newline newline
+\end_inset
+
+
+\family typewriter
+ProcessingAlgorithms.pdf#page=44
+\end_layout
+
+\begin_layout Subsection*
+Adding New Targets
+\end_layout
+
+\begin_layout Standard
+When a new variable is added, a new anchor point can be added by inserting,
+ in LaTeX mode, 
+\family typewriter
+
+\backslash
+hypertarget{LAT}{} 
+\family default
+at the appropriate point in the LyX document.
+ In addition, when a new variable is added, entries should be made in the
+ index items and the variable-names list, following the pattern used for
+ existing variables.
+\end_layout
+
+\begin_layout Section*
 List of Web Links in this Document:
 \end_layout
 

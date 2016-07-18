@@ -27,8 +27,8 @@
   \item ATKP (obsolete), \hyperpage{86}
   \item ATRF (obsolete), \hyperpage{86}
   \item ATTACK, \hyperpage{52}
+  \item ATX, \hyperpage{30}
   \item ATx, \hyperpage{30}
-  \item ATxD, \hyperpage{30}
   \item ATxH, \hyperpage{30}
   \item AUHSAS, \hyperpage{60}
 
@@ -76,7 +76,7 @@
   \item CONC6, \hyperpage{61}
   \item CONCD, \hyperpage{61}
   \item CONCF, \hyperpage{61}
-  \item CONCH\_UVH, \hyperpage{41}
+  \item CONCH\_UVH, \hyperpage{40}
   \item CONCN, \hyperpage{72}
   \item CONCP, \hyperpage{61}, \hyperpage{74}
   \item CONCU, \hyperpage{61}, \hyperpage{74}
@@ -121,6 +121,7 @@
   \item DP\_x, \hyperpage{35}
   \item DPCRC, \hyperpage{87}
   \item DPx, \hyperpage{35}
+  \item DPXC, \hyperpage{36}
   \item DPxC, \hyperpage{36}
   \item DT1DC, \hyperpage{64}
   \item DVALUE, \hyperpage{29}
@@ -209,6 +210,7 @@
   \indexspace
 
   \item MACH = Mach number, \hyperpage{35}
+  \item MACHX, \hyperpage{50}
   \item MACHx, \hyperpage{50}
   \item MIRRORT\_CR2, \hyperpage{40}
   \item MR, \hyperpage{43}
@@ -250,6 +252,7 @@
   \item PSFD, \hyperpage{27}
   \item PSFRD, \hyperpage{27}
   \item PSURF, \hyperpage{29}
+  \item PSX, \hyperpage{27}
   \item \textbf  {PSx}, \hyperpage{27}
   \item PSXC, \hyperpage{27}
   \item PSxC, \hyperpage{27}
@@ -261,6 +264,7 @@
   \item QCBC (obsolete), \hyperpage{85}
   \item QCG (obsolete), \hyperpage{85}
   \item QCGC (obsolete), \hyperpage{85}
+  \item QCX, \hyperpage{29}
   \item QCx, \hyperpage{29}
   \item QCXC, \hyperpage{29}
   \item QCxC, \hyperpage{29}
@@ -275,12 +279,13 @@
   \item RHOLA, \hyperpage{43}
   \item RHOUV, \hyperpage{43}
   \item RHOx, \hyperpage{42}
-  \item RHUM, \hyperpage{42}
+  \item RHUM, \hyperpage{41}
   \item RHUMI, \hyperpage{42}
   \item RICE, \hyperpage{58}
   \item ROLL, \hyperpage{11}
   \item RSTx, \hyperpage{76}
   \item RTHRx, \hyperpage{30}
+  \item RTX, \hyperpage{30}
   \item RTx, \hyperpage{30}
   \item RTxH, \hyperpage{30}
 

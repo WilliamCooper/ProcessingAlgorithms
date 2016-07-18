@@ -84,7 +84,8 @@ been used for specialized measurements. The radome measurements are
 made by differential pressure sensors located in the nose area of
 the aircraft and connected to the radome by semi-rigid tubing.
 \begin{hangparagraphs}
-\textbf{Mach Number (dimensionless): }\textbf{\uline{MACHx}}\textbf{\sindex[var]{MACHx}}\index{MACHx}\\
+\textbf{Mach Number (dimensionless):}\hypertarget{MACHx}{}\hypertarget{MACHX}{}\textbf{
+}\textbf{\uline{MACHx}}\textbf{, }\textbf{\uline{MACHX}}\textbf{\sindex[var]{MACHx}}\index{MACHx}\index{MACHX}\sindex[var]{MACHX}\\
 \emph{The Mach Number that characterizes the flight speed.} The Mach
 number is defined as the ratio of the flight speed (or the magnitude
 of the relative wind) to the speed of sound. See Eq.~(\ref{eq:8.8-1})
@@ -92,8 +93,8 @@ in Section \ref{sec:State Variables} for the equation used. Many
 archived data files have a variable XMACH2\index{XMACH2}\sindex[var]{XMACH2},
 which is the square of MACHx.
 
-\textbf{Aircraft True Airspeed (m/s): }\textbf{\uline{TASx}}\index{TASx}\textbf{,
-}\textbf{\uline{TASxD}}\textbf{\sindex[var]{TASxD}}\index{TASxD}\\
+\textbf{Aircraft True Airspeed (m/s):}\hypertarget{TASx}{}\hypertarget{TASxD}{}\hypertarget{TASX}{}\textbf{
+}\textbf{\uline{TASx}}\index{TASx}\textbf{, }\textbf{\uline{TASxD}}\textbf{\sindex[var]{TASxD}}\index{TASxD}\\
 \emph{The flight speed of the aircraft relative to the atmosphere.}
 This derived measurement of the flight speed\index{flight speed|see {true airspeed}}
 of the aircraft relative to the atmosphere is based on the Mach number
@@ -121,8 +122,9 @@ $\gamma^{\prime}$, $R^{\prime}$, and $T_{0}$: See the List of Symbols\\
 \end{minipage}}\\
 \\
 
-\textbf{Aircraft True Airspeed (Humidity Corrected) (m/s): }\textbf{\uline{TASHC}}\sindex[var]{TASHC}\index{TASHC}
-\textendash{} \emph{obsolete}\\
+\textbf{Aircraft True Airspeed (Humidity Corrected) (m/s):}\hypertarget{TASHC}{}\textbf{
+}\textbf{\uline{TASHC}}\sindex[var]{TASHC}\index{TASHC} \textendash{}
+\emph{obsolete}\\
  This derived measurement of \index{airspeed}true airspeed accounted
 for deviations of specific heats of moist air from those of dry air.
 See List, 1971, pp 295, 331-339, and Khelif, et al., 1999. The equation
@@ -143,7 +145,8 @@ TASHC~=~TASX~{*}~(1.0~+~$c$~{*}~$q$)
 %
 \end{minipage}}\\
 
-\textbf{Attack Angle Differential Pressure (mb): }\textbf{\uline{ADIFR}}\sindex[var]{ADIFR}\index{ADIFR}\\
+\textbf{Attack Angle Differential Pressure (mb):}\hypertarget{ADIFR}{}\textbf{
+}\textbf{\uline{ADIFR}}\sindex[var]{ADIFR}\index{ADIFR}\\
 \emph{The pressure difference between the top and bottom pressure
 ports of a radome gust-sensing system. }\index{attack, angle of}This
 measurement is used to determine the angle of attack; see AKRD below.\index{radome gust probe}\index{gust probe!radome}\textbf{
@@ -151,7 +154,8 @@ measurement is used to determine the angle of attack; see AKRD below.\index{rado
 used for old gust-boom systems or for Rosemount Model 858AJ flow-angle
 sensors.\index{gust probe!Rosemount 858AJ}
 
-\textbf{Sideslip Angle Differential Pressure (mb): }\textbf{\uline{BDIFR}}\sindex[var]{BDIFR}\index{BDIFR}\\
+\textbf{Sideslip Angle Differential Pressure (mb):}\hypertarget{BDIFR}{}\textbf{
+}\textbf{\uline{BDIFR}}\sindex[var]{BDIFR}\index{BDIFR}\\
 \emph{The pressure difference between starboard and port pressure
 inlets of a radome gust-sensing system. }\index{sideslip, angle of}\index{radome gust probe}
 This measurement is used to determine the sideslip angle; see SSRD
@@ -159,7 +163,8 @@ below. Obsolete variable \uline{BDIF}\index{BDIF} is a similar
 variable used for old gust-boom systems or for Rosemount Model 858AJ
 flow-angle sensors.
 
-\textbf{Attack Angle, Radome (}$\text{º}$\textbf{): }\textbf{\uline{AKRD}}\sindex[var]{AKRD}\index{AKRD}\\
+\textbf{Attack Angle, Radome (}$\text{º}$\textbf{):}\hypertarget{AKRD}{}\textbf{
+}\textbf{\uline{AKRD}}\sindex[var]{AKRD}\index{AKRD}\\
 \emph{The angle of attack of the aircraft. }This derived measurement
 represents the angle between the relative wind vector and the plane
 determined by the longitudinal and lateral axes of the aircraft. Positive
@@ -298,7 +303,8 @@ $g_{r}$ = dimensionless sensitivity function (given below)
 \end{minipage}}
 \end{comment}
 
-\textbf{Reference Sideslip Angle (}$\text{º}$\textbf{): }\textbf{\uline{SSLIP}}\sindex[var]{SSLIP}\index{SSLIP}\\
+\textbf{Reference Sideslip Angle (}$\text{º}$\textbf{):}\hypertarget{SSLIP}{}\textbf{
+}\textbf{\uline{SSLIP}}\sindex[var]{SSLIP}\index{SSLIP}\\
 \emph{The reference sideslip angle used to calculate derived variables}.
 This variable is the reference selected from other measurements of
 sideslip angle\index{sideslip, angle of} in the data set. In most
@@ -313,11 +319,14 @@ angle is needed for other derived calculations (e.g., wind measurements).
 \textbf{}%
 \noindent\begin{minipage}[t]{1\columnwidth}%
 \begin{hangparagraphs}
-\textbf{Wind Vector East Component (m/s): }\textbf{\uline{UI\sindex[var]{UI}\index{UI}}}
+\textbf{Wind Vector East Component (m/s):}\hypertarget{UI}{}\textbf{
+}\textbf{\uline{UI\sindex[var]{UI}\index{UI}}}
 
-\textbf{Wind Vector North Component (m/s): }\textbf{\uline{VI\sindex[var]{VI}\index{VI}}}
+\textbf{Wind Vector North Component (m/s):}\hypertarget{VI}{}\textbf{
+}\textbf{\uline{VI\sindex[var]{VI}\index{VI}}}
 
-\textbf{Wind Vector Vertical Component (m/s): }\textbf{\uline{WI\sindex[var]{WI}\index{WI}}}
+\textbf{Wind Vector Vertical Component (m/s):}\hypertarget{WI}{}\textbf{
+}\textbf{\uline{WI\sindex[var]{WI}\index{WI}}}
 \end{hangparagraphs}
 
 %
@@ -350,9 +359,10 @@ in baroclinic conditions. \\
 \textbf{}%
 \noindent\begin{minipage}[t]{1\columnwidth}%
 \begin{hangparagraphs}
-\textbf{Wind Speed (m/s): }\textbf{\uline{WS}}\textbf{\sindex[var]{WS}\index{WS}}
+\textbf{Wind Speed (m/s):}\hypertarget{WS}{}\textbf{ }\textbf{\uline{WS}}\textbf{\sindex[var]{WS}\index{WS}}
 
-\textbf{Wind Direction (}$\text{º}$\textbf{): }\textbf{\uline{WD}}\sindex[var]{WD}\index{WD}
+\textbf{Wind Direction (}$\text{º}$\textbf{):}\hypertarget{WD}{}\textbf{
+}\textbf{\uline{WD}}\sindex[var]{WD}\index{WD}
 \end{hangparagraphs}
 
 %
@@ -382,9 +392,11 @@ $C_{rd}$\sindex[con]{Crd@$C_{rd}$= conversion factor, radians to degrees (180/$\
 \textbf{}%
 \noindent\begin{minipage}[t]{1\columnwidth}%
 \begin{hangparagraphs}
-\textbf{Wind Vector Longitudinal Component (m/s): }\textbf{\uline{UX\sindex[var]{UX}\index{UX}}}
+\textbf{Wind Vector Longitudinal Component (m/s):}\hypertarget{UX}{}\textbf{
+}\textbf{\uline{UX\sindex[var]{UX}\index{UX}}}
 
-\textbf{Wind Vector Lateral Component (m/s): }\textbf{\uline{VY}}\sindex[var]{VY}\index{VY}
+\textbf{Wind Vector Lateral Component (m/s):}\hypertarget{VY}{}\textbf{
+}\textbf{\uline{VY}}\sindex[var]{VY}\index{VY}
 \end{hangparagraphs}
 
 %
@@ -399,9 +411,11 @@ positive is toward the port (or left) wing.\\
 \textbf{}%
 \noindent\begin{minipage}[t]{1\columnwidth}%
 \begin{hangparagraphs}
-\textbf{GPS-Corrected Wind Vector, East Component (m/s): }\textbf{\uline{UIC\sindex[var]{UIC}\index{UIC}}}
+\textbf{GPS-Corrected Wind Vector, East Component (m/s):}\hypertarget{UIC}{}\textbf{
+}\textbf{\uline{UIC\sindex[var]{UIC}\index{UIC}}}
 
-\textbf{GPS-Corrected Wind Vector, North Component (m/s): }\textbf{\uline{VIC}}\sindex[var]{VIC}\index{VIC}
+\textbf{GPS-Corrected Wind Vector, North Component (m/s):}\hypertarget{VIC}{}\textbf{
+}\textbf{\uline{VIC}}\sindex[var]{VIC}\index{VIC}
 \end{hangparagraphs}
 
 %
@@ -418,7 +432,8 @@ of the IRU-based values. They are considered ``corrected'' from
 the original measurements from the IRU or GPS, as described in section
 \ref{subsec:IRS/GPS}.\\
 
-\textbf{Wind Vector, Vertical Component (m/s): }\textbf{\uline{WIC}}\sindex[var]{WIC}\index{WIC}\\
+\textbf{Wind Vector, Vertical Component (m/s):}\hypertarget{WIC}{}\textbf{
+}\textbf{\uline{WIC}}\sindex[var]{WIC}\index{WIC}\\
 \emph{The component of the wind in the vertical direction. }This is
 the standard calculation of vertical wind\index{wind!vertical}, obtained
 from the difference between the measured vertical component of the
@@ -430,9 +445,11 @@ WP3 in section \ref{sec:INS}. Positive values are toward the zenith.\\
 \textbf{}%
 \noindent\begin{minipage}[t]{1\columnwidth}%
 \begin{hangparagraphs}
-\textbf{GPS-Corrected Wind Direction (}$\text{º}$\textbf{): }\textbf{\uline{WDC}}\sindex[var]{WDC}\index{WDC}
+\textbf{GPS-Corrected Wind Direction (}$^{\circ}$\textbf{):}\hypertarget{WDC}{}\textbf{
+}\textbf{\uline{WDC}}\sindex[var]{WDC}\index{WDC}
 
-\textbf{GPS-Corrected Wind Speed (m/s): }\textbf{\uline{WSC\sindex[var]{WSC}}}\index{WSC}
+\textbf{GPS-Corrected Wind Speed (m/s):}\hypertarget{WSC}{}\textbf{
+}\textbf{\uline{WSC\sindex[var]{WSC}}}\index{WSC}
 \end{hangparagraphs}
 
 %
@@ -448,9 +465,11 @@ they combine the best features of the IRU and GPS measurements.\\
 \textbf{}%
 \noindent\begin{minipage}[t]{1\columnwidth}%
 \begin{hangparagraphs}
-\textbf{GPS-Corrected Wind Vector, Longitudinal Component (m/s): }\textbf{\uline{UXC}}\sindex[var]{UXC}\textbf{\uline{\index{UXC}}}
+\textbf{GPS-Corrected Wind Vector, Longitudinal Component (m/s):}\hypertarget{UXC}{}\textbf{
+}\textbf{\uline{UXC}}\sindex[var]{UXC}\textbf{\uline{\index{UXC}}}
 
-\textbf{GPS-Corrected Wind Vector, Lateral Component (m/s): }\textbf{\uline{VYC}}\sindex[var]{VYC}\index{VYC}
+\textbf{GPS-Corrected Wind Vector, Lateral Component (m/s):}\hypertarget{VYC}{}\textbf{
+}\textbf{\uline{VYC}}\sindex[var]{VYC}\index{VYC}
 \end{hangparagraphs}
 
 %

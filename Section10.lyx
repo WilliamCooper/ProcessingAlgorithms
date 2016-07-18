@@ -257,7 +257,24 @@ Radiometric (Surface or Sky/Cloud-Base) Temperature (
 \begin_inset Formula $^{\circ}C$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{RSTx}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 RSTx
 \series default
@@ -393,7 +410,24 @@ Radiometer Sensor Head Temperature (
 \begin_inset Formula $^{\circ}C$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TRSTx}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 TRSTx
 \series default
@@ -446,7 +480,24 @@ Heimann radiometer
 \begin_layout Hanging
 
 \series bold
-Pyrgeometer Output (V): 
+Pyrgeometer Output (V):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{IRxV}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 IRxV
 \series default
@@ -555,7 +606,24 @@ Pyrgeometer Housing Temperature (
 \begin_inset Formula $^{\circ}$
 \end_inset
 
-C): 
+C):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{IRxHT}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 IRxHT
 \series default
@@ -907,7 +975,24 @@ height "1pt"
 \begin_layout Hanging
 
 \series bold
-Pyranometer Output (V): 
+Pyranometer Output (V):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{VISxV}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 VISxV
 \series default
@@ -1020,7 +1105,24 @@ Pyranometer Housing Temperature (
 \begin_inset Formula $^{\circ}$
 \end_inset
 
-C): 
+C):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{VISxHT}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 VISxHT
 \series default
@@ -1117,7 +1219,24 @@ m
 \begin_inset Formula $^{-2}$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{VISxC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 VISxC
 \series default
@@ -1264,7 +1383,37 @@ Stabilized Platform Angles (
 \begin_inset Formula $^{\circ}$
 \end_inset
 
-): SPxPitch,
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{SPxPitch}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{SPxRoll}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ SPxPitch,
 \series default
 
 \begin_inset Index idx
@@ -1508,7 +1657,24 @@ target "http://www.esrl.noaa.gov/gmd/grad/solcalc/"
 \begin_layout Hanging
 
 \series bold
-Solar Declination Angle (radians): 
+Solar Declination Angle (radians):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{SOLAR}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 SOLDE
 \begin_inset Index var

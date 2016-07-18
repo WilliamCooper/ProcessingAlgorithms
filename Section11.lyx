@@ -98,6 +98,32 @@ Measurements of Liquid Water Content
 Raw Output PMS/CSIRO (King) Liquid Water Content
 \series default
  (W):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PLWC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PLWC1}{}
+\end_layout
+
+\end_inset
+
+
 \series bold
  
 \bar under
@@ -286,6 +312,32 @@ PMS/CSIRO (King) Liquid Water Content
 \end_inset
 
 ):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PLWCC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PLWCC1}{}
+\end_layout
+
+\end_inset
+
+
 \series bold
  
 \bar under
@@ -1336,6 +1388,19 @@ PVM-100 Liquid Water Content
 \end_inset
 
 ):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PLWCG}{}
+\end_layout
+
+\end_inset
+
+
 \series bold
  
 \bar under
@@ -1419,6 +1484,19 @@ name "punch:5-1"
 Rosemount Icing Detector Signal
 \series default
  (V):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{RICE}{}
+\end_layout
+
+\end_inset
+
+
 \series bold
  
 \bar under
@@ -4135,6 +4213,129 @@ name "punch:5-7"
 \end_inset
 
 
+\series default
+\bar default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{AFSSP}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{AS100}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{AF300}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{APCAS}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{A200X}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{A260X}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{A200Y}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{ACDP}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{AUHSAS}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+\bar under
+
 \begin_inset Newline newline
 \end_inset
 
@@ -4469,7 +4670,128 @@ channel
 
 )
 \series bold
-: 
+:
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CFSSP}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CS100}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CF300}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CPCAS}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CCDP}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CUHSAS}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{C200X}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{C260X}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{C200Y}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 CFSSP
 \bar default
@@ -4921,6 +5243,71 @@ Concentration
 \end_inset
 
 ):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONCF}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONC3}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{COMCP}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONCD}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONCU}{}
+\end_layout
+
+\end_inset
+
+
 \series bold
  
 \bar under
@@ -5078,7 +5465,50 @@ L
 \begin_inset Formula $^{-1}$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONCX}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONC6}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONCY}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 CONCX
 \bar default
@@ -5236,6 +5666,110 @@ Mean Diameter
 \end_inset
 
 ):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DBARF}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DBAR3}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DBARP}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DBARX}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DBAR6}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DBARY}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DBARD}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DBARU}{}
+\end_layout
+
+\end_inset
+
+
 \series bold
  
 \bar under
@@ -5562,7 +6096,115 @@ Dispersion
 \series default
 (dimensionless)
 \series bold
-: 
+:
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DISPF}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DISP3}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DISPP}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DISPX}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DISP6}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DISPY}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DISPD}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DISPU}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 DISPF
 \bar default
@@ -5934,6 +6576,71 @@ m
 
 \series default
 ):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PLWCF}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PLWCX}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PLWC6}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PLWCY}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PLWCD}{}
+\end_layout
+
+\end_inset
+
+
 \series bold
  
 \bar under
@@ -6287,7 +6994,24 @@ Radar Reflectivity Factor
 \series default
 (dbZ)
 \series bold
-: 
+:
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DBZ}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 DBZF
 \bar default
@@ -6676,7 +7400,33 @@ Effective Radius
 \begin_inset Formula $\mu$
 \end_inset
 
-m): 
+m):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{REFFD}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{REFFF}{}
+\end_layout
+
+\end_inset
+
+ 
 \series bold
 \bar under
 REFFD
@@ -6843,6 +7593,32 @@ height "1pt"
 FSSP-100 Range 
 \series default
 (dimensionless):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{FRNG}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{FRANGE}{}
+\end_layout
+
+\end_inset
+
+
 \series bold
  
 \bar under
@@ -7359,7 +8135,37 @@ Despite the '1D' nomenclature, the following variables are measured by 2D
 \series default
 (count per time interval)
 \series bold
-: 
+:
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{A1DC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{A1DP}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 A1DC
 \series default
@@ -7453,6 +8259,32 @@ channel
 \end_inset
 
 ):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{C1DC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{C1DP}{}
+\end_layout
+
+\end_inset
+
+
 \series bold
  
 \bar under
@@ -7583,6 +8415,58 @@ EffectiveAreaWidth
 \end_inset
 
 ):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONC1DC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONC1DC100}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONC1DC150}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{CONC1DP}{}
+\end_layout
+
+\end_inset
+
+
 \series bold
  
 \bar under
@@ -7718,6 +8602,19 @@ m in the dimension perpendicular to the direction of flight, where xxx may
 2D Dead Time 
 \series default
 (ms):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DT1DC}{}
+\end_layout
+
+\end_inset
+
+
 \series bold
  
 \bar under
@@ -7783,6 +8680,32 @@ The time in the sample interval during which the data rate exceeded the
 \end_inset
 
 m):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DBAR1DC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DBAR1DP}{}
+\end_layout
+
+\end_inset
+
+
 \series bold
  
 \bar under
@@ -7882,7 +8805,37 @@ reference "eq:dbar1d"
 \begin_layout Hanging
 
 \series bold
-2D Dispersion (dimensionless): 
+2D Dispersion (dimensionless):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DISP1DC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DISP1DP}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 DISP1DC
 \series default
@@ -7980,6 +8933,32 @@ m
 \end_inset
 
 ):
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PLWC1DC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PLWC1DP}{}
+\end_layout
+
+\end_inset
+
+
 \series bold
  
 \bar under
@@ -8080,7 +9059,37 @@ m
 \begin_layout Hanging
 
 \series bold
-2D Radar Reflectivity Factor (dBZ): 
+2D Radar Reflectivity Factor (dBZ):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DBZ1DC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DBZ1DP}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 DBZ1DC
 \series default
@@ -8306,7 +9315,37 @@ nimbus converts micrometer to mm before applying this factor
 \begin_inset Formula $\mu$
 \end_inset
 
-m): 
+m):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{REFF2DC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{REFF2DP}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 REFF2DC
 \series default

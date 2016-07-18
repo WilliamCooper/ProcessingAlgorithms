@@ -59,9 +59,9 @@
   \item ATRF, \hyperpage{86}
   \item ATTACK, \hyperpage{52}
   \item attack, angle of, \hyperpage{51}
-  \item ATX, \hyperpage{39}, \hyperpage{42--44}, \hyperpage{46}, 
-		\hyperpage{48}, \hyperpage{50}, \hyperpage{73}, 
-		\hyperpage{89}
+  \item ATX, \hyperpage{30}, \hyperpage{39}, \hyperpage{42--44}, 
+		\hyperpage{46}, \hyperpage{48}, \hyperpage{50}, 
+		\hyperpage{73}, \hyperpage{89}
   \item ATx, \hyperpage{30}, \hyperpage{50}
   \item ATxD, \hyperpage{30}
   \item ATxH, \hyperpage{30}
@@ -157,7 +157,7 @@
     \subitem ultrafine particles, \hyperpage{71}
     \subitem water vapor, \hyperpage{40}
   \item CONCF, \hyperpage{61}
-  \item CONCH\_UVH, \hyperpage{41}
+  \item CONCH\_UVH, \hyperpage{40}
   \item CONCN, \hyperpage{72, 73}
   \item CONCP, \hyperpage{61}, \hyperpage{74}
   \item CONCU, \hyperpage{61}, \hyperpage{74}
@@ -253,7 +253,7 @@
   \item DP\_x, \hyperpage{35}
   \item DPCRC, \hyperpage{87}
   \item DPx, \hyperpage{35}, \hyperpage{39}
-  \item DPXC, \hyperpage{41}, \hyperpage{89}
+  \item DPXC, \hyperpage{36}, \hyperpage{41}, \hyperpage{89}
   \item DPxC, \hyperpage{36, 37}
   \item dropsonde, \hyperpage{54}
   \item DT1DC, \hyperpage{64}
@@ -389,7 +389,7 @@
   \item housekeeping variables, \hyperpage{59}
   \item humidity, \hyperpage{35}
     \subitem absolute, \hyperpage{42}
-    \subitem relative, \hyperpage{42}
+    \subitem relative, \hyperpage{41}
     \subitem relative to ice, \hyperpage{42}
     \subitem specific, \hyperpage{43}, \hyperpage{51}
   \item hydrometeor detector, \hyperpage{58}
@@ -492,7 +492,7 @@
 
   \item Mach number, \hyperpage{29}, \hyperpage{33}
     \subitem uncorrected, \hyperpage{28}
-  \item MACHX, \hyperpage{52}
+  \item MACHX, \hyperpage{50}, \hyperpage{52}
   \item MACHx, \hyperpage{35}, \hyperpage{50}
   \item measurement
     \subitem derived, \hyperpage{8}
@@ -610,7 +610,7 @@
   \item PSFD, \hyperpage{27}
   \item PSFRD, \hyperpage{27}
   \item PSURF, \hyperpage{29, 30}
-  \item PSX, \hyperpage{31}
+  \item PSX, \hyperpage{27}, \hyperpage{31}
   \item PSx, \hyperpage{27}
   \item PSXC, \hyperpage{27}, \hyperpage{29--31}, \hyperpage{33}, 
 		\hyperpage{35}, \hyperpage{39}, \hyperpage{43, 44}, 
@@ -631,7 +631,7 @@
   \item QCLS, \hyperpage{70}
   \item QCR
     \subitem correction, \hyperpage{29}
-  \item QCX, \hyperpage{31}
+  \item QCX, \hyperpage{29}, \hyperpage{31}
   \item QCx, \hyperpage{29}
   \item QCXC, \hyperpage{29}, \hyperpage{31}, \hyperpage{33}, 
 		\hyperpage{52}
@@ -662,7 +662,7 @@
   \item REFFF, \hyperpage{62}
   \item reflectivity factor, \hyperpage{62}
   \item relative humidity, 
-		\hyperindexformat{\see {humidity, relative}}{42}
+		\hyperindexformat{\see {humidity, relative}}{41}
   \item relative humidity wrt ice, 
 		\hyperindexformat{\see {humidity, relative to ice}}{42}
   \item resets
@@ -672,7 +672,7 @@
   \item RHOLA, \hyperpage{43}
   \item RHOUV, \hyperpage{43}
   \item RHOx, \hyperpage{42}
-  \item RHUM, \hyperpage{42}
+  \item RHUM, \hyperpage{41}
   \item RHUMI, \hyperpage{42}
   \item RICE, \hyperpage{58}
   \item ROLL, \hyperpage{11}
@@ -680,7 +680,7 @@
   \item Rosemount 871F icing probe, \hyperpage{58}
   \item RSTx, \hyperpage{76}
   \item RTHRx, \hyperpage{30}
-  \item RTX, \hyperpage{35}
+  \item RTX, \hyperpage{30}, \hyperpage{35}
   \item RTx, \hyperpage{30, 31}
   \item RTxH, \hyperpage{30}
 

@@ -55,9 +55,6 @@
 \DeclareRobustCommand{\textgreek}[1]{\leavevmode{\greektext #1}}
 \ProvideTextCommand{\~}{LGR}[1]{\char126#1}
 
-\newcommand{\lyxmathsym}[1]{\ifmmode\begingroup\def\b@ld{bold}
-  \text{\ifx\math@version\b@ld\bfseries\fi#1}\endgroup\else#1\fi}
-
 %% Because html converters don't know tabularnewline
 \providecommand{\tabularnewline}{\\}
 
@@ -431,8 +428,36 @@ will lose continuity, however, because then the links can't be re-generated
 by running LyX. 
 \end{enumerate}
 
-\section*{\protect\href{https://drive.google.com/open?id=0B1kIUH45ca5AeG1nY1k2X2d2Z2s}{this URL}List
-of Web Links in this Document:}
+\section*{How to Reference Specific Sections or Pages of this Document:}
+
+\subsection*{Variables}
+
+The document includes named destinations for each variable name, so
+when used in a URL that destination can be reached. This is done differently
+in different browsers or PDF viewers:
+\begin{itemize}
+\item For a web browser like Chrome or Firefox, use the ``nameddest''
+reference; e.g., for the discussion of variable ATX, use\\
+\texttt{firefox http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf\#nameddest=ATX}
+\item For a pdf viewer like evince, use this syntax:\\
+\texttt{evince -n ATX http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf}
+\end{itemize}
+
+\subsection*{Page Numbers}
+
+To reference a specific page in the document, use a web reference
+like this:\\
+\texttt{ProcessingAlgorithms.pdf\#page=44}
+
+\subsection*{Adding New Targets}
+
+When a new variable is added, a new anchor point can be added by inserting,
+in LaTeX mode, \texttt{\textbackslash{}hypertarget\{LAT\}\{\} }at
+the appropriate point in the LyX document. In addition, when a new
+variable is added, entries should be made in the index items and the
+variable-names list, following the pattern used for existing variables.
+
+\section*{List of Web Links in this Document:}
 
 \emph{The links at the top, to Google Drive locations, should be changed
 once the linked files are moved to EOL web space.}

@@ -420,9 +420,43 @@ gust probe!858AJ
 \begin_layout Hanging
 
 \series bold
-Mach Number (dimensionless): 
+Mach Number (dimensionless):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{MACHx}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{MACHX}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 MACHx
+\bar default
+, 
+\bar under
+MACHX
 \bar default
 
 \begin_inset Index var
@@ -444,6 +478,26 @@ status open
 
 \begin_layout Plain Layout
 MACHx
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+MACHX
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+MACHX
 \end_layout
 
 \end_inset
@@ -504,7 +558,50 @@ XMACH2
 \begin_layout Hanging
 
 \series bold
-Aircraft True Airspeed (m/s): 
+Aircraft True Airspeed (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TASx}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TASxD}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TASX}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 TASx
 \series default
@@ -813,7 +910,24 @@ note that there is complex dependence here on choices for QCXC, TTX, and
 \begin_layout Hanging
 
 \series bold
-Aircraft True Airspeed (Humidity Corrected) (m/s): 
+Aircraft True Airspeed (Humidity Corrected) (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{TASHC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 TASHC
 \series default
@@ -1005,7 +1119,24 @@ TASX was TASx in B9
 \begin_layout Hanging
 
 \series bold
-Attack Angle Differential Pressure (mb): 
+Attack Angle Differential Pressure (mb):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{ADIFR}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 ADIFR
 \series default
@@ -1107,7 +1238,24 @@ gust probe!Rosemount 858AJ
 \begin_layout Hanging
 
 \series bold
-Sideslip Angle Differential Pressure (mb): 
+Sideslip Angle Differential Pressure (mb):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{BDIFR}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 BDIFR
 \series default
@@ -1194,7 +1342,24 @@ Attack Angle, Radome (
 
 
 \series bold
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{AKRD}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 AKRD
 \series default
@@ -2158,7 +2323,24 @@ Reference Sideslip Angle (
 
 
 \series bold
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{SSLIP}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 SSLIP
 \series default
@@ -2252,7 +2434,24 @@ status open
 \begin_layout Hanging
 
 \series bold
-Wind Vector East Component (m/s): 
+Wind Vector East Component (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{UI}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 UI
 \begin_inset Index var
@@ -2286,7 +2485,24 @@ UI
 \begin_layout Hanging
 
 \series bold
-Wind Vector North Component (m/s): 
+Wind Vector North Component (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{VI}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 VI
 \begin_inset Index var
@@ -2320,7 +2536,24 @@ VI
 \begin_layout Hanging
 
 \series bold
-Wind Vector Vertical Component (m/s): 
+Wind Vector Vertical Component (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{WI}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 WI
 \begin_inset Index var
@@ -2507,7 +2740,24 @@ status open
 \begin_layout Hanging
 
 \series bold
-Wind Speed (m/s): 
+Wind Speed (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{WS}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 WS
 \bar default
@@ -2549,7 +2799,24 @@ Wind Direction (
 
 
 \series bold
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{WD}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 WD
 \series default
@@ -2762,7 +3029,24 @@ status open
 \begin_layout Hanging
 
 \series bold
-Wind Vector Longitudinal Component (m/s): 
+Wind Vector Longitudinal Component (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{UX}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 UX
 \begin_inset Index var
@@ -2796,7 +3080,24 @@ UX
 \begin_layout Hanging
 
 \series bold
-Wind Vector Lateral Component (m/s): 
+Wind Vector Lateral Component (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{VY}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 VY
 \series default
@@ -2906,7 +3207,24 @@ status open
 \begin_layout Hanging
 
 \series bold
-GPS-Corrected Wind Vector, East Component (m/s): 
+GPS-Corrected Wind Vector, East Component (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{UIC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 UIC
 \begin_inset Index var
@@ -2940,7 +3258,24 @@ UIC
 \begin_layout Hanging
 
 \series bold
-GPS-Corrected Wind Vector, North Component (m/s): 
+GPS-Corrected Wind Vector, North Component (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{VIC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 VIC
 \series default
@@ -3049,7 +3384,24 @@ reference "subsec:IRS/GPS"
 \begin_layout Hanging
 
 \series bold
-Wind Vector, Vertical Component (m/s): 
+Wind Vector, Vertical Component (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{WIC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 WIC
 \series default
@@ -3192,12 +3544,29 @@ status open
 GPS-Corrected Wind Direction (
 \series default
 
-\begin_inset Formula $\text{º}$
+\begin_inset Formula $^{\circ}$
 \end_inset
 
 
 \series bold
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{WDC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 WDC
 \series default
@@ -3228,7 +3597,24 @@ WDC
 \begin_layout Hanging
 
 \series bold
-GPS-Corrected Wind Speed (m/s): 
+GPS-Corrected Wind Speed (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{WSC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 WSC
 \begin_inset Index var
@@ -3353,7 +3739,24 @@ status open
 \begin_layout Hanging
 
 \series bold
-GPS-Corrected Wind Vector, Longitudinal Component (m/s): 
+GPS-Corrected Wind Vector, Longitudinal Component (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{UXC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 UXC
 \series default
@@ -3390,7 +3793,24 @@ UXC
 \begin_layout Hanging
 
 \series bold
-GPS-Corrected Wind Vector, Lateral Component (m/s): 
+GPS-Corrected Wind Vector, Lateral Component (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{VYC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 VYC
 \series default

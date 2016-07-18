@@ -806,7 +806,7 @@ ncdump -h file.nc
 \begin_inset Quotes erd
 \end_inset
 
-..
+.
 \end_layout
 
 \begin_layout Standard
@@ -3592,6 +3592,19 @@ time!variable Time
 \begin_inset CommandInset label
 LatexCommand label
 name "han:Time-(s):-TimeThis-1"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{Time}{}
+\end_layout
 
 \end_inset
 

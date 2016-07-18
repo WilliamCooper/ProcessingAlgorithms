@@ -60,12 +60,14 @@
 \indexentry{PSx@\textbf  {PSx}|hyperpage}{27}
 \indexentry{PSxC|hyperpage}{27}
 \indexentry{PS_A@PS\_A|hyperpage}{27}
+\indexentry{PSX|hyperpage}{27}
 \indexentry{PSXC|hyperpage}{27}
 \indexentry{PSFD|hyperpage}{27}
 \indexentry{PSFRD|hyperpage}{27}
 \indexentry{QCx|hyperpage}{29}
 \indexentry{QCxC|hyperpage}{29}
 \indexentry{QCXC|hyperpage}{29}
+\indexentry{QCX|hyperpage}{29}
 \indexentry{DVALUE|hyperpage}{29}
 \indexentry{PSDPx|hyperpage}{29}
 \indexentry{CAVP_x@CAVP\_x|hyperpage}{29}
@@ -74,12 +76,13 @@
 \indexentry{RTx|hyperpage}{30}
 \indexentry{RTxH|hyperpage}{30}
 \indexentry{RTHRx|hyperpage}{30}
+\indexentry{RTX|hyperpage}{30}
 \indexentry{TTx|hyperpage}{30}
 \indexentry{TTRF|hyperpage}{30}
 \indexentry{TTKP|hyperpage}{30}
 \indexentry{ATx|hyperpage}{30}
+\indexentry{ATX|hyperpage}{30}
 \indexentry{ATxH|hyperpage}{30}
-\indexentry{ATxD|hyperpage}{30}
 \indexentry{TTx|hyperpage}{30}
 \indexentry{MACH = Mach number|hyperpage}{35}
 \indexentry{AT_ITR@AT\_ITR|hyperpage}{35}
@@ -88,6 +91,7 @@
 \indexentry{DP_x@DP\_x|hyperpage}{35}
 \indexentry{DPx|hyperpage}{35}
 \indexentry{DPxC|hyperpage}{36}
+\indexentry{DPXC|hyperpage}{36}
 \indexentry{DP_VXL@DP\_VXL|hyperpage}{39}
 \indexentry{FP_CR2@FP\_CR2|hyperpage}{40}
 \indexentry{MIRRORT_CR2@MIRRORT\_CR2|hyperpage}{40}
@@ -96,12 +100,12 @@
 \indexentry{RAWCONC_VXL@RAWCONC\_VXL|hyperpage}{40}
 \indexentry{CONCV_VXL@CONCV\_VXL|hyperpage}{40}
 \indexentry{XSIG_UVH@XSIG\_UVH|hyperpage}{40}
-\indexentry{CONCH_UVH@CONCH\_UVH|hyperpage}{41}
+\indexentry{CONCH_UVH@CONCH\_UVH|hyperpage}{40}
 \indexentry{EWx|hyperpage}{41}
 \indexentry{EWX|hyperpage}{41}
 \indexentry{EW_UVH@EW\_UVH|hyperpage}{41}
 \indexentry{EDPC|hyperpage}{41}
-\indexentry{RHUM|hyperpage}{42}
+\indexentry{RHUM|hyperpage}{41}
 \indexentry{RHUMI|hyperpage}{42}
 \indexentry{RHOx|hyperpage}{42}
 \indexentry{RHOUV|hyperpage}{43}
@@ -121,6 +125,7 @@
 \indexentry{THETAV|hyperpage}{46}
 \indexentry{THETAQ|hyperpage}{47}
 \indexentry{MACHx|hyperpage}{50}
+\indexentry{MACHX|hyperpage}{50}
 \indexentry{XMACH2|hyperpage}{50}
 \indexentry{TASxD|hyperpage}{50}
 \indexentry{TASHC|hyperpage}{50}

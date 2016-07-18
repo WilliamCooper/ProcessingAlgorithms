@@ -12,7 +12,8 @@ the approximate diameter range from 0.010\textendash 3~\textgreek{m}m.
 \\
 
 \begin{hangparagraphs}
-\textbf{CN Counter Inlet Pressure (hPa): }\textbf{\uline{PCN}}\sindex[var]{PCN}\index{PCN}\\
+\textbf{CN Counter Inlet Pressure (hPa):}\hypertarget{PCN}{}\textbf{
+}\textbf{\uline{PCN}}\sindex[var]{PCN}\index{PCN}\\
 \emph{The absolute pressure inside the inlet tube of the instrument.}
 It\index{pressure!inlet} as measured by a Heise Model 623 pressure
 sensor for the 3760A, and internally by the 3786 WCN.. The measurement
@@ -20,7 +21,8 @@ is used to convert the measured mass flow (FCN or XICN) to volumetric
 flow and to convert measured particle concentration to equivalent
 ambient concentration.
 
-\textbf{CN Counter Inlet Temperature ($^{\circ}C$): }\textbf{\uline{CNTEMP}}\sindex[var]{CNTEMP}\index{CNTEMP}\uline{,}
+\textbf{CN Counter Inlet Temperature ($^{\circ}$C):}\hypertarget{CNTEMP}{}\hypertarget{TEMP1}{}\hypertarget{TEMP2}{}\textbf{
+}\textbf{\uline{CNTEMP}}\sindex[var]{CNTEMP}\index{CNTEMP}\uline{,}
 \textbf{\uline{TEMP1}}\sindex[var]{TEMP1}\textbf{\index{TEMP1},
 }\textbf{\uline{TEMP2}}\sindex[var]{TEMP2}\textbf{\index{TEMP2}}\\
 \emph{The sample air tempeerature measured at the intake of the 3760A
@@ -31,8 +33,10 @@ concentration.\index{concentration!ambient}
 
 \textbf{}%
 \noindent\begin{minipage}[t]{1\columnwidth}%
-\textbf{Raw CN Counter Sample Flow Rate (SLPM): }\textbf{\uline{FCN}}\sindex[var]{FCN}\index{FCN}\\
-\textbf{Corrected CN Counter Sample Flow Rate (VLPM): }\textbf{\uline{FCNC}}\sindex[var]{FCNC}\textbf{\uline{\index{FCNC}}}%
+\textbf{Raw CN Counter Sample Flow Rate (SLPM):}\hypertarget{FCN}{}\textbf{
+}\textbf{\uline{FCN}}\sindex[var]{FCN}\index{FCN}\\
+\textbf{Corrected CN Counter Sample Flow Rate (VLPM):}\hypertarget{FCNC}{}\textbf{
+}\textbf{\uline{FCNC}}\sindex[var]{FCNC}\textbf{\uline{\index{FCNC}}}%
 \end{minipage}\\
 \emph{The raw and corrected sample flows in the CN counters} are treated
 differently for the two models of CN counter. In the 3760A, FCN is
@@ -63,8 +67,10 @@ directly into the variable FCNC in units of VLPM.\\
 \vfill\eject
 
 \noindent\begin{minipage}[t]{1\columnwidth}%
-\textbf{Raw CN Isokinetic Side Flow Rate (SLPM): }\textbf{\uline{XICN}}\sindex[var]{XICN}\index{XICN}\\
-\textbf{Corrected CN Isokinetic Side Flow Rate (VLPM): }\textbf{\uline{XICNC}}\sindex[var]{XICNC}\textbf{\uline{\index{XICNC}}}%
+\textbf{Raw CN Isokinetic Side Flow Rate (SLPM):}\hypertarget{XICN}{}\textbf{
+}\textbf{\uline{XICN}}\sindex[var]{XICN}\index{XICN}\\
+\textbf{Corrected CN Isokinetic Side Flow Rate (VLPM):}\hypertarget{XICNC}{}\textbf{
+}\textbf{\uline{XICNC}}\sindex[var]{XICNC}\textbf{\uline{\index{XICNC}}}%
 \end{minipage}\\
 \emph{XICN is the raw isokinetic side flow rate in standard liters
 per minute (SLPM) measured with a mass flow meter, and XICNC is that
@@ -89,7 +95,8 @@ $T_{0}$ = 273.15~K\\
 %
 \end{minipage}}\\
 
-\textbf{CN Counter Output (counts per sample interval); }\textbf{\uline{CNTS}}\sindex[var]{CNTS}\index{CNTS}\\
+\textbf{CN Counter Output (counts per sample interval):}\hypertarget{CNTS}{}\textbf{
+}\textbf{\uline{CNTS}}\sindex[var]{CNTS}\index{CNTS}\\
 \emph{The raw output count from the condensation nucleus counter.}
 For the 3760A condensation nucleus counter, the project-dependent
 sample rate may be chosen in the range from 1\textendash 50~Hz but
@@ -98,7 +105,8 @@ by a selected power of two to keep the counter from overflowing; see
 project documentation. The 3786 WCN may be programmed to report data
 at intervals from 0.1\textendash 3600~s.\label{punch:7-1}
 
-\textbf{Condensation Nucleus (CN) Concentration (cm$^{-3}$): }\textbf{\uline{CONCN}}\sindex[var]{CONCN}\index{CONCN}\\
+\textbf{Condensation Nucleus (CN) Concentration (cm$^{-3}$):}\hypertarget{CONCN}{}\textbf{
+}\textbf{\uline{CONCN}}\sindex[var]{CONCN}\index{CONCN}\\
 \emph{The number concentration of condensation nuclei} in units of
 particles per cm$^{3}$ \emph{in the ambient air} at flight level.\emph{
 }The calculation leading to CONCN\index{concentration!CN} includes
@@ -201,16 +209,17 @@ these instruments are described in this section, while additional
 variables are covered along with other 1-D probes in Sect.~\ref{subsec:1DProbes},
 ``Sensors of individual Particles (1-D Probes).''
 \begin{hangparagraphs}
-\textbf{UHSAS Absolute Pressure in Canister (hPa): }\textbf{\uline{UPRESS}}\index{UPRESS}\sindex[var]{UPRESS}\\
+\textbf{UHSAS Absolute Pressure in Canister (hPa):}\hypertarget{UPRESS}{}\textbf{
+}\textbf{\uline{UPRESS}}\index{UPRESS}\sindex[var]{UPRESS}\\
 The pressure internal to the UHSAS instrument. This is an analog measurement
 with calibration coefficients as recorded in the attributes for the
 variable.\label{punch:7-2}
 
 \noindent\begin{minipage}[t]{1\columnwidth}%
-\textbf{Raw Sample Flow Rate (cm$^{3}$s$^{-1}$): }\textbf{\uline{USMPFLW}}\textbf{,
-}\textbf{\uline{PFLW}}\index{PFLW}\index{USMPFLW}\sindex[var]{PFLW}\sindex[var]{USMPFLW}\\
-\textbf{Corrected Sample Flow Rate (cm$^{3}$s$^{-1}$): }\textbf{\uline{USFLWC}}\textbf{,
-}\textbf{\uline{PFLWC}}\index{PFLWC}\index{USFLWC}\sindex[var]{PFLWC}\sindex[var]{USFLWC}%
+\textbf{Raw Sample Flow Rate (cm$^{3}$s$^{-1}$):}\hypertarget{USMPFLW}{}\hypertarget{PFLW}{}\textbf{
+}\textbf{\uline{USMPFLW}}\textbf{, }\textbf{\uline{PFLW}}\index{PFLW}\index{USMPFLW}\sindex[var]{PFLW}\sindex[var]{USMPFLW}\\
+\textbf{Corrected Sample Flow Rate (cm$^{3}$s$^{-1}$):}\hypertarget{USFLWC}{}\hypertarget{PFLWC}{}\textbf{
+}\textbf{\uline{USFLWC}}\textbf{, }\textbf{\uline{PFLWC}}\index{PFLWC}\index{USFLWC}\sindex[var]{PFLWC}\sindex[var]{USFLWC}%
 \end{minipage}\\
 Unlike the other 1-d probes, both UHSAS and PCASP have internal pumps
 so their sample volumes are determined from the measured flows and
@@ -243,7 +252,7 @@ $T_{0}$ = 273.15~K\\
 \end{minipage}} \\
 \\
 
-\textbf{Total particle counts per sample interval, UHSAS or PCASP:
+\textbf{Total particle counts per sample interval, UHSAS or PCASP:}\hypertarget{TCNTL}{}\hypertarget{TCHTP}{}\textbf{
 }\textbf{\uline{TCNTU}}\textbf{, }\textbf{\uline{TCNTP}}\index{TCNTP}\index{TCNTU}\sindex[var]{TCNTP}\sindex[var]{TCNTU}\\
 The total particle counts in each sample interval for, respectively,
 the UHSAS and PCASP instruments. These values are the sum of counts
@@ -251,7 +260,7 @@ in all cells of the spectrometers, as represented in the vector variables
 CUHSAS or CS200. See the discussion of these variables in Sect.~\ref{subsec:1DProbes},
 \vpageref{CUHSAS}.
 
-\textbf{Concentration, sum over all channels (cm$^{3}$s$^{-1}$):
+\textbf{Concentration, sum over all channels (cm$^{3}$s$^{-1}$):}\hypertarget{CONCU}{}\hypertarget{CONCP}{}\hypertarget{CONCU100}{}\hypertarget{CONCU500}{}\textbf{
 }\textbf{\uline{}}\\
 \textbf{\uline{CONCU}}\textbf{, }\textbf{\uline{CONCP}}\textbf{,
 }\textbf{\uline{CONCU100}}\textbf{, }\textbf{\uline{CONCU500}}\index{CONCU}\index{CONCP}\index{CONCU100}\index{CONCU500}\sindex[var]{CONCU}\sindex[var]{CONCP}\sindex[var]{CONCU100}\sindex[var]{CONCU500}\\

@@ -506,6 +506,19 @@ LAT
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{LAT}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -587,6 +600,25 @@ LON
 \end_inset
 
 
+\series default
+\bar default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{LON}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+\bar under
+
 \begin_inset Newline newline
 \end_inset
 
@@ -641,6 +673,19 @@ status open
 
 \begin_layout Plain Layout
 THDG
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{THDG}{}
 \end_layout
 
 \end_inset
@@ -773,6 +818,19 @@ INS!specifications
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PITCH}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -843,6 +901,19 @@ ROLL
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{ROLL}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -908,6 +979,19 @@ status open
 
 \begin_layout Plain Layout
 ACINS
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{ACINS}{}
 \end_layout
 
 \end_inset
@@ -1006,6 +1090,19 @@ status open
 
 \begin_layout Plain Layout
 VSPD
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{VSPD}{}
 \end_layout
 
 \end_inset
@@ -1737,6 +1834,19 @@ ALT
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{ALT}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -1804,6 +1914,19 @@ status open
 
 \begin_layout Plain Layout
 GSF
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GSF}{}
 \end_layout
 
 \end_inset
@@ -1879,6 +2002,19 @@ VEW
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{VEW}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -1915,6 +2051,19 @@ status open
 
 \begin_layout Plain Layout
 VNS
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{VNS}{}
 \end_layout
 
 \end_inset
@@ -1984,6 +2133,32 @@ status open
 
 \begin_layout Plain Layout
 DNI
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DEI}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{DNI}{}
 \end_layout
 
 \end_inset
@@ -2202,6 +2377,32 @@ FXDIST
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{FXAZIM}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{FXDIST}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -2294,6 +2495,19 @@ BLATA
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{BLATA}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -2344,6 +2558,19 @@ BLONA
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{BLONA}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -2389,6 +2616,19 @@ status open
 
 \begin_layout Plain Layout
 BNORMA
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{BNORMA}{}
 \end_layout
 
 \end_inset
@@ -2448,6 +2688,19 @@ BPITCHR
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{BPITCHR}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -2498,6 +2751,19 @@ BROLLR
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{BROLLR}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -2543,6 +2809,19 @@ status open
 
 \begin_layout Plain Layout
 BYAWR
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{BYAWR}{}
 \end_layout
 
 \end_inset
@@ -2989,6 +3268,19 @@ GLAT
 \series default
 \bar default
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GGLAT}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -3102,6 +3394,19 @@ GLON
 \series default
 \bar default
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GGLON}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -3196,6 +3501,19 @@ GSF_G
 
 \series default
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GGSPD}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -3269,6 +3587,19 @@ status open
 
 \begin_layout Plain Layout
 VEW_G
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GGVEW}{}
 \end_layout
 
 \end_inset
@@ -3395,6 +3726,19 @@ VNS_G
 
 \bar default
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GGVNS}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -3464,7 +3808,24 @@ m for the GV,
 \begin_layout Hanging
 
 \series bold
-GPS-Computed Aircraft Vertical Velocity (m/s): 
+GPS-Computed Aircraft Vertical Velocity (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GGVSPD}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 GGVSPD, VSPD_G
 \begin_inset Index var
@@ -3710,6 +4071,19 @@ GALT_A
 \series default
 \bar default
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GGALT}{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -3765,7 +4139,24 @@ GPS Aircraft Track Angle (
 \begin_inset Formula $\text{º}$
 \end_inset
 
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GGTRK}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 GGTRK
 \begin_inset Index var
@@ -3842,7 +4233,24 @@ ystem GPS (TKAT_G)
 \begin_layout Hanging
 
 \series bold
-GPS Height of the Geoid (m): 
+GPS Height of the Geoid (m):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GGOIDHT}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 GGEOIDHT
 \begin_inset Index var
@@ -3892,7 +4300,24 @@ name "punch3.4"
 \begin_layout Hanging
 
 \series bold
-GPS Satellites Tracked: 
+GPS Satellites Tracked:
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GGNSAT}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 GGNSAT
 \bar default
@@ -3933,7 +4358,24 @@ The number of satellites tracked by a GPS unit.
 \begin_layout Hanging
 
 \series bold
-GPS Mode: 
+GPS Mode:
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GGWUAL}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 GGQUAL
 \series default
@@ -4118,7 +4560,24 @@ Invalid
 \begin_layout Hanging
 
 \series bold
-GPS Mode: 
+GPS Mode:
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GMODE}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 GMODE
 \begin_inset Index var
@@ -4179,7 +4638,24 @@ name "punch3.5"
 \begin_layout Hanging
 
 \series bold
-GPS Status: 
+GPS Status:
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{GGSTATUS}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 GGSTATUS
 \series default
@@ -4306,7 +4782,24 @@ Other Measurements of Aircraft Altitude
 \begin_layout Hanging
 
 \series bold
-Geometric Radio Altitude (m): 
+Geometric Radio Altitude (m):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{HGM}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 HGM
 \series default
@@ -4373,7 +4866,24 @@ altimeter!radar
 \begin_layout Hanging
 
 \series bold
-Geometric Radar Altitude (Extended Range) (APN-159) (m): 
+Geometric Radar Altitude (Extended Range) (APN-159) (m):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{HGME}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 
 \begin_inset CommandInset label
@@ -4446,7 +4956,24 @@ APN-159
 \begin_layout Hanging
 
 \series bold
-Geometric Radar Altitude (Extended Range) (APN-232) (m): 
+Geometric Radar Altitude (Extended Range) (APN-232) (m):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{HGM232}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 HGM232
 \series default
@@ -4485,7 +5012,24 @@ Altitude above the ground
 \begin_layout Hanging
 
 \series bold
-Pressure-Damped Inertial Altitude (m): 
+Pressure-Damped Inertial Altitude (m):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{HI3}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 HI3
 \series default
@@ -4540,7 +5084,24 @@ reference "WP3 algorithm"
 \begin_layout Hanging
 
 \series bold
-ISA Pressure Altitude (m): 
+ISA Pressure Altitude (m):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{PALT}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 PALT
 \series default
@@ -5499,7 +6060,37 @@ In other words, if there is a continuous GPS dropout that lasts one-half
 \begin_layout Hanging
 
 \series bold
-GPS-Corrected Inertial Ground Speed Vector, (m/s): 
+GPS-Corrected Inertial Ground Speed Vector, (m/s):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{VEWC}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{VNSC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 VEWC
 \bar default
@@ -6393,7 +6984,37 @@ GPS-Corrected Inertial Latitude and Longitude (
 
 
 \series bold
-): 
+):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{}{LATC}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{LONC}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
 \bar under
 LATC
 \bar default
