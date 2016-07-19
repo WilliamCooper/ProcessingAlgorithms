@@ -157,7 +157,7 @@
     \subitem ultrafine particles, \hyperpage{71}
     \subitem water vapor, \hyperpage{40}
   \item CONCF, \hyperpage{61}
-  \item CONCH\_UVH, \hyperpage{40}
+  \item CONCH\_UVH, \hyperpage{41}
   \item CONCN, \hyperpage{72, 73}
   \item CONCP, \hyperpage{61}, \hyperpage{74}
   \item CONCU, \hyperpage{61}, \hyperpage{74}
@@ -389,7 +389,7 @@
   \item housekeeping variables, \hyperpage{59}
   \item humidity, \hyperpage{35}
     \subitem absolute, \hyperpage{42}
-    \subitem relative, \hyperpage{41}
+    \subitem relative, \hyperpage{42}
     \subitem relative to ice, \hyperpage{42}
     \subitem specific, \hyperpage{43}, \hyperpage{51}
   \item hydrometeor detector, \hyperpage{58}
@@ -662,7 +662,7 @@
   \item REFFF, \hyperpage{62}
   \item reflectivity factor, \hyperpage{62}
   \item relative humidity, 
-		\hyperindexformat{\see {humidity, relative}}{41}
+		\hyperindexformat{\see {humidity, relative}}{42}
   \item relative humidity wrt ice, 
 		\hyperindexformat{\see {humidity, relative to ice}}{42}
   \item resets
@@ -672,7 +672,7 @@
   \item RHOLA, \hyperpage{43}
   \item RHOUV, \hyperpage{43}
   \item RHOx, \hyperpage{42}
-  \item RHUM, \hyperpage{41}
+  \item RHUM, \hyperpage{42}
   \item RHUMI, \hyperpage{42}
   \item RICE, \hyperpage{58}
   \item ROLL, \hyperpage{11}

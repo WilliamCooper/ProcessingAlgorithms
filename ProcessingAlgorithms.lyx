@@ -20,6 +20,10 @@
 \marginparsep 0.3 cm
 \marginparwidth 2 cm 
 \pagenumbering{roman}
+% use this to make target one line higher
+\makeatletter
+ \newcommand{\nop}[1]{\Hy@raisedlink{\hypertarget{#1}{}}}
+\makeatother
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -3085,6 +3089,109 @@ For a pdf viewer like evince, use this syntax:
 evince -n ATX http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf
 \end_layout
 
+\begin_layout Standard
+Most variable names can be used in these URL modifiers.
+ Here is a list of available targets by section in the report:
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Section 1:
+\bar default
+ Time
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Section 2:
+\bar default
+ [none]
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Section 3:
+\bar default
+ ACINS ALT BLATA BLONA BNORMA BPITCHR BROLLR BYAWR DEI DNI FXAZIM FXDIST
+ GGALT GGLAT GGLON GGNSAT GGOIDHT GGSPD GGSTATUS GGTRK GGVEW GGVNS GGVSPD
+ GGWUAL GMODE GSF HGM HGM232 HGME HI3 LAT LATC LON LONC PALT PITCH ROLL
+ THDG VEW VEWC VNS VNSC VSPD 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Section 4:
+\bar default
+ ADIFR AKRD AT_ITR ATx ATX ATxD ATxJ BDIFR CAVP_x CONCH_UVH CONCV_VXL DP_CR2C
+ DP_VXL DPx DP_x DPxC DPXC DVALUE EDPC EW_UHV EWx EWX FP_CR2 MACHx MACHX
+ MIRRORT_CR2 MIRRTMP_DPX MR MRCR MRLA MRLH MRVCL OAT PCAB PS_A PSDPx PSFD
+ PSFRD PSURF PSx PSX PSxC PSXC QCx QCX QCxC QCXC RAWCONC_VXL RHOx RHUM RHUMI
+ RTHRx RTx RTX RTxH SPHUM SSLIP TASHC TASx TASX TASxD THETA THETAE THETAP
+ THETAQ THETAV TVIR UI UIC UX UXC VI VIC VY VYC WD WDC WI WIC WS WSC XSIGV_UHV
+ 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Section 5:
+\bar default
+ A1DC A1DP A200X A200Y A260X ACDP AF300 AFSSP APCAS AS100 AUHSAS C1DC C1DP
+ C200X C200Y C260X CCDP CF300 CFSSP COMCP CONC1DC CONC1DC100 CONC1DC150
+ CONC1DP CONC3 CONC6 CONCD CONCF CONCU CONCX CONCY CPCAS CS100 CUHSAS DBAR1DC
+ DBAR1DP DBAR3 DBAR6 DBARD DBARF DBARP DBARU DBARX DBARY DBZ DBZ1DC DBZ1DP
+ DISP1DC DISP1DP DISP3 DISP6 DISPD DISPF DISPP DISPU DISPX DISPY DT1DC FRANGE
+ FRNG PLWC1 PLWC1DC PLWC1DP PLWC6 PLWCC PLWCC1 PLWCD PLWCF PLWCG PLWCX PLWCY
+ REFF2DC REFF2DP REFFD REFFF RICE 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Section 6:
+\bar default
+ CO2_PIC COMR_AL CORAW_AL FO3_ACD FO3_CL O3MR_CL TEO3 TEO3C TEO3P TEP TET
+ XFO3FNO XFO3FS XFO3P XNCLF XNMBT XNO XNOCAL XNOCF XNOSF XNOY XNOYP XNOZA
+ XNSAF XNST XNYCAL XNZAF XO3 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Section 7:
+\bar default
+ CNTEMP CNTS CONCN CONCP CONCU CONCU100 CONCU500 FCN FCNC PCN PFLW PFLWC
+ TCHTP TCNTL TEMP1 TEMP2 UPRESS USFLWC USMPFLW XICN XICNC 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Section 8:
+\bar default
+ IRxHT IRxV RSTx SPxPitch SPxRoll TRSTx VISxC VISxHT VISxV 
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Section 9:
+\bar default
+ [none]
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Section 10:
+\bar default
+ OBSOLETE
+\end_layout
+
 \begin_layout Subsection*
 Page Numbers
 \end_layout
@@ -3099,6 +3206,27 @@ To reference a specific page in the document, use a web reference like this:
 ProcessingAlgorithms.pdf#page=44
 \end_layout
 
+\begin_layout Standard
+In evince, this syntax will work, or the page number can be specified in
+ this way:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+evince -p 115 ProcessingAlgorithms.pdf
+\end_layout
+
+\begin_layout Subsection*
+Sections and Subsections
+\end_layout
+
+\begin_layout Standard
+Targets have not been provided for other parts of the document, but the
+ above method of referencing pages can be used to link to specific sections
+ and other components of the document.
+\end_layout
+
 \begin_layout Subsection*
 Adding New Targets
 \end_layout
@@ -3109,12 +3237,18 @@ When a new variable is added, a new anchor point can be added by inserting,
 \family typewriter
 
 \backslash
-hypertarget{LAT}{} 
+nop{LAT} 
 \family default
 at the appropriate point in the LyX document.
- In addition, when a new variable is added, entries should be made in the
- index items and the variable-names list, following the pattern used for
- existing variables.
+ (
+\backslash
+nop has been defined to use 
+\backslash
+hypertarget but displace the reference upward one line.) In addition, when
+ a new variable is added, entries should be made in the index items and
+ the variable-names list, following the pattern used for existing variables,
+ and if appropriate any new symbols used in discussing the algorithm should
+ be added to the similar symbols list.
 \end_layout
 
 \begin_layout Section*

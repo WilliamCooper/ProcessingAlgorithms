@@ -117,6 +117,10 @@
 \marginparsep 0.3 cm
 \marginparwidth 2 cm 
 \pagenumbering{roman}
+% use this to make target one line higher
+\makeatletter
+ \newcommand{\nop}[1]{\Hy@raisedlink{\hypertarget{#1}{}}}
+\makeatother
 
 \AtBeginDocument{
   \def\labelitemii{\(\circ\)}
@@ -442,6 +446,50 @@ reference; e.g., for the discussion of variable ATX, use\\
 \item For a pdf viewer like evince, use this syntax:\\
 \texttt{evince -n ATX http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf}
 \end{itemize}
+Most variable names can be used in these URL modifiers. Here is a
+list of available targets by section in the report:
+
+\uline{Section 1:} Time
+
+\uline{Section 2:} {[}none{]}
+
+\uline{Section 3:} ACINS ALT BLATA BLONA BNORMA BPITCHR BROLLR
+BYAWR DEI DNI FXAZIM FXDIST GGALT GGLAT GGLON GGNSAT GGOIDHT GGSPD
+GGSTATUS GGTRK GGVEW GGVNS GGVSPD GGWUAL GMODE GSF HGM HGM232 HGME
+HI3 LAT LATC LON LONC PALT PITCH ROLL THDG VEW VEWC VNS VNSC VSPD 
+
+\uline{Section 4:} ADIFR AKRD AT\_ITR ATx ATX ATxD ATxJ BDIFR CAVP\_x
+CONCH\_UVH CONCV\_VXL DP\_CR2C DP\_VXL DPx DP\_x DPxC DPXC DVALUE
+EDPC EW\_UHV EWx EWX FP\_CR2 MACHx MACHX MIRRORT\_CR2 MIRRTMP\_DPX
+MR MRCR MRLA MRLH MRVCL OAT PCAB PS\_A PSDPx PSFD PSFRD PSURF PSx
+PSX PSxC PSXC QCx QCX QCxC QCXC RAWCONC\_VXL RHOx RHUM RHUMI RTHRx
+RTx RTX RTxH SPHUM SSLIP TASHC TASx TASX TASxD THETA THETAE THETAP
+THETAQ THETAV TVIR UI UIC UX UXC VI VIC VY VYC WD WDC WI WIC WS WSC
+XSIGV\_UHV 
+
+\uline{Section 5:} A1DC A1DP A200X A200Y A260X ACDP AF300 AFSSP
+APCAS AS100 AUHSAS C1DC C1DP C200X C200Y C260X CCDP CF300 CFSSP COMCP
+CONC1DC CONC1DC100 CONC1DC150 CONC1DP CONC3 CONC6 CONCD CONCF CONCU
+CONCX CONCY CPCAS CS100 CUHSAS DBAR1DC DBAR1DP DBAR3 DBAR6 DBARD DBARF
+DBARP DBARU DBARX DBARY DBZ DBZ1DC DBZ1DP DISP1DC DISP1DP DISP3 DISP6
+DISPD DISPF DISPP DISPU DISPX DISPY DT1DC FRANGE FRNG PLWC1 PLWC1DC
+PLWC1DP PLWC6 PLWCC PLWCC1 PLWCD PLWCF PLWCG PLWCX PLWCY REFF2DC REFF2DP
+REFFD REFFF RICE 
+
+\uline{Section 6:} CO2\_PIC COMR\_AL CORAW\_AL FO3\_ACD FO3\_CL
+O3MR\_CL TEO3 TEO3C TEO3P TEP TET XFO3FNO XFO3FS XFO3P XNCLF XNMBT
+XNO XNOCAL XNOCF XNOSF XNOY XNOYP XNOZA XNSAF XNST XNYCAL XNZAF XO3 
+
+\uline{Section 7:} CNTEMP CNTS CONCN CONCP CONCU CONCU100 CONCU500
+FCN FCNC PCN PFLW PFLWC TCHTP TCNTL TEMP1 TEMP2 UPRESS USFLWC USMPFLW
+XICN XICNC 
+
+\uline{Section 8:} IRxHT IRxV RSTx SPxPitch SPxRoll TRSTx VISxC
+VISxHT VISxV 
+
+\uline{Section 9:} {[}none{]}
+
+\uline{Section 10:} OBSOLETE
 
 \subsection*{Page Numbers}
 
@@ -449,13 +497,28 @@ To reference a specific page in the document, use a web reference
 like this:\\
 \texttt{ProcessingAlgorithms.pdf\#page=44}
 
+In evince, this syntax will work, or the page number can be specified
+in this way:
+
+\texttt{evince -p 115 ProcessingAlgorithms.pdf}
+
+\subsection*{Sections and Subsections}
+
+Targets have not been provided for other parts of the document, but
+the above method of referencing pages can be used to link to specific
+sections and other components of the document.
+
 \subsection*{Adding New Targets}
 
 When a new variable is added, a new anchor point can be added by inserting,
-in LaTeX mode, \texttt{\textbackslash{}hypertarget\{LAT\}\{\} }at
-the appropriate point in the LyX document. In addition, when a new
-variable is added, entries should be made in the index items and the
-variable-names list, following the pattern used for existing variables.
+in LaTeX mode, \texttt{\textbackslash{}nop\{LAT\} }at the appropriate
+point in the LyX document. (\textbackslash{}nop has been defined to
+use \textbackslash{}hypertarget but displace the reference upward
+one line.) In addition, when a new variable is added, entries should
+be made in the index items and the variable-names list, following
+the pattern used for existing variables, and if appropriate any new
+symbols used in discussing the algorithm should be added to the similar
+symbols list.
 
 \section*{List of Web Links in this Document:}
 

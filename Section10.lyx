@@ -267,7 +267,7 @@ status open
 
 
 \backslash
-hypertarget{RSTx}{}
+nop{RSTx}{}
 \end_layout
 
 \end_inset
@@ -420,7 +420,7 @@ status open
 
 
 \backslash
-hypertarget{TRSTx}{}
+nop{TRSTx}{}
 \end_layout
 
 \end_inset
@@ -490,7 +490,7 @@ status open
 
 
 \backslash
-hypertarget{IRxV}{}
+nop{IRxV}{}
 \end_layout
 
 \end_inset
@@ -616,7 +616,7 @@ status open
 
 
 \backslash
-hypertarget{IRxHT}{}
+nop{IRxHT}{}
 \end_layout
 
 \end_inset
@@ -985,7 +985,7 @@ status open
 
 
 \backslash
-hypertarget{VISxV}{}
+nop{VISxV}{}
 \end_layout
 
 \end_inset
@@ -1115,7 +1115,7 @@ status open
 
 
 \backslash
-hypertarget{VISxHT}{}
+nop{VISxHT}{}
 \end_layout
 
 \end_inset
@@ -1229,7 +1229,7 @@ status open
 
 
 \backslash
-hypertarget{VISxC}{}
+nop{VISxC}{}
 \end_layout
 
 \end_inset
@@ -1393,7 +1393,7 @@ status open
 
 
 \backslash
-hypertarget{SPxPitch}{}
+nop{SPxPitch}{}
 \end_layout
 
 \end_inset
@@ -1406,7 +1406,7 @@ status open
 
 
 \backslash
-hypertarget{SPxRoll}{}
+nop{SPxRoll}{}
 \end_layout
 
 \end_inset
@@ -1667,7 +1667,7 @@ status open
 
 
 \backslash
-hypertarget{SOLAR}{}
+nop{SOLAR}{}
 \end_layout
 
 \end_inset

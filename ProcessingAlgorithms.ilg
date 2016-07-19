@@ -485,10 +485,10 @@ Scanning input file ProcessingAlgorithms.idx....
    -- Unknown index keyword \indexentry[var].
 
 !! Input index error (file = ProcessingAlgorithms.idx, line = 624):
-   -- Unknown index keyword \indexentry[var].
+   -- Unknown index keyword \indexentry[lis].
 
 !! Input index error (file = ProcessingAlgorithms.idx, line = 626):
-   -- Unknown index keyword \indexentry[lis].
+   -- Unknown index keyword \indexentry[var].
 !! Input index error (file = ProcessingAlgorithms.idx, line = 627):
    -- Unknown index keyword \indexentry[var].
 
@@ -1372,7 +1372,7 @@ Scanning input file ProcessingAlgorithms.idx....
 !! Input index error (file = ProcessingAlgorithms.idx, line = 1480):
    -- Unknown index keyword \indexentry[var].
 done (991 entries accepted, 491 rejected).
-Sorting entries..........done (10493 comparisons).
+Sorting entries..........done (10492 comparisons).
 Generating output file ProcessingAlgorithms.ind....done (936 lines written, 0 warnings).
 Output written in ProcessingAlgorithms.ind.
 Transcript written in ProcessingAlgorithms.ilg.

@@ -513,7 +513,7 @@ status open
 
 
 \backslash
-hypertarget{LAT}{}
+nop{LAT}{}
 \end_layout
 
 \end_inset
@@ -610,7 +610,7 @@ status open
 
 
 \backslash
-hypertarget{LON}{}
+nop{LON}{}
 \end_layout
 
 \end_inset
@@ -685,7 +685,7 @@ status open
 
 
 \backslash
-hypertarget{THDG}{}
+nop{THDG}{}
 \end_layout
 
 \end_inset
@@ -825,7 +825,7 @@ status open
 
 
 \backslash
-hypertarget{PITCH}{}
+nop{PITCH}{}
 \end_layout
 
 \end_inset
@@ -908,7 +908,7 @@ status open
 
 
 \backslash
-hypertarget{ROLL}{}
+nop{ROLL}{}
 \end_layout
 
 \end_inset
@@ -991,7 +991,7 @@ status open
 
 
 \backslash
-hypertarget{ACINS}{}
+nop{ACINS}{}
 \end_layout
 
 \end_inset
@@ -1102,7 +1102,7 @@ status open
 
 
 \backslash
-hypertarget{VSPD}{}
+nop{VSPD}{}
 \end_layout
 
 \end_inset
@@ -1841,7 +1841,7 @@ status open
 
 
 \backslash
-hypertarget{ALT}{}
+nop{ALT}{}
 \end_layout
 
 \end_inset
@@ -1926,7 +1926,7 @@ status open
 
 
 \backslash
-hypertarget{GSF}{}
+nop{GSF}{}
 \end_layout
 
 \end_inset
@@ -2009,7 +2009,7 @@ status open
 
 
 \backslash
-hypertarget{VEW}{}
+nop{VEW}{}
 \end_layout
 
 \end_inset
@@ -2063,7 +2063,7 @@ status open
 
 
 \backslash
-hypertarget{VNS}{}
+nop{VNS}{}
 \end_layout
 
 \end_inset
@@ -2145,7 +2145,7 @@ status open
 
 
 \backslash
-hypertarget{DEI}{}
+nop{DEI}{}
 \end_layout
 
 \end_inset
@@ -2158,7 +2158,7 @@ status open
 
 
 \backslash
-hypertarget{DNI}{}
+nop{DNI}{}
 \end_layout
 
 \end_inset
@@ -2384,7 +2384,7 @@ status open
 
 
 \backslash
-hypertarget{FXAZIM}{}
+nop{FXAZIM}{}
 \end_layout
 
 \end_inset
@@ -2397,7 +2397,7 @@ status open
 
 
 \backslash
-hypertarget{FXDIST}{}
+nop{FXDIST}{}
 \end_layout
 
 \end_inset
@@ -2502,7 +2502,7 @@ status open
 
 
 \backslash
-hypertarget{BLATA}{}
+nop{BLATA}{}
 \end_layout
 
 \end_inset
@@ -2565,7 +2565,7 @@ status open
 
 
 \backslash
-hypertarget{BLONA}{}
+nop{BLONA}{}
 \end_layout
 
 \end_inset
@@ -2628,7 +2628,7 @@ status open
 
 
 \backslash
-hypertarget{BNORMA}{}
+nop{BNORMA}{}
 \end_layout
 
 \end_inset
@@ -2695,7 +2695,7 @@ status open
 
 
 \backslash
-hypertarget{BPITCHR}{}
+nop{BPITCHR}{}
 \end_layout
 
 \end_inset
@@ -2758,7 +2758,7 @@ status open
 
 
 \backslash
-hypertarget{BROLLR}{}
+nop{BROLLR}{}
 \end_layout
 
 \end_inset
@@ -2821,7 +2821,7 @@ status open
 
 
 \backslash
-hypertarget{BYAWR}{}
+nop{BYAWR}{}
 \end_layout
 
 \end_inset
@@ -3275,7 +3275,7 @@ status open
 
 
 \backslash
-hypertarget{GGLAT}{}
+nop{GGLAT}{}
 \end_layout
 
 \end_inset
@@ -3401,7 +3401,7 @@ status open
 
 
 \backslash
-hypertarget{GGLON}{}
+nop{GGLON}{}
 \end_layout
 
 \end_inset
@@ -3508,7 +3508,7 @@ status open
 
 
 \backslash
-hypertarget{GGSPD}{}
+nop{GGSPD}{}
 \end_layout
 
 \end_inset
@@ -3599,7 +3599,7 @@ status open
 
 
 \backslash
-hypertarget{GGVEW}{}
+nop{GGVEW}{}
 \end_layout
 
 \end_inset
@@ -3733,7 +3733,7 @@ status open
 
 
 \backslash
-hypertarget{GGVNS}{}
+nop{GGVNS}{}
 \end_layout
 
 \end_inset
@@ -3818,7 +3818,7 @@ status open
 
 
 \backslash
-hypertarget{GGVSPD}{}
+nop{GGVSPD}{}
 \end_layout
 
 \end_inset
@@ -4078,7 +4078,7 @@ status open
 
 
 \backslash
-hypertarget{GGALT}{}
+nop{GGALT}{}
 \end_layout
 
 \end_inset
@@ -4149,7 +4149,7 @@ status open
 
 
 \backslash
-hypertarget{GGTRK}{}
+nop{GGTRK}{}
 \end_layout
 
 \end_inset
@@ -4243,7 +4243,7 @@ status open
 
 
 \backslash
-hypertarget{GGOIDHT}{}
+nop{GGOIDHT}{}
 \end_layout
 
 \end_inset
@@ -4310,7 +4310,7 @@ status open
 
 
 \backslash
-hypertarget{GGNSAT}{}
+nop{GGNSAT}{}
 \end_layout
 
 \end_inset
@@ -4368,7 +4368,7 @@ status open
 
 
 \backslash
-hypertarget{GGWUAL}{}
+nop{GGWUAL}{}
 \end_layout
 
 \end_inset
@@ -4570,7 +4570,7 @@ status open
 
 
 \backslash
-hypertarget{GMODE}{}
+nop{GMODE}{}
 \end_layout
 
 \end_inset
@@ -4648,7 +4648,7 @@ status open
 
 
 \backslash
-hypertarget{GGSTATUS}{}
+nop{GGSTATUS}{}
 \end_layout
 
 \end_inset
@@ -4792,7 +4792,7 @@ status open
 
 
 \backslash
-hypertarget{HGM}{}
+nop{HGM}{}
 \end_layout
 
 \end_inset
@@ -4876,7 +4876,7 @@ status open
 
 
 \backslash
-hypertarget{HGME}{}
+nop{HGME}{}
 \end_layout
 
 \end_inset
@@ -4966,7 +4966,7 @@ status open
 
 
 \backslash
-hypertarget{HGM232}{}
+nop{HGM232}{}
 \end_layout
 
 \end_inset
@@ -5022,7 +5022,7 @@ status open
 
 
 \backslash
-hypertarget{HI3}{}
+nop{HI3}{}
 \end_layout
 
 \end_inset
@@ -5094,7 +5094,7 @@ status open
 
 
 \backslash
-hypertarget{PALT}{}
+nop{PALT}{}
 \end_layout
 
 \end_inset
@@ -6070,7 +6070,7 @@ status open
 
 
 \backslash
-hypertarget{VEWC}{}
+nop{VEWC}{}
 \end_layout
 
 \end_inset
@@ -6083,7 +6083,7 @@ status open
 
 
 \backslash
-hypertarget{VNSC}{}
+nop{VNSC}{}
 \end_layout
 
 \end_inset
@@ -6994,7 +6994,7 @@ status open
 
 
 \backslash
-hypertarget{}{LATC}
+nop{}{LATC}
 \end_layout
 
 \end_inset
@@ -7007,7 +7007,7 @@ status open
 
 
 \backslash
-hypertarget{LONC}{}
+nop{LONC}{}
 \end_layout
 
 \end_inset
