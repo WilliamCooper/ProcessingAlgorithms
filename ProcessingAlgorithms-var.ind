@@ -22,6 +22,7 @@
   \item ALTX, \hyperpage{20}
   \item APCAS, \hyperpage{60}
   \item AS100, \hyperpage{60}
+  \item AS200, \hyperpage{60}
   \item AT\_ITR, \hyperpage{35}
   \item ATC, \hyperpage{85}
   \item ATKP (obsolete), \hyperpage{86}
@@ -90,6 +91,7 @@
   \item CPCAS, \hyperpage{60}
   \item CRHP, \hyperpage{87}
   \item CS100, \hyperpage{60}
+  \item CS200, \hyperpage{60}
   \item CSEC (obsolete), \hyperpage{83}
   \item CUHSAS, \hyperpage{60}
 

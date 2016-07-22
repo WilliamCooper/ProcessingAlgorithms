@@ -824,7 +824,7 @@ Ask Teresa and Mike R.
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+done, MR
 \end_layout
 
 \end_inset
@@ -897,7 +897,7 @@ Get place to put algorithm notes, and include links to those additional
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+partly done
 \end_layout
 
 \end_inset
@@ -2533,7 +2533,7 @@ UPRESS: the attributes for this variable say the units are kPa; is that
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+resolved
 \end_layout
 
 \end_inset
@@ -3281,16 +3281,6 @@ target "https://drive.google.com/open?id=0B1kIUH45ca5AekJYZmlsOV9sQ28"
 \begin_layout Standard
 \begin_inset CommandInset href
 LatexCommand href
-target "https://drive.google.com/open?id=0B1kIUH45ca5AaW02ZUt1X2kyX2s"
-
-\end_inset
-
-[PCOR.pdf]
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset href
-LatexCommand href
 target "https://drive.google.com/a/ucar.edu/file/d/0B1kIUH45ca5AWlFWYXBDRlI1VnM"
 
 \end_inset
@@ -3311,61 +3301,11 @@ target "https://drive.google.com/open?id=0B1kIUH45ca5AY0k0cTB6QlBEQUU"
 \begin_layout Standard
 \begin_inset CommandInset href
 LatexCommand href
-target "https://drive.google.com/open?id=0B1kIUH45ca5Ab1NTRVo0bjdac0U"
-
-\end_inset
-
-[VaporPressureV3.pdf]
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset href
-LatexCommand href
-target "https://drive.google.com/open?id=0B1kIUH45ca5ATVl1MjV6Q0E0YXc"
-
-\end_inset
-
-[ThetaE.pdf]
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset href
-LatexCommand href
-target "https://drive.google.com/open?id=0B1kIUH45ca5AZXZZbWJSbEctdmM"
-
-\end_inset
-
-[VirtualTemperature.pdf]
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset href
-LatexCommand href
 target "https://drive.google.com/open?id=0B1kIUH45ca5AN2VYdFF2V0tHcVU"
 
 \end_inset
 
 [AKRDC130.pdf]
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset href
-LatexCommand href
-target "https://drive.google.com/open?id=0B1kIUH45ca5AUkFDWmRwci12eVU"
-
-\end_inset
-
-[PLWCCrev140214.pdf]
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset href
-LatexCommand href
-target "https://drive.google.com/open?id=0B1kIUH45ca5AeG1nY1k2X2d2Z2s "
-
-\end_inset
-
-[PressureAltitude.pdf]
 \end_layout
 
 \begin_layout Standard
@@ -3404,6 +3344,72 @@ target "http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf "
 \end_inset
 
 [but should update to the current version of this document]
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.eol.ucar.edu/system/files/PressureAltitude.pdf"
+target "https://www.eol.ucar.edu/system/files/PressureAltitude.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.eol.ucar.edu/system/files/PCOR_1.pdf"
+target "https://www.eol.ucar.edu/system/files/PCOR_1.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.eol.ucar.edu/system/files/VaporPressureV3.pdf"
+target "https://www.eol.ucar.edu/system/files/VaporPressureV3.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.eol.ucar.edu/system/files/ThetaE.pdf"
+target "https://www.eol.ucar.edu/system/files/ThetaE.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.eol.ucar.edu/system/files/VirtualTemperature.pdf"
+target "https://www.eol.ucar.edu/system/files/VirtualTemperature.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.eol.ucar.edu/system/files/PLWCCrev140414.pdf"
+target "https://www.eol.ucar.edu/system/files/PLWCCrev140414.pdf"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

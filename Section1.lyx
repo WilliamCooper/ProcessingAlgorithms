@@ -2786,7 +2786,35 @@ concentration!chemical species
 \end_inset
 
  of chemical species.
- Typical units
+ Although a proper SI unit for a volumetric mixing ratio would be 
+\begin_inset Formula $\mu$
+\end_inset
+
+mol
+\begin_inset space \thinspace{}
+\end_inset
+
+mol
+\begin_inset Formula $^{-1}$
+\end_inset
+
+, nmol
+\begin_inset space \thinspace{}
+\end_inset
+
+mol
+\begin_inset Formula $^{-1}$
+\end_inset
+
+, or pmol
+\begin_inset space \thinspace{}
+\end_inset
+
+mol
+\begin_inset Formula $^{-1}$
+\end_inset
+
+, variables are instead often assigned the respective units of 
 \begin_inset Index idx
 status open
 
@@ -2806,7 +2834,7 @@ units!ppmb
 
 \end_inset
 
- are ppmv
+ppmv
 \begin_inset Index idx
 status open
 
@@ -2816,7 +2844,7 @@ ppmv
 
 \end_inset
 
- or ppbv
+, ppbv
 \begin_inset Index idx
 status open
 
@@ -2826,7 +2854,17 @@ ppbv
 
 \end_inset
 
- for parts per million by volume or parts per billion by volume.
+ or pptv
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+pptv
+\end_layout
+
+\end_inset
+
+ for parts per million, billion or trillion by volume.
  Care must be taken to interpret ppbv especially, because 
 \begin_inset Quotes eld
 \end_inset

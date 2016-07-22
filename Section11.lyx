@@ -450,7 +450,7 @@ King, W.
 \begin_inset CommandInset href
 LatexCommand href
 name "this URL"
-target "https://drive.google.com/open?id=0B1kIUH45ca5AUkFDWmRwci12eVU"
+target "https://www.eol.ucar.edu/system/files/PLWCCrev140214.pdf"
 
 \end_inset
 
@@ -2706,8 +2706,8 @@ reference "sec:AEROSOL-PARTICLE-MEASUREMENTS"
 
 \end_inset
 
- for the processing algorithms that lead to concentrations from the UHSAS,
- PCASP, and F300.
+ for the processing algorithms that lead to concentrations from the UHSAS
+ and PCASP/SPP-200.
  The following table and discussion includes some obsolete variables (for
  the 200X and 200Y) for the same reason.
  The table also includes some variables derived from imaging spectrometers
@@ -3457,7 +3457,7 @@ target "https://www.eol.ucar.edu/instruments/signal-processing-package-200-passi
 \begin_layout Plain Layout
 
 \size small
-0–31
+0–30
 \end_layout
 
 \end_inset
@@ -3468,7 +3468,7 @@ target "https://www.eol.ucar.edu/instruments/signal-processing-package-200-passi
 \begin_layout Plain Layout
 
 \size small
-1--31
+1--30
 \end_layout
 
 \end_inset
@@ -4236,6 +4236,19 @@ status open
 
 
 \backslash
+nop{AS200}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
 nop{AS100}{}
 \end_layout
 
@@ -4424,6 +4437,33 @@ AF300
 \end_inset
 
 , 
+\bar under
+AS200
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+AS200
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+AS200
+\end_layout
+
+\end_inset
+
+,
+\series bold
+ 
 \bar under
 APCAS
 \bar default
@@ -4732,6 +4772,19 @@ status open
 
 
 \backslash
+nop{CS200}{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
 nop{CCDP}{}
 \end_layout
 
@@ -4878,6 +4931,33 @@ CF300
 \end_inset
 
 , 
+\bar under
+CS200
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+CS200
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+CS200
+\end_layout
+
+\end_inset
+
+,
+\series bold
+ 
 \bar under
 CPCAS
 \begin_inset Index idx

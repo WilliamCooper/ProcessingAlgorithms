@@ -38,7 +38,7 @@
 \contentsline {section}{\numberline {7}AEROSOL PARTICLE MEASUREMENTS}{71}{section.7}
 \contentsline {subsection}{\numberline {7.1}Condensation Nucleus Counters}{71}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Aerosol Spectrometers}{74}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Other Specialized Aerosol Measurements}{75}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.3}Special Aerosol Measurements}{75}{subsection.7.3}
 \contentsline {section}{\numberline {8}RADIATION VARIABLES}{76}{section.8}
 \contentsline {subsection}{\numberline {8.1}Measurements of Irradiance and Radiometric Temperature}{76}{subsection.8.1}
 \contentsline {subsection}{\numberline {8.2}Spectral Irradiance and Actinic Flux}{78}{subsection.8.2}

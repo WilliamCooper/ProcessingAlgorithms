@@ -525,7 +525,7 @@ TEMP2
 
 
 \emph on
-The sample air tempeerature measured at the intake of the 3760A or within
+The sample air temperature measured at the intake of the 3760A or within
  the 3786.
 
 \emph default
@@ -1231,7 +1231,7 @@ height "1pt"
 
 \begin_inset Formula 
 \[
-\mathrm{XICNC=\{XICN\}}\frac{pP_{std}}{\mathrm{\{PCN\}}}\frac{(\{\mathrm{CNTEMP\}}+T_{0})}{T_{std}}
+\mathrm{XICNC=\{XICN\}}\frac{p_{std}}{\mathrm{\{PCN\}}}\frac{(\{\mathrm{CNTEMP\}}+T_{0})}{T_{std}}
 \]
 
 \end_inset
@@ -1311,7 +1311,7 @@ Hz but it is typically 10
 \begin_inset space ~
 \end_inset
 
-Hz..
+Hz.
  In some unusual cases the counts are divided by a selected power of two
  to keep the counter from overflowing; see project documentation.
  The 3786 WCN may be programmed to report data at intervals from 0.1–3600
@@ -2124,7 +2124,7 @@ PCASP
 
 \end_inset
 
- has 31 channels covering the diameter range 0.1 to 3
+ has 30 channels covering the diameter range 0.1 to 3
 \begin_inset space ~
 \end_inset
 
@@ -2156,7 +2156,7 @@ Sensors of individual Particles (1-D Probes).
 \begin_layout Hanging
 
 \series bold
-UHSAS Absolute Pressure in Canister (hPa):
+UHSAS Absolute Pressure in Optics Block (kPa):
 \series default
 
 \begin_inset ERT
@@ -2489,7 +2489,7 @@ backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
-UPRESS = internal UHSAS pressure (hPa)
+UPRESS = internal UHSAS pressure (kPa)
 \begin_inset Index idx
 status open
 
@@ -2612,7 +2612,7 @@ height "1pt"
 
 \begin_inset Formula 
 \begin{equation}
-\mathrm{\{USFLWC\}}=\mathrm{\{USMPFLW\}}\frac{\mathrm{\{UPRESS\}}}{\mathrm{\{PSXC\}}}\frac{\mathrm{(\{ATX\}}+T_{0})}{T_{blk}}\label{eq:12.4}
+\mathrm{\{USFLWC\}}=\mathrm{\{USMPFLW\}}\frac{\mathrm{\{UPRESS/10\}}}{\mathrm{\{PSXC\}}}\frac{\mathrm{(\{ATX\}}+T_{0})}{T_{blk}}\label{eq:12.4}
 \end{equation}
 
 \end_inset
@@ -3092,7 +3092,7 @@ height "1pt"
 \end_layout
 
 \begin_layout Subsection
-Other Specialized Aerosol Measurements
+Special Aerosol Measurements
 \end_layout
 
 \begin_layout Hanging
@@ -3139,8 +3139,9 @@ aerosol!ancillary datasets
 \end_inset
 
  data sets are not merged into the netCDF archives produced by EOL, so the
- special data files must be used for these measurements, The data formats
- are described with the instruments at the references given below:
+ special data files must be used for these measurements.
+ The data formats are described with the instruments at the references given
+ below:
 \begin_inset Newline newline
 \end_inset
 

@@ -24,7 +24,7 @@ ambient concentration.
 }\textbf{\uline{CNTEMP}}\sindex[var]{CNTEMP}\index{CNTEMP}\uline{,}
 \textbf{\uline{TEMP1}}\sindex[var]{TEMP1}\textbf{\index{TEMP1},
 }\textbf{\uline{TEMP2}}\sindex[var]{TEMP2}\textbf{\index{TEMP2}}\\
-\emph{The sample air tempeerature measured at the intake of the 3760A
+\emph{The sample air temperature measured at the intake of the 3760A
 or within the 3786.} The value\index{temperature!inlet} is used to
 convert the measured mass flow (FCN or XICN) to true volumetric flow
 and to convert measured particle concentration to equivalent ambient
@@ -89,7 +89,7 @@ $T_{0}$ = 273.15~K\\
 \\
 \rule[0.5ex]{1\linewidth}{1pt}
 \[
-\mathrm{XICNC=\{XICN\}}\frac{pP_{std}}{\mathrm{\{PCN\}}}\frac{(\{\mathrm{CNTEMP\}}+T_{0})}{T_{std}}
+\mathrm{XICNC=\{XICN\}}\frac{p_{std}}{\mathrm{\{PCN\}}}\frac{(\{\mathrm{CNTEMP\}}+T_{0})}{T_{std}}
 \]
 %
 \end{minipage}}\\
@@ -99,7 +99,7 @@ $T_{0}$ = 273.15~K\\
 \emph{The raw output count from the condensation nucleus counter.}
 For the 3760A condensation nucleus counter, the project-dependent
 sample rate may be chosen in the range from 1\textendash 50~Hz but
-it is typically 10~Hz.. In some unusual cases the counts are divided
+it is typically 10~Hz. In some unusual cases the counts are divided
 by a selected power of two to keep the counter from overflowing; see
 project documentation. The 3786 WCN may be programmed to report data
 at intervals from 0.1\textendash 3600~s.\label{punch:7-1}
@@ -202,13 +202,13 @@ concentration of aerosol particles, RAF deploys two instruments. The
 \href{https://www.eol.ucar.edu/instruments/ultra-high-sensitivity-aerosol-spectrometer}{Ultra High Sensitivity Aerosol Spectrometer}
 (UHSAS)\index{UHSAS} sizes particles in 99 bins from 0.06 to 1.0~\textgreek{m}m
 diameter, and the \href{http://www.eol.ucar.edu/instruments/passive-cavity-aerosol-spectrometer-probe}{Passive Cavity Aerosol Spectrometer Probe}
-(PCASP)\index{PCASP} has 31 channels covering the diameter range
+(PCASP)\index{PCASP} has 30 channels covering the diameter range
 0.1 to 3~\textgreek{m}m. Flow and total concentration variables for
 these instruments are described in this section, while additional
 variables are covered along with other 1-D probes in Sect.~\ref{subsec:1DProbes},
 ``Sensors of individual Particles (1-D Probes).''
 \begin{hangparagraphs}
-\textbf{UHSAS Absolute Pressure in Canister (hPa):}\nop{UPRESS}{}\textbf{
+\textbf{UHSAS Absolute Pressure in Optics Block (kPa):}\nop{UPRESS}{}\textbf{
 }\textbf{\uline{UPRESS}}\index{UPRESS}\sindex[var]{UPRESS}\\
 The pressure internal to the UHSAS instrument. This is an analog measurement
 with calibration coefficients as recorded in the attributes for the
@@ -229,7 +229,7 @@ flow referenced to standard conditions, and this also is converted
 to equivalent ambient volumetric flow.\\
 \\
 \fbox{\begin{minipage}[t]{0.9\textwidth}%
-UPRESS = internal UHSAS pressure (hPa)\index{UPRESS}\\
+UPRESS = internal UHSAS pressure (kPa)\index{UPRESS}\\
 USMPFLW = measured volumetric sample flow (cm$^{3}$s$^{-1}$)\\
 PFLW = sample mass flow referenced to standard conditions (cm$^{3}$s$^{-1}$)\\
 $T_{blk}$ = UHSAS optical block temperature, 305 K\\
@@ -245,7 +245,7 @@ $T_{0}$ = 273.15~K\\
 \mathrm{\{PFLWC\}}=\mathrm{\{PFLW\}}\frac{p_{std}}{\mathrm{\{PSXC\}}}\frac{(\mathrm{\{ATX\}}+T_{0})}{T_{std}}\label{eq:12.3}
 \end{equation}
 \begin{equation}
-\mathrm{\{USFLWC\}}=\mathrm{\{USMPFLW\}}\frac{\mathrm{\{UPRESS\}}}{\mathrm{\{PSXC\}}}\frac{\mathrm{(\{ATX\}}+T_{0})}{T_{blk}}\label{eq:12.4}
+\mathrm{\{USFLWC\}}=\mathrm{\{USMPFLW\}}\frac{\mathrm{\{UPRESS/10\}}}{\mathrm{\{PSXC\}}}\frac{\mathrm{(\{ATX\}}+T_{0})}{T_{blk}}\label{eq:12.4}
 \end{equation}
 %
 \end{minipage}} \\
@@ -298,7 +298,7 @@ PFLWC = corrected sample flow rate, PCASP (cm$^{3}$s$^{-1}$)\\
 \end{hangparagraphs}
 
 
-\subsection{Other Specialized Aerosol Measurements}
+\subsection{Special Aerosol Measurements}
 \begin{hangparagraphs}
 Data from an aerosol mass spectrometer\index{spectrometer!aerosol mass},
 a scanning mobility particle spectrometer\index{SMPS}, and a giant
@@ -306,7 +306,7 @@ nucleus impactor\index{impactor!giant nucleus} are recorded by these
 instruments in separate data files and are not recorded by the aircraft
 data system. The ancillary\index{aerosol!ancillary datasets} data
 sets are not merged into the netCDF archives produced by EOL, so the
-special data files must be used for these measurements, The data formats
+special data files must be used for these measurements. The data formats
 are described with the instruments at the references given below:\\
 \\
 \textbf{Aerosol Mass Spectrometer (AMS) data files} contain size-segregated
