@@ -168,7 +168,7 @@ target "http://nldr.library.ucar.edu/repository/assets/technotes/TECH-NOTE-000-0
 \begin_inset CommandInset href
 LatexCommand href
 name "RAF Bulletin 23"
-target "http://www.eol.ucar.edu/raf/Bulletins/bulletin23.html"
+target "https://www.eol.ucar.edu/content/raf-bulletin-no-23"
 
 \end_inset
 
@@ -747,7 +747,7 @@ heading!magnetic
 \begin_inset CommandInset href
 LatexCommand href
 name "RAF Bulletin 23"
-target "http://www.eol.ucar.edu/raf/Bulletins/bulletin23.html"
+target "https://www.eol.ucar.edu/content/raf-bulletin-no-23"
 
 \end_inset
 
@@ -1027,8 +1027,9 @@ IRU
 
 
 \emph default
- With INSs now in use, the internal drift is removed by the INS via pressure
- damping through reference to the pressure altitude
+ With INSs now in use, the internal drift that arises when this measurement
+ is integrated to get aircraft vertical speed and then altitude is removed
+ by the INS via pressure damping through reference to the pressure altitude
 \begin_inset Index idx
 status open
 
@@ -1164,6 +1165,286 @@ INS!Litton LTN-51
  This variable is also filtered within the INS so that there is little variance
  with frequency higher than 0.1 Hz.
  
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Aircraft Rate of Climb (m/s): 
+\bar under
+ROC
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+rate of climb
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+ROC
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nop{VSPD}{}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ 
+\series default
+(new 2017)
+\series bold
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+\emph on
+The rate of climb or upward speed of the aircraft, 
+\emph default
+as measured by the INS with correction so as to represent the derivative
+ of the geometric height.
+ This variable is calculated by integration of the variable ACINS and then
+ addition of the low-pass-filtered difference between that integral and
+ the climb rate determined from the hydrostatic equation.
+ The result retains the high-frequency response from the INS while matching
+ the low-frequency average value determined from the hydrostatic equation,
+ and so represents change in geometric height.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "This memo"
+target "https://drive.google.com/open?id=0B1kIUH45ca5AMXpaWlIyWWxwU2M"
+
+\end_inset
+
+ contains additional background information on this variable.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $g$
+\end_inset
+
+
+\begin_inset Formula $^{\dagger}$
+\end_inset
+
+ = acceleration of gravity (see Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:g_lambda"
+
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R_{d}{}^{\dagger}$
+\end_inset
+
+ = gas constant for dry air
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{K}$
+\end_inset
+
+ = absolute temperature = (ATX + 273.15)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $a$
+\end_inset
+
+ = ACINS = upward acceleration as measured by the INS [m
+\begin_inset space \thinspace{}
+\end_inset
+
+s
+\begin_inset Formula $^{-2}$
+\end_inset
+
+]
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $p$
+\end_inset
+
+ = PSXC = measured ambient pressure [hPa]
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Delta p$
+\end_inset
+
+ = difference between current and last value of PSXC
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ = time between samples (1/
+\begin_inset Formula $f$
+\end_inset
+
+ where 
+\begin_inset Formula $f$
+\end_inset
+
+ is the sample frequency)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $F_{L}$
+\end_inset
+
+ = low-pass Butterworth filter (cf.
+\begin_inset space ~
+\end_inset
+
+p.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "compFilter"
+
+\end_inset
+
+).
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+From consecutive measurements of pressure, estimate the rate of climb from
+ the hydrostatic equation in the form:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+w_{p}=-\frac{R_{d}T_{k}}{gp}\frac{\Delta p}{\Delta t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Add the current measurement of acceleration to the cumulative sum:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+w_{p}^{*}\leftarrow w_{p}^{*}+a\Delta t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Define ROC as the sum of 
+\begin_inset Formula $w_{p}^{*}$
+\end_inset
+
+ and the low-pass filtered value of (
+\begin_inset Formula $w_{p}-w_{p}^{*}$
+\end_inset
+
+):
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\mathrm{ROC} & =w_{p}^{*}+F_{L}(w_{p}-w_{p}^{*})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Hanging
@@ -2964,31 +3245,54 @@ status open
 
 \begin_layout Plain Layout
 There are four measures of height or altitude discussed in this technical
- note, height relative to the WGS-84 reference surface, geometric height,
- geopotential height and pressure height.
+ note, height relative to the WGS-84 reference surface, geometric height
+ relative to mean sea level, geopotential height and pressure height.
  The WGS-84 height (measured by GPS instruments) is height relative to a
- reference system in which zero is defined by a reference ellipsoid, a surface
- having constant gravitational equipotential that approximates that at mean
- sea level.
- The true mean sea level, represented by the 
+ reference system in which zero is defined by a specified reference ellipsoid
+ representing the shape of the Earth, as specified here: 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://earth-info.nga.mil/GandG/publications/tr8350.2/tr8350_2.html"
+target "http://earth-info.nga.mil/GandG/publications/tr8350.2/tr8350_2.html"
+
+\end_inset
+
+,.
+ This is not defined to be a level surface in the sense of being an equipotentia
+l surface.
+ A better approximation of mean sea level is the 
 \begin_inset Quotes eld
 \end_inset
 
-geoid,
+geoid
 \begin_inset Quotes erd
 \end_inset
 
- is more structured and departs significantly from the WGS-84 reference
- surface, often by several 10s of meters.
+, a surface having constant gravitational equipotential that approximates
+ that at mean sea level.
+ The geoid is more structured than the WSR-84 reference ellipsoid and departs
+ significantly from it, often by several 10s of meters.
+ Even the geoid does not represent mean sea level exactly because local
+ mean sea level can be influenced by variations in water density, mean wind,
+ or ocean circulation, but the geoid is usually the reference used for measureme
+nts labeled 
+\begin_inset Quotes eld
+\end_inset
+
+MSL
+\begin_inset Quotes erd
+\end_inset
+
+ except when fine-scale local effects must be considered.
  The geometric height is the true height above a reference surface, often
  taken to be mean sea level or the geoid; this may therefore differ significantl
-y from the height measured by a GPS unit.
+y from the height measured directly by a GPS unit.
  There is a variable included below, GGEOIDHT, that provides a measure of
  the difference.
- Geopotential height is the height that would give a particular value of
- the geopotential, or gravitational potential energy per unit mass, if that
- mass were raised against standard gravity (not varying, e.g., with latitude
- or height) to that altitude.
+ Geopotential height is the height above mean sea level that would give
+ the geopotential, or gravitational potential energy per unit mass, of the
+ actual parcel if that mass were raised against standard gravity (not varying,
+ e.g., with latitude or height) to that altitude.
  For the purpose of this definition, standard gravity is defined to be 9.80665
 \begin_inset Formula $\,\mathrm{m\,\mathrm{s^{-2}}}$
 \end_inset
@@ -3025,13 +3329,13 @@ CEP is the Circular Error Probability, the radius of a circle that contains
  Latitude and longitude are recorded in a special log file (called the GPGGA
  log) with a resolution of 0.0001 degree, while Earth-relative velocity is
  recorded in the GPRMC log with resolution of 0.1 m/s.
- Starting in January 2014 new logs (named BESTPOS and BESTVEL) will also
- be recorded to preserve more significant digits in the measurements.
- The BESTPOS log will have a position resolution of 
+ Starting in January 2014 new logs (named BESTPOS and BESTVEL) have also
+ been recorded to preserve more significant digits in the measurements.
+ The BESTPOS log has a position resolution of 
 \begin_inset Formula $10^{-11}\deg$
 \end_inset
 
-, while the BESTVEL log will be recorded with 0.0001 m/s resolution.
+, while the BESTVEL log is recorded with 0.0001 m/s resolution.
  
 \end_layout
 
@@ -3167,8 +3471,8 @@ at the GPS antenna
 \end_inset
 
 m.
- A correction for aircraft rotation is therefore applied to GGVSPD, GGVEW,
- and GGVNS, as described below.
+ A correction for aircraft rotation is therefore applied to GGVSPD, as described
+ below.
 \end_layout
 
 \begin_layout Hanging
@@ -3290,7 +3594,7 @@ The aircraft latitude measured by a global positioning system.
 
 \emph default
  Positive values are north of the equator; negative values are south.
- Because these variables are recorded in netCDF files as single-precision
+ These variables are recorded in netCDF files as single-precision values.
  GGLAT is provided by the data-system GPS; LAT_G and LATF_G are from the
  avionics system GPS.
  LATF_G is a fine-resolution measurement that requires special processing.
@@ -3610,13 +3914,14 @@ nop{GGVEW}{}
 
 
 \emph on
-The east component of ground speed measured by a global positioning system.
+The eastward component of ground speed measured by a global positioning
+ system.
 
 \emph default
  GGVEW originates from a data-system GPS; VEW_G originates from an avionics-syst
 em GPS.
  In the case of GGVEW, when this is used in the calculation of horizontal
- wind, the following correction (omitted before 2016) is applied:
+ wind, the following correction would be needed::
 \begin_inset Newline newline
 \end_inset
 
@@ -3667,7 +3972,24 @@ m for the GV,
 \end_inset
 
 .
- 
+ This correction is not applied in normal processing because the use of
+ the complementary filter, discussed in Sect._
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:IRS/GPS"
+
+\end_inset
+
+, makes it of negligible importance.
+ More information is contained in 
+\begin_inset CommandInset href
+LatexCommand href
+name "this memo"
+target "https://drive.google.com/open?id=0B1kIUH45ca5AdVdRQ25BdG1GUXc"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Hanging
@@ -3751,7 +4073,7 @@ The northward component of ground speed as measured by a global positioning
  GGVNS originates from a data-system GPS; VNS_G originates from an avionics-syst
 em GPS.
  In the case of GGVNS, when this is used in the calculation of horizontal
- wind, the following correction (omitted before 2016) is applied:
+ wind, the following correction would be needed:
 \begin_inset Newline newline
 \end_inset
 
@@ -3802,13 +4124,26 @@ m for the GV,
 \end_inset
 
 .
- 
+ This correction is not applied in normal processing because the use of
+ the complementary filter, discussed in Sect.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:IRS/GPS"
+
+\end_inset
+
+, makes it of negligible importance, as discussed in the note referenced
+ for GGVEW.
 \end_layout
 
 \begin_layout Hanging
 
 \series bold
-GPS-Computed Aircraft Vertical Velocity (m/s):
+GPS-Measured Aircraft Vertical Velocity (m/s):
 \series default
 
 \begin_inset ERT
@@ -3911,7 +4246,7 @@ GVZI
 
 
 \emph on
-The aircraft vertical velocity provided by an avionics GPS unit.
+The aircraft vertical velocity provided by a GPS unit.
 
 \emph default
  
@@ -3952,7 +4287,7 @@ correction!vertical wind!rotation in pitch
 
 \end_inset
 
- (omitted before 2016)
+ (omitted before 2017)
 \begin_inset Note Note
 status open
 
@@ -4009,13 +4344,21 @@ need to add LG=-4.30 m to the attributes for GGVSPD, GGVEW, GGVNS.
 
 \end_inset
 
+ See 
+\begin_inset CommandInset href
+LatexCommand href
+name "this memo"
+target "https://drive.google.com/open?id=0B1kIUH45ca5AdVdRQ25BdG1GUXc"
 
+\end_inset
+
+ for additional justification.
 \end_layout
 
 \begin_layout Hanging
 
 \series bold
-GPS Altitude (m): 
+GPS Altitude (m MSL): 
 \bar under
 GGALT
 \series default
@@ -4106,8 +4449,13 @@ altitude!aircraft!GPS
  measured by a global positioning system.
 
 \emph default
- The measurement is with respect to a geopotential surface (MSL) defined
- by the Earth model of the GPS, which is WGS84.
+ The measurement is with respect to the geoid as represented internally
+ by the GPS receiver and is determined by adding the adjustment 
+\begin_inset Formula $-$
+\end_inset
+
+GGEOIDHT to the direct measurement relative to the ellipsoidal Earth model
+ of the GPS, which is defined by WGS-84.
 \begin_inset Index idx
 status open
 
@@ -4122,7 +4470,7 @@ World Geodetic System
 status open
 
 \begin_layout Plain Layout
-WGS-84
+WGS84
 \end_layout
 
 \end_inset
@@ -4130,6 +4478,294 @@ WGS-84
  Positive values are above the reference surface.
  GGALT originates from a data-system GPS; GALT_A originates from an avionics-sys
 tem GPS.
+ See the discussion of height at the beginning of this subsection and the
+ variable GGEOIDHT below for interpretation of these GPS-based measurements.
+ 
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+GPS Altitude above the WGS94 reference ellipse (m):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nop{GGHMSL}
+\end_layout
+
+\end_inset
+
+
+\series bold
+\bar under
+ GGHWGS
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+GGHWGS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+GGHWGS
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The aircraft altitude above the ellipse that is the reference for the WGS-84
+ coordinate system.
+ 
+\emph default
+This variable is defined as GGHWGS=GGALT
+\begin_inset Formula $+$
+\end_inset
+
+GGEOIDHT.
+\begin_inset CommandInset label
+LatexCommand label
+name "punch3.4-1"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+GPS Geopotential Altitude (m):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nop{GEOPTH}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+\bar under
+GEOPTH
+\series default
+\bar default
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+GEOPHT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+GEOPHT
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The aircraft geopotential altitude above mean sea level.
+
+\emph default
+ If 
+\begin_inset Formula $g(z,\lambda)$
+\end_inset
+
+ is the acceleration of gravity as represented by the formula in the Table
+ of Constants on page 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "constants-table"
+
+\end_inset
+
+, then the formula used for calculation of GEOPTH is obtained by integrating
+ that formula from the reference surface for MSL (the geoid, 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ above the WGS84 reference ellipse, to the geometric altitude 
+\begin_inset Formula $H$
+\end_inset
+
+, which is 
+\begin_inset Formula $H+\Delta$
+\end_inset
+
+ above the reference ellipse.
+ The result is normally close (within about 0.5
+\begin_inset space ~
+\end_inset
+
+m) to that obtained with 
+\begin_inset Formula $\Delta=0$
+\end_inset
+
+.
+ There are additional details in 
+\begin_inset CommandInset href
+LatexCommand href
+name "this memo"
+target "https://drive.google.com/open?id=1GiuYQRLrdv3lzcU9gvVbAZchvVVDRWu3"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $H$
+\end_inset
+
+ = aircraft altitude above mean sea level, [m] ({GGALT})
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\lambda$
+\end_inset
+
+ = latitude ({GGLAT} converted to radians)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $Z(H,\lambda)$
+\end_inset
+
+ = aircraft geopotential height [m] ({GEOPTH})
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $g_{0}$
+\end_inset
+
+ = constant acceleration of gravity as defined for the International Standard
+ Atmosphere
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $g_{e},\,g_{1},\,g_{2},\,k_{i}$
+\end_inset
+
+ as defined in the Table of Constants on p.
+\begin_inset space ~
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "constants-table"
+
+\end_inset
+
+,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Delta$
+\end_inset
+
+= height of the geoid above the WGS-84 reference ellipse ({GGEOIDHT})
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\{\mathrm{GEOPHT\}}=Z(H,\lambda) & =\frac{1}{g_{0}}\Biggl\{ g_{e}\left(\frac{1+g_{1}\sin^{2}\lambda}{(1-g_{2}\sin^{2}\lambda)^{1/2}}\right)\\
+\times & \left(H-\frac{1}{2}\left((H+\Delta)^{2}-\Delta^{2}\right)(k_{1}-k_{2}\sin^{2}\lambda)+\frac{1}{3}\left((H+\Delta)^{3}-\Delta^{3}\right)k_{3}\right)\Biggr\}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Hanging
@@ -4243,7 +4879,7 @@ status open
 
 
 \backslash
-nop{GGOIDHT}{}
+nop{GGEOIDHT}{}
 \end_layout
 
 \end_inset
@@ -4284,10 +4920,12 @@ GGEOIDHT
 \series default
 \emph on
 \bar default
-Height of geoid, approximating mean sea level, above the WGS84 ellipsoid.
+Height of geoid, approximating mean sea level, above the WGS-84 ellipsoid.
 
 \emph default
- 
+ The height above mean sea level is found by subtracting this value from
+ the height above the WGS-84 reference ellipse as provided by GPS-based
+ measurements.
 \begin_inset CommandInset label
 LatexCommand label
 name "punch3.4"
@@ -4413,7 +5051,7 @@ GPS quality flag:
 \end_inset
 
 
-\begin_inset Box Frameless
+\begin_inset Box Boxed
 position "t"
 hor_pos "c"
 has_inner_box 1
@@ -5012,6 +5650,131 @@ Altitude above the ground
 \begin_layout Hanging
 
 \series bold
+Height Above Terrain (m):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nop{ALTG}{}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+\bar under
+ALTG
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+ALTG
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+ALTG
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The aircraft altitude above the Earth's surface
+\emph default
+ as represented by the next variable.
+ If GGALT is the altitude above mean sea level, ALTG=GGALT
+\begin_inset Formula $-$
+\end_inset
+
+SFC.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
+Height of the Earth's Surface (m MSL):
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+nop{SFC}{}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+\bar under
+SFC
+\series default
+\bar default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+SFC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index var
+status open
+
+\begin_layout Plain Layout
+SFC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+The altitude of the Earth's surface
+\emph default
+ at a location directly below the aircraft.
+ The data source is the Shuttle Radar Topography Mission of 2000.
+ The height estimate is described in 
+\begin_inset CommandInset href
+LatexCommand href
+name "this memo"
+target "https://drive.google.com/open?id=0B1kIUH45ca5ATkNyTlZVRm11WDA"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Hanging
+
+\series bold
 Pressure-Damped Inertial Altitude (m):
 \series default
 
@@ -5146,8 +5909,8 @@ Revised
 
 
 \emph on
-The altitude in the International Standard Atmosphere where the pressure
- is equal to the reference barometric (ambient) pressure (PSXC).
+The geopotential altitude in the International Standard Atmosphere where
+ the pressure is equal to the reference barometric (ambient) pressure (PSXC).
 \emph default
 
 \begin_inset Index idx
@@ -5397,7 +6160,11 @@ lambdaa@
 
 \end_inset
 
-= -0.0065 K/m = the lapse rate
+= -0.0065 
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C per geopotential meter = the lapse rate
 \begin_inset Index idx
 status open
 
@@ -6167,6 +6934,12 @@ filter!complementary (for wind)
 \end_inset
 
  algorithm.
+\begin_inset CommandInset label
+LatexCommand label
+name "compFilter"
+
+\end_inset
+
  Positive values are toward the east and north, respectively.
  The smooth, high-resolution, continuous measurements from the inertial
  navigation system, {VNS, VEW}, which can slowly accumulate errors over
@@ -6543,7 +7316,20 @@ GGVEW
 \begin_inset Newline newline
 \end_inset
 
-GGVNS
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{GGVNS}{GGVNS}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Index idx
 status open
 

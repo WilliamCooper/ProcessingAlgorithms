@@ -7,7 +7,7 @@ and global positioning systems\index{GPS}. Both are described in
 this section, and combined results that merge the best features of
 each into composite variables for location and motion are also discussed.
 Useful references for material in this section are \href{http://nldr.library.ucar.edu/repository/assets/technotes/TECH-NOTE-000-000-000-064.pdf}{Lenschow (1972)}
-and \href{http://www.eol.ucar.edu/raf/Bulletins/bulletin23.html}{RAF Bulletin 23}.\index{Bulletin 23}
+and \href{https://www.eol.ucar.edu/content/raf-bulletin-no-23}{RAF Bulletin 23}.\index{Bulletin 23}
 
 \subsection{Inertial Reference Systems}
 
@@ -91,7 +91,7 @@ the accuracy is quoted by the manufacturer as 0.2$\text{�}$ after
 6 h of flight. Values are provided by the INS at a frequency of 25
 Hz. ``True'' distinguishes the heading from the magnetic heading\index{heading!magnetic},
 the heading that would be measured by a magnetic compass. For more
-information on the coordinate system used, see \href{http://www.eol.ucar.edu/raf/Bulletins/bulletin23.html}{RAF Bulletin 23}\index{Bulletin 23}.\label{punch3.2}
+information on the coordinate system used, see \href{https://www.eol.ucar.edu/content/raf-bulletin-no-23}{RAF Bulletin 23}\index{Bulletin 23}.\label{punch3.2}
 
 \textbf{Aircraft Pitch Attitude Angle (}$\text{�}$\textbf{): }\textbf{\uline{PITCH}}\sindex[var]{PITCH}\index{PITCH}\index{INS!specifications}\nop{PITCH}{}\\
 \emph{The angle between the centerline of the aircraft (pointing ahead,
@@ -115,8 +115,10 @@ of 50 Hz.
 \textbf{Aircraft Vertical Acceleration (m\,s$^{-2}$): }\textbf{\uline{ACINS}}\sindex[var]{ACINS}\index{ACINS}\nop{ACINS}{}\\
 \index{acceleration!vertical}\emph{The acceleration upward (relative
 to the Earth) as measured by an inertial reference unit.\index{IRU}}
-With INSs now in use, the internal drift is removed by the INS via
-pressure damping through reference to the pressure altitude\index{pressure damping}.\footnote{For earlier projects using the Litton LTN-51 INS, this is a direct
+With INSs now in use, the internal drift that arises when this measurement
+is integrated to get aircraft vertical speed and then altitude is
+removed by the INS via pressure damping through reference to the pressure
+altitude\index{pressure damping}.\footnote{For earlier projects using the Litton LTN-51 INS, this is a direct
 measurement without adjustment for changes in gravity during flight
 and without pressure-damping. Previous use employed a baro-inertial
 loop to compensate for drift in the integrated measurement. See the
@@ -135,6 +137,49 @@ below for WP3\index{WP3} and the Litton LTN-51\index{INS!Litton LTN-51},
 to update the value of the acceleration. This variable is also filtered
 within the INS so that there is little variance with frequency higher
 than 0.1 Hz. 
+
+\textbf{Aircraft Rate of Climb (m/s): }\textbf{\uline{ROC}}\index{rate of climb}\sindex[var]{ROC}\nop{VSPD}{}\textbf{
+}(new 2017)\textbf{}\\
+\emph{The rate of climb or upward speed of the aircraft, }as measured
+by the INS with correction so as to represent the derivative of the
+geometric height. This variable is calculated by integration of the
+variable ACINS and then addition of the low-pass-filtered difference
+between that integral and the climb rate determined from the hydrostatic
+equation. The result retains the high-frequency response from the
+INS while matching the low-frequency average value determined from
+the hydrostatic equation, and so represents change in geometric height.
+\href{https://drive.google.com/open?id=0B1kIUH45ca5AMXpaWlIyWWxwU2M}{This memo}
+contains additional background information on this variable.\\
+\fbox{\begin{minipage}[t]{0.95\textwidth}%
+$g$$^{\dagger}$ = acceleration of gravity (see Eq. \ref{eq:g_lambda})\\
+$R_{d}{}^{\dagger}$ = gas constant for dry air\\
+$T_{K}$ = absolute temperature = (ATX + 273.15)\\
+$a$ = ACINS = upward acceleration as measured by the INS {[}m\,s$^{-2}${]}\\
+$p$ = PSXC = measured ambient pressure {[}hPa{]}\\
+$\Delta p$ = difference between current and last value of PSXC\\
+$\Delta t$ = time between samples (1/$f$ where $f$ is the sample
+frequency)\\
+$F_{L}$ = low-pass Butterworth filter (cf.~p.~\pageref{compFilter}).\\
+
+\rule[0.5ex]{1\linewidth}{1pt}
+\begin{enumerate}
+\item From consecutive measurements of pressure, estimate the rate of climb
+from the hydrostatic equation in the form:\\
+\[
+w_{p}=-\frac{R_{d}T_{k}}{gp}\frac{\Delta p}{\Delta t}
+\]
+\item Add the current measurement of acceleration to the cumulative sum:\\
+\[
+w_{p}^{*}\leftarrow w_{p}^{*}+a\Delta t
+\]
+\item Define ROC as the sum of $w_{p}^{*}$ and the low-pass filtered value
+of ($w_{p}-w_{p}^{*}$):\\
+\begin{align*}
+\mathrm{ROC} & =w_{p}^{*}+F_{L}(w_{p}-w_{p}^{*})
+\end{align*}
+\end{enumerate}
+%
+\end{minipage}}
 
 \textbf{Pressure-Damped Aircraft Vertical Velocity (m/s): }\textbf{\uline{WP3}}\sindex[var]{WP3}\index{WP3}
 (obsolete)\\
@@ -318,7 +363,7 @@ conversion of DEI and DNI, described in the preceding paragraph.
 \end{hangparagraphs}
 
 
-\subsubsection*{\noun{\textendash Raw IRS Variables Not Included In Normal Data Files}:\textendash{}}
+\subsubsection*{\noun{--Raw IRS Variables Not Included In Normal Data Files}:--}
 
 The following INS and IRU variables\index{IRU!raw variables}\index{INS!measurements not in normal data files}
 are not normally included in archived data files, but their values
@@ -371,20 +416,29 @@ OEM-4 receiver on the C-130 (to be replaced by an OEM-6 after January
 for a description of these systems. The coordinate system used for
 all GPS measurements is the World Geodetic System WGS-84; \index{altitude!pressure}\index{altitude!geopotential}\index{altitude!geometric}\index{gravity!standard}
 for details, see \href{http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf}{this link}.\footnote{There are four measures of height or altitude discussed in this technical
-note, height relative to the WGS-84 reference surface, geometric height,
-geopotential height and pressure height. The WGS-84 height (measured
-by GPS instruments) is height relative to a reference system in which
-zero is defined by a reference ellipsoid, a surface having constant
-gravitational equipotential that approximates that at mean sea level.
-The true mean sea level, represented by the ``geoid,'' is more structured
-and departs significantly from the WGS-84 reference surface, often
-by several 10s of meters. The geometric height is the true height
-above a reference surface, often taken to be mean sea level or the
-geoid; this may therefore differ significantly from the height measured
-by a GPS unit. There is a variable included below, GGEOIDHT, that
-provides a measure of the difference. Geopotential height is the height
-that would give a particular value of the geopotential, or gravitational
-potential energy per unit mass, if that mass were raised against standard
+note, height relative to the WGS-84 reference surface, geometric height
+relative to mean sea level, geopotential height and pressure height.
+The WGS-84 height (measured by GPS instruments) is height relative
+to a reference system in which zero is defined by a specified reference
+ellipsoid representing the shape of the Earth, as specified here:
+\href{http://earth-info.nga.mil/GandG/publications/tr8350.2/tr8350_2.html}{http://earth-info.nga.mil/GandG/publications/tr8350.2/tr8350\_2.html},.
+This is not defined to be a level surface in the sense of being an
+equipotential surface. A better approximation of mean sea level is
+the ``geoid'', a surface having constant gravitational equipotential
+that approximates that at mean sea level. The geoid is more structured
+than the WSR-84 reference ellipsoid and departs significantly from
+it, often by several 10s of meters. Even the geoid does not represent
+mean sea level exactly because local mean sea level can be influenced
+by variations in water density, mean wind, or ocean circulation, but
+the geoid is usually the reference used for measurements labeled ``MSL''
+except when fine-scale local effects must be considered. The geometric
+height is the true height above a reference surface, often taken to
+be mean sea level or the geoid; this may therefore differ significantly
+from the height measured directly by a GPS unit. There is a variable
+included below, GGEOIDHT, that provides a measure of the difference.
+Geopotential height is the height above mean sea level that would
+give the geopotential, or gravitational potential energy per unit
+mass, of the actual parcel if that mass were raised against standard
 gravity (not varying, e.g., with latitude or height) to that altitude.
 For the purpose of this definition, standard gravity is defined to
 be 9.80665$\,\mathrm{m\,\mathrm{s^{-2}}}$. Finally, pressure altitude,
@@ -404,10 +458,10 @@ All variables are provided by the GPS receivers at 5 Hz. Latitude
 and longitude are recorded in a special log file (called the GPGGA
 log) with a resolution of 0.0001 degree, while Earth-relative velocity
 is recorded in the GPRMC log with resolution of 0.1 m/s. Starting
-in January 2014 new logs (named BESTPOS and BESTVEL) will also be
+in January 2014 new logs (named BESTPOS and BESTVEL) have also been
 recorded to preserve more significant digits in the measurements.
-The BESTPOS log will have a position resolution of $10^{-11}\deg$,
-while the BESTVEL log will be recorded with 0.0001 m/s resolution. 
+The BESTPOS log has a position resolution of $10^{-11}\deg$, while
+the BESTVEL log is recorded with 0.0001 m/s resolution. 
 
 Some of the following variables are also available from alternate
 Garmin GPS16 receivers, for which the variable name is qualified by
@@ -442,15 +496,14 @@ of VSPD for vertical wind or GGVEW and GGVNS are used (perhaps via
 the complementary filter) for the horizontal wind, an additional correction
 is needed for the displacement between the GPS antenna and the INS
 receiver. On the GV, this distance is -4.30~m. A correction for aircraft
-rotation is therefore applied to GGVSPD, GGVEW, and GGVNS, as described
-below.
+rotation is therefore applied to GGVSPD, as described below.
 \begin{hangparagraphs}
 \textbf{GPS Latitude (}$\text{�}$\textbf{): }\textbf{\uline{GGLAT}}\sindex[var]{GGLAT}\index{GGLAT},
 \textbf{\uline{LAT\_G\sindex[var]{LAT_G@LAT\_G}\index{LAT_G@LAT\_G}}};
 also formerly \textbf{\uline{GLAT\sindex[var]{GLAT} \index{GLAT}}}\nop{GGLAT}{}\\
 \emph{The aircraft latitude measured by a global positioning system.}
 Positive values are north of the equator; negative values are south.
-Because these variables are recorded in netCDF files as single-precision
+These variables are recorded in netCDF files as single-precision values.
 GGLAT is provided by the data-system GPS; LAT\_G and LATF\_G are from
 the avionics system GPS. LATF\_G is a fine-resolution measurement
 that requires special processing. 
@@ -472,11 +525,11 @@ avionics-system GPS.
 
 \textbf{GPS Ground Speed Vector East Component (m/s): }\textbf{\uline{GGVEW}}\sindex[var]{GGVEW}\index{GGVEW},
 \textbf{\uline{VEW\_G}}\sindex[var]{VEW_G@VEW\_G}\index{VEW_G@VEW\_G}\nop{GGVEW}{}\\
-\emph{The east component of ground speed measured by a global positioning
-system.} GGVEW originates from a data-system GPS; VEW\_G originates
-from an avionics-system GPS. In the case of GGVEW, when this is used
-in the calculation of horizontal wind, the following correction (omitted
-before 2016) is applied:\\
+\emph{The eastward component of ground speed measured by a global
+positioning system.} GGVEW originates from a data-system GPS; VEW\_G
+originates from an avionics-system GPS. In the case of GGVEW, when
+this is used in the calculation of horizontal wind, the following
+correction would be needed::\\
 \[
 {\rm GGVEWA}={\rm GGVEW}-L_{G}\dot{\psi}\frac{\cos\psi}{\cos\phi}
 \]
@@ -485,7 +538,10 @@ $L_{G}=-4.30$~m for the GV, $\dot{\psi}$ is the rate-of-change
 of heading (in radians), and $\psi$ and $\phi$ are respectively
 the heading and roll angles. The variable BYAWR transmitted from the
 INS gives the rate-of-change of heading $\dot{\psi}$ after conversion
-from $^{\circ}\thinspace s^{-1}$ to radians~$s^{-1}$. 
+from $^{\circ}\thinspace s^{-1}$ to radians~$s^{-1}$. This correction
+is not applied in normal processing because the use of the complementary
+filter, discussed in Sect.\_\ref{subsec:IRS/GPS}, makes it of negligible
+importance. More information is contained in \href{https://drive.google.com/open?id=0B1kIUH45ca5AdVdRQ25BdG1GUXc}{this memo}.
 
 \textbf{GPS Ground Speed Vector North Component (m/s): }\textbf{\uline{GGVNS}}\sindex[var]{GGVNS}\index{GGVNS},
 \textbf{\uline{VNS\_G}}\uline{\sindex[var]{VNS_G@VNS\_G}\index{VNS_G@VNS\_G}}\nop{GGVNS}{}\\
@@ -493,7 +549,7 @@ from $^{\circ}\thinspace s^{-1}$ to radians~$s^{-1}$.
 positioning system.} GGVNS originates from a data-system GPS; VNS\_G
 originates from an avionics-system GPS. In the case of GGVNS, when
 this is used in the calculation of horizontal wind, the following
-correction (omitted before 2016) is applied:\\
+correction would be needed:\\
 \[
 {\rm GGVNSA}={\rm GGVNS}+L_{G}\dot{\psi}\frac{\sin\psi}{\cos\phi}
 \]
@@ -502,33 +558,74 @@ $L_{G}=-4.30$~m for the GV, $\dot{\psi}$ is the rate-of-change
 of heading (in radians), and $\psi$ and $\phi$ are respectively
 the heading and roll angles. The variable BYAWR transmitted from the
 INS gives the rate-of-change of heading $\dot{\psi}$ after conversion
-from $^{\circ}\thinspace s^{-1}$ to radians~$s^{-1}$. 
+from $^{\circ}\thinspace s^{-1}$ to radians~$s^{-1}$. This correction
+is not applied in normal processing because the use of the complementary
+filter, discussed in Sect.~\ref{subsec:IRS/GPS}, makes it of negligible
+importance, as discussed in the note referenced for GGVEW.
 
-\textbf{GPS-Computed Aircraft Vertical Velocity (m/s):}\nop{GGVSPD}{}\textbf{
+\textbf{GPS-Measured Aircraft Vertical Velocity (m/s):}\nop{GGVSPD}{}\textbf{
 }\textbf{\uline{GGVSPD, VSPD\_G\sindex[var]{VSPD_G@VSPD\_G}\index{VSPD_G@VSPD\_G}\sindex[var]{GGVSPD}\index{GGVSPD}}}\textbf{,}
 \textbf{\uline{GVZI}}\sindex[var]{GVZI (obsolete)}\index{GVZI}
 (obsolete)\\
-\emph{The aircraft vertical velocity provided by an avionics GPS unit.}
-\index{velocity!aircraft vertical}Positive values are upward.\label{punch3.9}
-When GGVSPD is used in the calculation of vertical wind, the following
-correction\index{correction!vertical wind!rotation in pitch} (omitted
-before 2016) is applied:\label{punch:3-13}\\
+\emph{The aircraft vertical velocity provided by a GPS unit.} \index{velocity!aircraft vertical}Positive
+values are upward.\label{punch3.9} When GGVSPD is used in the calculation
+of vertical wind, the following correction\index{correction!vertical wind!rotation in pitch}
+(omitted before 2017) is applied:\label{punch:3-13}\\
 \[
 {\rm GGVSPDA}={\rm GGVSPD}-L_{G}\dot{\theta}
 \]
 where $L_{G}=-4.30$~m for the GV and $\dot{\theta}$ is the rate-of-change
 of the pitch angle, corresponding to the IRU variable BPITCHR{*}$\pi$/180.
 The variable GGVSPDA is used internally but not recorded in the data
-archives.
+archives. See \href{https://drive.google.com/open?id=0B1kIUH45ca5AdVdRQ25BdG1GUXc}{this memo}
+for additional justification.
 
-\textbf{GPS Altitude (m): }\textbf{\uline{GGALT}}\sindex[var]{GGALT}\index{GGALT},
+\textbf{GPS Altitude (m MSL): }\textbf{\uline{GGALT}}\sindex[var]{GGALT}\index{GGALT},
 \textbf{\uline{GALT\_A\sindex[var]{GALT_A@GALT\_A}\index{GALT_A@GALT\_A}}}\nop{GGALT}{}\\
 \emph{The aircraft altitude}\index{altitude!aircraft!GPS}\emph{ measured
 by a global positioning system.} The measurement is with respect to
-a geopotential surface (MSL) defined by the Earth model of the GPS,
-which is WGS84.\index{World Geodetic System}\index{WGS-84} Positive
-values are above the reference surface. GGALT originates from a data-system
-GPS; GALT\_A originates from an avionics-system GPS.
+the geoid as represented internally by the GPS receiver and is determined
+by adding the adjustment $-$GGEOIDHT to the direct measurement relative
+to the ellipsoidal Earth model of the GPS, which is defined by WGS-84.\index{World Geodetic System}\index{WGS84}
+Positive values are above the reference surface. GGALT originates
+from a data-system GPS; GALT\_A originates from an avionics-system
+GPS. See the discussion of height at the beginning of this subsection
+and the variable GGEOIDHT below for interpretation of these GPS-based
+measurements. 
+
+\textbf{GPS Altitude above the WGS94 reference ellipse (m):}\nop{GGHMSL}\textbf{\uline{
+GGHWGS}}\index{GGHWGS}\sindex[var]{GGHWGS}\\
+\emph{The aircraft altitude above the ellipse that is the reference
+for the WGS-84 coordinate system. }This variable is defined as GGHWGS=GGALT$+$GGEOIDHT.\label{punch3.4-1}
+
+\textbf{GPS Geopotential Altitude (m):}\nop{GEOPTH} \textbf{\uline{GEOPTH}}\sindex[var]{GEOPHT}\index{GEOPHT}\\
+\emph{The aircraft geopotential altitude above mean sea level.} If
+$g(z,\lambda)$ is the acceleration of gravity as represented by the
+formula in the Table of Constants on page \pageref{constants-table},
+then the formula used for calculation of GEOPTH is obtained by integrating
+that formula from the reference surface for MSL (the geoid, $\Delta$
+above the WGS84 reference ellipse, to the geometric altitude $H$,
+which is $H+\Delta$ above the reference ellipse. The result is normally
+close (within about 0.5~m) to that obtained with $\Delta=0$. There
+are additional details in \href{https://drive.google.com/open?id=1GiuYQRLrdv3lzcU9gvVbAZchvVVDRWu3}{this memo}.\\
+\fbox{\begin{minipage}[t]{0.95\columnwidth}%
+$H$ = aircraft altitude above mean sea level, {[}m{]} (\{GGALT\})\\
+$\lambda$ = latitude (\{GGLAT\} converted to radians)\\
+$Z(H,\lambda)$ = aircraft geopotential height {[}m{]} (\{GEOPTH\})\\
+$g_{0}$ = constant acceleration of gravity as defined for the International
+Standard Atmosphere\\
+$g_{e},\,g_{1},\,g_{2},\,k_{i}$ as defined in the Table of Constants
+on p.~ \pageref{constants-table},\\
+$\Delta$= height of the geoid above the WGS-84 reference ellipse
+(\{GGEOIDHT\})\\
+\\
+\rule[0.5ex]{1\columnwidth}{1pt}\\
+\begin{align*}
+\{\mathrm{GEOPHT\}}=Z(H,\lambda) & =\frac{1}{g_{0}}\Biggl\{ g_{e}\left(\frac{1+g_{1}\sin^{2}\lambda}{(1-g_{2}\sin^{2}\lambda)^{1/2}}\right)\\
+\times & \left(H-\frac{1}{2}\left((H+\Delta)^{2}-\Delta^{2}\right)(k_{1}-k_{2}\sin^{2}\lambda)+\frac{1}{3}\left((H+\Delta)^{3}-\Delta^{3}\right)k_{3}\right)\Biggr\}
+\end{align*}
+%
+\end{minipage}}\\
 
 \textbf{GPS Aircraft Track Angle ($\text{�}$):}\nop{GGTRK}{}\textbf{
 }\textbf{\uline{GGTRK\sindex[var]{GGTRK}\index{GGTRK}}}\textbf{,}\textbf{\uline{
@@ -537,16 +634,18 @@ TKAT\_G}}\sindex[var]{TKAT_G@TKAT\_G}\textbf{\uline{\index{TKAT_G@TKAT\_G}}}\\
 true north)} as measured by a data-system global positioning system
 (GGTRK) or an avionics-system GPS (TKAT\_G)\emph{.}
 
-\textbf{GPS Height of the Geoid (m):}\nop{GGOIDHT}{}\textbf{ }\textbf{\uline{GGEOIDHT\sindex[var]{GGEOIDHT}\index{GGEOIDHT}}}\\
-\emph{Height of geoid, approximating mean sea level, above the WGS84
-ellipsoid.} \label{punch3.4}
+\textbf{GPS Height of the Geoid (m):}\nop{GGEOIDHT}{}\textbf{ }\textbf{\uline{GGEOIDHT\sindex[var]{GGEOIDHT}\index{GGEOIDHT}}}\\
+\emph{Height of geoid, approximating mean sea level, above the WGS-84
+ellipsoid.} The height above mean sea level is found by subtracting
+this value from the height above the WGS-84 reference ellipse as provided
+by GPS-based measurements.\label{punch3.4}
 
 \textbf{GPS Satellites Tracked:}\nop{GGNSAT}{}\textbf{ }\textbf{\uline{GGNSAT}}\textbf{\sindex[var]{GGNSAT}\index{GGNSAT}}\\
 \emph{The number of satellites tracked by a GPS unit.}
 
 \textbf{GPS Mode:}\nop{GGWUAL}{}\textbf{ }\textbf{\uline{GGQUAL}}\sindex[var]{GGQUAL}\index{GGQUAL}\\
 \emph{GPS quality flag:}\\
-\begin{minipage}[t]{0.95\columnwidth}%
+\fbox{\begin{minipage}[t]{0.95\columnwidth}%
 \begin{lyxlist}{00.00.0000}
 \item [{~~~~~0}] \setlength{\itemsep}{-1\parsep}Invalid
 \item [{~~~~~1}] Valid measurement but without quality enhancement
@@ -563,7 +662,7 @@ and L2 GPS carrier frequencies and provides about 15 cm accuracy in
 position.
 \end{lyxlist}
 %
-\end{minipage}
+\end{minipage}}
 
 \textbf{GPS Mode:}\nop{GMODE}{}\textbf{ }\textbf{\uline{GMODE\sindex[var]{GMODE (obsolete)}\index{GMODE}
 }}\emph{(obsolete)}\\
@@ -613,6 +712,16 @@ of the APN-159.
 }\textbf{\uline{HGM232}}\sindex[var]{HGM232}\index{HGM232}\\
 \emph{Altitude above the ground} as measured by an APN-232 radar altimeter.
 
+\textbf{Height Above Terrain (m):}\nop{ALTG}{} \textbf{\uline{ALTG}}\index{ALTG}\sindex[var]{ALTG}\\
+\emph{The aircraft altitude above the Earth's surface} as represented
+by the next variable. If GGALT is the altitude above mean sea level,
+ALTG=GGALT$-$SFC.
+
+\textbf{Height of the Earth's Surface (m MSL):}\nop{SFC}{} \textbf{\uline{SFC}}\index{SFC}\sindex[var]{SFC}\\
+\emph{The altitude of the Earth's surface} at a location directly
+below the aircraft. The data source is the Shuttle Radar Topography
+Mission of 2000. The height estimate is described in \href{https://drive.google.com/open?id=0B1kIUH45ca5ATkNyTlZVRm11WDA}{this memo}.
+
 \textbf{Pressure-Damped Inertial Altitude (m):}\nop{HI3}{}\textbf{
 }\textbf{\uline{HI3}}\sindex[var]{HI3 (obsolete)}\index{HI3}
 (obsolete)\\
@@ -627,9 +736,9 @@ for vertical wind. See the discussion of WP3 \vpageref{WP3 algorithm}.
 This variable is now obsolete.
 
 \textbf{ISA Pressure Altitude (m):}\nop{PALT}{}\textbf{ }\textbf{\uline{PALT}}\sindex[var]{PALT}\index{PALT}\\
-\emph{The altitude in the International Standard Atmosphere where
-the pressure is equal to the reference barometric (ambient) pressure
-(PSXC).}\index{altitude!pressure}\index{International Standard Atmosphere}
+\emph{The geopotential altitude in the International Standard Atmosphere
+where the pressure is equal to the reference barometric (ambient)
+pressure (PSXC).}\index{altitude!pressure}\index{International Standard Atmosphere}
 \index{ISA|see {International Standard Atmosphere}}\footnote{See ``U.S. Standard Atmosphere, 1976'', NASA-TM-A-74335, available
 for download at \href{http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19770009539_1977009539.pdf}{this URL}.} The pressure altitude is best interpreted as a variable equivalent
 to the measured pressure, not as a geometric altitude. In the following
@@ -648,14 +757,14 @@ The difference between these older values and the ones recommended
 below is everywhere less than 10 m and so is small compared to the
 expected uncertainty in pressure measurements, because 1 hPa change
 in pressure leads to a change in pressure altitude that varies from
-about 8\textendash 40 m over the altitude range of the GV.} A note at \href{https://www.eol.ucar.edu/system/files/PressureAltitude.pdf}{this URL}
+about 8--40 m over the altitude range of the GV.} A note at \href{https://www.eol.ucar.edu/system/files/PressureAltitude.pdf}{this URL}
 describes the pressure altitude in more detail and documents the change
 that was made in November 2010.\\
 \\
 \fbox{\begin{minipage}[t]{0.9\textwidth}%
 $T_{0}^{\ddagger}$= 288.15 K, reference temperature\\
 $\lambda_{a}^{\ddagger}$ \sindex[lis]{lambdaa@$\lambda_{a}$= tropospheric lapse rate, standard atmosphere}=
--0.0065 K/m = the lapse rate\index{International Standard Atmosphere!lapse rate}
+-0.0065 $^{\circ}$C per geopotential meter = the lapse rate\index{International Standard Atmosphere!lapse rate}
 for the troposphere$^{\ddagger}$\\
 $p$ = measured static (ambient) pressure, hPa, usually from PSXC\\
 $p_{0}^{\ddagger}$\sindex[lis]{P0star@$p_{0}^{\ddagger}$= reference pressure for zero altitude,
@@ -776,7 +885,7 @@ in about one-half hour after GPS information is lost.\medskip{}
 }\textbf{\uline{VNSC}}\sindex[var]{VNSC}\index{VNSC}\\
 \index{velocity!aircraft}These variables result from combining GPS
 and INS output of the east and north components of ground speed from
-a complementary-filter\index{filter!complementary (for wind)} algorithm.
+a complementary-filter\index{filter!complementary (for wind)} algorithm.\label{compFilter}
 Positive values are toward the east and north, respectively. The smooth,
 high-resolution, continuous measurements from the inertial navigation
 system, \{VNS, VEW\}, which can slowly accumulate errors over time,
@@ -849,8 +958,8 @@ VNS\index{VNS} = IRS-measured north component of the aircraft ground
 speed\\
 GGVEW\index{GGVEW} = GPS-measured east component of the aircraft
 ground speed\\
-GGVNS\index{GGVNS} = GPS-measured north component of the aircraft
-ground speed\\
+\hyperlink{GGVNS}{GGVNS}\index{GGVNS} = GPS-measured north component
+of the aircraft ground speed\\
 $F_{L}()$ = three-pole Butterworth low-pass recursive digital filter\\
 \\
 \rule[0.5ex]{1\linewidth}{1pt}

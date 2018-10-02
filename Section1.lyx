@@ -929,9 +929,14 @@ status open
 
 \backslash
 vfill
-\backslash
-eject
 \end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "constants-table"
 
 \end_inset
 
@@ -1178,7 +1183,7 @@ target "http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf"
 
 \begin_inset Formula 
 \begin{equation}
-g=g_{e}\left(\frac{1+g_{1}\sin^{2}(\lambda)}{(1-g_{2}\sin^{2}\lambda)^{1/2}}\right)-a_{z}z\label{eq:g_lambda}
+g(z,\lambda)=g_{e}\left(\frac{1+g_{1}\sin^{2}(\lambda)}{(1-g_{2}\sin^{2}\lambda)^{1/2}}\right)(1-(k_{1}-k_{2}\sin^{2}(\lambda))z+k_{3}z^{2})\label{eq:g_lambda}
 \end{equation}
 
 \end_inset
@@ -1232,7 +1237,15 @@ s
 \begin_inset Formula $^{-2}$
 \end_inset
 
- is the reference value at the surface and equator,
+, 
+\begin_inset Formula $g_{1}=0.00193185$
+\end_inset
+
+, 
+\begin_inset Formula $g_{2}=0.00669438$
+\end_inset
+
+, 
 \begin_inset Newline newline
 \end_inset
 
@@ -1277,30 +1290,34 @@ s
 \end_inset
 
 
-\begin_inset Formula $g_{1}=0.001931851$
+\begin_inset Formula $\{k_{1},k_{2},k_{3}\}=\{$
 \end_inset
 
-
-\begin_inset space \thinspace{}
-\end_inset
-
- 
-\begin_inset Formula $g_{2}=0.006694380$
-\end_inset
-
-, and 
-\begin_inset Formula $a_{z}=3.086\times10^{-6}$
-\end_inset
-
-
-\begin_inset space \thinspace{}
+3.15704
+\begin_inset Formula $\times10^{-7}$
 \end_inset
 
 m
 \begin_inset Formula $^{-1}$
 \end_inset
 
-.
+, 2.10269
+\begin_inset Formula $\times10^{-9}$
+\end_inset
+
+m
+\begin_inset Formula $^{-1}$
+\end_inset
+
+, 7.37452
+\begin_inset Formula $\times10^{-14}$
+\end_inset
+
+m
+\begin_inset Formula $^{-2}$
+\end_inset
+
+}
 \end_layout
 
 \end_inset
@@ -1469,8 +1486,7 @@ Jones, F.
 \begin_inset Formula $_{2}$
 \end_inset
 
- increased to about 0.00039 and others decreased proportionately, the mean
- is 28.9637.
+ about 0.00039 and others decreased proportionately, the mean is 28.9637.
 \end_layout
 
 \begin_layout Plain Layout
@@ -3683,14 +3699,70 @@ time!example of usage
 \end_inset
 
 
-\begin_inset Newline newline
+\end_layout
+
+\begin_layout Hanging
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<init1, echo=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+library(knitr)
+\end_layout
+
+\begin_layout Plain Layout
+
+opts_chunk$set(echo=FALSE, include=FALSE, fig.lp="fig:")
+\end_layout
+
+\begin_layout Plain Layout
+
+opts_chunk$set(fig.width=6, fig.height=5, fig.align="center", digits=4)
+\end_layout
+
+\begin_layout Plain Layout
+
+thisFileName <- "Recommendation161107c"
+\end_layout
+
+\begin_layout Plain Layout
+
+require(Ranadu, quietly = TRUE, warn.conflicts=FALSE)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
 \end_inset
 
- 
-\begin_inset Newline newline
+
+\end_layout
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Hanging
 \begin_inset Box Frameless
 position "t"
 hor_pos "c"

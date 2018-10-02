@@ -1,464 +1,467 @@
 \begin{theindex}
 
-  \item A1DC, \hyperpage{64}
-  \item A1DP, \hyperpage{64}
-  \item A200X, \hyperpage{60}
-  \item A200Y, \hyperpage{60}
-  \item A260X, \hyperpage{60}
-  \item AACT, \hyperpage{92}
+  \item A1DC, \hyperpage{66}
+  \item A1DP, \hyperpage{66}
+  \item A200X, \hyperpage{62}
+  \item A200Y, \hyperpage{62}
+  \item A260X, \hyperpage{62}
+  \item AACT, \hyperpage{94}
   \item abbreviations
     \subitem non-standard, \hyperpage{6}
   \item acceleration
     \subitem vertical, \hyperpage{11}
-  \item ACDP, \hyperpage{60}
+  \item ACDP, \hyperpage{62}
   \item ACINS, \hyperpage{11}
-  \item adiabatic compression, \hyperpage{33}
-  \item ADIF, \hyperpage{51}
-  \item ADIFR, \hyperpage{51, 52}
+  \item adiabatic compression, \hyperpage{36}
+  \item ADIF, \hyperpage{53}
+  \item ADIFR, \hyperpage{53, 54}
   \item ADS=aircraft data system, \hyperpage{10}
   \item aeros, \hyperpage{1}
   \item aerosol
-    \subitem ancillary datasets, \hyperpage{75}
-    \subitem spectrometer, \hyperpage{74}
-  \item AF300, \hyperpage{60}
-  \item AFIXx, \hyperpage{85}
-  \item AFSSP, \hyperpage{60}
-  \item airspeed, \hyperpage{29}, \hyperpage{31, 32}, \hyperpage{34}, 
-		\hyperpage{50}
-    \subitem indicated, \hyperpage{86}
-  \item AKFXx, \hyperpage{85}
-  \item AKRD, \hyperpage{51, 52}
-  \item ALAT, \hyperpage{84}
-  \item ALON, \hyperpage{84}
-  \item ALPHA, \hyperpage{84}
-  \item ALT, \hyperpage{14}
+    \subitem ancillary datasets, \hyperpage{77}
+    \subitem spectrometer, \hyperpage{76}
+  \item AF300, \hyperpage{62}
+  \item AFIXx, \hyperpage{87}
+  \item AFSSP, \hyperpage{62}
+  \item airspeed, \hyperpage{31}, \hyperpage{33, 34}, \hyperpage{36}, 
+		\hyperpage{53}
+    \subitem indicated, \hyperpage{88}
+  \item AKFXx, \hyperpage{87}
+  \item AKRD, \hyperpage{53, 54}
+  \item ALAT, \hyperpage{86}
+  \item ALON, \hyperpage{86}
+  \item ALPHA, \hyperpage{86}
+  \item ALT, \hyperpage{15}
+  \item ALTG, \hyperpage{21}
   \item altimeter
-    \subitem radar, \hyperpage{19}
+    \subitem radar, \hyperpage{21}
   \item altitude
     \subitem aircraft
-      \subsubitem GPS, \hyperpage{18}
-    \subitem geometric, \hyperpage{15}
-    \subitem geopotential, \hyperpage{15}, \hyperpage{29}
-    \subitem inertial, \hyperpage{14}
-    \subitem pressure, \hyperpage{12}, \hyperpage{15}, \hyperpage{19}, 
-		\hyperpage{29}
-  \item ALTX, \hyperpage{20}
+      \subsubitem GPS, \hyperpage{19}
+    \subitem geometric, \hyperpage{16}
+    \subitem geopotential, \hyperpage{16}, \hyperpage{32}
+    \subitem inertial, \hyperpage{15}
+    \subitem pressure, \hyperpage{13}, \hyperpage{16}, \hyperpage{22}, 
+		\hyperpage{32}
+  \item ALTX, \hyperpage{23}
   \item angle
-    \subitem solar azimuth, \hyperpage{80}
-    \subitem solar declination, \hyperpage{79}
-    \subitem solar elevation, \hyperpage{79}
-    \subitem solar zenith, \hyperpage{80}
+    \subitem solar azimuth, \hyperpage{82}
+    \subitem solar declination, \hyperpage{81}
+    \subitem solar elevation, \hyperpage{81}
+    \subitem solar zenith, \hyperpage{82}
   \item angles
-    \subitem solar, \hyperpage{79}
-  \item APCAS, \hyperpage{60}
-  \item APN-159, \hyperpage{19}
-  \item AS100, \hyperpage{60}
-  \item AS200, \hyperpage{60}
-  \item AT\_ITR, \hyperpage{35}
-  \item ATC, \hyperpage{85}
-  \item ATKP, \hyperpage{86}
-  \item ATRF, \hyperpage{86}
-  \item ATTACK, \hyperpage{52}
-  \item attack, angle of, \hyperpage{51}
-  \item ATX, \hyperpage{30}, \hyperpage{39}, \hyperpage{42--44}, 
-		\hyperpage{46}, \hyperpage{48}, \hyperpage{50}, 
-		\hyperpage{73}, \hyperpage{89}
-  \item ATx, \hyperpage{30}, \hyperpage{50}
-  \item ATxD, \hyperpage{30}
-  \item ATxH, \hyperpage{30}
-  \item AUHSAS, \hyperpage{60}
-  \item avionics, \hyperpage{27}
-  \item Avogadro constant, \hyperpage{4}, \hyperpage{40}
-  \item AWAS, \hyperpage{70}
+    \subitem solar, \hyperpage{81}
+  \item APCAS, \hyperpage{62}
+  \item APN-159, \hyperpage{21}
+  \item AS100, \hyperpage{62}
+  \item AS200, \hyperpage{62}
+  \item AT\_ITR, \hyperpage{37}
+  \item ATC, \hyperpage{87}
+  \item ATKP, \hyperpage{88}
+  \item ATRF, \hyperpage{88}
+  \item ATTACK, \hyperpage{54}
+  \item attack, angle of, \hyperpage{53}
+  \item ATX, \hyperpage{33}, \hyperpage{41}, \hyperpage{44--46}, 
+		\hyperpage{48}, \hyperpage{50}, \hyperpage{53}, 
+		\hyperpage{75}, \hyperpage{91}
+  \item ATx, \hyperpage{33}, \hyperpage{53}
+  \item ATxD, \hyperpage{33}
+  \item ATxH, \hyperpage{33}
+  \item AUHSAS, \hyperpage{62}
+  \item avionics, \hyperpage{29}
+  \item Avogadro constant, \hyperpage{4}, \hyperpage{42}
+  \item AWAS, \hyperpage{72}
 
   \indexspace
 
   \item baro-inertial loop, \hyperpage{12}
   \item baro-loop, \hyperpage{12}
   \item base time, \hyperpage{7}
-  \item BDIF, \hyperpage{51}
-  \item BDIFR, \hyperpage{51, 52}
-  \item BFIXx, \hyperpage{85}
-  \item BLATA, \hyperpage{15}
-  \item BLONA, \hyperpage{15}
-  \item BNORMA, \hyperpage{15}
-  \item Bolton, \hyperpage{45}
+  \item BDIF, \hyperpage{53}
+  \item BDIFR, \hyperpage{53, 54}
+  \item BFIXx, \hyperpage{87}
+  \item BLATA, \hyperpage{16}
+  \item BLONA, \hyperpage{16}
+  \item BNORMA, \hyperpage{16}
+  \item Bolton, \hyperpage{47}
   \item Boltzmann constant, \hyperpage{4}
-  \item BPITCHR, \hyperpage{15}
-  \item BROLLR, \hyperpage{15}
-  \item Bulletin 21, \hyperpage{27}, \hyperpage{29}
-  \item Bulletin 23, \hyperpage{10, 11}, \hyperpage{49}, \hyperpage{51}
-  \item Bulletin 24, \hyperpage{56}, \hyperpage{58}, \hyperpage{61}, 
-		\hyperpage{92}
-  \item Bulletin 25, \hyperpage{76}, \hyperpage{79}, \hyperpage{90}
+  \item BPITCHR, \hyperpage{16}
+  \item BROLLR, \hyperpage{16}
+  \item Bulletin 21, \hyperpage{29}, \hyperpage{31}
+  \item Bulletin 23, \hyperpage{10, 11}, \hyperpage{51}, \hyperpage{53}
+  \item Bulletin 24, \hyperpage{58}, \hyperpage{60}, \hyperpage{63}, 
+		\hyperpage{94}
+  \item Bulletin 25, \hyperpage{78}, \hyperpage{81}, \hyperpage{92}
   \item Bulletin 9, \hyperpage{1, 2}
-  \item BYAWR, \hyperpage{15}
+  \item BYAWR, \hyperpage{16}
 
   \indexspace
 
-  \item C1DC, \hyperpage{64}
-  \item C1DP, \hyperpage{64}
-  \item C200X, \hyperpage{60}
-  \item C200Y, \hyperpage{60}
-  \item C260X, \hyperpage{60}
-  \item calibration, \hyperpage{27}
+  \item C1DC, \hyperpage{66}
+  \item C1DP, \hyperpage{66}
+  \item C200X, \hyperpage{62}
+  \item C200Y, \hyperpage{62}
+  \item C260X, \hyperpage{62}
+  \item calibration, \hyperpage{29}
     \subitem coefficients, \hyperpage{9}
-    \subitem gas, \hyperpage{66}
-  \item CAVP\_x, \hyperpage{29}
-  \item CCDP, \hyperpage{60}
-  \item CCEP, \hyperpage{83}
-  \item centrifugal acceleration, \hyperpage{13}
-  \item CF300, \hyperpage{60}
-  \item CFSEC, \hyperpage{83}
-  \item CFSSP, \hyperpage{60}
-  \item CGS, \hyperpage{83}
-  \item CH4\_PICx, \hyperpage{66}
-  \item chilled-mirror, \hyperpage{42}
-  \item CIMS, \hyperpage{70}
-  \item CLAT, \hyperpage{83}
-  \item CLON, \hyperpage{83}
-  \item CMODE, \hyperpage{90}
-  \item CN counter, \hyperpage{71}
-    \subitem 3760A, \hyperpage{71}
-    \subitem 3786, \hyperpage{71}
-    \subitem coincidence in, \hyperpage{72}
-    \subitem dead time, \hyperpage{72}
-    \subitem flow rate, \hyperpage{71}
-    \subitem side flow, \hyperpage{72}
-  \item CNTEMP, \hyperpage{71}, \hyperpage{73}
-  \item CNTS, \hyperpage{72, 73}
-  \item CO, \hyperpage{66}, \hyperpage{90}
-  \item CO2\_PICx, \hyperpage{66}
-  \item COCAL, \hyperpage{90}
-  \item COCOR, \hyperpage{90}
+    \subitem gas, \hyperpage{68}
+  \item CAVP\_x, \hyperpage{32}
+  \item CCDP, \hyperpage{62}
+  \item CCEP, \hyperpage{85}
+  \item centrifugal acceleration, \hyperpage{14}
+  \item CF300, \hyperpage{62}
+  \item CFSEC, \hyperpage{85}
+  \item CFSSP, \hyperpage{62}
+  \item CGS, \hyperpage{85}
+  \item CH4\_PICx, \hyperpage{68}
+  \item chilled-mirror, \hyperpage{44}
+  \item CIMS, \hyperpage{72}
+  \item CLAT, \hyperpage{85}
+  \item CLON, \hyperpage{85}
+  \item CMODE, \hyperpage{92}
+  \item CN counter, \hyperpage{73}
+    \subitem 3760A, \hyperpage{73}
+    \subitem 3786, \hyperpage{73}
+    \subitem coincidence in, \hyperpage{74}
+    \subitem dead time, \hyperpage{74}
+    \subitem flow rate, \hyperpage{73}
+    \subitem side flow, \hyperpage{74}
+  \item CNTEMP, \hyperpage{73}, \hyperpage{75}
+  \item CNTS, \hyperpage{74, 75}
+  \item CO, \hyperpage{68}, \hyperpage{92}
+  \item CO2\_PICx, \hyperpage{68}
+  \item COCAL, \hyperpage{92}
+  \item COCOR, \hyperpage{92}
   \item coefficients
-    \subitem calibration, \hyperpage{27}
-    \subitem sensitivity, \hyperpage{28}
+    \subitem calibration, \hyperpage{29}
+    \subitem sensitivity, \hyperpage{30}
   \item compression
-    \subitem adiabatic, \hyperpage{31}
-  \item COMR\_AL, \hyperpage{66}
-  \item CONC1DC, \hyperpage{64}
-  \item CONC1DP, \hyperpage{64}
-  \item CONC3, \hyperpage{61}
-  \item CONC6, \hyperpage{61}
-  \item CONCD, \hyperpage{61}
+    \subitem adiabatic, \hyperpage{33}
+  \item COMR\_AL, \hyperpage{68}
+  \item CONC1DC, \hyperpage{66}
+  \item CONC1DP, \hyperpage{66}
+  \item CONC3, \hyperpage{63}
+  \item CONC6, \hyperpage{63}
+  \item CONCD, \hyperpage{63}
   \item concentration
-    \subitem 2D, \hyperpage{64}
-    \subitem aerosol, \hyperpage{71}
-    \subitem ambient, \hyperpage{71}
-    \subitem calibration gas, \hyperpage{66}
+    \subitem 2D, \hyperpage{66}
+    \subitem aerosol, \hyperpage{73}
+    \subitem ambient, \hyperpage{73}
+    \subitem calibration gas, \hyperpage{68}
     \subitem chemical species, \hyperpage{5, 6}
-    \subitem CN, \hyperpage{72}
+    \subitem CN, \hyperpage{74}
     \subitem droplet, \hyperpage{5}
-    \subitem FSSP, \hyperpage{61}
-    \subitem hydrometeor, \hyperpage{60}
-    \subitem hydrometeor, size distribution, \hyperpage{60}
-    \subitem particle, \hyperpage{75}
-    \subitem PCAS, \hyperpage{93}
-    \subitem ultrafine particles, \hyperpage{71}
-    \subitem water vapor, \hyperpage{40}
-  \item CONCF, \hyperpage{61}
-  \item CONCH\_UVH, \hyperpage{41}
-  \item CONCN, \hyperpage{72, 73}
-  \item CONCP, \hyperpage{61}, \hyperpage{74}
-  \item CONCU, \hyperpage{61}, \hyperpage{74}
-  \item CONCU100, \hyperpage{74}
-  \item CONCU500, \hyperpage{74}
-  \item CONCV\_VXL, \hyperpage{40}
-  \item CONCX, \hyperpage{61}
-  \item CONCY, \hyperpage{61}
+    \subitem FSSP, \hyperpage{63}
+    \subitem hydrometeor, \hyperpage{62}
+    \subitem hydrometeor, size distribution, \hyperpage{62}
+    \subitem particle, \hyperpage{77}
+    \subitem PCAS, \hyperpage{95}
+    \subitem ultrafine particles, \hyperpage{73}
+    \subitem water vapor, \hyperpage{42}
+  \item CONCF, \hyperpage{63}
+  \item CONCH\_UVH, \hyperpage{43}
+  \item CONCN, \hyperpage{74, 75}
+  \item CONCP, \hyperpage{63}, \hyperpage{76}
+  \item CONCU, \hyperpage{63}, \hyperpage{76}
+  \item CONCU100, \hyperpage{76}
+  \item CONCU500, \hyperpage{76}
+  \item CONCV\_VXL, \hyperpage{42}
+  \item CONCX, \hyperpage{63}
+  \item CONCY, \hyperpage{63}
   \item condensation nucleus counter, 
-		\hyperindexformat{\see {CN counter}}{71}
+		\hyperindexformat{\see {CN counter}}{73}
   \item conductivity
-    \subitem thermal, \hyperpage{57}
-  \item conservation of energy, \hyperpage{31}
+    \subitem thermal, \hyperpage{59}
+  \item conservation of energy, \hyperpage{34}
   \item constants, \hyperindexformat{\see{symbols}}{4}
     \subitem table, \hyperpage{4}
-  \item CORAW\_AL, \hyperpage{66}
-  \item Coriolis acceleration, \hyperpage{13}
+  \item CORAW\_AL, \hyperpage{68}
+  \item Coriolis acceleration, \hyperpage{14}
   \item correction
-    \subitem dynamic pressure, \hyperpage{29}
-    \subitem moist air, \hyperpage{31}
-    \subitem pressure, \hyperpage{28}
+    \subitem dynamic pressure, \hyperpage{31}
+    \subitem moist air, \hyperpage{33}
+    \subitem pressure, \hyperpage{30}
     \subitem vertical wind
-      \subsubitem rotation in pitch, \hyperpage{17}
+      \subsubitem rotation in pitch, \hyperpage{19}
   \item count rate
-    \subitem 2D, \hyperpage{64}
-  \item COZRO, \hyperpage{90}
-  \item CPCAS, \hyperpage{60}
-  \item CPS=counts per second, \hyperpage{66}, \hyperpage{68}
-  \item CRHP, \hyperpage{87}
-  \item CS100, \hyperpage{60}
-  \item CS200, \hyperpage{60}
-  \item CSEC, \hyperpage{83}
-  \item CUHSAS, \hyperpage{60}
+    \subitem 2D, \hyperpage{66}
+  \item COZRO, \hyperpage{92}
+  \item CPCAS, \hyperpage{62}
+  \item CPS=counts per second, \hyperpage{68}, \hyperpage{70}
+  \item CRHP, \hyperpage{89}
+  \item CS100, \hyperpage{62}
+  \item CS200, \hyperpage{62}
+  \item CSEC, \hyperpage{85}
+  \item CUHSAS, \hyperpage{62}
 
   \indexspace
 
-  \item d-value, \hyperpage{29}
+  \item d-value, \hyperpage{32}
   \item data
     \subitem acquisition, \hyperpage{1}
     \subitem display, \hyperpage{1}
     \subitem processing, \hyperpage{1}
     \subitem sample rate, \hyperpage{1}
   \item data rates, \hyperpage{8}
-  \item Davies-Jones, \hyperpage{44}
+  \item Davies-Jones, \hyperpage{46}
   \item DAY, \hyperpage{7}
-  \item DBAR1DC, \hyperpage{65}
-  \item DBAR1DP, \hyperpage{65}
-  \item DBAR3, \hyperpage{61}
-  \item DBAR6, \hyperpage{61}
-  \item DBARD, \hyperpage{61}
-  \item DBARF, \hyperpage{61}
-  \item DBARP, \hyperpage{61}
-  \item DBARU, \hyperpage{61}
-  \item DBARX, \hyperpage{61}
-  \item DBARY, \hyperpage{61}
-  \item dBz, \hyperpage{62}
-  \item DBZ1DC, \hyperpage{65}
-  \item DBZ1DP, \hyperpage{65}
-  \item DBZ6, \hyperpage{62}
-  \item DBZD, \hyperpage{62}
-  \item DBZF, \hyperpage{62}
-  \item DBZX, \hyperpage{62}
-  \item DBZY, \hyperpage{62}
-  \item dead time, \hyperpage{64}
-    \subitem FSSP, \hyperpage{92}
+  \item DBAR1DC, \hyperpage{67}
+  \item DBAR1DP, \hyperpage{67}
+  \item DBAR3, \hyperpage{63}
+  \item DBAR6, \hyperpage{63}
+  \item DBARD, \hyperpage{63}
+  \item DBARF, \hyperpage{63}
+  \item DBARP, \hyperpage{63}
+  \item DBARU, \hyperpage{63}
+  \item DBARX, \hyperpage{63}
+  \item DBARY, \hyperpage{63}
+  \item dBz, \hyperpage{64}
+  \item DBZ1DC, \hyperpage{67}
+  \item DBZ1DP, \hyperpage{67}
+  \item DBZ6, \hyperpage{64}
+  \item DBZD, \hyperpage{64}
+  \item DBZF, \hyperpage{64}
+  \item DBZX, \hyperpage{64}
+  \item DBZY, \hyperpage{64}
+  \item dead time, \hyperpage{66}
+    \subitem FSSP, \hyperpage{94}
   \item defect
-    \subitem static, \hyperpage{28}
-  \item DE\textbf  {I}, \hyperpage{14}
+    \subitem static, \hyperpage{30}
+  \item DE\textbf  {I}, \hyperpage{15}
   \item density
-    \subitem water vapor, \hyperpage{42}
-  \item derived variables, \hyperpage{44}
-  \item dew point, \hyperpage{35}
-    \subitem corrected, \hyperpage{36}, \hyperpage{38}
+    \subitem water vapor, \hyperpage{44}
+  \item derived variables, \hyperpage{46}
+  \item dew point, \hyperpage{38}
+    \subitem corrected, \hyperpage{38}, \hyperpage{40}
   \item diameter
-    \subitem equivalent, \hyperpage{62}
-    \subitem mean, 1D probes, \hyperpage{61}
-    \subitem mean, 2D probes, \hyperpage{65}
-  \item dimensions in equations, \hyperpage{9}, \hyperpage{62}
-  \item DISP1DC, \hyperpage{65}
-  \item DISP1DP, \hyperpage{65}
-  \item DISP3, \hyperpage{61}
-  \item DISP6, \hyperpage{61}
-  \item DISPD, \hyperpage{61}
-  \item dispersion, \hyperpage{61}, \hyperpage{65}
-    \subitem 1D probes, \hyperpage{61}
-  \item DISPF, \hyperpage{61}
-  \item DISPP, \hyperpage{61}
-  \item DISPU, \hyperpage{61}
-  \item DISPX, \hyperpage{61}
-  \item DISPY, \hyperpage{61}
-  \item DNI, \hyperpage{14}
-  \item DP\_CR2C, \hyperpage{40}
-  \item DP\_VXL, \hyperpage{39}
-  \item DP\_x, \hyperpage{35}
-  \item DPCRC, \hyperpage{87}
-  \item DPx, \hyperpage{35}, \hyperpage{39}
-  \item DPXC, \hyperpage{36}, \hyperpage{41}, \hyperpage{89}
-  \item DPxC, \hyperpage{36, 37}
-  \item dropsonde, \hyperpage{54}
-  \item DT1DC, \hyperpage{64}
-  \item DVALUE, \hyperpage{29}
-  \item dynamic pressure, \hyperpage{50}
+    \subitem equivalent, \hyperpage{64}
+    \subitem mean, 1D probes, \hyperpage{63}
+    \subitem mean, 2D probes, \hyperpage{67}
+  \item dimensions in equations, \hyperpage{9}, \hyperpage{64}
+  \item DISP1DC, \hyperpage{67}
+  \item DISP1DP, \hyperpage{67}
+  \item DISP3, \hyperpage{63}
+  \item DISP6, \hyperpage{63}
+  \item DISPD, \hyperpage{63}
+  \item dispersion, \hyperpage{63}, \hyperpage{67}
+    \subitem 1D probes, \hyperpage{63}
+  \item DISPF, \hyperpage{63}
+  \item DISPP, \hyperpage{63}
+  \item DISPU, \hyperpage{63}
+  \item DISPX, \hyperpage{63}
+  \item DISPY, \hyperpage{63}
+  \item DNI, \hyperpage{15}
+  \item DP\_CR2C, \hyperpage{42}
+  \item DP\_VXL, \hyperpage{41}
+  \item DP\_x, \hyperpage{38}
+  \item DPCRC, \hyperpage{89}
+  \item DPx, \hyperpage{38}, \hyperpage{41}
+  \item DPXC, \hyperpage{38}, \hyperpage{43}, \hyperpage{91}
+  \item DPxC, \hyperpage{38}, \hyperpage{40}
+  \item dropsonde, \hyperpage{57}
+  \item DT1DC, \hyperpage{66}
+  \item DVALUE, \hyperpage{32}
+  \item dynamic pressure, \hyperpage{52}
 
   \indexspace
 
   \item Earth, angular rotation rate, \hyperpage{4}
-  \item EDPC, \hyperpage{41}, \hyperpage{46}, \hyperpage{87}
-  \item enhancement factor, \hyperpage{36}, \hyperpage{41, 42}
+  \item EDPC, \hyperpage{43}, \hyperpage{48}, \hyperpage{89}
+  \item enhancement factor, \hyperpage{38}, \hyperpage{43, 44}
   \item equation
-    \subitem thickness, \hyperpage{29}
+    \subitem thickness, \hyperpage{32}
   \item equations
     \subitem dimensionless, \hyperpage{9}
     \subitem scale factors, \hyperpage{9}
-  \item EW\_UVH, \hyperpage{41}
-  \item EWX, \hyperpage{41--44}
-  \item EWx, \hyperpage{41}
+  \item EW\_UVH, \hyperpage{43}
+  \item EWX, \hyperpage{43--46}
+  \item EWx, \hyperpage{43}
 
   \indexspace
 
-  \item FACT, \hyperpage{92}
-  \item FBMFR, \hyperpage{92}
-  \item FCN, \hyperpage{71}
-  \item FCNC, \hyperpage{71}, \hyperpage{73}
+  \item FACT, \hyperpage{94}
+  \item FBMFR, \hyperpage{94}
+  \item FCN, \hyperpage{73}
+  \item FCNC, \hyperpage{73}, \hyperpage{75}
   \item filter
-    \subitem Butterworth, \hyperpage{22}
-    \subitem complementary (for wind), \hyperpage{21}
+    \subitem Butterworth, \hyperpage{25}
+    \subitem complementary (for wind), \hyperpage{24}
     \subitem electronic, \hyperpage{8}
     \subitem FIR, \hyperpage{8}
-  \item fit matrix, wind correction, \hyperpage{24}
-  \item flight speed, \hyperindexformat{\see {true airspeed}}{50}
+  \item fit matrix, wind correction, \hyperpage{27}
+  \item flight speed, \hyperindexformat{\see {true airspeed}}{52}
   \item flow
     \subitem conversions, \hyperpage{5}
-    \subitem PCASP, \hyperpage{74}
+    \subitem PCASP, \hyperpage{76}
     \subitem SLPM, \hyperpage{5}
     \subitem volumetric, \hyperpage{5}
-  \item flow distortion, \hyperpage{27}
+  \item flow distortion, \hyperpage{29}
   \item flow rates, \hyperpage{5}
   \item flux
-    \subitem actinic, \hyperpage{78}
-  \item FO3\_ACD, \hyperpage{67}
-  \item FO3\_CL, \hyperpage{67}
-  \item FO3\_x, \hyperpage{67}
+    \subitem actinic, \hyperpage{80}
+  \item FO3\_ACD, \hyperpage{69}
+  \item FO3\_CL, \hyperpage{69}
+  \item FO3\_x, \hyperpage{69}
   \item foot, \hyperpage{6}
-  \item FP\_CR2, \hyperpage{40}
-  \item FPCRC, \hyperpage{87}
-  \item FRANGE, \hyperpage{63}
-  \item FRESET, \hyperpage{91}
-  \item FRNG, \hyperpage{63}
-  \item frost point, \hyperpage{35, 36}, \hyperpage{88}
-  \item FRST, \hyperpage{91}
+  \item FP\_CR2, \hyperpage{42}
+  \item FPCRC, \hyperpage{89}
+  \item FRANGE, \hyperpage{65}
+  \item FRESET, \hyperpage{93}
+  \item FRNG, \hyperpage{65}
+  \item frost point, \hyperpage{38}, \hyperpage{90}
+  \item FRST, \hyperpage{93}
   \item FSSP-100
-    \subitem activity, \hyperpage{92}
-    \subitem beam fraction, \hyperpage{92}
-    \subitem concentration, \hyperpage{61}
-    \subitem dead time, \hyperpage{91, 92}
-    \subitem dispersion, \hyperpage{61}
-    \subitem fast resets, \hyperpage{91}
-    \subitem liquid water content, \hyperpage{61}
-    \subitem mean diameter, \hyperpage{61}
-    \subitem range, \hyperpage{63}
-    \subitem size distribution, \hyperpage{60}
-    \subitem total strobes, \hyperpage{92}
-  \item FSSP-300, \hyperpage{61}
-  \item FSTB, \hyperpage{91}
-  \item FSTROB, \hyperpage{91}
-  \item FXAZIM, \hyperpage{14}
-  \item FXDIST, \hyperpage{14}
+    \subitem activity, \hyperpage{94}
+    \subitem beam fraction, \hyperpage{94}
+    \subitem concentration, \hyperpage{63}
+    \subitem dead time, \hyperpage{93, 94}
+    \subitem dispersion, \hyperpage{63}
+    \subitem fast resets, \hyperpage{93}
+    \subitem liquid water content, \hyperpage{63}
+    \subitem mean diameter, \hyperpage{63}
+    \subitem range, \hyperpage{65}
+    \subitem size distribution, \hyperpage{62}
+    \subitem total strobes, \hyperpage{94}
+  \item FSSP-300, \hyperpage{63}
+  \item FSTB, \hyperpage{93}
+  \item FSTROB, \hyperpage{93}
+  \item FXAZIM, \hyperpage{15}
+  \item FXDIST, \hyperpage{15}
 
   \indexspace
 
-  \item GALT\_A, \hyperpage{18}
-  \item gas constant, \hyperpage{31}
-    \subitem dry air, \hyperpage{4}, \hyperpage{44}
-    \subitem moist air, \hyperpage{31, 32}
+  \item GALT\_A, \hyperpage{19}
+  \item gas constant, \hyperpage{34}
+    \subitem dry air, \hyperpage{4}, \hyperpage{46}
+    \subitem moist air, \hyperpage{33, 34}
     \subitem universal, \hyperpage{4}
     \subitem water vapor, \hyperpage{4}
   \item GENPRO, \hyperpage{2}
-  \item GGALT, \hyperpage{18}
-  \item GGALTC, \hyperpage{20}
-  \item GGEOIDHT, \hyperpage{18}
-  \item GGLAT, \hyperpage{17}, \hyperpage{25}
-  \item GGLON, \hyperpage{17}, \hyperpage{25}
-  \item GGNSAT, \hyperpage{18}
-  \item GGQUAL, \hyperpage{18}
-  \item GGSPD, \hyperpage{17}
-  \item GGSTATUS, \hyperpage{18}
-  \item GGTRK, \hyperpage{18}
-  \item GGVEW, \hyperpage{17}, \hyperpage{23}
-  \item GGVNS, \hyperpage{17}, \hyperpage{23}
-  \item GGVSPD, \hyperpage{17}
-  \item GISMOS, \hyperpage{54}
-  \item GLAT, \hyperpage{17}
-  \item global positioning system, \hyperindexformat{\see{GPS}}{15}
-  \item GLON, \hyperpage{17}
-  \item GMODE, \hyperpage{18}
-  \item GPS, \hyperpage{10}, \hyperpage{15}, \hyperpage{21}, 
-		\hyperpage{24}
-    \subitem aircraft avionics unit, \hyperpage{16}
-    \subitem Garmin, \hyperpage{16}
-    \subitem NovAtel, \hyperpage{15}
-    \subitem Trimble TANS-III, \hyperpage{16}
-  \item GPS receivers, \hyperpage{15}
+  \item GEOPHT, \hyperpage{19}
+  \item GGALT, \hyperpage{19}
+  \item GGALTC, \hyperpage{23}
+  \item GGEOIDHT, \hyperpage{20}
+  \item GGHWGS, \hyperpage{19}
+  \item GGLAT, \hyperpage{18}, \hyperpage{28}
+  \item GGLON, \hyperpage{18}, \hyperpage{28}
+  \item GGNSAT, \hyperpage{20}
+  \item GGQUAL, \hyperpage{20}
+  \item GGSPD, \hyperpage{18}
+  \item GGSTATUS, \hyperpage{20}
+  \item GGTRK, \hyperpage{20}
+  \item GGVEW, \hyperpage{18}, \hyperpage{26}
+  \item GGVNS, \hyperpage{18}, \hyperpage{26}
+  \item GGVSPD, \hyperpage{19}
+  \item GISMOS, \hyperpage{57}
+  \item GLAT, \hyperpage{18}
+  \item global positioning system, \hyperindexformat{\see{GPS}}{16}
+  \item GLON, \hyperpage{18}
+  \item GMODE, \hyperpage{20}
+  \item GPS, \hyperpage{10}, \hyperpage{16}, \hyperpage{24}, 
+		\hyperpage{27}
+    \subitem aircraft avionics unit, \hyperpage{17}
+    \subitem Garmin, \hyperpage{17}
+    \subitem NovAtel, \hyperpage{16}
+    \subitem Trimble TANS-III, \hyperpage{17}
+  \item GPS receivers, \hyperpage{16}
   \item gravity
-    \subitem standard, \hyperpage{15}
-  \item ground speed, \hyperpage{14}
-  \item GSF, \hyperpage{14}, \hyperpage{84}
-  \item GSF\_G, \hyperpage{17}
-  \item GSTAT, \hyperpage{18}
-  \item GSTAT\_G, \hyperpage{18}
+    \subitem standard, \hyperpage{16}
+  \item ground speed, \hyperpage{15}
+  \item GSF, \hyperpage{15}, \hyperpage{86}
+  \item GSF\_G, \hyperpage{18}
+  \item GSTAT, \hyperpage{20}
+  \item GSTAT\_G, \hyperpage{20}
   \item gust probe
-    \subitem 858AJ, \hyperpage{50}
-    \subitem radome, \hyperpage{50, 51}
-    \subitem Rosemount 858AJ, \hyperpage{51}
-  \item GVZI, \hyperpage{17}
+    \subitem 858AJ, \hyperpage{52}
+    \subitem radome, \hyperpage{52, 53}
+    \subitem Rosemount 858AJ, \hyperpage{53}
+  \item GVZI, \hyperpage{19}
 
   \indexspace
 
   \item HARP, 
-		\hyperindexformat{\see {HIAPER Atmospheric Radiation Package}}{78}
+		\hyperindexformat{\see {HIAPER Atmospheric Radiation Package}}{80}
   \item heading
     \subitem magnetic, \hyperpage{11}
     \subitem true, \hyperpage{11}
-  \item Heimann radiometer, \hyperpage{76}
-  \item HGM, \hyperpage{19}
-  \item HGM232, \hyperpage{19}
-  \item HGME, \hyperpage{19}, \hyperpage{29, 30}
-  \item HI3, \hyperpage{19}
-  \item HIAPER Atmospheric Radiation Package, \hyperpage{78}
+  \item Heimann radiometer, \hyperpage{78}
+  \item HGM, \hyperpage{21}
+  \item HGM232, \hyperpage{21}
+  \item HGME, \hyperpage{21}, \hyperpage{32}
+  \item HI3, \hyperpage{21}
+  \item HIAPER Atmospheric Radiation Package, \hyperpage{80}
   \item HOUR, \hyperpage{7}
-  \item housekeeping variables, \hyperpage{59}
-  \item humidity, \hyperpage{35}
-    \subitem absolute, \hyperpage{42}
-    \subitem relative, \hyperpage{42}
-    \subitem relative to ice, \hyperpage{42}
-    \subitem specific, \hyperpage{43}, \hyperpage{51}
-  \item hydrometeor detector, \hyperpage{58}
+  \item housekeeping variables, \hyperpage{61}
+  \item humidity, \hyperpage{38}
+    \subitem absolute, \hyperpage{44}
+    \subitem relative, \hyperpage{44}
+    \subitem relative to ice, \hyperpage{44}
+    \subitem specific, \hyperpage{45}, \hyperpage{53}
+  \item hydrometeor detector, \hyperpage{60}
   \item hydrometeor probes
-    \subitem table of, \hyperpage{60}
-  \item hydrometeor spectrometer, \hyperpage{61}
-  \item hygrometer, \hyperpage{36}
-    \subitem chilled-mirror, \hyperpage{42}
-    \subitem CR2, \hyperpage{40}
-    \subitem cryogenic, \hyperpage{43}, \hyperpage{87}
-    \subitem dew point, \hyperpage{35}, \hyperpage{43}
-    \subitem housing, \hyperpage{36}
-    \subitem Lyman-alpha, \hyperpage{43}, \hyperpage{88}
-    \subitem tunable diode laser, \hyperpage{38}, \hyperpage{43}
-    \subitem UV, \hyperpage{40}, \hyperpage{43}, \hyperpage{89}
-    \subitem VCSEL, \hyperpage{34}, \hyperpage{38, 39}, \hyperpage{43}
+    \subitem table of, \hyperpage{62}
+  \item hydrometeor spectrometer, \hyperpage{63}
+  \item hygrometer, \hyperpage{38}
+    \subitem chilled-mirror, \hyperpage{44}
+    \subitem CR2, \hyperpage{42}
+    \subitem cryogenic, \hyperpage{45}, \hyperpage{89}
+    \subitem dew point, \hyperpage{38}, \hyperpage{45}
+    \subitem housing, \hyperpage{38}
+    \subitem Lyman-alpha, \hyperpage{45}, \hyperpage{90}
+    \subitem tunable diode laser, \hyperpage{40}, \hyperpage{45}
+    \subitem UV, \hyperpage{42}, \hyperpage{45}, \hyperpage{91}
+    \subitem VCSEL, \hyperpage{37}, \hyperpage{40, 41}, \hyperpage{45}
 
   \indexspace
 
-  \item ice water content, \hyperpage{62}
+  \item ice water content, \hyperpage{64}
   \item impactor
-    \subitem giant nucleus, \hyperpage{75}
-  \item indicated airspeed, \hyperpage{86}
+    \subitem giant nucleus, \hyperpage{77}
+  \item indicated airspeed, \hyperpage{88}
   \item inertial navigation system, \hyperindexformat{\see {INS}}{10}
   \item inertial reference unit, \hyperindexformat{\see {IRU}}{10}
-  \item INS, \hyperpage{10}, \hyperpage{21}, \hyperpage{49}
+  \item INS, \hyperpage{10}, \hyperpage{24}, \hyperpage{51}
     \subitem alignment, \hyperpage{10}
     \subitem C-MIGITS, \hyperpage{10}
     \subitem C130, \hyperpage{10}
     \subitem GV, \hyperpage{10}
-    \subitem Honeywell, \hyperpage{12}
+    \subitem Honeywell, \hyperpage{13}
     \subitem Honeywell Laseref, \hyperpage{10}
     \subitem Litton LTN-51, \hyperpage{12}
-    \subitem measurements not in normal data files, \hyperpage{15}
+    \subitem measurements not in normal data files, \hyperpage{16}
     \subitem specifications, \hyperpage{11}
   \item instrument descriptions
-    \subitem web site, \hyperpage{27}
+    \subitem web site, \hyperpage{29}
   \item instruments
-    \subitem radiation, \hyperpage{76}
+    \subitem radiation, \hyperpage{78}
     \subitem user, \hyperpage{1}
-  \item International Standard Atmosphere, \hyperpage{19}
-    \subitem lapse rate, \hyperpage{20}
-    \subitem tropopause, \hyperpage{20}
+  \item International Standard Atmosphere, \hyperpage{22}
+    \subitem lapse rate, \hyperpage{23}
+    \subitem tropopause, \hyperpage{23}
   \item interpolation, \hyperpage{8}
-  \item irradiance, \hyperpage{76}
-    \subitem long-wave, \hyperpage{77}
-    \subitem visible, \hyperpage{78}
+  \item irradiance, \hyperpage{78}
+    \subitem long-wave, \hyperpage{79}
+    \subitem visible, \hyperpage{80}
   \item IRU, \hyperpage{10, 11}
-    \subitem Litton LTN-51, \hyperpage{84}
-    \subitem raw variables, \hyperpage{15}
-  \item IRx, \hyperpage{89}
-  \item IRxC, \hyperpage{77}, \hyperpage{89}
-  \item IRxHT, \hyperpage{77}
-  \item IRxV, \hyperpage{76, 77}
+    \subitem Litton LTN-51, \hyperpage{86}
+    \subitem raw variables, \hyperpage{16}
+  \item IRx, \hyperpage{91}
+  \item IRxC, \hyperpage{79}, \hyperpage{91}
+  \item IRxHT, \hyperpage{79}
+  \item IRxV, \hyperpage{78, 79}
   \item ISA, 
-		\hyperindexformat{\see {International Standard Atmosphere}}{19}
+		\hyperindexformat{\see {International Standard Atmosphere}}{22}
 
   \indexspace
 
-  \item Johnson-Williams sensor, \hyperpage{86}
+  \item Johnson-Williams sensor, \hyperpage{88}
 
   \indexspace
 
-  \item King probe, \hyperpage{56}
-    \subitem element dimensions, \hyperpage{57}
-    \subitem power dissipated, \hyperpage{57}
-    \subitem sensor temperature, \hyperpage{57}
+  \item King probe, \hyperpage{58}
+    \subitem element dimensions, \hyperpage{59}
+    \subitem power dissipated, \hyperpage{59}
+    \subitem sensor temperature, \hyperpage{59}
   \item knot, \hyperpage{6}
 
   \indexspace
@@ -467,76 +470,76 @@
     \subitem static, \hyperpage{8}
   \item lags in sampling, \hyperpage{8}
   \item lagsdynamic, \hyperpage{8}
-  \item LAMS, \hyperpage{28, 29}
-  \item LAT, \hyperpage{11}, \hyperpage{25}
-  \item LAT\_G, \hyperpage{17}
-  \item LATC, \hyperpage{24}
-  \item latent heat of vaporization, \hyperpage{45}, \hyperpage{47}, 
-		\hyperpage{57}
-  \item latitude, \hyperpage{11}, \hyperpage{24}
-  \item lifted condensation level, \hyperpage{45}
-  \item linkage. temperature and airspeed, \hyperpage{31}
-  \item liquid water content, \hyperpage{56}, \hyperpage{61}, 
-		\hyperpage{65}
-    \subitem 1D probes, \hyperpage{61}
-    \subitem FSSP-100, \hyperpage{61}
-    \subitem King probe, \hyperpage{56}
-    \subitem supercooled, \hyperpage{58}
-  \item LON, \hyperpage{11}, \hyperpage{25}
-  \item LON\_G, \hyperpage{17}
-  \item LONC, \hyperpage{24}
-  \item longitude, \hyperpage{11}, \hyperpage{24}
-  \item LWC, \hyperpage{86}
-  \item LWCC, \hyperpage{86}
-  \item Lyman-alpha hygrometer, \hyperpage{38}
+  \item LAMS, \hyperpage{30, 31}
+  \item LAT, \hyperpage{11}, \hyperpage{28}
+  \item LAT\_G, \hyperpage{18}
+  \item LATC, \hyperpage{27}
+  \item latent heat of vaporization, \hyperpage{47}, \hyperpage{49}, 
+		\hyperpage{59}
+  \item latitude, \hyperpage{11}, \hyperpage{27}
+  \item lifted condensation level, \hyperpage{47}
+  \item linkage. temperature and airspeed, \hyperpage{33}
+  \item liquid water content, \hyperpage{58}, \hyperpage{63}, 
+		\hyperpage{67}
+    \subitem 1D probes, \hyperpage{63}
+    \subitem FSSP-100, \hyperpage{63}
+    \subitem King probe, \hyperpage{58}
+    \subitem supercooled, \hyperpage{60}
+  \item LON, \hyperpage{11}, \hyperpage{28}
+  \item LON\_G, \hyperpage{18}
+  \item LONC, \hyperpage{27}
+  \item longitude, \hyperpage{11}, \hyperpage{27}
+  \item LWC, \hyperpage{88}
+  \item LWCC, \hyperpage{88}
+  \item Lyman-alpha hygrometer, \hyperpage{40}
 
   \indexspace
 
-  \item Mach number, \hyperpage{29}, \hyperpage{33}
-    \subitem uncorrected, \hyperpage{28}
-  \item MACHX, \hyperpage{50}, \hyperpage{52}
-  \item MACHx, \hyperpage{35}, \hyperpage{50}
+  \item Mach number, \hyperpage{31}, \hyperpage{35, 36}
+    \subitem uncorrected, \hyperpage{31}
+  \item MACHX, \hyperpage{52}, \hyperpage{54}
+  \item MACHx, \hyperpage{37}, \hyperpage{52, 53}
   \item measurement
     \subitem derived, \hyperpage{8}
     \subitem original, \hyperpage{8}
-    \subitem preferred, \hyperpage{27}
-    \subitem raw, \hyperpage{8}, \hyperpage{31}
+    \subitem preferred, \hyperpage{29}
+    \subitem raw, \hyperpage{8}, \hyperpage{33}
   \item meter
     \subitem mass flow, \hyperpage{5}
   \item millibar, \hyperpage{5}
   \item MINUTE, \hyperpage{7}
-  \item MIRRORT\_CR2, \hyperpage{40}
-  \item MIRRTMP\_DPx, \hyperpage{35}
+  \item MIRRORT\_CR2, \hyperpage{42}
+  \item MIRRTMP\_DPx, \hyperpage{38}
   \item mixing ratio
     \subitem conversion, \hyperpage{6}
-  \item moist-air properties, \hyperpage{32}
+  \item moist-air properties, \hyperpage{34}
   \item molecular weight
     \subitem dry air, \hyperpage{4}
     \subitem water, \hyperpage{4}
   \item MONTH, \hyperpage{7}
   \item motion
-    \subitem GPS antenna, \hyperpage{49}
-  \item MR, \hyperpage{29}, \hyperpage{43}, \hyperpage{46}, 
-		\hyperpage{48}
-  \item MRCR, \hyperpage{43}
-  \item MRLA, \hyperpage{43}
-  \item MRLA1, \hyperpage{43}
-  \item MRLH, \hyperpage{43}
-  \item MRVXL, \hyperpage{43}
-  \item MTP, \hyperpage{54}
-  \item Murphy and Koop, 2005, \hyperpage{36}
+    \subitem GPS antenna, \hyperpage{51}
+  \item MR, \hyperpage{32}, \hyperpage{45}, \hyperpage{48}, 
+		\hyperpage{50}
+  \item MRCR, \hyperpage{45}
+  \item MRLA, \hyperpage{45}
+  \item MRLA1, \hyperpage{45}
+  \item MRLH, \hyperpage{45}
+  \item MRVXL, \hyperpage{45}
+  \item MTP, \hyperpage{57}
+  \item Murphy and Koop, 2005, \hyperpage{39}
 
   \indexspace
 
   \item names
-    \subitem variable, \hyperpage{27}
-      \subsubitem location in, \hyperpage{27}
-      \subsubitem suffixes, \hyperpage{27}
+    \subitem variable, \hyperpage{29}
+      \subsubitem location in, \hyperpage{29}
+      \subsubitem suffixes, \hyperpage{29}
   \item nautical mile, \hyperpage{6}
   \item NetCDF
     \subitem format, \hyperpage{1}
     \subitem header, \hyperpage{1}, \hyperpage{10}
-    \subitem vector, \hyperpage{60}
+    \subitem vector, \hyperpage{62}
   \item NIDAS, \hyperpage{1}, \hyperpage{6, 7}
   \item nimbus, \hyperpage{1}
   \item nomenclature
@@ -545,240 +548,244 @@
 
   \indexspace
 
-  \item O3FS, \hyperpage{91}
-  \item O3MR\_CL, \hyperpage{67}
-  \item OAT, \hyperpage{35}
-  \item sample time, \hyperpage{8}
+  \item O3FS, \hyperpage{93}
+  \item O3MR\_CL, \hyperpage{69}
+  \item OAT, \hyperpage{37}
+  \item sample time, \hyperpage{7}
   \item oscillation, Schuler, \hyperpage{10}
 
   \indexspace
 
-  \item PACT, \hyperpage{92}
-  \item PALT, \hyperpage{19}
+  \item PACT, \hyperpage{94}
+  \item PALT, \hyperpage{21}
   \item particles
-    \subitem ultrafine, \hyperpage{71}
-  \item PCAB, \hyperpage{29}
-  \item PCASP, \hyperpage{61}, \hyperpage{74, 75}
-  \item PCN, \hyperpage{71}, \hyperpage{73}
-  \item PCORS, \hyperindexformat{\see {pressure corrections}}{28}
-  \item perfect gas, \hyperpage{31}
-  \item PFLW, \hyperpage{74}
-  \item PFLWC, \hyperpage{74}
-  \item PHDG, \hyperpage{84}
+    \subitem ultrafine, \hyperpage{73}
+  \item PCAB, \hyperpage{32}
+  \item PCASP, \hyperpage{63}, \hyperpage{76, 77}
+  \item PCN, \hyperpage{73}, \hyperpage{75}
+  \item PCORS, \hyperindexformat{\see {pressure corrections}}{30}
+  \item perfect gas, \hyperpage{33}
+  \item PFLW, \hyperpage{76}
+  \item PFLWC, \hyperpage{76}
+  \item PHDG, \hyperpage{86}
   \item PITCH, \hyperpage{11}
   \item pitch, \hyperpage{11}
   \item platform
-    \subitem stabilized, \hyperpage{77, 78}
-  \item PLWC, \hyperpage{56}
-  \item PLWC1, \hyperpage{56}
-  \item PLWC1DC, \hyperpage{65}
-  \item PLWC1DP, \hyperpage{65}
-  \item PLWC6, \hyperpage{61}
-  \item PLWCC, \hyperpage{56}
-  \item PLWCC1, \hyperpage{56}
-  \item PLWCD, \hyperpage{61}
-  \item PLWCF, \hyperpage{61}
-  \item PLWCG, \hyperpage{58}
-  \item PLWCX, \hyperpage{61}
-  \item PLWCY, \hyperpage{61}
+    \subitem stabilized, \hyperpage{79, 80}
+  \item PLWC, \hyperpage{58}
+  \item PLWC1, \hyperpage{58}
+  \item PLWC1DC, \hyperpage{67}
+  \item PLWC1DP, \hyperpage{67}
+  \item PLWC6, \hyperpage{63}
+  \item PLWCC, \hyperpage{58}
+  \item PLWCC1, \hyperpage{58}
+  \item PLWCD, \hyperpage{63}
+  \item PLWCF, \hyperpage{63}
+  \item PLWCG, \hyperpage{60}
+  \item PLWCX, \hyperpage{63}
+  \item PLWCY, \hyperpage{63}
   \item potential temperature, 
-		\hyperindexformat{\see {temperature, potential}}{44}
+		\hyperindexformat{\see {temperature, potential}}{46}
   \item ppbv, \hyperpage{5, 6}
   \item ppmv, \hyperpage{5, 6}
   \item pptv, \hyperpage{5, 6}
-  \item pressure, \hyperpage{27}
-    \subitem ambient, \hyperpage{27}, \hyperpage{29}, \hyperpage{31}, 
-		\hyperpage{33}, \hyperpage{50}
-    \subitem cabin, \hyperpage{29}
-    \subitem corrections, \hyperpage{28}
-    \subitem dew point housing, \hyperpage{36}
-    \subitem dew-point cavity, \hyperpage{29}
-    \subitem dynamic, \hyperpage{28, 29}, \hyperpage{31}, 
-		\hyperpage{52}
-      \subsubitem corrected, \hyperpage{29}
-    \subitem inlet, \hyperpage{71}
-    \subitem partial, water vapor, \hyperpage{36}
-    \subitem pitot, \hyperindexformat{\see {pressure, total}}{29}
-    \subitem static, \hyperindexformat{\see {pressure ambient}}{29}
-    \subitem surface, \hyperpage{29}
-    \subitem total, \hyperpage{29}, \hyperpage{33}
-    \subitem transducer, \hyperpage{29}
-    \subitem water vapor, \hyperpage{37}
-      \subsubitem equilibrium, \hyperpage{36}, \hyperpage{42}
+  \item pressure, \hyperpage{29}
+    \subitem ambient, \hyperpage{29}, \hyperpage{31}, \hyperpage{33}, 
+		\hyperpage{36}, \hyperpage{52}
+    \subitem cabin, \hyperpage{32}
+    \subitem corrections, \hyperpage{30}
+    \subitem dew point housing, \hyperpage{38}
+    \subitem dew-point cavity, \hyperpage{32}
+    \subitem dynamic, \hyperpage{30, 31}, \hyperpage{33}, 
+		\hyperpage{54}
+      \subsubitem corrected, \hyperpage{31}
+    \subitem inlet, \hyperpage{73}
+    \subitem partial, water vapor, \hyperpage{38}
+    \subitem pitot, \hyperindexformat{\see {pressure, total}}{31}
+    \subitem static, \hyperindexformat{\see {pressure ambient}}{31}
+    \subitem surface, \hyperpage{32}
+    \subitem total, \hyperpage{31}, \hyperpage{35, 36}
+    \subitem transducer, \hyperpage{31}
+    \subitem water vapor, \hyperpage{40}
+      \subsubitem equilibrium, \hyperpage{38, 39}, \hyperpage{44}
   \item pressure damping, \hyperpage{11}
-  \item properties of moist air, \hyperpage{31}
-  \item PS\_A, \hyperpage{27}
-  \item PSDPx, \hyperpage{29}
-  \item PSFD, \hyperpage{27}
-  \item PSFRD, \hyperpage{27}
-  \item PSURF, \hyperpage{29, 30}
-  \item PSX, \hyperpage{27}, \hyperpage{31}
-  \item PSx, \hyperpage{27}
-  \item PSXC, \hyperpage{27}, \hyperpage{29--31}, \hyperpage{33}, 
-		\hyperpage{35}, \hyperpage{39}, \hyperpage{43, 44}, 
-		\hyperpage{46}, \hyperpage{50}, \hyperpage{73}
-  \item PSxC, \hyperpage{27}
-  \item PTIME, \hyperpage{83}
-  \item pyranometer, \hyperpage{77}, \hyperpage{90}
-    \subitem calibration, \hyperpage{77}
-  \item pyrgeometer, \hyperpage{76}, \hyperpage{89}
-    \subitem calibration, \hyperpage{76}
+  \item properties of moist air, \hyperpage{34}
+  \item PS\_A, \hyperpage{29}
+  \item PSDPx, \hyperpage{32}
+  \item PSFD, \hyperpage{29}
+  \item PSFRD, \hyperpage{29}
+  \item PSURF, \hyperpage{32}
+  \item PSX, \hyperpage{29}, \hyperpage{33}
+  \item PSx, \hyperpage{29}
+  \item PSXC, \hyperpage{29}, \hyperpage{32, 33}, \hyperpage{36, 37}, 
+		\hyperpage{41}, \hyperpage{45, 46}, \hyperpage{48}, 
+		\hyperpage{53}, \hyperpage{75}
+  \item PSxC, \hyperpage{29}
+  \item PTIME, \hyperpage{85}
+  \item pyranometer, \hyperpage{79}, \hyperpage{92}
+    \subitem calibration, \hyperpage{79}
+  \item pyrgeometer, \hyperpage{78}, \hyperpage{91}
+    \subitem calibration, \hyperpage{78}
 
   \indexspace
 
-  \item QCB, \hyperpage{85}
-  \item QCBC, \hyperpage{85}
-  \item QCG, \hyperpage{85}
-  \item QCGC, \hyperpage{85}
-  \item QCLS, \hyperpage{70}
+  \item QCB, \hyperpage{87}
+  \item QCBC, \hyperpage{87}
+  \item QCF, \hyperpage{54}
+  \item QCG, \hyperpage{87}
+  \item QCGC, \hyperpage{87}
+  \item QCLS, \hyperpage{72}
   \item QCR
-    \subitem correction, \hyperpage{29}
-  \item QCX, \hyperpage{29}, \hyperpage{31}
-  \item QCx, \hyperpage{29}
-  \item QCXC, \hyperpage{29}, \hyperpage{31}, \hyperpage{33}, 
-		\hyperpage{52}
-  \item QCxC, \hyperpage{29}, \hyperpage{35}, \hyperpage{50}
+    \subitem correction, \hyperpage{31}
+  \item QCRC
+    \subitem flow-angle correction, \hyperpage{31}
+  \item QCX, \hyperpage{31}, \hyperpage{33}
+  \item QCx, \hyperpage{31}
+  \item QCXC, \hyperpage{31}, \hyperpage{33}, \hyperpage{36}
+  \item QCxC, \hyperpage{31}, \hyperpage{37}, \hyperpage{53}
 
   \indexspace
 
-  \item radar reflectivity factor, \hyperpage{65}
-    \subitem 1D probes, \hyperpage{62}
-  \item radiation, \hyperpage{76}
-    \subitem long-wave, \hyperpage{89}
-    \subitem short wave, \hyperpage{90}
+  \item radar reflectivity factor, \hyperpage{67}
+    \subitem 1D probes, \hyperpage{64}
+  \item radiation, \hyperpage{78}
+    \subitem long-wave, \hyperpage{91}
+    \subitem short wave, \hyperpage{92}
   \item radiometer
-    \subitem Heimann, \hyperpage{76}
-    \subitem Kipp \& Zonen, \hyperpage{77}
-  \item radiometers, \hyperpage{76}
+    \subitem Heimann, \hyperpage{78}
+    \subitem Kipp \& Zonen, \hyperpage{79}
+  \item radiometers, \hyperpage{78}
   \item radius of the Earth, \hyperpage{4}
-  \item radius, effective, \hyperpage{62}, \hyperpage{65}
-  \item radome gust probe, \hyperpage{50, 51}
+  \item radius, effective, \hyperpage{64}, \hyperpage{67}
+  \item radome gust probe, \hyperpage{52, 53}
   \item range
-    \subitem FSSP, \hyperpage{63}
-  \item RAWCONC\_VXL, \hyperpage{40}
-  \item recovery factor, \hyperpage{31, 32}
-    \subitem Rosemount sensors, \hyperpage{32}
-  \item REFF2DC, \hyperpage{65}
-  \item REFF2DP, \hyperpage{65}
-  \item REFFD, \hyperpage{62}
-  \item REFFF, \hyperpage{62}
-  \item reflectivity factor, \hyperpage{62}
+    \subitem FSSP, \hyperpage{65}
+  \item rate of climb, \hyperpage{12}
+  \item RAWCONC\_VXL, \hyperpage{42}
+  \item recovery factor, \hyperpage{34, 35}
+    \subitem Rosemount sensors, \hyperpage{35}
+  \item REFF2DC, \hyperpage{67}
+  \item REFF2DP, \hyperpage{67}
+  \item REFFD, \hyperpage{64}
+  \item REFFF, \hyperpage{64}
+  \item reflectivity factor, \hyperpage{64}
   \item relative humidity, 
-		\hyperindexformat{\see {humidity, relative}}{42}
+		\hyperindexformat{\see {humidity, relative}}{44}
   \item relative humidity wrt ice, 
-		\hyperindexformat{\see {humidity, relative to ice}}{42}
+		\hyperindexformat{\see {humidity, relative to ice}}{44}
   \item resets
-    \subitem FSSP-100, \hyperpage{91}
-  \item reverse-flow temperature sensor, \hyperpage{86}
-  \item RHODT, \hyperpage{89}
-  \item RHOLA, \hyperpage{43}
-  \item RHOUV, \hyperpage{43}
-  \item RHOx, \hyperpage{42}
-  \item RHUM, \hyperpage{42}
-  \item RHUMI, \hyperpage{42}
-  \item RICE, \hyperpage{58}
+    \subitem FSSP-100, \hyperpage{93}
+  \item reverse-flow temperature sensor, \hyperpage{88}
+  \item RHODT, \hyperpage{91}
+  \item RHOLA, \hyperpage{45}
+  \item RHOUV, \hyperpage{45}
+  \item RHOx, \hyperpage{44}
+  \item RHUM, \hyperpage{44}
+  \item RHUMI, \hyperpage{44}
+  \item RICE, \hyperpage{60}
   \item ROLL, \hyperpage{11}
   \item roll, \hyperpage{11}
-  \item Rosemount 871F icing probe, \hyperpage{58}
-  \item RSTx, \hyperpage{76}
-  \item RTHRx, \hyperpage{30}
-  \item RTX, \hyperpage{30}, \hyperpage{35}
-  \item RTx, \hyperpage{30, 31}
-  \item RTxH, \hyperpage{30}
+  \item Rosemount 871F icing probe, \hyperpage{60}
+  \item RSTx, \hyperpage{78}
+  \item RTHRx, \hyperpage{32}
+  \item RTX, \hyperpage{32}, \hyperpage{37}
+  \item RTx, \hyperpage{32, 33}
+  \item RTxH, \hyperpage{32}
 
   \indexspace
 
   \item samples per second, \hyperpage{6}
   \item sampling rates, \hyperpage{7}
   \item Schuler oscillation, \hyperpage{4}, \hyperpage{10}, 
-		\hyperpage{24}
-  \item SCLWC, \hyperpage{91}
+		\hyperpage{27}
+  \item SCLWC, \hyperpage{93}
   \item SECOND, \hyperpage{7}
   \item sensitivity coefficient
-    \subitem ADIFR, \hyperpage{51}
+    \subitem ADIFR, \hyperpage{53}
   \item sensor
-    \subitem temperature, \hyperpage{30}
-      \subsubitem anti-iced, \hyperpage{30}
-      \subsubitem heated, \hyperpage{30}
-      \subsubitem K-probe, \hyperpage{30}
-  \item sideslip, angle of, \hyperpage{51, 52}
+    \subitem temperature, \hyperpage{33}
+      \subsubitem anti-iced, \hyperpage{33}
+      \subsubitem heated, \hyperpage{33}
+      \subsubitem K-probe, \hyperpage{33}
+  \item SFC, \hyperpage{21}
+  \item sideslip, angle of, \hyperpage{53}, \hyperpage{55}
   \item size distribution
-    \subitem 2D, \hyperpage{64}
-  \item SMPS, \hyperpage{75}
-  \item SOLAZ, \hyperpage{80}
-  \item SOLDE, \hyperpage{79}
-  \item SOLEL, \hyperpage{79}
-  \item SOLZE, \hyperpage{80}
-  \item specific heat, \hyperpage{31}
-    \subitem constant pressure, \hyperpage{44}
+    \subitem 2D, \hyperpage{66}
+  \item SMPS, \hyperpage{77}
+  \item SOLAZ, \hyperpage{82}
+  \item SOLDE, \hyperpage{81}
+  \item SOLEL, \hyperpage{81}
+  \item SOLZE, \hyperpage{82}
+  \item specific heat, \hyperpage{34}
+    \subitem constant pressure, \hyperpage{46}
     \subitem dry air
       \subsubitem constant pressure, \hyperpage{4}
       \subsubitem constant volume, \hyperpage{4}
-    \subitem moist air, \hyperpage{31, 32}
+    \subitem moist air, \hyperpage{33, 34}
   \item specific heat ratio, dry air, \hyperpage{4}
   \item spectrometer
-    \subitem aerosol mass, \hyperpage{75}
-    \subitem hydrometeor, \hyperpage{61}
+    \subitem aerosol mass, \hyperpage{77}
+    \subitem hydrometeor, \hyperpage{63}
   \item speed
-    \subitem ground, \hyperpage{14}
-  \item speed of sound, \hyperpage{33}
-  \item SPHUM, \hyperpage{43}, \hyperpage{51}
-  \item SPxPitch, \hyperpage{78}
-  \item SPxRoll, \hyperpage{78}
-  \item SSFXx, \hyperpage{85}
-  \item SSLIP, \hyperpage{52}
-  \item SSRD, \hyperpage{52}
+    \subitem ground, \hyperpage{15}
+  \item speed of sound, \hyperpage{35}
+  \item SPHUM, \hyperpage{45}, \hyperpage{53}
+  \item SPxPitch, \hyperpage{80}
+  \item SPxRoll, \hyperpage{80}
+  \item SSFXx, \hyperpage{87}
+  \item SSLIP, \hyperpage{55}
+  \item SSRD, \hyperpage{54, 55}
   \item Stephan-Boltzmann Constant, \hyperpage{4}
   \item STP, \hyperpage{5}
   \item strobes
-    \subitem FSSP, \hyperpage{92}
-  \item SWTC, \hyperpage{90}
-  \item SWx, \hyperpage{90}
+    \subitem FSSP, \hyperpage{94}
+  \item SWTC, \hyperpage{92}
+  \item SWx, \hyperpage{92}
   \item synchronization, \hyperpage{7}
   \item system of units, \hyperpage{5}
 
   \indexspace
 
-  \item TASHC, \hyperpage{31, 32}, \hyperpage{50}
-  \item TASx, \hyperpage{50}
-  \item TASxD, \hyperpage{50}
-  \item TCAVB, \hyperpage{76}
-  \item TCAVT, \hyperpage{76}
-  \item TCNTP, \hyperpage{74}
-  \item TCNTU, \hyperpage{74}
-  \item TEMP1, \hyperpage{71}
-  \item TEMP2, \hyperpage{71}
-  \item temperature, \hyperpage{30}
-    \subitem ambient, \hyperpage{30, 31}, \hyperpage{39}
-    \subitem calculation, \hyperpage{31}
-    \subitem equivalent potential, \hyperpage{45}
-    \subitem in-cloud, \hyperpage{35}
-    \subitem inlet, \hyperpage{71}
-    \subitem potential, \hyperpage{44, 45}
-    \subitem pseudo-adiabatic equivalent potential, \hyperpage{44}
-    \subitem radiometric, \hyperpage{35}, \hyperpage{76}
-    \subitem recovery, \hyperpage{30, 31}
-    \subitem recovery vs.~total, \hyperpage{30}
-    \subitem reverse-flow, \hyperpage{30}
-    \subitem sensor, \hyperpage{31}
-    \subitem static air, \hyperpage{31}
-    \subitem total, \hyperpage{30, 31}, \hyperpage{86}
-    \subitem virtual, \hyperpage{46}
-    \subitem virtual potential, \hyperpage{46}
-  \item TEO3, \hyperpage{68}
-  \item TEO3C, \hyperpage{68}
-  \item TEO3P, \hyperpage{68}
-  \item TEP, \hyperpage{68}
-  \item TET, \hyperpage{68}
+  \item TASHC, \hyperpage{33, 34}, \hyperpage{53}
+  \item TASx, \hyperpage{52, 53}
+  \item TASxD, \hyperpage{52}
+  \item TCAVB, \hyperpage{78}
+  \item TCAVT, \hyperpage{78}
+  \item TCNTP, \hyperpage{76}
+  \item TCNTU, \hyperpage{76}
+  \item TEMP1, \hyperpage{73}
+  \item TEMP2, \hyperpage{73}
+  \item temperature, \hyperpage{32}
+    \subitem ambient, \hyperpage{32, 33}, \hyperpage{41}
+    \subitem calculation, \hyperpage{33}
+    \subitem equivalent potential, \hyperpage{47}
+    \subitem in-cloud, \hyperpage{37}
+    \subitem inlet, \hyperpage{73}
+    \subitem potential, \hyperpage{46, 47}
+    \subitem pseudo-adiabatic equivalent potential, \hyperpage{46}
+    \subitem radiometric, \hyperpage{37}, \hyperpage{78}
+    \subitem recovery, \hyperpage{32}, \hyperpage{34}
+    \subitem recovery vs.~total, \hyperpage{33}
+    \subitem reverse-flow, \hyperpage{33}
+    \subitem sensor, \hyperpage{33}
+    \subitem static air, \hyperpage{33}
+    \subitem total, \hyperpage{33}, \hyperpage{88}
+    \subitem virtual, \hyperpage{48}
+    \subitem virtual potential, \hyperpage{48}
+  \item TEO3, \hyperpage{70}
+  \item TEO3C, \hyperpage{70}
+  \item TEO3P, \hyperpage{70}
+  \item TEP, \hyperpage{70}
+  \item TET, \hyperpage{70}
   \item THDG, \hyperpage{11}
   \item thermal conductivity, 
-		\hyperindexformat{\see {conductivity, thermal}}{57}
-  \item THETA, \hyperpage{44}, \hyperpage{46}
-  \item THETAE, \hyperpage{44}
-  \item THETAQ, \hyperpage{47}
-  \item THETAV, \hyperpage{46}
-  \item THF, \hyperpage{84}
-  \item THI, \hyperpage{84}
+		\hyperindexformat{\see {conductivity, thermal}}{59}
+  \item THETA, \hyperpage{46}, \hyperpage{48}
+  \item THETAE, \hyperpage{46}
+  \item THETAQ, \hyperpage{49}
+  \item THETAV, \hyperpage{48}
+  \item THF, \hyperpage{86}
+  \item THI, \hyperpage{86}
   \item time
     \subitem base\_time, \hyperpage{7}
     \subitem example of usage, \hyperpage{7}
@@ -788,32 +795,32 @@
     \subitem shifts, \hyperpage{8}
     \subitem variable Time, \hyperpage{7}
     \subitem variables, \hyperpage{6}
-  \item TKAT\_G, \hyperpage{18}
-  \item TMLAG, \hyperpage{83}
-  \item TOGA, \hyperpage{70}
-  \item TPTIME, \hyperpage{83}
-  \item trailing cone, \hyperpage{28}
+  \item TKAT\_G, \hyperpage{20}
+  \item TMLAG, \hyperpage{85}
+  \item TOGA, \hyperpage{72}
+  \item TPTIME, \hyperpage{85}
+  \item trailing cone, \hyperpage{30}
   \item transducer
-    \subitem barometric, \hyperpage{27}
-    \subitem Paroscientific, \hyperpage{28}
+    \subitem barometric, \hyperpage{29}
+    \subitem Paroscientific, \hyperpage{30}
   \item triple point of water, \hyperpage{4}
-  \item TRSTB, TRSTT, \hyperpage{76}
-  \item true airspeed, \hyperindexformat{\see {airspeed}}{29}
-  \item TTKP, \hyperpage{30}, \hyperpage{86}
-  \item TTRF, \hyperpage{30}, \hyperpage{86}
-  \item TTx, \hyperpage{30}, \hyperpage{86}
-  \item TVIR, \hyperpage{29, 30}, \hyperpage{46}
+  \item TRSTB, TRSTT, \hyperpage{78}
+  \item true airspeed, \hyperindexformat{\see {airspeed}}{31}
+  \item TTKP, \hyperpage{33}, \hyperpage{88}
+  \item TTRF, \hyperpage{33}, \hyperpage{88}
+  \item TTx, \hyperpage{33}, \hyperpage{88}
+  \item TVIR, \hyperpage{32}, \hyperpage{48}
 
   \indexspace
 
-  \item UHSAS, \hyperpage{74, 75}
-    \subitem flow, \hyperpage{74}
-    \subitem STP, \hyperpage{74}
-  \item UI, \hyperpage{52}
-  \item UIC, \hyperpage{53}
+  \item UHSAS, \hyperpage{76, 77}
+    \subitem flow, \hyperpage{76}
+    \subitem STP, \hyperpage{76}
+  \item UI, \hyperpage{55}
+  \item UIC, \hyperpage{56}
   \item uncertainty
     \subitem wind
-      \subsubitem Technical Note, \hyperpage{49}
+      \subsubitem Technical Note, \hyperpage{51}
   \item units, \hyperpage{5}
     \subitem exceptions to SI, \hyperpage{5}
     \subitem hertz, \hyperpage{6}
@@ -821,118 +828,118 @@
     \subitem ppmv, \hyperpage{5}
   \item units, mixed CGS-MKS, \hyperpage{5}
   \item universal gas constant, \hyperpage{4}
-  \item UPRESS, \hyperpage{74}
-  \item USFLWC, \hyperpage{74}
-  \item USMPFLW, \hyperpage{74}
-  \item UVx, \hyperpage{90}
-  \item UX, \hyperpage{53}
-  \item UXC, \hyperpage{54}
+  \item UPRESS, \hyperpage{76}
+  \item USFLWC, \hyperpage{76}
+  \item USMPFLW, \hyperpage{76}
+  \item UVx, \hyperpage{92}
+  \item UX, \hyperpage{56}
+  \item UXC, \hyperpage{57}
 
   \indexspace
 
   \item variable
     \subitem derived, \hyperpage{9}
     \subitem names in brackets, \hyperpage{8}
-    \subitem preferred choice, \hyperpage{27}
-  \item variable names, \hyperpage{2}, \hyperpage{27}
+    \subitem preferred choice, \hyperpage{29}
+  \item variable names, \hyperpage{2}, \hyperpage{29}
     \subitem conventions, \hyperpage{2}
-    \subitem hydrometeor probes, \hyperpage{58}
+    \subitem hydrometeor probes, \hyperpage{60}
   \item variables
     \subitem obsolete
-      \subsubitem TTx, \hyperpage{30}
-  \item VCRH, \hyperpage{87}
+      \subsubitem TTx, \hyperpage{33}
+  \item VCRH, \hyperpage{89}
   \item velocity
-    \subitem aircraft, \hyperpage{14}, \hyperpage{17}, \hyperpage{21}
-    \subitem aircraft vertical, \hyperpage{12}, \hyperpage{17}
-  \item VEW, \hyperpage{14}, \hyperpage{23}, \hyperpage{84}
-  \item VEW\_G, \hyperpage{17}
-  \item VEWC, \hyperpage{21}, \hyperpage{25}
-  \item VI, \hyperpage{52}
-  \item VIC, \hyperpage{53}
-  \item viscosity, \hyperpage{57}
-  \item VISxC, \hyperpage{78}
-  \item VISxHT, \hyperpage{78}
-  \item VISxHTV, \hyperpage{78}
-  \item VISxV, \hyperpage{77}
-  \item VLA, \hyperpage{88}
-  \item VLA1, \hyperpage{88}
-  \item VNS, \hyperpage{14}, \hyperpage{23}, \hyperpage{84}
-  \item VNS\_G, \hyperpage{17}
-  \item VNSC, \hyperpage{21}, \hyperpage{25}
-  \item VSPD, \hyperpage{11, 12}
-  \item VSPD\_G, \hyperpage{17}
-  \item VY, \hyperpage{53}
-  \item VYC, \hyperpage{54}
-  \item VZI, \hyperpage{84}
+    \subitem aircraft, \hyperpage{15}, \hyperpage{18}, \hyperpage{24}
+    \subitem aircraft vertical, \hyperpage{12}, \hyperpage{19}
+  \item VEW, \hyperpage{15}, \hyperpage{26}, \hyperpage{86}
+  \item VEW\_G, \hyperpage{18}
+  \item VEWC, \hyperpage{24}, \hyperpage{28}
+  \item VI, \hyperpage{55}
+  \item VIC, \hyperpage{56}
+  \item viscosity, \hyperpage{59}
+  \item VISxC, \hyperpage{80}
+  \item VISxHT, \hyperpage{80}
+  \item VISxHTV, \hyperpage{80}
+  \item VISxV, \hyperpage{79}
+  \item VLA, \hyperpage{90}
+  \item VLA1, \hyperpage{90}
+  \item VNS, \hyperpage{15}, \hyperpage{26}, \hyperpage{86}
+  \item VNS\_G, \hyperpage{18}
+  \item VNSC, \hyperpage{24}, \hyperpage{28}
+  \item VSPD, \hyperpage{12, 13}
+  \item VSPD\_G, \hyperpage{19}
+  \item VY, \hyperpage{56}
+  \item VYC, \hyperpage{57}
+  \item VZI, \hyperpage{86}
 
   \indexspace
 
   \item water
-    \subitem boiling point, \hyperpage{56}
+    \subitem boiling point, \hyperpage{58}
   \item water vapor
-    \subitem density, \hyperpage{39, 40}, \hyperpage{42}
-    \subitem mixing ratio, \hyperpage{43}
-  \item WD, \hyperpage{53}
-  \item WDC, \hyperpage{54}
-  \item WDRCTN, \hyperpage{84}
+    \subitem density, \hyperpage{41, 42}, \hyperpage{44}
+    \subitem mixing ratio, \hyperpage{45}
+  \item WD, \hyperpage{55}
+  \item WDC, \hyperpage{56}
+  \item WDRCTN, \hyperpage{86}
   \item wetting
-    \subitem of thermometers, \hyperpage{35}
-  \item WGS-84, \hyperpage{18}
+    \subitem of thermometers, \hyperpage{37}
   \item WGS-84 geoid, \hyperpage{4}
-  \item WI, \hyperpage{52}
-  \item WIC, \hyperpage{54}
-  \item wind, \hyperpage{53}
-    \subitem components, \hyperpage{53}
-    \subitem direction, \hyperpage{53}
-    \subitem GPS-corrected, \hyperpage{54}
-    \subitem lateral, \hyperpage{53}
-    \subitem lateral component, \hyperpage{54}
-    \subitem longitudinal, \hyperpage{53}
-    \subitem longitudinal component, \hyperpage{54}
-    \subitem relative, \hyperpage{50}
-    \subitem sign convention, \hyperpage{53}
-    \subitem speed, \hyperpage{53}
+  \item WGS84, \hyperpage{19}
+  \item WI, \hyperpage{55}
+  \item WIC, \hyperpage{56}
+  \item wind, \hyperpage{55}
+    \subitem components, \hyperpage{55}
+    \subitem direction, \hyperpage{56}
+    \subitem GPS-corrected, \hyperpage{56}
+    \subitem lateral, \hyperpage{56}
+    \subitem lateral component, \hyperpage{57}
+    \subitem longitudinal, \hyperpage{56}
+    \subitem longitudinal component, \hyperpage{57}
+    \subitem relative, \hyperpage{52}
+    \subitem sign convention, \hyperpage{55}
+    \subitem speed, \hyperpage{56}
     \subitem uncertainty
       \subsubitem Tech Note, \hyperpage{10}
-    \subitem vector, \hyperpage{53, 54}
-    \subitem vertical, \hyperpage{54}
-  \item World Geodetic System, \hyperpage{18}
+    \subitem vector, \hyperpage{55, 56}
+    \subitem vertical, \hyperpage{56}
+  \item World Geodetic System, \hyperpage{19}
   \item WP3, \hyperpage{12}
-  \item WS, \hyperpage{53}
-  \item WSC, \hyperpage{54}
-  \item WSPD, \hyperpage{84}
+  \item WS, \hyperpage{55}
+  \item WSC, \hyperpage{56}
+  \item WSPD, \hyperpage{86}
 
   \indexspace
 
-  \item XFO3FNO, \hyperpage{67}
-  \item XFO3FS, \hyperpage{67}
-  \item XFO3P, \hyperpage{67}
-  \item XICN, \hyperpage{72}
-  \item XICNC, \hyperpage{72}
-  \item XMACH2, \hyperpage{50}
-  \item XNCLF, \hyperpage{69}
-  \item XNMBT, \hyperpage{69}
-  \item XNO, \hyperpage{69}
-  \item XNOCAL, \hyperpage{69}
-  \item XNOCF, \hyperpage{69}
-  \item XNOSF, \hyperpage{69}
-  \item XNOY, \hyperpage{69}
-  \item XNOYP, \hyperpage{69}
-  \item XNOZA, \hyperpage{69}
-  \item XNSAF, \hyperpage{69}
-  \item XNST, \hyperpage{69}
-  \item XNYCAL, \hyperpage{69}
-  \item XNZAF, \hyperpage{69}
-  \item XO3, \hyperpage{67}
-  \item XSIGV\_UVH, \hyperpage{40}
-  \item XUVI, \hyperpage{89}
-  \item XUVP, \hyperpage{89}
-  \item XUVT, \hyperpage{89}
-  \item XVI, \hyperpage{84}
+  \item XFO3FNO, \hyperpage{69}
+  \item XFO3FS, \hyperpage{69}
+  \item XFO3P, \hyperpage{69}
+  \item XICN, \hyperpage{74}
+  \item XICNC, \hyperpage{74}
+  \item XMACH2, \hyperpage{52}
+  \item XNCLF, \hyperpage{71}
+  \item XNMBT, \hyperpage{71}
+  \item XNO, \hyperpage{71}
+  \item XNOCAL, \hyperpage{71}
+  \item XNOCF, \hyperpage{71}
+  \item XNOSF, \hyperpage{71}
+  \item XNOY, \hyperpage{71}
+  \item XNOYP, \hyperpage{71}
+  \item XNOZA, \hyperpage{71}
+  \item XNSAF, \hyperpage{71}
+  \item XNST, \hyperpage{71}
+  \item XNYCAL, \hyperpage{71}
+  \item XNZAF, \hyperpage{71}
+  \item XO3, \hyperpage{69}
+  \item XSIGV\_UVH, \hyperpage{42}
+  \item XUVI, \hyperpage{91}
+  \item XUVP, \hyperpage{91}
+  \item XUVT, \hyperpage{91}
+  \item XVI, \hyperpage{86}
 
   \indexspace
 
   \item YEAR, \hyperpage{7}
-  \item YVI, \hyperpage{84}
+  \item YVI, \hyperpage{86}
 
 \end{theindex}

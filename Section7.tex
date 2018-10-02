@@ -68,7 +68,7 @@ before correction, and it may be affected by local flow-field distortion\index{f
 PS\_A is the pressure measurement taken from the avionics\index{avionics}
 system on the aircraft, processed via unknown algorithms in the avionics
 system that may smooth, correct, and perhaps delay the result. PSxC
-is PSx corrected for local flow-field distortion. (See \href{http://www.eol.ucar.edu/raf/Bulletins/bulletin21.html}{RAF Bulletin \#{}21}\index{Bulletin 21}
+is PSx corrected for local flow-field distortion. (See \href{http://www.eol.ucar.edu/raf/Bulletins/bulletin21.html}{RAF Bulletin \#21}\index{Bulletin 21}
 and the discussion in \href{https://drive.google.com/open?id=0B1kIUH45ca5AaW02ZUt1X2kyX2s}{this memo}),
 and PSXC is the preferred\index{measurement!preferred} corrected
 measurement used for derived calculations. These measurements have
@@ -106,17 +106,20 @@ measurements Aug 2006 to 2012, $\Delta p=$ (-1.02 + 0.1565{*}q) +
 q1{*}(0.008 + q1{*}(7.1979e-09{*}q1 - 1.4072e-05). Before Aug 2006:
 $\Delta p=$(3.08 - 0.0894{*}\{PSF\}) + \{QCF\}{*}(-0.007474 + \{QCF\}{*}4.0161e-06).}\\
 \begin{equation}
-\frac{\Delta p}{p}=d_{0}+d_{1}\frac{\alpha}{a_{r}}+d_{2}\,M\label{eq:PCORC130}
+\frac{\Delta p}{p_{m}}=d_{0}+\frac{q_{m}}{p_{m}}(d_{1}+d_{4}\frac{\alpha^{2}}{a_{r}^{2}})+d_{2}\frac{\alpha}{a_{r}}+d_{3}\thinspace M\label{eq:PCORC130}
 \end{equation}
-where, for $p$ = PSFD \sindex[lis]{alpha@$\alpha$=angle of attack},
-$\alpha=\mathrm{ATTACK}$ and $a_{r}=1^{\circ}$ (included to keep
-the equation and coefficients\index{coefficients!sensitivity} dimensionless),
-\{$d_{0},d_{1},d_{2}$\}=\{$-$0.00637, 0.001366, 0.0149\}. For PSFRD,
-the coefficients are \{$d_{0}^{\prime},\,d_{1}^{\prime},\,d_{2}^{\prime}$\}\sindex[lis]{di@$d_{0-2}$=coefficients, pressure correction, C-130}
-= \{$-$0.00754, 0.000497, 0.0368\}. The latter coefficients are
-significantly different from the coefficients for PSFD, but the static
-ports where PSFRD is measured are at a different location on the fuselage
-so different flow-distortion effects are expected.
+\\
+where, for $p_{m}$ = PSFD \sindex[lis]{alpha@$\alpha$=angle of attack},
+$q_{m}$ = dynamic pressure (QCF), $\alpha=\mathrm{ATTACK}$ and $a_{r}=1^{\circ}$
+(included to keep the equation and coefficients\index{coefficients!sensitivity}
+dimensionless), and \{$d_{0},\,d_{1},\,d_{2},\,d_{3},\,d_{4}$\}
+= \{-4.389e-03, -2.966e-02, -6.831e-05, 2.672e-02, 2.4466e-03\}. For
+PSFRD, the corresponding coefficients are \sindex[lis]{di@$d_{0-2}$=coefficients, pressure correction, C-130}
+\{0.007372, 0.12774, $-$6.8776e-4, $-$0.02994, 0.001630\}. The
+latter coefficients are significantly different from the coefficients
+for PSFD, but the static ports where PSFRD is measured are at a different
+location on the fuselage so different flow-distortion effects are
+expected.
 \end{quote}
 %
 \end{minipage}\\
@@ -139,10 +142,14 @@ dimensionless) \{$a_{0},a_{1},a_{2},a_{3}$\}\sindex[lis]{ai@$a_{0,1,2,3}$=coeffi
 \\
 In equations (\ref{eq:PCORC130}) and (\ref{eq:PCORforGV}) the Mach
 number\index{Mach number!uncorrected} is calculated from the uncorrected
-measurements of $p$ and $q$, via\\
+measurements of $p$ and $q$, using dry-air values for $R$, $c_{v}$
+abd $c_{p}$, via\\
 \begin{equation}
 M=\left\{ \left(\frac{2c_{v}}{R}\right)\left[\left(\frac{p+q}{p}\right)^{R/c_{p}}-1\right]\right\} ^{1/2}\,\,\,.\label{eq:MachEquation}
 \end{equation}
+For additional information on these correction coefficients, see \href{https://drive.google.com/open?id=0B1kIUH45ca5AdEJXNU5oZ195bEk}{this note}
+and Cooper et al.~(2014)\footnote{\href{http://www.atmos-meas-tech.net/7/3215/2014/}{Atmos. Meas. Tech., 7, 3215-3231},
+2014 doi:10.5194/amt-7-3215-2014}.\\
 \\
 
 \textbf{Dynamic Pressure (hPa):}\nop{QCx}{}\nop{QCxC}{}\nop{QCX}{}\nop{QCXC}{}\textbf{
@@ -189,14 +196,30 @@ is used for current measurements of dynamic pressure on the C-130,
 and a Honeywell PPT transducer is used on the GV.\label{punch4.1}
 This measurement enters the calculation of true airspeed\index{true airspeed|see {airspeed}}\index{airspeed}
 and Mach number\index{Mach number} and so is needed to calculate
-many derived variables. 
+many derived variables.\\
+\\
+In the case of QCRC\index{QCRC!flow-angle correction} from the GV,
+one additional correction is applied (beginning 2017). The uncorrected
+measurement QCR is affected by flow angles, while QCF is not (for
+modest angle of attack or sideslip), so an additional adjustment is
+needed. The needed correction can be found by using an empirical relationship
+matching QCR to QCF, which leads to the following equation: \\
+\[
+\mathrm{\{QCRC\}}=b_{0}+b_{1}\mathrm{\{QCR\}}+b_{2}\mathrm{\{AKRD\}^{2}}+b_{3}\mathrm{\{SSRD\}^{2}-\Delta p}
+\]
+where $\Delta p$ is given by (\ref{eq:PCORforGV}) and the coefficients
+are \{$b_{0-3}$\}=\{$-0.5635$, $0.9982$, , 0.0273, $0.0562$\}.
+Some justification for this correction is contained in \href{https://drive.google.com/open?id=0B1kIUH45ca5ANmZ1MHVWNWJyeTg}{this note.}
+A similar correction is not made for measurements from the C-130 radome
+because they do not appear to be necessary, as discussed in that note.\\
+ 
 
 \textbf{D-Value (m):}\nop{DVALUE}{}\textbf{ }\textbf{\uline{DVALUE}}\textbf{\index{DVALUE}}\sindex[var]{DVALUE}\\
 The difference\index{d-value} between geopotential altitude\index{altitude!geopotential}
 and pressure altitude\index{altitude!pressure} (m). This variable
-is calculated from \{GGALT\}$-$\{PALT\} and, for appropriate flight
+is calculated from \{GEOPHT\}$-$\{PALT\} and, for appropriate flight
 segments, can be used to measure height gradients on a constant-pressure
-surface.
+surface. Prior to 2018, this was calculated from \{GGALT\} -- \{PALT\}.
 
 \textbf{Special Pressure Measurements (hPa):}\nop{PSDPx}{}\nop{CAVP_x}{}\nop{PCAB}{}\nop{PSURF}{}\textbf{
 }\textbf{\uline{PSDPx}}\textbf{, }\textbf{\uline{CAVP\_x}}\textbf{,
@@ -631,7 +654,7 @@ and the enhancement factor should be evaluated at the pressure in
 the housing. \\
 \\
 The relationship between water-vapor pressure and dew- or frost-point
-temperature is based on the Murphy and Koop\footnote{Q. J. R. Meteorol. Soc. (2005), 131, pp. 1539\textendash 1565}\index{Murphy and Koop, 2005}\index{pressure!water vapor!equilibrium}
+temperature is based on the Murphy and Koop\footnote{Q. J. R. Meteorol. Soc. (2005), 131, pp. 1539--1565}\index{Murphy and Koop, 2005}\index{pressure!water vapor!equilibrium}
 (2005) equations.\footnote{Prior to 2010, the vapor pressure relationship used was the Goff-Gratch
 formula as given in the Smithsonian Tables (List, 1980).} They express the equilibrium vapor pressure as a function of frost
 point or dew point \emph{and at a total air pressure $p$} via equations
@@ -806,9 +829,8 @@ vapor pressure $e$:
 
 ~~~~~~~~DPxC = $F_{d}(e)$
 
-\textemdash - \textemdash - \textemdash - \textemdash - \textemdash -
-\textemdash - \textemdash - \textemdash - \textemdash - \textemdash -
-\textemdash - \textemdash - \textemdash - \textemdash - \textemdash -
+---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+---- ---- ---- ----
 
 for other instruments producing measurements of vapor density (RHO
 {[}g~m$^{-3}${]}:\footnote{prior to 2011 the following formula was used: 
@@ -1192,7 +1214,7 @@ the dry parcel would be compressed to 1000 hPa. }Beginning in 2011,
 pseudo-adiabatic equivalent potential temperature\index{temperature!pseudo-adiabatic equivalent potential}\sindex[lis]{thetaP@$\Theta_{P}$=temperature, pseudo-adiabatic equivalent potential}
 is calculated using the method developed by Davies-Jones\index{Davies-Jones}
 (2009).\footnote{Davies-Jones, R., 2009: On formulas for equivalent potential temperature.
-\emph{Mon. Wea. Review, }\textbf{137, }3137\textendash 3148.} This is discussed in the memo available at \href{https://www.eol.ucar.edu/system/files/ThetaE.pdf}{this URL}.
+\emph{Mon. Wea. Review, }\textbf{137, }3137--3148.} This is discussed in the memo available at \href{https://www.eol.ucar.edu/system/files/ThetaE.pdf}{this URL}.
 The following summarizes that study. The Davies-Jones formula is\\
 \begin{equation}
 \Theta_{P}=\Theta_{DL}\exp\{\frac{r(L_{0}^{*}-L_{1}^{*}(T_{L}-T_{0})+K_{2}r)}{c_{pd}T_{L}}\}\label{eq:DaviesJonesThetaP-1}
@@ -1220,7 +1242,7 @@ obtained by exact integration. Note that, unlike the formula discussed
 below that was used prior to 2011, the mixing ratio must be used in
 dimensionless form (i.e., kg/kg), \emph{not} with units of g/kg. The
 following empirical formula, developed by Bolton\index{Bolton} (1980),\footnote{Bolton, D., 1980: The computation of equivalent potential temperature.
-\emph{Mon. Wea. Rev.,} \textbf{108,} 1046\textendash 1053. } is used to determine $T_{L}$:\\
+\emph{Mon. Wea. Rev.,} \textbf{108,} 1046--1053. } is used to determine $T_{L}$:\\
 \begin{equation}
 T_{L}=\frac{\beta_{1}}{3.5\ln(T_{K}/\beta_{3})-\ln(\mathrm{e/\beta_{4}})+\beta_{5}}+\beta_{2}\label{eq:TLCL-1}
 \end{equation}
@@ -1244,7 +1266,7 @@ until all water vapor condensed and was removed from the air parcel.
 \fbox{\begin{minipage}[t]{0.95\textwidth}%
 $T_{L}$= temperature at the lifted condensation level, K\\
 ATX\index{ATX} = ambient temperature ($^{\circ}C$)\\
-EDPC\index{EDPC} = water vapor pressure (hPa) \textendash{} now superceded
+EDPC\index{EDPC} = water vapor pressure (hPa) -- now superceded
 by EWX\\
 MR\index{MR} = mixing ratio (g/kg)\\
 THETA\index{THETA} = potential temperature (K)\\

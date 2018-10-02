@@ -1,4 +1,4 @@
-%% LyX 2.2.0 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.3.0 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[12pt,twoside,english]{article}
 \usepackage{mathptmx}
@@ -27,16 +27,17 @@
 \usepackage{textcomp}
 \usepackage{url}
 \usepackage{ifthen}
+\usepackage{footnote}
 \usepackage{amsmath}
 \usepackage{splitidx}
 \makeindex
 \usepackage{setspace}
 \PassOptionsToPackage{normalem}{ulem}
 \usepackage{ulem}
-\newindex[Index]{idx}
-\newindex[Variable Names]{var}
-\newindex[List of Symbols]{lis}
-\newindex[Conversion Factors]{con}
+\newindex{idx}
+\newindex{var}
+\newindex{lis}
+\newindex{con}
 \usepackage[unicode=true,
  bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
  breaklinks=true,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=true]
@@ -49,6 +50,9 @@
 \makeatletter
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+
+\makesavenoteenv{tabular}
+
 \newcommand{\noun}[1]{\textsc{#1}}
 \DeclareRobustCommand{\greektext}{%
   \fontencoding{LGR}\selectfont\def\encodingdefault{LGR}}
@@ -59,47 +63,47 @@
 \providecommand{\tabularnewline}{\\}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
- \newlength{\lyxhang}
- \IfFileExists{hanging.sty}{
-   \usepackage{hanging}
-   \newenvironment{hangparagraphs}
-     {%
-       \ifthenelse{\lengthtest{\parindent > 0pt}}%
-         {\setlength{\lyxhang}{\parindent}}%
-         {\setlength{\lyxhang}{2em}}%
-       \par\begin{hangparas}{\lyxhang}{1}%
-     }
-     {\end{hangparas}}
- }{%else
-   \newenvironment{hangparagraphs}
-     {%
-       \ifthenelse{\lengthtest{\parindent > 0pt}}%
-         {\setlength{\lyxhang}{\parindent}}%
-         {\setlength{\lyxhang}{2em}}%
-       \begin{hangparas}%
-     }
-     {\end{hangparas}}
-   \newcommand{\hangpara}{\hangindent \lyxhang \hangafter 1 \noindent}
-   \newenvironment{hangparas}{\setlength{\parindent}{\z@}
-   \everypar={\hangpara}}{\par}
- }
+\newlength{\lyxhang}
+\IfFileExists{hanging.sty}{
+  \usepackage{hanging}
+  \newenvironment{hangparagraphs}
+    {%
+      \ifthenelse{\lengthtest{\parindent > 0pt}}%
+        {\setlength{\lyxhang}{\parindent}}%
+        {\setlength{\lyxhang}{2em}}%
+      \par\begin{hangparas}{\lyxhang}{1}%
+    }
+    {\end{hangparas}}
+}{%else
+  \newenvironment{hangparagraphs}
+    {%
+      \ifthenelse{\lengthtest{\parindent > 0pt}}%
+        {\setlength{\lyxhang}{\parindent}}%
+        {\setlength{\lyxhang}{2em}}%
+      \begin{hangparas}%
+    }
+    {\end{hangparas}}
+  \newcommand{\hangpara}{\hangindent \lyxhang \hangafter 1 \noindent}
+  \newenvironment{hangparas}{\setlength{\parindent}{\z@}
+  \everypar={\hangpara}}{\par}
+}
 \newenvironment{lyxcode}
-{\par\begin{list}{}{
-\setlength{\rightmargin}{\leftmargin}
-\setlength{\listparindent}{0pt}% needed for AMS classes
-\raggedright
-\setlength{\itemsep}{0pt}
-\setlength{\parsep}{0pt}
-\normalfont\ttfamily}%
- \item[]}
-{\end{list}}
+	{\par\begin{list}{}{
+		\setlength{\rightmargin}{\leftmargin}
+		\setlength{\listparindent}{0pt}% needed for AMS classes
+		\raggedright
+		\setlength{\itemsep}{0pt}
+		\setlength{\parsep}{0pt}
+		\normalfont\ttfamily}%
+	 \item[]}
+	{\end{list}}
 \newenvironment{lyxlist}[1]
-{\begin{list}{}
-{\settowidth{\labelwidth}{#1}
- \setlength{\leftmargin}{\labelwidth}
- \addtolength{\leftmargin}{\labelsep}
- \renewcommand{\makelabel}[1]{##1\hfil}}}
-{\end{list}}
+	{\begin{list}{}
+		{\settowidth{\labelwidth}{#1}
+		 \setlength{\leftmargin}{\labelwidth}
+		 \addtolength{\leftmargin}{\labelsep}
+		 \renewcommand{\makelabel}[1]{##1\hfil}}}
+	{\end{list}}
 
 \@ifundefined{date}{}{\date{}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
@@ -138,7 +142,7 @@ Algorithms Used to Produce Data Products from Research Aircraft;\\
 also Definitions of Variables in Archived Data Files
 \par\end{center}
 
-\date{\centerline{version: 14 July 2016}}
+\date{\centerline{version: November 2017}}
 
 \vskip2in
 
@@ -176,7 +180,7 @@ PO Box 3000, Boulder CO ~80307-3000}
 
 \include{Section3}
 
-\newpage{}\vfill\eject\cleardoublepage{}
+\newpage\vfill\eject\cleardoublepage{}
 
 \include{Section7}
 
@@ -212,13 +216,14 @@ PO Box 3000, Boulder CO ~80307-3000}
 
 \section*{Suggested Additional Steps}
 
-\begin{longtable}{|c|>{\raggedright}p{12cm}|c|}
+\begin{longtable}{|c|>{\raggedright}p{12cm}|>{\centering}p{3cm}|}
 \hline 
 \textbf{page} & \textbf{suggested action} & \textbf{who?}\tabularnewline
 \hline 
 \endhead
 \hline 
-\pageref{Punch1.1} & Add, to constants table, a reference to what has been in use previously & \tabularnewline
+\pageref{Punch1.1} & Add, to constants table, a reference to what has been in use previously.
+(See Code.amlib as saved 2011, for examples) & WAC -- not sure if needed? \tabularnewline
 \hline 
 \pageref{punch1.2} & Ask Teresa and Mike R. to review the discussion re trace-gas units & done, MR\tabularnewline
 \hline 
@@ -229,17 +234,21 @@ for inclusion as an addition to the section on times. Revise section. & \tabular
 discussions in this document. & partly done\tabularnewline
 \hline 
 \pageref{punch1.4} & In algorithm boxes, when variables are referenced, make those references
-active links to the discussion of the variable & \tabularnewline
+active links to the discussion of the variable & WAC: use hyperlink\{\}\{\}\tabularnewline
 \hline 
 \pageref{punch3.1} & Get description of the history of the C-130 INS, with characteristics
 for the Litton at least. & \tabularnewline
 \hline 
 \pageref{punch3.3} & Add history of GPS systems: What was used when (C-130 at least) & \tabularnewline
 \hline 
-\pageref{punch3.4} & Add/clarify section on height-above-terrain & \tabularnewline
+\pageref{punch3.4} & Add/clarify section on height-above-terrain; modify to ref. geoid.
+Need to change HeightAboveTerrain() script. & partly done, WAC,\tabularnewline
 \hline 
-\pageref{punch3.4} & check/clarify discussion of height-above-geoid and, generally, geopotential
-vs geometric vs geoid height  & \tabularnewline
+\pageref{punch3.4-1} & check/clarify discussion of height-above-geoid and, generally, geopotential
+vs geometric vs geoid height  & done - WAC\tabularnewline
+\hline 
+ & Add a variable representing geopotential height and change DVALUE
+to be based on it minus PALT & WAC - done (proposed)\tabularnewline
 \hline 
 \pageref{punch3.5} & Clarify meaning of mode and status for old GPS units, and if used
 anymore & \tabularnewline
@@ -255,7 +264,9 @@ GPS? ROC as used for reprocessing, and WIR as backup to WIC? & \tabularnewline
 (QCF, MACH\_A, ADIFR) & \tabularnewline
 \hline 
 \pageref{punch4.3} & Add a discussion of the additional corrections to QCR that could make
-this less sensitive to AOA? Algorithm is developed and documented. & \tabularnewline
+this less sensitive to AOA? Algorithm is developed and documented;
+implement? Coefficients in ProcessingAlgorithms.pdf are based on ARISTO2016
+flight 6. & WAC - done (proposed)\tabularnewline
 \hline 
 \pageref{punch3.10} & Suggestion: consider ALT\_G and avoid ALT for GPS avionics variable & \tabularnewline
 \hline 
@@ -268,14 +279,13 @@ resolution, are used together. & \tabularnewline
 \pageref{punch:3-13} & Need to implement the discussion re correction for the displacement
 of the GPS antenna from the INS. When done, need to add LG=-4.30 m
 to the attributes for GGVSPD, GGVEW, GGVNS (GV) and get appropriate
-values for the C-130 & \tabularnewline
+values for the C-130 & WAC - done (proposed)\tabularnewline
 \hline 
 \pageref{punch:3-14} & Get Dick Friesen or someone to review and update the discussion of
 GPS GSTAT & \tabularnewline
 \hline 
 \pageref{punch:3-15} & Revise the values listed for the complementary-filter feedback to
-match what is used now \textendash{} better with lower values than
-listed & \tabularnewline
+match what is used now -- better with lower values than listed & \tabularnewline
 \hline 
 \pageref{punch:3-16} & It might be useful to disable the roll test in gpsc.c, now that GPS
 is better than when this was implemented & \tabularnewline
@@ -286,7 +296,7 @@ this? (FAAM has it posted) & \tabularnewline
 \pageref{punch:4-5} & In-cloud air T radiometer: could use more detail re the processing
 algorithm & \tabularnewline
 \hline 
-\pageref{punch:4.6} & Check all the complex M-K section, esp. $T_{k}$ and DP interp. function & \tabularnewline
+\pageref{punch:4.6} & Check all the complex M-K section, esp. $T_{k}$ and DP interp. function & partly done - WAC\tabularnewline
 \hline 
 \pageref{punch:4-7} & Consider changing name to FP\_CR2 in preference to MIRRORT\_CR2? & \tabularnewline
 \hline 
@@ -316,10 +326,10 @@ algorithm. & \tabularnewline
 with info from Bansemer and reference to work by Korolev, Strapp,
 Jensen, etc. & \tabularnewline
 \hline 
-\pageref{punch:5-3} & Is ``PMS/CSIRO King'' correct? DMT? & \tabularnewline
+\pageref{punch:5-3} & Is ``PMS/CSIRO King'' correct? DMT? & OK - JBJ\tabularnewline
 \hline 
-\pageref{punch:5-4} & Variables like AS200 have names with ``Raw Accumulation'' \textendash{}
-seems awkward, consider name change? Maybe ``Count'' per channel? & \tabularnewline
+\pageref{punch:5-4} & Variables like AS200 have names with ``Raw Accumulation'' -- seems
+awkward, consider name change? Maybe ``Count'' per channel? & \tabularnewline
 \hline 
 \pageref{punch:5-7} & add the variables for total counts? & \tabularnewline
 \hline 
@@ -339,13 +349,13 @@ to obsolete? & \tabularnewline
 \pageref{punch:6-2} & Is NO-related discussion OK? is this right: The one named NO2 is actually
 for NOy? & \tabularnewline
 \hline 
-\pageref{punch:6-4} & In true measurement mode, XNOZA and XNZAF will be near zero \textendash{}
-is this right? & \tabularnewline
+\pageref{punch:6-4} & In true measurement mode, XNOZA and XNZAF will be near zero -- is
+this right? & \tabularnewline
 \hline 
 \pageref{punch:6-5} & I think the corrected-NO mixing ratio section may need revision? & \tabularnewline
 \hline 
-\pageref{punch:6-6} & ``has the provision for the addition of water vapor '' \textendash{}
-does that mean this is always done, or only sometimes? & \tabularnewline
+\pageref{punch:6-6} & ``has the provision for the addition of water vapor '' -- does
+that mean this is always done, or only sometimes? & \tabularnewline
 \hline 
 \pageref{punch:7-1} & to ``0.1-360 s'' add ``but is typically set to 0.1~s''? & \tabularnewline
 \hline 
@@ -378,6 +388,19 @@ version? Or old one for Wyo KA? & \tabularnewline
  & There are some additional notes regarding obsolete variables, esp.
 involving FSSP processing, that are not included here. & \tabularnewline
 \hline 
+WIC, GGALT, etc. & Review and correct descriptive attributes (e.g., WIC, GGALT, {*}DGPS & \tabularnewline
+\hline 
+ & StdSpeedofSound is wrong; enters ias.c -- obsolete now? & \tabularnewline
+\hline 
+ & fix Rd in xlate/const.c: calculated with wrong Md, although right
+one is listed later in routine. (trivial difference) & \tabularnewline
+\hline 
+ & Lv defined in xlate/const.c is not latent heat but derivative of latent
+heat vs T. Used correctly in thetap.c and plwcc.c, but deceptively
+commented & \tabularnewline
+\hline 
+ & Review and approve new AKRD description & \tabularnewline
+\hline 
 \end{longtable}
 
 \section*{How to Edit This Document}
@@ -406,7 +429,7 @@ be done as follows: ``INS|see \{Inertial Navigation System\}'' where
 the part in braces is also in LaTeX code, generated by pressing CNTL-L.
 \end{enumerate}
 \item Creating a PDF-format file in LyX usually will generate these lists
-also. To be save and ensure that the lists are updated, follow these
+also. To be safe and ensure that the lists are updated, follow these
 steps:
 \begin{enumerate}
 \item Export a LaTeX file from LyX in pdflatex format, using the ``export''
@@ -511,9 +534,9 @@ sections and other components of the document.
 \subsection*{Adding New Targets}
 
 When a new variable is added, a new anchor point can be added by inserting,
-in LaTeX mode, \texttt{\textbackslash{}nop\{LAT\} }at the appropriate
-point in the LyX document. (\textbackslash{}nop has been defined to
-use \textbackslash{}hypertarget but displace the reference upward
+in LaTeX mode, \texttt{\textbackslash nop\{LAT\} }at the appropriate
+point in the LyX document. (\textbackslash nop has been defined to
+use \textbackslash hypertarget but displace the reference upward
 one line.) In addition, when a new variable is added, entries should
 be made in the index items and the variable-names list, following
 the pattern used for existing variables, and if appropriate any new
@@ -537,6 +560,12 @@ once the linked files are moved to EOL web space.}
 
 \href{https://drive.google.com/open?id=0B1kIUH45ca5AOFpZUGxGVUg3VWc}{https://drive.google.com/open?id=0B1kIUH45ca5AOFpZUGxGVUg3VWc}{[}Bansemer2DProcessing.pdf{]}
 
+\href{https://drive.google.com/open?id=0B1kIUH45ca5ATkNyTlZVRm11WDA}{https://drive.google.com/open?id=0B1kIUH45ca5ATkNyTlZVRm11WDA}
+{[}HeightOfTerrain.pdf{]}
+
+\href{https://drive.google.com/open?id=0B1kIUH45ca5AdVdRQ25BdG1GUXc}{https://drive.google.com/open?id=0B1kIUH45ca5AdVdRQ25BdG1GUXc}
+{[}Correction for GPS antenna location{]}
+
 \rule[0.5ex]{1\columnwidth}{1pt}
 
 \uline{Links not needing any action except monitoring for continued
@@ -547,7 +576,7 @@ should update to the current version of this document{]}
 
 \href{https://www.eol.ucar.edu/system/files/PressureAltitude.pdf}{https://www.eol.ucar.edu/system/files/PressureAltitude.pdf}
 
-\href{https://www.eol.ucar.edu/system/files/PCOR_1.pdf}{https://www.eol.ucar.edu/system/files/PCOR\_{}1.pdf}
+\href{https://www.eol.ucar.edu/system/files/PCOR_1.pdf}{https://www.eol.ucar.edu/system/files/PCOR\_1.pdf}
 
 \href{https://www.eol.ucar.edu/system/files/VaporPressureV3.pdf}{https://www.eol.ucar.edu/system/files/VaporPressureV3.pdf}
 
@@ -565,7 +594,7 @@ should update to the current version of this document{]}
 
 \href{http://www.eol.ucar.edu/data/software/nidas}{http://www.eol.ucar.edu/data/software/nidas}
 
-\href{http://www.eol.ucar.edu/raf/Software/aeros_dnld.html}{http://www.eol.ucar.edu/raf/Software/aeros\_{}dnld.html}
+\href{http://www.eol.ucar.edu/raf/Software/aeros_dnld.html}{http://www.eol.ucar.edu/raf/Software/aeros\_dnld.html}
 
 \href{mailto:mailto:mailto:raf-dm@eol.ucar.edu}{mailto:mailto:raf-dm@eol.ucar.edu}
 
@@ -575,7 +604,7 @@ should update to the current version of this document{]}
 
 \href{http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf}{http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf}
 
-\href{http://www.bipm.org/en/si/si_brochure/chapter2/2-2/table3.html\#notes}{http://www.bipm.org/en/si/si\_{}brochure/chapter2/2-2/table3.html\#{}notes}
+\href{http://www.bipm.org/en/si/si_brochure/chapter2/2-2/table3.html\#notes}{http://www.bipm.org/en/si/si\_brochure/chapter2/2-2/table3.html\#notes}
 
 \href{http://www.eol.ucar.edu/raf/Software/TimeExamp.html}{http://www.eol.ucar.edu/raf/Software/TimeExamp.html}
 
@@ -593,7 +622,7 @@ should update to the current version of this document{]}
 
 \href{http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf}{http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf}
 
-\href{http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19770009539_1977009539.pdf}{http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19770009539\_{}1977009539.pdf}
+\href{http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19770009539_1977009539.pdf}{http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19770009539\_1977009539.pdf}
 
 \href{http://www.eol.ucar.edu/aircraft-instrumentation}{http://www.eol.ucar.edu/aircraft-instrumentation}
 
@@ -663,7 +692,7 @@ should update to the current version of this document{]}
 
 \href{http://nldr.library.ucar.edu/repository/assets/technotes/TECH-NOTE-000-000-000-175.pdf}{http://nldr.library.ucar.edu/repository/assets/technotes/TECH-NOTE-000-000-000-175.pdf}
 
-\href{http://journals.ametsoc.org/doi/pdf/10.1175/1520-0450\%281977\%29016\%3C0190\%3APFIPP\%3E2.0.CO\%3B2}{http://journals.ametsoc.org/doi/pdf/10.1175/1520-0450\%{}281977\%{}29016\%{}3C0190\%{}3APFIPP\%{}3E2.0.CO\%{}3B2}
+\href{http://journals.ametsoc.org/doi/pdf/10.1175/1520-0450\%281977\%29016\%3C0190\%3APFIPP\%3E2.0.CO\%3B2}{http://journals.ametsoc.org/doi/pdf/10.1175/1520-0450\%281977\%29016\%3C0190\%3APFIPP\%3E2.0.CO\%3B2}
 
 \href{https://www.eol.ucar.edu/aircraft-instrumentation}{https://www.eol.ucar.edu/aircraft-instrumentation}
 
@@ -675,5 +704,5 @@ should update to the current version of this document{]}
 
 \vfill\eject
 
-\pagebreak{}
+\pagebreak
 \end{document}
