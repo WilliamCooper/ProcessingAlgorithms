@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -34,6 +34,8 @@ hanging
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -63,6 +65,7 @@ hanging
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -71,7 +74,10 @@ hanging
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -239,7 +245,8 @@ PLWC is the power required to maintain constant temperature in a heated
 \begin_inset CommandInset href
 LatexCommand href
 name "RAF Bulletin 24"
-target "http://www.eol.ucar.edu/raf/Bulletins/bulletin24.html"
+target "https://opensky.ucar.edu/islandora/object/archives%3A8155"
+literal "false"
 
 \end_inset
 
@@ -258,6 +265,7 @@ Bulletin 24
 LatexCommand href
 name "this URL"
 target "http://www.eol.ucar.edu/instruments/king-csiro-liquid-water-sensor"
+literal "false"
 
 \end_inset
 
@@ -450,7 +458,8 @@ King, W.
 \begin_inset CommandInset href
 LatexCommand href
 name "this URL"
-target "https://www.eol.ucar.edu/system/files/PLWCCrev140214.pdf"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PLWCCrev140214.pdf"
+literal "false"
 
 \end_inset
 
@@ -1546,7 +1555,8 @@ Rosemount 871F icing probe
 \begin_inset CommandInset href
 LatexCommand href
 name "this URL"
-target "http://www.eol.ucar.edu/instruments/rosemount-icing-probe"
+target "https://www.eol.ucar.edu/instruments/rosemount-icing-detector"
+literal "false"
 
 \end_inset
 
@@ -1607,7 +1617,8 @@ hydrometeor detector
 \begin_inset CommandInset href
 LatexCommand href
 name "RAF Bulletin 24"
-target "http://www.eol.ucar.edu/raf/Bulletins/bulletin24.html"
+target "https://opensky.ucar.edu/islandora/object/archives%3A8155"
+literal "false"
 
 \end_inset
 
@@ -2851,6 +2862,25 @@ Generic Name
 \series bold
 \size small
 Probe
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Probes without links are described at this URL
+\begin_inset CommandInset href
+LatexCommand href
+name "this URL"
+target "https://opensky.ucar.edu/islandora/object/archives%3A8155"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2947,14 +2977,7 @@ F
 \begin_layout Plain Layout
 
 \size small
-\begin_inset CommandInset href
-LatexCommand href
-name "FSSP-100"
-target "http://www.eol.ucar.edu/raf/Bulletins/B24/fssp100.html"
-
-\end_inset
-
-
+FSSP-100
 \begin_inset Foot
 status collapsed
 
@@ -3038,7 +3061,8 @@ F
 \begin_inset CommandInset href
 LatexCommand href
 name "SPP-100"
-target "http://www.eol.ucar.edu/instruments/forward-scattering-spectrometer-probe-model-100"
+target "https://opensky.ucar.edu/islandora/object/archives%3A8155"`
+literal "false"
 
 \end_inset
 
@@ -3119,6 +3143,7 @@ U
 LatexCommand href
 name "UHSAS"
 target "https://www.eol.ucar.edu/instruments/ultra-high-sensitivity-aerosol-spectrometer"
+literal "false"
 
 \end_inset
 
@@ -3195,6 +3220,7 @@ D
 LatexCommand href
 name "CDP"
 target "https://www.eol.ucar.edu/instruments/cloud-droplet-probe"
+literal "false"
 
 \end_inset
 
@@ -3272,7 +3298,8 @@ F300
 \begin_inset CommandInset href
 LatexCommand href
 name "FSSP-300"
-target "https://www.eol.ucar.edu/instruments/forward-scattering-spectrometer-probe-model-300"
+target "https://opensky.ucar.edu/islandora/object/archives%3A8155"
+literal "false"
 
 \end_inset
 
@@ -3357,14 +3384,7 @@ P
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset CommandInset href
-LatexCommand href
-name "PCASP"
-target "http://www.eol.ucar.edu/raf/Bulletins/B24/pcasp100.html"
-
-\end_inset
-
-
+PCASP
 \begin_inset Formula $^{b}$
 \end_inset
 
@@ -3443,6 +3463,7 @@ P
 LatexCommand href
 name "SPP-200"
 target "https://www.eol.ucar.edu/instruments/signal-processing-package-200-passive-cavity-aerosol-spectrometer-probe"
+literal "false"
 
 \end_inset
 
@@ -3618,14 +3639,7 @@ OAP-200X
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset CommandInset href
-LatexCommand href
-name "OAP-260X"
-target "http://www.eol.ucar.edu/raf/Bulletins/B24/260X.html"
-
-\end_inset
-
-
+OAP-260X
 \end_layout
 
 \end_inset
@@ -3818,14 +3832,7 @@ reference "Despite-the-'1D'"
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset CommandInset href
-LatexCommand href
-name "2DC"
-target "http://www.eol.ucar.edu/raf/Bulletins/B24/2dProbes.html"
-
-\end_inset
-
-
+2DC
 \begin_inset Formula $^{b,}$
 \end_inset
 
@@ -3924,14 +3931,7 @@ m
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset CommandInset href
-LatexCommand href
-name "2DP"
-target "http://www.eol.ucar.edu/raf/Bulletins/B24/2dProbes.html"
-
-\end_inset
-
-
+2DP
 \begin_inset Formula $^{b}$
 \end_inset
 
@@ -4012,6 +4012,7 @@ m
 LatexCommand href
 name "2DC"
 target "https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud-probe"
+literal "false"
 
 \end_inset
 
@@ -4103,6 +4104,7 @@ m
 LatexCommand href
 name "2DP"
 target "https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-precipitation-probe"
+literal "false"
 
 \end_inset
 
@@ -5273,7 +5275,8 @@ reference "TableOfProbes"
 \begin_inset CommandInset href
 LatexCommand href
 name "RAF Bulletin 24"
-target "http://www.eol.ucar.edu/raf/Bulletins/bulletin24.html"
+target "https://opensky.ucar.edu/islandora/object/archives%3A8155"
+literal "false"
 
 \end_inset
 
@@ -5725,7 +5728,8 @@ summed over all channels to give the total concentration in the size range
 \begin_inset CommandInset href
 LatexCommand href
 name "RAF Bulletin 24"
-target "http://www.eol.ucar.edu/raf/Bulletins/bulletin24.html"
+target "https://opensky.ucar.edu/islandora/object/archives%3A8155"
+literal "false"
 
 \end_inset
 
@@ -8046,6 +8050,7 @@ Instruments used to obtain hydrometeor images include the two-dimensional
 LatexCommand href
 name "2DC"
 target "https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud-probe"
+literal "false"
 
 \end_inset
 
@@ -8054,6 +8059,7 @@ target "https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud
 LatexCommand href
 name "2DP"
 target "https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-precipitation-probe"
+literal "false"
 
 \end_inset
 
@@ -8064,6 +8070,7 @@ target "https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-preci
 LatexCommand href
 name "3V-CPI"
 target "https://www.eol.ucar.edu/instruments/three-view-cloud-particle-imager"
+literal "false"
 
 \end_inset
 
@@ -8072,6 +8079,7 @@ target "https://www.eol.ucar.edu/instruments/three-view-cloud-particle-imager"
 LatexCommand href
 name "SID-2H"
 target "https://www.eol.ucar.edu/instruments/small-ice-detector-version-2-hiaper"
+literal "false"
 
 \end_inset
 
@@ -8080,6 +8088,7 @@ target "https://www.eol.ucar.edu/instruments/small-ice-detector-version-2-hiaper
 LatexCommand href
 name "HOLODEC"
 target "https://www.eol.ucar.edu/instruments/holographic-detector-clouds"
+literal "false"
 
 \end_inset
 
@@ -8091,6 +8100,7 @@ LatexCommand href
 name "this email address"
 target "mailto:raf-dm@eol.ucar.edu"
 type "mailto:"
+literal "false"
 
 \end_inset
 
@@ -8121,7 +8131,8 @@ streakers
 \begin_inset CommandInset href
 LatexCommand href
 name "this document"
-target "https://drive.google.com/open?id=0B1kIUH45ca5AOFpZUGxGVUg3VWc"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/Bansemer2DProcessing.pdf"
+literal "false"
 
 \end_inset
 
@@ -8130,6 +8141,7 @@ target "https://drive.google.com/open?id=0B1kIUH45ca5AOFpZUGxGVUg3VWc"
 LatexCommand href
 name "this web page"
 target "https://www.eol.ucar.edu/software/process2d"
+literal "false"
 
 \end_inset
 
@@ -8181,6 +8193,7 @@ For the images from the 2D probes, separate data files need to be used.
 LatexCommand href
 name "XPMS2D"
 target "https://www.eol.ucar.edu/software/xpms2d"
+literal "false"
 
 \end_inset
 

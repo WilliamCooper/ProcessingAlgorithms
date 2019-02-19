@@ -68,8 +68,9 @@ before correction, and it may be affected by local flow-field distortion\index{f
 PS\_A is the pressure measurement taken from the avionics\index{avionics}
 system on the aircraft, processed via unknown algorithms in the avionics
 system that may smooth, correct, and perhaps delay the result. PSxC
-is PSx corrected for local flow-field distortion. (See \href{http://www.eol.ucar.edu/raf/Bulletins/bulletin21.html}{RAF Bulletin \#21}\index{Bulletin 21}
-and the discussion in \href{https://drive.google.com/open?id=0B1kIUH45ca5AaW02ZUt1X2kyX2s}{this memo}),
+is PSx corrected for local flow-field distortion. (See \href{https://opensky.ucar.edu/islandora/object/archives\%3A8150}{RAF Bulletin \#21}\index{Bulletin 21}
+and the discussion in \href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PCOR.pdf}{this memo}
+and \href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PcorCalculation.pdf}{this supplement}),
 and PSXC is the preferred\index{measurement!preferred} corrected
 measurement used for derived calculations. These measurements have
 been made using various sensors, so it is best to consult the project
@@ -82,7 +83,7 @@ have been determined by reference to some standard, including a ``trailing
 cone''\index{trailing cone} sensor, the pressure PS\_A from the
 cockpit avionics system, or (since 2012) the Laser Air Motion Sensing
 System\index{LAMS} (LAMS). The latter correction is discussed in
-the memo \href{https://drive.google.com/open?id=0B1kIUH45ca5AaW02ZUt1X2kyX2s}{referenced above},
+the memo \href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PCOR.pdf}{referenced above},
 where corrections used prior to 2011 are also discussed. Beginning
 in 2012, the deduced corrections $\Delta p$ \index{correction!pressure}\sindex[lis]{Deltap@$\Delta p$=correction to pressure}to
 the measured pressures\index{defect!static} as functions of dynamic
@@ -126,8 +127,9 @@ expected.
 \\
 \begin{minipage}[t]{1\columnwidth}%
 \begin{quote}
-\textbf{For the GV,}\footnote{See \href{https://www.eol.ucar.edu/system/files/PCOR_1.pdf}{this memo}
-for details regarding implementation of this representation of $\Delta p$
+\textbf{For the GV,}\footnote{See \href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PCOR.pdf}{this memo}
+and \href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PcorCalculation.pdf}{this revision}for
+details regarding implementation of this representation of $\Delta p$
 for the GV: }\\
 \begin{equation}
 \frac{\Delta p}{p}=a_{0}+a_{1}\frac{q}{p}+a_{2}M^{3}+a_{3}\frac{\alpha}{a_{r}}\label{eq:PCORforGV}
@@ -147,7 +149,7 @@ abd $c_{p}$, via\\
 \begin{equation}
 M=\left\{ \left(\frac{2c_{v}}{R}\right)\left[\left(\frac{p+q}{p}\right)^{R/c_{p}}-1\right]\right\} ^{1/2}\,\,\,.\label{eq:MachEquation}
 \end{equation}
-For additional information on these correction coefficients, see \href{https://drive.google.com/open?id=0B1kIUH45ca5AdEJXNU5oZ195bEk}{this note}
+For additional information on these correction coefficients, see \href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ARISTO-LAMS.pdf}{this note}
 and Cooper et al.~(2014)\footnote{\href{http://www.atmos-meas-tech.net/7/3215/2014/}{Atmos. Meas. Tech., 7, 3215-3231},
 2014 doi:10.5194/amt-7-3215-2014}.\\
 \\
@@ -172,7 +174,7 @@ arises primarily from the error in $p_{a}$. The same correction is
 applied to QCR\index{QCR!correction} because it is also measured
 relative to the static pressure ports so errors in the pressure sensed
 at those ports affect QCR in the same way that QCF is affected. \label{punch4.3}See
-the notes referenced in the preceding section, and also \href{http://www.eol.ucar.edu/raf/Bulletins/bulletin21.html}{RAF Bulletin 21}\index{Bulletin 21}
+the notes referenced in the preceding section, and also \href{https://opensky.ucar.edu/islandora/object/archives\%3A8150}{RAF Bulletin 21}\index{Bulletin 21}
 for the corrections applied to earlier data files.\footnote{\textbf{}%
 \begin{minipage}[t]{1\columnwidth}%
 \textbf{C-130}, prior to 2012: 
@@ -209,7 +211,7 @@ matching QCR to QCF, which leads to the following equation: \\
 \]
 where $\Delta p$ is given by (\ref{eq:PCORforGV}) and the coefficients
 are \{$b_{0-3}$\}=\{$-0.5635$, $0.9982$, , 0.0273, $0.0562$\}.
-Some justification for this correction is contained in \href{https://drive.google.com/open?id=0B1kIUH45ca5ANmZ1MHVWNWJyeTg}{this note.}
+Some justification for this correction is contained in \href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/Recommendation161107b.pdf}{this note.}
 A similar correction is not made for measurements from the C-130 radome
 because they do not appear to be necessary, as discussed in that note.\\
  
@@ -439,7 +441,7 @@ to unheated probes:
 \begin{equation}
 \alpha_{r}^{[u]}=0.9959+0.0283(\log_{10}M)+0.0374(\log_{10}M)^{2}+0.0762(\log_{10}M)^{3}\label{eq:RecFactorUnheated}
 \end{equation}
-Some studies of the recovery factor are discussed further in \href{https://drive.google.com/open?id=0B1kIUH45ca5AOWlIbGxVcC13SHM}{this memo}.\\
+Some studies of the recovery factor are discussed further in \href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/RecoveryFactorStudy.pdf}{this memo}.\\
 \\
 The true airspeed $U_{a}$ is used in (\ref{eq:8.3-1}) to calculate
 the ambient temperature $T_{a}$. However, the ambient temperature
@@ -636,7 +638,7 @@ is below 0$^{\circ}$C, it is assumed to be a measurement of frost
 point and a corresponding dew point is calculated from the measurement
 (also with correction for the influence of the total pressure on the
 measurement). Some changes were made to these calculations in 2011;
-for more information, see \href{https://www.eol.ucar.edu/system/files/VaporPressureV3.pdf}{this memo}.\\
+for more information, see \href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/VaporPressureV3.pdf}{this memo}.\\
 \\
 An additional correction is needed in those cases where the pressure\index{pressure!dew point housing}
 in the housing of the instrument (measured as PSDPx or CAVP\_x) differs
@@ -1116,7 +1118,7 @@ slow update to a dew-point measurement is used to compensate for drift
 in the calibration. The algorithm for the UV Hygrometer is as described
 in the following box; the processing used for early projects with
 the Lyman-alpha instruments is similar but more involved and won't
-be documented here because the instruments are obsolete. See \href{http://www.eol.ucar.edu/raf/Bulletins/bulletin9.html}{RAF Bulletin 9}
+be documented here because the instruments are obsolete. See \href{https://opensky.ucar.edu/islandora/object/archives\%3A8729}{RAF Bulletin 9}
 for the processing previously used for archived measurements from
 the Lyman-alpha hygrometers.\\
 
@@ -1214,7 +1216,7 @@ the dry parcel would be compressed to 1000 hPa. }Beginning in 2011,
 pseudo-adiabatic equivalent potential temperature\index{temperature!pseudo-adiabatic equivalent potential}\sindex[lis]{thetaP@$\Theta_{P}$=temperature, pseudo-adiabatic equivalent potential}
 is calculated using the method developed by Davies-Jones\index{Davies-Jones}
 (2009).\footnote{Davies-Jones, R., 2009: On formulas for equivalent potential temperature.
-\emph{Mon. Wea. Review, }\textbf{137, }3137--3148.} This is discussed in the memo available at \href{https://www.eol.ucar.edu/system/files/ThetaE.pdf}{this URL}.
+\emph{Mon. Wea. Review, }\textbf{137, }3137--3148.} This is discussed in the memo available at \href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ThetaE.pdf}{this link}.
 The following summarizes that study. The Davies-Jones formula is\\
 \begin{equation}
 \Theta_{P}=\Theta_{DL}\exp\{\frac{r(L_{0}^{*}-L_{1}^{*}(T_{L}-T_{0})+K_{2}r)}{c_{pd}T_{L}}\}\label{eq:DaviesJonesThetaP-1}
@@ -1311,7 +1313,7 @@ is based on virtual temperature instead of ambient temperature.} Dry-adiabatic
 expansion or compression to the reference level (1000 hPa) is assumed.
 As for THETA, use of dry-air values for the gas constant and specific
 heat at constant pressure can lead to significant errors in humid
-conditions. For further information, see \href{https://www.eol.ucar.edu/system/files/VirtualTemperature.pdf}{this note}.\\
+conditions. For further information, see \href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/VirtualTemperature.pdf}{this note}.\\
 \fbox{\begin{minipage}[t]{0.95\columnwidth}%
 TVIR\index{TVIR} = virtual temperature, $^{\circ}C$\\
 PSXC\index{PSXC} = ambient pressure, hPa\\
@@ -1325,7 +1327,7 @@ $p_{0}$ = reference pressure, conventionally 1000 hPa
 \mathrm{THETAV}=\left(\mathrm{\{TVIR\}}+T_{0}\right)\left(\frac{p_{o}}{\mathrm{\{PSXC\}}}\right)^{R_{d}/c_{pd}}\label{eq:8.15THETAV-1}
 \end{equation}
  %
-\end{minipage}}\href{file:https://drive.google.com/open?id=0B1kIUH45ca5AZXZZbWJSbEctdmM}{this note}\\
+\end{minipage}}\href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/VirtualTemperature.pdf}{this note}\\
 
 \textbf{Wet-Equivalent Potential Temperature (K):}\nop{THETAQ}{}\textbf{
 }\textbf{\uline{THETAQ}}\index{THETAQ}\sindex[var]{THETAQ}\\
@@ -1345,7 +1347,7 @@ the latent heat of vaporization\sindex[lis]{Lv@$L_{v}$=latent heat of vaporizati
 $r$ the (dimensionless) water-vapor mixing ratio\sindex[lis]{r@$r$=water-vapor mixing ratio, dimensionless},
 $c_{pt}=c_{pd}+r_{t}c_{w}$ where $r_{t}$ is the total-water mixing
 ratio including vapor and condensate, $c_{w}$ is the specific heat
-of liquid water, and other symbols are as used previously. See \href{https://drive.google.com/open?id=0B1kIUH45ca5ATVl1MjV6Q0E0YXc}{this memo}
+of liquid water, and other symbols are as used previously. See \href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ThetaE.pdf}{this memo}
 for additional discussion of this variable, for values to use for
 the latent heat and specific heat, and in particular for analysis
 indicating that $\Theta_{q}$ evaluated with this formula can be expected
