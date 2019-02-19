@@ -813,7 +813,7 @@ avionics
 \begin_inset CommandInset href
 LatexCommand href
 name "RAF Bulletin #21"
-target "http://www.eol.ucar.edu/raf/Bulletins/bulletin21.html"
+target "https://opensky.ucar.edu/islandora/object/archives%3A8150"
 literal "false"
 
 \end_inset
@@ -832,7 +832,16 @@ Bulletin 21
 \begin_inset CommandInset href
 LatexCommand href
 name "this memo"
-target "https://drive.google.com/open?id=0B1kIUH45ca5AaW02ZUt1X2kyX2s"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PCOR.pdf"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "this supplement"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PcorCalculation.pdf"
 literal "false"
 
 \end_inset
@@ -935,7 +944,7 @@ LAMS
 \begin_inset CommandInset href
 LatexCommand href
 name "referenced above"
-target "https://drive.google.com/open?id=0B1kIUH45ca5AaW02ZUt1X2kyX2s"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PCOR.pdf"
 literal "false"
 
 \end_inset
@@ -1082,7 +1091,7 @@ For the C-130,
 \series default
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 For C-130 measurements prior to 2012 but after September 2003, the correction
@@ -1313,12 +1322,21 @@ See
 \begin_inset CommandInset href
 LatexCommand href
 name "this memo"
-target "https://www.eol.ucar.edu/system/files/PCOR_1.pdf"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PCOR.pdf"
 literal "false"
 
 \end_inset
 
- for details regarding implementation of this representation of 
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "this revision"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PcorCalculation.pdf"
+literal "false"
+
+\end_inset
+
+for details regarding implementation of this representation of 
 \begin_inset Formula $\Delta p$
 \end_inset
 
@@ -1509,7 +1527,7 @@ For additional information on these correction coefficients, see
 \begin_inset CommandInset href
 LatexCommand href
 name "this note"
-target "https://drive.google.com/open?id=0B1kIUH45ca5AdEJXNU5oZ195bEk"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ARISTO-LAMS.pdf"
 literal "false"
 
 \end_inset
@@ -1844,7 +1862,7 @@ See the notes referenced in the preceding section, and also
 \begin_inset CommandInset href
 LatexCommand href
 name "RAF Bulletin 21"
-target "http://www.eol.ucar.edu/raf/Bulletins/bulletin21.html"
+target "https://opensky.ucar.edu/islandora/object/archives%3A8150"
 literal "false"
 
 \end_inset
@@ -2223,7 +2241,7 @@ reference "eq:PCORforGV"
 \begin_inset CommandInset href
 LatexCommand href
 name "this note."
-target "https://drive.google.com/open?id=0B1kIUH45ca5ANmZ1MHVWNWJyeTg"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/Recommendation161107b.pdf"
 literal "false"
 
 \end_inset
@@ -4369,7 +4387,7 @@ Some studies of the recovery factor are discussed further in
 \begin_inset CommandInset href
 LatexCommand href
 name "this memo"
-target "https://drive.google.com/open?id=0B1kIUH45ca5AOWlIbGxVcC13SHM"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/RecoveryFactorStudy.pdf"
 literal "false"
 
 \end_inset
@@ -5861,7 +5879,7 @@ C, it is assumed to be a measurement of frost point and a corresponding
 \begin_inset CommandInset href
 LatexCommand href
 name "this memo"
-target "https://www.eol.ucar.edu/system/files/VaporPressureV3.pdf"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/VaporPressureV3.pdf"
 literal "false"
 
 \end_inset
@@ -8617,7 +8635,7 @@ This is determined by comparing the measured absorption peak height against
  a reference spectrum generated using the HITRAN spectral parameters, the
  ambient temperature and the ambient pressure.
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 For details see Zondlo, M.
@@ -10316,7 +10334,7 @@ ts are obsolete.
 \begin_inset CommandInset href
 LatexCommand href
 name "RAF Bulletin 9"
-target "http://www.eol.ucar.edu/raf/Bulletins/bulletin9.html"
+target "https://opensky.ucar.edu/islandora/object/archives%3A8729"
 literal "false"
 
 \end_inset
@@ -11449,8 +11467,8 @@ Mon.
  This is discussed in the memo available at 
 \begin_inset CommandInset href
 LatexCommand href
-name "this URL"
-target "https://www.eol.ucar.edu/system/files/ThetaE.pdf"
+name "this link"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ThetaE.pdf"
 literal "false"
 
 \end_inset
@@ -12197,7 +12215,7 @@ A potential temperature analogous to the conventional potential temperature
 \begin_inset CommandInset href
 LatexCommand href
 name "this note"
-target "https://www.eol.ucar.edu/system/files/VirtualTemperature.pdf"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/VirtualTemperature.pdf"
 literal "false"
 
 \end_inset
@@ -12328,8 +12346,7 @@ height "1pt"
 \begin_inset CommandInset href
 LatexCommand href
 name "this note"
-target "https://drive.google.com/open?id=0B1kIUH45ca5AZXZZbWJSbEctdmM"
-type "file:"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/VirtualTemperature.pdf"
 literal "false"
 
 \end_inset
@@ -12498,7 +12515,7 @@ r@
 \begin_inset CommandInset href
 LatexCommand href
 name "this memo"
-target "https://drive.google.com/open?id=0B1kIUH45ca5ATVl1MjV6Q0E0YXc"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ThetaE.pdf"
 literal "false"
 
 \end_inset

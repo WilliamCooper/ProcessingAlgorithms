@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -24,6 +24,8 @@ hanging
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -62,6 +64,7 @@ hanging
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -70,7 +73,10 @@ hanging
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -182,7 +188,8 @@ This document should change as changes in processing algorithms are implemented,
 \begin_inset CommandInset href
 LatexCommand href
 name "RAF Bulletin 9"
-target "http://www.eol.ucar.edu/raf/Bulletins/bulletin9.html"
+target "https://opensky.ucar.edu/islandora/object/archives%3A8729"
+literal "false"
 
 \end_inset
 
@@ -276,6 +283,7 @@ The digital outputs are then recorded by the data system on the aircraft.
 LatexCommand href
 name "NIDAS"
 target "http://www.eol.ucar.edu/data/software/nidas"
+literal "false"
 
 \end_inset
 
@@ -330,6 +338,7 @@ data!processing
 LatexCommand href
 name "aeros"
 target "http://www.eol.ucar.edu/raf/Software/aeros_dnld.html"
+literal "false"
 
 \end_inset
 
@@ -423,8 +432,9 @@ For assistance accessing data from RAF-supported projects, contact the RAF
 \begin_inset CommandInset href
 LatexCommand href
 name "this email address"
-target "mailto:raf-dm@eol.ucar.edu"
+target "raf-dm@eol.ucar.edu"
 type "mailto:"
+literal "false"
 
 \end_inset
 
@@ -437,7 +447,8 @@ The data system has changed several times over the history of RAF.
 \begin_inset CommandInset href
 LatexCommand href
 name "this note"
-target "https://drive.google.com/open?id=0B1kIUH45ca5AekJYZmlsOV9sQ28"
+target "https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ADSHistory.pdf"
+literal "false"
 
 \end_inset
 
@@ -700,7 +711,8 @@ GENPRO
 \begin_inset CommandInset href
 LatexCommand href
 name "RAF Bulletin 9"
-target "http://www.eol.ucar.edu/raf/Bulletins/bulletin9.html"
+target "https://opensky.ucar.edu/islandora/object/archives%3A8729"
+literal "false"
 
 \end_inset
 
@@ -1168,6 +1180,7 @@ cf.
 LatexCommand href
 name "this link"
 target "http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf"
+literal "false"
 
 \end_inset
 
