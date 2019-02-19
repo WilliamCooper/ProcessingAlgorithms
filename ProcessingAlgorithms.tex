@@ -1,4 +1,4 @@
-%% LyX 2.3.0 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[12pt,twoside,english]{article}
 \usepackage{mathptmx}
@@ -27,7 +27,7 @@
 \usepackage{textcomp}
 \usepackage{url}
 \usepackage{ifthen}
-\usepackage{footnote}
+\usepackage{footnotehyper}
 \usepackage{amsmath}
 \usepackage{splitidx}
 \makeindex
@@ -134,23 +134,20 @@
 \makeatother
 
 \begin{document}
-
 \title{RAF Technical Note: Processing Algorithms}
 \maketitle
 \begin{center}
 Algorithms Used to Produce Data Products from Research Aircraft;\\
 also Definitions of Variables in Archived Data Files
 \par\end{center}
-
-\date{\centerline{version: November 2017}}
+\date{\centerline{version: February 2019}}
 
 \vskip2in
-
 \author{Research Aviation Facility, Earth Observing Laboratory\\
 National Center for Atmospheric Research\\
 PO Box 3000, Boulder CO ~80307-3000}
 
-\vskip1inCurrent PDF version of this document: \href{http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf}{Processing Algorithms}
+\vskip1inCurrent PDF version of this document: \href{https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/ProcessingAlgorithms.pdf}{Processing Algorithms}
 
 \vfill\eject
 
@@ -216,7 +213,7 @@ PO Box 3000, Boulder CO ~80307-3000}
 
 \section*{Suggested Additional Steps}
 
-\begin{longtable}{|c|>{\raggedright}p{12cm}|>{\centering}p{3cm}|}
+\begin{longtable}[c]{|c|>{\raggedright}p{12cm}|>{\centering}p{3cm}|}
 \hline 
 \textbf{page} & \textbf{suggested action} & \textbf{who?}\tabularnewline
 \hline 
@@ -452,7 +449,16 @@ web references have been changed in this way and can be adjusted as
 the reference files are moved, e.g., from my Google Drive to the EOL
 web pages. For this purpose, I found master-pdf-editor useful. This
 will lose continuity, however, because then the links can't be re-generated
-by running LyX. 
+by running LyX.
+\item As of Feb 2019, manylinks formerly to google-drive addresses or eol
+system files have been changed to https://github.com/NCAR/aircraft\_ProcessingAlgorithms
+links. In that directory there is a file ('links') with a list of
+all the links in the document. It is worthwhile when updating this
+document to check that all the links remain current. One way is to
+use these R statements: \\
+links <- readlines('./links'); EURL <- rep(FALSE, length(links));\\
+for (i in 1:length(links)) \{EURL{[}i{]} <- RCurl::url.exists(links{[}i{]})\}\\
+\#\# and then check EURL to see that the links are all found.
 \end{enumerate}
 
 \section*{How to Reference Specific Sections or Pages of this Document:}
@@ -543,164 +549,7 @@ the pattern used for existing variables, and if appropriate any new
 symbols used in discussing the algorithm should be added to the similar
 symbols list.
 
-\section*{List of Web Links in this Document:}
-
-\emph{The links at the top, to Google Drive locations, should be changed
-once the linked files are moved to EOL web space.}
-
-\uline{Files needing transfer:}
-
-\href{https://drive.google.com/open?id=0B1kIUH45ca5AekJYZmlsOV9sQ28}{https://drive.google.com/open?id=0B1kIUH45ca5AekJYZmlsOV9sQ28}{[}ADSHistory.pdf{]}
-
-\href{https://drive.google.com/a/ucar.edu/file/d/0B1kIUH45ca5AWlFWYXBDRlI1VnM}{https://drive.google.com/a/ucar.edu/file/d/0B1kIUH45ca5AWlFWYXBDRlI1VnM}{[}PcorCalculation.pdf{]}
-
-\href{https://drive.google.com/open?id=0B1kIUH45ca5AY0k0cTB6QlBEQUU}{https://drive.google.com/open?id=0B1kIUH45ca5AY0k0cTB6QlBEQUU}{[}checkCompFilter.pdf{]}
-
-\href{https://drive.google.com/open?id=0B1kIUH45ca5AN2VYdFF2V0tHcVU}{https://drive.google.com/open?id=0B1kIUH45ca5AN2VYdFF2V0tHcVU}{[}AKRDC130.pdf{]}
-
-\href{https://drive.google.com/open?id=0B1kIUH45ca5AOFpZUGxGVUg3VWc}{https://drive.google.com/open?id=0B1kIUH45ca5AOFpZUGxGVUg3VWc}{[}Bansemer2DProcessing.pdf{]}
-
-\href{https://drive.google.com/open?id=0B1kIUH45ca5ATkNyTlZVRm11WDA}{https://drive.google.com/open?id=0B1kIUH45ca5ATkNyTlZVRm11WDA}
-{[}HeightOfTerrain.pdf{]}
-
-\href{https://drive.google.com/open?id=0B1kIUH45ca5AdVdRQ25BdG1GUXc}{https://drive.google.com/open?id=0B1kIUH45ca5AdVdRQ25BdG1GUXc}
-{[}Correction for GPS antenna location{]}
-
-\rule[0.5ex]{1\columnwidth}{1pt}
-
-\uline{Links not needing any action except monitoring for continued
-availability:}
-
-\href{http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf }{http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf }{[}but
-should update to the current version of this document{]}
-
-\href{https://www.eol.ucar.edu/system/files/PressureAltitude.pdf}{https://www.eol.ucar.edu/system/files/PressureAltitude.pdf}
-
-\href{https://www.eol.ucar.edu/system/files/PCOR_1.pdf}{https://www.eol.ucar.edu/system/files/PCOR\_1.pdf}
-
-\href{https://www.eol.ucar.edu/system/files/VaporPressureV3.pdf}{https://www.eol.ucar.edu/system/files/VaporPressureV3.pdf}
-
-\href{https://www.eol.ucar.edu/system/files/ThetaE.pdf}{https://www.eol.ucar.edu/system/files/ThetaE.pdf}
-
-\href{https://www.eol.ucar.edu/system/files/VirtualTemperature.pdf}{https://www.eol.ucar.edu/system/files/VirtualTemperature.pdf}
-
-\href{https://www.eol.ucar.edu/system/files/PLWCCrev140414.pdf}{https://www.eol.ucar.edu/system/files/PLWCCrev140414.pdf}
-
-\href{http://www.unidata.ucar.edu/software/netcdf/docs/}{http://www.unidata.ucar.edu/software/netcdf/docs/}
-
-\href{http://www.eol.ucar.edu/raf/Software/netCDF.html}{http://www.eol.ucar.edu/raf/Software/netCDF.html}
-
-\href{http://www.eol.ucar.edu/raf/Bulletins/bulletin9.html}{http://www.eol.ucar.edu/raf/Bulletins/bulletin9.html}
-
-\href{http://www.eol.ucar.edu/data/software/nidas}{http://www.eol.ucar.edu/data/software/nidas}
-
-\href{http://www.eol.ucar.edu/raf/Software/aeros_dnld.html}{http://www.eol.ucar.edu/raf/Software/aeros\_dnld.html}
-
-\href{mailto:mailto:mailto:raf-dm@eol.ucar.edu}{mailto:mailto:raf-dm@eol.ucar.edu}
-
-\href{http://webbook.nist.gov}{http://webbook.nist.gov}
-
-\href{http://physics.nist.gov/.cuu/.Constants}{http://physics.nist.gov/.cuu/.Constants}
-
-\href{http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf}{http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf}
-
-\href{http://www.bipm.org/en/si/si_brochure/chapter2/2-2/table3.html\#notes}{http://www.bipm.org/en/si/si\_brochure/chapter2/2-2/table3.html\#notes}
-
-\href{http://www.eol.ucar.edu/raf/Software/TimeExamp.html}{http://www.eol.ucar.edu/raf/Software/TimeExamp.html}
-
-\href{http://nldr.library.ucar.edu/repository/assets/technotes/TECH-NOTE-000-000-000-064.pdf}{http://nldr.library.ucar.edu/repository/assets/technotes/TECH-NOTE-000-000-000-064.pdf}
-
-\href{http://www.eol.ucar.edu/raf/Bulletins/bulletin23.html}{http://www.eol.ucar.edu/raf/Bulletins/bulletin23.html}
-
-\href{http://www.eol.ucar.edu/instruments/inertial-navigation-system-aka-inertial-reference-unit}{http://www.eol.ucar.edu/instruments/inertial-navigation-system-aka-inertial-reference-unit}
-
-\href{https://www.eol.ucar.edu/instruments/c-migits-insgps-system}{https://www.eol.ucar.edu/instruments/c-migits-insgps-system}
-
-\href{http://dx.doi.org/10.5065/D60G3HJ8}{http://dx.doi.org/10.5065/D60G3HJ8}
-
-\href{http://www.eol.ucar.edu/instruments/research-global-positioning-system}{http://www.eol.ucar.edu/instruments/research-global-positioning-system}
-
-\href{http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf}{http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf}
-
-\href{http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19770009539_1977009539.pdf}{http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19770009539\_1977009539.pdf}
-
-\href{http://www.eol.ucar.edu/aircraft-instrumentation}{http://www.eol.ucar.edu/aircraft-instrumentation}
-
-\href{http://www.eol.ucar.edu/raf/Bulletins/bulletin21.html}{http://www.eol.ucar.edu/raf/Bulletins/bulletin21.html}
-
-\href{http://opensky.library.ucar.edu/collections/TECH-NOTE-000-000-000-822}{http://opensky.library.ucar.edu/collections/TECH-NOTE-000-000-000-822}
-
-\href{https://www.eol.ucar.edu/instruments/vertical-cavity-surface-emitting-laser-vcsel-hygrometer}{https://www.eol.ucar.edu/instruments/vertical-cavity-surface-emitting-laser-vcsel-hygrometer}
-
-\href{http://www.eol.ucar.edu/instruments/microwave-temperature-profiler}{http://www.eol.ucar.edu/instruments/microwave-temperature-profiler}
-
-\href{http://www.eol.ucar.edu/instruments/avaps}{http://www.eol.ucar.edu/instruments/avaps}
-
-\href{http://www.eol.ucar.edu/instruments/gnss-instrument-system-multi-static-and-occultation-sensing}{http://www.eol.ucar.edu/instruments/gnss-instrument-system-multi-static-and-occultation-sensing}
-
-\href{mailto:mailto:raf-dm@eol.ucar.edu}{mailto:raf-dm@eol.ucar.edu}
-
-\href{http://www.eol.ucar.edu/raf/Bulletins/bulletin24.html}{http://www.eol.ucar.edu/raf/Bulletins/bulletin24.html}
-
-\href{http://www.eol.ucar.edu/instruments/king-csiro-liquid-water-sensor}{http://www.eol.ucar.edu/instruments/king-csiro-liquid-water-sensor}
-
-\href{http://www.eol.ucar.edu/instruments/rosemount-icing-probe}{http://www.eol.ucar.edu/instruments/rosemount-icing-probe}
-
-\href{https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud-probe}{https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud-probe}
-
-\href{https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-precipitation-probe}{https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-precipitation-probe}
-
-\href{https://www.eol.ucar.edu/instruments/three-view-cloud-particle-imager}{https://www.eol.ucar.edu/instruments/three-view-cloud-particle-imager}
-
-\href{https://www.eol.ucar.edu/instruments/holographic-detector-clouds}{https://www.eol.ucar.edu/instruments/holographic-detector-clouds}
-
-\href{https://www.eol.ucar.edu/software/process2d}{https://www.eol.ucar.edu/software/process2d}
-
-\href{https://www.eol.ucar.edu/software/xpms2d}{https://www.eol.ucar.edu/software/xpms2d}
-
-\href{https://www.eol.ucar.edu/instruments/aero-laser-vuv-resonance-fluorescence-carbon-monoxide-instrument}{https://www.eol.ucar.edu/instruments/aero-laser-vuv-resonance-fluorescence-carbon-monoxide-instrument}
-
-\href{https://www.eol.ucar.edu/instruments/picarro-instrument-airborne-measurement-co2-and-ch4}{https://www.eol.ucar.edu/instruments/picarro-instrument-airborne-measurement-co2-and-ch4}
-
-\href{https://www.eol.ucar.edu/instruments/nitric-oxide-chemiluminescence-ozone-instrument}{https://www.eol.ucar.edu/instruments/nitric-oxide-chemiluminescence-ozone-instrument}
-
-\href{https://www.eol.ucar.edu/instruments/thermo-environmental-instruments-model-49-ozone-analyzer}{https://www.eol.ucar.edu/instruments/thermo-environmental-instruments-model-49-ozone-analyzer}
-
-\href{https://www.eol.ucar.edu/instruments/no-no2-instrument}{https://www.eol.ucar.edu/instruments/no-no2-instrument}
-
-\href{http://www.eol.ucar.edu/instruments/advanced-whole-air-sampler}{http://www.eol.ucar.edu/instruments/advanced-whole-air-sampler}
-
-\href{http://www.eol.ucar.edu/instruments/georgia-tech-chemical-ionization-mass-spectrometer}{http://www.eol.ucar.edu/instruments/georgia-tech-chemical-ionization-mass-spectrometer}
-
-\href{http://www.eol.ucar.edu/instruments/quantum-cascade-laser-spectrometer}{http://www.eol.ucar.edu/instruments/quantum-cascade-laser-spectrometer}
-
-\href{http://www.eol.ucar.edu/instruments/trace-organic-gas-analyzer}{http://www.eol.ucar.edu/instruments/trace-organic-gas-analyzer}
-
-\href{http://www.eol.ucar.edu/instruments/condensation-nucleus-counter-water-or-butanol}{http://www.eol.ucar.edu/instruments/condensation-nucleus-counter-water-or-butanol}
-
-\href{https://www.eol.ucar.edu/instruments/ultra-high-sensitivity-aerosol-spectrometer}{https://www.eol.ucar.edu/instruments/ultra-high-sensitivity-aerosol-spectrometer}
-
-\href{http://www.eol.ucar.edu/instruments/passive-cavity-aerosol-spectrometer-probe}{http://www.eol.ucar.edu/instruments/passive-cavity-aerosol-spectrometer-probe}
-
-\href{https://www.eol.ucar.edu/instruments/time-flight-aerosol-mass-spectrometer}{https://www.eol.ucar.edu/instruments/time-flight-aerosol-mass-spectrometer}
-
-\href{https://www.eol.ucar.edu/instruments/scanning-mobility-particle-spectrometer}{https://www.eol.ucar.edu/instruments/scanning-mobility-particle-spectrometer}
-
-\href{https://www.eol.ucar.edu/instruments/giant-nuclei-impactor}{https://www.eol.ucar.edu/instruments/giant-nuclei-impactor}
-
-\href{http://www.eol.ucar.edu/raf/Bulletins/bulletin25.html}{http://www.eol.ucar.edu/raf/Bulletins/bulletin25.html}
-
-\href{http://nldr.library.ucar.edu/repository/assets/technotes/TECH-NOTE-000-000-000-175.pdf}{http://nldr.library.ucar.edu/repository/assets/technotes/TECH-NOTE-000-000-000-175.pdf}
-
-\href{http://journals.ametsoc.org/doi/pdf/10.1175/1520-0450\%281977\%29016\%3C0190\%3APFIPP\%3E2.0.CO\%3B2}{http://journals.ametsoc.org/doi/pdf/10.1175/1520-0450\%281977\%29016\%3C0190\%3APFIPP\%3E2.0.CO\%3B2}
-
-\href{https://www.eol.ucar.edu/aircraft-instrumentation}{https://www.eol.ucar.edu/aircraft-instrumentation}
-
-\href{http://www.eol.ucar.edu/instruments/hiaper-airborne-radiation-package}{http://www.eol.ucar.edu/instruments/hiaper-airborne-radiation-package}
-
-\href{http://www.esrl.noaa.gov/gmd/grad/solcalc/calcdetails.html}{http://www.esrl.noaa.gov/gmd/grad/solcalc/calcdetails.html}
-
-\href{http://www.esrl.noaa.gov/gmd/grad/solcalc/}{http://www.esrl.noaa.gov/gmd/grad/solcalc/}
+\section*{}
 
 \vfill\eject
 
