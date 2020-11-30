@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="4.4 Temperature | RAF Technical Note: Processing Algorithms" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Al Cooper" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+
+<meta name="description" content="4.4 Temperature | RAF Technical Note: Processing Algorithms">
+
+<title>4.4 Temperature | RAF Technical Note: Processing Algorithms</title>
+
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="preface.html#preface">Preface</a></li>
+<li><a href="1-introduction.html#introduction"><span class="toc-section-number">1</span> Introduction</a>
+<ul>
+<li><a href="1-1-background-information.html#background-information"><span class="toc-section-number">1.1</span> Background Information</a></li>
+<li><a href="1-1-background-information.html#alphabetical-list-of-variables"><span class="toc-section-number">1.2</span> Alphabetical List of Variables</a></li>
+<li><a href="1-3-constants-and-symbols.html#constants-and-symbols"><span class="toc-section-number">1.3</span> Constants and Symbols</a></li>
+</ul></li>
+<li><a href="2-general-information-about-data-files.html#general-information-about-data-files"><span class="toc-section-number">2</span> General Information About Data Files</a>
+<ul>
+<li><a href="2-1-system-of-units.html#system-of-units"><span class="toc-section-number">2.1</span> System of Units</a></li>
+<li><a href="2-1-system-of-units.html#variables-used-to-denote-time"><span class="toc-section-number">2.2</span> Variables Used to Denote Time</a></li>
+<li><a href="2-3-synchronication-of-measurements.html#synchronication-of-measurements"><span class="toc-section-number">2.3</span> Synchronization of Measurements</a></li>
+<li><a href="2-3-synchronication-of-measurements.html#other-comments-on-terminology"><span class="toc-section-number">2.4</span> Other Comments on Terminology</a>
+<ul>
+<li><a href="2-3-synchronication-of-measurements.html#variable-names-in-equations"><span class="toc-section-number">2.4.1</span> Variable Names in Equations</a></li>
+<li><a href="2-4-other-comments-on-terminology.html#distinction-between-original-measurements-and-derived-variables"><span class="toc-section-number">2.4.2</span> Distinction Between Original Measurements and Derived Variables</a></li>
+<li><a href="2-4-other-comments-on-terminology.html#dimensions-in-equations"><span class="toc-section-number">2.4.3</span> Dimensions in Equations</a></li>
+</ul></li>
+</ul></li>
+<li><a href="3-the-state-of-the-aircraft.html#the-state-of-the-aircraft"><span class="toc-section-number">3</span> The State of the Aircraft</a>
+<ul>
+<li><a href="3-1-inertial-reference-systems.html#inertial-reference-systems"><span class="toc-section-number">3.1</span> Inertial Reference Systems</a>
+<ul>
+<li><a href="3-1-inertial-reference-systems.html#standard-variables"><span class="toc-section-number">3.1.1</span> Standard Variables</a></li>
+<li><a href="3-1-inertial-reference-systems.html#additional-special-use-variables"><span class="toc-section-number">3.1.2</span> Additional Special-Use Variables</a></li>
+</ul></li>
+<li><a href="3-1-inertial-reference-systems.html#global-positioning-systems"><span class="toc-section-number">3.2</span> Global Positioning Systems</a></li>
+<li><a href="3-2-global-positioning-systems.html#other-measurements-of-aircraft-altitude"><span class="toc-section-number">3.3</span> Other Measurements of Aircraft Altitude</a></li>
+<li><a href="3-4-combining-irs-and-gps-measurements.html#combining-irs-and-gps-measurements"><span class="toc-section-number">3.4</span> Combining IRS and GPS Measurements</a></li>
+</ul></li>
+<li><a href="4-the-state-of-the-atmosphere.html#the-state-of-the-atmosphere"><span class="toc-section-number">4</span> The State of the Atmosphere</a>
+<ul>
+<li><a href="4-the-state-of-the-atmosphere.html#information-on-instruments-and-calibrations"><span class="toc-section-number">4.1</span> Information on Instruments and Calibrations</a></li>
+<li><a href="4-1-information-on-instruments-and-calibrations.html#variable-names"><span class="toc-section-number">4.2</span> Variable Names</a></li>
+<li><a href="4-3-pressure.html#pressure"><span class="toc-section-number">4.3</span> Pressure</a></li>
+<li><a href="4-4-temperature-section.html#temperature-section"><span class="toc-section-number">4.4</span> Temperature</a></li>
+<li><a href="4-4-temperature-section.html#humidity"><span class="toc-section-number">4.5</span> Humidity</a></li>
+<li><a href="4-5-humidity.html#derived-thermodynamic-variables"><span class="toc-section-number">4.6</span> Derived Thermodynamic Variables</a></li>
+<li><a href="4-7-wind.html#wind"><span class="toc-section-number">4.7</span> Wind</a>
+<ul>
+<li><a href="4-7-wind.html#relative-wind"><span class="toc-section-number">4.7.1</span> Relative Wind</a></li>
+<li><a href="4-7-wind.html#wind-components-and-the-wind-vector"><span class="toc-section-number">4.7.2</span> Wind Components and the Wind Vector</a></li>
+</ul></li>
+<li><a href="4-7-wind.html#special-use-remote-sensors"><span class="toc-section-number">4.8</span> Special-Use Remote Sensors</a></li>
+</ul></li>
+<li><a href="4-8-special-use-remote-sensors.html#cloud-physics-variables"><span class="toc-section-number">5</span> Cloud Physics Variables</a>
+<ul>
+<li><a href="5-cloud-physics-variables.html#measurements-of-liquid-water-content"><span class="toc-section-number">5.1</span> Measurements of Liquid Water Content</a></li>
+<li><a href="5-2-sensors-1-D-probes.html#sensors-1-D-probes"><span class="toc-section-number">5.2</span> Sensors Detecting Individual Hydrometeors (1-D Probes)</a></li>
+<li><a href="5-3-hydrometeor-imaging-probes.html#hydrometeor-imaging-probes"><span class="toc-section-number">5.3</span> Hydrometeor Imaging Probes</a>
+<ul>
+<li><a href="5-3-hydrometeor-imaging-probes.html#two-d-probe"><span class="toc-section-number">5.3.1</span> Variables Derived from Measurements from a 2D Probe</a></li>
+</ul></li>
+</ul></li>
+<li><a href="5-3-hydrometeor-imaging-probes.html#air-chemistry-measurements"><span class="toc-section-number">6</span> Air Chemistry Measurements</a>
+<ul>
+<li><a href="6-1-variables-in-standard-data-files.html#variables-in-standard-data-files"><span class="toc-section-number">6.1</span> Variables in Standard Data Files</a></li>
+<li><a href="6-1-variables-in-standard-data-files.html#variables-in-special-data-sets"><span class="toc-section-number">6.2</span> Variables in Special Data Sets</a></li>
+</ul></li>
+<li><a href="7-aerosol-particle-measurements.html#aerosol-particle-measurements"><span class="toc-section-number">7</span> Aerosol Particle Measurements</a>
+<ul>
+<li><a href="7-1-condensation-nucleus-counter.html#condensation-nucleus-counter"><span class="toc-section-number">7.1</span> Condensation Nucleus Counter</a></li>
+<li><a href="7-1-condensation-nucleus-counter.html#aerosol-spectrometers"><span class="toc-section-number">7.2</span> Aerosol Spectrometers</a></li>
+<li><a href="7-2-aerosol-spectrometers.html#special-aerosol-measurements"><span class="toc-section-number">7.3</span> Special Aerosol Measurements</a></li>
+</ul></li>
+<li><a href="7-3-special-aerosol-measurements.html#radiation-variables"><span class="toc-section-number">8</span> Radiation Variables</a>
+<ul>
+<li><a href="8-radiation-variables.html#measurements-of-irradiance-and-radiometric-temperature"><span class="toc-section-number">8.1</span> Measurements of Irradiance and Radiometric Temperature</a></li>
+<li><a href="8-1-measurements-of-irradiance-and-radiometric-temperature.html#spectral-irradiance-and-actinic-flux"><span class="toc-section-number">8.2</span> Spectral Irradiance and Actinic Flux</a></li>
+<li><a href="8-2-spectral-irradiance-and-actinic-flux.html#solar-angles"><span class="toc-section-number">8.3</span> Solar Angles</a></li>
+</ul></li>
+<li><a href="8-3-solar-angles.html#experimental-variables"><span class="toc-section-number">9</span> Experimental Variables</a></li>
+<li><a href="10-obsolete-variables.html#obsolete-variables"><span class="toc-section-number">10</span> Obsolete Variables</a></li>
+<li><a href="appendices.html#appendices">Appendices</a>
+<ul>
+<li><a href="suggested-additional-steps.html#suggested-additional-steps">Suggested Additional Steps</a></li>
+<li><a href="how-to-edit-this-document.html#how-to-edit-this-document">How to Edit This Document</a></li>
+<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#how-to-reference-specific-sections-or-pages-of-this-document">How to Reference Specific Sections or Pages of this Document:</a>
+<ul>
+<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#variables">Variables</a></li>
+<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#page-numbers">Page Numbers</a></li>
+<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#sections-and-subsections">Sections and Subsections</a></li>
+<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#adding-new-targets"><span class="toc-section-number">10.0.1</span> Adding New Targets</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="temperature-section" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Temperature</h2>
+<p>
+<strong><span id="RTx discussion" label="RTx discussion">[]</span>Recovery Temperature (<span class="math inline">º</span>C):</strong> <strong></strong> <strong><span class="underline">RTx</span>,</strong> <strong><span class="underline">RTxH</span>, RTHRx</strong>, <strong><span class="underline">RTX</span></strong><br />
+<em>The recovery temperature is the temperature sensed by a temperature probe that is exposed to the atmosphere.</em> In flight, the temperature is heated above the ambient temperature because it senses the temperature of air near the sensor that has been heated adiabatically during compression as it is brought near the airspeed of the aircraft. These variables are the measurements of that recovery temperature from calibrated temperature sensors at location x, for processing prior to about 2012; more recently, the names are simply RTF# or RTH# where # is a number starting with 1.<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a>
+For Rosemount or HARCO temperature probes in current use, the recovery temperature is near the total temperature, but all probes must be corrected to obtain either true total temperature or true ambient temperature. In the standard output, the variable name also conveys the sensor type: RTF# or RTx is a measurement from a Rosemount Model 102 non-deiced temperature sensor, RT#H or RTxH is the measurement from a Rosemount Model 102 anti-iced (heated) temperature sensor, and RTH# or RTHx is the measurement from a HARCO heated sensor. Some past experiments also used a reverse-flow temperature housing and a fast-response “K” housing; the associated variable names for these probes were TTRF and TTKP.<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a>
+</p>
+<p>
+<strong>Ambient Temperature (<span class="math inline"><em></em><sup>∘</sup></span>C):</strong> <strong></strong> <strong><span class="underline">ATx</span>,</strong> <strong><span class="underline">ATX</span></strong>, <strong></strong> <strong><span class="underline">ATxH</span>,</strong> <strong><span class="underline">ATxD</span></strong>
+<em>The temperature of the atmosphere at the location of the aircraft, as it would be measured by a sensor at rest relative to the air.</em> {#ATX}
+The ’x’ in the name of the variable used for ambient temperature, ATx, conveys the same information regarding sensor type and location as the variable name used with total (recovery) temperature. See the discussion above regarding RTx. The ambient temperature (also known as the static air temperature) is calculated from the measured recovery temperature, which is increased above the ambient temperature by dynamic heating caused by the airspeed of the aircraft. The calculated temperature therefore depends on the recovery temperature RTx as well as the dynamic and ambient pressure, usually respectively QCXC and PSXC. The ambient and dynamic pressures are first corrected from the raw measurements QCX and PSX to obtain variables that account for deviations caused by airflow around the aircraft and/or position-dependent systematic errors, as discussed in the section describing PSxC. The following basic equations are developed on the basis of conservation of energy for a perfect gas undergoing an adiabatic compression.<br />
+<br />
+This section combines discussion of the calculations of temperature and airspeed, to reflect the linkage between these derived measurements. To provide accuracy in the equations, this discussion considers effects of the humidity of the air on characteristics like the gas constant and the specific heats. Most archived data before 2012 used values for dry air, although a special variable TASHC has been used to represent the true airspeed in cases where the correction was significant. That variable is based on a good approximation to the results from the following equations; see the discussion of TASHC later in this section. TASHC is now considered an obsolete variable. New variables ATxD and TASxD have been introduced that neglect the humidity corrections and perform all calculations as if the humidity is negligible.<br />
+<br /><br />
+As discussed above, temperature sensors on aircraft that are exposed to the airflow do not measure the total temperature but rather the temperature of the air immediately in contact with the sensing element. This air will not have undergone an adiabatic deceleration completely to zero velocity and hence will have a temperature <span class="math inline"><em>T</em><sub><em>r</em></sub></span> somewhat less than the total temperature <span class="math inline"><em>T</em><sub><em>t</em></sub></span> that would require the air to reach zero velocity. <span class="math inline"><em>T</em><sub><em>r</em></sub></span> is the measured or “recovery” temperature., The ratio of the actual temperature difference attained to the temperature difference relative to the total temperature is defined to be the “recovery factor” <span class="math inline">\(\alpha_r\)</span>:
+<span class="math display" id="eq:alphar">\[\begin{equation}
+\alpha_{r}=\frac{T_{r}-T_{a}}{T_{t}-T_{a}}
+\tag{4.7}
+\end{equation}\]</span>
+where <span class="math inline">\(T_a\)</span> is the ambient air temperature. From conservation of energy:<br />
+<span class="math display" id="eq:Ua">\[\begin{equation}
+\frac{U_{a}^{2}}{2}+c_{p}^{\prime}T_{a}=\frac{U_{r}^{2}}{2}+c_{p}^{\prime}T_{r}=\frac{U_{t}^{2}}{2}+c_{p}^{\prime}T_{t}
+\tag{4.8}
+\end{equation}\]</span>
+where primes on quantities like <span class="math inline"><em>c</em><sub><em>p</em></sub><sup>′</sup></span>, or (below) <span class="math inline"><em>c</em><sub><em>v</em></sub><sup>′</sup></span> and <span class="math inline"><em>R</em><sup>′</sup></span> denote properties of moist air, respectively the specific heat at constant pressure, specific heat at constant volume, and gas constant.<br /><br />
+
+<p class="box">
+<strong>Moist-Air Considerations</strong> <br><br>
+Primes on the symbols denote that these values should be moist-air
+values, appropriately weighted averages of the dry-air and water-vapor
+contributions. The practice prior to 2014 was to use the dry-air values
+for specific heats and the gas constant, except as described in connection
+with TASHC below. Since 2014, calculations use the appropriate values
+for moist air, except that to avoid errors introduced by unrealistically
+high measurements of humidity the humidity correction was limited
+to be less than or equal to the equilibrium value at the measured
+temperature. The formulas used for the specific heats and gas constant
+of moist air in terms of the water vapor pressure <span class="math inline">\(e\)</span>, the specific
+heats for dry air (<span class="math inline">\(c_{pd}=\frac{7}{2}R_{0},\,c_{vd}=\frac{5}{2}R_{0}\)</span>)
+and water vapor (<span class="math inline">\(c_{pw}=4R_{0},\,c_{vw}=3R_{0}\)</span>), and the ratio
+of molecular weights (<span class="math inline">\(\epsilon=M_{W}/M_{d}\)</span>) are those of Khelif
+et al. 1999:<br />
+<span class="math display">\[\begin{equation}
+R^{\prime}=R_{d}/[1+(\epsilon-1)\frac{e}{p}]
+\end{equation}\]</span>
+<span class="math display" id="eq:cvMoist">\[\begin{equation}
+c_{v}^{\prime} = \frac{(p-e)R^{\prime}}{pR_{d}}\frac{5R_{0}}{2M_{d}}+\frac{eR^{\prime}}{pR_{w}}\frac{3R_{0}}{M_{w}}=c_{vd}\frac{R^{\prime}}{R_{d}}\left(1+\frac{1}{5}\frac{e}{p}\right)
+\tag{4.9}
+\end{equation}\]</span>
+<span class="math display" id="eq:cpMoist">\[\begin{equation}
+c_{p}^{\prime} = c_{pd}\frac{R^{\prime}}{R_{d}}\left(1+\frac{1}{7}\frac{e}{p}\right)
+\tag{4.10}
+\end{equation}\]</span>
+<span class="math display" id="eq:gammaMoist">\[\begin{equation}
+\gamma\,^{\prime} = \gamma_{d}\frac{1+\frac{1}{7}\frac{e}{p}}{1+\frac{1}{5}\frac{e}{p}}
+\tag{4.11}
+\end{equation}\]</span><br />
+See also the discussion of TASHC in section XX
+and the reference there for Khelif et al. 1999.
+</p>
+<p>In <a href="4-4-temperature-section.html#eq:Ua">(4.8)</a> <span class="math inline">{<em>U</em><sub><em>a</em></sub>, <em>U</em><sub><em>r</em></sub>, <em>U</em><sub><em>t</em></sub>}</span> are respectively the aircraft true airspeed, the airspeed relative to the aircraft of the air in thermal contact with the sensor, and the airspeed of air relative to the aircraft when fully brought to the motion of the sensor (i.e., zero). Then, from <a href="4-4-temperature-section.html#eq:Ua">(4.8)</a> <span class="math display" id="eq:Tair">\[\begin{equation}
+T_{a}=T_{r}-\alpha_{r}\frac{U_{a}^{2}}{2c_{p}^{\prime}}
+\tag{4.12}
+\end{equation}\]</span><br />
+<br /> The temperature sensors used on RAF aircraft are designed to decelerate the air adiabatically to near zero velocity. Recovery factors determined from wind tunnel testing for the Rosemount sensors are approximately 0.97 (unheated model) and 0.98 (heated models).<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a>
+These values have also been confirmed from flight maneuvers, often from “speed runs” where the aircraft is flown level through its speed range and the variation of recovery temperature with airspeed is used with <a href="4-4-temperature-section.html#eq:Tair">(4.12)</a>, with the assumption that <span class="math inline"><em>T</em><sub><em>a</em></sub></span> remains constant, to determine the recovery factor. Data files and project reports normally document what recovery factor was used for calculating the true airspeed and ambient temperature for a particular project.<br />
+<br />
+Because the values used in processing have varied, the project reports should be consulted to find what was used for particular projects. The Goodrich Technical Report 5755<span id="punch:4-4" label="punch:4-4">[punch:4-4]</span> documents wind-tunnel testing of the probes formerly made by Rosemount. Their plot showed that, for heated sensors, there is a significant variation with Mach number (<span class="math inline"><em>M</em></span>); cf their Eq. (38). The dependence in their plot is represented well by the following equations, where <span class="math inline">\(\alpha_r^{[h]}\)</span> refers to heated probes and <span class="math inline">\(\alpha_r^{[u]}\)</span> to unheated probes:<br />
+<span class="math display" id="eq:alphah">\[\begin{equation}
+\alpha_r^{[h]} = 0.988+0.053(\log_{10}M)+0.090(\log_{10}M)^2+0.091(\log_{10}M)^3
+\tag{4.13}
+\end{equation}\]</span>
+<span class="math display" id="eq:alphau">\[\begin{equation}
+\alpha_r^{[u]}=0.9959+0.0283(\log_{10}M)+0.0374(\log_{10}M)^2+0.0762(\log_{10}M)^3
+\tag{4.14}
+\end{equation}\]</span><br />
+Some studies of the recovery factor are discussed further in <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/RecoveryFactorStudy.pdf">this memo</a>.<br />
+<br />
+The true airspeed <span class="math inline">\(U_a\)</span> is used in <a href="4-4-temperature-section.html#eq:Tair">(4.12)</a> to calculate the ambient temperature <span class="math inline">\(T_a\)</span>. However, the ambient temperature is also needed to calculate the true airspeed. Therefore the constraints imposed on ambient temperature and true airspeed by the measurements of recovery temperature, total pressure (the pressure measured by a pitot tube pointed into the airstream and assumed to be that obtained when the incoming air is brought to rest relative to the aircraft), and ambient pressure must be used to solve simultaneously for the two unknowns, temperature and airspeed.<br />
+<br />
+The relationship is conveniently derived by first calculating the dimensionless Mach number <span class="math inline">\(M\)</span>, which is the ratio of the airspeed to the speed of sound <span class="math inline">\(U_{s}=\sqrt{\gamma^{\prime}R^{\prime}T_{a}}\)</span>, where <span class="math inline">\(\gamma^\prime\)</span> is the ratio of specific heats of (moist) air, <span class="math inline">\(c_p^\prime /c_v^\prime\)</span> and <span class="math inline">\(R^\prime\)</span> is the gas constant for moist air. The Mach number is a function of air temperature only and can be determined as follows:</p>
+<p>a). Express energy conservation, as in <a href="4-4-temperature-section.html#eq:Tair">(4.12)</a>, in the form<br />
+<span class="math display" id="eq:econ">\[\begin{equation}
+d\left(\frac{U^{2}}{2}\right)+c_{p}^{\prime}dT=0\,\,\,\,.
+\tag{4.15}
+\end{equation}\]</span><br />
+where the total derivatives apply along a streamline as <span class="math inline">\(U\)</span> changes from <span class="math inline">\(U_a\)</span> to <span class="math inline">\(U_t=0\)</span> and <span class="math inline">\(T\)</span> changes from <span class="math inline">\(T_a\)</span> to <span class="math inline">\(T_t\)</span>.<br />
+b). Use the perfect gas law to replace <span class="math inline">\(dT\)</span> with <span class="math inline">\(\frac{pV}{nR}(\frac{dV}{V}+\frac{dp}{p})\)</span> where <span class="math inline">\(V\)</span> and <span class="math inline">\(p\)</span> are the volume and pressure of a parcel of air. Then use the expression for adiabatic compression in the form <span class="math inline">\(pV^\gamma = \mathrm{constant}\)</span> to replace the derivative <span class="math inline">\(\frac{dV}{V}\)</span> with <span class="math inline">\(-\frac{1}{\gamma}\frac{dp}{p}\)</span>, leading to <span class="math inline">\(dT=\frac{R^{\prime}T}{c_{p}^{\prime}}\frac{dp}{p}\)</span> or, after integration, <span class="math inline">\(T(p)=T_{a}\left(\frac{p}{p_{a}}\right)^{R^{\prime}/c_{p}^{\prime}}\)</span>. Using this expression for <span class="math inline">\(T\)</span> in the formula for <span class="math inline">\(dT\)</span> and then integrating both total derivatives in <a href="4-4-temperature-section.html#eq:econ">(4.15)</a> along the streamline leads to<br />
+<span class="math display" id="eq:Ua2">\[\begin{equation}
+\frac{U_{a}^{2}}{2}+c_{p}^{\prime}T_{a}=c_{p}^{\prime}T_{a}\left(\frac{p_{t}}{p_{a}}\right)^{\frac{R^{\prime}}{c_{p}^{\prime}}}
+\tag{4.16}
+\end{equation}\]</span><br />
+where <span class="math inline">\(p_t\)</span> is the total pressure (i.e., PSXC+QCXC) and
+<span class="math inline">\(p_a\)</span> is the ambient pressure (PSXC).<br />
+c). Use the above definition of the Mach number <span class="math inline">\(M\)</span> (<span class="math inline">\(M=U_a/U_s\)</span>) in the form
+<span class="math inline">\(U_a^2=\gamma^\prime M^2 R^\prime T_a\)</span> to obtain:<br />
+<span class="math display" id="eq:M2">\[\begin{equation}
+M^{2}=\left(\frac{2c_{v}^{\prime}}{R^{\prime}}\right)\left[\left(\frac{p_{t}}{p_{a}}\right)^{\frac{R^{\prime}}{c_{p}^{\prime}}}-1\right]
+\tag{4.17}
+\end{equation}\]</span><br />
+which is the same as <a href="4-3-pressure.html#eq:MachEquation">(4.3)</a>. This equation shows that <span class="math inline">\(M\)</span> can be found from measurements of <span class="math inline">\(p_t\)</span> and <span class="math inline">\(p_a\)</span> alone, except for the moist-air corrections.</p>
+<p>d). Use the expression for ambient temperature in terms of recovery temperature and airspeed, <a href="4-4-temperature-section.html#eq:Tair">(4.12)</a>, to obtain the temperature in terms of the Mach number and the recovery temperature:<br />
+<span class="math display" id="eq:TaEQ">\[\begin{align}
+T_{a} &amp; = T_{r}-\alpha_{r}\frac{U_{a}^{2}}{2c_{p}^{\prime}}=T_{r}-\alpha_{r}\frac{M^{2}\gamma^{\prime}R^{\prime}T_{a}}{2c_{p}^{\prime}}\notag\\  
+&amp; = \frac{T_{r}}{1+\dfrac{\alpha_{r}M^{2}R^{\prime}}{2c_{v}^{\prime}}}  
+\tag{4.18}
+\end{align}\]</span>
+<br /><br /><br />
+e). Express the true airspeed <span class="math inline">\(U_a\)</span> as<br />
+<span class="math display" id="eq:UaFinal">\[\begin{equation}
+U_{a}=M\sqrt{\gamma\,^{\prime}R^{\prime}T_{a}}
+\tag{4.19}
+\end{equation}\]</span></p>
+Then the temperature is found as described in the following box:<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a>
+<br />
+</p>
+<p class="box">
+RTX = recovery temperature (<span class="math inline">\(T_{r})\)</span><br />
+QCxC = dynamic pressure, corrected (<span class="math inline">\(q_{a}\)</span>)<br />
+PSXC = ambient pressure, after airflow/location correction
+(<span class="math inline">\(p_{a}\)</span>)<br />
+MACHx = Mach number
+based on QCxC and PSXC; cf. <a href="4-4-temperature-section.html#eq:M2">(4.17)</a><br />
+MACHX = best Mach number, based on QCXC and PSXC<br />
+<span class="math inline">\(\alpha_{r}\)</span> = recovery factor for the particular temperature sensor<br />
+<span class="math inline">\(R^{\prime}\)</span>, <span class="math inline">\(c_{v}^{\prime}\)</span> and <span class="math inline">\(c_{p}^{\prime}\)</span> as defined
+above and in the list of symbols
+</p>
+<p class="box2">
+From <a href="4-4-temperature-section.html#eq:M2">(4.17)</a>,
+<span class="math display" id="eq:MachBox">\[\begin{equation}
+\mathrm{MACHx}=\left\{ \left(\frac{2c_{v}^{\prime}}{R^{\prime}}\right)\left[\left(\frac{\mathrm{\{PSXC\}+\{QCxC\}}}{\mathrm{\{PSXC\}}}\right)^{\frac{R^{\prime}}{c_{p}^{\prime}}}-1\right]\right\} ^{1/2}  
+\tag{4.20}
+\end{equation}\]</span><br />
+From <a href="4-4-temperature-section.html#eq:TaEQ">(4.18)</a>,
+<span class="math display" id="eq:ATbox">\[\begin{equation}
+\mathrm{ATx}=\frac{\mathrm{\left(\{RTx\}+T_{0}\right)}}{\left(1+\dfrac{\alpha_{r}\mathrm{(\{MACHX\})}^{2}R^{\prime}}{2c_{v}^{\prime}}\right)}-T_{0}
+\tag{4.21}
+\end{equation}\]</span>
+</p>
+<p>
+<strong>In-cloud Air Temperature, Radiometric (<span class="math inline"><em></em><sup>∘</sup></span>C):</strong> <strong><span class="underline">AT_ITR</span></strong><br /> {#AT-ITR}
+<em>The radiometric ambient air temperature measured by the In-cloud Air Temperature Radiometer,</em> which measures the radiometric temperature in the 4.3 <span class="math inline"><em>μ</em></span>m CO<span class="math inline"><em></em><sub>2</sub></span> band.<span id="AT_ITR" label="AT_ITR">[AT_ITR]</span> Its primary use is in water cloud when the standard thermometers are affected by wetting. In clear air the temperature is an average over an integrating range of up to 100s of meters away from the aircraft, whereas in clouds the integrating range is as little as 10 meters because of water droplets. The calibration is by a polynomial fit of the internal reference temperature and measured radiance to the ATX temperature.<span id="punch:4-5" label="punch:4-5">[punch:4-5]</span>
+</p>
+<p>
+<strong>Ophir Air Temperature (<span class="math inline"><em></em><sup>∘</sup></span>C):</strong> <strong></strong> <strong><span class="underline">OAT</span></strong><br /> {#OAT}
+<em>The radiometric temperature reported by the Ophir III radiometer,</em> which operates on the same principles as the ITR,<span id="OAT" label="OAT">[OAT]</span> with the same limitations. For more information on this instrument, see this <a href="http://opensky.library.ucar.edu/collections/TECH-NOTE-000-000-000-822">Technical Note</a>. The in-cloud air temperature radiometer is a later, improved version, but the Ophir III radiometer remains in use.
+</p>
+<!-- <h2 id="humidity">Humidity</h2> -->
+</div>
+<div class="footnotes">
+<hr />
+<ol start="21">
+<li id="fn21"><p>Prior to 2012, these variables were called “total temperature” and symbols starting with ’TT’ instead of ’RT’ were used. That name was misleading because these values are not true total-temperature measurements, for which the air would be at the same speed as the aircraft, but instead recovery-temperature measurements. The name has been changed to correct this mis-labeling, although this was a long-standing convention in past datasets.<a href="4-4-temperature-section.html#fnref21" class="footnote-back">↩︎</a></p></li>
+<li id="fn22"><p>See the related obsolete variables TTx, which are previously used names for these variables. The names were changed to clarify that the quantity represented is the recovery temperature, not the total temperature.<a href="4-4-temperature-section.html#fnref22" class="footnote-back">↩︎</a></p></li>
+<li id="fn23"><p>The recovery factor determined for the now-obsolete NCAR reverse-flow sensor was 0.6. The recovery factor for the now retired NCAR fast-response (K-probe) temperature sensor was 0.8.<a href="4-4-temperature-section.html#fnref23" class="footnote-back">↩︎</a></p></li>
+<li id="fn24"><p>A problem sometimes arises from use of the measured humidity, because that measurement might be obviously in error. For example, following descents the dew point determined from chilled-mirror hygrometers sometimes overshoots the correct value significantly, producing dew-point measurements well above the measured temperature. If such measurements are used, the result can produce a significant error in derived variables based on the humidity-corrected gas constant and specific heats. If the measurements are flagged as bad, there will be gaps in derived variables. To avoid these two errors, the corrections applied to the gas constant and specific heats are treated as follows: (i) The humidity correction is limited to not more than that given by the water-equilibrium humidity at the temperature ATXD, calculated using dry-air specific heats and gas constant. (ii) If the humidity from the primary sensor is flagged as a missing measurement (e.g., from a dew-point sensor), a secondary measurement is used (e.g., the VCSEL) in cases when the secondary sensor is almost always present in an experiment. (iii) As a backup, the variables TASxD and ATxD are always calculated omitting the humidity correction to the gas constant and the specific heats. These variables usually provide continuous measurements, although they will be offset from the humidity-corrected values. The offset indicates the magnitude of the correction when both are present, and one of the variables TASxD (ATxD) may be selected as TASX (ATX) in cases where missing values might cause a problem for derived variables.<a href="4-4-temperature-section.html#fnref24" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+<p style="text-align: center;">
+<a href="4-3-pressure.html"><button class="btn btn-default">Previous</button></a>
+<a href="4-5-humidity.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

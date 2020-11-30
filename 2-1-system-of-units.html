@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="2.1 System of Units | RAF Technical Note: Processing Algorithms" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Al Cooper" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+
+<meta name="description" content="2.1 System of Units | RAF Technical Note: Processing Algorithms">
+
+<title>2.1 System of Units | RAF Technical Note: Processing Algorithms</title>
+
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li><a href="preface.html#preface">Preface</a></li>
+<li><a href="1-introduction.html#introduction"><span class="toc-section-number">1</span> Introduction</a>
+<ul>
+<li><a href="1-1-background-information.html#background-information"><span class="toc-section-number">1.1</span> Background Information</a></li>
+<li><a href="1-1-background-information.html#alphabetical-list-of-variables"><span class="toc-section-number">1.2</span> Alphabetical List of Variables</a></li>
+<li><a href="1-3-constants-and-symbols.html#constants-and-symbols"><span class="toc-section-number">1.3</span> Constants and Symbols</a></li>
+</ul></li>
+<li><a href="2-general-information-about-data-files.html#general-information-about-data-files"><span class="toc-section-number">2</span> General Information About Data Files</a>
+<ul>
+<li><a href="2-1-system-of-units.html#system-of-units"><span class="toc-section-number">2.1</span> System of Units</a></li>
+<li><a href="2-1-system-of-units.html#variables-used-to-denote-time"><span class="toc-section-number">2.2</span> Variables Used to Denote Time</a></li>
+<li><a href="2-3-synchronication-of-measurements.html#synchronication-of-measurements"><span class="toc-section-number">2.3</span> Synchronization of Measurements</a></li>
+<li><a href="2-3-synchronication-of-measurements.html#other-comments-on-terminology"><span class="toc-section-number">2.4</span> Other Comments on Terminology</a>
+<ul>
+<li><a href="2-3-synchronication-of-measurements.html#variable-names-in-equations"><span class="toc-section-number">2.4.1</span> Variable Names in Equations</a></li>
+<li><a href="2-4-other-comments-on-terminology.html#distinction-between-original-measurements-and-derived-variables"><span class="toc-section-number">2.4.2</span> Distinction Between Original Measurements and Derived Variables</a></li>
+<li><a href="2-4-other-comments-on-terminology.html#dimensions-in-equations"><span class="toc-section-number">2.4.3</span> Dimensions in Equations</a></li>
+</ul></li>
+</ul></li>
+<li><a href="3-the-state-of-the-aircraft.html#the-state-of-the-aircraft"><span class="toc-section-number">3</span> The State of the Aircraft</a>
+<ul>
+<li><a href="3-1-inertial-reference-systems.html#inertial-reference-systems"><span class="toc-section-number">3.1</span> Inertial Reference Systems</a>
+<ul>
+<li><a href="3-1-inertial-reference-systems.html#standard-variables"><span class="toc-section-number">3.1.1</span> Standard Variables</a></li>
+<li><a href="3-1-inertial-reference-systems.html#additional-special-use-variables"><span class="toc-section-number">3.1.2</span> Additional Special-Use Variables</a></li>
+</ul></li>
+<li><a href="3-1-inertial-reference-systems.html#global-positioning-systems"><span class="toc-section-number">3.2</span> Global Positioning Systems</a></li>
+<li><a href="3-2-global-positioning-systems.html#other-measurements-of-aircraft-altitude"><span class="toc-section-number">3.3</span> Other Measurements of Aircraft Altitude</a></li>
+<li><a href="3-4-combining-irs-and-gps-measurements.html#combining-irs-and-gps-measurements"><span class="toc-section-number">3.4</span> Combining IRS and GPS Measurements</a></li>
+</ul></li>
+<li><a href="4-the-state-of-the-atmosphere.html#the-state-of-the-atmosphere"><span class="toc-section-number">4</span> The State of the Atmosphere</a>
+<ul>
+<li><a href="4-the-state-of-the-atmosphere.html#information-on-instruments-and-calibrations"><span class="toc-section-number">4.1</span> Information on Instruments and Calibrations</a></li>
+<li><a href="4-1-information-on-instruments-and-calibrations.html#variable-names"><span class="toc-section-number">4.2</span> Variable Names</a></li>
+<li><a href="4-3-pressure.html#pressure"><span class="toc-section-number">4.3</span> Pressure</a></li>
+<li><a href="4-4-temperature-section.html#temperature-section"><span class="toc-section-number">4.4</span> Temperature</a></li>
+<li><a href="4-4-temperature-section.html#humidity"><span class="toc-section-number">4.5</span> Humidity</a></li>
+<li><a href="4-5-humidity.html#derived-thermodynamic-variables"><span class="toc-section-number">4.6</span> Derived Thermodynamic Variables</a></li>
+<li><a href="4-7-wind.html#wind"><span class="toc-section-number">4.7</span> Wind</a>
+<ul>
+<li><a href="4-7-wind.html#relative-wind"><span class="toc-section-number">4.7.1</span> Relative Wind</a></li>
+<li><a href="4-7-wind.html#wind-components-and-the-wind-vector"><span class="toc-section-number">4.7.2</span> Wind Components and the Wind Vector</a></li>
+</ul></li>
+<li><a href="4-7-wind.html#special-use-remote-sensors"><span class="toc-section-number">4.8</span> Special-Use Remote Sensors</a></li>
+</ul></li>
+<li><a href="4-8-special-use-remote-sensors.html#cloud-physics-variables"><span class="toc-section-number">5</span> Cloud Physics Variables</a>
+<ul>
+<li><a href="5-cloud-physics-variables.html#measurements-of-liquid-water-content"><span class="toc-section-number">5.1</span> Measurements of Liquid Water Content</a></li>
+<li><a href="5-2-sensors-1-D-probes.html#sensors-1-D-probes"><span class="toc-section-number">5.2</span> Sensors Detecting Individual Hydrometeors (1-D Probes)</a></li>
+<li><a href="5-3-hydrometeor-imaging-probes.html#hydrometeor-imaging-probes"><span class="toc-section-number">5.3</span> Hydrometeor Imaging Probes</a>
+<ul>
+<li><a href="5-3-hydrometeor-imaging-probes.html#two-d-probe"><span class="toc-section-number">5.3.1</span> Variables Derived from Measurements from a 2D Probe</a></li>
+</ul></li>
+</ul></li>
+<li><a href="5-3-hydrometeor-imaging-probes.html#air-chemistry-measurements"><span class="toc-section-number">6</span> Air Chemistry Measurements</a>
+<ul>
+<li><a href="6-1-variables-in-standard-data-files.html#variables-in-standard-data-files"><span class="toc-section-number">6.1</span> Variables in Standard Data Files</a></li>
+<li><a href="6-1-variables-in-standard-data-files.html#variables-in-special-data-sets"><span class="toc-section-number">6.2</span> Variables in Special Data Sets</a></li>
+</ul></li>
+<li><a href="7-aerosol-particle-measurements.html#aerosol-particle-measurements"><span class="toc-section-number">7</span> Aerosol Particle Measurements</a>
+<ul>
+<li><a href="7-1-condensation-nucleus-counter.html#condensation-nucleus-counter"><span class="toc-section-number">7.1</span> Condensation Nucleus Counter</a></li>
+<li><a href="7-1-condensation-nucleus-counter.html#aerosol-spectrometers"><span class="toc-section-number">7.2</span> Aerosol Spectrometers</a></li>
+<li><a href="7-2-aerosol-spectrometers.html#special-aerosol-measurements"><span class="toc-section-number">7.3</span> Special Aerosol Measurements</a></li>
+</ul></li>
+<li><a href="7-3-special-aerosol-measurements.html#radiation-variables"><span class="toc-section-number">8</span> Radiation Variables</a>
+<ul>
+<li><a href="8-radiation-variables.html#measurements-of-irradiance-and-radiometric-temperature"><span class="toc-section-number">8.1</span> Measurements of Irradiance and Radiometric Temperature</a></li>
+<li><a href="8-1-measurements-of-irradiance-and-radiometric-temperature.html#spectral-irradiance-and-actinic-flux"><span class="toc-section-number">8.2</span> Spectral Irradiance and Actinic Flux</a></li>
+<li><a href="8-2-spectral-irradiance-and-actinic-flux.html#solar-angles"><span class="toc-section-number">8.3</span> Solar Angles</a></li>
+</ul></li>
+<li><a href="8-3-solar-angles.html#experimental-variables"><span class="toc-section-number">9</span> Experimental Variables</a></li>
+<li><a href="10-obsolete-variables.html#obsolete-variables"><span class="toc-section-number">10</span> Obsolete Variables</a></li>
+<li><a href="appendices.html#appendices">Appendices</a>
+<ul>
+<li><a href="suggested-additional-steps.html#suggested-additional-steps">Suggested Additional Steps</a></li>
+<li><a href="how-to-edit-this-document.html#how-to-edit-this-document">How to Edit This Document</a></li>
+<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#how-to-reference-specific-sections-or-pages-of-this-document">How to Reference Specific Sections or Pages of this Document:</a>
+<ul>
+<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#variables">Variables</a></li>
+<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#page-numbers">Page Numbers</a></li>
+<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#sections-and-subsections">Sections and Subsections</a></li>
+<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#adding-new-targets"><span class="toc-section-number">10.0.1</span> Adding New Targets</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="system-of-units" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> System of Units</h2>
+<p>This report uses the SI system of units, but with many exceptions. Among them are the following:</p>
+<ol style="list-style-type: decimal">
+<li>The millibar (mb), equal to one hectopascal (hPa), was used for pressure with some older variables.<br />
+</li>
+<li>Many variables are presented in the units most often used for that variable, even when they involve CGS units or mixed CGS-MKS units, as for example [g m<sup>-3</sup>] for liquid water content or
+[cm<sup>-3</sup>] for droplet concentration.<br />
+</li>
+<li>Flow rates are often quoted in liters per minute (LPM) or standard liters per minute (SLPM) because those terms are linked to properties of commercially available instruments with flow control. One liter is 10<sup>-3</sup>m<sup>3</sup>. Standard temperature and pressure are respectively 273.15 K and 1013.25 hPa. However, there is considerable ambiguity in the definition of “standard” conditions (mostly regarding the choice of the reference temperature) because some flow controllers and flowmeters specify a different “standard” temperature, so the particular usage will be documented when this term is used. Mass flow meters provide a measure of the flow of mass but usually report the measurement in terms of the volume flow that would be present under standard conditions (i.e., SLPM). Therefore, to convert to volumetric flow at other conditions, if the fluid density is <span class="math inline"><em>ρ</em></span> and the mass flow rate in units of mass per time is denoted by <span class="math inline"><em>ṁ</em><sup>′</sup></span>, the volumetric flow <span class="math inline"><em>Q</em></span> is <span class="math inline"><em>ṁ</em><sup>′</sup>/<em>ρ</em></span>. Then the mass flow rate in units of standard volume per time is <span class="math inline"><em>ṁ</em> = <em>ṁ</em><sup>′</sup>/<em>ρ</em><sub><em>s</em></sub></span> where <span class="math inline"><em>ρ</em><sub><em>s</em></sub></span> is the density of the fluid under standard conditions. To convert to volumetric flow under other conditions, <span class="math inline"><em>Q</em> = <em>ṁ</em><sup>′</sup>/<em>ρ</em> = <em>ṁ</em><em>ρ</em><sub><em>s</em></sub>/<em>ρ</em></span>=<span class="math inline"><span class="math inline">\(\dot{m}p_{s}T/(p\thinspace T_{s})\)</span></span> where <span class="math inline"><em>p</em></span> and <span class="math inline"><em>T</em></span> are the pressure and absolute temperature for the desired measurement and <span class="math inline"><em>p</em><sub><em>s</em></sub></span> and <span class="math inline"><em>T</em><sub><em>s</em></sub></span> are the corresponding values for standard conditions.<br />
+</li>
+<li><span id="enu:ppmv" label="enu:ppmv"></span>The International Bureau of Weights and Measures recommends against use of units like percent or parts per million, but these are in common use in atmospheric chemistry and elsewhere so data files continue to use those units for relative humidity or the concentration of chemical species. Although a proper SI unit for a volumetric mixing ratio would be <span class="math inline"><em>μ</em></span>mol mol<span class="math inline"><em></em><sup> − 1</sup></span>, nmol mol<span class="math inline"><em></em><sup> − 1</sup></span>, or pmol mol<span class="math inline"><em></em><sup> − 1</sup></span>, variables are instead often assigned the respective units of ppmv, ppbv or pptv for parts per million, billion or trillion by volume. Care must be taken to interpret ppbv especially, because “billion” has different meaning in different languages and different countries; herein, 1 ppbv means a volumetric ratio of 1:10<span class="math inline"><em></em><sup>9</sup></span>. Many measurements produce native results in terms of a mass ratio, often described as a mixing ratio <span class="math inline"><em>r</em><sub><em>m</em></sub></span> in terms of mass of the measured gas per unit mass of “air” (where the mass of the “air” does not include the variable constituents, usually only significant for water vapor). The perfect gas law relates the density ratio of two gases (<span class="math inline"><em>ρ</em><sub>1</sub> : <em>ρ</em><sub>2</sub>)</span> to the ratio of their partial pressures (<span class="math inline"><em>p</em><sub>1</sub> : <em>p</em><sub>2</sub></span>) or number densities (<span class="math inline"><em>n</em><sub>1</sub> : <em>n</em><sub>2</sub></span>), as follows:<br />
+<span class="math display" id="eq:rm">\[\begin{align}
+r_{m}=\frac{\rho_{1}}{\rho_{2}}=\frac{p_{1}M_{1}}{p_{2}M_{2}}=\frac{n_{1}M_{1}}{n_{2}M_{2}}
+\tag{2.1}
+\end{align}\]</span>
+where <span class="math inline"><em>M</em><sub>1</sub></span> and <span class="math inline"><em>M</em><sub>2</sub></span> are respective molecular weights for the two gases. The ratio of number densities or, equivalently, partial pressures, denoted here as <span class="math inline"><em>r</em><sub><em>v</em></sub></span> because it is also the volumetric mixing ratio, is related to the mass mixing ratio as follows:<br />
+<span class="math display" id="eq:rv">\[\begin{equation}
+r_{v}=\frac{n_{1}}{n_{2}}=\left(\frac{M_{2}}{M_{1}}\right)r_{m}
+\tag{2.2}
+\end{equation}\]</span>
+When concentrations are recorded with units of “ppmv”, “ppbv” or “pptv”, these units refer respectively to <span class="math inline">10<sup>6</sup><em>r</em><sub><em>v</em></sub></span>, <span class="math inline">10<sup>9</sup><em>r</em><sub><em>v</em></sub></span>, or <span class="math inline">10<sup>12</sup><em>r</em><sub><em>v</em></sub></span> with <span class="math inline"><em>r</em><sub><em>v</em></sub></span> given by the above equation.<br />
+</li>
+<li>The unit “hertz” (abbreviation Hz) is the proper unit for a periodic sampling frequency and will be used here in place of the more awkward “samples per second.” This usage is favored by the International Bureau of Weights and Measures (cf. <a href="http://www.bipm.org/en/si/si_brochure/chapter2/2-2/table3.html#notes">http://www.bipm.org/en/si/si_brochure/chapter2/2-2/table3.html#notes</a>) when the frequency represented refers to the rate of sampling.<br />
+</li>
+<li>In some cases, particularly for older data files, speed has been recorded in units of knots (= 0.514444 m/s) and distance in nautical miles <span class="math inline">≡</span> 1852 m).</li>
+</ol>
+Near the end of this technical note, there is a list of symbols.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>
+The next table defines some abbreviations and additional symbols used for units in this report, in addition to the standard abbreviations for the mks system of units:<span id="punch1.2" label="punch1.2">[punch1.2]</span><br />
+
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">
+<strong>abbreviation/symbol</strong>
+</th>
+<th style="text-align: left;">
+<strong>definition</strong><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">
+º
+</td>
+<td style="text-align: left;">
+degree, angle measurement <span class="math inline">≡</span> (<span class="math inline"><em>π</em></span>/180) radian
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">
+ft
+</td>
+<td style="text-align: left;">
+foot <span class="math inline">≡</span> 0.3048 m
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">
+mb
+</td>
+<td style="text-align: left;">
+millibar <span class="math inline">≡</span> 100 Pa <span class="math inline">≡</span> 1 hPa
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">
+ppmv
+</td>
+<td style="text-align: left;">
+parts per million by volume (see item 4 above)
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">
+ppbv
+</td>
+<td style="text-align: left;">
+parts per billion (<span class="math inline">10<sup>9</sup>)</span> by volume (see item 4 above)
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">
+pptv
+</td>
+<td style="text-align: left;">
+parts per trillion (<span class="math inline">10<sup>12</sup>)</span> by volume (see item 4 above)
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">
+n mi
+</td>
+<td style="text-align: left;">
+nautical mile <span class="math inline">≡</span>1852 m
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">
+kt
+</td>
+<td style="text-align: left;">
+knot (n mi/hour) <span class="math inline">≡</span> (1852/3600) m/s = 0.514444… m/s
+</td>
+</tr>
+</tbody>
+</table>
+<!-- % <h2 id="variables-used-to-denote-time">Variables Used To Denote Time</h2> -->
+</div>
+<div class="footnotes">
+<hr />
+<ol start="4">
+<li id="fn4"><p>Some symbols used only once and defined where they are used are omitted from this list<a href="2-1-system-of-units.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>where the symbol <span class="math inline">≡</span> is used, the relationship is exact by definition<a href="2-1-system-of-units.html#fnref5" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+<p style="text-align: center;">
+<a href="2-general-information-about-data-files.html"><button class="btn btn-default">Previous</button></a>
+<a href="2-2-variables-used-to-denote-time.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>
