@@ -7,6 +7,7 @@ documentclass: book
 output: 
   bookdown::gitbook:
     lib_dir: "book_libs"
+    split_by: "chapter+number"
     #number_sections: true
     #toc: true
     #toc_float: true
@@ -23,7 +24,7 @@ Algorithms Used to Produce Data Products from Research Aircraft;<br />
 also Definitions of Variables in Archived Data Files</p>
 
 <p>Current PDF version of this document: <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/ProcessingAlgorithms.pdf">Processing Algorithms</a><br />
-Download this to a browser or pdf viewer for functional URL links.</p>
+Download this to a browser or pdf viewer for functional URL links. It can be accessed [here](https://htmlpreview.github.io/?https://github.com/WilliamCooper/ProcessingAlgorithms/blob/Rmd/index.html)</p>
 <p>    </p>
 ```{r child='boxStyles.Rmd'}
 

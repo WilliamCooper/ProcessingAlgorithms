@@ -2,165 +2,176 @@
 <html lang="" xml:lang="">
 <head>
 
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="10 Obsolete Variables | RAF Technical Note: Processing Algorithms" />
-<meta property="og:type" content="book" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>10 Obsolete Variables | RAF Technical Note: Processing Algorithms</title>
+  <meta name="description" content="10 Obsolete Variables | RAF Technical Note: Processing Algorithms" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
+  <meta property="og:title" content="10 Obsolete Variables | RAF Technical Note: Processing Algorithms" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
 
-
-
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="10 Obsolete Variables | RAF Technical Note: Processing Algorithms" />
+  
+  
+  
 
 <meta name="author" content="Al Cooper" />
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
 
-<meta name="description" content="10 Obsolete Variables | RAF Technical Note: Processing Algorithms">
-
-<title>10 Obsolete Variables | RAF Technical Note: Processing Algorithms</title>
-
-<script src="libs/header-attrs-2.5/header-attrs.js"></script>
-<script src="libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="libs/navigation-1.1/tabsets.js"></script>
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="9-experimental-variables.html"/>
+<link rel="next" href="appendices.html"/>
+<script src="book_libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="book_libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="book_libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
 
 
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
-</style>
+
+
+
+
+<script src="book_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="book_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="book_libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="book_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="book_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
 </head>
 
 <body>
 
-<div class="container-fluid main-container">
 
 
-<div class="row">
-<div class="col-sm-12">
-<div id="TOC">
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="1-introduction.html"><a href="1-introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li><a href="preface.html#preface">Preface</a></li>
-<li><a href="1-introduction.html#introduction"><span class="toc-section-number">1</span> Introduction</a>
-<ul>
-<li><a href="1-1-background-information.html#background-information"><span class="toc-section-number">1.1</span> Background Information</a></li>
-<li><a href="1-1-background-information.html#alphabetical-list-of-variables"><span class="toc-section-number">1.2</span> Alphabetical List of Variables</a></li>
-<li><a href="1-3-constants-and-symbols.html#constants-and-symbols"><span class="toc-section-number">1.3</span> Constants and Symbols</a></li>
+<li class="chapter" data-level="1.1" data-path="1-introduction.html"><a href="1-introduction.html#background-information"><i class="fa fa-check"></i><b>1.1</b> Background Information</a></li>
+<li class="chapter" data-level="1.2" data-path="1-introduction.html"><a href="1-introduction.html#alphabetical-list-of-variables"><i class="fa fa-check"></i><b>1.2</b> Alphabetical List of Variables</a></li>
+<li class="chapter" data-level="1.3" data-path="1-introduction.html"><a href="1-introduction.html#constants-and-symbols"><i class="fa fa-check"></i><b>1.3</b> Constants and Symbols</a></li>
 </ul></li>
-<li><a href="2-general-information-about-data-files.html#general-information-about-data-files"><span class="toc-section-number">2</span> General Information About Data Files</a>
+<li class="chapter" data-level="2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html"><i class="fa fa-check"></i><b>2</b> General Information About Data Files</a>
 <ul>
-<li><a href="2-1-system-of-units.html#system-of-units"><span class="toc-section-number">2.1</span> System of Units</a></li>
-<li><a href="2-1-system-of-units.html#variables-used-to-denote-time"><span class="toc-section-number">2.2</span> Variables Used to Denote Time</a></li>
-<li><a href="2-3-synchronication-of-measurements.html#synchronication-of-measurements"><span class="toc-section-number">2.3</span> Synchronization of Measurements</a></li>
-<li><a href="2-3-synchronication-of-measurements.html#other-comments-on-terminology"><span class="toc-section-number">2.4</span> Other Comments on Terminology</a>
+<li class="chapter" data-level="2.1" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#system-of-units"><i class="fa fa-check"></i><b>2.1</b> System of Units</a></li>
+<li class="chapter" data-level="2.2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#variables-used-to-denote-time"><i class="fa fa-check"></i><b>2.2</b> Variables Used to Denote Time</a></li>
+<li class="chapter" data-level="2.3" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#synchronication-of-measurements"><i class="fa fa-check"></i><b>2.3</b> Synchronization of Measurements</a></li>
+<li class="chapter" data-level="2.4" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#other-comments-on-terminology"><i class="fa fa-check"></i><b>2.4</b> Other Comments on Terminology</a>
 <ul>
-<li><a href="2-3-synchronication-of-measurements.html#variable-names-in-equations"><span class="toc-section-number">2.4.1</span> Variable Names in Equations</a></li>
-<li><a href="2-4-other-comments-on-terminology.html#distinction-between-original-measurements-and-derived-variables"><span class="toc-section-number">2.4.2</span> Distinction Between Original Measurements and Derived Variables</a></li>
-<li><a href="2-4-other-comments-on-terminology.html#dimensions-in-equations"><span class="toc-section-number">2.4.3</span> Dimensions in Equations</a></li>
-</ul></li>
-</ul></li>
-<li><a href="3-the-state-of-the-aircraft.html#the-state-of-the-aircraft"><span class="toc-section-number">3</span> The State of the Aircraft</a>
-<ul>
-<li><a href="3-1-inertial-reference-systems.html#inertial-reference-systems"><span class="toc-section-number">3.1</span> Inertial Reference Systems</a>
-<ul>
-<li><a href="3-1-inertial-reference-systems.html#standard-variables"><span class="toc-section-number">3.1.1</span> Standard Variables</a></li>
-<li><a href="3-1-inertial-reference-systems.html#additional-special-use-variables"><span class="toc-section-number">3.1.2</span> Additional Special-Use Variables</a></li>
-</ul></li>
-<li><a href="3-1-inertial-reference-systems.html#global-positioning-systems"><span class="toc-section-number">3.2</span> Global Positioning Systems</a></li>
-<li><a href="3-2-global-positioning-systems.html#other-measurements-of-aircraft-altitude"><span class="toc-section-number">3.3</span> Other Measurements of Aircraft Altitude</a></li>
-<li><a href="3-4-combining-irs-and-gps-measurements.html#combining-irs-and-gps-measurements"><span class="toc-section-number">3.4</span> Combining IRS and GPS Measurements</a></li>
-</ul></li>
-<li><a href="4-the-state-of-the-atmosphere.html#the-state-of-the-atmosphere"><span class="toc-section-number">4</span> The State of the Atmosphere</a>
-<ul>
-<li><a href="4-the-state-of-the-atmosphere.html#information-on-instruments-and-calibrations"><span class="toc-section-number">4.1</span> Information on Instruments and Calibrations</a></li>
-<li><a href="4-1-information-on-instruments-and-calibrations.html#variable-names"><span class="toc-section-number">4.2</span> Variable Names</a></li>
-<li><a href="4-3-pressure.html#pressure"><span class="toc-section-number">4.3</span> Pressure</a></li>
-<li><a href="4-4-temperature-section.html#temperature-section"><span class="toc-section-number">4.4</span> Temperature</a></li>
-<li><a href="4-4-temperature-section.html#humidity"><span class="toc-section-number">4.5</span> Humidity</a></li>
-<li><a href="4-5-humidity.html#derived-thermodynamic-variables"><span class="toc-section-number">4.6</span> Derived Thermodynamic Variables</a></li>
-<li><a href="4-7-wind.html#wind"><span class="toc-section-number">4.7</span> Wind</a>
-<ul>
-<li><a href="4-7-wind.html#relative-wind"><span class="toc-section-number">4.7.1</span> Relative Wind</a></li>
-<li><a href="4-7-wind.html#wind-components-and-the-wind-vector"><span class="toc-section-number">4.7.2</span> Wind Components and the Wind Vector</a></li>
-</ul></li>
-<li><a href="4-7-wind.html#special-use-remote-sensors"><span class="toc-section-number">4.8</span> Special-Use Remote Sensors</a></li>
-</ul></li>
-<li><a href="4-8-special-use-remote-sensors.html#cloud-physics-variables"><span class="toc-section-number">5</span> Cloud Physics Variables</a>
-<ul>
-<li><a href="5-cloud-physics-variables.html#measurements-of-liquid-water-content"><span class="toc-section-number">5.1</span> Measurements of Liquid Water Content</a></li>
-<li><a href="5-2-sensors-1-D-probes.html#sensors-1-D-probes"><span class="toc-section-number">5.2</span> Sensors Detecting Individual Hydrometeors (1-D Probes)</a></li>
-<li><a href="5-3-hydrometeor-imaging-probes.html#hydrometeor-imaging-probes"><span class="toc-section-number">5.3</span> Hydrometeor Imaging Probes</a>
-<ul>
-<li><a href="5-3-hydrometeor-imaging-probes.html#two-d-probe"><span class="toc-section-number">5.3.1</span> Variables Derived from Measurements from a 2D Probe</a></li>
+<li class="chapter" data-level="2.4.1" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#variable-names-in-equations"><i class="fa fa-check"></i><b>2.4.1</b> Variable Names in Equations</a></li>
+<li class="chapter" data-level="2.4.2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#distinction-between-original-measurements-and-derived-variables"><i class="fa fa-check"></i><b>2.4.2</b> Distinction Between Original Measurements and Derived Variables</a></li>
+<li class="chapter" data-level="2.4.3" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#dimensions-in-equations"><i class="fa fa-check"></i><b>2.4.3</b> Dimensions in Equations</a></li>
 </ul></li>
 </ul></li>
-<li><a href="5-3-hydrometeor-imaging-probes.html#air-chemistry-measurements"><span class="toc-section-number">6</span> Air Chemistry Measurements</a>
+<li class="chapter" data-level="3" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html"><i class="fa fa-check"></i><b>3</b> The State of the Aircraft</a>
 <ul>
-<li><a href="6-1-variables-in-standard-data-files.html#variables-in-standard-data-files"><span class="toc-section-number">6.1</span> Variables in Standard Data Files</a></li>
-<li><a href="6-1-variables-in-standard-data-files.html#variables-in-special-data-sets"><span class="toc-section-number">6.2</span> Variables in Special Data Sets</a></li>
+<li class="chapter" data-level="3.1" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#inertial-reference-systems"><i class="fa fa-check"></i><b>3.1</b> Inertial Reference Systems</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#standard-variables"><i class="fa fa-check"></i><b>3.1.1</b> Standard Variables</a></li>
+<li class="chapter" data-level="3.1.2" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#additional-special-use-variables"><i class="fa fa-check"></i><b>3.1.2</b> Additional Special-Use Variables</a></li>
 </ul></li>
-<li><a href="7-aerosol-particle-measurements.html#aerosol-particle-measurements"><span class="toc-section-number">7</span> Aerosol Particle Measurements</a>
-<ul>
-<li><a href="7-1-condensation-nucleus-counter.html#condensation-nucleus-counter"><span class="toc-section-number">7.1</span> Condensation Nucleus Counter</a></li>
-<li><a href="7-1-condensation-nucleus-counter.html#aerosol-spectrometers"><span class="toc-section-number">7.2</span> Aerosol Spectrometers</a></li>
-<li><a href="7-2-aerosol-spectrometers.html#special-aerosol-measurements"><span class="toc-section-number">7.3</span> Special Aerosol Measurements</a></li>
+<li class="chapter" data-level="3.2" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#global-positioning-systems"><i class="fa fa-check"></i><b>3.2</b> Global Positioning Systems</a></li>
+<li class="chapter" data-level="3.3" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#other-measurements-of-aircraft-altitude"><i class="fa fa-check"></i><b>3.3</b> Other Measurements of Aircraft Altitude</a></li>
+<li class="chapter" data-level="3.4" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#combining-irs-and-gps-measurements"><i class="fa fa-check"></i><b>3.4</b> Combining IRS and GPS Measurements</a></li>
 </ul></li>
-<li><a href="7-3-special-aerosol-measurements.html#radiation-variables"><span class="toc-section-number">8</span> Radiation Variables</a>
+<li class="chapter" data-level="4" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html"><i class="fa fa-check"></i><b>4</b> The State of the Atmosphere</a>
 <ul>
-<li><a href="8-radiation-variables.html#measurements-of-irradiance-and-radiometric-temperature"><span class="toc-section-number">8.1</span> Measurements of Irradiance and Radiometric Temperature</a></li>
-<li><a href="8-1-measurements-of-irradiance-and-radiometric-temperature.html#spectral-irradiance-and-actinic-flux"><span class="toc-section-number">8.2</span> Spectral Irradiance and Actinic Flux</a></li>
-<li><a href="8-2-spectral-irradiance-and-actinic-flux.html#solar-angles"><span class="toc-section-number">8.3</span> Solar Angles</a></li>
+<li class="chapter" data-level="4.1" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#information-on-instruments-and-calibrations"><i class="fa fa-check"></i><b>4.1</b> Information on Instruments and Calibrations</a></li>
+<li class="chapter" data-level="4.2" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#variable-names"><i class="fa fa-check"></i><b>4.2</b> Variable Names</a></li>
+<li class="chapter" data-level="4.3" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#pressure"><i class="fa fa-check"></i><b>4.3</b> Pressure</a></li>
+<li class="chapter" data-level="4.4" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#temperature-section"><i class="fa fa-check"></i><b>4.4</b> Temperature</a></li>
+<li class="chapter" data-level="4.5" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#humidity"><i class="fa fa-check"></i><b>4.5</b> Humidity</a></li>
+<li class="chapter" data-level="4.6" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#derived-thermodynamic-variables"><i class="fa fa-check"></i><b>4.6</b> Derived Thermodynamic Variables</a></li>
+<li class="chapter" data-level="4.7" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#wind"><i class="fa fa-check"></i><b>4.7</b> Wind</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#relative-wind"><i class="fa fa-check"></i><b>4.7.1</b> Relative Wind</a></li>
+<li class="chapter" data-level="4.7.2" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#wind-components-and-the-wind-vector"><i class="fa fa-check"></i><b>4.7.2</b> Wind Components and the Wind Vector</a></li>
 </ul></li>
-<li><a href="8-3-solar-angles.html#experimental-variables"><span class="toc-section-number">9</span> Experimental Variables</a></li>
-<li><a href="10-obsolete-variables.html#obsolete-variables"><span class="toc-section-number">10</span> Obsolete Variables</a></li>
-<li><a href="appendices.html#appendices">Appendices</a>
+<li class="chapter" data-level="4.8" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#special-use-remote-sensors"><i class="fa fa-check"></i><b>4.8</b> Special-Use Remote Sensors</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#cloud-physics-variables"><i class="fa fa-check"></i><b>5</b> Cloud Physics Variables</a>
 <ul>
-<li><a href="suggested-additional-steps.html#suggested-additional-steps">Suggested Additional Steps</a></li>
-<li><a href="how-to-edit-this-document.html#how-to-edit-this-document">How to Edit This Document</a></li>
-<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#how-to-reference-specific-sections-or-pages-of-this-document">How to Reference Specific Sections or Pages of this Document:</a>
+<li class="chapter" data-level="5.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html"><i class="fa fa-check"></i><b>5.1</b> Measurements of Liquid Water Content</a></li>
+<li class="chapter" data-level="5.2" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#sensors-1-D-probes"><i class="fa fa-check"></i><b>5.2</b> Sensors Detecting Individual Hydrometeors (1-D Probes)</a></li>
+<li class="chapter" data-level="5.3" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#hydrometeor-imaging-probes"><i class="fa fa-check"></i><b>5.3</b> Hydrometeor Imaging Probes</a>
 <ul>
-<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#variables">Variables</a></li>
-<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#page-numbers">Page Numbers</a></li>
-<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#sections-and-subsections">Sections and Subsections</a></li>
-<li><a href="how-to-reference-specific-sections-or-pages-of-this-document.html#adding-new-targets"><span class="toc-section-number">10.0.1</span> Adding New Targets</a></li>
+<li class="chapter" data-level="5.3.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#two-d-probe"><i class="fa fa-check"></i><b>5.3.1</b> Variables Derived from Measurements from a 2D Probe</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#air-chemistry-measurements"><i class="fa fa-check"></i><b>6</b> Air Chemistry Measurements</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="6-air-chemistry-measurements.html"><a href="6-air-chemistry-measurements.html"><i class="fa fa-check"></i><b>6.1</b> Variables in Standard Data Files</a></li>
+<li class="chapter" data-level="6.2" data-path="6-air-chemistry-measurements.html"><a href="6-air-chemistry-measurements.html#variables-in-special-data-sets"><i class="fa fa-check"></i><b>6.2</b> Variables in Special Data Sets</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html"><i class="fa fa-check"></i><b>7</b> Aerosol Particle Measurements</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html#condensation-nucleus-counter"><i class="fa fa-check"></i><b>7.1</b> Condensation Nucleus Counter</a></li>
+<li class="chapter" data-level="7.2" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html#aerosol-spectrometers"><i class="fa fa-check"></i><b>7.2</b> Aerosol Spectrometers</a></li>
+<li class="chapter" data-level="7.3" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html#special-aerosol-measurements"><i class="fa fa-check"></i><b>7.3</b> Special Aerosol Measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html#radiation-variables"><i class="fa fa-check"></i><b>8</b> Radiation Variables</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html"><i class="fa fa-check"></i><b>8.1</b> Measurements of Irradiance and Radiometric Temperature</a></li>
+<li class="chapter" data-level="8.2" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html#spectral-irradiance-and-actinic-flux"><i class="fa fa-check"></i><b>8.2</b> Spectral Irradiance and Actinic Flux</a></li>
+<li class="chapter" data-level="8.3" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html#solar-angles"><i class="fa fa-check"></i><b>8.3</b> Solar Angles</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html#experimental-variables"><i class="fa fa-check"></i><b>9</b> Experimental Variables</a></li>
+<li class="chapter" data-level="10" data-path="10-obsolete-variables.html"><a href="10-obsolete-variables.html"><i class="fa fa-check"></i><b>10</b> Obsolete Variables</a></li>
+<li class="chapter" data-level="" data-path="appendices.html"><a href="appendices.html"><i class="fa fa-check"></i>Appendices</a>
+<ul>
+<li class="chapter" data-level="" data-path="appendices.html"><a href="appendices.html#suggested-additional-steps"><i class="fa fa-check"></i>Suggested Additional Steps</a></li>
+<li class="chapter" data-level="" data-path="appendices.html"><a href="appendices.html#how-to-edit-this-document"><i class="fa fa-check"></i>How to Edit This Document</a></li>
+<li class="chapter" data-level="" data-path="appendices.html"><a href="appendices.html#how-to-reference-specific-sections-or-pages-of-this-document"><i class="fa fa-check"></i>How to Reference Specific Sections or Pages of this Document:</a>
+<ul>
+<li class="chapter" data-level="" data-path="appendices.html"><a href="appendices.html#variables"><i class="fa fa-check"></i>Variables</a></li>
+<li class="chapter" data-level="" data-path="appendices.html"><a href="appendices.html#page-numbers"><i class="fa fa-check"></i>Page Numbers</a></li>
+<li class="chapter" data-level="" data-path="appendices.html"><a href="appendices.html#sections-and-subsections"><i class="fa fa-check"></i>Sections and Subsections</a></li>
+<li class="chapter" data-level="10.0.1" data-path="appendices.html"><a href="appendices.html#adding-new-targets"><i class="fa fa-check"></i><b>10.0.1</b> Adding New Targets</a></li>
 </ul></li>
 </ul></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-12">
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">RAF Technical Note: Processing Algorithms</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
 <div id="obsolete-variables" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> Obsolete Variables</h1>
 <p>
@@ -203,7 +214,7 @@ Before the advent of GPS, NCAR/RAF operated a LORAN-C receiver that provided inf
 <strong>INS Platform Heading (</strong><span class="math inline">º</span><strong>):</strong> <strong><span class="underline">PHDG</span></strong>
 </p>
 <p>
-         <span id="LTN51" label="LTN51">[LTN51]</span>These variables from the Litton LTN-51 Inertial Navigation System (INS) are analogous to the modern variables discussed in Section <a href="3-1-inertial-reference-systems.html#inertial-reference-systems">3.1</a> The measurements of latitude and longitude were provided with 1-Hz frequency and had a resolution of 0.0014<span class="math inline">º</span>, while the ground speed components were provided at 10 Hz and had resolution equal to 0.012 m/s. The X component of the ground speed was along the longitudinal axis of the aircraft <em>at the time of alignment,</em> and the Y axis was in the starboard direction at the time of alignment. PHDG recorded the orientation of the platform relative to true north, with resolution 0.0028<span class="math inline">º</span>. THI was the true heading of the aircraft, produced at 5 Hz with resolution of 0.0014<span class="math inline">º</span>. The “wander angle” is an INS-only variable that recorded the angle of the INS platform x-axis relative to its original orientation; it “wandered” in response to east-west motion of the aircraft on a spherical Earth.
+         <span id="LTN51" label="LTN51">[LTN51]</span>These variables from the Litton LTN-51 Inertial Navigation System (INS) are analogous to the modern variables discussed in Section <a href="3-the-state-of-the-aircraft.html#inertial-reference-systems">3.1</a> The measurements of latitude and longitude were provided with 1-Hz frequency and had a resolution of 0.0014<span class="math inline">º</span>, while the ground speed components were provided at 10 Hz and had resolution equal to 0.012 m/s. The X component of the ground speed was along the longitudinal axis of the aircraft <em>at the time of alignment,</em> and the Y axis was in the starboard direction at the time of alignment. PHDG recorded the orientation of the platform relative to true north, with resolution 0.0028<span class="math inline">º</span>. THI was the true heading of the aircraft, produced at 5 Hz with resolution of 0.0014<span class="math inline">º</span>. The “wander angle” is an INS-only variable that recorded the angle of the INS platform x-axis relative to its original orientation; it “wandered” in response to east-west motion of the aircraft on a spherical Earth.
 </p>
 <p>
 <strong>Raw Aircraft Vertical Velocity (m/s):</strong> <strong><span class="underline">VZI</span></strong><br />
@@ -234,7 +245,7 @@ VEW and VNS are the east and north projections of this ground speed, derived usi
 <strong>Wind Direction (</strong><span class="math inline">º</span><strong>):</strong> <strong><span class="underline">WDRCTN</span></strong>
 </p>
 <p>
-         These variables are calculated from UI and VI, the east and north components of the wind determined as described in RAF Bulletin No. 23 and summarized in Section <a href="4-7-wind.html#wind">4.7</a>:<span id="punch:10-1" label="punch:10-1">[punch:10-1]</span>
+         These variables are calculated from UI and VI, the east and north components of the wind determined as described in RAF Bulletin No. 23 and summarized in Section <a href="4-the-state-of-the-atmosphere.html#wind">4.7</a>:<span id="punch:10-1" label="punch:10-1">[punch:10-1]</span>
 </p>
 <p class="box2">
 <span class="math display" id="eq:WDobs" id="eq:WSobs">\[\begin{align}
@@ -279,15 +290,15 @@ TTRF is the recovery temperature from a calibrated NCAR reverse-flow temperature
 </p>
 <p>
 <strong>Total Temperature (Fast Response) (<span class="math inline"><em></em><sup>∘</sup><em>C</em></span>):</strong> <strong><span class="underline">TTKP</span></strong><br />
-This is the output of recovery temperature from the NCAR fast-response temperature probe, originally designed by Karl Danninger. (See the discussion of total temperature in Section <a href="4-4-temperature-section.html#temperature-section">4.4</a>.)
+This is the output of recovery temperature from the NCAR fast-response temperature probe, originally designed by Karl Danninger. (See the discussion of total temperature in Section <a href="4-the-state-of-the-atmosphere.html#temperature-section">4.4</a>.)
 </p>
 <p>
 <strong>Ambient Temperature (<span class="math inline"><em></em><sup>∘</sup><em>C</em></span>):</strong> <strong><span class="underline">ATRF</span></strong><br />
-The ambient temperature computed using the NCAR reverse-flow temperature sensor. (See the discussion in Section <a href="4-4-temperature-section.html#temperature-section">4.4</a>.)
+The ambient temperature computed using the NCAR reverse-flow temperature sensor. (See the discussion in Section <a href="4-the-state-of-the-atmosphere.html#temperature-section">4.4</a>.)
 </p>
 <p>
 <strong>Ambient Temperature (Fast Response) (<span class="math inline"><em></em><sup>∘</sup><em>C</em></span>):</strong> <strong><span class="underline">ATKP</span></strong><br />
-The ambient temperature computed using the fast-response temperature probe. (See the discussion of ambient temperature in Section <a href="4-4-temperature-section.html#temperature-section">4.4</a>.)
+The ambient temperature computed using the fast-response temperature probe. (See the discussion of ambient temperature in Section <a href="4-the-state-of-the-atmosphere.html#temperature-section">4.4</a>.)
 </p>
 <p>
 <strong>Raw Cloud Technology (Johnson-Williams)</strong><br />
@@ -305,7 +316,7 @@ In some old data files, a variable representing the indicated airspeed was inclu
 </p>
 <p>
 <p><strong>Water Vapor Pressure (mb):</strong> <strong><span class="underline">EDPC</span></strong><br />
-This is a derived intermediate variable used in the calculation of several derived thermodynamic variables. The vapor pressure over a plane water surface is obtained by the method of Paul R. Lowe (1977), a derived, sixth-order, Chebyshev polynomial fit to the Goff-Gratch Formulation (1946) as a function of temperature expressed in <span class="math inline"><em></em><sup>∘</sup><em>C</em></span>. The error is much less than 1% over the range -50<span class="math inline">º</span>C to +50<span class="math inline">º</span>C. EDPC was calculated using this method for most RAF research projects between 1993 and 1996. This variable did not have the enhancement factor applied that was discussed in Appendix C of Bulletin 9. A variable of the same name but calculated differently replaced this in 1996, and with changes described in Section <a href="4-4-temperature-section.html#humidity">4.5</a> continues in use, recently replaced by EWx.<span id="punch:10-2" label="punch:10-2">[punch:10-2]</span></p>
+This is a derived intermediate variable used in the calculation of several derived thermodynamic variables. The vapor pressure over a plane water surface is obtained by the method of Paul R. Lowe (1977), a derived, sixth-order, Chebyshev polynomial fit to the Goff-Gratch Formulation (1946) as a function of temperature expressed in <span class="math inline"><em></em><sup>∘</sup><em>C</em></span>. The error is much less than 1% over the range -50<span class="math inline">º</span>C to +50<span class="math inline">º</span>C. EDPC was calculated using this method for most RAF research projects between 1993 and 1996. This variable did not have the enhancement factor applied that was discussed in Appendix C of Bulletin 9. A variable of the same name but calculated differently replaced this in 1996, and with changes described in Section <a href="4-the-state-of-the-atmosphere.html#humidity">4.5</a> continues in use, recently replaced by EWx.<span id="punch:10-2" label="punch:10-2">[punch:10-2]</span></p>
 <style>
 p.box {
 background-color: #F8F8F8;
@@ -549,24 +560,77 @@ However, PACT (or AACT) is the variable archived in the data files.<br />
 <li id="fn56"><p>Goff, J. A., and S. Gratch (1946) Low-pressure properties of water from 160 to 212 °F, referenced and used in the Smithsonian Tables (List, 1980).<a href="10-obsolete-variables.html#fnref56" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
-<p style="text-align: center;">
-<a href="9-experimental-variables.html"><button class="btn btn-default">Previous</button></a>
-<a href="appendices.html"><button class="btn btn-default">Next</button></a>
-</p>
-</div>
-</div>
+            </section>
 
-
-</div>
-
+          </div>
+        </div>
+      </div>
+<a href="9-experimental-variables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendices.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="book_libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="book_libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
-
-// add bootstrap table styles to pandoc tables
-$(document).ready(function () {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": false
 });
-
+});
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
+
 </html>
