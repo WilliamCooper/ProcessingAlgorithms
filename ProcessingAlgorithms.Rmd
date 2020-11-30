@@ -1,559 +1,66 @@
-%% LyX 2.3.5.2 created this file.  For more info, see http://www.lyx.org/.
-%% Do not edit unless you really know what you are doing.
-\documentclass[12pt,twoside,english]{article}
-\usepackage{mathptmx}
-\usepackage{helvet}
-\renewcommand{\ttdefault}{lmtt}
-\usepackage[LGR,T1]{fontenc}
-\usepackage[latin9]{inputenc}
-\usepackage[letterpaper]{geometry}
-\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1.2in,rmargin=1in}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\setcounter{tocdepth}{2}
-\setlength{\parskip}{\medskipamount}
-\setlength{\parindent}{0pt}
-\usepackage{color}
-\definecolor{page_backgroundcolor}{rgb}{1, 1, 1}
-\pagecolor{page_backgroundcolor}
-\usepackage{babel}
-\usepackage{array}
-\usepackage{verbatim}
-\usepackage{longtable}
-\usepackage{varioref}
-\usepackage{prettyref}
-\usepackage{fancybox}
-\usepackage{calc}
-\usepackage{textcomp}
-\usepackage{url}
-\usepackage{ifthen}
-\usepackage{footnotehyper}
-\usepackage{amsmath}
-\usepackage{splitidx}
-\makeindex
-\usepackage{setspace}
-\PassOptionsToPackage{normalem}{ulem}
-\usepackage{ulem}
-\newindex{idx}
-\newindex{var}
-\newindex{lis}
-\newindex{con}
-\usepackage[unicode=true,
- bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
- breaklinks=true,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=true]
- {hyperref}
-\hypersetup{pdftitle={Technical Note: Processing Algorithms},
- pdfauthor={RAF},
- pdfsubject={variables in data files and the algorithms used to produce them},
- pdfkeywords={algorithm, NCAR Research Aviation Facility, research aircraft, NCAR/EOL/RAF}}
+---
+title: 'RAF Technical Note: Processing Algorithms'
+author: "Al Cooper"
+date: "11/9/2020"
+site: bookdown::bookdown_site
+documentclass: book
+output: 
+  bookdown::gitbook: default
+    #number_sections: true
+    #toc: true
+    #toc_float: true
 
-\makeatletter
+---
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
 
-\makesavenoteenv{tabular}
+<p><br />
+Algorithms Used to Produce Data Products from Research Aircraft;<br />
+also Definitions of Variables in Archived Data Files</p>
 
-\newcommand{\noun}[1]{\textsc{#1}}
-\DeclareRobustCommand{\greektext}{%
-  \fontencoding{LGR}\selectfont\def\encodingdefault{LGR}}
-\DeclareRobustCommand{\textgreek}[1]{\leavevmode{\greektext #1}}
-\ProvideTextCommand{\~}{LGR}[1]{\char126#1}
+<p>Current PDF version of this document: <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/ProcessingAlgorithms.pdf">Processing Algorithms</a><br />
+Download this to a browser or pdf viewer for functional URL links.</p>
+<p>    </p>
+```{r child='boxStyles.Rmd'}
 
-%% Because html converters don't know tabularnewline
-\providecommand{\tabularnewline}{\\}
+```
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
-\newlength{\lyxhang}
-\IfFileExists{hanging.sty}{
-  \usepackage{hanging}
-  \newenvironment{hangparagraphs}
-    {%
-      \ifthenelse{\lengthtest{\parindent > 0pt}}%
-        {\setlength{\lyxhang}{\parindent}}%
-        {\setlength{\lyxhang}{2em}}%
-      \par\begin{hangparas}{\lyxhang}{1}%
-    }
-    {\end{hangparas}}
-}{%else
-  \newenvironment{hangparagraphs}
-    {%
-      \ifthenelse{\lengthtest{\parindent > 0pt}}%
-        {\setlength{\lyxhang}{\parindent}}%
-        {\setlength{\lyxhang}{2em}}%
-      \begin{hangparas}%
-    }
-    {\end{hangparas}}
-  \newcommand{\hangpara}{\hangindent \lyxhang \hangafter 1 \noindent}
-  \newenvironment{hangparas}{\setlength{\parindent}{\z@}
-  \everypar={\hangpara}}{\par}
-}
-\newenvironment{lyxcode}
-	{\par\begin{list}{}{
-		\setlength{\rightmargin}{\leftmargin}
-		\setlength{\listparindent}{0pt}% needed for AMS classes
-		\raggedright
-		\setlength{- sep}{0pt}
-		\setlength{\parsep}{0pt}
-		\normalfont\ttfamily}%
-	 - []}
-	{\end{list}}
-\newenvironment{lyxlist}[1]
-	{\begin{list}{}
-		{\settowidth{\labelwidth}{#1}
-		 \setlength{\leftmargin}{\labelwidth}
-		 \addtolength{\leftmargin}{\labelsep}
-		 \renewcommand{\makelabel}[1]{##1\hfil}}}
-	{\end{list}}
+```{r child='Section1.Rmd'}
+```
 
-\@ifundefined{date}{}{\date{}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
-% macro for italic page numbers in the index
-\newcommand{\IndexDef}[1]{*#1*}
-\newcommand{\IndexPrimary}[1]{**#1**}
+```{r child='Section2.Rmd'}
+```
 
-% workaround for a makeindex bug,
-% see sec. "Index Entry Order"
-% only uncomment this when you are using makindex
-\let\OrgIndex\index 
-\renewcommand*{\index}[1]{\OrgIndex{#1}}
-\usepackage{splitidx}
-%\indexsetup{noclearpage}
-\marginparsep 0.3 cm
-\marginparwidth 2 cm 
-\pagenumbering{roman}
-% use this to make target one line higher
-\makeatletter
- \newcommand{\nop}[1]{\Hy@raisedlink{\hypertarget{#1}{}}}
-\makeatother
+```{r child='Section3.Rmd'}
+```
 
-\AtBeginDocument{
-  \def\labelitemii{\(\circ\)}
-  \def\labelitemiii{\(\triangleright\)}
-}
+```{r child='Section7.Rmd'}
+```
 
-\makeatother
+```{r child='Section9.Rmd'}
+```
 
-\begin{document}
-\title{RAF Technical Note: Processing Algorithms}
-\maketitle
-\begin{center}
-Algorithms Used to Produce Data Products from Research Aircraft;\\
-also Definitions of Variables in Archived Data Files
-\par\end{center}
-\date{\centerline{version: February 2019}}
+```{r child='Section11.Rmd'}
+```
 
-\vskip2in
-\author{Research Aviation Facility, Earth Observing Laboratory\\
-National Center for Atmospheric Research\\
-PO Box 3000, Boulder CO ~80307-3000}
+```{r child='Section13.Rmd'}
+```
 
-\vskip1inCurrent PDF version of this document: [Processing Algorithms](https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/ProcessingAlgorithms.pdf)\\
-\vskip1inDownload this to a browser or pdf viewer for functional
-URL links.
+```{r child='Section12.Rmd'}
+```
 
-\vfill\eject
+```{r child='Section10.Rmd'}
+```
 
-\pagebreak{}
+```{r child='Section14.Rmd'}
+```
 
-~~~~
+```{r child='Section15.Rmd'}
+```
 
-\newpage{}
+```{r child='Appendices.Rmd'}
+```
 
-\renewcommand{\contentsname}{Table of Contents}
-\phantomsection
-\addcontentsline{toc}{section}{Table of Contents}
-\tableofcontents{}
-\cleardoublepage
-\renewcommand{\abstractname}{Preface and Abstract}
-%\phantomsection
-%\begin{abstract}
-%\addcontentsline{toc}{section}{Preface and Abstract}
-%xxx
-%\end{abstract}
-\clearpage
-\pagenumbering{arabic}
 
-\vfill\eject
-
-\include{Section1}
-
-\include{Section3}
-
-\newpage\vfill\eject\cleardoublepage{}
-
-\include{Section7}
-
-\include{Section9}
-
-\include{Section11}
-
-\include{Section13}
-
-\include{Section12}
-
-\include{Section10}
-
-\include{Section14}
-
-\include{Section15}
-
-\clearpage\phantomsection{#sec:Symbols}
-
-\addcontentsline{toc}{section}{List of Symbols}
-\printindex[lis]{}
-\clearpage
-\phantomsection
-\addcontentsline{toc}{section}{Variable Names}
-\printindex[var]{}
-\clearpage
-\phantomsection
-\addcontentsline{toc}{section}{Index}
-\printindex[idx]{}
-\cleardoublepage
-%\begin{appendices}
-\appendix
-
-\section*{Suggested Additional Steps}
-
-\begin{longtable}[c]{|c|>{\raggedright}p{12cm}|>{\centering}p{3cm}|}
-\hline 
-**page** & **suggested action** & **who?**\tabularnewline
-\hline 
-\endhead
-\hline 
-\pageref{Punch1.1} & Add, to constants table, a reference to what has been in use previously.
-(See Code.amlib as saved 2011, for examples) & WAC -- not sure if needed? \tabularnewline
-\hline 
-\pageref{punch1.2} & Ask Teresa and Mike R. to review the discussion re trace-gas units & done, MR\tabularnewline
-\hline 
-\pageref{punch1.3} & Get info from Chris W describing interpolation and time adjustments,
-for inclusion as an addition to the section on times. Revise section. & \tabularnewline
-\hline 
-\pageref{punch1.4} & Get place to put algorithm notes, and include links to those additional
-discussions in this document. & partly done\tabularnewline
-\hline 
-\pageref{punch1.4} & In algorithm boxes, when variables are referenced, make those references
-active links to the discussion of the variable & WAC: use hyperlink\{\}\{\}\tabularnewline
-\hline 
-\pageref{punch3.1} & Get description of the history of the C-130 INS, with characteristics
-for the Litton at least. & \tabularnewline
-\hline 
-\pageref{punch3.3} & Add history of GPS systems: What was used when (C-130 at least) & \tabularnewline
-\hline 
-\pageref{punch3.4} & Add/clarify section on height-above-terrain; modify to ref. geoid.
-Need to change HeightAboveTerrain() script. & partly done, WAC,\tabularnewline
-\hline 
-\pageref{punch3.4-1} & check/clarify discussion of height-above-geoid and, generally, geopotential
-vs geometric vs geoid height  & done - WAC\tabularnewline
-\hline 
- & Add a variable representing geopotential height and change DVALUE
-to be based on it minus PALT & WAC - done (proposed)\tabularnewline
-\hline 
-\pageref{punch3.5} & Clarify meaning of mode and status for old GPS units, and if used
-anymore & \tabularnewline
-\hline 
-\pageref{punch3.6} & Add new section on ALTC? Info is there in comments. Implement? & \tabularnewline
-\hline 
-\pageref{punch3.8} & should there be a vertical velocity of the AC based on data-system
-GPS? ROC as used for reprocessing, and WIR as backup to WIC? & \tabularnewline
-\hline 
-\pageref{punch4.1} & Check/update sensors used on both aircraft. & \tabularnewline
-\hline 
-\pageref{punch4.2} & Add to historical description of PCORs, esp. re subroutine references
-(QCF, MACH\_A, ADIFR) & \tabularnewline
-\hline 
-\pageref{punch4.3} & Add a discussion of the additional corrections to QCR that could make
-this less sensitive to AOA? Algorithm is developed and documented;
-implement? Coefficients in ProcessingAlgorithms.pdf are based on ARISTO2016
-flight 6. & WAC - done (proposed)\tabularnewline
-\hline 
-\pageref{punch3.10} & Suggestion: consider ALT\_G and avoid ALT for GPS avionics variable & \tabularnewline
-\hline 
-\pageref{punch:3.11} & Consider change to spherical geometry for distance north and east
-of reference point because range of GV is so great & \tabularnewline
-\hline 
-\pageref{punch:3-12} & need to explain how the two measures of longitude, with high and low
-resolution, are used together. & \tabularnewline
-\hline 
-\pageref{punch:3-13} & Need to implement the discussion re correction for the displacement
-of the GPS antenna from the INS. When done, need to add LG=-4.30 m
-to the attributes for GGVSPD, GGVEW, GGVNS (GV) and get appropriate
-values for the C-130 & WAC - done (proposed)\tabularnewline
-\hline 
-\pageref{punch:3-14} & Get Dick Friesen or someone to review and update the discussion of
-GPS GSTAT & \tabularnewline
-\hline 
-\pageref{punch:3-15} & Revise the values listed for the complementary-filter feedback to
-match what is used now -- better with lower values than listed & \tabularnewline
-\hline 
-\pageref{punch:3-16} & It might be useful to disable the roll test in gpsc.c, now that GPS
-is better than when this was implemented & \tabularnewline
-\hline 
-\pageref{punch:4-4} & Goodrich Technical Report 5755: should we get permission and post
-this? (FAAM has it posted) & \tabularnewline
-\hline 
-\pageref{punch:4-5} & In-cloud air T radiometer: could use more detail re the processing
-algorithm & \tabularnewline
-\hline 
-\pageref{punch:4.6} & Check all the complex M-K section, esp. $T_{k}$ and DP interp. function & partly done - WAC\tabularnewline
-\hline 
-\pageref{punch:4-7} & Consider changing name to FP\_CR2 in preference to MIRRORT\_CR2? & \tabularnewline
-\hline 
-\pageref{punch:4-8} & For CONCV\_VXL, I think we need cal coefficients and equations used  & \tabularnewline
-\hline 
-\pageref{punch:4-9} & For RHOx, the code now uses 216.68 instead of 100000/461.5228=216.674
-as specified here; change? & \tabularnewline
-\hline 
-\pageref{punch:4-10} & Check that current code uses the modified PCOR function with humidity
-correction and early-error corrected & \tabularnewline
-\hline 
-\pageref{punch:4-11} & The PSURF definition references PSFDC; replace with PSXC? & \tabularnewline
-\hline 
-\pageref{punch:4-12} & ``ATTACK'' and ``SSLIP'' differ from other ``preferred'' variables
-by not having ``X'' at the end. Consider name change? & \tabularnewline
-\hline 
-\pageref{punch:4-13} & The variable WIC is described as ``GPS-corrected'' but that is misleading
-because it is really based, for aircraft motion, solely on GPS in
-recent usage (where dependence is on GGVSPD). Contrast to WDC/WSC
-which are really GPS-corrected. Suggest a different name, like ``Wind
-Vector, Vertical Component, using GPS''? & \tabularnewline
-\hline 
-\pageref{punch:5-1} & Re Gerber probe, I didn't find code for this; need to describe the
-algorithm. & \tabularnewline
-\hline 
-\pageref{punch:5-2} & It would be useful to update Bulletin 24 re hydrometeor spectrometers,
-with info from Bansemer and reference to work by Korolev, Strapp,
-Jensen, etc. & \tabularnewline
-\hline 
-\pageref{punch:5-3} & Is ``PMS/CSIRO King'' correct? DMT? & OK - JBJ\tabularnewline
-\hline 
-\pageref{punch:5-4} & Variables like AS200 have names with ``Raw Accumulation'' -- seems
-awkward, consider name change? Maybe ``Count'' per channel? & \tabularnewline
-\hline 
-\pageref{punch:5-7} & add the variables for total counts? & \tabularnewline
-\hline 
-\pageref{punch:5-5} & some additions are needed here: RAFFD, PVOLU, TCNTD (total counts
-all cells, CDP); housekeeping variables? All: first and last bins?
-UHSAS: T and P in canister including UPRESS intensity, etc., better
-in sect 7 & \tabularnewline
-\hline 
-\pageref{punch:5-6} & REFF2DC seems mis-named; all others based on 1D sizing from 2D have
-names involving 2DC & \tabularnewline
-\hline 
-\pageref{punch:6-1} & need Teresa and/or Andy W to check this section & \tabularnewline
-\hline 
-\pageref{punch:6-3} & need to understand and document what te03c.c does, and perhaps move
-to obsolete? & \tabularnewline
-\hline 
-\pageref{punch:6-2} & Is NO-related discussion OK? is this right: The one named NO2 is actually
-for NOy? & \tabularnewline
-\hline 
-\pageref{punch:6-4} & In true measurement mode, XNOZA and XNZAF will be near zero -- is
-this right? & \tabularnewline
-\hline 
-\pageref{punch:6-5} & I think the corrected-NO mixing ratio section may need revision? & \tabularnewline
-\hline 
-\pageref{punch:6-6} & ``has the provision for the addition of water vapor '' -- does
-that mean this is always done, or only sometimes? & \tabularnewline
-\hline 
-\pageref{punch:7-1} & to ``0.1-360 s'' add ``but is typically set to 0.1~s''? & \tabularnewline
-\hline 
-\pageref{punch:7-2} & UPRESS: the attributes for this variable say the units are kPa; is
-that incorrect? Mike R lists it as hPa. & resolved\tabularnewline
-\hline 
-\pageref{punch:10-1} & check signs here for WD and WS; this differs from the section-9 equation
-... ?? & \tabularnewline
-\hline 
-\pageref{punch:10-2} & For EDPC, the <-50 branch looks suspicious and needs checking & \tabularnewline
-\hline 
-\pageref{punch:10-3} & For old cryogenic hygrometer, find and include the 3rd-order equation
-referenced here & \tabularnewline
-\hline 
-\pageref{punch:10-4} & check Goff-Gratch formulas; there was some ambiguity in what was in
-B9 & \tabularnewline
-\hline 
-\pageref{punch:10-5} & Should include basic equation for SWTC & \tabularnewline
-\hline 
-\pageref{punch:10-6} & re TECO CO: is the direct measurement (ppb) a mass ratio? Need explanation
-here if so to describe difference between ppb and ppbv & \tabularnewline
-\hline 
-\pageref{punch:10-7} & COCAL: how does this differ from XCOMR? Why is this in the ``obsolete''
-section? Same for O3FS? & \tabularnewline
-\hline 
-\pageref{punch:10-8} & For SCLWC, this is missing crucial information like how accreted mass
-is obtained from voltage. Couldn't find the algorithm. Consider Mazin
-version? Or old one for Wyo KA? & \tabularnewline
-\hline 
- & There are some additional notes regarding obsolete variables, esp.
-involving FSSP processing, that are not included here. & \tabularnewline
-\hline 
-WIC, GGALT, etc. & Review and correct descriptive attributes (e.g., WIC, GGALT, {*}DGPS & \tabularnewline
-\hline 
- & StdSpeedofSound is wrong; enters ias.c -- obsolete now? & \tabularnewline
-\hline 
- & fix Rd in xlate/const.c: calculated with wrong Md, although right
-one is listed later in routine. (trivial difference) & \tabularnewline
-\hline 
- & Lv defined in xlate/const.c is not latent heat but derivative of latent
-heat vs T. Used correctly in thetap.c and plwcc.c, but deceptively
-commented & \tabularnewline
-\hline 
- & Review and approve new AKRD description & \tabularnewline
-\hline 
-\end{longtable}
-
-\section*{How to Edit This Document}
-
-Here are some notes regarding the construction and structure of this
-document:
-\begin{enumerate}
--  The reference version is ProcessingAlgorithms.lyx, which needs 'LyX',
-a user interface to TeX. It is available on EOL machines like tikal.
-Start it with ``lyx ProcessingAlgorithms.lyx''
--  The document is broken into many sections, referenced by the above
-file, so they must be present also. Then have names like Section3.lyx
--  The document generates three indices: a regular index, a list of symbols,
-and a list of variables. The references for these are embedded in
-the .lyx files, and they can be modified or more can be added via
-the ``Insert -> Index Entry'' controls. These practices are useful
-when generating index entries:
-\begin{enumerate}
--  entries like 'wind!relative' will generate index entries as subordinate
-entries with 'relative' below 'wind'
--  I have tried to emphasize using nouns to start index entries, so for
-example I would favor ``coefficient!calibration'' over ``calibration
-coefficient.
--  It is sometimes useful to generate ``see xxx'' entries, which can
-be done as follows: ``INS|see \{Inertial Navigation System\}'' where
-the part in braces is also in LaTeX code, generated by pressing CNTL-L.
-\end{enumerate}
--  Creating a PDF-format file in LyX usually will generate these lists
-also. To be safe and ensure that the lists are updated, follow these
-steps:
-\begin{enumerate}
--  Export a LaTeX file from LyX in pdflatex format, using the ``export''
-option.
--  Run ``pdflatex ProcessingAlgorithms'' three times to be sure all
-references are resolved.
--  Run ``splitindex ProcessingAlgorithms'' to generate files for the
-lists.
--  Run ``makeindex ProcessingAlgorithms'' to generate the lists.
--  Run ``pdflatex ProcessingAlgorithms'' again.
-\end{enumerate}
--  The LyX files have embedded notes with additional information that
-should be retained, and exporting to LaTeX will lose this information,
-so it will be useful to retain the LyX format. The suggested next
-steps in the table above, for example, almost all have associated
-notes that will appear in yellow and will help identify where the
-comment applies.
--  It is sometimes easiest to edit the PDF file directly. Some of the
-web references have been changed in this way and can be adjusted as
-the reference files are moved, e.g., from my Google Drive to the EOL
-web pages. For this purpose, I found master-pdf-editor useful. This
-will lose continuity, however, because then the links can't be re-generated
-by running LyX.
--  As of Feb 2019, many links formerly to google-drive addresses or eol
-system files have been changed to https://github.com/NCAR/aircraft\_ProcessingAlgorithms
-links. In that directory there is a file ('links') with a list of
-all the links in the document. It is worthwhile when updating this
-document to check that all the links remain current. One way is to
-use these R statements: \\
-links <- readlines('./links'); EURL <- rep(FALSE, length(links));\\
-for (i in 1:length(links)) \{EURL{[}i{]} <- RCurl::url.exists(links{[}i{]})\}\\
-\#\# and then check EURL to see that the links are all found.
-\end{enumerate}
-
-\section*{How to Reference Specific Sections or Pages of this Document:}
-
-\subsection*{Variables}
-
-The document includes named destinations for each variable name, so
-when used in a URL that destination can be reached. This is done differently
-in different browsers or PDF viewers:
-\begin{itemize}
--  For a web browser like Chrome or Firefox, use the ``nameddest''
-reference; e.g., for the discussion of variable ATX, use\\
-\texttt{firefox http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf\#nameddest=ATX}
--  For a pdf viewer like evince, use this syntax:\\
-\texttt{evince -n ATX http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf}
-\end{itemize}
-Most variable names can be used in these URL modifiers. Here is a
-list of available targets by section in the report:
-
-\uline{Section 1:} Time
-
-\uline{Section 2:} {[}none{]}
-
-\uline{Section 3:} ACINS ALT BLATA BLONA BNORMA BPITCHR BROLLR
-BYAWR DEI DNI FXAZIM FXDIST GGALT GGLAT GGLON GGNSAT GGOIDHT GGSPD
-GGSTATUS GGTRK GGVEW GGVNS GGVSPD GGWUAL GMODE GSF HGM HGM232 HGME
-HI3 LAT LATC LON LONC PALT PITCH ROLL THDG VEW VEWC VNS VNSC VSPD 
-
-\uline{Section 4:} ADIFR AKRD AT\_ITR ATx ATX ATxD ATxJ BDIFR CAVP\_x
-CONCH\_UVH CONCV\_VXL DP\_CR2C DP\_VXL DPx DP\_x DPxC DPXC DVALUE
-EDPC EW\_UHV EWx EWX FP\_CR2 MACHx MACHX MIRRORT\_CR2 MIRRTMP\_DPX
-MR MRCR MRLA MRLH MRVCL OAT PCAB PS\_A PSDPx PSFD PSFRD PSURF PSx
-PSX PSxC PSXC QCx QCX QCxC QCXC RAWCONC\_VXL RHOx RHUM RHUMI RTHRx
-RTx RTX RTxH SPHUM SSLIP TASHC TASx TASX TASxD THETA THETAE THETAP
-THETAQ THETAV TVIR UI UIC UX UXC VI VIC VY VYC WD WDC WI WIC WS WSC
-XSIGV\_UHV 
-
-\uline{Section 5:} A1DC A1DP A200X A200Y A260X ACDP AF300 AFSSP
-APCAS AS100 AUHSAS C1DC C1DP C200X C200Y C260X CCDP CF300 CFSSP COMCP
-CONC1DC CONC1DC100 CONC1DC150 CONC1DP CONC3 CONC6 CONCD CONCF CONCU
-CONCX CONCY CPCAS CS100 CUHSAS DBAR1DC DBAR1DP DBAR3 DBAR6 DBARD DBARF
-DBARP DBARU DBARX DBARY DBZ DBZ1DC DBZ1DP DISP1DC DISP1DP DISP3 DISP6
-DISPD DISPF DISPP DISPU DISPX DISPY DT1DC FRANGE FRNG PLWC1 PLWC1DC
-PLWC1DP PLWC6 PLWCC PLWCC1 PLWCD PLWCF PLWCG PLWCX PLWCY REFF2DC REFF2DP
-REFFD REFFF RICE 
-
-\uline{Section 6:} CO2\_PIC COMR\_AL CORAW\_AL FO3\_ACD FO3\_CL
-O3MR\_CL TEO3 TEO3C TEO3P TEP TET XFO3FNO XFO3FS XFO3P XNCLF XNMBT
-XNO XNOCAL XNOCF XNOSF XNOY XNOYP XNOZA XNSAF XNST XNYCAL XNZAF XO3 
-
-\uline{Section 7:} CNTEMP CNTS CONCN CONCP CONCU CONCU100 CONCU500
-FCN FCNC PCN PFLW PFLWC TCHTP TCNTL TEMP1 TEMP2 UPRESS USFLWC USMPFLW
-XICN XICNC 
-
-\uline{Section 8:} IRxHT IRxV RSTx SPxPitch SPxRoll TRSTx VISxC
-VISxHT VISxV 
-
-\uline{Section 9:} {[}none{]}
-
-\uline{Section 10:} OBSOLETE
-
-\subsection*{Page Numbers}
-
-To reference a specific page in the document, use a web reference
-like this:\\
-\texttt{ProcessingAlgorithms.pdf\#page=44}
-
-In evince, this syntax will work, or the page number can be specified
-in this way:
-
-\texttt{evince -p 115 ProcessingAlgorithms.pdf}
-
-\subsection*{Sections and Subsections}
-
-Targets have not been provided for other parts of the document, but
-the above method of referencing pages can be used to link to specific
-sections and other components of the document.
-
-\subsection*{Adding New Targets}
-
-When a new variable is added, a new anchor point can be added by inserting,
-in LaTeX mode, \texttt{\textbackslash nop\{LAT\} }at the appropriate
-point in the LyX document. (\textbackslash nop has been defined to
-use \textbackslash hypertarget but displace the reference upward
-one line.) In addition, when a new variable is added, entries should
-be made in the index items and the variable-names list, following
-the pattern used for existing variables, and if appropriate any new
-symbols used in discussing the algorithm should be added to the similar
-symbols list.
-
-\section*{}
-
-\vfill\eject
-
-\pagebreak
-\end{document}
