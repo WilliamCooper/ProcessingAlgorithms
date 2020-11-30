@@ -130,8 +130,8 @@ values of mole fraction are from Jones (1978) and the calculation of mean
 molecular weight is shown in the following table
 using values of molecular weights
 taken from the NIST Standard Reference Database 69: NIST Chemistry
-WebBook as of March 2011. With CO~2~ about 0.00039 and others
-decreased proportionately, the mean is 28.9637.
+WebBook as of March 2011. With CO~2~ about 0.00041 (as in 2020) and others
+decreased proportionately, the mean is 28.9640.
 ```{r include = TRUE, echo = FALSE}
 knitr::kable(fnc, format = 'html', caption = 'Calculation of the mean molecular weight of air',
              table.attr = "style='width:70%;'")
