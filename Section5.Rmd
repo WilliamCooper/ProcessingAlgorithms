@@ -1,7 +1,6 @@
-<!-- <h1 id="cloud-physics-variables">CLOUD PHYSICS VARIABLES</h1> -->
 # Cloud Physics Variables
 <!-- <h2 id="measurements-of-liquid-water-content">Measurements of Liquid Water Content</h2> -->
-## Measurements of Liquid Water Content
+## Measurements of Liquid Water Content {#LWC}
 <p><strong>Raw Output PMS/CSIRO (King) Liquid Water Content</strong> (W): <strong></strong> <strong><span class="underline">PLWC</span>,</strong> <strong><span class="underline">PLWC1</span></strong><span id="punch:5-3" label="punch:5-3">[punch:5-3]</span><br />
 <em>The power dissipated by the sensor of a PMS/CSIRO (King) liquid water probe (in watts).</em> PLWC is the power required to maintain constant temperature in a heated element as that element is cooled by convection and evaporation of impinging liquid water. The convective heat losses are determined by calibration in dry air over a range of airspeeds and temperatures, so that the remaining power can be related to the liquid water content. The instrument is described in <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a> and at <a href="http://www.eol.ucar.edu/instruments/king-csiro-liquid-water-sensor">this URL</a>. See (which follows) for processing.<br />
 <strong><span id="PLWCC" label="PLWCC">[PLWCC]</span>PMS/CSIRO (King) Liquid Water Content</strong> (g/m<span class="math inline"><em></em><sup>3</sup></span>): <strong></strong> <strong><span class="underline">PLWCC</span>,</strong> <strong><span class="underline">PLWCC1</span></strong><br />

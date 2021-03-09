@@ -1,9 +1,7 @@
-<!-- <h1 id="radiation-variables">RADIATION VARIABLES</h1> -->
-```{r child='boxStyles.Rmd'}
-```
-
 # Radiation Variables
 
+```{r child='boxStyles.Rmd'}
+```
 <!-- <h2 id="measurements-of-irradiance-and-radiometric-temperature">Measurements of Irradiance and Radiometric Temperature</h2> -->
 ## Measurements of Irradiance and Radiometric Temperature
 

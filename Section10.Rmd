@@ -1,5 +1,3 @@
-
-<!-- <h1 id="obsolete-variablessecobsolete-variables">OBSOLETE VARIABLES<span id="sec:OBSOLETE-VARIABLES" label="sec:OBSOLETE-VARIABLES">[sec:OBSOLETE-VARIABLES]</span></h1> -->
 # Obsolete Variables {#obsolete-variables}
 
 <p>RAF retired the “GENPRO” processor, the software program previously used to produce data sets, in 1993, but data files produced by that processor are still retained and available for use. Also, there are some instruments that are now retired but provided measurements in some archived data files. Obsolete variable names that are associated only with GENPRO or a retired instrument are discussed below, for reference and to facilitate use of old data files.</p>

@@ -1,5 +1,3 @@
-
-<!-- <h1 id="the-state-of-the-atmospheresecstate-variables"> -->
 # The State of the Atmosphere {#the-state-of-the-atmosphere}
 
 <!-- <span id="sec:State Variables" label="sec:State Variables">[sec:State Variables]</span></h1> -->

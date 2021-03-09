@@ -1,10 +1,7 @@
-```{r child='boxStyles.Rmd'}
-```
-
-<!-- <h1 id="aerosol-particle-measurementssecaerosol-particle-measurements">AEROSOL PARTICLE MEASUREMENTS<span id="sec:AEROSOL-PARTICLE-MEASUREMENTS"
-label="sec:AEROSOL-PARTICLE-MEASUREMENTS">[sec:AEROSOL-PARTICLE-MEASUREMENTS]</span></h1> -->
 # Aerosol Particle Measurements {#aerosol-particle-measurements}
 
+```{r child='boxStyles.Rmd'}
+```
 <!-- <h2 id="condensation-nucleus-counters">Condensation Nucleus Counters</h2> -->
 ## Condensation Nucleus Counter
 

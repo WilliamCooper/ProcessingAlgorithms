@@ -1,6 +1,103 @@
-<p><span id="sec:Symbols" label="sec:Symbols">[sec:Symbols]</span></p>
+# (APPENDIX) Appendix {-} 
 
-# Appendices {.unnumbered}
+# Appendix A: List of Symbols {.unnumbered}
+
+<!-- Generated from Symbols.pdf via "convert -density 200 Symbols.pdf -quality 90 Symbols.jpg"  -->
+
+<div class="figure">
+  <img src="Symbols-0.jpg" width="1200" height="1200" />
+  <img src="Symbols-1.jpg" width="1200" height="1200" />
+</div>
+
+<!-- <div class="vscroll-plot"> -->
+```{r  echo=FALSE, out.width = "95%", attr.output='style="max-height: 8000px;"'}
+# knitr::include_graphics('Symbols.pdf') 
+```
+<!-- </div> -->
+
+# Appendix B: Variables Names {.unnumbered}
+
+Linked to the primary discussion of each variable. $\dagger$ denotes an obsolete variable. 
+
+
+Variable Name | Variable Name | Variable Name | Variable Name | Variable Name 
+------------- | ------------- | ------------- | ------------- | -------------
+[A200X]()| A200Y| A260X| AACT| ACDP
+ACINS| ADIFR| AF300| AFIXx$\dagger$| AFSSP
+AIDC| AIDP| AKFXx$\dagger$| AKRD| AL
+ALAT$\dagger$| ALON$\dagger$| ALPHA$\dagger$| ALT| ALTG
+ALTX| APCAS| AS100| AS200| ATC
+AT_ITR| ATKP$\dagger$| ATRF$\dagger$| ATTACK| ATx
+ATX| ATxH| AUHSAS| BDIFR| BFIXx$\dagger$
+BLATA| BLONA| BNORMA| BPITCHR| BROLLR
+BYAWR| C1DC| C1DP| C200X| C200Y
+C260X| CAVP_x| CCDP| CCEP$\dagger$| CF300
+CFSEC$\dagger$| CFSSP| CGS$\dagger$| CH4_PICx| CLAT$\dagger$
+CLON$\dagger$| CMODE| CNTEMP| CNTS| CO
+CO2_PICx| COCAL| COCOR| COMR_AL| CONC1DC
+CONC1DC100| CONC1DC150| CONC1DP| CONC3| CONC6
+CONCD| CONCF| CONCH_UVH| CONCN| CONCP
+CONCP| CONCU| CONCU| CONCU100| CONCU500
+CONCV_VXL| CONCX| CONCY| CORAW_AL| COZRO
+CPCAS| CRHP| CS100| CS200| CSEC$\dagger$
+CUHSAS| DBAR1DC| DBAR1DP| DBZ1DC| DBZ1DP
+DBZ6| DBZD| DBZF| DBZX| DBZY
+DEI| DISP1DC| DISP1DP| DISP3| DISP6
+DISPD| DISPF| DISPP| DISPU| DISPX
+DISPY| DNI| DP_CR2C| DPCRC| DP_VXL
+DPx| DPx| DPxC| DPXC| DP_x
+DT1DC| DVALUE| EDPC| EDPC$\dagger$| EW_UVH
+EWx| EWX| FACT| FBMFR| FCN
+FCNC| FO3_ACD| FO3_CL| FO3_x| FP_CR2
+FPCRC| FRANGE| FRESET| FRNG| FRST
+FSTB| FSTROB| FXAZIM| FXDIST| GALT_A
+GEOPHT| GGALT| GGALTC| GGEOIDHT| GGHWGS
+GGLAT| GGLON| GGNSAT| GGQUAL| GGSPD
+GGSTATUS| GGTRK| GGVEW| GGVNS| GGVSPD
+GLAT| GLON| GMODE$\dagger$| GSF| GSF_G
+GSF$\dagger$| GSTAT| GSTAT_G| GVZI$\dagger$| HGM
+HGM232| HGME| HI3$\dagger$| IAS| IRx
+IRxC| IRxC| IRxHT| IRxHTV| IRXV
+LAT| LATC| LAT_G| LON| LONC
+LON_G| LWCC$\dagger$| LWC$\dagger$| MACH = Mach number| MACHx
+MACHX| MIRRORT_CR2| MR| MRCR| MRLA
+MRLH| MRVXL| O3FS| O3MR_CL| OAT
+PACT| PALT| PCAB| PCN| P_CR2
+PFLW| PFLWC| PHDG$\dagger$| PITCH| PLWC
+PLWC1| PLWC1| PLWC1DC| PLWC1DP| PLWC6
+[PLWCC](/rmd_output/1/5-cloud-physics-variables.html#LWC)| PLWCD| PLWCF| PLWCG| PLWCX
+PLWCY| PS_A| PSDPx| PSFD| PSFRD
+PSURF| PSX| PSxC| PSXC| **PSx**
+PTIME$\dagger$| QCBC$\dagger$| QCB$\dagger$| QCGC$\dagger$| QCG$\dagger$
+QCx| QCX| QCxC| QCXC| RAWCONC_VXL
+REFF2DC| REFF2DP| REFFD| REFFF| RHOLA
+RHOUV| RHOx| RHUM| RHUMI| RICE
+ROC| ROLL| RSTx| RTHRx| RTx
+RTX| RTxH| SCLWC| SFC| SOLAZ
+SOLDE| SOLEL| SOLZE| SPHUM| SPxPitch
+SPxRoll| SSFXx$\dagger$| SSLIP| SSRD| SWTC
+SWx| TASHC| TASxD| TCAVB| TCAVT
+TCNTP| TCNTU| TEMP1| TEMP2| TEO3
+TEO3C| TEO3P| TEP| TET| THETA
+THETAE| THETAP| THETAQ| THETAV| THF$\dagger$
+THI$\dagger$| Time| TKAT_G| TMLAG$\dagger$| TPTIME$\dagger$
+TRSTB, TRSTT| TTKP| TTKP$\dagger$| TTRF| TTRF$\dagger$
+TTx| TTx| TTx| TVIR| UI
+UIC| UPRESS| USFLWC| USMPFLW| UVx
+UX| UXC| VCRH| VEW| VEWC
+VEW_| VEW$\dagger$| VI| VIC| VISxC
+VISxHT| VISxHTV| VISxV| VLA| VLA
+VNS| VNSC| VNS_G| VNS$\dagger$| VSPD
+VSPD_G| VY| VYC| VZI$\dagger$| WD
+WDC| WDRCTN$\dagger$| WI| WIC| WP3
+WS| WSC| WSPD$\dagger$| XCOMR| XFO3FNO
+XFO3FS| XFO3P| XICN| XICNC| XMACH2
+XNCLF| XNMBT| XNO| XNOCF| XNOSF
+XNOY| XNOYP| XNOZA| XNSAF| XNST
+XNZAF| XO3| XSIG_UVH| XUVI| XUVI
+XUVP| XUVT| XVI$\dagger$| YVI$\dagger$|
+
+
 
 ## Suggested Additional Steps {.unnumbered}
 
