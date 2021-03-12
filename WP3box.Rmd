@@ -2,7 +2,7 @@
 <!-- \fbox{\begin{minipage}[t]{0.95\textwidth}% -->
 <p class=box>
 $g_{1}$ = 9.780356 m\ s^-2^  
-$a_{1}$ = 0.31391116$\times$10^-6^m^-1^  
+$a_{1}$ = 0.31391116$\times 10$^-6^m^-1^  
 $a_{2}$ = .0052885 (dimensionless)  
 VEW (VNS) = eastward (northward) groundspeed of the aircraft (see
 below)  

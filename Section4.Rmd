@@ -1,15 +1,12 @@
 # The State of the Atmosphere {#the-state-of-the-atmosphere}
 
-<!-- <span id="sec:State Variables" label="sec:State Variables">[sec:State Variables]</span></h1> -->
-<!-- <h2 id="information-on-instruments-and-calibrations"> -->
 ## Information on Instruments and Calibrations
 
-<!-- </h2> -->
-<p>The instruments used to collect the measurements that lead to the variables in this section are described on the EOL web site, in the “State Parameters” section at <a href="http://www.eol.ucar.edu/aircraft-instrumentation">this URL</a>. The data acquisition and processing for these variables and the calibration coefficients used where applicable are described .</p>
-<!-- <h2 id="variable-names">Variable Names</h2> -->
+The instruments used to collect the measurements that lead to the variables in this section are described on the EOL web site, in the “State Parameters” section at <a href="http://www.eol.ucar.edu/aircraft-instrumentation">this URL</a>. The data acquisition and processing for these variables and the calibration coefficients used where applicable are described .
+ 
 ## Variable Names
 
-<p>Measurements of some meteorological state variables like pressure, temperature, and water vapor pressure may originate from multiple sensors mounted at various locations on an aircraft. To distinguish among similar measurements, many variable names incorporate an indication of where the measurement was made. In this document, locations in variable names are represented by “x”, where “x” may be one of the following:</p>
+Measurements of some meteorological state variables like pressure, temperature, and water vapor pressure may originate from multiple sensors mounted at various locations on an aircraft. To distinguish among similar measurements, many variable names incorporate an indication of where the measurement was made. In this document, locations in variable names are represented by “x”, where “x” may be one of the following:
 <center>
 ```{r, include = TRUE, echo = FALSE}
 A.id <- data.frame(Character=c('B', 'B', 'F', 'G', 'R', 'T', 'W'))
@@ -26,13 +23,15 @@ knitr::kable(A.id, align=c('c','l')) %>% kable_styling(bootstrap_options = 'bord
 </center>
   
 In addition, a true letter ’X’ (not replaced by the above letters) may be appended to a measurement to indicate that it is the preferred choice among similar measurements and is therefore used to calculate derived variables that depend on the measured quantity. Other suffixes sometimes used to distinguish among measurements are these: ’D’ for a digital sensor; ’H’ for a heated (usually, anti-iced) sensor, ’L’ for port-side sensors, and ’R’ for starboard-side sensors.  
-<!-- <h2 id="subsecptqpressure"><span id="subsec:PTq" label="subsec:PTq">[subsec:PTq]</span>Pressure</h2> -->
 
 ## Pressure
 
-<p><strong>Static Pressure (hPa):</strong> <strong></strong> <strong><span class="underline">PSx</span>,</strong> <strong><span class="underline">PSxC</span></strong>, <strong><span class="underline">PS_A</span>,</strong> <strong><span class="underline">PSX</span></strong><span class="underline">,</span> <strong></strong> <strong><span class="underline">PSXC</span>.</strong> <strong><span class="underline">PSFD</span>,</strong> <strong><span class="underline">PSFRD</span></strong><br />
-<em>The atmospheric pressure at the flight level of the aircraft, measured by a calibrated absolute (barometric) transducer at location x.</em> PSx is the measured static or ambient pressure before correction, and it may be affected by local flow-field distortion. PS_A is the pressure measurement taken from the avionics system on the aircraft, processed via unknown algorithms in the avionics system that may smooth, correct, and perhaps delay the result. PSxC is PSx corrected for local flow-field distortion. (See <a href="https://opensky.ucar.edu/islandora/object/archives%3A8150">RAF Bulletin #21</a> and the discussion in <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PCOR.pdf">this memo</a> and <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PcorCalculation.pdf">this supplement</a>), and PSXC is the preferred corrected measurement used for derived calculations. These measurements have been made using various sensors, so it is best to consult the project documentation for the transducer used. Recent measurements from both the C-130 and the GV have been made using a Paroscientific Model 1000 Digiquartz Transducer.<br />
-<br />
+### Standard Pressure Measurements
+
+#### Static or Ambient Pressure (hPa): PSx, PSxC, PS_A, PSX, PSXC, PSFD, PSFRD {-#psx}
+
+<em>The atmospheric pressure at the flight level of the aircraft, measured by a calibrated absolute (barometric) transducer at location x.</em> PSx is the measured static or ambient pressure before correction, and it may be affected by local flow-field distortion. PS_A is the pressure measurement taken from the avionics system on the aircraft, processed via unknown algorithms in the avionics system that may smooth, correct, and perhaps delay the result. PSxC is PSx corrected for local flow-field distortion (see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8150">RAF Bulletin #21</a> and the discussion in <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PCOR.pdf">this memo</a> and <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PcorCalculation.pdf">this supplement</a>), and PSXC is the preferred corrected measurement used for derived calculations. These measurements have been made using various sensors, so it is best to consult the project documentation for the transducer used. Recent measurements from both the C-130 and the GV have been made using a Paroscientific Model 1000 Digiquartz Transducer.
+
 Corrections to the pressures have been determined by reference to some standard, including a “trailing cone” sensor, the pressure PS_A from the cockpit avionics system, or (since 2012) the Laser Air Motion Sensing System (LAMS). The latter correction is discussed in the memo <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PCOR.pdf">referenced above</a>, where corrections used prior to 2011 are also discussed. Beginning in 2012, the deduced corrections <span class="math inline"><em>Δ</em><em>p</em></span> to the measured pressures as functions of dynamic pressure <span class="math inline"><em>q</em>,</span> angle of attack <span class="math inline"><em>α</em>,</span>^[A weakness is this form for the pressure correction is that occasionally the radome ports become plugged with ice and the measurement of angle of attack is not available. When the variable ATTACK representing angle of attack is invalid, the angle of attack is instead calculated from PITCH<span class="math inline">−</span>VSPD/TASX, which approximates the angle of attack if the vertical wind is zero.]
 and the Mach number <span class="math inline"><em>M</em></span> are described by the following equations and coefficients:
 
@@ -67,8 +66,9 @@ M=\left\{ \left(\frac{2c_{v}}{R}\right)\left[\left(\frac{p+q}{p}\right)^{R/c_{p}
 For additional information on these correction coefficients, see <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ARISTO-LAMS.pdf">this note</a> and Cooper et al. (2014).^[<a href="http://www.atmos-meas-tech.net/7/3215/2014/">Atmos. Meas. Tech., 7, 3215-3231</a>, 2014 doi:10.5194/amt-7-3215-2014.]
 <br />
 
-<strong>Dynamic Pressure (hPa):</strong> <strong></strong> <strong><span class="underline">QCx</span>,</strong> <strong><span class="underline">QCxC</span>,</strong> <strong><span class="underline">QCX</span>,</strong> <strong><span class="underline">QCXC</span></strong><br />
-<em>The pressure excess caused by bringing the airflow to rest relative to the aircraft.</em> These quantities represent the difference between the total pressure <span class="math inline"><em>p</em><sub><em>t</em></sub></span> as measured at the inlet of a pitot tube or other forward-pointing port and the ambient pressure that would be present in the absence of motion through the air. <em></em> The variables ending in “C” have been corrected for flow-distortion effects, mostly arising from errors in the measurement of static pressure. Since 2012, the corrections are based on measurements from the LAMS system as described for PSxC, and they have the same functional form as in \@ref(eq:PCORC130) and
+#### Dynamic Pressure (hPa): QCx, QCxC, QCX, QCXC, QC_A {-#qcx}
+
+<em>The pressure excess caused by bringing the airflow to rest relative to the aircraft.</em> These quantities represent the difference between the total pressure <span class="math inline"><em>p</em><sub><em>t</em></sub></span> as measured at the inlet of a pitot tube or other forward-pointing port and the ambient pressure that would be present in the absence of motion through the air. The variable QC_A is provided by the avionic data system and is subject to an unknown delay and smoothing. The variables ending in “C” have been corrected for flow-distortion effects, mostly arising from errors in the measurement of static pressure. Since 2012, the corrections are based on measurements from the LAMS system as described for PSxC, and they have the same functional form as in \@ref(eq:PCORC130) and
 \@ref(eq:PCORforGV) except that the correction applied to <span class="math inline"><em>q</em></span> is <span class="math inline"> − <em>Δ</em><em>p</em></span> with reversed sign because <span class="math inline"><em>q</em> = <em>p</em><sub><em>t</em></sub> − <em>p</em><sub><em>a</em></sub></span> and the error arises primarily from the error in <span class="math inline"><em>p</em><sub><em>a</em></sub></span>. The same correction is applied to QCR because it is also measured relative to the static pressure ports so errors in the pressure sensed at those ports affect QCR in the same way that QCF is affected. <span id="punch4.3" label="punch4.3">[punch4.3]</span>See the notes referenced in the preceding section, and also <a href="https://opensky.ucar.edu/islandora/object/archives%3A8150">RAF Bulletin 21</a> for the corrections applied to earlier data files.[^fnlabelspecial]
 
 [^fnlabelspecial]: *C-130*, prior to 2012: For QCFC: subtract  max(4.66+11.4405 * $\mathrm{\{ADIFR\}}$ / $\mathrm{\{QCR\}}$, 1.113); For QCFRC prior to Sept 2003: same as for QCFC; after/including Sept 2003, subtract max(3.29+$\mathrm{\{QCX\}}$ * 0.0273,  4.7915); For QCRC: subtract max((3.29+$\mathrm{\{QCX\}}$ * 0.0273), 4.7915). *GV* Aug 2006 to 2012: For QCF, subtract (1.02+$\mathrm{\{PSF\}}$(0.215 - 0.04 * $\mathrm{\{QCF\}}$/1000.) + {QCF} * ($-0.003266$ + $\mathrm{\{QCF\}}$ * 1.613e-06)) 
@@ -85,9 +85,13 @@ In the case of QCRC from the GV, one additional correction is applied (beginning
 \end{equation}
 
 where $\Delta p$ is given by \@ref(eq:PCORforGV) and the coefficients are {<span class="math inline"><em>b</em><sub>0 − 3</sub></span>}={<span class="math inline"> − 0.5635</span>, <span class="math inline">0.9982</span>, 0.0273, <span class="math inline">0.0562</span>}. Some justification for this correction is contained in <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/Recommendation161107b.pdf">this note.</a> A similar correction is not made for measurements from the C-130 radome because they do not appear to be necessary, as discussed in that note.<br />
-<strong>D-Value (m):</strong> <strong></strong> <strong><span class="underline">DVALUE</span></strong><br />
+
+#### D-Value (m): DVALUE {-#dvalue}
+
 The difference between geopotential altitude and pressure altitude (m). This variable is calculated from {GEOPHT}<span class="math inline">−</span>{PALT} and, for appropriate flight segments, can be used to measure height gradients on a constant-pressure surface. Prior to 2018, this was calculated from {GGALT} – {PALT}.</p>
-<p><strong>Special Pressure Measurements (hPa):</strong> <strong></strong> <strong><span class="underline">PSDPx</span>,</strong> <strong><span class="underline">CAVP_x</span>,</strong> <strong><span class="underline">PCAB</span>,</strong> <strong><span class="underline">PSURF</span></strong><br />
+
+### Special Pressure Measurements (hPa): PSDPx, CAVP, PCAB, PSURF {-#p-special}
+
 <em>PSDPx and CAVP_x are measurements of the pressure in the housing of the dew-point sensors,</em> as discussed in connection with DPxC. <em>PCAB is a measurement of the pressure in the cabin of the aircraft. PSURF is the estimated surface pressure</em> calculated from HGME (a radar-altimeter measurement of height), TVIR, PSXC<span id="punch:4-11" label="punch:4-11">[punch:4-11]</span>, and MR using the thickness equation. [TVIR](#TVIR) and [MR](#MR) are described later in this section, and [HGME](#HGME) was described in Section \@ref(other-measurements-of-aircraft-altitude). The average temperature for the layer is obtained by using HGME and assuming a dry-adiabatic lapse rate from the flight level to the surface. Because of this assumption, the result is only valid for flight in a well-mixed surface layer or in other conditions in which the temperature lapse rate matches the dry-adiabatic lapse rate.^[The symbol <span class="math inline"><em></em><sup>†</sup></span> indicates that values are included in the table of constants in Sect.\ \@ref(constants-and-symbols).]
 <br />
 </p>  
@@ -97,11 +101,15 @@ The difference between geopotential altitude and pressure altitude (m). This var
 
 <!-- <h2 id="temperature">Temperature</h2> -->
 ## Temperature {#temperature-section}
-<p><strong><span id="RTx discussion" label="RTx discussion">[]</span>Recovery Temperature (<span class="math inline">º</span>C):</strong> <strong></strong> <strong><span class="underline">RTx</span>,</strong> <strong><span class="underline">RTxH</span>, RTHRx</strong>, <strong><span class="underline">RTX</span></strong><br />
+
+#### Recovery Temperature (<span class="math inline">º</span>C): RTx, RTxH, RTHRx, RTX {-#recovery-t}
+
 <em>The recovery temperature is the temperature sensed by a temperature probe that is exposed to the atmosphere.</em> In flight, the temperature is heated above the ambient temperature because it senses the temperature of air near the sensor that has been heated adiabatically during compression as it is brought near the airspeed of the aircraft. These variables are the measurements of that recovery temperature from calibrated temperature sensors at location x, for processing prior to about 2012; more recently, the names are simply RTF\# or RTH\# where \# is a number starting with 1.^[Prior to 2012, these variables were called “total temperature” and symbols starting with ’TT’ instead of ’RT’ were used. That name was misleading because these values are not true total-temperature measurements, for which the air would be at the same speed as the aircraft, but instead recovery-temperature measurements. The name has been changed to correct this mis-labeling, although this was a long-standing convention in past datasets.]
 For Rosemount or HARCO temperature probes in current use, the recovery temperature is near the total temperature, but all probes must be corrected to obtain either true total temperature or true ambient temperature. In the standard output, the variable name also conveys the sensor type: RTF\# or RTx is a measurement from a Rosemount Model 102 non-deiced temperature sensor, RT\#H or RTxH is the measurement from a Rosemount Model 102 anti-iced (heated) temperature sensor, and RTH\# or RTHx is the measurement from a HARCO heated sensor. Some past experiments also used a reverse-flow temperature housing and a fast-response “K” housing; the associated variable names for these probes were TTRF and TTKP.^[See the related obsolete variables TTx, which are previously used names for these variables. The names were changed to clarify that the quantity represented is the recovery temperature, not the total temperature.]
 </p>
-<p><strong>Ambient Temperature (<span class="math inline"><em></em><sup>∘</sup></span>C):</strong> <strong></strong> <strong><span class="underline">ATx</span>,</strong> <strong><span class="underline">ATX</span></strong>, <strong></strong> <strong><span class="underline">ATxH</span>,</strong> <strong><span class="underline">ATxD</span></strong> 
+
+#### Ambient Temperature (<span class="math inline"><em></em><sup>∘</sup></span>C): ATx, ATX, ATxH, ATxD {-#ambient-t}
+
 <em>The temperature of the atmosphere at the location of the aircraft, as it would be measured by a sensor at rest relative to the air.</em> {#ATX} 
 The ’x’ in the name of the variable used for ambient temperature, ATx, conveys the same information regarding sensor type and location as the variable name used with total (recovery) temperature. See the discussion above regarding RTx. The ambient temperature (also known as the static air temperature) is calculated from the measured recovery temperature, which is increased above the ambient temperature by dynamic heating caused by the airspeed of the aircraft. The calculated temperature therefore depends on the recovery temperature RTx as well as the dynamic and ambient pressure, usually respectively QCXC and PSXC. The ambient and dynamic pressures are first corrected from the raw measurements QCX and PSX to obtain variables that account for deviations caused by airflow around the aircraft and/or position-dependent systematic errors, as discussed in the section describing PSxC. The following basic equations are developed on the basis of conservation of energy for a perfect gas undergoing an adiabatic compression.<br />
 <br />
@@ -235,16 +243,23 @@ From \@ref(eq:TaEQ),
 \end{equation}  
 </p>
 
-<p><strong>In-cloud Air Temperature, Radiometric (<span class="math inline"><em></em><sup>∘</sup></span>C):</strong> <strong><span class="underline">AT_ITR</span></strong><br /> {#AT-ITR}
+#### In-cloud Air Temperature, Radiometric (<span class="math inline"><em></em><sup>∘</sup></span>C): AT_ITR {-#AT-ITR}
+
 <em>The radiometric ambient air temperature measured by the In-cloud Air Temperature Radiometer,</em> which measures the radiometric temperature in the 4.3 <span class="math inline"><em>μ</em></span>m CO<span class="math inline"><em></em><sub>2</sub></span> band.<span id="AT_ITR" label="AT_ITR">[AT_ITR]</span> Its primary use is in water cloud when the standard thermometers are affected by wetting. In clear air the temperature is an average over an integrating range of up to 100s of meters away from the aircraft, whereas in clouds the integrating range is as little as 10 meters because of water droplets. The calibration is by a polynomial fit of the internal reference temperature and measured radiance to the ATX temperature.<span id="punch:4-5" label="punch:4-5">[punch:4-5]</span></p>
-<p><strong>Ophir Air Temperature (<span class="math inline"><em></em><sup>∘</sup></span>C):</strong> <strong></strong> <strong><span class="underline">OAT</span></strong><br /> {#OAT}
+
+#### Ophir Air Temperature (<span class="math inline"><em></em><sup>∘</sup></span>C): OAT {-#OAT}
+
 <em>The radiometric temperature reported by the Ophir III radiometer,</em> which operates on the same principles as the ITR,<span id="OAT" label="OAT">[OAT]</span> with the same limitations. For more information on this instrument, see this <a href="http://opensky.library.ucar.edu/collections/TECH-NOTE-000-000-000-822">Technical Note</a>. The in-cloud air temperature radiometer is a later, improved version, but the Ophir III radiometer remains in use.</p>
 <!-- <h2 id="humidity">Humidity</h2> -->
+
 ## Humidity {#humidity}
-<p><strong>Dew/Frost Point (<span class="math inline">º</span>C):</strong> <strong></strong> <strong><span class="underline">DPx</span>,</strong> <strong><span class="underline">DP_x</span>,</strong> <strong><span class="underline">MIRRTMP_DPx</span></strong><br />
+
+#### Dew/Frost Point (<span class="math inline">º</span>C): DPx, DP_x, MIRRTMP_DPx {-#dew-point}
+
 <em>The mirror temperature measured directly by a dew-point sensor, without correction.</em> The dew point or frost point is measured by either an EG&amp;G Model 137, a General Eastern Model 1011B or a Buck Model 1011C dew-point hygrometer. Below 0<strong><span class="math inline"><em></em><sup>∘</sup></span>C</strong> the instrument is assumed to be responding to the frost point, although occasionally in climbs there is a short transition near the freezing level before the condensate on the mirror of the instrument freezes and there may be a measurement error before the condensate freezes. The measurements are usually made within a housing where the pressure (<span class="math inline"><em>p</em><sub><em>h</em></sub>)</span> may differ from the ambient pressure, so the pressure in the housing affects the measured dew point or frost point. The housing pressure is often adjusted to be near the ambient pressure by appropriate orientation of inlets, and recently the pressure in the housing is measured and a correction is applied, as discussed in the next paragraph.</p>
-<p><strong>Corrected Dew Point (C):</strong> <strong></strong> <strong><span class="underline">DPXC</span>,</strong> <strong><span class="underline">DPxC</span></strong>^[See also DP_VXL and DP_CR2C below.]
-<strong></strong><br />
+
+#### Corrected Dew Point (<span class="math inline">º</span>C): DPXC, DPxC^[See also DP_VXL and DP_CR2C below.] {-#dewpt-corrected}
+
 <em>The dew point obtained from the original measurement after correction for the housing pressure, the enhancement of the equilibrium vapor pressure arising from the total pressure (discussed below), and conversion from frost point if appropriate,</em> The result is the temperature at which the equilibrium vapor pressure over a plane water surface in the absence of other gases would match the actual water-vapor pressure. Dew/frost-point hygrometers measure the equilibrium point in the presence of air, and the presence of air affects the measurement in a minor way that is represented by a small correction here named the “enhancement factor.” In the case where the dew-point or frost-point sensor is exposed to ambient air directly, the enhancement factor is defined so that the ambient water vapor pressure $e_a$ is related to $T_p$, the *measured* dew or frost point *in the presence of air* having total pressure $p$, by $e_a=f(p,T_P)e_s(T_p)$ where $e_s(T_p)$ is the vapor pressure in equilibrium with ice or water at the dew or frost point $T_p$ *in the absence of air.* Calculation of DPxC removes this dependence, so the vapor pressure obtained from $e_s(\{DPxC\})$ will be that vapor pressure corresponding to equilibrium *in the absence of air.* In addition, if the measurement is below $0^\circ\mathrm{C}$, it is assumed to be a measurement of frost point and a corresponding dew point is calculated from the measurement (also with correction for the influence of the total pressure on the measurement). Some changes were made to these calculations in 2011; for more information, see <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/VaporPressureV3.pdf">this memo</a>.<br />
 <br />
 An additional correction is needed in those cases where the pressure in the housing of the instrument (measured as PSDPx or CAVP_x) differs from the ambient pressure, because the changed pressure affects the partial pressure of water vapor in proportion to the change in total pressure and so changes the measured dew point from the desired quantity (that in the ambient air) to that in the housing. This is especially important in the case of the GV because the potential effect increases with airspeed. If the pressure in the housing is measured or otherwise known (e.g., from correlations with other measurements), then this correction can be introduced into the processing algorithm at the same time that the correction for the presence of dry air is introduced, and the enhancement factor should be evaluated at the pressure in the housing.<br />  
@@ -307,26 +322,39 @@ Tests of these interpolation formulas against high-accuracy numerical inversion 
 ```
 For other instruments that measure vapor density, such as a Lyman-alpha or tunable diode laser hygrometers (including the Vertical Cavity Surface Emitting Laser (VCSEL) hygrometer), a similar conversion is made from vapor density to dew point, as described in the next paragraph.<br />  
 
-<p><strong>Dew Point Determined from the VCSEL Hygrometer (<span class="math inline"><em></em><sup>∘</sup></span>C):</strong> <strong></strong> <strong><span class="underline">DP_VXL</span></strong><br />
+#### Dew Point Determined from the VCSEL Hygrometer (<span class="math inline"><em></em><sup>∘</sup></span>C): DP_VXL {-#vcsel-dp}
+
 <em>The dew point temperature determined from the measured water vapor density from the VCSEL hygrometer.</em> The calculation is as described at the bottom of the box immediately above this paragraph (above the footnote). The water vapor density converted from a molecular density [molecules$\,$cm$^{-3}$] to a mass density [g$\,$m$^{-3}$] via^[The conversion factor is given by this formula:<br />
 <br /><span class="math display">$$C^{\prime}=\frac{10^{6}\mathrm{cm}^{3}}{\mathrm{m}^{3}}\times\frac{M_{W}^{\dagger}}{N_{A}^{\dagger}}$$</span><br /> where <span class="math inline"><em>N</em><sub><em>A</em></sub></span> is the Avogadro constant, 6.022147<span class="math inline"> × 10<sup>26</sup></span> molecules kmol<span class="math inline"><em></em><sup> − 1</sup></span>.]
 {CONCV_VXL} * $2.9915\times 10^{17}$
 is used for {RHO}. DP_VXL is given by DPxC on the last line of that algorithm box. See CONCV_VXL below.</p>
-<p><strong>Frost Point Temperature from the CR2 Cryogenic Hygrometer (<span class="math inline"><em></em><sup>∘</sup></span>C):</strong> <strong></strong> <strong><span class="underline">FP_CR2</span>,</strong><br />
-<strong><span class="underline">MIRRORT_CR2</span></strong><br />
+
+#### Frost Point Temperature from the CR2 Cryogenic Hygrometer (<span class="math inline"><em></em><sup>∘</sup></span>C): FP_CR2, MIRRORT_CR2 {-#mirror-cr2}
+
 <em>The mirror temperature in the CR2 cryogenic hygrometer,</em> which is normally the frost point inside the measuring chamber of the instrument<em>.</em> <span id="punch:4-7" label="punch:4-7">[punch:4-7]</span>The measurement is often suspect when the value is above about -15<span class="math inline"><em></em><sup>∘</sup></span>C; the measurement is intended for use below this value. The CR2 is a cabin-mounted instrument, so the measured pressure (P_CR2) in the instrument must be used with the ambient pressure (PSXC) to convert the measurement to ambient humidity measures like DP_CR2 and EW_CR2.</p>
-<p><strong>Corrected Dew Point Temperature from the CR2 Cryogenic Hygrometer (<span class="math inline"><em></em><sup>∘</sup></span>C):</strong> <strong></strong> <strong><span class="underline">DP_CR2C</span></strong><br />
+
+#### Corrected Dew Point Temperature from the CR2 Cryogenic Hygrometer (<span class="math inline"><em></em><sup>∘</sup></span>C): DP_CR2C {-#dp-cr2}
+
 <em>The dew point temperature corresponding to equilibrium at the ambient humidity,</em> as determined by the CR2 hygrometer. The measurement of the mirror temperature inside the CR2, FP_CR2, is converted to a vapor pressure assuming equilibrium water vapor pressure relative to a plane ice surface at that temperature, and the resulting vapor pressure is converted to an ambient value via the assumption that the ratio of vapor pressure internal to the instrument to ambient vapor pressure is the same as the corresponding total pressure ratio. The resulting ambient vapor pressure (EW_CR2) is then converted to an equivalent ambient dew point. The steps are the same as those in the algorithm box for DPxC above, with these substitutions: FP_CR2 is used for DPx and P_CR2 for $p_h$.</p>
-<p><strong>Uncorrected Water Vapor Number Density from the VCSEL Hygrometer (molecules cm<span class="math inline"><em></em><sup> − 3</sup></span>):</strong> <strong></strong> <strong><span class="underline">RAWCONC_VXL</span></strong> <em></em><br />
+
+#### Uncorrected Water Vapor Number Density from the VCSEL Hygrometer (molecules cm<span class="math inline"><em></em><sup> − 3</sup></span>): >RAWCONC_VXL {-#vcsel-uncor}
+
 <em>The uncorrected water vapor number density reported by the VCSEL hygrometer.</em> This is determined by comparing the measured absorption peak height against a reference spectrum generated using the HITRAN spectral parameters, the ambient temperature and the ambient pressure.^[For details see Zondlo, M. A., M. E. Paige, S. M. Massick, and J. A. Silver, 2010: Vertical cavity laser hygrometer for the National Science Foundation Gulfstream-V aircraft. <em>J. Geophys. Res.,</em> <strong>115,</strong> D20309, doi:10.1029/2010JD014445.]
 </p>
-<p><strong>Corrected Water Vapor Concentration from the VCSEL Hygrometer (molecules cm<span class="math inline"><em></em><sup> − 3</sup></span>):</strong> <strong></strong> <strong><span class="underline">CONCV_VXL</span></strong><span class="underline">:</span><br />
+
+#### Corrected Water Vapor Concentration from the VCSEL Hygrometer (molecules cm<span class="math inline"><em></em><sup> − 3</sup></span>): CONCV_VXL {-#vcsel-corr}
+
 <em>The corrected water vapor number density produced by the VCSEL hygrometer,</em> after minor corrections for ambient temperature, pressure, laser intensity and water vapor concentration.<span id="punch:4-8" label="punch:4-8">[punch:4-8]</span> For more information on calibration and data processing for this instrument, see the <a href="https://www.eol.ucar.edu/instruments/vertical-cavity-surface-emitting-laser-vcsel-hygrometer">instrument web page</a> and additional documentation there.</p>
-<p><strong>Voltage Output from the UV Hygrometer (V):</strong> <strong></strong> <strong><span class="underline">XSIGV_UVH</span></strong><br />
+#### Voltage Output from the UV Hygrometer (V): XSIGV_UVH {-#uvh-voltage}
+
 <em>The voltage from a modern (as of 2012) version of the Lyman-alpha hygrometer,</em> which provides a signal that represents water vapor density. The instrument also provides measurements of pressure and temperature inside the sensing cavity; they are, respectively, XCELLPRES_UVH and XCELLTEMP_UVH. See the discussion of EW_UVH below for the data-processing algorithm that uses this variable.</p>
-<p><strong>Water Vapor Number Density from the UV Hygrometer (molecules cm<span class="math inline"><em></em><sup> − 3</sup></span>):</strong> <strong></strong> <strong><span class="underline">CONCH_UVH</span></strong><br />
+
+#### Water Vapor Number Density from the UV Hygrometer (molecules cm<span class="math inline"><em></em><sup> − 3</sup></span>): CONCH_UVH {-#uvh-n}
+
 <em>Water vapor number density (or concentration of molecules) measured by the UV Hygrometer.</em> This is the direct measurement from the instrument. Its calculation relies on a bench calibration that fits the water vapor number density to the Beers-Lambert absorption law and corrects for output offsets and the effect of UV absorption by atmospheric constituents other than water vapor. See also the discussion of EW_UVH in the paragraph that immediately follows.</p>
-<p><strong>Water Vapor Pressure (hPa):</strong> <strong></strong> <strong><span class="underline">EWx</span>,</strong> <strong><span class="underline">EWX</span>,</strong> <strong><span class="underline">EW_UVH,</span></strong> <strong></strong> <strong><span class="underline">EDPC</span></strong> <strong></strong> (obsolete) <strong></strong><br />
+
+#### Water Vapor Pressure (hPa): EWx, EWX, EW_UVH, EW_VXL, EDPC (obsolete) {-#ewx}
+
 <em>The ambient vapor pressure of water,</em> also used in the calculation of several derived variables. It is often obtained from an instrument measuring dew point or water vapor density. In the case where it is derived from a measurement of dew point (DPx), a correction is applied for the enhancement factor that influences dew point or frost point measurements.^[prior to 2011, this variable was calculated using the Goff-Gratch formula. See the discussion of DPXC for more information on previous calculations.]
 The formula for obtaining the ambient water vapor pressure as a function of dew point is given in the discussion of DPxC above, Eqs.\ \@ref(eq:MKw) and \@ref(eq:enhance), where the calculation of the variables EWx and EWX are also discussed. EWX (or previously EDPC) is the preferred variable that is selected from among the possibilities {EWx} for subsequent calculation of derived variables.<br />
 <br />
@@ -349,18 +377,23 @@ In the case where the water vapor pressure is determined from the UV Hygrometer 
 where \{EWX\} is a reference water vapor pressure provided by another instrument. This preserves the fast-response characteristics of the UV hygrometer while linking the absolute values to a baseline provided by a more stable instrument. This can be done on a flight-by-flight basis and largely eliminates drift.^[For more details see Beaton, S. P. and M. Spowart, 2012: UV Absorption Hygrometer for Fast-Response Airborne Water Vapor Measurements. <em>J. Atmos. Oceanic Technol.,</em> <strong><em>29.</em></strong> DOI: 10.1175/JTECH-D-11-00141.1]
 See the project reports to determine which method was used for a particular project.</p>  
 
-<p><strong>Relative Humidity (per cent or Pa/hPa):</strong> <strong></strong> <strong><span class="underline">RHUM</span></strong><br />
+#### Relative Humidity (per cent or Pa/hPa): RHUM {-#rhumw}
+
 <em>The ratio of the water vapor pressure to the water vapor pressure in equilibrium over a plane</em> liquid<em>-water surface,</em> scaled to express the result in units of per cent or Pa/hPa:<br />  
 ```{r child='RHUMbox.Rmd'}
 ```
 To follow normal conventions, the change in equilibrium vapor pressure that arises from the enhancement factor is not included in the calculated relative humidity, even though the true relative humidity should include the enhancement factor as specified in \@ref(eq:enhance) in the denominator of \@ref(eq:RHUM).<br />
-<strong>Relative Humidity with respect to Ice (per cent or Pa/hPa):</strong> <strong></strong> <strong><span class="underline">RHUMI</span></strong><br />
+
+#### Relative Humidity with respect to Ice (per cent or Pa/hPa): RHUMI {-#rhumi}
+
 <em>The ratio of the water vapor pressure to the water vapor pressure in equilibrium over a plane</em> ice <em>surface,</em> scaled to express the result in units of per cent or Pa/hPa:<br />
 ```{r child='RHIbox.Rmd'}
 ```
 
 To follow normal conventions, the change in equilibrium vapor pressure that arises from the enhancement factor is not included in the calculated relative humidity, even though the true relative humidity should include the enhancement factor as specified in \@ref(eq:enhance) in the denominator of \@ref(eq:RHUMI).<br />
-<strong>Absolute Humidity, Water Vapor Density (g/m<span class="math inline"><em></em><sup>3</sup></span>):</strong> <strong></strong> <strong><span class="underline">RHOx</span></strong><br />
+
+#### Absolute Humidity, Water Vapor Density (g/m<span class="math inline"><em></em><sup>3</sup></span>):RHOx {-#rho}
+
 <em>The water vapor density computed from various measurements of humidity as indicated by the ’x’ suffix,</em> and conventionally expressed in units of g kg<span class="math inline"><em></em><sup> − 1</sup></span> or per mille. The calculation proceeds in different ways for different sensors. For sensors that measure a chilled-mirror temperature, the calculation is based on the equation of state for a perfect gas and uses the water vapor pressure determined by the instrument, as in the following box:<span id="punch:4-9" label="punch:4-9">[punch:4-9]</span><br />
 ```{r child='RHObox.Rmd'}
 ```
@@ -368,22 +401,30 @@ For instruments measuring the vapor pressure density (including the Lyman-alpha 
 <p class=box>  
 This algorithm for RHOUV is missing.
 </p><p class=box2><p>
-<strong>Specific Humidity (g/kg):</strong> <strong></strong> <strong><span class="underline">SPHUM</span></strong><br />
+
+#### Specific Humidity (g/kg): SPHUM {-#sphum}
+
 <em>The mass of water vapor per unit mass of (moist) air, conventionally measured in units of g/kg or per mille.</em><br />
 ```{r child='SPHUMbox.Rmd'}
 ```
-<strong>Mixing Ratio (g/kg):</strong> <strong></strong> <strong><span class="underline"><span id="Mixing-Ratio-(g/kg):" label="Mixing-Ratio-(g/kg):">[Mixing-Ratio-(g/kg):]</span>MR</span>,</strong> <strong><span class="underline">MRCR</span>,</strong> <strong><span class="underline">MRLA</span>,</strong> <strong><span class="underline">MRLA1</span>,</strong> <strong><span class="underline">MRLH</span>,</strong> <strong><span class="underline">MRVXL</span></strong>  {#MR}
-<em>The ratio of the mass of water to the mass of dry air in the same volume of air,</em> conventionally expressed in units of g/kg or per mille. Mixing ratios may be calculated for the various instruments measuring humidity on the aircraft, and the variable names reflect the source: MR from the dewpoint hygrometers, MRCR from the cryogenic hygrometer, MRLA from the Lyman-alpha sensor, MRLA1 if there is a second Lyman-alpha sensor, MRLH from a tunable-diode laser hygrometer, and MRVXL is from the VCSEL hygrometer (also a laser hygrometer). The example in the box below is for the case of the dewpoint hygrometers; others are analogous.<br /></p>
+
+#### Mixing Ratio (g/kg): MR, MRCR, MRLA, MRLA1, MRLH, MRVXL  {-#MR}
+
+<em>The ratio of the mass of water to the mass of dry air in the same volume of air,</em> conventionally expressed in units of g/kg or per mille. Mixing ratios may be calculated for the various instruments measuring humidity on the aircraft, and the variable names reflect the source: MR from the dewpoint hygrometers, MRCR from the cryogenic hygrometer, MRLA from the Lyman-alpha sensor, MRLA1 if there is a second Lyman-alpha sensor, MRLH from a tunable-diode laser hygrometer, and MRVXL from the VCSEL hygrometer (also a laser hygrometer). The example in the box below is for the case of the dewpoint hygrometers; others are analogous.<br /></p>
 ```{r child='MRbox.Rmd'}
 ```
 <!-- <h2 id="derived-thermodynamic-variables">Derived Thermodynamic Variables</h2> -->
   
 ## Derived Thermodynamic Variables
-<p><strong>Potential Temperature (K):</strong> <strong></strong> <strong><span class="underline">THETA</span></strong><br />
+
+#### Potential Temperature (K): THETA {-#theta}
+
 <em>The absolute temperature reached if a dry parcel at the measured pressure and temperature were to be compressed or expanded adiabatically to a pressure of 1000 hPa</em>. It does not take into account the difference in specific heats caused by the presence of water vapor, and water vapor can change the exponent in the formula below enough to produce errors of 1 K or more.<br />
 ```{r child='THETAbox.Rmd'}
 ```
-<strong>Pseudo-Adiabatic Equivalent Potential Temperature (K):</strong> <strong></strong> <strong><span class="underline">THETAP</span></strong><br />
+
+#### Pseudo-Adiabatic Equivalent Potential Temperature (K): THETAP, THETAE {-#thetae}
+
 <em>The absolute temperature reached if a parcel of air were to be expanded pseudo-adiabatically (i.e., with immediate removal of all condensate) to a level where no water vapor remains, after which the dry parcel would be compressed to 1000 hPa.</em> Beginning in 2011, pseudo-adiabatic equivalent potential temperature is calculated using the method developed by Davies-Jones (2009).^[Davies-Jones, R., 2009: On formulas for equivalent potential temperature. <em>Mon. Wea. Review,</em> <strong>137,</strong> 3137–3148.]
 This is discussed in the memo available at <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ThetaE.pdf">this link</a>. The following summarizes that study. The Davies-Jones formula is:  
 \begin{equation}
@@ -411,16 +452,21 @@ and named THETAE in the output data files was that obtained using the method of 
 ```
   
 Differences vs the new formula are usually minor but can be as much as 0.5 K.<strong></strong><br />
-<strong>Virtual Temperature (<span class="math inline">º</span>C):</strong> <strong></strong> <strong><span class="underline"><span id="TVIR" label="TVIR">[TVIR]</span>TVIR</span></strong><br />{#TVIR}
+
+#### Virtual Temperature (<span class="math inline">º</span>C): TVIR {-#TVIR}
+
 <em>The temperature of dry air having the same pressure and density as the air being sampled.</em> The virtual temperature thus adjusts for the buoyancy added by water vapor.<br />
 ```{r child='TVIRbox.Rmd'}
 ```
-<strong>Virtual Potential Temperature (K):</strong> <strong></strong> <strong><span class="underline">THETAV</span></strong><br />
+
+### Virtual Potential Temperature (K): THETAV {-#thetav}
+
 <em>A potential temperature analogous to the conventional potential temperature except that it is based on virtual temperature instead of ambient temperature.</em> Dry-adiabatic expansion or compression to the reference level (1000 hPa) is assumed. As for THETA, use of dry-air values for the gas constant and specific heat at constant pressure can lead to significant errors in humid conditions. For further information, see <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/VirtualTemperature.pdf">this note</a>.<br />
 <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/VirtualTemperature.pdf">this note</a><br />
 ```{r child='THETAVbox.Rmd'}
 ```
-<strong>Wet-Equivalent Potential Temperature (K):</strong> <strong></strong> <strong><span class="underline">THETAQ</span></strong><br />
+#### Wet-Equivalent Potential Temperature (K): THETAQ {-#thetaq}
+
 <em>The absolute temperature reached if a parcel of air were to be expanded adiabatically (i.e., retaining the condensed water in the liquid phase and accounting for the specific heat of that condensate) to a level where no water vapor remains, after which the condensate would be removed and the resulting dry parcel compressed to 1000 hPa.</em> This variable was not included in data archives prior to 2012. Emanuel (1994) gives the following formula (his Eq. 4.5.11):  
 \begin{equation}
 \Theta_{q}=T(\frac{p_{0}}{p_{d}})^{\frac{R_{d}}{c_{pt}}}\exp\left\{ \frac{L_{v}r}{c_{pt}T}\right\} \left(\frac{e}{e_{s,w}(T)}\right)^{-rR_{w}/c_{pt}}
@@ -432,7 +478,9 @@ where $\Theta_q$ is the wet-equivalent potential temperature, $L_v$ the latent h
 ```
 
 <!-- <h2 id="windsecwind">Wind<span id="sec:WIND" label="sec:WIND">[sec:WIND]</span></h2> -->
+
 ## Wind {#wind}
+
 <p><a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a> documents the calculation of wind components, both with respect to the earth (UI, VI, WI, WS and WD) and with respect to the aircraft (UX and VY). In data processing, a separate function (GUSTO in GENPRO, gust.c in NIMBUS) is used to derive these wind components. That function uses the measurements from an Inertial Navigation System (INS) as well as aircraft true airspeed, aircraft angle of attack, and aircraft sideslip angle. The wind components calculated in GUSTO/gust.c are used to derive the wind direction (WD) and wind speed (WS). Additional variables UIC, VIC, WSC, WDC, UXC, and VYC are also calculated based on the variables VNSC, VEWC discussed in Section \@ref(combining-irs-and-gps-measurements), which combine INS and GPS information to obtain improved measurements of the aircraft motion. Those are usually the highest-quality measurements of wind because the merged INS/GPS variables combine the high-frequency response of the INS with the long-term accuracy of the GPS.</p>
 <p>There is an extensive discussion of the wind-sensing system and the uncertainties associated with measurements of wind in this <a href="http://dx.doi.org/10.5065/D60G3HJ8">Technical Note</a>. The details contained therein and in Bulletin 23 will not be repeated here, so those documents should be consulted for additional information. There are two exceptions that are discussed in more detail here:</p>
 <ol class="incremental">
@@ -455,25 +503,37 @@ where $\theta$ and $\psi$ respectively are the pitch and heading angles and $L_G
 <p>Wind is measured by adding two vectors, the measured air motion relative to the aircraft (called the relative wind) and the motion of the aircraft relative to the Earth. The following are the measurements used to determine the relative wind. The motion of the aircraft relative to the ground was discussed in Section \@ref(inertial-reference-systems), and the combination of these two vectors to measure the wind is described in <a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a>.</p>
 <p>RAF uses the radome<span id="radome gust-sensing system" label="radome gust-sensing system"></span> gust-sensing technique^[Brown, E. N, C. A. Friehe, and D. H. Lenschow, 1983: <em>Journal of Climate and Applied Meteorology,</em> <strong>22,</strong> 171–180]
 to measure incidence angles of the relative wind (i.e., angles of attack and sideslip). The pressure difference between sensing ports above and below the center line of the radome is used, along with the dynamic pressure measured at a pitot tube and referenced to the static pressure source, to determine the angle of attack. The sideslip angle is determined similarly using the pressure ports on the starboard and port sides of the radome. A Rosemount Model 858AJ gust probe has occasionally been used for specialized measurements. The radome measurements are made by differential pressure sensors located in the nose area of the aircraft and connected to the radome by semi-rigid tubing.</p>
-<p><strong>Mach Number (dimensionless):</strong> <strong></strong> <strong><span class="underline">MACHx</span>,</strong> <strong><span class="underline">MACHX</span></strong><br />
+
+#### Mach Number (dimensionless): MACHx, MACHX {-#mach-number}
+
 <em>The Mach Number that characterizes the flight speed.</em> The Mach number is defined as the ratio of the flight speed (or the magnitude of the relative wind) to the speed of sound.
 See Eq.\ \@ref(eq:M2) for the equation used. Many relatively old archived data files have instead a variable XMACH2, which is the square of MACHx.</p>
-<p><strong>Aircraft True Airspeed (m/s):</strong> <strong></strong> <strong><span class="underline">TASx</span>,</strong> <strong><span class="underline">TASxD</span></strong><br />
+
+#### Aircraft True Airspeed (m/s): TASx, TASxD, TASX {-#true-airspeed}
+
 <em>The flight speed of the aircraft relative to the atmosphere.</em> This derived measurement of the flight speed of the aircraft relative to the atmosphere is based on the Mach number calculated from both the dynamic pressure at location x and the static pressure. See the derivation for ATx . The different variables for TASx (TASF, TASR, etc) use different measurements of QCxC in the calculation of Mach number. The variable TASxD is the result of calculations for which the Mach number, air temperature, and true airspeed are determined for dry instead of humid air. See the discussion of [ATX](#ATX) for an explanation of how humidity is handled in the calculation of true airspeed.<br />
 ```{r child='TASbox.Rmd'}
 ```
-<strong>Aircraft True Airspeed (Humidity Corrected) (m/s):</strong> <strong></strong> <strong><span class="underline">TASHC</span></strong> – <em>obsolete</em><br />
+
+#### Aircraft True Airspeed (Humidity Corrected) (m/s): TASHC {-#tashc}
+
 This derived measurement of true airspeed accounted for deviations of specific heats of moist air from those of dry air. See List, 1971, pp 295, 331-339, and Khelif, et al., 1999. This variable is no longer used because the standard
 calculation of TASX (documented in the preceding paragraph) now uses moist-air
 values of the specific heats and gas constant. The equation previously used for this variable, given by Khelif et al. 1999,^[Khelif, D., S.P. Burns, and C.A. Friehe, 1999: Improved wind measurements on research aircraft. <em>Journal of Atmospheric and Oceanic Technology,</em> <strong>16,</strong> 860–875.]
 added a moisture correction to the true airspeed derived for dry air, as follows:<br />
 ```{r child='TASHCbox.Rmd'}
 ```
-<strong>Attack Angle Differential Pressure (mb):</strong> <strong></strong> <strong><span class="underline">ADIFR</span></strong><br />
+
+#### Attack Angle Differential Pressure (mb): ADIFR {-#adifr}
+
 <em>The pressure difference between the top and bottom pressure ports of a radome gust-sensing system.</em> This measurement is used to determine the angle of attack; see AKRD below. <strong></strong> Obsolete variable <span class="underline">ADIF</span> is a similar variable used for old gust-boom systems or for Rosemount Model 858AJ flow-angle sensors.</p>
-<p><strong>Sideslip Angle Differential Pressure (mb):</strong> <strong></strong> <strong><span class="underline">BDIFR</span></strong><br />
+
+#### Sideslip Angle Differential Pressure (mb): BDIFR {-#bdifr}
+
 <em>The pressure difference between starboard and port pressure inlets of a radome gust-sensing system.</em> This measurement is used to determine the sideslip angle; see SSRD below. Obsolete variable <span class="underline">BDIF</span> is a similar variable used for old gust-boom systems or for Rosemount Model 858AJ flow-angle sensors.</p>
-<p><strong>Attack Angle, Radome (</strong><span class="math inline">º</span><strong>):</strong> <strong></strong> <strong><span class="underline">AKRD</span></strong><br />
+
+### Attack Angle, Radome (<span class="math inline">º</span>): AKRD {-#akrd}
+
 <em>The angle of attack of the aircraft.</em> This derived measurement represents the angle between the longitudinal axis of the aircraft and the component of the relative wind vector in the plane of port-starboard symmetry of the aircraft. The tangent of the angle of attack is the ratio of the vertical to longitudinal component of the relative wind. Positive values indicate flow moving upward (in the aircraft reference frame) relative to the longitudinal axis. The calculation is based on ADIFR and a measurement of dynamic pressure, and so is the measurement produced by a radome gust-sensing system. Empirical sensitivity coefficients for each aircraft, determined from special flight maneuvers, are used; see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a> and this <a href="http://dx.doi.org/10.5065/D60G3HJ8">Technical Note</a> for more information. The sensitivity coefficients listed below have changed when the radomes were changed or refurbished, so the project documentation should be consulted for the values used in a particular project. For more information on the latest C-130 calibration, see <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ARISTO-LAMS.pdf">this note</a>.<br />
 Prior to 2017, the procedure was based on the following algorithm:<br />
 ```{r child='AKRDbox.Rmd'}
@@ -485,54 +545,61 @@ Beginning in 2017, a different strategy was used, as documented in more detail i
 ```{r child='newAKRDbox.Rmd'}
 ```
 <strong></strong></p>
-<p><strong>Reference Attack Angle (</strong><span class="math inline">º</span><strong>):</strong> <strong><span class="underline">ATTACK</span></strong><span id="punch:4-12" label="punch:4-12">[punch:4-12]</span><br />
+
+#### Reference Attack Angle (<span class="math inline">º</span>): ATTACK {-#attack}
+
+<span id="punch:4-12" label="punch:4-12">[punch:4-12]</span><br />
 <em>The reference angle of attack used to calculate derived variables.</em> This variable is the reference selected from other measurements of angle of attack in the data set. In most projects, it is equal to AKRD. It is used where attack angle is needed for other derived calculations (e.g., wind measurements).</p>
-<p><strong>Sideslip Angle (Differential Pressure) (</strong><span class="math inline">º</span><strong>):</strong> <strong><span class="underline">SSRD</span></strong><br />
+
+#### Sideslip Angle (Differential Pressure) (<span class="math inline">º</span>): SSRD {-#ssrd}
+
 <em>The angle of sideslip of the aircraft.</em> This derived measurement represents the angle between the longitudinal axis of the aircraft and the projection of the relative wind onto the plane determined by the longitudinal and lateral axes. Positive values indicate airflow from the starboard side. This variable is derived from BDIFR and a dynamic pressure using a sensitivity function that has been determined empirically for each aircraft.<br /></p>
 ```{r child='SSRDbox.Rmd'}
 ```
-<p><strong>Reference Sideslip Angle (</strong><span class="math inline">º</span><strong>):</strong> <strong></strong> <strong><span class="underline">SSLIP</span></strong><br />
+
+#### Reference Sideslip Angle (<span class="math inline">º</span>): SSLIP {-#sslip}
+
 <em>The reference sideslip angle used to calculate derived variables</em>. This variable is the reference selected from other measurements of sideslip angle in the data set. In most projects, it is equal to SSRD. It is used where sideslip angle is needed for other derived calculations (e.g., wind measurements).</p>
   
 <!-- <h3 id="wind-components-and-the-wind-vector">Wind Components and the Wind Vector</h3> -->
 ### Wind Components and the Wind Vector
-<p><strong></strong></p>
-<p><strong>Wind Vector East Component (m/s):</strong> <strong></strong> <strong><span class="underline">UI</span></strong></p>
-<p><strong>Wind Vector North Component (m/s):</strong> <strong></strong> <strong><span class="underline">VI</span></strong></p>
-<p><strong>Wind Vector Vertical Component (m/s):</strong> <strong></strong> <strong><span class="underline">WI</span></strong></p>  
+
+#### Wind Vector Components (m/s): UI, VI, WI {-#ui-vi-wi}
+
 <em>The three-dimensional wind vector with respect to the earth,</em> as determined from the inertial reference systems. UI is the east-west component with positive values <span class="underline">toward</span> the east, VI is the north-south component with positive values <span class="underline">toward</span> the north, and WI is the vertical component with positive values toward the zenith.<br />
 The calculation of WI differs from the description in Bulletin 23 because the output from the inertial reference system is different for the modern units now in use. The vertical wind is the sum of the vertical gust component (represented approximately by TASX sin(ATTACK-PITCH)) and the motion of the aircraft as measured by VSPD (discussed in Section XXX). Bulletin 23 describes the historical calculation of the vertical motion of the aircraft via a barometric-inertial feedback loop, but equivalent calculations (including pressure damping to the pressure altitude) are incorporated into current IRS units so VSPD already is the product of such a calculation. To calculate WI, VSPD is therefore used in place of the obsolete variable WP3 that was discussed in Bulletin 23.
 <br />
 WIC should usually be used instead of WI because VSPD, entering WI, is updated to the pressure altitude and so can have false variations in baroclinic conditions. WIC uses GGVSPD (or in some cases older GPS-based rate-of-climb variables) in place of VSPD and so is more reliable.<br />
 <strong></strong></p>
-<p><strong>Wind Speed (m/s):</strong> <strong></strong> <strong><span class="underline">WS</span></strong></p>
-<p><strong>Wind Direction (</strong><span class="math inline">º</span><strong>):</strong> <strong></strong> <strong><span class="underline">WD</span></strong></p>
-<p>  
+
+#### Wind Speed and Direction (m/s and <span class="math inline">º</span>): WS, WD {-#ws-wd}
+
 <em>The magnitude and direction of the horizontal wind.</em> These variables are obtained in a straightforward manner from UI and VI. The resulting wind direction is relative to true north and represents the direction <span class="underline">from which</span> the wind blows. That is the reason that 180<span class="math inline"><em></em><sup>∘</sup></span> appears in the following algorithm.<br />
 ```{r child='WDWSbox.Rmd'}
 ```
-<p><strong>Wind Vector Longitudinal Component (m/s):</strong> <strong></strong> <strong><span class="underline">UX</span></strong></p>
-<p><strong>Wind Vector Lateral Component (m/s):</strong> <strong></strong> <strong><span class="underline">VY</span></strong></p>
-  
+
+#### Wind Vector Longitudinal and Lateral Components (m/s): UX and VY {-#ux-vy}
+
 <em>The horizontal wind</em> <em>vector relative to the frame of reference attached to the aircraft.</em> UX is parallel to the longitudinal axis and positive toward the nose. VY is along the lateral axis and normal to the longitudinal axis; positive is toward the port (or left) wing.<br />  
-<p><strong>GPS-Corrected Wind Vector, East Component (m/s):</strong> <strong></strong> <strong><span class="underline">UIC</span></strong></p>
-<p><strong>GPS-Corrected Wind Vector, North Component (m/s):</strong> <strong></strong> <strong><span class="underline">VIC</span></strong></p>
+
+#### GPS-Corrected Wind Vector, East and North Components (m/s): UIC, VIC {-#uic-vic}
+
 <em>The horizontal wind components</em> respectively <em><span class="underline">toward</span></em> <em>the east and</em> <em><span class="underline">toward</span></em> <em>the north.</em> They are derived from measurements from an inertial reference unit (IRU) and a Global Positioning System (GPS), as described in the discussion of VEW and VNS above. They are calculated just as for UX and VY except that the GPS-corrected values for the aircraft groundspeed are used in place of the IRU-based values. They are considered “corrected” from the original measurements from the IRU or GPS, as described in Section \@ref(combining-irs-and-gps-measurements).</p><br />
-<strong>Wind Vector, Vertical Component (m/s):</strong> <strong></strong> <strong><span class="underline">WIC</span></strong><br />
+
+#### Wind Vector, Vertical Component (m/s): WIC {-#wic}
+
 <em>The component of the wind in the vertical direction.</em> This is the standard calculation of vertical wind, obtained from the difference between the measured vertical component of the relative wind and the vertical motion of the aircraft (usually GGVSPD in recent projects).<span id="punch:4-13" label="punch:4-13">[punch:4-13]</span><strong></strong> This should be used in preference to WI if the latter is present; see the discussion of WP3 in Section \@ref(inertial-reference-systems). Positive values are toward the zenith.<br />
 
-<p><strong>GPS-Corrected Wind Direction (</strong><span class="math inline"><em></em><sup>∘</sup></span><strong>):</strong> <strong></strong> <strong><span class="underline">WDC</span></strong></p>
-<p><strong>GPS-Corrected Wind Speed (m/s):</strong> <strong></strong> <strong><span class="underline">WSC</span></strong></p>
+#### GPS-Corrected Wind Speed and Direction (m/s and <span class="math inline"><em></em><sup>∘</sup></span>): WSC, WDC {-#wsc-wdc}
 
-<em>The direction and magnitude of the wind vector,</em> obtained by combining measurements from GPS and IRU units. These variables are obtained in a straightforward manner from UIC and VIC, using equations analogous to \@ref(eq:WS) and \@ref(eq:WD) but with UIC and VIC as input measurements. They are expected to be the preferred measurements of wind because they combine the best features of the IRU and GPS measurements.<br />
-<strong></strong></p>
-<p><strong>GPS-Corrected Wind Vector, Longitudinal Component (m/s):</strong> <strong></strong> <strong><span class="underline">UXC</span><span class="underline"></span></strong></p>
-<p><strong>GPS-Corrected Wind Vector, Lateral Component (m/s):</strong> <strong></strong> <strong><span class="underline">VYC</span></strong></p>  
+<em>The magnitude and direction of the wind vector,</em> obtained by combining measurements from GPS and IRU units. These variables are obtained in a straightforward manner from UIC and VIC, using equations analogous to \@ref(eq:WS) and \@ref(eq:WD) but with UIC and VIC as input measurements. They are expected to be the preferred measurements of wind because they combine the best features of the IRU and GPS measurements.<br />
+
+#### GPS-Corrected Wind Vector, Longitudinal and Lateral Components (m/s): UXC, VYC {-#uxc-vyc} 
 
 <em>The longitudinal and lateral components of the three-dimensional wind, similar to UX and VY, but corrected by the complementary-filter algorithm that combines IRU and GPS measurements</em>. See the discussion in Section \@ref(combining-irs-and-gps-measurements). The components UXC and VYC are toward the front of the aircraft and toward the port (left) wing, respectively.</p>  
 
 <!-- <h2 id="special-use-remote-sensors">Special-Use Remote Sensors</h2> -->
-## Special-Use Remote Sensors
+## Special-Use Remote Sensors {#special-use-remote}
 
 <p>The above variables are normally included in the archived netCDF files from projects, but there are a few remote sensors that provide additional state-parameter measurements in some projects. These include:<span id="subsec:MTP" label="subsec:MTP"></span></p>
 

@@ -44,8 +44,8 @@ library(kableExtra)
 Algorithms Used to Produce Data Products from Research Aircraft;  
 also Definitions of Variables in Archived Data Files  
 
-Current PDF version of this document: <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/ProcessingAlgorithms.pdf">Processing Algorithms</a><br />  
-Download this to a browser or pdf viewer for functional URL links. The new .Rmd-format version can be accessed [here](https://htmlpreview.github.io/?https://github.com/WilliamCooper/ProcessingAlgorithms/blob/Rmd/index.html).  
+Previous PDF version of this document: [Old PDF Version](https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/ProcessingAlgorithms.pdf) <br />  
+Download the current version in a browser for functional URL links. The .Rmd-format version can be accessed [here](https://htmlpreview.github.io/?https://github.com/WilliamCooper/ProcessingAlgorithms/blob/Rmd/index.html).  
 
 ```{r child='boxStyles.Rmd'}
 

@@ -15,91 +15,184 @@
 ```
 <!-- </div> -->
 
-# Appendix B: Variables Names {.unnumbered}
+# Appendix B: Variable Names {-}
 
-Linked to the primary discussion of each variable. $\dagger$ denotes an obsolete variable. 
+Links are to the primary discussion of each variable. $\ddagger$ denotes an obsolete variable. 
 
 
 Variable Name | Variable Name | Variable Name | Variable Name | Variable Name 
 ------------- | ------------- | ------------- | ------------- | -------------
-[A200X]()| A200Y| A260X| AACT| ACDP
-ACINS| ADIFR| AF300| AFIXx$\dagger$| AFSSP
-AIDC| AIDP| AKFXx$\dagger$| AKRD| AL
-ALAT$\dagger$| ALON$\dagger$| ALPHA$\dagger$| ALT| ALTG
-ALTX| APCAS| AS100| AS200| ATC
-AT_ITR| ATKP$\dagger$| ATRF$\dagger$| ATTACK| ATx
-ATX| ATxH| AUHSAS| BDIFR| BFIXx$\dagger$
-BLATA| BLONA| BNORMA| BPITCHR| BROLLR
-BYAWR| C1DC| C1DP| C200X| C200Y
-C260X| CAVP_x| CCDP| CCEP$\dagger$| CF300
-CFSEC$\dagger$| CFSSP| CGS$\dagger$| CH4_PICx| CLAT$\dagger$
-CLON$\dagger$| CMODE| CNTEMP| CNTS| CO
-CO2_PICx| COCAL| COCOR| COMR_AL| CONC1DC
-CONC1DC100| CONC1DC150| CONC1DP| CONC3| CONC6
-CONCD| CONCF| CONCH_UVH| CONCN| CONCP
-CONCP| CONCU| CONCU| CONCU100| CONCU500
-CONCV_VXL| CONCX| CONCY| CORAW_AL| COZRO
-CPCAS| CRHP| CS100| CS200| CSEC$\dagger$
-CUHSAS| DBAR1DC| DBAR1DP| DBZ1DC| DBZ1DP
-DBZ6| DBZD| DBZF| DBZX| DBZY
-DEI| DISP1DC| DISP1DP| DISP3| DISP6
-DISPD| DISPF| DISPP| DISPU| DISPX
-DISPY| DNI| DP_CR2C| DPCRC| DP_VXL
-DPx| DPx| DPxC| DPXC| DP_x
-DT1DC| DVALUE| EDPC| EDPC$\dagger$| EW_UVH
-EWx| EWX| FACT| FBMFR| FCN
-FCNC| FO3_ACD| FO3_CL| FO3_x| FP_CR2
-FPCRC| FRANGE| FRESET| FRNG| FRST
-FSTB| FSTROB| FXAZIM| FXDIST| GALT_A
-GEOPHT| GGALT| GGALTC| GGEOIDHT| GGHWGS
-GGLAT| GGLON| GGNSAT| GGQUAL| GGSPD
-GGSTATUS| GGTRK| GGVEW| GGVNS| GGVSPD
-GLAT| GLON| GMODE$\dagger$| GSF| GSF_G
-GSF$\dagger$| GSTAT| GSTAT_G| GVZI$\dagger$| HGM
-HGM232| HGME| HI3$\dagger$| IAS| IRx
-IRxC| IRxC| IRxHT| IRxHTV| IRXV
-LAT| LATC| LAT_G| LON| LONC
-LON_G| LWCC$\dagger$| LWC$\dagger$| MACH = Mach number| MACHx
-MACHX| MIRRORT_CR2| MR| MRCR| MRLA
-MRLH| MRVXL| O3FS| O3MR_CL| OAT
-PACT| PALT| PCAB| PCN| P_CR2
-PFLW| PFLWC| PHDG$\dagger$| PITCH| PLWC
-PLWC1| PLWC1| PLWC1DC| PLWC1DP| PLWC6
-[PLWCC](/rmd_output/1/5-cloud-physics-variables.html#LWC)| PLWCD| PLWCF| PLWCG| PLWCX
-PLWCY| PS_A| PSDPx| PSFD| PSFRD
-PSURF| PSX| PSxC| PSXC| **PSx**
-PTIME$\dagger$| QCBC$\dagger$| QCB$\dagger$| QCGC$\dagger$| QCG$\dagger$
-QCx| QCX| QCxC| QCXC| RAWCONC_VXL
-REFF2DC| REFF2DP| REFFD| REFFF| RHOLA
-RHOUV| RHOx| RHUM| RHUMI| RICE
-ROC| ROLL| RSTx| RTHRx| RTx
-RTX| RTxH| SCLWC| SFC| SOLAZ
-SOLDE| SOLEL| SOLZE| SPHUM| SPxPitch
-SPxRoll| SSFXx$\dagger$| SSLIP| SSRD| SWTC
-SWx| TASHC| TASxD| TCAVB| TCAVT
-TCNTP| TCNTU| TEMP1| TEMP2| TEO3
-TEO3C| TEO3P| TEP| TET| THETA
-THETAE| THETAP| THETAQ| THETAV| THF$\dagger$
-THI$\dagger$| Time| TKAT_G| TMLAG$\dagger$| TPTIME$\dagger$
-TRSTB, TRSTT| TTKP| TTKP$\dagger$| TTRF| TTRF$\dagger$
-TTx| TTx| TTx| TVIR| UI
-UIC| UPRESS| USFLWC| USMPFLW| UVx
-UX| UXC| VCRH| VEW| VEWC
-VEW_| VEW$\dagger$| VI| VIC| VISxC
-VISxHT| VISxHTV| VISxV| VLA| VLA
-VNS| VNSC| VNS_G| VNS$\dagger$| VSPD
-VSPD_G| VY| VYC| VZI$\dagger$| WD
-WDC| WDRCTN$\dagger$| WI| WIC| WP3
-WS| WSC| WSPD$\dagger$| XCOMR| XFO3FNO
-XFO3FS| XFO3P| XICN| XICNC| XMACH2
-XNCLF| XNMBT| XNO| XNOCF| XNOSF
-XNOY| XNOYP| XNOZA| XNSAF| XNST
-XNZAF| XO3| XSIG_UVH| XUVI| XUVI
-XUVP| XUVT| XVI$\dagger$| YVI$\dagger$|
+[A200X](/rmd_output/1/5-cloud-physics-variables.html#CRPC)| [A200Y](/rmd_output/1/5-cloud-physics-variables.html#CRPC)| [A260X](/rmd_output/1/5-cloud-physics-variables.html#CRPC)| [AACT](/rmd_output/1/10-obsolete-variables.html#AACT)| [ACDP](/rmd_output/1/5-cloud-physics-variables.html#CRPC)
+[ACINS](/rmd_output/1/3-the-state-of-the-aircraft.html#ACINS)| [ADIFR](/rmd_output/1/4-the-state-of-the-atmosphere.html#adifr)| [AF300](/rmd_output/1/5-cloud-physics-variables.html#CRPC)| [AFIXx$\ddagger$](/rmd_output/1/10-obsolete-variables.html#vanes)| [AFSSP](/rmd_output/1/5-cloud-physics-variables.html#CRPC)
+[A1DC](/rmd_output/1/5-cloud-physics-variables.html#a1dc-a1dp)| [A1DP](/rmd_output/1/5-cloud-physics-variables.html#a1dc-a1dp)| [AKFXx$\ddagger$](/rmd_output/1/10-obsolete-variables.html#akfxx)| [AKRD](/rmd_output/1/4-the-state-of-the-atmosphere.html#akrd)| 
+[ALAT$\ddagger$](/rmd_output/1/10-obsolete-variables.html#ltn51)| [ALON$\ddagger$](/rmd_output/1/10-obsolete-variables.html#ltn51)| [ALPHA$\ddagger$](/rmd_output/1/10-obsolete-variables.html#ltn51)| [ALT](/rmd_output/1/3-the-state-of-the-aircraft.html#alt)| [ALTG](/rmd_output/1/3-the-state-of-the-aircraft.html#altg)
+[ALTX$\ddagger$](/rmd_output/1/3-the-state-of-the-aircraft.html#altx)| [AMS](/rmd_output/1/7-aerosol-particle-measurements.html#special-aerosol)| 
+[APCAS](/rmd_output/1/5-cloud-physics-variables.html#CRPC)| [AS100](/rmd_output/1/5-cloud-physics-variables.html#CRPC)| [AS200](/rmd_output/1/5-cloud-physics-variables.html#CRPC)| [ATC](/rmd_output/1/10-obsolete-variables.html#atc)
+[AT_ITR](/rmd_output/1/4-the-state-of-the-atmosphere.html#at-itr)| [ATKP$\ddagger$](/rmd_output/1/10-obsolete-variables.html#atkp)| [ATRF$\ddagger$](/rmd_output/1/10-obsolete-variables.html#atrf)| [ATTACK](/rmd_output/1/4-the-state-of-the-atmosphere.html#attack)| [ATx](/rmd_output/1/4-the-state-of-the-atmosphere.html#ambient-t)
+[ATX](/rmd_output/1/4-the-state-of-the-atmosphere.html#ambient-t) [ATxH](/rmd_output/1/4-the-state-of-the-atmosphere.html#ambient-t)| [ATxD](/rmd_output/1/4-the-state-of-the-atmosphere.html#ambient-t)| [AUHSAS](/rmd_output/1/5-cloud-physics-variables.html#CRPC)| [AVAPS](/rmd_output/1/4-the-state-of-the-atmosphere.html#special-use-remote)
+[AWAS](/rmd_output/1/6-air-chemistry-measurements.html#awas-cims-qcls-toga)| [base_time](/rmd_output/1/2-general-information-about-data-files.html#base-time)| [BDIFR](/rmd_output/1/4-the-state-of-the-atmosphere.html#bdifr)| [BFIXx$\ddagger$](/rmd_output/1/10-obsolete-variables.html#vanes)|
+[BLATA](/rmd_output/1/3-the-state-of-the-aircraft.html#blata)| [BLONA](/rmd_output/1/3-the-state-of-the-aircraft.html#blona)| [BNORMA](/rmd_output/1/3-the-state-of-the-aircraft.html#bnorma)| [BPITCHR](/rmd_output/1/3-the-state-of-the-aircraft.html#bpitchr)| [BROLLR](/rmd_output/1/3-the-state-of-the-aircraft.html#brollr)
+[BYAWR](/rmd_output/1/3-the-state-of-the-aircraft.html#byawr)| [C1DC](/rmd_output/1/5-cloud-physics-variables.html#c1dc-c1dp)| [C1DP](/rmd_output/1/5-cloud-physics-variables.html#c1dc-c1dp)| [C200X](/rmd_output/1/5-cloud-physics-variables.html#size-distribution)| [C200Y](/rmd_output/1/5-cloud-physics-variables.html#size-distribution)
+[C260X](/rmd_output/1/5-cloud-physics-variables.html#size-distribution)| [CAVP_x](/rmd_output/1/4-the-state-of-the-atmosphere.html#p-special)| [CCDP](/rmd_output/1/5-cloud-physics-variables.html#size-distribution)| [CCEP$\ddagger$](/rmd_output/1/10-obsolete-variables.html#loranc)| [CF300](/rmd_output/1/5-cloud-physics-variables.html#size-distribution)
+[CFSEC$\ddagger$](/rmd_output/1/10-obsolete-variables.html#loranc)| [CFSSP](/rmd_output/1/5-cloud-physics-variables.html#size-distribution)| [CGS$\ddagger$](/rmd_output/1/10-obsolete-variables.html#loranc)| [CH4_PICx](/rmd_output/1/6-air-chemistry-measurements.html#co2-pic)| [CIMS](/rmd_output/1/6-air-chemistry-measurements.html#awas-cims-qcls-toga)
+[CLAT$\ddagger$](/rmd_output/1/10-obsolete-variables.html#loranc)|
+[CLON$\ddagger$](/rmd_output/1/10-obsolete-variables.html#loranc)| [CMODE](/rmd_output/1/10-obsolete-variables.html#co-vars)| [CNTEMP](/rmd_output/1/7-aerosol-particle-measurements.html#cntemp)| [CNTS](/rmd_output/1/7-aerosol-particle-measurements.html#cnts)| [CO](/rmd_output/1/10-obsolete-variables.html#co)
+[CO2_PICx](/rmd_output/1/6-air-chemistry-measurements.html#co2-pic)| [COCAL](/rmd_output/1/10-obsolete-variables.html#co-vars)| [COCOR](/rmd_output/1/10-obsolete-variables.html#co-vars)| [COMR_AL](/rmd_output/1/6-air-chemistry-measurements.html#comr-al)| [CONC1DC](/rmd_output/1/5-cloud-physics-variables.html#conc2d)
+[CONC1DC100](/rmd_output/1/5-cloud-physics-variables.html#conc2d)| [CONC1DC150](/rmd_output/1/5-cloud-physics-variables.html#conc2d)| [CONC1DP](/rmd_output/1/5-cloud-physics-variables.html#conc2d)| [CONC3](/rmd_output/1/5-cloud-physics-variables.html#concentration)| [CONC6](/rmd_output/1/5-cloud-physics-variables.html#concentration)
+[CONCD](/rmd_output/1/5-cloud-physics-variables.html#concentration)| [CONCF](/rmd_output/1/5-cloud-physics-variables.html#concentration)| [CONCH_UVH](/rmd_output/1/4-the-state-of-the-atmosphere.html#uvh-n)| [CONCN](/rmd_output/1/7-aerosol-particle-measurements.html#concn)| [CONCP](/rmd_output/1/7-aerosol-particle-measurements.html#special-aerosol)
+[CONCP](/rmd_output/1/5-cloud-physics-variables.html#concentration)| [CONCU](/rmd_output/1/7-aerosol-particle-measurements.html#concu-concp)| [CONCU](/rmd_output/1/5-cloud-physics-variables.html#concentration)| [CONCU100](/rmd_output/1/5-cloud-physics-variables.html#concentration)| [CONCU500](/rmd_output/1/5-cloud-physics-variables.html#concentration)
+[CONCV_VXL](/rmd_output/1/4-the-state-of-the-atmosphere.html#vcsel-corr)| [CONCX](/rmd_output/1/5-cloud-physics-variables.html#concentration)| [CONCY](/rmd_output/1/5-cloud-physics-variables.html#concentration)| [CORAW_AL](/rmd_output/1/6-air-chemistry-measurements.html#coraw-al)| [COZRO](/rmd_output/1/10-obsolete-variables.html#co-vars)
+[CPCAS](/rmd_output/1/5-cloud-physics-variables.html#size-distribution)| [CRHP](/rmd_output/1/10-obsolete-variables.html#cryo-hygro)| [CS100](/rmd_output/1/5-cloud-physics-variables.html#size-distribution)| [CS200](/rmd_output/1/5-cloud-physics-variables.html#size-distribution)| [CSEC$\ddagger$](/rmd_output/1/10-obsolete-variables.html#loranc)
+[CSTAT$\ddagger$](/rmd_output/1/10-obsolete-variables.html#loranc)| 
+[CUHSAS](/rmd_output/1/5-cloud-physics-variables.html#size-distribution)| [DAY](/rmd_output/1/2-general-information-about-data-files.html#mdy)|
+[DBAR1DC](/rmd_output/1/5-cloud-physics-variables.html#dbar2d)| [DBAR1DP](/rmd_output/1/5-cloud-physics-variables.html#dbar2d)| [DBAR3](/rmd_output/1/5-cloud-physics-variables.html#mean-diameter)| [DBAR6](/rmd_output/1/5-cloud-physics-variables.html#mean-diameter)
+[DBARD](/rmd_output/1/5-cloud-physics-variables.html#mean-diameter)| [DBARF](/rmd_output/1/5-cloud-physics-variables.html#mean-diameter)| [DBARP](/rmd_output/1/5-cloud-physics-variables.html#mean-diameter)| [DBARU](/rmd_output/1/5-cloud-physics-variables.html#mean-diameter)| [DBARX](/rmd_output/1/5-cloud-physics-variables.html#mean-diameter)
+[DBARY](/rmd_output/1/5-cloud-physics-variables.html#mean-diameter)| [DBZ1DC](/rmd_output/1/5-cloud-physics-variables.html#dbz2d)| [DBZ1DP](/rmd_output/1/5-cloud-physics-variables.html#dbz2d)
+[DBZ6](/rmd_output/1/5-cloud-physics-variables.html#DBZ)| [DBZD](/rmd_output/1/5-cloud-physics-variables.html#DBZ)| [DBZF](/rmd_output/1/5-cloud-physics-variables.html#DBZ)| [DBZX](/rmd_output/1/5-cloud-physics-variables.html#DBZ)| [DBZY](/rmd_output/1/5-cloud-physics-variables.html#DBZ)
+[DEI](/rmd_output/1/3-the-state-of-the-aircraft.html#dei-dni)| [DISP1DC](/rmd_output/1/5-cloud-physics-variables.html#disp2d)| [DISP1DP](/rmd_output/1/5-cloud-physics-variables.html#disp2d)| [DISP3](/rmd_output/1/5-cloud-physics-variables.html#dispersion)| [DISP6](/rmd_output/1/5-cloud-physics-variables.html#dispersion)
+[DISPD](/rmd_output/1/5-cloud-physics-variables.html#dispersion)| [DISPF](/rmd_output/1/5-cloud-physics-variables.html#dispersion)| [DISPP](/rmd_output/1/5-cloud-physics-variables.html#dispersion)| [DISPU](/rmd_output/1/5-cloud-physics-variables.html#dispersion)| [DISPX](/rmd_output/1/5-cloud-physics-variables.html#dispersion)
+[DISPY](/rmd_output/1/5-cloud-physics-variables.html#dispersion)| [DNI](/rmd_output/1/3-the-state-of-the-aircraft.html#dei-dni)| [DP_CR2C](/rmd_output/1/4-the-state-of-the-atmosphere.html#dp-cr2)| [DPCRC](/rmd_output/1/10-obsolete-variables.html#cryo-hygro)| [DP_VXL](/rmd_output/1/4-the-state-of-the-atmosphere.html#vcsel-dp)
+[DPx](/rmd_output/1/4-the-state-of-the-atmosphere.html#dew-point)| [DPx](/rmd_output/1/4-the-state-of-the-atmosphere.html#dew-point)| [DPxC](/rmd_output/1/4-the-state-of-the-atmosphere.html#dewpt-corrected)| [DPXC](/rmd_output/1/4-the-state-of-the-atmosphere.html#dewpt-corrected)| [DP_x](/rmd_output/1/4-the-state-of-the-atmosphere.html#dew-point)
+[DT1DC](/rmd_output/1/5-cloud-physics-variables.html#dt1dc)| [DVALUE](/rmd_output/1/4-the-state-of-the-atmosphere.html#dvalue)| [EDPC](/rmd_output/1/4-the-state-of-the-atmosphere.html#ewx)| [EDPC$\ddagger$](/rmd_output/1/10-obsolete-variables.html#edpc)| [EW_UVH](/rmd_output/1/4-the-state-of-the-atmosphere.html#ewx)
+[EWx](/rmd_output/1/4-the-state-of-the-atmosphere.html#ewx)| [EWX](/rmd_output/1/4-the-state-of-the-atmosphere.html#ewx)| [FACT](/rmd_output/1/10-obsolete-variables.html#fact)| [FBMFR](/rmd_output/1/10-obsolete-variables.html#fbmfr)| [FCN](/rmd_output/1/7-aerosol-particle-measurements.html#fcnc)
+[FCNC](/rmd_output/1/7-aerosol-particle-measurements.html#fcnc)| [FO3_ACD](/rmd_output/1/6-air-chemistry-measurements.html#fo3-acd)| [FO3_CL](/rmd_output/1/6-air-chemistry-measurements.html#fo3-acd)| [FO3_x](/rmd_output/1/6-air-chemistry-measurements.html#fo3-acd)| [FP_CR2](/rmd_output/1/4-the-state-of-the-atmosphere.html#mirror-cr2)
+[FPCRC](/rmd_output/1/10-obsolete-variables.html#cryo-hygro)| [FRANGE](/rmd_output/1/5-cloud-physics-variables.html#fssp-range)| [FRESET](/rmd_output/1/10-obsolete-variables.html#freset)| [FRNG](/rmd_output/1/5-cloud-physics-variables.html#fssp-range)| [FRST](/rmd_output/1/10-obsolete-variables.html#freset)
+[FSTB](/rmd_output/1/10-obsolete-variables.html#fstrob)| [FSTROB](/rmd_output/1/10-obsolete-variables.html#fstrob)| [FXAZIM](/rmd_output/1/3-the-state-of-the-aircraft.html#fxazim)| [FXDIST](/rmd_output/1/3-the-state-of-the-aircraft.html#fxazim)| [GALT_A](/rmd_output/1/3-the-state-of-the-aircraft.html#ggalt)
+[GEOPHT](/rmd_output/1/3-the-state-of-the-aircraft.html#geopth)| [GGALT](/rmd_output/1/3-the-state-of-the-aircraft.html#ggalt)| [GGALTC$\ddagger$](/rmd_output/1/3-the-state-of-the-aircraft.html#altx)| [GGEOIDHT](/rmd_output/1/3-the-state-of-the-aircraft.html#ggeoidht)| [GGHWGS](/rmd_output/1/3-the-state-of-the-aircraft.html#gghwgs)
+[GGLAT](/rmd_output/1/3-the-state-of-the-aircraft.html#gglat)| [GGLON](/rmd_output/1/3-the-state-of-the-aircraft.html#gglon)| [GGNSAT](/rmd_output/1/3-the-state-of-the-aircraft.html#ggnsat)| [GGQUAL](/rmd_output/1/3-the-state-of-the-aircraft.html#ggqual)| [GGSPD](/rmd_output/1/3-the-state-of-the-aircraft.html#ggspd)
+[GGSTATUS](/rmd_output/1/3-the-state-of-the-aircraft.html#ggstatus)|
+[GGTRK](/rmd_output/1/3-the-state-of-the-aircraft.html#ggtrk)| [GGVEW](/rmd_output/1/3-the-state-of-the-aircraft.html#ggvew)| [GGVNS](/rmd_output/1/3-the-state-of-the-aircraft.html#ggvns)| [GGVSPD](/rmd_output/1/3-the-state-of-the-aircraft.html#ggvspd)
+[GLAT](/rmd_output/1/3-the-state-of-the-aircraft.html#gglat)| [GLON](/rmd_output/1/3-the-state-of-the-aircraft.html#gglon)| [GMODE$\ddagger$](/rmd_output/1/3-the-state-of-the-aircraft.html#gmode)| [GNI](/rmd_output/1/7-aerosol-particle-measurements.html#special-aerosol)|  [GNSS](/rmd_output/1/4-the-state-of-the-atmosphere.html#special-use-remote)
+[GSF](/rmd_output/1/3-the-state-of-the-aircraft.html#gsf)| [GSF_G](/rmd_output/1/3-the-state-of-the-aircraft.html#ggspd)
+[GSF$\ddagger$](/rmd_output/1/10-obsolete-variables.html#gsf-obsolete)| [GSTAT_G](/rmd_output/1/3-the-state-of-the-aircraft.html#ggstatus)|
+[GSTAT](/rmd_output/1/3-the-state-of-the-aircraft.html#ggstatus)| [GVZI$\ddagger$](/rmd_output/1/3-the-state-of-the-aircraft.html#ggvspd)| [HARP](/rmd_output/1/8-radiation-variables.html#harp)
+[HGM](/rmd_output/1/3-the-state-of-the-aircraft.html#hgm)| 
+[HGM232](/rmd_output/1/3-the-state-of-the-aircraft.html#hgm-232)| [HGME](/rmd_output/1/3-the-state-of-the-aircraft.html#hgme-159)| [HI3$\ddagger$](/rmd_output/1/3-the-state-of-the-aircraft.html#hi3)| [HOUR](/rmd_output/1/2-general-information-about-data-files.html#hms)|
+[IAS](/rmd_output/1/10-obsolete-variables.html#ias)| [IRx](/rmd_output/1/10-obsolete-variables.html#irx)
+[IRxC](/rmd_output/1/8-radiation-variables.html#irxc)| [IRXC](/rmd_output/1/8-radiation-variables.html#irxc)| [IRxHT](/rmd_output/1/8-radiation-variables.html#irxht)| [IRxHTV](/rmd_output/1/8-radiation-variables.html#irxht)| [IRXV](/rmd_output/1/8-radiation-variables.html#irxv)
+[LAT](/rmd_output/1/3-the-state-of-the-aircraft.html#latitude)| [LATC](/rmd_output/1/3-the-state-of-the-aircraft.html#latc-lonc)| [LAT_G](/rmd_output/1/3-the-state-of-the-aircraft.html#gglat)| [LON](/rmd_output/1/3-the-state-of-the-aircraft.html#longitude)| [LONC](/rmd_output/1/3-the-state-of-the-aircraft.html#latc-lonc)
+[LON_G](/rmd_output/1/3-the-state-of-the-aircraft.html#gglon)|  [LWC$\ddagger$](/rmd_output/1/10-obsolete-variables.html#jwlwc)| [LWCC$\ddagger$](/rmd_output/1/10-obsolete-variables.html#jwlw-corrected)|
+[MACH](/rmd_output/1/4-the-state-of-the-atmosphere.html#mach-number)| [MACHx](/rmd_output/1/4-the-state-of-the-atmosphere.html#mach-number)
+[MACHX](/rmd_output/1/4-the-state-of-the-atmosphere.html#mach-number)]| [MINUTE](/rmd_output/1/2-general-information-about-data-files.html#hms)|
+[MIRRORT_CR2](/rmd_output/1/4-the-state-of-the-atmosphere.html#mirror-cr2)| [MR](/rmd_output/1/4-the-state-of-the-atmosphere.html#MR)| [MONTH](/rmd_output/1/2-general-information-about-data-files.html#mdy)|
+[MRCR](/rmd_output/1/4-the-state-of-the-atmosphere.html#MR)| [MRLA](/rmd_output/1/4-the-state-of-the-atmosphere.html#MR)
+[MRLH](/rmd_output/1/4-the-state-of-the-atmosphere.html#MR)| [MRVXL](/rmd_output/1/4-the-state-of-the-atmosphere.html#MR)| [NO](/rmd_output/1/6-air-chemistry-measurements.html#no-noy)| [NO~y~](/rmd_output/1/6-air-chemistry-measurements.html#no-noy)
+[O3FS](/rmd_output/1/10-obsolete-variables.html#o3fs)| [O3MR_CL](/rmd_output/1/6-air-chemistry-measurements.html#f03-acd)|
+[MTP](/rmd_output/1/4-the-state-of-the-atmosphere.html#special-use-remote)| [OAT](/rmd_output/1/4-the-state-of-the-atmosphere.html#oat)|
+[PACT](/rmd_output/1/10-obsolete-variables.html#AACT)| [PALT](/rmd_output/1/3-the-state-of-the-aircraft.html#palt)| [PCAB](/rmd_output/1/4-the-state-of-the-atmosphere.html#p-special)| [PCN](/rmd_output/1/7-aerosol-particle-measurements.html#pcn)| [P_CR2](/rmd_output/1/4-the-state-of-the-atmosphere.html#p-special)
+[PFLW](/rmd_output/1/7-aerosol-particle-measurements.html#pflw)| [PFLWC](/rmd_output/1/7-aerosol-particle-measurements.html#pflw)| [PHDG$\ddagger$](/rmd_output/1/10-obsolete-variables.html#ltn51)| [PITCH](/rmd_output/1/3-the-state-of-the-aircraft.html#pitch)|  [PLWC](/rmd_output/1/5-cloud-physics-variables.html#plwc)
+[PLWC1](/rmd_output/1/5-cloud-physics-variables.html#plwc)| [PLWC1DC](/rmd_output/1/5-cloud-physics-variables.html#lwc2d)| [PLWC1DP](/rmd_output/1/5-cloud-physics-variables.html#lwc2d)| [PLWC6](/rmd_output/1/5-cloud-physics-variables.html#PSD-LWC)| [PLWCC](/rmd_output/1/5-cloud-physics-variables.html#plwcc)
+[PLWCC1](/rmd_output/1/5-cloud-physics-variables.html#plwcc)| [PLWCD](/rmd_output/1/5-cloud-physics-variables.html#PSD-LWC)| [PLWCF](/rmd_output/1/5-cloud-physics-variables.html#PSD-LWC)| [PLWCG](/rmd_output/1/5-cloud-physics-variables.html#plwcg)| [PLWCX](/rmd_output/1/5-cloud-physics-variables.html#PSD-LWC)
+[PLWCY](/rmd_output/1/5-cloud-physics-variables.html#PSD-LWC)| [PS_A](/rmd_output/1/4-the-state-of-the-atmosphere.html#psx)| [PSDPx](/rmd_output/1/4-the-state-of-the-atmosphere.html#p-special)| [PSFD](/rmd_output/1/4-the-state-of-the-atmosphere.html#psx)| [PSFRD](/rmd_output/1/4-the-state-of-the-atmosphere.html#psx)
+[PSURF](/rmd_output/1/4-the-state-of-the-atmosphere.html#p-special)| [PSX](/rmd_output/1/4-the-state-of-the-atmosphere.html#psx)| [PSxC](/rmd_output/1/4-the-state-of-the-atmosphere.html#psx)| [PSXC](/rmd_output/1/4-the-state-of-the-atmosphere.html#psx)| [PSx](/rmd_output/1/4-the-state-of-the-atmosphere.html#psx)
+[PTIME$\ddagger$](/rmd_output/1/10-obsolete-variables.html#ptime)|
+[QC_A](/rmd_output/1/4-the-state-of-the-atmosphere.html#qcx)[ [QCBC$\ddagger$](/rmd_output/1/10-obsolete-variables.html#qcb)| [QCB$\ddagger$](/rmd_output/1/10-obsolete-variables.html#qcb)| [QCGC$\ddagger$](/rmd_output/1/10-obsolete-variables.html#qcb)| [QCG$\ddagger$](/rmd_output/1/10-obsolete-variables.html#qcb)
+[QCLS](/rmd_output/1/6-air-chemistry-measurements.html#awas-cims-qcls-toga)| 
+[QCx](/rmd_output/1/4-the-state-of-the-atmosphere.html#qcx)| [QCX](/rmd_output/1/4-the-state-of-the-atmosphere.html#qcx)| [QCxC](/rmd_output/1/4-the-state-of-the-atmosphere.html#qcx)| [QCXC](/rmd_output/1/4-the-state-of-the-atmosphere.html#qcx)| [RAWCONC_VXL](/rmd_output/1/4-the-state-of-the-atmosphere.html#vcsel-uncor)
+[REFF2DC](/rmd_output/1/5-cloud-physics-variables.html#reff2d)| [REFF2DP](/rmd_output/1/5-cloud-physics-variables.html#reff2d)| [REFFD](/rmd_output/1/5-cloud-physics-variables.html#effective-radius)| [REFFF](/rmd_output/1/5-cloud-physics-variables.html#effective-radius)| [RHOLA](/rmd_output/1/4-the-state-of-the-atmosphere.html#rho)
+[RHOUV](/rmd_output/1/4-the-state-of-the-atmosphere.html#rho)| [RHOx](/rmd_output/1/4-the-state-of-the-atmosphere.html#rho)| [RHUM](/rmd_output/1/4-the-state-of-the-atmosphere.html#rhumw)| [RHUMI](/rmd_output/1/4-the-state-of-the-atmosphere.html#rhumi)| [RICE](/rmd_output/1/5-cloud-physics-variables.html#rice)
+[ROC](/rmd_output/1/3-the-state-of-the-aircraft.html#roc)| [ROLL](/rmd_output/1/3-the-state-of-the-aircraft.html#roll)| [RSTx](/rmd_output/1/8-radiation-variables.html#rstx)| [RTHRx](/rmd_output/1/4-the-state-of-the-atmosphere.html#recovery-t)| [RTx](/rmd_output/1/4-the-state-of-the-atmosphere.html#recovery-t)|
+[RTX](/rmd_output/1/4-the-state-of-the-atmosphere.html#recovery-t)| [RTxH](/rmd_output/1/4-the-state-of-the-atmosphere.html#recovery-t)| [SECOND](/rmd_output/1/2-general-information-about-data-files.html#hms)|
+[SCLWC](/rmd_output/1/10-obsolete-variables.html#sclwc)| [SFC](/rmd_output/1/3-the-state-of-the-aircraft.html#sfc)| [SMPS](/rmd_output/1/7-aerosol-particle-measurements.html#special-aerosol)
+[SOLAZ](/rmd_output/1/8-radiation-variables.html#solaz)|
+[SOLDE](/rmd_output/1/8-radiation-variables.html#solde)| [SOLEL](/rmd_output/1/8-radiation-variables.html#solel)| [SOLZE](/rmd_output/1/8-radiation-variables.html#solze)| [SPHUM](/rmd_output/1/4-the-state-of-the-atmosphere.html#sphum)| [SPxPitch](/rmd_output/1/8-radiation-variables.html#spx)
+[SPxRoll](/rmd_output/1/8-radiation-variables.html#spx)| [SSFXx$\ddagger$](/rmd_output/1/10-obsolete-variables.html#akfxx)| [SSLIP](/rmd_output/1/4-the-state-of-the-atmosphere.html#sslip)| [SSRD](/rmd_output/1/4-the-state-of-the-atmosphere.html#ssrd)| [SWTC](/rmd_output/1/10-obsolete-variables.html#swtc)
+[SWx](/rmd_output/1/10-obsolete-variables.html#swx)| [TASx](/rmd_output/1/4-the-state-of-the-atmosphere.html#true-airspeed)|
+[TASX](/rmd_output/1/4-the-state-of-the-atmosphere.html#true-airspeed)| [TASHC](/rmd_output/1/4-the-state-of-the-atmosphere.html#tashc)| [TASxD](/rmd_output/1/4-the-state-of-the-atmosphere.html#true-airspeed)| [TCAVB](/rmd_output/1/8-radiation-variables.html#rstx)| [TCAVT](/rmd_output/1/8-radiation-variables.html#rstx)
+[TCNTP](/rmd_output/1/7-aerosol-particle-measurements.html#tcntu-tcntp)| [TCNTU](/rmd_output/1/7-aerosol-particle-measurements.html#tcntu-tcntp)| [TEMP1](/rmd_output/1/7-aerosol-particle-measurements.html#cntemp)| [TEMP2](/rmd_output/1/7-aerosol-particle-measurements.html#cntemp)| [TEO3](/rmd_output/1/6-air-chemistry-measurements.html#te03)
+[TEO3C](/rmd_output/1/6-air-chemistry-measurements.html#te03c)| [TEO3P](/rmd_output/1/6-air-chemistry-measurements.html#tep)| [TEP](/rmd_output/1/6-air-chemistry-measurements.html#tep)| [TET](/rmd_output/1/6-air-chemistry-measurements.html#tet)| [THDG](/rmd_output/1/3-the-state-of-the-aircraft.html#thdg)] 
+[THETA](/rmd_output/1/4-the-state-of-the-atmosphere.html#theta)|
+[THETAE](/rmd_output/1/4-the-state-of-the-atmosphere.html#thetae)| [THETAP](/rmd_output/1/4-the-state-of-the-atmosphere.html#thetae)| [THETAQ](/rmd_output/1/4-the-state-of-the-atmosphere.html#thetaq)| [THETAV](/rmd_output/1/4-the-state-of-the-atmosphere.html#thetav)| [THF$\ddagger$](/rmd_output/1/10-obsolete-variables.html#thf)
+[THI$\ddagger$](/rmd_output/1/10-obsolete-variables.html#ltn51)| [Time](/rmd_output/1/2-general-information-about-data-files.html#time)| [time_offset](/rmd_output/1/2-general-information-about-data-files.html#time-offset)|
+[TKAT_G](/rmd_output/1/3-the-state-of-the-aircraft.html#ggtrk)| [TMLAG$\ddagger$](/rmd_output/1/10-obsolete-variables.html#tmlag)| [TOGA](/rmd_output/1/6-air-chemistry-measurements.html#awas-cims-qcls-toga)
+[TPTIME$\ddagger$](/rmd_output/1/10-obsolete-variables.html#tptime)| 
+[TRSTB](/rmd_output/1/8-radiation-variables.html#trstx), [TRSTT](/rmd_output/1/8-radiation-variables.html#trstx)|  [TTKP$\ddagger$](/rmd_output/1/10-obsolete-variables.html#ttkp)|  [TTRF$\ddagger$](/rmd_output/1/10-obsolete-variables.html#ttrf)
+[TTx$\ddagger$](/rmd_output/1/10-obsolete-variables.html#ttx)| [TVIR](/rmd_output/1/4-the-state-of-the-atmosphere.html#TVIR)| [UI](/rmd_output/1/4-the-state-of-the-atmosphere.html#ui-vi-wi)
+[UIC](/rmd_output/1/4-the-state-of-the-atmosphere.html#uic-vic)| [UPRESS](/rmd_output/1/7-aerosol-particle-measurements.html#upress)| [USFLWC](/rmd_output/1/7-aerosol-particle-measurements.html#pflw)| [USMPFLW](/rmd_output/1/7-aerosol-particle-measurements.html#pflw)| [UVx](/rmd_output/1/10-obsolete-variables.html#uvx)
+[UX](/rmd_output/1/4-the-state-of-the-atmosphere.html#ux-vy)| [UXC](/rmd_output/1/4-the-state-of-the-atmosphere.html#uxc-vyc)| [VCRH](/rmd_output/1/10-obsolete-variables.html#cryo-hygro)| [VEW$\ddagger$](/rmd_output/1/10-obsolete-variables.html#gsf-obsolete)| [VEWC](/rmd_output/1/3-the-state-of-the-aircraft.html#vewc-vnsc)
+[VEW](/rmd_output/1/3-the-state-of-the-aircraft.html#vew)_| [VEW_G$\ddagger$](/rmd_output/1/3-the-state-of-the-aircraft.html#ggvew)| [VI](/rmd_output/1/4-the-state-of-the-atmosphere.html#ui-vi-wi)| [VIC](/rmd_output/1/4-the-state-of-the-atmosphere.html#uic-vic)| [VISxC](/rmd_output/1/8-radiation-variables.html#visxc)
+[VISxHT](/rmd_output/1/8-radiation-variables.html#visxht)| [VISxHTV](/rmd_output/1/8-radiation-variables.html#visxht)| [VISxV](/rmd_output/1/8-radiation-variables.html#visxv)| [VLA$\ddagger$](/rmd_output/1/10-obsolete-variables.html#vla)
+[VNS](/rmd_output/1/3-the-state-of-the-aircraft.html#vns)| [VNSC](/rmd_output/1/3-the-state-of-the-aircraft.html#vewc-vnsc)| [VNS_G](/rmd_output/1/3-the-state-of-the-aircraft.html#ggvns)| [VNS$\ddagger$](/rmd_output/1/10-obsolete-variables.html#gsf-obsolete)| [VSPD](/rmd_output/1/3-the-state-of-the-aircraft.html#vspd)
+[VSPD_G](/rmd_output/1/3-the-state-of-the-aircraft.html#ggvspd)| [VY](/rmd_output/1/4-the-state-of-the-atmosphere.html#ux-vy)| [VYC](/rmd_output/1/4-the-state-of-the-atmosphere.html#uxc-vyc)| [VZI$\ddagger$](/rmd_output/1/10-obsolete-variables.html#vzi)| [WD](/rmd_output/1/4-the-state-of-the-atmosphere.html#ws-wd)
+[WDC](/rmd_output/1/4-the-state-of-the-atmosphere.html#wsc-wdc)| [WDRCTN$\ddagger$](/rmd_output/1/10-obsolete-variables.html#wspd)| [WI](/rmd_output/1/4-the-state-of-the-atmosphere.html#ui-vi-wi)| [WIC](/rmd_output/1/4-the-state-of-the-atmosphere.html#wic)| [WP3](/rmd_output/1/3-the-state-of-the-aircraft.html#wp3)
+[WS](/rmd_output/1/4-the-state-of-the-atmosphere.html#ws-wd)| [WSC](/rmd_output/1/4-the-state-of-the-atmosphere.html#wsc-wdc)| [WSPD$\ddagger$](/rmd_output/1/10-obsolete-variables.html#wspd)| [XCOMR](/rmd_output/1/6-air-chemistry-measurements.html#comr-al)| [XCOMR_AL$\ddagger$](/rmd_output/1/6-air-chemistry-measurements.html#comr-al)
+[XFO3FNO](/rmd_output/1/6-air-chemistry-measurements.html#xf03fs)| 
+[XFO3FS](/rmd_output/1/6-air-chemistry-measurements.html#xf03fs)| [XFO3P](/rmd_output/1/6-air-chemistry-measurements.html#xf03p)| [XICN](/rmd_output/1/7-aerosol-particle-measurements.html#xicnc)| [XICNC](/rmd_output/1/7-aerosol-particle-measurements.html#xicnc)| [XMACH2](/rmd_output/1/4-the-state-of-the-atmosphere.html#mach-number)
+[XNCLF](/rmd_output/1/6-air-chemistry-measurements.html#no-noy)| [XNMBT](/rmd_output/1/6-air-chemistry-measurements.html#no-noy)| [XNO](/rmd_output/1/6-air-chemistry-measurements.html#no-noy)| [XNOCAL](/rmd_output/1/6-air-chemistry-measurements.html#mr-no-no2)| [XNYCAL](/rmd_output/1/6-air-chemistry-measurements.html#mr-no-no2)
+[XNOCF](/rmd_output/1/6-air-chemistry-measurements.html#no-noy)| [XNOSF](/rmd_output/1/6-air-chemistry-measurements.html#no-noy)
+[XNOY](/rmd_output/1/6-air-chemistry-measurements.html#no-noy)| [XNOYP](/rmd_output/1/6-air-chemistry-measurements.html#no-noy)| [XNOZA](/rmd_output/1/6-air-chemistry-measurements.html#no-noy)| [XNSAF](/rmd_output/1/6-air-chemistry-measurements.html#no-noy)| [XNST](/rmd_output/1/6-air-chemistry-measurements.html#no-noy)
+[XNZAF](/rmd_output/1/6-air-chemistry-measurements.html#no-noy)| [XO3](/rmd_output/1/6-air-chemistry-measurements.html#f03-acd)| [XSIG_UVH](/rmd_output/1/4-the-state-of-the-atmosphere.html#uvh-voltage)| [XUVI](/rmd_output/1/10-obsolete-variables.html#xuvi)| 
+[XUVP](/rmd_output/1/10-obsolete-variables.html#xuvi)| [XUVT](/rmd_output/1/10-obsolete-variables.html#xuvi)| [XVI$\ddagger$](/rmd_output/1/10-obsolete-variables.html#ltn51)| [YEAR](/rmd_output/1/2-general-information-about-data-files.html#mdy)|
+[YVI$\ddagger$](/rmd_output/1/10-obsolete-variables.html#ltn51)|
 
 
+# Appendix C: How to Edit This Document {.unnumbered}
 
-## Suggested Additional Steps {.unnumbered}
+<p>Here are some notes regarding the construction and structure of this document:</p>
+<ol class="incremental">
+<li><p>The reference version is ProcessingAlgorithms.lyx, which needs ’LyX’, a user interface to TeX. It is available on EOL machines like tikal. Start it with “lyx ProcessingAlgorithms.lyx”</p></li>
+<li><p>The document is broken into many sections, referenced by the above file, so they must be present also. Then have names like Section3.lyx</p></li>
+<li><p>The document generates three indices: a regular index, a list of symbols, and a list of variables. The references for these are embedded in the .lyx files, and they can be modified or more can be added via the “Insert -&gt; Index Entry” controls. These practices are useful when generating index entries:</p>
+<ol class="incremental">
+<li><p>entries like ’wind!relative’ will generate index entries as subordinate entries with ’relative’ below ’wind’</p></li>
+<li><p>I have tried to emphasize using nouns to start index entries, so for example I would favor “coefficient!calibration” over “calibration coefficient.</p></li>
+<li><p>It is sometimes useful to generate “see xxx” entries, which can be done as follows: “INS|see {Inertial Navigation System}” where the part in braces is also in LaTeX code, generated by pressing CNTL-L.</p></li>
+</ol></li>
+<li><p>Creating a PDF-format file in LyX usually will generate these lists also. To be safe and ensure that the lists are updated, follow these steps:</p>
+<ol class="incremental">
+<li><p>Export a LaTeX file from LyX in pdflatex format, using the “export” option.</p></li>
+<li><p>Run “pdflatex ProcessingAlgorithms” three times to be sure all references are resolved.</p></li>
+<li><p>Run “splitindex ProcessingAlgorithms” to generate files for the lists.</p></li>
+<li><p>Run “makeindex ProcessingAlgorithms” to generate the lists.</p></li>
+<li><p>Run “pdflatex ProcessingAlgorithms” again.</p></li>
+</ol></li>
+<li><p>The LyX files have embedded notes with additional information that should be retained, and exporting to LaTeX will lose this information, so it will be useful to retain the LyX format. The suggested next steps in the table above, for example, almost all have associated notes that will appear in yellow and will help identify where the comment applies.</p></li>
+<li><p>It is sometimes easiest to edit the PDF file directly. Some of the web references have been changed in this way and can be adjusted as the reference files are moved, e.g., from my Google Drive to the EOL web pages. For this purpose, I found master-pdf-editor useful. This will lose continuity, however, because then the links can’t be re-generated by running LyX.</p></li>
+<li><p>As of Feb 2019, many links formerly to google-drive addresses or eol system files have been changed to https://github.com/NCAR/aircraft_ProcessingAlgorithms links. In that directory there is a file (’links’) with a list of all the links in the document. It is worthwhile when updating this document to check that all the links remain current. One way is to use these R statements:<br />
+links &lt;- readlines(’./links’); EURL &lt;- rep(FALSE, length(links));<br />
+for (i in 1:length(links)) {EURL<span>[</span>i<span>]</span> &lt;- RCurl::url.exists(links<span>[</span>i<span>]</span>)}<br />  
+and then check EURL to see that the links are all found.</p></li>
+</ol>
+
+## How to Reference Specific Sections or Pages of this Document: {.unnumbered}
+
+### Variables {.unnumbered}
+
+<p>The document includes named destinations for each variable name, so when used in a URL that destination can be reached. This is done differently in different browsers or PDF viewers:</p>
+<ul class="incremental">
+<li><p>For a web browser like Chrome or Firefox, use the “nameddest” reference; e.g., for the discussion of variable ATX, use<br />
+<code>firefox http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf#nameddest=ATX</code></p></li>
+<li><p>For a pdf viewer like evince, use this syntax:<br />
+<code>evince -n ATX http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf</code></p></li>
+</ul>
+<p>Most variable names can be used in these URL modifiers. Here is a list of available targets by section in the report:</p>
+<p><span class="underline">Section 1:</span> Time</p>
+<p><span class="underline">Section 2:</span> <span>[</span>none<span>]</span></p>
+<p><span class="underline">Section 3:</span> ACINS ALT BLATA BLONA BNORMA BPITCHR BROLLR BYAWR DEI DNI FXAZIM FXDIST GGALT GGLAT GGLON GGNSAT GGOIDHT GGSPD GGSTATUS GGTRK GGVEW GGVNS GGVSPD GGWUAL GMODE GSF HGM HGM232 HGME HI3 LAT LATC LON LONC PALT PITCH ROLL THDG VEW VEWC VNS VNSC VSPD</p>
+<p><span class="underline">Section 4:</span> ADIFR AKRD AT_ITR ATx ATX ATxD ATxJ BDIFR CAVP_x CONCH_UVH CONCV_VXL DP_CR2C DP_VXL DPx DP_x DPxC DPXC DVALUE EDPC EW_UHV EWx EWX FP_CR2 MACHx MACHX MIRRORT_CR2 MIRRTMP_DPX MR MRCR MRLA MRLH MRVCL OAT PCAB PS_A PSDPx PSFD PSFRD PSURF PSx PSX PSxC PSXC QCx QCX QCxC QCXC RAWCONC_VXL RHOx RHUM RHUMI RTHRx RTx RTX RTxH SPHUM SSLIP TASHC TASx TASX TASxD THETA THETAE THETAP THETAQ THETAV TVIR UI UIC UX UXC VI VIC VY VYC WD WDC WI WIC WS WSC XSIGV_UHV</p>
+<p><span class="underline">Section 5:</span> A1DC A1DP A200X A200Y A260X ACDP AF300 AFSSP APCAS AS100 AUHSAS C1DC C1DP C200X C200Y C260X CCDP CF300 CFSSP COMCP CONC1DC CONC1DC100 CONC1DC150 CONC1DP CONC3 CONC6 CONCD CONCF CONCU CONCX CONCY CPCAS CS100 CUHSAS DBAR1DC DBAR1DP DBAR3 DBAR6 DBARD DBARF DBARP DBARU DBARX DBARY DBZ DBZ1DC DBZ1DP DISP1DC DISP1DP DISP3 DISP6 DISPD DISPF DISPP DISPU DISPX DISPY DT1DC FRANGE FRNG PLWC1 PLWC1DC PLWC1DP PLWC6 PLWCC PLWCC1 PLWCD PLWCF PLWCG PLWCX PLWCY REFF2DC REFF2DP REFFD REFFF RICE</p>
+<p><span class="underline">Section 6:</span> CO2_PIC COMR_AL CORAW_AL FO3_ACD FO3_CL O3MR_CL TEO3 TEO3C TEO3P TEP TET XFO3FNO XFO3FS XFO3P XNCLF XNMBT XNO XNOCAL XNOCF XNOSF XNOY XNOYP XNOZA XNSAF XNST XNYCAL XNZAF XO3</p>
+<p><span class="underline">Section 7:</span> CNTEMP CNTS CONCN CONCP CONCU CONCU100 CONCU500 FCN FCNC PCN PFLW PFLWC TCHTP TCNTL TEMP1 TEMP2 UPRESS USFLWC USMPFLW XICN XICNC</p>
+<p><span class="underline">Section 8:</span> IRxHT IRxV RSTx SPxPitch SPxRoll TRSTx VISxC VISxHT VISxV</p>
+<p><span class="underline">Section 9:</span> <span>[</span>none<span>]</span></p>
+<p><span class="underline">Section 10:</span> OBSOLETE</p>
+
+### Page Numbers {.unnumbered}
+
+<p>To reference a specific page in the document, use a web reference like this:<br />
+<code>ProcessingAlgorithms.pdf#page=44</code></p>
+<p>In evince, this syntax will work, or the page number can be specified in this way:</p>
+<p><code>evince -p 115 ProcessingAlgorithms.pdf</code></p>
+
+### Sections and Subsections {.unnumbered}
+<p>Targets have not been provided for other parts of the document, but the above method of referencing pages can be used to link to specific sections and other components of the document.</p>
+
+### Adding New Targets
+
+<p>When a new variable is added, a new anchor point can be added by inserting, in LaTeX mode, <code>\nop{LAT} </code>at the appropriate point in the LyX document. (\nop has been defined to use \hypertarget but displace the reference upward one line.) In addition, when a new variable is added, entries should be made in the index items and the variable-names list, following the pattern used for existing variables, and if appropriate any new symbols used in discussing the algorithm should be added to the similar symbols list.</p>
+
+
+# Appendix D: Suggestions Needing Further Attention {.unnumbered}
 
 <table>
 <thead>
@@ -426,68 +519,3 @@ XUVP| XUVT| XVI$\dagger$| YVI$\dagger$|
 </tr>
 </tbody>
 </table>
-
-## How to Edit This Document {.unnumbered}
-
-<p>Here are some notes regarding the construction and structure of this document:</p>
-<ol class="incremental">
-<li><p>The reference version is ProcessingAlgorithms.lyx, which needs ’LyX’, a user interface to TeX. It is available on EOL machines like tikal. Start it with “lyx ProcessingAlgorithms.lyx”</p></li>
-<li><p>The document is broken into many sections, referenced by the above file, so they must be present also. Then have names like Section3.lyx</p></li>
-<li><p>The document generates three indices: a regular index, a list of symbols, and a list of variables. The references for these are embedded in the .lyx files, and they can be modified or more can be added via the “Insert -&gt; Index Entry” controls. These practices are useful when generating index entries:</p>
-<ol class="incremental">
-<li><p>entries like ’wind!relative’ will generate index entries as subordinate entries with ’relative’ below ’wind’</p></li>
-<li><p>I have tried to emphasize using nouns to start index entries, so for example I would favor “coefficient!calibration” over “calibration coefficient.</p></li>
-<li><p>It is sometimes useful to generate “see xxx” entries, which can be done as follows: “INS|see {Inertial Navigation System}” where the part in braces is also in LaTeX code, generated by pressing CNTL-L.</p></li>
-</ol></li>
-<li><p>Creating a PDF-format file in LyX usually will generate these lists also. To be safe and ensure that the lists are updated, follow these steps:</p>
-<ol class="incremental">
-<li><p>Export a LaTeX file from LyX in pdflatex format, using the “export” option.</p></li>
-<li><p>Run “pdflatex ProcessingAlgorithms” three times to be sure all references are resolved.</p></li>
-<li><p>Run “splitindex ProcessingAlgorithms” to generate files for the lists.</p></li>
-<li><p>Run “makeindex ProcessingAlgorithms” to generate the lists.</p></li>
-<li><p>Run “pdflatex ProcessingAlgorithms” again.</p></li>
-</ol></li>
-<li><p>The LyX files have embedded notes with additional information that should be retained, and exporting to LaTeX will lose this information, so it will be useful to retain the LyX format. The suggested next steps in the table above, for example, almost all have associated notes that will appear in yellow and will help identify where the comment applies.</p></li>
-<li><p>It is sometimes easiest to edit the PDF file directly. Some of the web references have been changed in this way and can be adjusted as the reference files are moved, e.g., from my Google Drive to the EOL web pages. For this purpose, I found master-pdf-editor useful. This will lose continuity, however, because then the links can’t be re-generated by running LyX.</p></li>
-<li><p>As of Feb 2019, many links formerly to google-drive addresses or eol system files have been changed to https://github.com/NCAR/aircraft_ProcessingAlgorithms links. In that directory there is a file (’links’) with a list of all the links in the document. It is worthwhile when updating this document to check that all the links remain current. One way is to use these R statements:<br />
-links &lt;- readlines(’./links’); EURL &lt;- rep(FALSE, length(links));<br />
-for (i in 1:length(links)) {EURL<span>[</span>i<span>]</span> &lt;- RCurl::url.exists(links<span>[</span>i<span>]</span>)}<br />  
-and then check EURL to see that the links are all found.</p></li>
-</ol>
-
-## How to Reference Specific Sections or Pages of this Document: {.unnumbered}
-
-### Variables {.unnumbered}
-
-<p>The document includes named destinations for each variable name, so when used in a URL that destination can be reached. This is done differently in different browsers or PDF viewers:</p>
-<ul class="incremental">
-<li><p>For a web browser like Chrome or Firefox, use the “nameddest” reference; e.g., for the discussion of variable ATX, use<br />
-<code>firefox http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf#nameddest=ATX</code></p></li>
-<li><p>For a pdf viewer like evince, use this syntax:<br />
-<code>evince -n ATX http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf</code></p></li>
-</ul>
-<p>Most variable names can be used in these URL modifiers. Here is a list of available targets by section in the report:</p>
-<p><span class="underline">Section 1:</span> Time</p>
-<p><span class="underline">Section 2:</span> <span>[</span>none<span>]</span></p>
-<p><span class="underline">Section 3:</span> ACINS ALT BLATA BLONA BNORMA BPITCHR BROLLR BYAWR DEI DNI FXAZIM FXDIST GGALT GGLAT GGLON GGNSAT GGOIDHT GGSPD GGSTATUS GGTRK GGVEW GGVNS GGVSPD GGWUAL GMODE GSF HGM HGM232 HGME HI3 LAT LATC LON LONC PALT PITCH ROLL THDG VEW VEWC VNS VNSC VSPD</p>
-<p><span class="underline">Section 4:</span> ADIFR AKRD AT_ITR ATx ATX ATxD ATxJ BDIFR CAVP_x CONCH_UVH CONCV_VXL DP_CR2C DP_VXL DPx DP_x DPxC DPXC DVALUE EDPC EW_UHV EWx EWX FP_CR2 MACHx MACHX MIRRORT_CR2 MIRRTMP_DPX MR MRCR MRLA MRLH MRVCL OAT PCAB PS_A PSDPx PSFD PSFRD PSURF PSx PSX PSxC PSXC QCx QCX QCxC QCXC RAWCONC_VXL RHOx RHUM RHUMI RTHRx RTx RTX RTxH SPHUM SSLIP TASHC TASx TASX TASxD THETA THETAE THETAP THETAQ THETAV TVIR UI UIC UX UXC VI VIC VY VYC WD WDC WI WIC WS WSC XSIGV_UHV</p>
-<p><span class="underline">Section 5:</span> A1DC A1DP A200X A200Y A260X ACDP AF300 AFSSP APCAS AS100 AUHSAS C1DC C1DP C200X C200Y C260X CCDP CF300 CFSSP COMCP CONC1DC CONC1DC100 CONC1DC150 CONC1DP CONC3 CONC6 CONCD CONCF CONCU CONCX CONCY CPCAS CS100 CUHSAS DBAR1DC DBAR1DP DBAR3 DBAR6 DBARD DBARF DBARP DBARU DBARX DBARY DBZ DBZ1DC DBZ1DP DISP1DC DISP1DP DISP3 DISP6 DISPD DISPF DISPP DISPU DISPX DISPY DT1DC FRANGE FRNG PLWC1 PLWC1DC PLWC1DP PLWC6 PLWCC PLWCC1 PLWCD PLWCF PLWCG PLWCX PLWCY REFF2DC REFF2DP REFFD REFFF RICE</p>
-<p><span class="underline">Section 6:</span> CO2_PIC COMR_AL CORAW_AL FO3_ACD FO3_CL O3MR_CL TEO3 TEO3C TEO3P TEP TET XFO3FNO XFO3FS XFO3P XNCLF XNMBT XNO XNOCAL XNOCF XNOSF XNOY XNOYP XNOZA XNSAF XNST XNYCAL XNZAF XO3</p>
-<p><span class="underline">Section 7:</span> CNTEMP CNTS CONCN CONCP CONCU CONCU100 CONCU500 FCN FCNC PCN PFLW PFLWC TCHTP TCNTL TEMP1 TEMP2 UPRESS USFLWC USMPFLW XICN XICNC</p>
-<p><span class="underline">Section 8:</span> IRxHT IRxV RSTx SPxPitch SPxRoll TRSTx VISxC VISxHT VISxV</p>
-<p><span class="underline">Section 9:</span> <span>[</span>none<span>]</span></p>
-<p><span class="underline">Section 10:</span> OBSOLETE</p>
-
-### Page Numbers {.unnumbered}
-
-<p>To reference a specific page in the document, use a web reference like this:<br />
-<code>ProcessingAlgorithms.pdf#page=44</code></p>
-<p>In evince, this syntax will work, or the page number can be specified in this way:</p>
-<p><code>evince -p 115 ProcessingAlgorithms.pdf</code></p>
-
-### Sections and Subsections {.unnumbered}
-<p>Targets have not been provided for other parts of the document, but the above method of referencing pages can be used to link to specific sections and other components of the document.</p>
-
-### Adding New Targets
-
-<p>When a new variable is added, a new anchor point can be added by inserting, in LaTeX mode, <code>\nop{LAT} </code>at the appropriate point in the LyX document. (\nop has been defined to use \hypertarget but displace the reference upward one line.) In addition, when a new variable is added, entries should be made in the index items and the variable-names list, following the pattern used for existing variables, and if appropriate any new symbols used in discussing the algorithm should be added to the similar symbols list.</p>
