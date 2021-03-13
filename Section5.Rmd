@@ -317,7 +317,7 @@ In addition, a processing step is used to remove drift by calculating the offset
 ```{r child='LWCbox.Rmd'}
 ```
 
-### Radar Reflectivity Factor (dbZ)<strong>: DBZF, DBZX, DBZ6, DBZY, DBZD {#DBZ .unnumbered}
+### Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD {#DBZ .unnumbered}
 
 <em>The radar reflectivity factor</em> <em>calculated from the measured size distribution from a hydrometeor probe.</em> This is calculated from the measured concentration and the sixth moment of the size distribution, with the assumption that the particles are water drops. An equivalent radar reflectivity factor can be calculated from the hydrometeor size distribution if another assumption is made about composition of the particles, but this variable is not part of normal data files. The radar reflectivity factor is a characteristic only of the hydrometeor size distribution; it is <em>not</em> a measure of radar reflectivity, because the latter also depends on wavelength, dielectric constant, and other characteristics of the hydrometeors. The normally used radar reflectivity factor is measured on a logarithmic scale that depends on a particular choice of units, so (although it is not conventional) an appropriate scale factor <span class="math inline"><em>Z</em><sub><em>r</em></sub></span> is included in the following equation to satisfy the convention that arguments of logarithms should be dimensionless.<br />  
 ```{r child='DBZbox.Rmd'}
