@@ -128,9 +128,10 @@ Variable Name | Variable Name | Variable Name | Variable Name | Variable Name
 
 # Appendix C: How to Edit This Document {.unnumbered}
 
-<p>Here are some notes regarding the construction and structure of this document:</p>
-<ol class="incremental">
-<li><p>The reference version is ProcessingAlgorithms.lyx, which needs ’LyX’, a user interface to TeX. It is available on EOL machines like tikal. Start it with “lyx ProcessingAlgorithms.lyx”</p></li>
+Here are some notes regarding the construction and structure of this document:
+
+* The original version is ProcessingAlgorithms.lyx, which needs ’LyX’, a user interface to TeX. It is available on EOL machines like tikal. Start it with “lyx ProcessingAlgorithms.lyx”.
+* This revised version is written in RMarkdown to facilitate editing by others.
 <li><p>The document is broken into many sections, referenced by the above file, so they must be present also. Then have names like Section3.lyx</p></li>
 <li><p>The document generates three indices: a regular index, a list of symbols, and a list of variables. The references for these are embedded in the .lyx files, and they can be modified or more can be added via the “Insert -&gt; Index Entry” controls. These practices are useful when generating index entries:</p>
 <ol class="incremental">

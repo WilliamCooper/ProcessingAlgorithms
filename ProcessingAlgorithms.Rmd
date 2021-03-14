@@ -10,10 +10,10 @@ output:
     split_by: "chapter+number"
   html_document: 
     css: columns.css
-  pdf_document: 
-    keep_tex: true
-    includes:
-      in_header: columns.tex
+  # pdf_document: 
+  #   keep_tex: true
+  #   includes:
+  #     in_header: columns.tex
   #   config:
   #     toolbar:
   #       position: static
@@ -47,41 +47,41 @@ also Definitions of Variables in Archived Data Files
 Previous PDF version of this document: [Old PDF Version](https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/ProcessingAlgorithms.pdf) <br />  
 Download the current version in a browser for functional URL links. The .Rmd-format version can be accessed [here](https://htmlpreview.github.io/?https://github.com/WilliamCooper/ProcessingAlgorithms/blob/Rmd/index.html).  
 
-```{r child='boxStyles.Rmd'}
+```{r child='Children/boxStyles.Rmd'}
 
 ```
 
-```{r child='Section1.Rmd'}
+```{r child='Children/Section1.Rmd'}
 ```
 
-```{r child='Section2.Rmd'}
+```{r child='Children/Section2.Rmd'}
 ```
 
-```{r child='Section3.Rmd'}
+```{r child='Children/Section3.Rmd'}
 ```
 
-```{r child='Section4.Rmd'}
+```{r child='Children/Section4.Rmd'}
 ```
 
-```{r child='Section5.Rmd'}
+```{r child='Children/Section5.Rmd'}
 ```
 
-```{r child='Section6.Rmd'}
+```{r child='Children/Section6.Rmd'}
 ```
 
-```{r child='Section7.Rmd'}
+```{r child='Children/Section7.Rmd'}
 ```
 
-```{r child='Section8.Rmd'}
+```{r child='Children/Section8.Rmd'}
 ```
 
-```{r child='Section9.Rmd'}
+```{r child='Children/Section9.Rmd'}
 ```
 
-```{r child='Section10.Rmd'}
+```{r child='Children/Section10.Rmd'}
 ```
 
-```{r child='Appendices.Rmd'}
+```{r child='Children/Appendices.Rmd'}
 ```
 
 

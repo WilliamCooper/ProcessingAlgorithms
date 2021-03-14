@@ -32,15 +32,15 @@
   
 <link rel="prev" href="4-the-state-of-the-atmosphere.html"/>
 <link rel="next" href="6-air-chemistry-measurements.html"/>
-<script src="assets/header-attrs-2.6/header-attrs.js"></script>
-<script src="assets/jquery-2.2.3/jquery.min.js"></script>
-<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="site_libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -50,9 +50,9 @@
 
 
 
-<script src="assets/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<script src="assets/kePrint-0.0.1/kePrint.js"></script>
-<link href="assets/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -132,7 +132,7 @@
 <li><a href="5-cloud-physics-variables.html#mean-diameter">Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#dispersion"><i class="fa fa-check"></i>Dispersion (dimensionless): DISPD, DISPF, DISP3, DISP6, DISPP, DISPX, DISPY, DISPU</a></li>
 <li><a href="5-cloud-physics-variables.html#PSD-LWC">Liquid Water Content (g m<strong><span class="math inline"><em></em><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</a></li>
-<li><a href="5-cloud-physics-variables.html#DBZ">Radar Reflectivity Factor (dbZ)<strong>: DBZF, DBZX, DBZ6, DBZY, DBZD</a></li>
+<li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#DBZ"><i class="fa fa-check"></i>Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD</a></li>
 <li><a href="5-cloud-physics-variables.html#effective-radius">Effective Radius (<span class="math inline"><em>μ</em></span>m): REFFD, REFFF</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#fssp-range"><i class="fa fa-check"></i>FSSP-100 Range (dimensionless): FRNG, FRANGE</a></li>
 </ul></li>
@@ -306,7 +306,7 @@ In addition, a processing step is used to remove drift by calculating the offset
 </p>
 </div>
 <div id="plwcg" class="section level4 unnumbered" number="">
-<h4>PVM-100 Liquid Water Content (g/m<span class="math inline"><em></em><sup> − 3</sup></span>): PLWCG</h4>
+<h4>PVM-100 Liquid Water Content (g/m<sup>3</sup>): PLWCG</h4>
 <em>Cloud liquid water content for cloud droplets in the approximate size range from 3–50 <span class="math inline"><em>μ</em></span>m.</em> The PVM produces a measure of the liquid water content directly, but a baseline value is sometimes subtracted by reference to another cloud droplet instrument such as an FSSP or CDP, such that when the other instrument measures a very low droplet concentration the baseline value for the PVM-100 is updated at the corresponding time and that average is then subtracted from the measurements directly produced by the PVM-100.<span id="punch:5-1" label="punch:5-1">[punch:5-1]</span>
 </p>
 </div>
@@ -969,7 +969,7 @@ is in units of g<span class="math inline">\(\,\)</span>m<span class="math inline
 </p>
 </div>
 <div id="DBZ" class="section level3 unnumbered" number="">
-<h3>Radar Reflectivity Factor (dbZ)<strong>: DBZF, DBZX, DBZ6, DBZY, DBZD</h3>
+<h3>Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD</h3>
 <p><em>The radar reflectivity factor</em> <em>calculated from the measured size distribution from a hydrometeor probe.</em> This is calculated from the measured concentration and the sixth moment of the size distribution, with the assumption that the particles are water drops. An equivalent radar reflectivity factor can be calculated from the hydrometeor size distribution if another assumption is made about composition of the particles, but this variable is not part of normal data files. The radar reflectivity factor is a characteristic only of the hydrometeor size distribution; it is <em>not</em> a measure of radar reflectivity, because the latter also depends on wavelength, dielectric constant, and other characteristics of the hydrometeors. The normally used radar reflectivity factor is measured on a logarithmic scale that depends on a particular choice of units, so (although it is not conventional) an appropriate scale factor <span class="math inline"><em>Z</em><sub><em>r</em></sub></span> is included in the following equation to satisfy the convention that arguments of logarithms should be dimensionless.<br /></p>
 <p class="box">
 <span class="math inline">\(d_{i}\)</span> = diameter for channel <span class="math inline">\(i\)</span> of probe x<br />
@@ -1155,15 +1155,15 @@ For the images from the 2D probes, separate data files need to be used. RAF prov
 <a href="6-air-chemistry-measurements.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
-<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
-<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
-<script src="assets/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({

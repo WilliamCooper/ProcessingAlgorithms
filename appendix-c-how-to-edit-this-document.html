@@ -32,15 +32,15 @@
   
 <link rel="prev" href="appendix-b-variable-names.html"/>
 <link rel="next" href="appendix-d-suggestions-needing-further-attention.html"/>
-<script src="assets/header-attrs-2.6/header-attrs.js"></script>
-<script src="assets/jquery-2.2.3/jquery.min.js"></script>
-<link href="assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="site_libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -50,9 +50,9 @@
 
 
 
-<script src="assets/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<script src="assets/kePrint-0.0.1/kePrint.js"></script>
-<link href="assets/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -132,7 +132,7 @@
 <li><a href="5-cloud-physics-variables.html#mean-diameter">Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#dispersion"><i class="fa fa-check"></i>Dispersion (dimensionless): DISPD, DISPF, DISP3, DISP6, DISPP, DISPX, DISPY, DISPU</a></li>
 <li><a href="5-cloud-physics-variables.html#PSD-LWC">Liquid Water Content (g m<strong><span class="math inline"><em></em><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</a></li>
-<li><a href="5-cloud-physics-variables.html#DBZ">Radar Reflectivity Factor (dbZ)<strong>: DBZF, DBZX, DBZ6, DBZY, DBZD</a></li>
+<li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#DBZ"><i class="fa fa-check"></i>Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD</a></li>
 <li><a href="5-cloud-physics-variables.html#effective-radius">Effective Radius (<span class="math inline"><em>μ</em></span>m): REFFD, REFFF</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#fssp-range"><i class="fa fa-check"></i>FSSP-100 Range (dimensionless): FRNG, FRANGE</a></li>
 </ul></li>
@@ -190,15 +190,10 @@
             <section class="normal" id="section-">
 <div id="appendix-c-how-to-edit-this-document" class="section level1 unnumbered" number="">
 <h1>Appendix C: How to Edit This Document</h1>
-<p>
-Here are some notes regarding the construction and structure of this document:
-</p>
-<ol class="incremental">
-<li>
-<p>
-The reference version is ProcessingAlgorithms.lyx, which needs ’LyX’, a user interface to TeX. It is available on EOL machines like tikal. Start it with “lyx ProcessingAlgorithms.lyx”
-</p>
-</li>
+<p>Here are some notes regarding the construction and structure of this document:</p>
+<ul>
+<li>The original version is ProcessingAlgorithms.lyx, which needs ’LyX’, a user interface to TeX. It is available on EOL machines like tikal. Start it with “lyx ProcessingAlgorithms.lyx”.</li>
+<li>This revised version is written in RMarkdown to facilitate editing by others.
 <li>
 <p>
 The document is broken into many sections, referenced by the above file, so they must be present also. Then have names like Section3.lyx
@@ -276,7 +271,8 @@ for (i in 1:length(links)) {EURL<span>[</span>i<span>]</span> &lt;- RCurl::url.e
 and then check EURL to see that the links are all found.
 </p>
 </li>
-</ol>
+</ol></li>
+</ul>
 <div id="how-to-reference-specific-sections-or-pages-of-this-document" class="section level2 unnumbered" number="">
 <h2>How to Reference Specific Sections or Pages of this Document:</h2>
 <div id="variables" class="section level3 unnumbered" number="">
@@ -368,15 +364,15 @@ When a new variable is added, a new anchor point can be added by inserting, in L
 <a href="appendix-d-suggestions-needing-further-attention.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
-<script src="assets/gitbook-2.6.7/js/app.min.js"></script>
-<script src="assets/gitbook-2.6.7/js/lunr.js"></script>
-<script src="assets/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="assets/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
