@@ -210,6 +210,7 @@ Most discussions of variables are in subsubsubsections with appropriate labels, 
 <tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;">Update MW table for current CO2 concentration</td>
+<td style="text-align: left;">done, WAC 2019 – keep updating</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"></td>
@@ -259,7 +260,7 @@ Most discussions of variables are in subsubsubsections with appropriate labels, 
 <tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;">Add a variable representing geopotential height and change DVALUE to be based on it minus PALT</td>
-<td style="text-align: left;">WAC - done (proposed)</td>
+<td style="text-align: left;">WAC - done</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"></td>
@@ -289,7 +290,7 @@ Most discussions of variables are in subsubsubsections with appropriate labels, 
 <tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;">Add a discussion of the additional corrections to QCR that could make this less sensitive to AOA? Algorithm is developed and documented; implement? Coefficients in ProcessingAlgorithms.pdf are based on ARISTO2016 flight 6.</td>
-<td style="text-align: left;">WAC - done (proposed)</td>
+<td style="text-align: left;">WAC - done</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"></td>
@@ -309,7 +310,7 @@ Most discussions of variables are in subsubsubsections with appropriate labels, 
 <tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;">Need to implement the discussion re correction for the displacement of the GPS antenna from the INS. When done, need to add LG=-4.30 m to the attributes for GGVSPD, GGVEW, GGVNS (GV) and get appropriate values for the C-130</td>
-<td style="text-align: left;">WAC - done (proposed)</td>
+<td style="text-align: left;">WAC - done</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"></td>
@@ -319,7 +320,7 @@ Most discussions of variables are in subsubsubsections with appropriate labels, 
 <tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;">Revise the values listed for the complementary-filter feedback to match what is used now – better with lower values than listed</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">WAC</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"></td>
@@ -329,7 +330,7 @@ Most discussions of variables are in subsubsubsections with appropriate labels, 
 <tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;">Goodrich Technical Report 5755: should we get permission and post this? (FAAM has it posted)</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">(It is posted now)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"></td>
@@ -339,7 +340,7 @@ Most discussions of variables are in subsubsubsections with appropriate labels, 
 <tr class="even">
 <td style="text-align: center;"></td>
 <td style="text-align: left;">Check all the complex M-K section, esp. <span class="math inline"><em>T</em><sub><em>k</em></sub></span> and DP interp. function</td>
-<td style="text-align: left;">partly done - WAC</td>
+<td style="text-align: left;">done - WAC</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"></td>
@@ -458,7 +459,7 @@ Most discussions of variables are in subsubsubsections with appropriate labels, 
 </tr>
 <tr class="even">
 <td style="text-align: center;"></td>
-<td style="text-align: left;">For EDPC, the &lt;-50 branch looks suspicious and needs checking</td>
+<td style="text-align: left;">For EDPC, the <-50 branch looks suspicious and needs checking</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
