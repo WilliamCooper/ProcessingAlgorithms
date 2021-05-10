@@ -281,7 +281,7 @@ $dvy^\prime=\eta\ dvy+(1-\eta)\Delta$ where $dvy^\prime$ is the sequentially adj
 \ 4. To avoid transients that would result from switching abruptly to the complementary-filter solution when the GPS measurements again become valid, the correction factors (e.g., $dvy$) are also updated smoothly toward the complementary-filter solution, using for example $dvy^\prime=\eta\ dvy+(1-\eta)F_L(v_y^{GPS}-v_y^{IRS})$ where $F_L$ is the low-pass filter and $v_y$ is the northward component of aircraft groundspeed.
 </p>
 
-#### GPS-Corrected Inertial Latitude and Longitude (<span class="math inline">º</span><strong>): LATC, LONC {#latc-lonc .unnumbered}
+#### GPS-Corrected Inertial Latitude and Longitude (<span class="math inline">º</span>): LATC, LONC {#latc-lonc .unnumbered}
 
 <em>Combined GPS and IRS output of latitude and longitude.</em> Positive values are north and east, respectively.<span id="punch:3-16" label="punch:3-16">[punch:3-16]</span> These variables are the best estimate of position, obtained by the following approach:<br />  
 ```{r child='LATLONbox.Rmd'}

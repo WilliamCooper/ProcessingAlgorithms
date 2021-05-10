@@ -5,11 +5,16 @@ date: "March 2021"
 site: bookdown::bookdown_site
 documentclass: book
 output: 
-  bookdown::gitbook:
-    lib_dir: assets
-    split_by: "chapter+number"
-  html_document: 
-    css: columns.css
+  bookdown::html_document2:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    # lib_dir: assets
+    # split_by: "chapter+number"
+  # html_document:
+  #   toc: true
+  #   toc_depth: 2
+  #   css: columns.css
   # pdf_document: 
   #   keep_tex: true
   #   includes:
