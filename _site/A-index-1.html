@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>A Index | RAF Technical Note: Processing Algorithms</title>
+  <meta name="description" content="A Index | RAF Technical Note: Processing Algorithms" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="A Index | RAF Technical Note: Processing Algorithms" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Index | RAF Technical Note: Processing Algorithms" />
+  
+  
+  
+
+<meta name="author" content="RAF RSIG" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="appendix-d-suggestions-needing-further-attention.html"/>
+
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="site_libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="site_libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="site_libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="1-introduction.html"><a href="1-introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="1-introduction.html"><a href="1-introduction.html#background-information"><i class="fa fa-check"></i><b>1.1</b> Background Information</a></li>
+<li class="chapter" data-level="1.2" data-path="1-introduction.html"><a href="1-introduction.html#alphabetical-list-of-variables"><i class="fa fa-check"></i><b>1.2</b> Alphabetical List of Variables</a></li>
+<li class="chapter" data-level="1.3" data-path="1-introduction.html"><a href="1-introduction.html#constants-and-symbols"><i class="fa fa-check"></i><b>1.3</b> Constants and Symbols</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html"><i class="fa fa-check"></i><b>2</b> General Information About Data Files</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#units-and-abbreviations"><i class="fa fa-check"></i><b>2.1</b> Units and Abbreviations</a></li>
+<li class="chapter" data-level="2.2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#variables-used-to-denote-time"><i class="fa fa-check"></i><b>2.2</b> Variables Used to Denote Time</a></li>
+<li class="chapter" data-level="2.3" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#synchronication-of-measurements"><i class="fa fa-check"></i><b>2.3</b> Synchronization of Measurements</a></li>
+<li class="chapter" data-level="2.4" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#other-comments-on-terminology"><i class="fa fa-check"></i><b>2.4</b> Other Comments on Terminology</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#variable-names-in-equations"><i class="fa fa-check"></i><b>2.4.1</b> Variable Names in Equations</a></li>
+<li class="chapter" data-level="2.4.2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#distinction-between-original-measurements-and-derived-variables"><i class="fa fa-check"></i><b>2.4.2</b> Distinction Between Original Measurements and Derived Variables</a></li>
+<li class="chapter" data-level="2.4.3" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#dimensions-in-equations"><i class="fa fa-check"></i><b>2.4.3</b> Dimensions in Equations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html"><i class="fa fa-check"></i><b>3</b> The State of the Aircraft</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#inertial-reference-systems"><i class="fa fa-check"></i><b>3.1</b> Inertial Reference Systems</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#standard-variables"><i class="fa fa-check"></i><b>3.1.1</b> Standard Variables</a></li>
+<li class="chapter" data-level="3.1.2" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#additional-special-use-variables"><i class="fa fa-check"></i><b>3.1.2</b> Additional Special-Use Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#global-positioning-systems"><i class="fa fa-check"></i><b>3.2</b> Global Positioning Systems</a></li>
+<li class="chapter" data-level="3.3" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#other-measurements-of-aircraft-altitude"><i class="fa fa-check"></i><b>3.3</b> Other Measurements of Aircraft Altitude</a></li>
+<li class="chapter" data-level="3.4" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#combining-irs-and-gps-measurements"><i class="fa fa-check"></i><b>3.4</b> Combining IRS and GPS Measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html"><i class="fa fa-check"></i><b>4</b> The State of the Atmosphere</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#information-on-instruments-and-calibrations"><i class="fa fa-check"></i><b>4.1</b> Information on Instruments and Calibrations</a></li>
+<li class="chapter" data-level="4.2" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#variable-names"><i class="fa fa-check"></i><b>4.2</b> Variable Names</a></li>
+<li class="chapter" data-level="4.3" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#pressure"><i class="fa fa-check"></i><b>4.3</b> Pressure</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#standard-pressure-measurements"><i class="fa fa-check"></i><b>4.3.1</b> Standard Pressure Measurements</a></li>
+<li class="chapter" data-level="" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#p-special"><i class="fa fa-check"></i>Special Pressure Measurements (hPa): PSDPx, CAVP, PCAB, PSURF</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#temperature-section"><i class="fa fa-check"></i><b>4.4</b> Temperature</a></li>
+<li class="chapter" data-level="4.5" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#humidity"><i class="fa fa-check"></i><b>4.5</b> Humidity</a></li>
+<li class="chapter" data-level="4.6" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#derived-thermodynamic-variables"><i class="fa fa-check"></i><b>4.6</b> Derived Thermodynamic Variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#thetav"><i class="fa fa-check"></i>Virtual Potential Temperature (K): THETAV</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#wind"><i class="fa fa-check"></i><b>4.7</b> Wind</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#relative-wind"><i class="fa fa-check"></i><b>4.7.1</b> Relative Wind</a></li>
+<li><a href="4-the-state-of-the-atmosphere.html#akrd">Attack Angle, Radome (<span class="math inline">º</span>): AKRD</a></li>
+<li class="chapter" data-level="4.7.2" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#wind-components-and-the-wind-vector"><i class="fa fa-check"></i><b>4.7.2</b> Wind Components and the Wind Vector</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#special-use-remote"><i class="fa fa-check"></i><b>4.8</b> Special-Use Remote Sensors</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html"><i class="fa fa-check"></i><b>5</b> Cloud Physics Variables</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#LWC"><i class="fa fa-check"></i><b>5.1</b> Measurements of Liquid Water Content</a></li>
+<li class="chapter" data-level="5.2" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#sensors-1-D-probes"><i class="fa fa-check"></i><b>5.2</b> Sensors Detecting Individual Hydrometeors (1-D Probes)</a>
+<ul>
+<li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#CRPC"><i class="fa fa-check"></i>Count Rate Per Channel: ACDP, AFSSP, AS100, AF300, AS200, APCAS, A200X, A260X, A200Y, AUHSAS</a></li>
+<li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#size-distribution"><i class="fa fa-check"></i>Size Distribution:</a></li>
+<li class="chapter" data-level="5.2.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#concentration-cm-3-concd-concf-conc3-concp-concu"><i class="fa fa-check"></i><b>5.2.1</b> Concentration (cm<span class="math inline"><em></em><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;</a></li>
+<li><a href="5-cloud-physics-variables.html#mean-diameter">Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU</a></li>
+<li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#dispersion"><i class="fa fa-check"></i>Dispersion (dimensionless): DISPD, DISPF, DISP3, DISP6, DISPP, DISPX, DISPY, DISPU</a></li>
+<li><a href="5-cloud-physics-variables.html#PSD-LWC">Liquid Water Content (g m<strong><span class="math inline"><em></em><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</a></li>
+<li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#DBZ"><i class="fa fa-check"></i>Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD</a></li>
+<li><a href="5-cloud-physics-variables.html#effective-radius">Effective Radius (<span class="math inline"><em>μ</em></span>m): REFFD, REFFF</a></li>
+<li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#fssp-range"><i class="fa fa-check"></i>FSSP-100 Range (dimensionless): FRNG, FRANGE</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#hydrometeor-imaging-probes"><i class="fa fa-check"></i><b>5.3</b> Hydrometeor Imaging Probes</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-air-chemistry-measurements.html"><a href="6-air-chemistry-measurements.html"><i class="fa fa-check"></i><b>6</b> Air Chemistry Measurements</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="6-air-chemistry-measurements.html"><a href="6-air-chemistry-measurements.html#variables-in-standard-data-files"><i class="fa fa-check"></i><b>6.1</b> Variables in Standard Data Files</a></li>
+<li class="chapter" data-level="6.2" data-path="6-air-chemistry-measurements.html"><a href="6-air-chemistry-measurements.html#awas-cims-qcls-toga"><i class="fa fa-check"></i><b>6.2</b> Variables in Special Data Sets</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html"><i class="fa fa-check"></i><b>7</b> Aerosol Particle Measurements</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html#condensation-nucleus-counter"><i class="fa fa-check"></i><b>7.1</b> Condensation Nucleus Counter</a></li>
+<li class="chapter" data-level="7.2" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html#aerosol-spectrometers"><i class="fa fa-check"></i><b>7.2</b> Aerosol Spectrometers</a></li>
+<li class="chapter" data-level="7.3" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html#special-aerosol"><i class="fa fa-check"></i><b>7.3</b> Special Aerosol Measurements</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html"><i class="fa fa-check"></i><b>8</b> Radiation Variables</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html#measurements-of-irradiance-and-radiometric-temperature"><i class="fa fa-check"></i><b>8.1</b> Measurements of Irradiance and Radiometric Temperature</a></li>
+<li class="chapter" data-level="8.2" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html#harp"><i class="fa fa-check"></i><b>8.2</b> Spectral Irradiance and Actinic Flux</a></li>
+<li class="chapter" data-level="8.3" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html#solar-angles"><i class="fa fa-check"></i><b>8.3</b> Solar Angles</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="9-experimental-variables.html"><a href="9-experimental-variables.html"><i class="fa fa-check"></i><b>9</b> Experimental Variables</a></li>
+<li class="chapter" data-level="10" data-path="10-obsolete-variables.html"><a href="10-obsolete-variables.html"><i class="fa fa-check"></i><b>10</b> Obsolete Variables</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="" data-path="appendix-a-list-of-symbols.html"><a href="appendix-a-list-of-symbols.html"><i class="fa fa-check"></i>Appendix A: List of Symbols</a></li>
+<li class="chapter" data-level="" data-path="appendix-b-variable-names.html"><a href="appendix-b-variable-names.html"><i class="fa fa-check"></i>Appendix B: Variable Names</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-how-to-edit-this-document.html"><a href="appendix-c-how-to-edit-this-document.html"><i class="fa fa-check"></i>Appendix C: How to Edit This Document</a>
+<ul>
+<li class="chapter" data-level="" data-path="appendix-c-how-to-edit-this-document.html"><a href="appendix-c-how-to-edit-this-document.html#notes-regarding-the-construction-and-structure-of-this-document"><i class="fa fa-check"></i>Notes regarding the construction and structure of this document:</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-how-to-edit-this-document.html"><a href="appendix-c-how-to-edit-this-document.html#referencing-specific-sections-or-pages-of-this-document-lyx-version"><i class="fa fa-check"></i>Referencing Specific Sections or Pages of this Document (LyX version):</a>
+<ul>
+<li class="chapter" data-level="" data-path="appendix-c-how-to-edit-this-document.html"><a href="appendix-c-how-to-edit-this-document.html#variables"><i class="fa fa-check"></i>Variables</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-how-to-edit-this-document.html"><a href="appendix-c-how-to-edit-this-document.html#page-numbers-lyx-version"><i class="fa fa-check"></i>Page Numbers (LyX Version)</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-how-to-edit-this-document.html"><a href="appendix-c-how-to-edit-this-document.html#sections-and-subsections"><i class="fa fa-check"></i>Sections and Subsections</a></li>
+<li class="chapter" data-level="" data-path="appendix-c-how-to-edit-this-document.html"><a href="appendix-c-how-to-edit-this-document.html#adding-new-targets"><i class="fa fa-check"></i>Adding New Targets</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix-c-how-to-edit-this-document.html"><a href="appendix-c-how-to-edit-this-document.html#referencing-specific-sections-of-this-document-rmarkdown-version"><i class="fa fa-check"></i>Referencing Specific Sections of this Document (RMarkdown version):</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix-d-suggestions-needing-further-attention.html"><a href="appendix-d-suggestions-needing-further-attention.html"><i class="fa fa-check"></i>Appendix D: Suggestions Needing Further Attention</a></li>
+<li class="chapter" data-level="A" data-path="A-index-1.html"><a href="A-index-1.html"><i class="fa fa-check"></i><b>A</b> Index</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">RAF Technical Note: Processing Algorithms</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="index-1" class="section level1" number="11">
+<h1><span class="header-section-number">A</span> Index</h1>
+Page numbers refer to the PDF-format version. Links are to the appropriate
+location in this html-format document, usually to the appropriate section
+containing the referenced term.
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+<div class="col3">
+<p><a href="./5-cloud-physics-variables.html#a1dc-a1dp">A1DC</a>, 66<br />
+<a href="./5-cloud-physics-variables.html#a1dc-a1dp">A1DP</a>, 66<br />
+<a href="./5-cloud-physics-variables.html#CRPC">A200X</a>, 62<br />
+<a href="./5-cloud-physics-variables.html#CRPC">A200Y</a>, 62<br />
+<a href="./5-cloud-physics-variables.html#CRPC">A260X</a>, 62<br />
+<a href="./10-obsolete-variables.html#AACT">AACT</a>, 94<br />
+abbreviations<br />
+  <a href="./2-general-information-about-data-files.html#units-and-abbreviations">non-standard</a>, 6<br />
+acceleration<br />
+  <a href="./3-the-state-of-the-aircraft.html#ACINS">vertical</a>, 11<br />
+<a href="./5-cloud-physics-variables.html#CRPC">ACDP</a>, 62<br />
+<a href="./3-the-state-of-the-aircraft.html#ACINS">ACINS</a>, 11<br />
+<a href="./4-the-state-of-the-atmosphere.html#ad_comp">adiabatic compression</a>, 36<br />
+<a href="./4-the-state-of-the-atmosphere.html#adifr">ADIF</a>, 53<br />
+<a href="./4-the-state-of-the-atmosphere.html#adifr">ADIFR</a>, 53, 54<br />
+[ADS=aircraft data system], 10<br />
+[aeros], 1<br />
+aerosol<br />
+  [ancillary datasets], 77<br />
+  [spectrometer], 76<br />
+<a href="/rmd_output/1/5-cloud-physics-variables.html#CRPC">AF300</a>, 62<br />
+AFIXx, 87<br />
+AFSSP, 62<br />
+airspeed, 31, 33, 34, 36, 53<br />
+  indicated, 88<br />
+AKFXx, 87<br />
+AKRD, 53, 54<br />
+ALAT, 85<br />
+ALON, 85<br />
+ALPHA, 85<br />
+ALT, 15<br />
+ALTG, 21<br />
+altimeter<br />
+  radar, 21<br />
+altitude<br />
+  aircraft<br />
+    GPS, 19<br />
+  geometric, 16<br />
+  geopotential, 16, 32<br />
+  inertial, 15<br />
+  pressure, 13, 16, 22, 32<br />
+ALTX, 23<br />
+angle<br />
+  solar azimuth, 82<br />
+  solar declination, 81<br />
+  solar elevation, 81<br />
+  solar zenith, 82<br />
+angles<br />
+  solar, 81<br />
+APCAS, 62<br />
+APN-159, 21<br />
+AS100, 62<br />
+AS200, 62<br />
+AT_ITR, 37<br />
+ATC, 87<br />
+ATKP, 88<br />
+ATRF, 88<br />
+ATTACK, 54<br />
+attack, angle of, 53<br />
+ATX, 33, 41, 44–46, 48, 50, 53, 75, 91<br />
+ATx, 33, 53<br />
+ATxD, 33<br />
+ATxH, 33<br />
+AUHSAS, 62<br />
+avionics, 29<br />
+Avogadro constant, 4, 42<br />
+AWAS, 72<br />
+baro-inertial loop, 12<br />
+baro-loop, 12<br />
+base time, 7<br />
+BDIF, 53<br />
+BDIFR, 53, 55<br />
+BFIXx, 87<br />
+BLATA, 16<br />
+BLONA, 16<br />
+BNORMA, 16<br />
+Bolton, 47<br />
+Boltzmann constant, 4<br />
+BPITCHR, 16<br />
+BROLLR, 16<br />
+Bulletin 21, 29, 31<br />
+Bulletin 23, 10, 11, 51, 53<br />
+Bulletin 24, 58, 60, 63, 93<br />
+Bulletin 25, 78, 81, 92<br />
+Bulletin 9, 1, 2<br />
+BYAWR, 16<br />
+C1DC, 66<br />
+C1DP, 66<br />
+C200X, 62<br />
+C200Y, 62<br />
+C260X, 62<br />
+calibration, 29<br />
+  coefficients, 9<br />
+  gas, 68<br />
+CAVP_x, 32<br />
+CCDP, 62<br />
+CCEP, 85<br />
+centrifugal acceleration, 14<br />
+CF300, 62<br />
+CFSEC, 85<br />
+CFSSP, 62<br />
+CGS, 85<br />
+CH4_PICx, 68<br />
+chilled-mirror, 44<br />
+CIMS, 72<br />
+CLAT, 85<br />
+CLON, 85<br />
+CMODE, 92<br />
+CN counter, 73<br />
+  3760A, 73<br />
+  3786, 73<br />
+  coincidence in, 74<br />
+  dead time, 74<br />
+  flow rate, 73<br />
+  side flow, 74<br />
+CNTEMP, 73, 75<br />
+CNTS, 74, 75<br />
+CO, 68, 92<br />
+CO2_PICx, 68<br />
+COCAL, 92<br />
+COCOR, 92<br />
+coefficients<br />
+  calibration, 29<br />
+  sensitivity, 30<br />
+compression<br />
+  adiabatic, 33<br />
+COMR_AL, 68<br />
+CONC1DC, 66<br />
+CONC1DP, 66<br />
+CONC3, 63<br />
+CONC6, 63<br />
+CONCD, 63<br />
+concentration<br />
+  2D, 66<br />
+  aerosol, 73<br />
+  ambient, 73<br />
+  calibration gas, 68<br />
+  chemical species, 5, 6<br />
+  CN, 74<br />
+  droplet, 5<br />
+  FSSP, 63<br />
+  hydrometeor, 62<br />
+  hydrometeor, size distribution, 62<br />
+  particle, 77<br />
+  PCAS, 94<br />
+  ultrafine particles, 73<br />
+  water vapor, 42<br />
+CONCF, 63<br />
+CONCH_UVH, 43<br />
+CONCN, 74, 75<br />
+CONCP, 63, 76<br />
+CONCU, 63, 76<br />
+CONCU100, 76<br />
+CONCU500, 76<br />
+CONCV_VXL, 42<br />
+CONCX, 63<br />
+CONCY, 63<br />
+condensation nucleus counter, see CN counter<br />
+conductivity<br />
+  thermal, 59<br />
+conservation of energy, 34<br />
+constants, see symbols<br />
+  table, 4<br />
+CORAW_AL, 68<br />
+Coriolis acceleration, 14<br />
+correction<br />
+  dynamic pressure, 31<br />
+  moist air, 33<br />
+  pressure, 30<br />
+  vertical wind<br />
+    rotation in pitch, 19<br />
+count rate<br />
+  2D, 66<br />
+COZRO, 92<br />
+CPCAS, 62<br />
+CPS=counts per second, 68, 70<br />
+CRHP, 89<br />
+CS100, 62<br />
+CS200, 62<br />
+CSEC, 85<br />
+CUHSAS, 62<br />
+d-value, 32<br />
+data<br />
+  acquisition, 1<br />
+  display, 1<br />
+  processing, 1<br />
+  sample rate, 1<br />
+data rates, 8<br />
+Davies-Jones, 46<br />
+DAY, 7<br />
+DBAR1DC, 67<br />
+DBAR1DP, 67<br />
+DBAR3, 63<br />
+DBAR6, 63<br />
+DBARD, 63<br />
+DBARF, 63<br />
+DBARP, 63<br />
+DBARU, 63<br />
+DBARX, 63<br />
+DBARY, 63<br />
+dBz, 64<br />
+DBZ1DC, 67<br />
+DBZ1DP, 67<br />
+DBZ6, 64<br />
+DBZD, 64<br />
+DBZF, 64<br />
+DBZX, 64<br />
+DBZY, 64<br />
+dead time, 66<br />
+  FSSP, 94<br />
+defect<br />
+  static, 30<br />
+DEI, 15<br />
+density<br />
+  water vapor, 44<br />
+derived variables, 46<br />
+dew point, 38<br />
+  corrected, 38, 40<br />
+diameter<br />
+  equivalent, 64<br />
+  mean, 1D probes, 63<br />
+  mean, 2D probes, 67<br />
+dimensions in equations, 9, 64<br />
+DISP1DC, 67<br />
+DISP1DP, 67<br />
+DISP3, 63<br />
+DISP6, 63<br />
+DISPD, 63<br />
+dispersion, 63, 67<br />
+  1D probes, 63<br />
+DISPF, 63<br />
+DISPP, 63<br />
+DISPU, 63<br />
+DISPX, 63<br />
+DISPY, 63<br />
+DNI, 15<br />
+DP_CR2C, 42<br />
+DP_VXL, 41<br />
+DP_x, 38<br />
+DPCRC, 89<br />
+DPx, 38, 41<br />
+DPXC, 38, 43, 91<br />
+DPxC, 38, 40<br />
+dropsonde, 57<br />
+DT1DC, 66<br />
+DVALUE, 32<br />
+dynamic pressure, 52<br />
+Earth, angular rotation rate, 4<br />
+EDPC, 43, 48, 88<br />
+enhancement factor, 38, 43, 44<br />
+equation<br />
+  thickness, 32<br />
+equations<br />
+  dimensionless, 9<br />
+  scale factors, 9<br />
+EW_UVH, 43<br />
+EWX, 43–46<br />
+EWx, 43<br />
+FACT, 94<br />
+FBMFR, 94<br />
+FCN, 73<br />
+FCNC, 73, 75<br />
+filter<br />
+  Butterworth, 25<br />
+  complementary (for wind), 24<br />
+  electronic, 8<br />
+  FIR, 8<br />
+fit matrix, wind correction, 27<br />
+flight speed, see true airspeed<br />
+flow<br />
+  conversions, 5<br />
+  PCASP, 76<br />
+  SLPM, 5<br />
+  volumetric, 5<br />
+flow distortion, 29<br />
+flow rates, 5<br />
+flux<br />
+  actinic, 80<br />
+FO3_ACD, 69<br />
+FO3_CL, 69<br />
+FO3_x, 69<br />
+foot, 6<br />
+FP_CR2, 42<br />
+FPCRC, 89<br />
+FRANGE, 65<br />
+FRESET, 93<br />
+FRNG, 65<br />
+frost point, 38, 89<br />
+FRST, 93<br />
+FSSP-100<br />
+  activity, 94<br />
+  beam fraction, 94<br />
+  concentration, 63<br />
+  dead time, 93, 94<br />
+  dispersion, 63<br />
+  fast resets, 93<br />
+  liquid water content, 63<br />
+  mean diameter, 63<br />
+  range, 65<br />
+  size distribution, 62<br />
+  total strobes, 93<br />
+FSSP-300, 63<br />
+FSTB, 93<br />
+FSTROB, 93<br />
+FXAZIM, 15<br />
+FXDIST, 15<br />
+GALT_A, 19<br />
+gas constant, 34<br />
+  dry air, 4, 46<br />
+  moist air, 33, 34<br />
+  universal, 4<br />
+  water vapor, 4<br />
+GENPRO, 2<br />
+GEOPHT, 19<br />
+GGALT, 19<br />
+GGALTC, 23<br />
+GGEOIDHT, 20<br />
+GGHWGS, 19<br />
+GGLAT, 18, 28<br />
+GGLON, 18, 28<br />
+GGNSAT, 20<br />
+GGQUAL, 20<br />
+GGSPD, 18<br />
+GGSTATUS, 20<br />
+GGTRK, 20<br />
+GGVEW, 18, 26<br />
+GGVNS, 18, 26<br />
+GGVSPD, 19<br />
+GISMOS, 57<br />
+GLAT, 18<br />
+global positioning system, see GPS<br />
+GLON, 18<br />
+GMODE, 20<br />
+GPS, 10, 16, 24, 27<br />
+  aircraft avionics unit, 17<br />
+  Garmin, 17<br />
+  NovAtel, 16<br />
+  Trimble TANS-III, 17<br />
+GPS receivers, 16<br />
+gravity<br />
+  standard, 16<br />
+ground speed, 15<br />
+GSF, 15, 86<br />
+GSF_G, 18<br />
+GSTAT, 20<br />
+GSTAT_G, 20<br />
+gust probe<br />
+  858AJ, 52<br />
+  radome, 52, 53<br />
+  Rosemount 858AJ, 53<br />
+GVZI, 19<br />
+HARP,see HIAPER Atmospheric Radiation Package<br />
+heading<br />
+  magnetic, 11<br />
+  true, 11<br />
+Heimann radiometer, 78<br />
+HGM, 21<br />
+HGM232, 21<br />
+HGME, 21, 32<br />
+HI3, 21<br />
+HIAPER Atmospheric Radiation Package, 80<br />
+HOUR, 7<br />
+housekeeping variables, 61<br />
+humidity, 38<br />
+  absolute, 44<br />
+  relative, 44<br />
+  relative to ice, 44<br />
+  specific, 45, 53<br />
+hydrometeor detector, 60<br />
+hydrometeor probes<br />
+  table of, 62<br />
+hydrometeor spectrometer, 63<br />
+hygrometer, 38<br />
+  chilled-mirror, 44<br />
+  CR2, 42<br />
+  cryogenic, 45, 89<br />
+  dew point, 38, 45<br />
+  housing, 38<br />
+  Lyman-alpha, 45, 90<br />
+  tunable diode laser, 40, 45<br />
+  UV, 42, 45, 90<br />
+  VCSEL, 37, 40, 41, 45<br />
+ice water content, 64<br />
+impactor<br />
+  giant nucleus, 77<br />
+indicated airspeed, 88<br />
+inertial navigation system, see INS<br />
+inertial reference unit, see IRU<br />
+INS, 10, 24, 51<br />
+  alignment, 10<br />
+  C-MIGITS, 10<br />
+  C130, 10<br />
+  GV, 10<br />
+  Honeywell, 13<br />
+  Honeywell Laseref, 10<br />
+  Litton LTN-51, 12<br />
+  measurements not in normal data files, 16<br />
+  specifications, 11<br />
+instrument descriptions<br />
+  web site, 29<br />
+instruments<br />
+  radiation, 78<br />
+  user, 1<br />
+International Standard Atmosphere, 22<br />
+  lapse rate, 23<br />
+  tropopause, 23<br />
+interpolation, 8<br />
+irradiance, 78<br />
+  long-wave, 79<br />
+  visible, 80<br />
+IRU, 10, 11<br />
+  Litton LTN-51, 86<br />
+  raw variables, 16<br />
+IRx, 91<br />
+IRxC, 79, 91<br />
+IRxHT, 79<br />
+IRxV, 78, 79<br />
+ISA, see International Standard Atmosphere<br />
+Johnson-Williams sensor, 88<br />
+King probe, 58<br />
+  element dimensions, 59<br />
+  power dissipated, 59<br />
+  sensor temperature, 59<br />
+knot, 6<br />
+lags<br />
+  static, 8<br />
+lags in sampling, 8<br />
+lagsdynamic, 8<br />
+LAMS, 30, 31<br />
+LAT, 11, 28<br />
+LAT_G, 18<br />
+LATC, 27<br />
+latent heat of vaporization, 47, 49, 59<br />
+latitude, 11, 27<br />
+lifted condensation level, 47<br />
+linkage. temperature and airspeed, 33<br />
+liquid water content, 58, 63, 67<br />
+  1D probes, 63<br />
+  FSSP-100, 63<br />
+  King probe, 58<br />
+  supercooled, 60<br />
+LON, 11, 28<br />
+LON_G, 18<br />
+LONC, 27<br />
+longitude, 11, 27<br />
+LWC, 88<br />
+LWCC, 88<br />
+Lyman-alpha hygrometer, 40<br />
+Mach number, 31, 35, 36<br />
+  uncorrected, 31<br />
+MACHX, 52, 54<br />
+MACHx, 37, 52, 53<br />
+measurement<br />
+  derived, 8<br />
+  original, 8<br />
+  preferred, 29<br />
+  raw, 8, 33<br />
+meter<br />
+  mass flow, 5<br />
+millibar, 5<br />
+MINUTE, 7<br />
+MIRRORT_CR2, 42<br />
+MIRRTMP_DPx, 38<br />
+mixing ratio<br />
+  conversion, 6<br />
+moist-air properties, 34<br />
+molecular weight<br />
+  dry air, 4<br />
+  water, 4<br />
+MONTH, 7<br />
+motion<br />
+  GPS antenna, 51<br />
+MR, 32, 45, 48, 50<br />
+MRCR, 45<br />
+MRLA, 45<br />
+MRLA1, 45<br />
+MRLH, 45<br />
+MRVXL, 45<br />
+MTP, 57<br />
+Murphy and Koop, 2005, 39<br />
+names<br />
+  variable, 29<br />
+    location in, 29<br />
+    suffixes, 29<br />
+nautical mile, 6<br />
+NetCDF<br />
+  format, 1<br />
+  header, 1, 10<br />
+  vector, 62<br />
+NIDAS, 1, 6, 7<br />
+nimbus, 1<br />
+nomenclature<br />
+  code, 8<br />
+  equations, 8, 9<br />
+O3FS, 92<br />
+O3MR_CL, 69<br />
+OAT, 37<br />
+sample time, 7<br />
+oscillation, Schuler, 10<br />
+PACT, 94<br />
+PALT, 21<br />
+particles<br />
+  ultrafine, 73<br />
+PCAB, 32<br />
+PCASP, 63, 76, 77<br />
+PCN, 73, 75<br />
+PCORS, see pressure corrections<br />
+perfect gas, 33<br />
+PFLW, 76<br />
+PFLWC, 76<br />
+PHDG, 85<br />
+PITCH, 11<br />
+pitch, 11<br />
+platform<br />
+  stabilized, 79, 80<br />
+PLWC, 58<br />
+PLWC1, 58<br />
+PLWC1DC, 67<br />
+PLWC1DP, 67<br />
+PLWC6, 63<br />
+PLWCC, 58<br />
+PLWCC1, 58<br />
+PLWCD, 63<br />
+PLWCF, 63<br />
+PLWCG, 60<br />
+PLWCX, 63<br />
+PLWCY, 63<br />
+potential temperature, see temperature, potential<br />
+ppbv, 5, 6<br />
+ppmv, 5, 6<br />
+pptv, 5, 6<br />
+pressure, 29<br />
+  ambient, 29, 31, 33, 36, 52<br />
+  cabin, 32<br />
+  corrections, 30<br />
+  dew point housing, 38<br />
+  dew-point cavity, 32<br />
+  dynamic, 30, 31, 33, 55<br />
+    corrected, 31<br />
+  inlet, 73<br />
+  partial, water vapor, 38<br />
+  pitot, see pressure, total<br />
+  static, see pressure ambient<br />
+  surface, 32<br />
+  total, 31, 35, 36<br />
+  transducer, 31<br />
+  water vapor, 40<br />
+    equilibrium, 38, 39, 44<br />
+pressure damping, 11<br />
+properties of moist air, 34<br />
+PS_A, 29<br />
+PSDPx, 32<br />
+PSFD, 29<br />
+PSFRD, 29<br />
+PSURF, 32<br />
+PSX, 29, 33<br />
+PSx, 29<br />
+PSXC, 29, 32, 33, 36, 37, 41, 45, 46, 48, 53, 75<br />
+PSxC, 29<br />
+PTIME, 85<br />
+pyranometer, 79, 91<br />
+  calibration, 79<br />
+pyrgeometer, 78, 91<br />
+  calibration, 78<br />
+QCB, 87<br />
+QCBC, 87<br />
+QCF, 54<br />
+QCG, 87<br />
+QCGC, 87<br />
+QCLS, 72<br />
+QCR<br />
+  correction, 31<br />
+QCRC<br />
+  flow-angle correction, 31<br />
+QCX, 31, 33<br />
+QCx, 31<br />
+QCXC, 31, 33, 36<br />
+QCxC, 31, 37, 53<br />
+radar reflectivity factor, 67<br />
+  1D probes, 64<br />
+radiation, 78<br />
+  long-wave, 91<br />
+  short wave, 91<br />
+radiometer<br />
+  Heimann, 78<br />
+  Kipp &amp; Zonen, 79<br />
+radiometers, 78<br />
+radius of the Earth, 4<br />
+radius, effective, 64, 67<br />
+radome gust probe, 52, 53<br />
+range<br />
+  FSSP, 65<br />
+rate of climb, 12<br />
+RAWCONC_VXL, 42<br />
+recovery factor, 34, 35<br />
+  Rosemount sensors, 35<br />
+REFF2DC, 67<br />
+REFF2DP, 67<br />
+REFFD, 64<br />
+REFFF, 64<br />
+reflectivity factor, 64<br />
+relative humidity, see humidity, relative<br />
+relative humidity wrt ice, see humidity, relative to ice<br />
+resets<br />
+  FSSP-100, 93<br />
+reverse-flow temperature sensor, 88<br />
+RHODT, 91<br />
+RHOLA, 45<br />
+RHOUV, 45<br />
+RHOx, 44<br />
+RHUM, 44<br />
+RHUMI, 44<br />
+RICE, 60<br />
+ROLL, 11<br />
+roll, 11<br />
+Rosemount 871F icing probe, 60<br />
+RSTx, 78<br />
+RTHRx, 32<br />
+RTX, 32, 37<br />
+RTx, 32, 33<br />
+RTxH, 32<br />
+samples per second, 6<br />
+sampling rates, 7<br />
+Schuler oscillation, 4, 10, 27<br />
+SCLWC, 93<br />
+SECOND, 7<br />
+sensitivity coefficient<br />
+  ADIFR, 53<br />
+sensor<br />
+  temperature, 33<br />
+    anti-iced, 33<br />
+    heated, 33<br />
+    K-probe, 33<br />
+SFC, 21<br />
+sideslip, angle of, 53, 55<br />
+size distribution<br />
+  2D, 66<br />
+SMPS, 77<br />
+SOLAZ, 82<br />
+SOLDE, 81<br />
+SOLEL, 81<br />
+SOLZE, 82<br />
+specific heat, 34<br />
+  constant pressure, 46<br />
+  dry air<br />
+    constant pressure, 4<br />
+    constant volume, 4<br />
+  moist air, 33, 34<br />
+specific heat ratio, dry air, 4<br />
+spectrometer<br />
+  aerosol mass, 77<br />
+  hydrometeor, 63<br />
+speed<br />
+  ground, 15<br />
+speed of sound, 35<br />
+SPHUM, 45, 53<br />
+SPxPitch, 80<br />
+SPxRoll, 80<br />
+SSFXx, 87<br />
+SSLIP, 55<br />
+SSRD, 54, 55<br />
+Stephan-Boltzmann Constant, 4<br />
+STP, 5<br />
+strobes<br />
+  FSSP, 93<br />
+SWTC, 92<br />
+SWx, 91<br />
+synchronization, 7<br />
+system of units, 5<br />
+TASHC, 33, 34, 53<br />
+TASx, 52, 53<br />
+TASxD, 52<br />
+TCAVB, 78<br />
+TCAVT, 78<br />
+TCNTP, 76<br />
+TCNTU, 76<br />
+TEMP1, 73<br />
+TEMP2, 73<br />
+temperature, 32<br />
+  ambient, 32, 33, 41<br />
+  calculation, 33<br />
+  equivalent potential, 47<br />
+  in-cloud, 37<br />
+  inlet, 73<br />
+  potential, 46, 47<br />
+  pseudo-adiabatic equivalent potential, 46<br />
+  radiometric, 37, 78<br />
+  recovery, 32, 34<br />
+  recovery vs. total, 33<br />
+  reverse-flow, 33<br />
+  sensor, 33<br />
+  static air, 33<br />
+  total, 33, 87<br />
+  virtual, 48<br />
+  virtual potential, 48<br />
+TEO3, 70<br />
+TEO3C, 70<br />
+TEO3P, 70<br />
+TEP, 70<br />
+TET, 70<br />
+THDG, 11<br />
+thermal conductivity, see conductivity, thermal<br />
+THETA, 46, 48<br />
+THETAE, 46<br />
+THETAQ, 49<br />
+THETAV, 48<br />
+THF, 86<br />
+THI, 85<br />
+time<br />
+  base_time, 7<br />
+  example of usage, 7<br />
+  interpolation, 8<br />
+  lags, 8<br />
+  offset, 7<br />
+  shifts, 8<br />
+  variable Time, 7<br />
+  variables, 6<br />
+TKAT_G, 20<br />
+TMLAG, 85<br />
+TOGA, 72<br />
+TPTIME, 85<br />
+trailing cone, 30<br />
+transducer<br />
+  barometric, 29<br />
+  Paroscientific, 30<br />
+triple point of water, 4<br />
+TRSTB, TRSTT, 78<br />
+true airspeed, see airspeed<br />
+TTKP, 33, 88<br />
+TTRF, 33, 87<br />
+TTx, 33, 87<br />
+TVIR, 32, 48<br />
+UHSAS, 76, 77<br />
+  flow, 76<br />
+  STP, 76<br />
+UI, 55<br />
+UIC, 56<br />
+uncertainty<br />
+  wind<br />
+    Technical Note, 51<br />
+units, 5<br />
+  exceptions to SI, 5<br />
+  hertz, 6<br />
+  ppmb, 5<br />
+  ppmv, 5<br />
+units, mixed CGS-MKS, 5<br />
+universal gas constant, 4<br />
+UPRESS, 76<br />
+USFLWC, 76<br />
+USMPFLW, 76<br />
+UVx, 92<br />
+UX, 56<br />
+UXC, 57<br />
+variable<br />
+  derived, 9<br />
+  names in brackets, 8<br />
+  preferred choice, 29<br />
+variable names, 2, 29<br />
+  conventions, 2<br />
+  hydrometeor probes, 60<br />
+variables<br />
+  obsolete<br />
+    TTx, 33<br />
+VCRH, 89<br />
+velocity<br />
+  aircraft, 15, 18, 24<br />
+  aircraft vertical, 12, 19<br />
+VEW, 15, 26, 86<br />
+VEW_G, 18<br />
+VEWC, 24, 28<br />
+VI, 55<br />
+VIC, 56<br />
+viscosity, 59<br />
+VISxC, 80<br />
+VISxHT, 80<br />
+VISxHTV, 80<br />
+VISxV, 79<br />
+VLA, 90<br />
+VLA1, 90<br />
+VNS, 15, 26, 86<br />
+VNS_G, 18<br />
+VNSC, 24, 28<br />
+VSPD, 12, 13<br />
+VSPD_G, 19<br />
+VY, 56<br />
+VYC, 57<br />
+VZI, 86<br />
+water<br />
+  boiling point, 58<br />
+water vapor<br />
+  density, 41, 42, 44<br />
+  mixing ratio, 45<br />
+WD, 56<br />
+WDC, 56<br />
+WDRCTN, 86<br />
+wetting<br />
+  of thermometers, 37<br />
+WGS-84 geoid, 4<br />
+WGS84, 19<br />
+WI, 55<br />
+WIC, 56<br />
+wind, 55<br />
+  components, 55<br />
+  direction, 56<br />
+  GPS-corrected, 56<br />
+  lateral, 56<br />
+  lateral component, 57<br />
+  longitudinal, 56<br />
+  longitudinal component, 57<br />
+  relative, 52<br />
+  sign convention, 55<br />
+  speed, 56<br />
+  uncertainty<br />
+    Tech Note, 10<br />
+  vector, 55, 56<br />
+  vertical, 56<br />
+World Geodetic System, 19<br />
+WP3, 12<br />
+WS, 56<br />
+WSC, 56<br />
+WSPD, 86<br />
+XFO3FNO, 69<br />
+XFO3FS, 69<br />
+XFO3P, 69<br />
+XICN, 74<br />
+XICNC, 74<br />
+XMACH2, 52<br />
+XNCLF, 71<br />
+XNMBT, 71<br />
+XNO, 71<br />
+XNOCAL, 71<br />
+XNOCF, 71<br />
+XNOSF, 71<br />
+XNOY, 71<br />
+XNOYP, 71<br />
+XNOZA, 71<br />
+XNSAF, 71<br />
+XNST, 71<br />
+XNYCAL, 71<br />
+XNZAF, 71<br />
+XO3, 69<br />
+XSIGV_UVH, 42<br />
+XUVI, 90<br />
+XUVP, 90<br />
+XUVT, 90<br />
+XVI, 85<br />
+YEAR, 7<br />
+YVI, 85</p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="appendix-d-suggestions-needing-further-attention.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="site_libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="site_libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
