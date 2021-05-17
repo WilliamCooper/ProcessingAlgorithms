@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 The State of the Atmosphere | RAF Technical Note: Processing Algorithms</title>
   <meta name="description" content="4 The State of the Atmosphere | RAF Technical Note: Processing Algorithms" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 The State of the Atmosphere | RAF Technical Note: Processing Algorithms" />
   <meta property="og:type" content="book" />
@@ -51,8 +51,11 @@
 
 
 <script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="site_libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
 
 
 
@@ -77,7 +80,7 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html"><i class="fa fa-check"></i><b>2</b> General Information About Data Files</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#system-of-units"><i class="fa fa-check"></i><b>2.1</b> System of Units</a></li>
+<li class="chapter" data-level="2.1" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#units-and-abbreviations"><i class="fa fa-check"></i><b>2.1</b> Units and Abbreviations</a></li>
 <li class="chapter" data-level="2.2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#variables-used-to-denote-time"><i class="fa fa-check"></i><b>2.2</b> Variables Used to Denote Time</a></li>
 <li class="chapter" data-level="2.3" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#synchronication-of-measurements"><i class="fa fa-check"></i><b>2.3</b> Synchronization of Measurements</a></li>
 <li class="chapter" data-level="2.4" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#other-comments-on-terminology"><i class="fa fa-check"></i><b>2.4</b> Other Comments on Terminology</a>
@@ -173,6 +176,7 @@
 <li class="chapter" data-level="" data-path="appendix-c-how-to-edit-this-document.html"><a href="appendix-c-how-to-edit-this-document.html#referencing-specific-sections-of-this-document-rmarkdown-version"><i class="fa fa-check"></i>Referencing Specific Sections of this Document (RMarkdown version):</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix-d-suggestions-needing-further-attention.html"><a href="appendix-d-suggestions-needing-further-attention.html"><i class="fa fa-check"></i>Appendix D: Suggestions Needing Further Attention</a></li>
+<li class="chapter" data-level="A" data-path="A-index-1.html"><a href="A-index-1.html"><i class="fa fa-check"></i><b>A</b> Index</a></li>
 </ul>
 
       </nav>
@@ -194,7 +198,7 @@
 <h1><span class="header-section-number">4</span> The State of the Atmosphere</h1>
 <div id="information-on-instruments-and-calibrations" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Information on Instruments and Calibrations</h2>
-<p>The instruments used to collect the measurements that lead to the variables in this section are described on the EOL web site, in the “State Parameters” section at <a href="http://www.eol.ucar.edu/aircraft-instrumentation">this URL</a>. The data acquisition and processing for these variables and the calibration coefficients used where applicable are described .</p>
+<p>The instruments used to collect the measurements that lead to the variables in this section are described on the EOL web site, in the “State Parameters” section at <a href="http://www.eol.ucar.edu/aircraft-instrumentation">this URL</a>. The data acquisition and processing for these variables and the calibration coefficients used where applicable are described.</p>
 </div>
 <div id="variable-names" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Variable Names</h2>
@@ -416,7 +420,7 @@ where <span class="math inline">\(T_a\)</span> is the ambient air temperature. F
 \end{equation}\]</span>
 where primes on quantities like <span class="math inline"><em>c</em><sub><em>p</em></sub><sup>′</sup></span>, or (below) <span class="math inline"><em>c</em><sub><em>v</em></sub><sup>′</sup></span> and <span class="math inline"><em>R</em><sup>′</sup></span> denote properties of moist air, respectively the specific heat at constant pressure, specific heat at constant volume, and gas constant.<br /><br />
 
-<p class="box">
+<p class="box" id="moist-air">
 <strong>Moist-Air Considerations</strong> <br><br>
 Primes on the symbols denote that these values should be moist-air
 values, appropriately weighted averages of the dry-air and water-vapor
@@ -477,7 +481,7 @@ d\left(\frac{U^{2}}{2}\right)+c_{p}^{\prime}dT=0\,\,\,\,.
 \tag{4.15}
 \end{equation}\]</span><br />
 where the total derivatives apply along a streamline as <span class="math inline">\(U\)</span> changes from <span class="math inline">\(U_a\)</span> to <span class="math inline">\(U_t=0\)</span> and <span class="math inline">\(T\)</span> changes from <span class="math inline">\(T_a\)</span> to <span class="math inline">\(T_t\)</span>.<br />
-b). Use the perfect gas law to replace <span class="math inline">\(dT\)</span> with <span class="math inline">\(\frac{pV}{nR}(\frac{dV}{V}+\frac{dp}{p})\)</span> where <span class="math inline">\(V\)</span> and <span class="math inline">\(p\)</span> are the volume and pressure of a parcel of air. Then use the expression for adiabatic compression in the form <span class="math inline">\(pV^\gamma = \mathrm{constant}\)</span> to replace the derivative <span class="math inline">\(\frac{dV}{V}\)</span> with <span class="math inline">\(-\frac{1}{\gamma}\frac{dp}{p}\)</span>, leading to <span class="math inline">\(dT=\frac{R^{\prime}T}{c_{p}^{\prime}}\frac{dp}{p}\)</span> or, after integration, <span class="math inline">\(T(p)=T_{a}\left(\frac{p}{p_{a}}\right)^{R^{\prime}/c_{p}^{\prime}}\)</span>. Using this expression for <span class="math inline">\(T\)</span> in the formula for <span class="math inline">\(dT\)</span> and then integrating both total derivatives in <a href="4-the-state-of-the-atmosphere.html#eq:econ">(4.15)</a> along the streamline leads to<br />
+b). Use the perfect gas law to replace <span class="math inline">\(dT\)</span> with <span class="math inline">\(\frac{pV}{nR}(\frac{dV}{V}+\frac{dp}{p})\)</span> where <span class="math inline">\(V\)</span> and <span class="math inline">\(p\)</span> are the volume and pressure of a parcel of air. Then use the expression for <a name=ad_comp>adiabatic compression</a> in the form <span class="math inline">\(pV^\gamma = \mathrm{constant}\)</span> to replace the derivative <span class="math inline">\(\frac{dV}{V}\)</span> with <span class="math inline">\(-\frac{1}{\gamma}\frac{dp}{p}\)</span>, leading to <span class="math inline">\(dT=\frac{R^{\prime}T}{c_{p}^{\prime}}\frac{dp}{p}\)</span> or, after integration, <span class="math inline">\(T(p)=T_{a}\left(\frac{p}{p_{a}}\right)^{R^{\prime}/c_{p}^{\prime}}\)</span>. Using this expression for <span class="math inline">\(T\)</span> in the formula for <span class="math inline">\(dT\)</span> and then integrating both total derivatives in <a href="4-the-state-of-the-atmosphere.html#eq:econ">(4.15)</a> along the streamline leads to<br />
 <span class="math display" id="eq:Ua2">\[\begin{equation}
 \frac{U_{a}^{2}}{2}+c_{p}^{\prime}T_{a}=c_{p}^{\prime}T_{a}\left(\frac{p_{t}}{p_{a}}\right)^{\frac{R^{\prime}}{c_{p}^{\prime}}}
 \tag{4.16}
@@ -1547,6 +1551,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {

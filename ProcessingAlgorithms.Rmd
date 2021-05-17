@@ -2,40 +2,32 @@
 title: 'RAF Technical Note: Processing Algorithms'
 author: "RAF RSIG"
 date: "March 2021"
-site: bookdown::bookdown_site
-documentclass: book
-output: 
-  bookdown::html_document2:
+output:
+  html_document:
+    df_print: paged
+    keep_tex: yes
+    split_by: chapter+number
     toc: true
     toc_depth: 2
     toc_float: true
-    # lib_dir: assets
-    # split_by: "chapter+number"
-  # html_document:
-  #   toc: true
-  #   toc_depth: 2
-  #   css: columns.css
-  # pdf_document: 
-  #   keep_tex: true
-  #   includes:
-  #     in_header: columns.tex
-  #   config:
-  #     toolbar:
-  #       position: static
-  # bookdown::pdf_book:
-    # keep_tex: yes
-  # bookdown::html_book:
-    # css: toc.css
-# documentclass: book
-  # bookdown::gitbook:
+  bookdown::gitbook:
+    lib_dir: assets
+    split_by: chapter+number
+    keep_tex: yes
     # includes:
-      # in_header: preamble.tex
-      #after_body: postbody.tex
-    # lib_dir: "book_libs"
-    # split_by: "chapter+number"
-    #number_sections: true
-    #toc: true
-    #toc_float: true
+    #   in_header: columns.tex
+  html_document2:
+    keep_tex: yes
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    includes:
+      in_header: columns.tex
+    config:
+      toolbar:
+        position: static
+documentclass: book
+site: bookdown::bookdown_site
 ---
 
 ```{r setup, include=FALSE}
@@ -92,5 +84,7 @@ files still available [here](https://github.com/WilliamCooper/ProcessingAlgorith
 
 ```{r child='Children/Appendices.Rmd'}
 ```
-
+ 
+ ```{r child='Children/Index.Rmd'}
+ ```
 
