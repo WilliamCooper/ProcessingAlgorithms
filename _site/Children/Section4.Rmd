@@ -2,7 +2,7 @@
 
 ## Information on Instruments and Calibrations
 
-The instruments used to collect the measurements that lead to the variables in this section are described on the EOL web site, in the “State Parameters” section at <a href="http://www.eol.ucar.edu/aircraft-instrumentation">this URL</a>. The data acquisition and processing for these variables and the calibration coefficients used where applicable are described .
+The instruments used to collect the measurements that lead to the variables in this section are described on the EOL web site, in the “State Parameters” section at <a href="http://www.eol.ucar.edu/aircraft-instrumentation">this URL</a>. The data acquisition and processing for these variables and the calibration coefficients used where applicable are described.
  
 ## Variable Names
 
@@ -113,7 +113,7 @@ For Rosemount or HARCO temperature probes in current use, the recovery temperatu
 <em>The temperature of the atmosphere at the location of the aircraft, as it would be measured by a sensor at rest relative to the air.</em> {#ATX} 
 The ’x’ in the name of the variable used for ambient temperature, ATx, conveys the same information regarding sensor type and location as the variable name used with total (recovery) temperature. See the discussion above regarding RTx. The ambient temperature (also known as the static air temperature) is calculated from the measured recovery temperature, which is increased above the ambient temperature by dynamic heating caused by the airspeed of the aircraft. The calculated temperature therefore depends on the recovery temperature RTx as well as the dynamic and ambient pressure, usually respectively QCXC and PSXC. The ambient and dynamic pressures are first corrected from the raw measurements QCX and PSX to obtain variables that account for deviations caused by airflow around the aircraft and/or position-dependent systematic errors, as discussed in the section describing PSxC. The following basic equations are developed on the basis of conservation of energy for a perfect gas undergoing an adiabatic compression.<br />
 <br />
-This section combines discussion of the calculations of temperature and airspeed, to reflect the linkage between these derived measurements. To provide accuracy in the equations, this discussion considers effects of the humidity of the air on characteristics like the gas constant and the specific heats. Most archived data before 2012 used values for dry air, although a special variable TASHC has been used to represent the true airspeed in cases where the correction was significant. That variable is based on a good approximation to the results from the following equations; see the discussion of TASHC later in this section. TASHC is now considered an obsolete variable. New variables ATxD and TASxD have been introduced that neglect the humidity corrections and perform all calculations as if the humidity is negligible.<br />
+This section combines discussion of the calculations of temperature and <a name=airspeed1>airspeed</a>, to reflect the linkage between these derived measurements. To provide accuracy in the equations, this discussion considers effects of the humidity of the air on characteristics like the gas constant and the specific heats. Most archived data before 2012 used values for dry air, although a special variable TASHC has been used to represent the true airspeed in cases where the correction was significant. That variable is based on a good approximation to the results from the following equations; see the discussion of TASHC later in this section. TASHC is now considered an obsolete variable. New variables ATxD and TASxD have been introduced that neglect the humidity corrections and perform all calculations as if the humidity is negligible.<br />
 <br />  
 As discussed above, temperature sensors on aircraft that are exposed to the airflow do not measure the total temperature but rather the temperature of the air immediately in contact with the sensing element. This air will not have undergone an adiabatic deceleration completely to zero velocity and hence will have a temperature <span class="math inline"><em>T</em><sub><em>r</em></sub></span> somewhat less than the total temperature <span class="math inline"><em>T</em><sub><em>t</em></sub></span> that would require the air to reach zero velocity. <span class="math inline"><em>T</em><sub><em>r</em></sub></span> is the measured or “recovery” temperature., The ratio of the actual temperature difference attained to the temperature difference relative to the total temperature is defined to be the “recovery factor” $\alpha_r$:
 \begin{equation}
@@ -126,7 +126,7 @@ where $T_a$ is the ambient air temperature. From conservation of energy:
 (\#eq:Ua)
 \end{equation}
 where primes on quantities like <span class="math inline"><em>c</em><sub><em>p</em></sub><sup>′</sup></span>, or (below) <span class="math inline"><em>c</em><sub><em>v</em></sub><sup>′</sup></span> and <span class="math inline"><em>R</em><sup>′</sup></span> denote properties of moist air, respectively the specific heat at constant pressure, specific heat at constant volume, and gas constant.<br />  
-<p class=box>
+<p class=box id="moist-air">
 **Moist-Air Considerations**  <br><br>
 Primes on the symbols denote that these values should be moist-air
 values, appropriately weighted averages of the dry-air and water-vapor
@@ -157,7 +157,7 @@ c_{p}^{\prime} = c_{pd}\frac{R^{\prime}}{R_{d}}\left(1+\frac{1}{7}\frac{e}{p}\ri
 \gamma\,^{\prime} = \gamma_{d}\frac{1+\frac{1}{7}\frac{e}{p}}{1+\frac{1}{5}\frac{e}{p}}
 (\#eq:gammaMoist)
 \end{equation}  
-See also the discussion of TASHC in section XX
+See also the discussion of TASHC [below](#tashc)
 and the reference there for Khelif et al.\ 1999.  
 </p>  
 In \@ref(eq:Ua) <span class="math inline">{<em>U</em><sub><em>a</em></sub>, <em>U</em><sub><em>r</em></sub>, <em>U</em><sub><em>t</em></sub>}</span> are respectively the aircraft true airspeed, the airspeed relative to the aircraft of the air in thermal contact with the sensor, and the airspeed of air relative to the aircraft when fully brought to the motion of the sensor (i.e., zero). Then, from \@ref(eq:Ua)  \begin{equation}
@@ -165,7 +165,7 @@ T_{a}=T_{r}-\alpha_{r}\frac{U_{a}^{2}}{2c_{p}^{\prime}}
 (\#eq:Tair)
 \end{equation}  
 <br /> The temperature sensors used on RAF aircraft are designed to decelerate the air adiabatically to near zero velocity. Recovery factors determined from wind tunnel testing for the Rosemount sensors are approximately 0.97 (unheated model) and 0.98 (heated models).^[The recovery factor determined for the now-obsolete NCAR reverse-flow sensor was 0.6. The recovery factor for the now retired NCAR fast-response (K-probe) temperature sensor was 0.8.]
-These values have also been confirmed from flight maneuvers, often from “speed runs” where the aircraft is flown level through its speed range and the variation of recovery temperature with airspeed is used with \@ref(eq:Tair), with the assumption that <span class="math inline"><em>T</em><sub><em>a</em></sub></span> remains constant, to determine the recovery factor. Data files and project reports normally document what recovery factor was used for calculating the true airspeed and ambient temperature for a particular project.<br />
+These values have also been confirmed from flight maneuvers, often from “speed runs” where the aircraft is flown level through its speed range and the variation of recovery temperature with airspeed is used with \@ref(eq:Tair), with the assumption that <span class="math inline"><em>T</em><sub><em>a</em></sub></span> remains constant, to determine the recovery factor. Data files and project reports normally document what recovery factor was used for calculating the true <a name=airspeed2>airspeed</a> and ambient temperature for a particular project.<br />
 <br />
 Because the values used in processing have varied, the project reports should be consulted to find what was used for particular projects. The Goodrich Technical Report 5755<span id="punch:4-4" label="punch:4-4">[punch:4-4]</span> documents wind-tunnel testing of the probes formerly made by Rosemount. Their plot showed that, for heated sensors, there is a significant variation with Mach number (<span class="math inline"><em>M</em></span>); cf their Eq.\ (38). The dependence in their plot is represented well by the following equations, where $\alpha_r^{[h]}$ refers to heated probes and $\alpha_r^{[u]}$ to unheated probes:  
 \begin{equation}
@@ -180,7 +180,7 @@ Some studies of the recovery factor are discussed further in <a href="https://gi
 <br />
 The true airspeed $U_a$ is used in \@ref(eq:Tair) to calculate the ambient temperature $T_a$. However, the ambient temperature is also needed to calculate the true airspeed. Therefore the constraints imposed on ambient temperature and true airspeed by the measurements of recovery temperature, total pressure (the pressure measured by a pitot tube pointed into the airstream and assumed to be that obtained when the incoming air is brought to rest relative to the aircraft), and ambient pressure must be used to solve simultaneously for the two unknowns, temperature and airspeed.<br />
 <br />
-The relationship is conveniently derived by first calculating the dimensionless Mach number $M$, which is the ratio of the airspeed to the speed of sound $U_{s}=\sqrt{\gamma^{\prime}R^{\prime}T_{a}}$, where $\gamma^\prime$ is the ratio of specific heats of (moist) air, $c_p^\prime /c_v^\prime$ and $R^\prime$ is the gas constant for moist air. The Mach number is a function of air temperature only and can be determined as follows:  
+The relationship is conveniently derived by first calculating the dimensionless Mach number $M$, which is the ratio of the <a name=airspeed3>airspeed</a> to the speed of sound $U_{s}=\sqrt{\gamma^{\prime}R^{\prime}T_{a}}$, where $\gamma^\prime$ is the ratio of specific heats of (moist) air, $c_p^\prime /c_v^\prime$ and $R^\prime$ is the gas constant for moist air. The Mach number is a function of air temperature only and can be determined as follows:  
 
 a). Express energy conservation, as in \@ref(eq:Tair), in the form  
 \begin{equation}
@@ -188,7 +188,7 @@ d\left(\frac{U^{2}}{2}\right)+c_{p}^{\prime}dT=0\,\,\,\,.
 (\#eq:econ)
 \end{equation}  
 where the total derivatives apply along a streamline as $U$ changes from $U_a$ to $U_t=0$ and $T$ changes from $T_a$ to $T_t$.  
-b). Use the perfect gas law to replace $dT$ with $\frac{pV}{nR}(\frac{dV}{V}+\frac{dp}{p})$ where $V$ and $p$ are the volume and pressure of a parcel of air. Then use the expression for adiabatic compression in the form $pV^\gamma = \mathrm{constant}$ to replace the derivative $\frac{dV}{V}$ with $-\frac{1}{\gamma}\frac{dp}{p}$, leading to $dT=\frac{R^{\prime}T}{c_{p}^{\prime}}\frac{dp}{p}$ or, after integration, $T(p)=T_{a}\left(\frac{p}{p_{a}}\right)^{R^{\prime}/c_{p}^{\prime}}$. Using this expression for $T$ in the formula for $dT$ and then integrating both total derivatives in \@ref(eq:econ) along the streamline leads to  
+b). Use the perfect gas law to replace $dT$ with $\frac{pV}{nR}(\frac{dV}{V}+\frac{dp}{p})$ where $V$ and $p$ are the volume and pressure of a parcel of air. Then use the expression for <a name=ad_comp>adiabatic compression</a> in the form $pV^\gamma = \mathrm{constant}$ to replace the derivative $\frac{dV}{V}$ with $-\frac{1}{\gamma}\frac{dp}{p}$, leading to $dT=\frac{R^{\prime}T}{c_{p}^{\prime}}\frac{dp}{p}$ or, after integration, $T(p)=T_{a}\left(\frac{p}{p_{a}}\right)^{R^{\prime}/c_{p}^{\prime}}$. Using this expression for $T$ in the formula for $dT$ and then integrating both total derivatives in \@ref(eq:econ) along the streamline leads to  
 \begin{equation}
 \frac{U_{a}^{2}}{2}+c_{p}^{\prime}T_{a}=c_{p}^{\prime}T_{a}\left(\frac{p_{t}}{p_{a}}\right)^{\frac{R^{\prime}}{c_{p}^{\prime}}}
 (\#eq:Ua2)
@@ -203,7 +203,7 @@ M^{2}=\left(\frac{2c_{v}^{\prime}}{R^{\prime}}\right)\left[\left(\frac{p_{t}}{p_
 \end{equation}  
 which is the same as \@ref(eq:MachEquation). This equation shows that $M$ can be found from measurements of $p_t$ and $p_a$ alone, except for the moist-air corrections.  
 
-d). Use the expression for ambient temperature in terms of recovery temperature and airspeed, \@ref(eq:Tair), to obtain the temperature in terms of the Mach number and the recovery temperature:  
+d). Use the expression for ambient temperature in terms of recovery temperature and <a name=airspeed4>airspeed</a>, \@ref(eq:Tair), to obtain the temperature in terms of the Mach number and the recovery temperature:  
 \begin{align}
 T_{a} & = T_{r}-\alpha_{r}\frac{U_{a}^{2}}{2c_{p}^{\prime}}=T_{r}-\alpha_{r}\frac{M^{2}\gamma^{\prime}R^{\prime}T_{a}}{2c_{p}^{\prime}}\notag\\  
 & = \frac{T_{r}}{1+\dfrac{\alpha_{r}M^{2}R^{\prime}}{2c_{v}^{\prime}}}  
@@ -447,7 +447,7 @@ where $e$ is the water vapor pressure, $\beta_1 = 2840\,\mathrm{K}$, $\beta_2 = 
 ```
 
 Prior to 2011, the variable called the equivalent potential temperature^[The AMS glossary defines equivalent potential temperature as applying to the adiabatic process, not the pseudo-adiabatic process; the name of this variable has therefore been changed.]
-and named THETAE in the output data files was that obtained using the method of Bolton (1980), which used the same formula to obtain the temperature at the lifted condensation level ($T_L$) and then used that temperature to find the value of potential temperature of dry air that would result if the parcel were lifted from that point until all water vapor condensed and was removed from the air parcel. The formulas used were as follows:<br />
+and named THETAE in the output data files was that obtained using the method of <a name=bolton>Bolton</a> (1980), which used the same formula to obtain the temperature at the lifted condensation level ($T_L$) and then used that temperature to find the value of potential temperature of dry air that would result if the parcel were lifted from that point until all water vapor condensed and was removed from the air parcel. The formulas used were as follows:<br />
 ```{r child='THETAEbox.Rmd'}
 ```
   
@@ -481,7 +481,7 @@ where $\Theta_q$ is the wet-equivalent potential temperature, $L_v$ the latent h
 
 ## Wind {#wind}
 
-<p><a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a> documents the calculation of wind components, both with respect to the earth (UI, VI, WI, WS and WD) and with respect to the aircraft (UX and VY). In data processing, a separate function (GUSTO in GENPRO, gust.c in NIMBUS) is used to derive these wind components. That function uses the measurements from an Inertial Navigation System (INS) as well as aircraft true airspeed, aircraft angle of attack, and aircraft sideslip angle. The wind components calculated in GUSTO/gust.c are used to derive the wind direction (WD) and wind speed (WS). Additional variables UIC, VIC, WSC, WDC, UXC, and VYC are also calculated based on the variables VNSC, VEWC discussed in Section \@ref(combining-irs-and-gps-measurements), which combine INS and GPS information to obtain improved measurements of the aircraft motion. Those are usually the highest-quality measurements of wind because the merged INS/GPS variables combine the high-frequency response of the INS with the long-term accuracy of the GPS.</p>
+<p><a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a> documents the calculation of wind components, both with respect to the earth (UI, VI, WI, WS and WD) and with respect to the aircraft (UX and VY). In data processing, a separate function (GUSTO in GENPRO, gust.c in NIMBUS) is used to derive these wind components. That function uses the measurements from an Inertial Navigation System (INS) as well as aircraft true <a name=airspeed5>airspeed</a>, aircraft angle of attack, and aircraft sideslip angle. The wind components calculated in GUSTO/gust.c are used to derive the wind direction (WD) and wind speed (WS). Additional variables UIC, VIC, WSC, WDC, UXC, and VYC are also calculated based on the variables VNSC, VEWC discussed in Section \@ref(combining-irs-and-gps-measurements), which combine INS and GPS information to obtain improved measurements of the aircraft motion. Those are usually the highest-quality measurements of wind because the merged INS/GPS variables combine the high-frequency response of the INS with the long-term accuracy of the GPS.</p>
 <p>There is an extensive discussion of the wind-sensing system and the uncertainties associated with measurements of wind in this <a href="http://dx.doi.org/10.5065/D60G3HJ8">Technical Note</a>. The details contained therein and in Bulletin 23 will not be repeated here, so those documents should be consulted for additional information. There are two exceptions that are discussed in more detail here:</p>
 <ol class="incremental">
 <li><p>The calculation of vertical wind is described in more detail below for the variables WI and WIC.</p></li>
@@ -502,7 +502,7 @@ where $\theta$ and $\psi$ respectively are the pitch and heading angles and $L_G
 
 <p>Wind is measured by adding two vectors, the measured air motion relative to the aircraft (called the relative wind) and the motion of the aircraft relative to the Earth. The following are the measurements used to determine the relative wind. The motion of the aircraft relative to the ground was discussed in Section \@ref(inertial-reference-systems), and the combination of these two vectors to measure the wind is described in <a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a>.</p>
 <p>RAF uses the radome<span id="radome gust-sensing system" label="radome gust-sensing system"></span> gust-sensing technique^[Brown, E. N, C. A. Friehe, and D. H. Lenschow, 1983: <em>Journal of Climate and Applied Meteorology,</em> <strong>22,</strong> 171–180]
-to measure incidence angles of the relative wind (i.e., angles of attack and sideslip). The pressure difference between sensing ports above and below the center line of the radome is used, along with the dynamic pressure measured at a pitot tube and referenced to the static pressure source, to determine the angle of attack. The sideslip angle is determined similarly using the pressure ports on the starboard and port sides of the radome. A Rosemount Model 858AJ gust probe has occasionally been used for specialized measurements. The radome measurements are made by differential pressure sensors located in the nose area of the aircraft and connected to the radome by semi-rigid tubing.</p>
+to measure incidence angles of the relative wind (i.e., angles of attack and sideslip). The pressure difference between sensing ports above and below the center line of the radome is used, along with the dynamic pressure measured at a pitot tube and referenced to the static pressure source, to determine the angle of attack. The sideslip angle is determined similarly using the pressure ports on the starboard and port sides of the radome. A Rosemount Model 858AJ gust probe has occasionally been used for specialized measurements. The radome measurements are made by differential pressure sensors located in the nose area of the aircraft and connected to the radome by semi-rigid tubing.</p>   
 
 #### Mach Number (dimensionless): MACHx, MACHX {-#mach-number}
 

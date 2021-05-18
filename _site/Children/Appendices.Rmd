@@ -1,4 +1,4 @@
-# (APPENDIX) Appendix {-} 
+# (APPENDIX) Appendices {-} 
 
 # Appendix A: List of Symbols {.unnumbered}
 
@@ -104,7 +104,7 @@ Variable Name | Variable Name | Variable Name | Variable Name | Variable Name
 [XUVI](./10-obsolete-variables.html#xuvi)| [XUVP](./10-obsolete-variables.html#xuvi)| [XUVT](./10-obsolete-variables.html#xuvi)| [XVI$\ddagger$](./10-obsolete-variables.html#ltn51)| [YEAR](./2-general-information-about-data-files.html#mdy)
 [YVI$\ddagger$](./10-obsolete-variables.html#ltn51)| 
 
-# Appendix C: How to Edit This Document {.unnumbered}
+# Appendix C: Editing The T.N. {.unnumbered}
 
 ## Notes regarding the construction and structure of this document:{-}
 
@@ -174,7 +174,7 @@ was last updated in Feb 2019. It can be obtained from the [GitHub site](https://
 
 Most discussions of variables are in subsubsubsections with appropriate labels, and those labels can be referenced as in the model provided by Appendix B.  
 
-# Appendix D: Suggestions Needing Further Attention {.unnumbered}
+# Appendix D: Needing Attention {.unnumbered}
 
 <table>
 <thead>

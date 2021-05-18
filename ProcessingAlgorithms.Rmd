@@ -3,29 +3,30 @@ title: 'RAF Technical Note: Processing Algorithms'
 author: "RAF RSIG"
 date: "March 2021"
 output:
-  html_document:
-    df_print: paged
-    keep_tex: yes
-    split_by: chapter+number
-    toc: true
-    toc_depth: 2
-    toc_float: true
   bookdown::gitbook:
     lib_dir: assets
     split_by: chapter+number
     keep_tex: yes
-    # includes:
-    #   in_header: columns.tex
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
   html_document2:
     keep_tex: yes
-    toc: true
+    toc: yes
     toc_depth: 2
-    toc_float: true
+    toc_float: yes
     includes:
       in_header: columns.tex
     config:
       toolbar:
         position: static
+  html_document:
+    df_print: paged
+    keep_tex: yes
+    split_by: chapter+number
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
 documentclass: book
 site: bookdown::bookdown_site
 ---

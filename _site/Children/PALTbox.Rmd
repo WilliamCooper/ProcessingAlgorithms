@@ -1,6 +1,6 @@
 ```{r child='boxStyles.Rmd'}
 ```
-<p class=box>
+<p class=box id="palt-box">
 $T_{0}^{\ddagger}$= 288.15 K, reference temperature  
 $\lambda_{a}^{\ddagger}$ \sindex[lis]{lambdaa@$\lambda_{a}$= tropospheric lapse rate, standard atmosphere}=
 -0.0065 $^{\circ}$C per geopotential meter = the lapse rate\index{International Standard Atmosphere!lapse rate} for the troposphere$^{\ddagger}$  
