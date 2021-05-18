@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 Introduction | RAF Technical Note: Processing Algorithms</title>
-  <meta name="description" content="1 Introduction | RAF Technical Note: Processing Algorithms" />
+  <title>Appendix C: Editing The T.N. | RAF Technical Note: Processing Algorithms</title>
+  <meta name="description" content="Appendix C: Editing The T.N. | RAF Technical Note: Processing Algorithms" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 Introduction | RAF Technical Note: Processing Algorithms" />
+  <meta property="og:title" content="Appendix C: Editing The T.N. | RAF Technical Note: Processing Algorithms" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 Introduction | RAF Technical Note: Processing Algorithms" />
+  <meta name="twitter:title" content="Appendix C: Editing The T.N. | RAF Technical Note: Processing Algorithms" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="2-general-information-about-data-files.html"/>
+<link rel="prev" href="appendix-b-variable-names.html"/>
+<link rel="next" href="appendix-d-needing-attention.html"/>
 <script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="site_libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="site_libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -194,283 +194,139 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Introduction</h1>
-<div id="background-information" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Background Information</h2>
-<p>This technical report defines the variables used in data sets that are collected by the research aircraft operated by the Research Aviation Facility (RAF) of the National Center for Atmospheric Research. Where appropriate, it also documents the equations that are used by the processing software (currently “nimbus”) to calculate the derived measurements that result from the use of one or more other basic measurements (e.g., potential temperature). Since 1993, data from research flights have been archived in NetCDF format (cf. <a href="http://www.unidata.ucar.edu/software/netcdf/docs/">http://www.unidata.ucar.edu/software/netcdf/docs/</a>), and the NetCDF header for recent projects includes detailed information on the measurements present in the file, how they depend on other measurements, units, etc. The conventions that the RAF uses for NetCDF data files are documented at <a href=" http://www.eol.ucar.edu/raf/Software/netCDF.html "> http://www.eol.ucar.edu/raf/Software/netCDF.html </a>.</p>
-<p>This document should change as changes in processing algorithms are implemented, but the intent is also to provide a history of algorithms that have been used, so there is an effort to document how historical data files were processed along with the descriptions of current algorithms. Unlike some technical reports, this document is likely to change over time and should provide a history extending back to <a href="https://opensky.ucar.edu/islandora/object/archives%3A8729">RAF Bulletin 9</a>, which documented the processing algorithms as they existed before about 2003.</p>
-<p>Currently, the data acquisition process on the research aircraft of the Research Aviation Facility, Earth Observing Laboratory, proceeds as follows:</p>
-<ol style="list-style-type: decimal">
-<li>Analog or digital outputs from instruments are sampled at regular intervals, typically 50 Hz when possible. Analog outputs are converted to digital values via analog-to-digital converters. The investigators’ handbooks for each aircraft describe this process in detail, including resolution of the sampling and handling of the results. Often, signals from user-supplied instruments are also included in the measured values that are handled by the data system.<br />
+<div id="appendix-c-editing-the-t.n." class="section level1 unnumbered" number="">
+<h1>Appendix C: Editing The T.N.</h1>
+<div id="notes-regarding-the-construction-and-structure-of-this-document" class="section level2 unnumbered" number="">
+<h2>Notes regarding the construction and structure of this document:</h2>
+<ul>
+<li>The original version is ProcessingAlgorithms.lyx, which needs ’LyX’, a user interface to TeX. It is available on EOL machines like tikal. Start it with “lyx ProcessingAlgorithms.lyx”. This version
+was last updated in Feb 2019. It can be obtained from the <a href="https://github.com/WilliamCooper/ProcessingAlgorithms">GitHub site</a>. Copy this to an RStudio project file to use this version.<br />
 </li>
-<li>The digital outputs are then recorded by the data system on the aircraft. Currently, this is a task of the <a href="http://www.eol.ucar.edu/data/software/nidas">“NIDAS”</a> system described below. That system also controls the sampling, time stamps, and other aspects of data recording.<br />
+<li>A revised version is written in RMarkdown to facilitate editing by others. It provides an HTML version of the document suitable for hosting on web servers. To obtain this version, download <a href="https://github.com/WilliamCooper/ProcessingAlgorithms/tree/Rmd">this repository</a>. Download this branch to an RStudio project directory and use the “Build/Built Website” controls to construct the web site. The output will be in a directory names "_site" and can be moved from there to a web server.<br />
 </li>
-<li>In flight, the data are processed by the <em>“nimbus”</em> data processing program, which makes them available for display via <a name=aeros href="http://www.eol.ucar.edu/raf/Software/aeros_dnld.html">aeros</a> for real-time monitoring of measurements.<br />
+<li>The document is broken into many sections, referenced by the above file, so they must be present also. In the lyx version they have names like Section3.lyx. In the Rmd version, they reside as, e.g., Section3.Rmd in the “Children” directory.<br />
 </li>
-<li>Following the flight, <em>nimbus</em> again processes the data. At this stage, measurements can be re-sampled with averaging and/or interpolation to produce various data rates, usually 1 Hz or 25 Hz, and known lags in measurements can be introduced to adjust measurements to a common time basis. As part of this processing, <em>nimbus</em> applies calibration coefficients where appropriate to convert recorded values (e.g., voltage) to engineering units (e.g., <span class="math inline">\(^\circ\)</span>C). Determining or checking these calibration coefficients is part of the pre-flight and post-flight procedures for each project.<br />
+<li>The lyx document generates three indices: a regular index, a list of symbols, and a list of variables. The references for these are embedded in the .lyx files, and they can be modified or more can be added via the “Insert -&gt; Index Entry” controls. These practices are useful when generating index entries:
+<ul>
+<li>entries like ’wind!relative’ will generate index entries as subordinate entries with ’relative’ below ’wind’.<br />
 </li>
-<li>The output from <em>nimbus</em> is the data file that is the permanent archive from the experiment, often after merging in additional data sets from users that are not recorded in the original data file produced by <em>NIDAS.</em> These files, in NetCDF format, have headers that contain metadata on each measurement (such as the calibration coefficients, the instrument that produced the measurement, etc.). Many of the variables in these files are discussed in this technical note, but the files may also include additional project-specific measurements for which the NetCDF header and the project reports will be the only documentation.</li>
-</ol>
-<p>For assistance accessing data from RAF-supported projects, contact the RAF data management group via <a href="mailto:raf-dm%40eol.ucar.edu">this email address</a>.</p>
-The data system has changed several times over the history of RAF. For a discussion of the history of the data systems, see <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ADSHistory.pdf">this note</a> written by Richard Friesen. The versions of data systems that produced most of the data still available were, approximately, as given in the following table:
-<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:80%; ">
-<table class="table table-bordered" style="margin-left: auto; margin-right: auto;">
-<thead>
-<tr>
-<th style="text-align:center;">
-Data.System
-</th>
-<th style="text-align:center;">
-start
-</th>
-<th style="text-align:center;">
-end
-</th>
-<th style="text-align:left;">
-aircraft
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center;">
-ADS I
-</td>
-<td style="text-align:center;">
-1984
-</td>
-<td style="text-align:center;">
-1992
-</td>
-<td style="text-align:left;">
-King Air 200T, Sabreliner (1987), Electra (1991)
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-ADS II
-</td>
-<td style="text-align:center;">
-1992
-</td>
-<td style="text-align:center;">
-2007
-</td>
-<td style="text-align:left;">
-C-130
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-ADS III (NIDAS)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>
-</td>
-<td style="text-align:center;">
-2005
-</td>
-<td style="text-align:center;">
-</td>
-<td style="text-align:left;">
-GV, C-130 after 2007
-</td>
-</tr>
-</tbody>
-</table>
+<li>I have tried to emphasize using nouns to start index entries, so for example I would favor “coefficient!calibration” over “calibration coefficient.<br />
+</li>
+<li>It is sometimes useful to generate “see xxx” entries, which can be done as follows: “INS|see {Inertial Navigation System}” where the part in braces is also in LaTeX code, generated by pressing CNTL-L.<br />
+</li>
+</ul></li>
+<li>Creating a PDF-format file in LyX usually will generate these lists also.<br />
+</li>
+<li>The LyX files have embedded notes with additional information that should be retained, and exporting to LaTeX will lose this information, so it will be useful to retain the LyX format. The suggested next steps in the table above, for example, almost all have associated notes that will appear in yellow and will help identify where the comment applies.<br />
+</li>
+<li>It is sometimes easiest to edit the PDF file directly. Some of the web references have been changed in this way and can be adjusted as the reference files are moved, e.g., from my Google Drive to the EOL web pages. For this purpose, I found master-pdf-editor useful. This will lose continuity, however, because then the links can’t be re-generated by running LyX.<br />
+</li>
+<li>As of Feb 2019, many links formerly to google-drive addresses or eol system files have been changed to <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms" class="uri">https://github.com/NCAR/aircraft_ProcessingAlgorithms</a> links. In that directory there is a file (’links’) with a list of all the links in the document. It is worthwhile when updating this document to check that all the links remain current. One way is to use these R statements and then check EURL to see that the links are all found:</li>
+</ul>
+<pre><code>    links &lt;- readlines(’./links’); EURL &lt;- rep(FALSE, length(links));
+    for (i in 1:length(links)) {EURL&lt;- RCurl::url.exists(links[i])}</code></pre>
+<ul>
+<li>For the Rmd version:
+<ul>
+<li>there will be no index.<br />
+</li>
+<li>In place of the Table of Symbols, there is Appendix A. It is a .gif copy of the LyX-generated table, and there is no easy way to update it.</li>
+<li>In place of the “Variable Names” index, there is Appendix B that lists the variable names and includes links to appropriate references to variables in the technical note. This is not generated automatically, so when a new variable is added to the document a new entry with appropriate links should be added to Appendix B. Follow the style in “Children/Appendices.Rmd” and add an appropriate target for the link to the new discussion of the variable, which should be a 4th-level heading.</li>
+</ul></li>
+</ul>
 </div>
-<p>Before 1993, data were processed by a different program, “GENPRO,” and a different output format (also named GENPRO) was used for archived datasets. Appendix E in <a href="https://opensky.ucar.edu/islandora/object/archives%3A8729">RAF Bulletin 9</a>, the previous description of RAF data products that is now superseded by this technical note, describes that format. Some variable names in this document, esp. in section <a href="10-obsolete-variables.html#obsolete-variables">10</a>, refer to obsolete variable names, some used with GENPRO and others referring to instruments that are now retired. These names are included here so that this report can be a reference for older archived data as well as for current data files.</p>
+<div id="referencing-specific-sections-or-pages-of-this-document-lyx-version" class="section level2 unnumbered" number="">
+<h2>Referencing Specific Sections or Pages of this Document (LyX version):</h2>
+<div id="variables" class="section level3 unnumbered" number="">
+<h3>Variables</h3>
+<p>
+The document includes named destinations for each variable name, so when used in a URL that destination can be reached. This is done differently in different browsers or PDF viewers:
+</p>
+<ul class="incremental">
+<li>
+<p>
+For a web browser like Chrome or Firefox, use the “nameddest” reference; e.g., for the discussion of variable ATX, use<br />
+<code>firefox <a href="http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf#nameddest=ATX" class="uri">http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf#nameddest=ATX</a></code>
+</p>
+</li>
+<li>
+<p>
+For a pdf viewer like evince, use this syntax:<br />
+<code>evince -n ATX <a href="http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf" class="uri">http://www.eol.ucar.edu/system/files/ProcessingAlgorithms.pdf</a></code>
+</p>
+</li>
+</ul>
+<p>
+Most variable names can be used in these URL modifiers. Here is a list of available targets by section in the report:
+</p>
+<p>
+<span class="underline">Section 1:</span> Time
+</p>
+<p>
+<span class="underline">Section 2:</span> <span>[</span>none<span>]</span>
+</p>
+<p>
+<span class="underline">Section 3:</span> ACINS ALT BLATA BLONA BNORMA BPITCHR BROLLR BYAWR DEI DNI FXAZIM FXDIST GGALT GGLAT GGLON GGNSAT GGOIDHT GGSPD GGSTATUS GGTRK GGVEW GGVNS GGVSPD GGWUAL GMODE GSF HGM HGM232 HGME HI3 LAT LATC LON LONC PALT PITCH ROLL THDG VEW VEWC VNS VNSC VSPD
+</p>
+<p>
+<span class="underline">Section 4:</span> ADIFR AKRD AT_ITR ATx ATX ATxD ATxJ BDIFR CAVP_x CONCH_UVH CONCV_VXL DP_CR2C DP_VXL DPx DP_x DPxC DPXC DVALUE EDPC EW_UHV EWx EWX FP_CR2 MACHx MACHX MIRRORT_CR2 MIRRTMP_DPX MR MRCR MRLA MRLH MRVCL OAT PCAB PS_A PSDPx PSFD PSFRD PSURF PSx PSX PSxC PSXC QCx QCX QCxC QCXC RAWCONC_VXL RHOx RHUM RHUMI RTHRx RTx RTX RTxH SPHUM SSLIP TASHC TASx TASX TASxD THETA THETAE THETAP THETAQ THETAV TVIR UI UIC UX UXC VI VIC VY VYC WD WDC WI WIC WS WSC XSIGV_UHV
+</p>
+<p>
+<span class="underline">Section 5:</span> A1DC A1DP A200X A200Y A260X ACDP AF300 AFSSP APCAS AS100 AUHSAS C1DC C1DP C200X C200Y C260X CCDP CF300 CFSSP COMCP CONC1DC CONC1DC100 CONC1DC150 CONC1DP CONC3 CONC6 CONCD CONCF CONCU CONCX CONCY CPCAS CS100 CUHSAS DBAR1DC DBAR1DP DBAR3 DBAR6 DBARD DBARF DBARP DBARU DBARX DBARY DBZ DBZ1DC DBZ1DP DISP1DC DISP1DP DISP3 DISP6 DISPD DISPF DISPP DISPU DISPX DISPY DT1DC FRANGE FRNG PLWC1 PLWC1DC PLWC1DP PLWC6 PLWCC PLWCC1 PLWCD PLWCF PLWCG PLWCX PLWCY REFF2DC REFF2DP REFFD REFFF RICE
+</p>
+<p>
+<span class="underline">Section 6:</span> CO2_PIC COMR_AL CORAW_AL FO3_ACD FO3_CL O3MR_CL TEO3 TEO3C TEO3P TEP TET XFO3FNO XFO3FS XFO3P XNCLF XNMBT XNO XNOCAL XNOCF XNOSF XNOY XNOYP XNOZA XNSAF XNST XNYCAL XNZAF XO3
+</p>
+<p>
+<span class="underline">Section 7:</span> CNTEMP CNTS CONCN CONCP CONCU CONCU100 CONCU500 FCN FCNC PCN PFLW PFLWC TCHTP TCNTL TEMP1 TEMP2 UPRESS USFLWC USMPFLW XICN XICNC
+</p>
+<p>
+<span class="underline">Section 8:</span> IRxHT IRxV RSTx SPxPitch SPxRoll TRSTx VISxC VISxHT VISxV
+</p>
+<p>
+<span class="underline">Section 9:</span> <span>[</span>none<span>]</span>
+</p>
+<p>
+<span class="underline">Section 10:</span> OBSOLETE
+</p>
 </div>
-<div id="alphabetical-list-of-variables" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Alphabetical List of Variables</h2>
-<p>At the end of this document, there is a list of all the variable names that appear in standard data files along with links to the primary discussion of those variables; see <a href="./appendix-b-variable-names.html#variable-names">Appendix B</a>. In some cases redundant measurements are present, often for key measurements like pressure or temperature. When these are used in subsequent calculation of derived variables like potential temperature, some choice is usually made regarding which measurement is considered most reliable for a particular project or flight, and a single derived variable is calculated on the basis of the chosen input variable(s). To record which measurements were so designated, a reference measurement chosen from a group of redundant measurements usually has a variable name ending with the letter(s) X or XC.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>
-To see the variables in a particular netCDF data file, use the command “ncdump -h file.nc”.</p>
+<div id="page-numbers-lyx-version" class="section level3 unnumbered" number="">
+<h3>Page Numbers (LyX Version)</h3>
+<p>
+To reference a specific page in the document, use a web reference like this:<br />
+<code>ProcessingAlgorithms.pdf#page=44</code>
+</p>
+<p>
+In evince, this syntax will work, or the page number can be specified in this way:
+</p>
+<p>
+<code>evince -p 115 ProcessingAlgorithms.pdf</code>
+</p>
 </div>
-<div id="constants-and-symbols" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Constants and Symbols</h2>
-<p>The following table contains values used for some constants in this document. For reference, the symbols used here and elsewhere in this document are defined in the List of Symbols near the end of the document (cf. <a href="./appendix-a-list-of-symbols.html#list-of-symbols">Appendix A</a>). Where references are to the “NIST Chemistry WebBook”, the associated URL is <a href="http://webbook.nist.gov">http://webbook.nist.gov</a>. References to the CODATA Internationally recommended values of the Fundamental Physical Constants are available at <a href="http://physics.nist.gov/.cuu/.Constants">http://physics.nist.gov/.cuu/.Constants</a>. The optimization involved in adjustment of these coefficients is documented in <a href="https://physics.nist.gov/cuu/pdf/RevModPhys_80_000633acc.pdf">Mohr et al., 2008a</a> and 2008b, referenced at that URL.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>
-In this technical note, references to these symbols will often have these symbols or definitions marked by the symbol <span class="math inline">\(^\dagger\)</span> to indicate that the values used are the standard ones in the following table.</p>
-<hr />
-<blockquote>
-<center>
-<strong><span id="constants-table">Values Used for “Constants”</span></strong>
-</center>
-<p><br>
-<span class="math inline">\(g\)</span> = acceleration
-of gravity  <span class="math inline">\(^{(a)}\)</span> at latitude <span class="math inline">\(\lambda\)</span>  and
-altitude <span class="math inline">\(z\)</span> above the WGS-84 geoid,  <span class="math inline">\(^{(b)}\)</span><br />
-<span class="math display" id="eq:gsublambda">\[\begin{align}
-g(z,\lambda)=g_{e}\left(\frac{1+g_{1}\sin^{2}(\lambda)}{(1-g_{2}\sin^{2}\lambda)^{1/2}}\right)(1-(k_{1}-k_{2}\sin^{2}(\lambda))z+k_{3}z^{2})
-\tag{1.1}
-\end{align}\]</span><br />
-       where <span class="math inline">\(g_{e}=9.780327\)</span> m s<span class="math inline">\(^{-2}\)</span>, <span class="math inline">\(g_{1}=0.00193185\)</span>, <span class="math inline">\(g_{2}=0.00669438\)</span>, and<br />
-        {<span class="math inline">\(k_{1},k_{2},k_{3}\)</span>} = {3.15704<span class="math inline">\(\times 10^{-7}\mathrm{m}^{-1}\)</span>,
-2.10269<span class="math inline">\(\times 10^{-9}\mathrm{m}^{-1}\)</span>, 7.37452<span class="math inline">\(\times 10^{-14}\mathrm{m}^{-2}\)</span>}<br />
-<span class="math inline">\(T_{0}\)</span> = temperature in kelvin corresponding to <span class="math inline">\(0^{\circ}\)</span>C = 273.15 K<br />
-<span class="math inline">\(T_{3}\)</span> = temperature
-corresponding to the triple point of water
-= 273.16 K<br />
-<span class="math inline">\(M_{d}\)</span> = molecular
-weight of dry air<span class="math inline">\(^{(a)}\)</span>, 28.9637
-kg<span class="math inline">\(\,\)</span>kmol<span class="math inline">\(^{-1}\)</span>  <span class="math inline">\(^{(c)}\)</span><br />
-<span class="math inline">\(M_{w}\)</span> = molecular
-weight of water, 18.0153 kg kmol<span class="math inline">\(^{-1}\)</span>  <span class="math inline">\(^{(d)}\)</span><br />
-<span class="math inline">\(R_{0}\)</span> = universal
-gas constant<span class="math inline">\(^{a}\)</span>
-= 8.314472<span class="math inline">\(\times 10^{3}\)</span> J kmol<span class="math inline">\(^{-1}\)</span>K<span class="math inline">\(^{-1}\)</span>   <span class="math inline">\(^{(e)}\)</span><br />
-<span class="math inline">\(N_{A}\)</span> = Avogadro constant = 6.022141<span class="math inline">\(\times 10^{26}\)</span> molecules kmol<span class="math inline">\(^{-1}\)</span><br />
-<span class="math inline">\(k=R_{0}/(\mathrm{N_{A})}=1.38065\times10^{-23}\mathrm{J}\,\mathrm{K}^{-1}\)</span><br />
-<span class="math inline">\(R_{d}=(R_{0}/M_{d}\)</span>) = gas
-constant for dry air<br />
-<span class="math inline">\(R_{w}\)</span> = (<span class="math inline">\(R_{0}/M_{w})\)</span> = gas
-constant for water vapor<br />
-<span class="math inline">\(R_{E}\)</span> = radius of
-the Earth = 6.371229<span class="math inline">\(\times 10^{6}\)</span>m  <span class="math inline">\(^{(f)}\)</span><br />
-<span class="math inline">\(c_{p}\)</span> = specific
-heat of dry air at constant pressure
-= <span class="math inline">\(\frac{7}{2}R_{d}\)</span> = 1.00473<span class="math inline">\(\times10^{3}\)</span> J kg<span class="math inline">\(^{-1}\)</span>K<span class="math inline">\(^{-1}\)</span>  <span class="math inline">\(^{(g)}\)</span><br />
-<span class="math inline">\(c_{v}\)</span> = specific
-heat of dry air at constant volume
-= <span class="math inline">\(\frac{5}{2}R_{d}\)</span> = 0.71766<span class="math inline">\(\times 10^{3}\)</span> J kg<span class="math inline">\(^{-1}\)</span>K<span class="math inline">\(^{-1}\)</span><br />
-     <em>(specific heat values are at 0<span class="math inline">\(^{\circ}\)</span>C; small variations
-with temperature are not included here)</em><br />
-<span class="math inline">\(\gamma\)</span> = ratio
-of specific heats, <span class="math inline">\(c_{p}/c_{v}\)</span>,
-taken to be 1.4 (dimensionless) for dry air<br />
-<span class="math inline">\(\Omega\)</span> = angular
-rotation rate of the Earth =
-7.292115<span class="math inline">\(\times10^{-5}\)</span> radians/s<br />
-<span class="math inline">\(\Omega_{Sch}\)</span> = angular
-frequency of the Schuler oscillation =
-<span class="math inline">\(\sqrt{\frac{g}{R_{E}}}\)</span><br />
-<span class="math inline">\(\sigma\)</span> = Stephan-Boltzmann
-Constant = 5.6704<span class="math inline">\(\times10^{-8}\)</span>W m<span class="math inline">\(^{-2}\)</span>K<span class="math inline">\(^{-4}\)</span>  <span class="math inline">\(^{(e)}\)</span></p>
-__________<br>
-<sup>(a)</sup> The International Standard Atmosphere specifies <span class="math inline">\(g=9.80665\)</span> m s<sup>-2</sup>,
-<span class="math inline">\(M_{w}\)</span>=28.9644 and <span class="math inline">\(R_{0}\)</span> = 8.31432x10<sup>3</sup> J kmol<sup>-1</sup>K<sup>-1</sup>,
-so these values are used to calculate pressure altitude.<br />
-<sup>(b)</sup> cf. Moritz, H., 1988: Geodetic Reference System 1980, Bulletin Geodesique,
-Vol. 62 , no. 3, and <a href="http://earth-info.nga.mil/GandG/publications/tr8350.2/wgs84fin.pdf">this link</a>.<br />
-<sup>(c)</sup> Jones, F. E., 1978: J. Res. Natl. Bur. Stand., 83(5), 419, as quoted
-by Lemmon, E. W., R. T. Jacobsen, S. G. Penoncello, and D. G., Friend,
-J. Phys. Chem. Ref. Data, Vol. 29, No. 3, 2000, pp. 331-385. The quoted
-values of mole fraction are from Jones (1978) and the calculation of mean
-molecular weight is shown in the following table
-using values of molecular weights
-taken from the NIST Standard Reference Database 69: NIST Chemistry
-WebBook as of March 2011. With CO<sub>2</sub> about 0.00041 (as in 2020) and others
-decreased proportionately, the mean is 28.9640.
-<table style="width:70%;">
-<caption>
-<span id="tab:unnamed-chunk-20">Table 1.1: </span>Calculation of the mean molecular weight of air
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-Gas
-</th>
-<th style="text-align:left;">
-mole fraction x
-</th>
-<th style="text-align:left;">
-molecular weight M
-</th>
-<th style="text-align:left;">
-x*M
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-N<sub>2</sub>
-</td>
-<td style="text-align:left;">
-0.78102
-</td>
-<td style="text-align:left;">
-28.0134
-</td>
-<td style="text-align:left;">
-21.87903
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-O<sub>2</sub>
-</td>
-<td style="text-align:left;">
-0.20946
-</td>
-<td style="text-align:left;">
-31.9988
-</td>
-<td style="text-align:left;">
-6.70247
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Ar
-</td>
-<td style="text-align:left;">
-0.00916
-</td>
-<td style="text-align:left;">
-39.948
-</td>
-<td style="text-align:left;">
-0.36592
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-CO<sub>2</sub>
-</td>
-<td style="text-align:left;">
-0.00033
-</td>
-<td style="text-align:left;">
-44.0095
-</td>
-<td style="text-align:left;">
-0.01452
-</td>
-</tr>
-</tbody>
-</table>
-<p>          The mean value is 28.9619, but see above for a more modern adjustment.<br><br>
-<sup>(d)</sup> NIST Standard Reference Database 69: NIST Chemistry WebBook as of
-March 2011.<br>
-<sup>(e)</sup> 2006 CODATA<br />
-<sup>(f)</sup> matching the value used by the inertial reference systems, as discussed
-in the “INS” section.<br />
-<sup>(g)</sup> The specific heat of dry air at 1013 hPa and 250–280 K as given
-by Lemmon et al. (2000) is 29.13 J/(mol-K), which translates to <span class="math inline">\(1005.8\pm 0.3\)</span>
-J/(kg-K). However, the uncertainty limit associated with values of
-specific heat is quoted as 1%, and the experimental data cited in
-that paper show scatter that is at least comparable to several tenths
-percent, so the ideal-gas value cited here is well within the range
-of uncertainty. For this reason, and because this value is in widespread
-use, the ideal-gas value is used throughout the algorithms described
-here.</p>
-</blockquote>
-<hr />
+<div id="sections-and-subsections" class="section level3 unnumbered" number="">
+<h3>Sections and Subsections</h3>
+<p>
+Targets have not been provided for other parts of the document, but the above method of referencing pages can be used to link to specific sections and other components of the document.
+</p>
+</div>
+<div id="adding-new-targets" class="section level3 unnumbered" number="">
+<h3>Adding New Targets</h3>
+<p>
+<p>When a new variable is added, a new anchor point can be added by inserting, in LaTeX mode, “\nop{LAT}” at the appropriate point in the LyX document. (“\nop” has been defined to use \hypertarget but displace the reference upward one line.) In addition, when a new variable is added, entries should be made in the index items and the variable-names list, following the pattern used for existing variables, and if appropriate any new symbols used in discussing the algorithm should be added to the similar symbols list.</p>
 </div>
 </div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>ADS III is the name given to the full data system, which includes these components: NIDAS (for data acquisition and recording); NIMBUS (for data processing, both in flight and after the flight); AEROS (for data display in flight); and the Mission Coordinator Station and satellite communications system (for transmission of data to and from the aircraft, display of such data for mission decisions, and support for written “chat” communications among project participants both on the aircraft and on the ground).<a href="1-introduction.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>Some that do not follow this convention are ATTACK and SSLIP; see the individual descriptions that follow.<a href="1-introduction.html#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>P. J. Mohr, B. N. Taylor, and D. B. Newell, Rev. Mod. Phys 80(2), 633-730(2008); P. J. Mohr, B. N. Taylor, and D. B. Newell, J. Phys. Chem. Ref. Data 37(3), 1187-1284(2008).<a href="1-introduction.html#fnref3" class="footnote-back">↩︎</a></p></li>
-</ol>
+<div id="referencing-specific-sections-of-this-document-rmarkdown-version" class="section level2 unnumbered" number="">
+<h2>Referencing Specific Sections of this Document (RMarkdown version):</h2>
+<p>Most discussions of variables are in subsubsubsections with appropriate labels, and those labels can be referenced as in the model provided by Appendix B.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="2-general-information-about-data-files.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="appendix-b-variable-names.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendix-d-needing-attention.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="site_libs/gitbook-2.6.7/js/app.min.js"></script>

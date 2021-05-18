@@ -3,7 +3,7 @@
 ```{r child='boxStyles.Rmd'}
 ```
 <!-- <h2 id="condensation-nucleus-counters">Condensation Nucleus Counters</h2> -->
-## Condensation Nucleus Counter
+## Condensation Nucleus Counter {#condensation-nucleus-counter}
 
 <p>RAF uses two modified TSI, Inc. <a href="http://www.eol.ucar.edu/instruments/condensation-nucleus-counter-water-or-butanol">condensation nucleus counters</a> to measure the total concentration of ultrafine particles in the atmosphere, a 3760A using n-butyl alcohol and a water-based 3786 WCN (water condensation nucleus) counter. Both are sensitive to particles in the approximate diameter range from 0.010–3 <span lang="el">m</span>m.<br />
 </p>
@@ -50,7 +50,7 @@ In the following formulae, the corrected flow FCNC in VLPM is explicitly convert
 
 </p>
 <!-- <h2 id="aerosol-spectrometers">Aerosol Spectrometers</h2> -->
-## Aerosol Spectrometers
+## Aerosol Spectrometers {#aerosol-spec}
 
 <p>For size-resolved measurements of the concentration of aerosol particles, RAF deploys two instruments. The <a href="https://www.eol.ucar.edu/instruments/ultra-high-sensitivity-aerosol-spectrometer">Ultra High Sensitivity Aerosol Spectrometer</a> (UHSAS) sizes particles in 99 bins from 0.06 to 1.0 <span lang="el">m</span>m diameter, and the <a href="http://www.eol.ucar.edu/instruments/passive-cavity-aerosol-spectrometer-probe">Passive Cavity Aerosol Spectrometer Probe</a> (PCASP) has 30 channels covering the diameter range 0.1 to 3 <span lang="el">m</span>m. Flow and total concentration variables for these instruments are described in this section, while additional variables are covered along with other 1-D probes in Sect.\ \@ref(sensors-1-D-probes), “Sensors Detecting Individual Hydrometeors (1-D Probes).”</p>
 
@@ -68,7 +68,7 @@ Unlike the other 1-d probes, both UHSAS and PCASP have internal pumps so their s
 
 The total particle counts in each sample interval for, respectively, the UHSAS and PCASP instruments. These values are the sum of counts in all cells of the spectrometers, as represented in the vector variables CUHSAS or CS200. See the discussion of these variables in Sect.\ \@ref(sensors-1-D-probes).
 
-#### Concentration, sum over all channels (cm^-3^s^-1^): CONCU, CONCP, CONCU100, CONCU500 {-#concu-concp{}}
+#### Concentration, sum over all channels (cm^-3^s^-1^): CONCU, CONCP, CONCU100, CONCU500 {-#concu-concp}
 
 <em>The particle concentrations summed over all or a subset of channels.</em> CONCU and CONCP are summed over all channels in the UHSAS and PCASP, respectively, and are calculated as in the following boxed equations. CONCU100 and CONCU500 are concentrations summed over channels in the UHSAS giving particle concentrations for diameters greater than or equal to 100 nm and 500 nm, respectively, and are calculated as for CONCU except with TCNTU replaced by the sum over the appropriate channels.<br />  
 ```{r child='CONCUbox.Rmd'}
@@ -77,7 +77,7 @@ The total particle counts in each sample interval for, respectively, the UHSAS a
 <!-- <h2 id="special-aerosol-measurements">Special Aerosol Measurements</h2> -->
 ## Special Aerosol Measurements {#special-aerosol}
 
-<p>Data from an aerosol mass spectrometer, a scanning mobility particle spectrometer, and a giant nucleus impactor are recorded by these instruments in separate data files and are not recorded by the aircraft data system. The ancillary data sets are not merged into the netCDF archives produced by EOL, so the special data files must be used for these measurements. The data formats are described with the instruments at the references given below:<br />
+<p>Data from an aerosol mass spectrometer, a scanning mobility particle spectrometer, and a giant nucleus impactor are recorded by these instruments in separate data files and are not recorded by the aircraft data system. The <a name=anc_data>ancillary data sets</a> are not merged into the netCDF archives produced by EOL, so the special data files must be used for these measurements. The data formats are described with the instruments at the references given below:<br />
 <br />
 
 * <strong>Aerosol Mass Spectrometer (AMS) data files</strong> contain size-segregated chemical composition of non-refractory, submicron aerosol particles. The instrument is described here: [AMS](https://www.eol.ucar.edu/instruments/time-flight-aerosol-mass-spectrometer).  
