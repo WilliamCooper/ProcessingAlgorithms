@@ -1,8 +1,8 @@
 ```{r child='boxStyles.Rmd'}
 ```
 <p class=box>
-PSXC = ambient total air pressure. hPa   
-EWX = ambient water vapor pressure, hPa  
+[PSXC](#psx) = ambient total air pressure. hPa   
+[EWX](#ewx) = ambient water vapor pressure, hPa  
 $C_{kg2g}=10^{3}\,$g$\,$kg$^{-1}$ (conversion factor to give
 final units of g$\,$kg$^{-1}$)  
 $M_{w}=$molecular weight of water$^{\dagger}$  

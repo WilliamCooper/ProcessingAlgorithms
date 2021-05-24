@@ -131,10 +131,10 @@
 <ul>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#CRPC"><i class="fa fa-check"></i>Count Rate Per Channel: ACDP, AFSSP, AS100, AF300, AS200, APCAS, A200X, A260X, A200Y, AUHSAS</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#size-distribution"><i class="fa fa-check"></i>Size Distribution:</a></li>
-<li class="chapter" data-level="5.2.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#concentration-cm-3-concd-concf-conc3-concp-concu"><i class="fa fa-check"></i><b>5.2.1</b> Concentration (cm<span class="math inline"><em></em><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;</a></li>
+<li class="chapter" data-level="5.2.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#concentration-cm-3-concd-concf-conc3-concp-concu"><i class="fa fa-check"></i><b>5.2.1</b> Concentration (cm<span class="math inline"><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;</a></li>
 <li><a href="5-cloud-physics-variables.html#mean-diameter">Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#dispersion"><i class="fa fa-check"></i>Dispersion (dimensionless): DISPD, DISPF, DISP3, DISP6, DISPP, DISPX, DISPY, DISPU</a></li>
-<li><a href="5-cloud-physics-variables.html#PSD-LWC">Liquid Water Content (g m<strong><span class="math inline"><em></em><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</a></li>
+<li><a href="5-cloud-physics-variables.html#PSD-LWC">Liquid Water Content (g m<strong><span class="math inline"><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#DBZ"><i class="fa fa-check"></i>Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD</a></li>
 <li><a href="5-cloud-physics-variables.html#effective-radius">Effective Radius (<span class="math inline"><em>μ</em></span>m): REFFD, REFFF</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#fssp-range"><i class="fa fa-check"></i>FSSP-100 Range (dimensionless): FRNG, FRANGE</a></li>
@@ -375,12 +375,12 @@ For air temperature <span class="math inline">\(T \ge -50^\circ\)</span>C:<br />
 <strong>Corrected Frost Point Temperature (<span class="math inline"><em></em><sup>∘</sup><em>C</em></span>): FPCRC</strong><br />
 <strong>Corrected Dew Point Temperature (<span class="math inline"><em></em><sup>∘</sup><em>C</em></span>): DPCRC</strong><br /></p>
 <p>The first two of these measurements were made directly in the chamber of the cryogenic hygrometer, a now obsolete cabin-mounted instrument connected to outside air by an inlet line. VCRH was determined from a third-order calibration equation applied to the voltage measured by the instrument. <span id="punch:10-3" label="punch:10-3">[punch:10-3]</span>
-The corrected frost point and dew point temperatures are those determined after corrections are applied to the direct measurements from a cryogenic hygrometer. These measurements were from a now obsolete instrument but the variables are included here because they appear in some old data files. To obtain estimates of the ambient frost point and dew point, the measurements made inside the chamber of the cryogenic hygrometer (CVRH and CRHP) must be corrected for the difference in water vapor pressure between that chamber and ambient conditions. The ratio of the chamber pressure to the ambient pressure is assumed to be the same as the ratio of the chamber vapor pressure to the ambient vapor pressure. The vapor pressure in the chamber was determined from the Goff-Gratch (1946) equation<a href="#fn56" class="footnote-ref" id="fnref56"><sup>56</sup></a>
+The corrected frost point and dew point temperatures are those determined after corrections are applied to the direct measurements from a cryogenic hygrometer. These measurements were from a now obsolete instrument but the variables are included here because they appear in some old data files. To obtain estimates of the ambient frost point and dew point, the measurements made inside the chamber of the cryogenic hygrometer (CVRH and CRHP) must be corrected for the difference in water vapor pressure between that chamber and ambient conditions. The ratio of the chamber pressure to the ambient pressure is assumed to be the same as the ratio of the chamber vapor pressure to the ambient vapor pressure. The vapor pressure in the chamber was determined from the Goff-Gratch (1946) equation<a href="#fn55" class="footnote-ref" id="fnref55"><sup>55</sup></a>
 for saturation vapor pressure with respect to a plane ice surface. This vapor pressure was then used with CRHP and a measure of the ambient pressure (PSXC) to determine the vapor pressure in the outside air, and this was converted to an equivalent dew-point. The instrument was only used for measurements of frost point less than -15<span class="math inline"><em></em><sup>∘</sup></span>C because it did not function well above that frost point. <span id="punch:10-4" label="punch:10-4">[punch:10-4]</span>The steps are documented below:</p>
 <p class="box">
-VCRH = frost point inside the cryogenic hygrometer [<span class="math inline">\(^{\circ}\)</span>C]<br />
-CRHP = pressure inside the chamber of the cryogenic hygrometer [hPa]<br />
-PSXC = reference ambient pressure [hPa]<br />
+<a href="10-obsolete-variables.html#cryo-hygro">VCRH</a> = frost point inside the cryogenic hygrometer [<span class="math inline">\(^{\circ}\)</span>C]<br />
+<a href="10-obsolete-variables.html#cryo-hygro">CRHP</a> = pressure inside the chamber of the cryogenic hygrometer [hPa]<br />
+<a href="./4-the-state-of-the-atmosphere.html#psx">PSXC</a> = reference ambient pressure [hPa]<br />
 f<span class="math inline">\(_{i}\)</span> = enhancement factor (see Appendix C of Bulletin 9)<br />
 <span class="math inline">\(F_{1}\)</span>(<span class="math inline">\(T_{d}\)</span>) =Goff-Gratch formula for vapor pressure at dew
 point <span class="math inline">\(T_{d}\)</span><br />
@@ -424,12 +424,12 @@ e_{a} &amp; = F_{1}\left(\mathrm{\{DPCRC\}}\right)\notag \\
 <h4>Voltage Output from the UV Hygrometer (V): XUVI</h4>
 <p><em>The voltage from a modern (as of 2009) version of the Lyman-alpha hygrometer, which provides a signal that represents water vapor density.</em> The instrument also provides measurements of pressure and temperature inside the sensing cavity; they are, respectively, <strong><span class="underline">XUVP</span></strong> and <strong><span class="underline">XUVT</span></strong>. These variables and the processing algorithm below have now been replaced by XSIGV_UVH and the algorithm discussed with the variable EW_UVH.</p>
 <p class="box">
-XUVI = output from the UV Hygrometer, after application of calibration
+<a href="10-obsolete-variables.html#xuvi">XUVI</a> = output from the UV Hygrometer, after application of calibration
 coefficients<br />
-DPXC = corrected dewpoint from some preferred source,
+<a href="./4-the-state-of-the-atmosphere.html#dewpt-corrected">DPXC</a> = corrected dewpoint from some preferred source,
 <span class="math inline">\(^{\circ}\)</span>C<br />
-ATX = preferred temperature, <span class="math inline">\(^{\circ}\)</span>C<br />
-RHODT =water vapor density determined by a chilled-mirror
+<a href="./4-the-state-of-the-atmosphere.html#ambient-t">ATX</a> = preferred temperature, <span class="math inline">\(^{\circ}\)</span>C<br />
+<a href="./4-the-state-of-the-atmosphere.html#rho">RHODT</a> =water vapor density determined by a chilled-mirror
 sensor<br />
 Tau = time constant for the exponential update (typically 300 s)
 </p>
@@ -451,7 +451,7 @@ For valid measurements (i.e., when DPXC <span class="math inline">\(&lt;\)</span
 <strong>Corrected Infrared Irradiance (W m<span class="math inline"><em></em><sup> − 2</sup></span>):</strong> <strong><span class="underline">IRxC</span></strong><br />
 Because the pyrgeometer measures net radiation, IRx must be corrected for emission from the dome covering the sensor and for emission from the thermopile itself. IRxC is the corrected infrared irradiance, determined following procedures of <a href="http://journals.ametsoc.org/doi/pdf/10.1175/1520-0450%281977%29016%3C0190%3APFIPP%3E2.0.CO%3B2">Albrecht and Cox, 1977</a>.</p>
 <p class="box">
-IRx = raw pyrgeometer output [W<span class="math inline">\(\,\)</span>m<span class="math inline">\(^{-2}\)</span>]<br />
+<a href="10-obsolete-variables.html#irx">IRx</a> = raw pyrgeometer output [W<span class="math inline">\(\,\)</span>m<span class="math inline">\(^{-2}\)</span>]<br />
 <span class="math inline">\(T_{D}\)</span> = dome temperature [K]<br />
 <span class="math inline">\(T_{S}\)</span> = ``sink’’ temperature (approx. the thermopile temperature)
 [K]<br />
@@ -528,8 +528,8 @@ probe in the time interval <span class="math inline">\(\Delta t\)</span> [g]<br 
 <h4>FSSP-100 Beam Fraction (dimensionless): FBMFR</h4>
 <p><em>The ratio of the number of velocity-accepted particles (particles that pass through the effective beam diameter) to the total number of particles detected in the depth-of-field of the beam (the total strobes).</em> See the discussion of Total Strobes for more information.</p>
 <p class="box">
-{AFSSP}<span class="math inline">\(_{i}\)</span> = valid particles sized in size interval i<br />
-{FSTROB} = strobes generated by particles in the depth-of-field,<br />
+{<a href="./5-cloud-physics-variables.html#CRPC">AFSSP</a>}<span class="math inline">\(_{i}\)</span> = valid particles sized in size interval i<br />
+{<a href="10-obsolete-variables.html#fstrob">FSTROB</a>} = strobes generated by particles in the depth-of-field,<br />
               per sample interval
 </p>
 <p class="box2">
@@ -543,9 +543,9 @@ probe in the time interval <span class="math inline">\(\Delta t\)</span> [g]<br 
 <h4>FSSP-100 Calculated Activity Fraction (dimensionless): FACT</h4>
 <p>This variable represents the fraction of the time that the FSSP is unable to count and size particles (its “dead time”). The activity fraction is not measured directly but is estimated from fast resets and total strobes along with measurements of the dead times associated with each (as determined in laboratory tests). The characteristic times are in the NetCDF header (for recent projects).</p>
 <p class="box">
-FSTROB = strobes generated by particles in the depth-of-field,<br />
+<a href="10-obsolete-variables.html#fstrob">FSTROB</a> = strobes generated by particles in the depth-of-field,<br />
           per sample interval<br />
-FRESET = ``fast resets’’ generated per sample interval<br />
+<a href="10-obsolete-variables.html#freset">FRESET</a> = ``fast resets’’ generated per sample interval<br />
 <span class="math inline">\(t_{1}\)</span> = slow reset time (for each strobe)<br />
 <span class="math inline">\(t_{2}\)</span> - fast reset time (for each fast reset)
 </p>
@@ -578,8 +578,8 @@ However, PACT (or AACT) is the variable archived in the data files.<br />
 
 <div class="footnotes">
 <hr />
-<ol start="56">
-<li id="fn56"><p>Goff, J. A., and S. Gratch (1946) Low-pressure properties of water from 160 to 212 °F, referenced and used in the Smithsonian Tables (List, 1980).<a href="10-obsolete-variables.html#fnref56" class="footnote-back">↩︎</a></p></li>
+<ol start="55">
+<li id="fn55"><p>Goff, J. A., and S. Gratch (1946) Low-pressure properties of water from 160 to 212 °F, referenced and used in the Smithsonian Tables (List, 1980).<a href="10-obsolete-variables.html#fnref55" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

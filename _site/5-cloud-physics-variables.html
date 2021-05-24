@@ -131,10 +131,10 @@
 <ul>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#CRPC"><i class="fa fa-check"></i>Count Rate Per Channel: ACDP, AFSSP, AS100, AF300, AS200, APCAS, A200X, A260X, A200Y, AUHSAS</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#size-distribution"><i class="fa fa-check"></i>Size Distribution:</a></li>
-<li class="chapter" data-level="5.2.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#concentration-cm-3-concd-concf-conc3-concp-concu"><i class="fa fa-check"></i><b>5.2.1</b> Concentration (cm<span class="math inline"><em></em><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;</a></li>
+<li class="chapter" data-level="5.2.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#concentration-cm-3-concd-concf-conc3-concp-concu"><i class="fa fa-check"></i><b>5.2.1</b> Concentration (cm<span class="math inline"><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;</a></li>
 <li><a href="5-cloud-physics-variables.html#mean-diameter">Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#dispersion"><i class="fa fa-check"></i>Dispersion (dimensionless): DISPD, DISPF, DISP3, DISP6, DISPP, DISPX, DISPY, DISPU</a></li>
-<li><a href="5-cloud-physics-variables.html#PSD-LWC">Liquid Water Content (g m<strong><span class="math inline"><em></em><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</a></li>
+<li><a href="5-cloud-physics-variables.html#PSD-LWC">Liquid Water Content (g m<strong><span class="math inline"><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#DBZ"><i class="fa fa-check"></i>Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD</a></li>
 <li><a href="5-cloud-physics-variables.html#effective-radius">Effective Radius (<span class="math inline"><em>μ</em></span>m): REFFD, REFFF</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#fssp-range"><i class="fa fa-check"></i>FSSP-100 Range (dimensionless): FRNG, FRANGE</a></li>
@@ -201,11 +201,12 @@
 <h2><span class="header-section-number">5.1</span> Measurements of Liquid Water Content</h2>
 <div id="plwc" class="section level4 unnumbered" number="">
 <h4>Power, PMS/CSIRO (King) Liquid Water Content (W): PLWC, PLWC1</h4>
-<p><em>The power dissipated by the sensor of a PMS/CSIRO (King) liquid water probe (in watts).</em> PLWC is the power required to maintain constant temperature in a heated element as that element is cooled by convection and evaporation of impinging liquid water. The convective heat losses are determined by calibration in dry air over a range of airspeeds and temperatures, so that the remaining power can be related to the liquid water content. The instrument is described in <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a> and at <a href="http://www.eol.ucar.edu/instruments/king-csiro-liquid-water-sensor">this URL</a>. See (which follows) for processing.<br /><span id="punch:5-3" label="punch:5-3">[punch:5-3]</span></p>
+<p><em>The power dissipated by the sensor of a PMS/CSIRO (King) liquid water probe (in watts).</em> PLWC is the power required to maintain constant temperature in a heated element as that element is cooled by convection and evaporation of impinging liquid water. The convective heat losses are determined by calibration in dry air over a range of airspeeds and temperatures, so that the remaining power can be related to the liquid water content. The instrument is described in <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a> and at <a href="http://www.eol.ucar.edu/instruments/king-csiro-liquid-water-sensor">this URL</a>. See the following
+description for the algorithm used to obtain liquid water content from this measurement of power.<br /><span id="punch:5-3" label="punch:5-3">[punch:5-3]</span></p>
 </div>
 <div id="plwcc" class="section level4 unnumbered" number="">
-<h4>PMS/CSIRO (King) Liquid Water Content (g/m<span class="math inline"><em></em><sup>3</sup></span>): PLWCC, PLWCC1</h4>
-<em>The liquid water content</em> <em>measured by a King probe.</em> This is calculated by relating the power consumption required to maintain a constant temperature to the liquid water content, taking into account the effect of convective heat losses. The instrument and processing are described by King et al. (1978)<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a>
+<h4>PMS/CSIRO (King) Liquid Water Content (g/m<span class="math inline"><sup>3</sup></span>): PLWCC, PLWCC1</h4>
+<em>The liquid water content</em> <em>measured by a King probe.</em> This is calculated by relating the power consumption required to maintain a constant temperature to the liquid water content, taking into account the effect of convective heat losses. The instrument and processing are described by King et al. (1978)<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a>
 and in a note available at <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PLWCCrev140214.pdf">this URL</a>. Because the temperature of the sensing wire is typically well above the boiling point of water, the assumption made in processing is that the water collected on the sensing wire is vaporized at the boiling point <span class="math inline"><em>T</em><sub><em>b</em></sub></span>. The boiling point is represented as a function of pressure as described below.<br />
 </p>
 <style>
@@ -236,7 +237,7 @@ border-radius: 1px;
 }
 </style>
 <p class="box">
-PLWC = total power dissipated by the probe [W]<br />
+<a href="5-cloud-physics-variables.html#plwc">PLWC</a> = total power dissipated by the probe [W]<br />
 <span class="math inline">\(P_{D}\)</span> = power dissipated
 by the cooling effect of dry air alone<br />
 <span class="math inline">\(P_{W}\)</span> = power needed to heat and vaporize the liquid water that
@@ -248,7 +249,7 @@ typically 0.021 m<br />
 element, typically 1.805<span class="math inline">\(\times10^{-3}\)</span>m<br />
 <span class="math inline">\(T_{s}\)</span>= sensor temperature
 [<span class="math inline">\(^{\circ}\)</span>C]<br />
-<span class="math inline">\(T_{a}\)</span>= ambient temperature [<span class="math inline">\(^{\circ}\)</span>C] = ATX<br />
+<span class="math inline">\(T_{a}\)</span>= ambient temperature [<span class="math inline">\(^{\circ}\)</span>C] = <a href="./4-the-state-of-the-atmosphere.html#ambient-t">ATX</a><br />
 <span class="math inline">\(T_{b}\)</span> =
 boiling temperature of water (dependent on pressure):<br />
          with <span class="math inline">\(x=\log_{10}(p/(1\)</span>hPa)), <span class="math inline">\(B=1^{\circ}\)</span>C,<br />
@@ -261,7 +262,7 @@ boiling temperature of water (dependent on pressure):<br />
 <span class="math inline">\(c_{w}\)</span> =
 specific heat of water = 4190 J<span class="math inline">\(\,\)</span>kg<span class="math inline">\(^{-1}\)</span>K<span class="math inline">\(^{-1}\)</span> (mean value,
 0–90<span class="math inline">\(^{\circ}\)</span>C)<br />
-<span class="math inline">\(U_{a}\)</span> = true airspeed [m/s] = TASX<br />
+<span class="math inline">\(U_{a}\)</span> = true airspeed [m/s] = <a href="./4-the-state-of-the-atmosphere.html#true-airspeed">TASX</a><br />
 <span class="math inline">\(\lambda_{c}\)</span>
 = thermal conductivity
 of dry air (2.38+0.0071<span class="math inline">\(T_{m}\)</span>)<span class="math inline">\(\times10^{-2}\)</span>J<span class="math inline">\(\,\)</span>m<span class="math inline">\(^{-1}\)</span>s<span class="math inline">\(^{-1}\)</span>K<span class="math inline">\(^{-1}\)</span><br />
@@ -308,7 +309,7 @@ P_{W}=L\,d[L_{v}(T_{b})+c_{w}(T_{b}-T_{a})]\,U_{a}\chi
 \tag{5.4}
 \end{equation}\]</span>
 </p>
-In addition, a processing step is used to remove drift by calculating the offset required to zero measurements obtained outside cloud. This is done by adjusting the coefficient <span class="math inline"><em>a</em><sub>0</sub></span> by nudging toward the value required to give zero liquid water content outside cloud (as indicated by another instrument, often a CDP showing droplet concentration of &lt;1 cm<span class="math inline"><em></em><sup> − 3</sup></span>). Specifically, when out-of-cloud, Nu<span class="math inline"><em></em><sup>′</sup></span> is calculated from Nu<span class="math inline"><em></em><sup>′</sup> = {<em>P</em><em>L</em><em>W</em><em>C</em>}/(<em>π</em><em>L</em><em>λ</em><sub><em>c</em></sub>(<em>T</em><sub><em>s</em></sub> − <em>T</em><sub><em>a</em></sub>))</span>. Then the value of <span class="math inline"><em>a</em><sub>0</sub></span> is updated via <span class="math inline"><em>a</em><sub>0</sub></span> += (Nu<span class="math inline"><em></em><sup>′</sup>/<em>R</em><em>e</em><sup><em>a</em><sub>1</sub></sup> − <em>a</em><sub>0</sub>)/<em>τ</em></span> (using, for the GV, separate coefficients for each of the three branches). In this formula, <span class="math inline"><em>τ</em></span> should be the number of updates in a fixed period, e.g., for a 100 s time constant and for 25-Hz processing, <span class="math inline"><em>τ</em> = 100 × 25</span>. In addition, to avoid jumps when switching among the branches, the linear coefficients {<span class="math inline"><em>a</em><sub>0</sub></span>} are adjusted with each transition between branches to provide a continuous estimate of the zero value.
+In addition, a processing step is used to remove drift by calculating the offset required to zero measurements obtained outside cloud. This is done by adjusting the coefficient <span class="math inline"><em>a</em><sub>0</sub></span> by nudging toward the value required to give zero liquid water content outside cloud (as indicated by another instrument, often a CDP showing droplet concentration of &lt;1 cm<span class="math inline"><sup> − 3</sup></span>). Specifically, when out-of-cloud, Nu<span class="math inline"><sup>′</sup></span> is calculated from Nu<span class="math inline"><sup>′</sup> = {<em>PLWC</em>}/(<em>πLλ</em><sub><em>c</em></sub>(<em>T</em><sub><em>s</em></sub> − <em>T</em><sub><em>a</em></sub>))</span>. Then the value of <span class="math inline"><em>a</em><sub>0</sub></span> is updated via <span class="math inline"><em>a</em><sub>0</sub></span> += (Nu<span class="math inline"><sup>′</sup>/<em>Re</em><sup><em>a</em><sub>1</sub></sup> − <em>a</em><sub>0</sub>)/<em>τ</em></span> (using, for the GV, separate coefficients for each of the three branches). In this formula, <span class="math inline"><em>τ</em></span> should be the number of updates in a fixed period, e.g., for a 100 s time constant and for 25-Hz processing, <span class="math inline"><em>τ</em> = 100 × 25</span>. In addition, to avoid jumps when switching among the branches, the linear coefficients {<span class="math inline"><em>a</em><sub>0</sub></span>} are adjusted with each transition between branches to provide a continuous estimate of the zero value.
 </p>
 </div>
 <div id="plwcg" class="section level4 unnumbered" number="">
@@ -325,228 +326,317 @@ In addition, a processing step is used to remove drift by calculating the offset
 </div>
 <div id="sensors-1-D-probes" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Sensors Detecting Individual Hydrometeors (1-D Probes)</h2>
-<p>
-The RAF operates a set of hydrometeor detectors that provide single-dimension measurements (i.e., not images) of individual particle sizes. <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a> contains extensive information on the operating principles and characteristics of some of the older instruments. Here the focus will be on the meanings of the variables in the archived data files.<span id="punch:5-2" label="punch:5-2">[punch:5-2]</span>
-</p>
-<p>
-<span id="VariableNames1DProbes" label="VariableNames1DProbes"></span>Four- and five-character variable names shown in this section are generic. The actual names appearing in NIMBUS-generated production output data sets have appended to them an underscore (_) and three or four more characters that indicate a probe’s specific aircraft mounting location. For example, AFSSP_RPI refers to a variable from an FSSP-100 probe mounted on the inboard, right-side pod. The codes presently in use are given in the following table. For the GV, there are 12 locations available, characterized by three letters. The first is the wing ({L,R} for {port,starboard}), the second is the pylon ({I,M,O} for inboard, middle, outboard}), the third is which of the two possible canister locations at the pylon is used ({I,O} for {inboard, outboard}).
-</p>
-<table>
+<p>The RAF operates a set of hydrometeor detectors that provide single-dimension measurements (i.e., not images) of individual particle sizes. <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a> contains extensive information on the operating principles and characteristics of some of the older instruments. Here the focus will be on the meanings of the variables in the archived data files.<span id="punch:5-2" label="punch:5-2">[punch:5-2]</span></p>
+<p><span id="VariableNames1DProbes" label="VariableNames1DProbes"></span>Four- and five-character variable names shown in this section are generic. The actual names appearing in NIMBUS-generated production output data sets have appended to them an underscore (_) and three or four more characters that indicate a probe’s specific aircraft mounting location. For example, AFSSP_RPI refers to a variable from an FSSP-100 probe mounted on the inboard, right-side pod. The codes presently in use are given in the following table. For the GV, there are 12 locations available, characterized by three letters. The first is the wing ({L,R} for {port,starboard}), the second is the pylon ({I,M,O} for inboard, middle, outboard}), the third is which of the two possible canister locations at the pylon is used ({I,O} for {inboard, outboard}).</p>
+<!-- The following HTML table is now converted to R Markdown: -->
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:80%; ">
+<table class="table table-bordered" style="margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th style="text-align: center;">
-<strong>Code</strong>
+<tr>
+<th style="text-align:center;">
+suffix
 </th>
-<th style="text-align: center;">
-<strong>Location</strong>
+<th style="text-align:center;">
+location
 </th>
-<th style="text-align: center;">
-<strong>Aircraft</strong>
+<th style="text-align:center;">
+aircraft
 </th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 OBL
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Outboard Left
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 C-130Q
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 IBL
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Inboard Left
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 C-130Q
 </td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 OBR
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Outboard Right
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 C-130Q
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 IBR
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Inboard Right
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 C-130Q
 </td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 LPO
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Left Pod Outboard
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 C-130Q
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 LPI
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Left Pod Inboard
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 C-130Q
 </td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 LPC
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Left Pod Center
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 C-130Q
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 RPO
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Right Pod Outboard
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 C-130Q
 </td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 RPI
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Right Pod Inboard
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 C-130Q
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 RPC
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Right Pod Center
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 C-130Q
 </td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 OBL
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Left Wing
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Electra
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 IBL
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Left Pylon
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Electra
 </td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 WDL
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Window Left
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Electra
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 OBR
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Right Wing
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Electra
 </td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 IBR
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Right Pylon
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Electra
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 WDR
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Window Right
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 Electra
 </td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 {L,R}W{I,M,O}{I,O}
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 see discussion above
 </td>
-<td style="text-align: center;">
+<td style="text-align:center;">
 GV
 </td>
 </tr>
 </tbody>
 </table>
-<p>
-The probe type also is coded into each variable’s name, sometimes using four characters, sometimes only one: FSSP-100 (FSSP or F), FSSP-300 (F300 or 3), CDP (CDP or D), UHSAS (UHSAS or U), PCASP (PCAS or P), OAP-200X (200X or X), OAP-260X (260X or 6) and OAP-200Y (200Y or Y). Prefix letters are used to identify the type of measurement (A=accumulated particle counts per time interval per channel, C = concentration per channel, CONC = Concentration from all channels, DBAR = mean diameter, DISP = dispersion, PLWC =liquid water content, DBZ = radar reflectivity factor).
-</p>
-<p>
-Some of the probes discussed in this section are primarily aerosol spectrometers but are described here rather than in Section <a href="7-aerosol-particle-measurements.html#aerosol-particle-measurements">7</a> because they are similar to the hydrometeor spectrometers and so are most economically discussed here. However, see Section <a href="7-aerosol-particle-measurements.html#aerosol-particle-measurements">7</a> for the processing algorithms that lead to concentrations from the UHSAS and PCASP/SPP-200. The following table and discussion includes some obsolete variables (for the 200X and 200Y) for the same reason. The table also includes some variables derived from imaging spectrometers (the 2DC and 2DP probes) to highlight that the primary variables are similar to those discussed in this sub-section. Those variables are discussed in the next sub-section. In two cases, the FSSP and PCASP, two versions are listed, an obsolete version and a current version with a revised processing package (SPP-100 for the FSSP, SPP-200 for the PCASP). Both are included for historical completeness, but algorithms in this document discuss the current versions.
-</p>
+</div>
+<!-- <table> -->
+<!-- <thead> -->
+<!-- <tr class="header"> -->
+<!-- <th style="text-align: center;"><strong>Code</strong></th> -->
+<!-- <th style="text-align: center;"><strong>Location</strong></th> -->
+<!-- <th style="text-align: center;"><strong>Aircraft</strong></th> -->
+<!-- </tr> -->
+<!-- </thead> -->
+<!-- <tbody> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">OBL</td> -->
+<!-- <td style="text-align: center;">Outboard Left</td> -->
+<!-- <td style="text-align: center;">C-130Q</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">IBL</td> -->
+<!-- <td style="text-align: center;">Inboard Left</td> -->
+<!-- <td style="text-align: center;">C-130Q</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">OBR</td> -->
+<!-- <td style="text-align: center;">Outboard Right</td> -->
+<!-- <td style="text-align: center;">C-130Q</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">IBR</td> -->
+<!-- <td style="text-align: center;">Inboard Right</td> -->
+<!-- <td style="text-align: center;">C-130Q</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">LPO</td> -->
+<!-- <td style="text-align: center;">Left Pod Outboard</td> -->
+<!-- <td style="text-align: center;">C-130Q</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">LPI</td> -->
+<!-- <td style="text-align: center;">Left Pod Inboard</td> -->
+<!-- <td style="text-align: center;">C-130Q</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">LPC</td> -->
+<!-- <td style="text-align: center;">Left Pod Center</td> -->
+<!-- <td style="text-align: center;">C-130Q</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">RPO</td> -->
+<!-- <td style="text-align: center;">Right Pod Outboard</td> -->
+<!-- <td style="text-align: center;">C-130Q</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">RPI</td> -->
+<!-- <td style="text-align: center;">Right Pod Inboard</td> -->
+<!-- <td style="text-align: center;">C-130Q</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">RPC</td> -->
+<!-- <td style="text-align: center;">Right Pod Center</td> -->
+<!-- <td style="text-align: center;">C-130Q</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">OBL</td> -->
+<!-- <td style="text-align: center;">Left Wing</td> -->
+<!-- <td style="text-align: center;">Electra</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">IBL</td> -->
+<!-- <td style="text-align: center;">Left Pylon</td> -->
+<!-- <td style="text-align: center;">Electra</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">WDL</td> -->
+<!-- <td style="text-align: center;">Window Left</td> -->
+<!-- <td style="text-align: center;">Electra</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">OBR</td> -->
+<!-- <td style="text-align: center;">Right Wing</td> -->
+<!-- <td style="text-align: center;">Electra</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">IBR</td> -->
+<!-- <td style="text-align: center;">Right Pylon</td> -->
+<!-- <td style="text-align: center;">Electra</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">WDR</td> -->
+<!-- <td style="text-align: center;">Window Right</td> -->
+<!-- <td style="text-align: center;">Electra</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">{L,R}W{I,M,O}{I,O}</td> -->
+<!-- <td style="text-align: center;">see discussion above</td> -->
+<!-- <td style="text-align: center;">GV</td> -->
+<!-- </tr> -->
+<!-- </tbody> -->
+<!-- </table> -->
+<p>The probe type also is coded into each variable’s name, sometimes using four characters, sometimes only one: FSSP-100 (FSSP or F), FSSP-300 (F300 or 3), CDP (CDP or D), UHSAS (UHSAS or U), PCASP (PCAS or P), OAP-200X (200X or X), OAP-260X (260X or 6) and OAP-200Y (200Y or Y). Prefix letters are used to identify the type of measurement (A=accumulated particle counts per time interval per channel, C = concentration per channel, CONC = Concentration from all channels, DBAR = mean diameter, DISP = dispersion, PLWC =liquid water content, DBZ = radar reflectivity factor).</p>
+<p>Some of the probes discussed in this section are primarily aerosol spectrometers but are described here rather than in Section <a href="7-aerosol-particle-measurements.html#aerosol-particle-measurements">7</a> because they are similar to the hydrometeor spectrometers and so are most economically discussed here. However, see Section <a href="7-aerosol-particle-measurements.html#aerosol-particle-measurements">7</a> for the processing algorithms that lead to concentrations from the UHSAS and PCASP/SPP-200. The following table and discussion includes some obsolete variables (for the 200X and 200Y) for the same reason. The table also includes some variables derived from imaging spectrometers (the 2DC and 2DP probes) to highlight that the primary variables are similar to those discussed in this sub-section. Those variables are discussed in the next sub-section. In two cases, the FSSP and PCASP, two versions are listed, an obsolete version and a current version with a revised processing package (SPP-100 for the FSSP, SPP-200 for the PCASP). Both are included for historical completeness, but algorithms in this document discuss the current versions.</p>
 <p id="housekeeping">
 The archived data files sometimes have “housekeeping” variables included that provide information on the operating state and data quality from the probes. For example, the CDP provides information on the average transit time, the voltage from the nominal 5-V source, the control board temperature, the laser block temperature, the laser current, the laser power monitor, the qualifier bandwidth, the qualifier baseline, the qualifier threshold, the sizer baseline, the wing-board temperature, an A-to-D overflow flag, and a count of particles rejected as being outside the depth of field. The netCDF variables and attributes should be consulted for this housekeeping information. The large number of housekeeping variables will not be included in this document, so appropriate manuals and the netCDF files should be consulted when interpreting this information.
 </p>
-<p>
 <strong>Probes that produce size distributions of particles (with links to descriptions):<span id="TableOfProbes" label="TableOfProbes"></span></strong>
-</p>
 <table>
 <thead>
 <tr class="header">
@@ -556,13 +646,13 @@ The archived data files sometimes have “housekeeping” variables included tha
 <th style="text-align: center;">
 </th>
 <th style="text-align: center;">
-<strong>Probe</strong><a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a>
+<strong>Probe</strong><a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a>
 </th>
 <th style="text-align: center;">
 <strong>Channels</strong>
 </th>
 <th style="text-align: center;">
-<strong>Usable</strong><a href="#fn40" class="footnote-ref" id="fnref40"><sup>40</sup></a>
+<strong>Usable</strong><a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a>
 </th>
 <th style="text-align: center;">
 <strong>Diameter Range</strong>
@@ -581,7 +671,7 @@ The archived data files sometimes have “housekeeping” variables included tha
 <span>F</span>
 </td>
 <td style="text-align: center;">
-<span>FSSP-100</span><a href="#fn41" class="footnote-ref" id="fnref41"><sup>41</sup></a>
+<span>FSSP-100</span><a href="#fn40" class="footnote-ref" id="fnref40"><sup>40</sup></a>
 </td>
 <td style="text-align: center;">
 <span>0–15</span>
@@ -668,7 +758,7 @@ variable
 <span>3</span>
 </td>
 <td style="text-align: center;">
-<span><a href="https://www.eol.ucar.edu/instruments/forward-scattering-spectrometer-probe-model-300">FSSP-300</a><span class="math inline"><em></em><sup><em>b</em></sup></span></span>
+<span><a href="https://www.eol.ucar.edu/instruments/forward-scattering-spectrometer-probe-model-300">FSSP-300</a><span class="math inline"><sup><em>b</em></sup></span></span>
 </td>
 <td style="text-align: center;">
 <span>0–30</span>
@@ -677,7 +767,7 @@ variable
 <span>1–30</span>
 </td>
 <td style="text-align: center;">
-<span>0.3–20.0 <span class="math inline"><em>μ</em><em>m</em></span></span>
+<span>0.3–20.0 <span class="math inline"><em>μm</em></span></span>
 </td>
 <td style="text-align: center;">
 <span>variable</span>
@@ -691,7 +781,7 @@ PCASP/original
 P
 </td>
 <td style="text-align: center;">
-PCASP<span class="math inline"><em></em><sup><em>b</em></sup></span>
+PCASP<span class="math inline"><sup><em>b</em></sup></span>
 </td>
 <td style="text-align: center;">
 0–15
@@ -723,7 +813,7 @@ P
 <span>1–30</span>
 </td>
 <td style="text-align: center;">
-<span>0.1–3.0 <span class="math inline"><em>μ</em><em>m</em></span></span>
+<span>0.1–3.0 <span class="math inline"><em>μm</em></span></span>
 </td>
 <td style="text-align: center;">
 <span>variable</span>
@@ -737,7 +827,7 @@ P
 <span>X</span>
 </td>
 <td style="text-align: center;">
-OAP-200X<span><span class="math inline"><em></em><sup><em>b</em></sup></span></span>
+OAP-200X<span><span class="math inline"><sup><em>b</em></sup></span></span>
 </td>
 <td style="text-align: center;">
 <span>0–15</span>
@@ -746,10 +836,10 @@ OAP-200X<span><span class="math inline"><em></em><sup><em>b</em></sup></span></s
 <span>1–15</span>
 </td>
 <td style="text-align: center;">
-<span>40–280 <span class="math inline"><em>μ</em><em>m</em></span></span>
+<span>40–280 <span class="math inline"><em>μm</em></span></span>
 </td>
 <td style="text-align: center;">
-<span>10 <span class="math inline"><em>μ</em><em>m</em></span></span>
+<span>10 <span class="math inline"><em>μm</em></span></span>
 </td>
 </tr>
 <tr class="odd">
@@ -769,10 +859,10 @@ OAP-260X
 <span>3–62</span>
 </td>
 <td style="text-align: center;">
-<span>40-620 <span class="math inline"><em>μ</em><em>m</em></span></span>
+<span>40-620 <span class="math inline"><em>μm</em></span></span>
 </td>
 <td style="text-align: center;">
-<span>10 <span class="math inline"><em>μ</em><em>m</em></span></span>
+<span>10 <span class="math inline"><em>μm</em></span></span>
 </td>
 </tr>
 <tr class="even">
@@ -783,7 +873,7 @@ OAP-260X
 <span>Y</span>
 </td>
 <td style="text-align: center;">
-<span>OAP-200Y<span class="math inline"><em></em><sup><em>b</em></sup></span></span>
+<span>OAP-200Y<span class="math inline"><sup><em>b</em></sup></span></span>
 </td>
 <td style="text-align: center;">
 <span>0-15</span>
@@ -792,27 +882,27 @@ OAP-260X
 <span>1–15</span>
 </td>
 <td style="text-align: center;">
-<span>300–4500 <span class="math inline"><em>μ</em><em>m</em></span></span>
+<span>300–4500 <span class="math inline"><em>μm</em></span></span>
 </td>
 <td style="text-align: center;">
-<span>300 <span class="math inline"><em>μ</em><em>m</em></span></span>
+<span>300 <span class="math inline"><em>μm</em></span></span>
 </td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">
-1DC<a href="#fn42" class="footnote-ref" id="fnref42"><sup>42</sup></a>
+1DC<a href="#fn41" class="footnote-ref" id="fnref41"><sup>41</sup></a>
 </td>
 <td style="text-align: center;">
 </td>
 <td style="text-align: center;">
-2DC<span class="math inline"><em></em><sup><em>b</em>,</sup></span><a href="#fn43" class="footnote-ref" id="fnref43"><sup>43</sup></a>
+2DC<span class="math inline"><sup><em>b</em>,</sup></span><a href="#fn42" class="footnote-ref" id="fnref42"><sup>42</sup></a>
 (old)
 </td>
 <td style="text-align: center;">
 0-32
 </td>
 <td style="text-align: center;">
-1-30<span class="math inline"><em></em><sup><em>e</em></sup></span>
+1-30<span class="math inline"><sup><em>e</em></sup></span>
 </td>
 <td style="text-align: center;">
 25–800 <span class="math inline"><em>μ</em></span>m
@@ -828,7 +918,7 @@ OAP-260X
 <td style="text-align: center;">
 </td>
 <td style="text-align: center;">
-2DP<span class="math inline"><em></em><sup><em>b</em></sup></span> (old)
+2DP<span class="math inline"><sup><em>b</em></sup></span> (old)
 </td>
 <td style="text-align: center;">
 0-32
@@ -856,7 +946,7 @@ OAP-260X
 0-63
 </td>
 <td style="text-align: center;">
-1-62<a href="#fn44" class="footnote-ref" id="fnref44"><sup>44</sup></a>
+1-62<a href="#fn43" class="footnote-ref" id="fnref43"><sup>43</sup></a>
 </td>
 <td style="text-align: center;">
 25–1600 <span class="math inline"><em>μ</em></span>m
@@ -904,8 +994,8 @@ OAP-260X
 <div id="size-distribution" class="section level3 unnumbered" number="">
 <h3>Size Distribution:</h3>
 <p>
-<strong>Size Distribution</strong> (<span class="math inline"><em>c</em><em>m</em><sup> − 3</sup></span>channel<span class="math inline"><em></em><sup> − 1</sup></span>)<strong>:</strong> <strong></strong> <strong><span class="underline">CFSSP</span>,</strong> <strong><span class="underline">CS100</span>,</strong> <strong><span class="underline">CF300</span>,</strong> <strong><span class="underline">CS200</span></strong>, <strong></strong> <strong><span class="underline">CPCAS</span>,</strong> <strong><span class="underline">CCDP</span>,</strong> <strong><span class="underline">CUHSAS</span></strong><br />
-<strong>Size Distribution</strong> (L<strong><span class="math inline"><em></em><sup> − 1</sup></span></strong>channel<span class="math inline"><em></em><sup> − 1</sup></span>): <strong></strong> <strong><span class="underline">C200X</span>,</strong> <strong><span class="underline">C260X</span>,</strong> <strong><span class="underline">C200Y</span></strong>
+<strong>Size Distribution</strong> (<span class="math inline"><em>cm</em><sup> − 3</sup></span>channel<span class="math inline"><sup> − 1</sup></span>)<strong>:</strong> <strong></strong> <strong><span class="underline">CFSSP</span>,</strong> <strong><span class="underline">CS100</span>,</strong> <strong><span class="underline">CF300</span>,</strong> <strong><span class="underline">CS200</span></strong>, <strong></strong> <strong><span class="underline">CPCAS</span>,</strong> <strong><span class="underline">CCDP</span>,</strong> <strong><span class="underline">CUHSAS</span></strong><br />
+<strong>Size Distribution</strong> (L<strong><span class="math inline"><sup> − 1</sup></span></strong>channel<span class="math inline"><sup> − 1</sup></span>): <strong></strong> <strong><span class="underline">C200X</span>,</strong> <strong><span class="underline">C260X</span>,</strong> <strong><span class="underline">C200Y</span></strong>
 </p>
 <p>
 <strong><span id="CUHSAS" label="CUHSAS">CUHSAS</span></strong><br />
@@ -916,9 +1006,9 @@ OAP-260X
 </p>
 </div>
 <div id="concentration-cm-3-concd-concf-conc3-concp-concu" class="section level3" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> Concentration (cm<span class="math inline"><em></em><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;</h3>
-<p>(L<strong><span class="math inline"><em></em><sup> − 1</sup></span>):</strong> CONCX, CONC6, CONCY {#concentration .unnumbered}</p>
-<em>The particle concentrations</em> <em>summed over all channels to give the total concentration in the size range of the probe.</em> For example, {CONCF} = <span class="math inline">∑<sub><em>i</em></sub>{<em>C</em><em>F</em><em>S</em><em>S</em><em>P</em>}<sub><em>i</em></sub></span>. For additional details, see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a>.<br />
+<h3><span class="header-section-number">5.2.1</span> Concentration (cm<span class="math inline"><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;</h3>
+<p>(L<strong><span class="math inline"><sup> − 1</sup></span>):</strong> CONCX, CONC6, CONCY {#concentration .unnumbered}</p>
+<em>The particle concentrations</em> <em>summed over all channels to give the total concentration in the size range of the probe.</em> For example, {CONCF} = <span class="math inline">∑<sub><em>i</em></sub>{<em>CFSSP</em>}<sub><em>i</em></sub></span>. For additional details, see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a>.<br />
 </p>
 </div>
 <div id="mean-diameter" class="section level3 unnumbered" number="">
@@ -927,7 +1017,7 @@ OAP-260X
 <p class="box">
 {Cy<span class="math inline">\(_{i}\)</span>} = concentration
 from probe y in channel i
-(e.g., y=FSSP to calculate DBARF)<br />
+(e.g., y=<a href="5-cloud-physics-variables.html#size-distribution">FSSP</a> to calculate DBARF)<br />
 i1 = lowest usable channel for the probe<br />
 i2 = highest usable channel for the probe<br />
 <span class="math inline">\(d_{i}\)</span>
@@ -946,7 +1036,7 @@ size limits for the channel)
 <h3>Dispersion (dimensionless): DISPD, DISPF, DISP3, DISP6, DISPP, DISPX, DISPY, DISPU</h3>
 <p><em>The ratio of the standard deviation of particle diameters to the mean particle diameter.</em><br /></p>
 <p class="box">
-{DBARx} = mean particle diameter [<span class="math inline">\(\mu m\)</span>]<br />
+{<a href="5-cloud-physics-variables.html#mean-diameter">DBARx</a>} = mean particle diameter [<span class="math inline">\(\mu m\)</span>]<br />
 {Cy<span class="math inline">\(_{i}\)</span>}, i1, i2, <span class="math inline">\(d_{i}\)</span> as for mean diameter above
 </p>
 <p class="box2">
@@ -957,7 +1047,7 @@ size limits for the channel)
 </p>
 </div>
 <div id="PSD-LWC" class="section level3 unnumbered" number="">
-<h3>Liquid Water Content (g m<strong><span class="math inline"><em></em><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</h3>
+<h3>Liquid Water Content (g m<strong><span class="math inline"><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</h3>
 <p><em>The density of liquid water represented by the size distribution measured by a hydrometeor probe.</em> These variables are calculated from the measured concentration (CONCx) and the third moment of the particle diameter, with the assumption that the particle is a water drop. The following box describes the calculation in terms of an equivalent droplet diameter, the diameter that represents the mass in the detected particle. The equivalent droplet diameter is normally the measured diameter for liquid hydrometeors, but some processing has used other assumptions and this is a choice that can be made based on project needs. Using this definition allows for the approximate estimation of ice water content in cases where it is known that all hydrometeors are ice.<br /></p>
 <p class="box">
 <span class="math inline">\(d_{e,i}\)</span> = equivalent melted diameter for channel <span class="math inline">\(i\)</span> of probe x<br />
@@ -1030,10 +1120,10 @@ Range
 0
 </td>
 <td style="text-align: center;">
-2–47 <span class="math inline"><em>μ</em><em>m</em></span>
+2–47 <span class="math inline"><em>μm</em></span>
 </td>
 <td style="text-align: center;">
-3 <span class="math inline"><em>μ</em><em>m</em></span>
+3 <span class="math inline"><em>μm</em></span>
 </td>
 </tr>
 <tr class="even">
@@ -1041,10 +1131,10 @@ Range
 1
 </td>
 <td style="text-align: center;">
-2–32 <span class="math inline"><em>μ</em><em>m</em></span>
+2–32 <span class="math inline"><em>μm</em></span>
 </td>
 <td style="text-align: center;">
-2 <span class="math inline"><em>μ</em><em>m</em></span>
+2 <span class="math inline"><em>μm</em></span>
 </td>
 </tr>
 <tr class="odd">
@@ -1052,10 +1142,10 @@ Range
 2
 </td>
 <td style="text-align: center;">
-1–15 <span class="math inline"><em>μ</em><em>m</em></span>
+1–15 <span class="math inline"><em>μm</em></span>
 </td>
 <td style="text-align: center;">
-1 <span class="math inline"><em>μ</em><em>m</em></span>
+1 <span class="math inline"><em>μm</em></span>
 </td>
 </tr>
 <tr class="even">
@@ -1063,10 +1153,10 @@ Range
 3
 </td>
 <td style="text-align: center;">
-0.5–7.5 <span class="math inline"><em>μ</em><em>m</em></span>
+0.5–7.5 <span class="math inline"><em>μm</em></span>
 </td>
 <td style="text-align: center;">
-0.5 <span class="math inline"><em>μ</em><em>m</em></span>
+0.5 <span class="math inline"><em>μm</em></span>
 </td>
 </tr>
 </tbody>
@@ -1104,12 +1194,12 @@ For the images from the 2D probes, separate data files need to be used. RAF prov
 <p><em>The number of particles counted by a 2D probe in each of 62 size bins in a specified time interval, usually 1 s.</em> These are used to calculate the derived variables like CONC1DC, C1DC, and others that follow, but are provided to allow re-calculation if a user wants to use different sample volumes or sizing assumptions.<br /></p>
 </div>
 <div id="c1dc-c1dp" class="section level4 unnumbered" number="">
-<h4>2D Size Distribution (L<span class="math inline"><em></em><sup> − 1</sup></span>channel<span class="math inline"><em></em><sup> − 1</sup></span>): C1DC, C1DP</h4>
-<p><em>The concentration of particles measured by a 2D probe in each of 62 bins in a specified time interval, usually 1 s.</em> These are calculated from A1DC by application of an assumed size-dependent sample volume based on probe characteristics and the flight speed. These are provided in a 64-element array for historical convention; the first element should be ignored, and the technique requires that the end elements be unshadowed and so precludes any measurement with width of 63 bins, so the 64-element vector has valid information only in bins 1–63. The cell boundaries are specified in the netCDF header as an attribute of C1DC or C1DP, and they specify the end points of the bin; e.g,, in the 64-element array of provided cell boundaries, the first element is the lower size limit of the first data cell which is the second element in C1DC. For a typical 2DC with 25-<span class="math inline"><em>μ</em></span>m size resolution, the cell sizes increase by 25 <span class="math inline"><em>μ</em></span>m per bin for each of the C1DC bins. Also included as attributes with the netCDF variable C1DC or C1DP are the size-dependent depth of field (mm) and effective sample area<a href="#fn45" class="footnote-ref" id="fnref45"><sup>45</sup></a>
+<h4>2D Size Distribution (L<span class="math inline"><sup> − 1</sup></span>channel<span class="math inline"><sup> − 1</sup></span>): C1DC, C1DP</h4>
+<p><em>The concentration of particles measured by a 2D probe in each of 62 bins in a specified time interval, usually 1 s.</em> These are calculated from A1DC by application of an assumed size-dependent sample volume based on probe characteristics and the flight speed. These are provided in a 64-element array for historical convention; the first element should be ignored, and the technique requires that the end elements be unshadowed and so precludes any measurement with width of 63 bins, so the 64-element vector has valid information only in bins 1–63. The cell boundaries are specified in the netCDF header as an attribute of C1DC or C1DP, and they specify the end points of the bin; e.g,, in the 64-element array of provided cell boundaries, the first element is the lower size limit of the first data cell which is the second element in C1DC. For a typical 2DC with 25-<span class="math inline"><em>μ</em></span>m size resolution, the cell sizes increase by 25 <span class="math inline"><em>μ</em></span>m per bin for each of the C1DC bins. Also included as attributes with the netCDF variable C1DC or C1DP are the size-dependent depth of field (mm) and effective sample area<a href="#fn44" class="footnote-ref" id="fnref44"><sup>44</sup></a>
 (mm), the latter having values of zero for the first and last elements in the 64-value vector.<br /></p>
 </div>
 <div id="conc2d" class="section level4 unnumbered" number="">
-<h4>2D Concentration (L<span class="math inline"><em></em><sup> − 1</sup></span>): CONC1DC, CONC1DC100, CONC1DC150, CONC1DP</h4>
+<h4>2D Concentration (L<span class="math inline"><sup> − 1</sup></span>): CONC1DC, CONC1DC100, CONC1DC150, CONC1DP</h4>
 <p><em>The total concentration of all particles detected by a 2D hydrometeor imager,</em> or in the case of CONC1DC100 or CONC1DC150, the concentration of all particles sized to be at least xxx <span class="math inline"><em>μ</em></span>m in the dimension perpendicular to the direction of flight, where xxx may be 100 150. These concentrations are the sum of the particle size distribution given below (C1DC or C1DP), with appropriate channels excluded for CONC1DC100 and CONC1DC150.<br /></p>
 </div>
 <div id="dt1dc" class="section level4 unnumbered" number="">
@@ -1118,19 +1208,19 @@ For the images from the 2D probes, separate data files need to be used. RAF prov
 </div>
 <div id="dbar2d" class="section level4 unnumbered" number="">
 <h4>2D Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBAR1DC, DBAR1DP</h4>
-<p><em>The mean diameter calculated from the measured size distribution.</em> In this calculation, the bin sizes are taken to be the averages of the lower and upper limits of the size bins<em>.</em> The calculation is as described by <a href="5-cloud-physics-variables.html#eq:DBARbox">(5.5)</a>. <em></em><br /></p>
+<p><em>The mean diameter calculated from the measured size distribution.</em> In this calculation, the bin sizes are taken to be the averages of the lower and upper limits of the size bins<em>.</em> The calculation is as described by <a href="5-cloud-physics-variables.html#eq:DBARbox">(5.5)</a>. <br /></p>
 </div>
 <div id="disp2d" class="section level4 unnumbered" number="">
 <h4>2D Dispersion (dimensionless): DISP1DC, DISP1DP</h4>
 <p><em>The standard deviation in particle diameter divided by the mean diameter.</em> The formula used is given by <a href="5-cloud-physics-variables.html#eq:DISPbox">(5.6)</a>.<br /></p>
 </div>
 <div id="lwc2d" class="section level4 unnumbered" number="">
-<h4>2D Liquid Water Content (g m<span class="math inline"><em></em><sup> − 3</sup></span>): PLWC1DC, PLWC1DP</h4>
-<p><em>The liquid water content (mass per volume) calculated from C1DC or C1DP.</em> The calculation is as described by <a href="5-cloud-physics-variables.html#eq:LWCbox">(5.7)</a>. To conform to common usage, the liquid water content is expressed in non-MKS units of g m<span class="math inline"><em></em><sup> − 3</sup></span>.<br /></p>
+<h4>2D Liquid Water Content (g m<span class="math inline"><sup> − 3</sup></span>): PLWC1DC, PLWC1DP</h4>
+<p><em>The liquid water content (mass per volume) calculated from C1DC or C1DP.</em> The calculation is as described by <a href="5-cloud-physics-variables.html#eq:LWCbox">(5.7)</a>. To conform to common usage, the liquid water content is expressed in non-MKS units of g m<span class="math inline"><sup> − 3</sup></span>.<br /></p>
 </div>
 <div id="dbz2d" class="section level4 unnumbered" number="">
 <h4>2D Radar Reflectivity Factor (dBZ): DBZ1DC, DBZ1DP</h4>
-<p><em>The radar reflectivity factor calculated from the measured size distribution under the assumption that all particles are spherical water drops.</em> The calculation is as described by <em></em> <a href="5-cloud-physics-variables.html#eq:DBZbox">(5.8)</a>.<br /></p>
+<p><em>The radar reflectivity factor calculated from the measured size distribution under the assumption that all particles are spherical water drops.</em> The calculation is as described by <a href="5-cloud-physics-variables.html#eq:DBZbox">(5.8)</a>.<br /></p>
 </div>
 <div id="reff2d" class="section level4 unnumbered" number="">
 <h4>2D Effective Radius (<span class="math inline"><em>μ</em></span>m): REFF2DC, REFF2DP</h4>
@@ -1141,15 +1231,15 @@ For the images from the 2D probes, separate data files need to be used. RAF prov
 </div>
 <div class="footnotes">
 <hr />
-<ol start="38">
-<li id="fn38"><p>King, W. D., D. A. Parkin and R. J. Handsworth, 1978: A hot-wire liquid water device having fully calculable response characteristics. J. Appl. Meteorol., 17, 1809–1813. See also Bradley, S. G., and W. D. King, 1979 Frequency response of the CSIRO Liquid Water Probe. J. Appl. Meteorol., 18, 361–366.<a href="5-cloud-physics-variables.html#fnref38" class="footnote-back">↩︎</a></p></li>
-<li id="fn39"><p>Probes without links are described at <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">this URL</a>.<a href="5-cloud-physics-variables.html#fnref39" class="footnote-back">↩︎</a></p></li>
-<li id="fn40"><p>Channels may be unusable because the first channel is a historical carry-over and should be ignored, or because in the case of 2D probes the entire-in sizing technique reduces the number of bins where particles can be sized. Also, when some channels have been considered unreliable the netCDF header may specify that the usable bins are smaller than indicated here.<a href="5-cloud-physics-variables.html#fnref40" class="footnote-back">↩︎</a></p></li>
-<li id="fn41"><p>Now obsolete but present in many archived data sets.<a href="5-cloud-physics-variables.html#fnref41" class="footnote-back">↩︎</a></p></li>
-<li id="fn42"><p>See <a href="5-cloud-physics-variables.html#special-1d-nomenclature">here</a> for an explanation of this name convention.<a href="5-cloud-physics-variables.html#fnref42" class="footnote-back">↩︎</a></p></li>
-<li id="fn43"><p>Measurements from this and the next three 2D probes are discussed in Section <a href="5-cloud-physics-variables.html#hydrometeor-imaging-probes">5.3</a>.<a href="5-cloud-physics-variables.html#fnref43" class="footnote-back">↩︎</a></p></li>
-<li id="fn44"><p>Some of the lowest channels are often considered unreliable and excluded in processing.<a href="5-cloud-physics-variables.html#fnref44" class="footnote-back">↩︎</a></p></li>
-<li id="fn45"><p>commonly called “EffectiveAreaWidth” in the netCDF files<a href="5-cloud-physics-variables.html#fnref45" class="footnote-back">↩︎</a></p></li>
+<ol start="37">
+<li id="fn37"><p>King, W. D., D. A. Parkin and R. J. Handsworth, 1978: A hot-wire liquid water device having fully calculable response characteristics. J. Appl. Meteorol., 17, 1809–1813. See also Bradley, S. G., and W. D. King, 1979 Frequency response of the CSIRO Liquid Water Probe. J. Appl. Meteorol., 18, 361–366.<a href="5-cloud-physics-variables.html#fnref37" class="footnote-back">↩︎</a></p></li>
+<li id="fn38"><p>Probes without links are described at <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">this URL</a>.<a href="5-cloud-physics-variables.html#fnref38" class="footnote-back">↩︎</a></p></li>
+<li id="fn39"><p>Channels may be unusable because the first channel is a historical carry-over and should be ignored, or because in the case of 2D probes the entire-in sizing technique reduces the number of bins where particles can be sized. Also, when some channels have been considered unreliable the netCDF header may specify that the usable bins are smaller than indicated here.<a href="5-cloud-physics-variables.html#fnref39" class="footnote-back">↩︎</a></p></li>
+<li id="fn40"><p>Now obsolete but present in many archived data sets.<a href="5-cloud-physics-variables.html#fnref40" class="footnote-back">↩︎</a></p></li>
+<li id="fn41"><p>See <a href="5-cloud-physics-variables.html#special-1d-nomenclature">here</a> for an explanation of this name convention.<a href="5-cloud-physics-variables.html#fnref41" class="footnote-back">↩︎</a></p></li>
+<li id="fn42"><p>Measurements from this and the next three 2D probes are discussed in Section <a href="5-cloud-physics-variables.html#hydrometeor-imaging-probes">5.3</a>.<a href="5-cloud-physics-variables.html#fnref42" class="footnote-back">↩︎</a></p></li>
+<li id="fn43"><p>Some of the lowest channels are often considered unreliable and excluded in processing.<a href="5-cloud-physics-variables.html#fnref43" class="footnote-back">↩︎</a></p></li>
+<li id="fn44"><p>commonly called “EffectiveAreaWidth” in the netCDF files<a href="5-cloud-physics-variables.html#fnref44" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

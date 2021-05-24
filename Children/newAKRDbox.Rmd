@@ -1,6 +1,6 @@
 <p class=box>
-ADIFR = attack differential pressure, radome [hPa]  
-QCF = uncorrected dynamic pressure [hPa]  
+[ADIFR](#adifr) = attack differential pressure, radome [hPa]  
+[QCF](#qcx) = uncorrected dynamic pressure [hPa]  
 $A$ = (ADIFR/QCF) = $A_{f}+A_{s}$ where $A_{f}$ is the high-pass
 and $A_{s}$ the low-pass component  
 $e_{1},\,d_{0},\,d{}_{1},\,d_{2}$ = sensitivity

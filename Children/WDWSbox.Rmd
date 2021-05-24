@@ -1,6 +1,6 @@
 <p class=box>
-UI = easterly component of the horizontal wind  
-VI = northerly component of the horizontal wind  
+[UI](#ui-vi-wi) = easterly component of the horizontal wind  
+[VI](#ui-vi-wi) = northerly component of the horizontal wind  
 atan2 = 4-quadrant arc-tangent function producing output in radians
 from -$\pi$ to $\pi$  
 $C_{rd}$ = conversion factor, radians to degrees, = 180/$\pi$ [units: $^{\circ}$\,/\,radian]  

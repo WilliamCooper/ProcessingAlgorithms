@@ -22,50 +22,69 @@ When concentrations are recorded with units of “ppmv”, “ppbv” or “pptv
 5. The unit “hertz” (abbreviation Hz) is the proper unit for a periodic sampling frequency and will be used here in place of the more awkward “samples per second.” This usage is favored by the International Bureau of Weights and Measures (cf. <a href="http://www.bipm.org/en/si/si_brochure/chapter2/2-2/table3.html#notes">http://www.bipm.org/en/si/si_brochure/chapter2/2-2/table3.html#notes</a>) when the frequency represented refers to the rate of sampling.  
 6. In some cases, particularly for older data files, speed has been recorded in units of knots (= 0.514444 m/s) and distance in nautical miles <span class="math inline">≡</span> 1852 m).  
 
-In Appendix A there is a list of symbols.^[Some symbols used only once and defined where they are used are omitted from this list] The next table defines some abbreviations and additional symbols used for units in this report, in addition to the standard abbreviations for the mks system of units:<span id="punch1.2" label="punch1.2">[punch1.2]</span>  
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><strong>abbreviation/symbol</strong></th>
-<th style="text-align: left;"><strong>definition</strong>^[where the symbol <span class="math inline">≡</span> is used, the relationship is exact by definition]
-</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">º</td>
-<td style="text-align: left;">degree, angle measurement <span class="math inline">≡</span> (<span class="math inline"><em>π</em></span>/180) radian</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">ft</td>
-<td style="text-align: left;">foot <span class="math inline">≡</span> 0.3048 m</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">mb</td>
-<td style="text-align: left;">millibar <span class="math inline">≡</span> 100 Pa <span class="math inline">≡</span> 1 hPa</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">ppmv</td>
-<td style="text-align: left;">parts per million by volume (see item 4 above)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">ppbv</td>
-<td style="text-align: left;">parts per billion (<span class="math inline">10<sup>9</sup>)</span> by volume (see item 4 above)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">pptv</td>
-<td style="text-align: left;">parts per trillion (<span class="math inline">10<sup>12</sup>)</span> by volume (see item 4 above)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">n mi</td>
-<td style="text-align: left;">nautical mile <span class="math inline">≡</span>1852 m</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">kt</td>
-<td style="text-align: left;">knot (n mi/hour) <span class="math inline">≡</span> (1852/3600) m/s = 0.514444... m/s</td>
-</tr>
-</tbody>
-</table>
+In Appendix A there is a list of symbols.^[Some symbols used only once and defined where they are used are omitted from this list] The next table defines some abbreviations and additional symbols used for units in this report, in addition to the standard abbreviations for the mks system of units:<span id="punch1.2" label="punch1.2">[punch1.2]</span>
+<!-- It would be useful to translate the following table from html to Rmd: -->
+```{r tos, include=FALSE, echo=FALSE}
+SymbolTable <- data.frame("abbreviation-or-symbol"=c('º', 'ft', 'mb', 'ppmv', 'ppbv', 'pptv', 'n mi', 'kt'),
+                          "definition$^a$" = c('degree, angle measurement ≡ $\\pi/180$', 'foot ≡ 0.3048 m',
+                                         'millibar ≡ 100 Pa ≡ 1 hPa',
+                                         'parts per million by volume (see item 4 above)',
+                                         'parts per billion ($10^9$) by volume (see item 4 above)',
+                                         'parts per trillion by volume (see item 4 above)',
+                                         'nautical mile ≡1852 m',
+                                         'knot (n mi/hour) ≡ (1852/3600) m/s = 0.514444… m/s'))
+names(SymbolTable) <- c('abbreviation or symbol', 'definition$^a$')
+```
+
+```{r include = TRUE}
+knitr::kable(SymbolTable, align=c('cc')) %>% kable_styling(bootstrap_options = 'bordered') %>%
+  add_footnote("where ≡ is used, the relation is exact by definition", notation="alphabet") %>%
+  scroll_box(width='90%')
+```
+
+<!-- <table> -->
+<!-- <thead> -->
+<!-- <tr class="header"> -->
+<!-- <th style="text-align: center;"><strong>abbreviation/symbol</strong></th> -->
+<!-- <th style="text-align: left;"><strong>definition</strong>^[where the symbol <span class="math inline">≡</span> is used, the relationship is exact by definition] -->
+<!-- </th> -->
+<!-- </tr> -->
+<!-- </thead> -->
+<!-- <tbody> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">º</td> -->
+<!-- <td style="text-align: left;">degree, angle measurement <span class="math inline">≡</span> (<span class="math inline"><em>π</em></span>/180) radian</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">ft</td> -->
+<!-- <td style="text-align: left;">foot <span class="math inline">≡</span> 0.3048 m</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">mb</td> -->
+<!-- <td style="text-align: left;">millibar <span class="math inline">≡</span> 100 Pa <span class="math inline">≡</span> 1 hPa</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">ppmv</td> -->
+<!-- <td style="text-align: left;">parts per million by volume (see item 4 above)</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">ppbv</td> -->
+<!-- <td style="text-align: left;">parts per billion (<span class="math inline">10<sup>9</sup>)</span> by volume (see item 4 above)</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">pptv</td> -->
+<!-- <td style="text-align: left;">parts per trillion (<span class="math inline">10<sup>12</sup>)</span> by volume (see item 4 above)</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">n mi</td> -->
+<!-- <td style="text-align: left;">nautical mile <span class="math inline">≡</span>1852 m</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">kt</td> -->
+<!-- <td style="text-align: left;">knot (n mi/hour) <span class="math inline">≡</span> (1852/3600) m/s = 0.514444... m/s</td> -->
+<!-- </tr> -->
+<!-- </tbody> -->
+<!-- </table> -->
 <!-- % <h2 id="variables-used-to-denote-time">Variables Used To Denote Time</h2> -->
 
 ## Variables Used to Denote Time
@@ -75,10 +94,10 @@ Although there are some exceptions in old archived data files, the data in all m
 #### Time (s): Time {-#time} 
 
 <em>The reference-time</em> counter <em>for the output data files,</em> used by data system versions beginning with ADS-3. It is an integer output at 1 Hz <em>and has an initial value of zero at the start of the flight</em>. Add this to the “Time:units” attribute found in the NETCDF header section to obtain the UTC time.</p>
-<p>Example attribute: <code></code> <br />
-<code></code><code>Time:units = “seconds since 2006-04-26 12:55:00 +0000” </code>;</p>
+<p>Example attribute:  <br />
+<code>Time:units = “seconds since 2006-04-26 12:55:00 +0000” </code>;</p>
 <p>For code examples that show how to use “Time” see:<br />
-<code></code><a href="http://www.eol.ucar.edu/raf/Software/TimeExamp.html">http://www.eol.ucar.edu/raf/Software/TimeExamp.html</a></p>
+<a href="http://www.eol.ucar.edu/raf/Software/TimeExamp.html">http://www.eol.ucar.edu/raf/Software/TimeExamp.html</a></p>
 
 #### Reference Start Time (s): base_time (<em>Obsolete; versions before ADS-3 only</em>) {-#base-time}
 
@@ -86,13 +105,13 @@ Although there are some exceptions in old archived data files, the data in all m
 
 #### Time Offset from Reference Start Time (s): time_offset (<em>Obsolete)</em> {-#time-offset}
 
-<em>The time offset from base_time of each data record used for the NETCDF output files produced by data system versions before ADS-3.</em> It starts at zero (0) and increments each second, so it can also be thought of as a record counter. Use this measurement and add base_time to obtain the time for each data record.
+*The time offset from base_time of each data record used for the NETCDF output files produced by data system versions before ADS-3.* It starts at zero (0) and increments each second, so it can also be thought of as a record counter. Use this measurement and add base_time to obtain the time for each data record.
 
-#### Raw Tape Time (h, min, s): HOUR, MINUTE, SECOND (<em>Obsolete</em>) {-#hms}
+#### Raw Tape Time (h, min, s): HOUR, MINUTE, SECOND (*Obsolete*) {-#hms}
 
 These three time variables are recorded directly from the aircraft’s data system. Since ADS-3, this information is replaced by the “Time” variable and the “Time:units” attribute of that variable.
 
-#### Date (m, d, y): MONTH, DAY, YEAR (<em>Obsolete</em>) {-#mdy}
+#### Date (m, d, y): MONTH, DAY, YEAR (*Obsolete*) {-#mdy}
 
 These three variables represent the date when the aircraft’s data system began recording data. They are repeated as 1 Hz variables but are NOT incremented if the time rolls over to the next day. Use base_time and time_offset for reference timing. Since ADS-3, this information is replaced by the “Time” variable and the “Time:units” attribute of that variable.
 
