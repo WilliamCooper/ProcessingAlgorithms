@@ -131,10 +131,10 @@
 <ul>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#CRPC"><i class="fa fa-check"></i>Count Rate Per Channel: ACDP, AFSSP, AS100, AF300, AS200, APCAS, A200X, A260X, A200Y, AUHSAS</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#size-distribution"><i class="fa fa-check"></i>Size Distribution:</a></li>
-<li class="chapter" data-level="5.2.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#concentration-cm-3-concd-concf-conc3-concp-concu"><i class="fa fa-check"></i><b>5.2.1</b> Concentration (cm<span class="math inline"><em></em><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;</a></li>
+<li class="chapter" data-level="5.2.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#concentration-cm-3-concd-concf-conc3-concp-concu"><i class="fa fa-check"></i><b>5.2.1</b> Concentration (cm<span class="math inline"><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;</a></li>
 <li><a href="5-cloud-physics-variables.html#mean-diameter">Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#dispersion"><i class="fa fa-check"></i>Dispersion (dimensionless): DISPD, DISPF, DISP3, DISP6, DISPP, DISPX, DISPY, DISPU</a></li>
-<li><a href="5-cloud-physics-variables.html#PSD-LWC">Liquid Water Content (g m<strong><span class="math inline"><em></em><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</a></li>
+<li><a href="5-cloud-physics-variables.html#PSD-LWC">Liquid Water Content (g m<strong><span class="math inline"><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#DBZ"><i class="fa fa-check"></i>Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD</a></li>
 <li><a href="5-cloud-physics-variables.html#effective-radius">Effective Radius (<span class="math inline"><em>μ</em></span>m): REFFD, REFFF</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#fssp-range"><i class="fa fa-check"></i>FSSP-100 Range (dimensionless): FRNG, FRANGE</a></li>
@@ -271,8 +271,8 @@ border-radius: 1px;
 }
 </style>
 <p class="box">
-PCN = pressure at the inlet to the CN counter [hPa]<br />
-CNTEMP = temperature at the inlet of the sample tube [<span class="math inline">\(^{\circ}\)</span>C]<br />
+<a href="7-aerosol-particle-measurements.html#pcn">PCN</a> = pressure at the inlet to the CN counter [hPa]<br />
+<a href="7-aerosol-particle-measurements.html#cntemp">CNTEMP</a> = temperature at the inlet of the sample tube [<span class="math inline">\(^{\circ}\)</span>C]<br />
 <span class="math inline">\(p_{std}\)</span> = standard
 reference pressure, 1013.25 hPa<br />
 <span class="math inline">\(T_{std}\)</span> = standard
@@ -292,9 +292,9 @@ In the 3786, flows are determined in volumetric cm<span class="math inline"><spa
 <h4>Raw and Corrected CN Isokinetic Side Flow Rate (SLPM, VLPM): XICN, XICNC</h4>
 <p><em>XICN is the raw isokinetic side flow rate in standard liters per minute (SLPM) measured with a mass flow meter, and XICNC is that flow corrected for pressure and temperature to be the true volumetric flow.</em> The side flow is adjusted for isokinetic sampling at the inlet, but it is not used further in processing.<br /></p>
 <p class="box">
-XICN = side-flow rate [SLPM]<br />
-PCN = pressure at the inlet to the CN counter [hPa]<br />
-CNTEMP = temperature at the inlet of the sample tube [<span class="math inline">\(^{\circ}\)</span>C]<br />
+<a href="7-aerosol-particle-measurements.html#xicnc">XICN</a> = side-flow rate [SLPM]<br />
+<a href="7-aerosol-particle-measurements.html#pcn">PCN</a> = pressure at the inlet to the CN counter [hPa]<br />
+<a href="7-aerosol-particle-measurements.html#cntemp">CNTEMP</a> = temperature at the inlet of the sample tube [<span class="math inline">\(^{\circ}\)</span>C]<br />
 <span class="math inline">\(p_{std}\)</span> = standard reference pressure, 1013.25 mb<br />
 <span class="math inline">\(T_{std}\)</span>
 = 294.15 K<br />
@@ -314,7 +314,7 @@ CNTEMP = temperature at the inlet of the sample tube [<span class="math inline">
 </div>
 <div id="concn" class="section level4 unnumbered" number="">
 <h4>Condensation Nucleus (CN) Concentration (cm<sup>-3</sup>): CONCN</h4>
-<em>The number concentration of condensation nuclei</em> in units of particles per cm<span class="math inline"><em></em><sup>3</sup></span> <em>in the ambient air</em> at flight level. <em></em> The calculation leading to CONCN includes two corrections. The first accounts for coincidence of particles in the viewing volume at high concentrations and is handled differently in the two types of CN counter. For the 3760A, a statistical adjustment is made based on the average time of a particle in the viewing volume. This correction increases from about 1% at a total concentration of 10<span class="math inline"><em></em><sup>3</sup></span> cm<span class="math inline"><em></em><sup> − 3</sup></span> to nearly 11% at 10<span class="math inline"><em></em><sup>4</sup></span> cm<span class="math inline"><em></em><sup> − 3</sup></span>, but for concentrations above about 210<span class="math inline"><em></em><sup>4</sup></span> cm<span class="math inline"><em></em><sup> − 3</sup></span> significant uncertainty remains. The 3786 instead measures the time each detected particle occupies the viewing volume, and this <em></em> accumulated “dead time” in each sampling interval is subtracted from the elapsed time yielding a “live time” for the determination of sample volume. With this correction an accuracy of 12%, not including statistical counting error, is specified by the manufacturer at concentrations up to 10<span class="math inline"><em></em><sup>5</sup></span> cm<span class="math inline"><em></em><sup> − 3</sup></span>. The second correction, applied to all CN counters, is a conversion from instrument to ambient conditions.<a href="#fn50" class="footnote-ref" id="fnref50"><sup>50</sup></a>
+<em>The number concentration of condensation nuclei</em> in units of particles per cm<span class="math inline"><em></em><sup>3</sup></span> <em>in the ambient air</em> at flight level. <em></em> The calculation leading to CONCN includes two corrections. The first accounts for coincidence of particles in the viewing volume at high concentrations and is handled differently in the two types of CN counter. For the 3760A, a statistical adjustment is made based on the average time of a particle in the viewing volume. This correction increases from about 1% at a total concentration of 10<span class="math inline"><em></em><sup>3</sup></span> cm<span class="math inline"><em></em><sup> − 3</sup></span> to nearly 11% at 10<span class="math inline"><em></em><sup>4</sup></span> cm<span class="math inline"><em></em><sup> − 3</sup></span>, but for concentrations above about 210<span class="math inline"><em></em><sup>4</sup></span> cm<span class="math inline"><em></em><sup> − 3</sup></span> significant uncertainty remains. The 3786 instead measures the time each detected particle occupies the viewing volume, and this <em></em> accumulated “dead time” in each sampling interval is subtracted from the elapsed time yielding a “live time” for the determination of sample volume. With this correction an accuracy of 12%, not including statistical counting error, is specified by the manufacturer at concentrations up to 10<span class="math inline"><em></em><sup>5</sup></span> cm<span class="math inline"><em></em><sup> − 3</sup></span>. The second correction, applied to all CN counters, is a conversion from instrument to ambient conditions.<a href="#fn49" class="footnote-ref" id="fnref49"><sup>49</sup></a>
 In the following formulae, the corrected flow FCNC in VLPM is explicitly converted to cm<span class="math inline"><em></em><sup>3</sup></span>s<span class="math inline"><em></em><sup> − 1</sup></span> by the factor (1000/60).<em></em><br />
 <em></em><br />
 </p>
@@ -356,16 +356,16 @@ and the concentration under ambient conditions is<br />
 <p>
 <p><strong>For the 3786 WCN:</strong><br /></p>
 <p class="box">
-CNTS = particle counts per sample interval from the CN counter<br />
+<a href="7-aerosol-particle-measurements.html#cnts">CNTS</a> = particle counts per sample interval from the CN counter<br />
 <span class="math inline">\(\Delta t\)</span> = interval
 between recorded samples [s]<br />
 <span class="math inline">\(t_{d}\)</span> = cumulative dead time during the sampling interval [s]<br />
 <span class="math inline">\(C_{flow}\)</span> (see preceding box)<br />
-FCNC = corrected sample flow rate (VLPM) for instrument conditions<br />
-PCN = internal pressure of the CN counter [hPa]<br />
-CNTEMP = temperature of the optics block [<span class="math inline">\(^{\circ}\)</span>C]<br />
-PSXC = corrected ambient pressure [hPa]<br />
-ATX = ambient temperature [<span class="math inline">\(^{\circ}\)</span>C]<br />
+<a href="7-aerosol-particle-measurements.html#fcnc">FCNC</a> = corrected sample flow rate (VLPM) for instrument conditions<br />
+<a href="7-aerosol-particle-measurements.html#pcn">PCN</a> = internal pressure of the CN counter [hPa]<br />
+<a href="7-aerosol-particle-measurements.html#cntemp">CNTEMP</a> = temperature of the optics block [<span class="math inline">\(^{\circ}\)</span>C]<br />
+<a href="./4-the-state-of-the-atmosphere.html#psx">PSXC</a> = corrected ambient pressure [hPa]<br />
+<a href="./4-the-state-of-the-atmosphere.html#ambient-t">ATX</a> = ambient temperature [<span class="math inline">\(^{\circ}\)</span>C]<br />
 <span class="math inline">\(T_{0}\)</span> = 273.15 K
 </p>
 <p class="box2">
@@ -396,14 +396,14 @@ The pressure internal to the UHSAS instrument. This is an analog measurement wit
 <h4>Raw and Corrected Sample Flow Rate (cm<sup>3</sup>s<sup>-1</sup>): USMPFLW or PFLW; USFLWC or PFLWC</h4>
 <p>Unlike the other 1-d probes, both UHSAS and PCASP have internal pumps so their sample volumes are determined from the measured flows and do not depend on true air speed. The UHSAS measures volumetric flow directly, and it is adjusted to ambient conditions for the calculation of ambient concentration. The PCASP returns a mass flow referenced to standard conditions, and this also is converted to equivalent ambient volumetric flow.<br /></p>
 <p class="box">
-UPRESS = internal UHSAS pressure [kPa]<br />
-USMPFLW = measured volumetric sample flow [cm<span class="math inline">\(^{3}\)</span>s<span class="math inline">\(^{-1}\)</span>]<br />
-PFLW = sample mass flow referenced to standard conditions [cm<span class="math inline">\(^{3}\)</span>s<span class="math inline">\(^{-1}\)</span>]<br />
+<a href="7-aerosol-particle-measurements.html#upress">UPRESS</a> = internal UHSAS pressure [kPa]<br />
+<a href="7-aerosol-particle-measurements.html#pflw">USMPFLW</a> = measured volumetric sample flow [cm<span class="math inline">\(^{3}\)</span>s<span class="math inline">\(^{-1}\)</span>]<br />
+<a href="7-aerosol-particle-measurements.html#pflw">PFLW</a> = sample mass flow referenced to standard conditions [cm<span class="math inline">\(^{3}\)</span>s<span class="math inline">\(^{-1}\)</span>]<br />
 <span class="math inline">\(T_{blk}\)</span> = UHSAS optical block temperature, 305 K<br />
 <span class="math inline">\(p_{std}\)</span> = standard pressure, 1013.25 hPa<br />
 <span class="math inline">\(T_{std}\)</span> = standard temperature, 298.15 K<br />
-PSXC = corrected ambient pressure [hPa]<br />
-ATX = ambient temperature [<span class="math inline">\(^{\circ}\)</span>C]<br />
+<a href="./4-the-state-of-the-atmosphere.html#psx">PSXC</a> = corrected ambient pressure [hPa]<br />
+<a href="./4-the-state-of-the-atmosphere.html#ambient-t">ATX</a> = ambient temperature [<span class="math inline">\(^{\circ}\)</span>C]<br />
 <span class="math inline">\(T_{0}\)</span> = 273.15 K
 </p>
 <p class="box2">
@@ -452,12 +452,12 @@ border-radius: 1px;
 }
 </style>
 <p class="box">
-TCNTU = total particle counts per sample interval, UHSAS<br />
-TCNTP = total particle counts per sample interval, PCASP<br />
+<a href="7-aerosol-particle-measurements.html#tcntu-tcntp">TCNTU</a> = total particle counts per sample interval, UHSAS<br />
+<a href="7-aerosol-particle-measurements.html#tcntu-tcntp">TCNTP</a> = total particle counts per sample interval, PCASP<br />
 <span class="math inline">\(\Delta t\)</span> = sample
 interval [s]<br />
-USFLWC = corrected sample flow rate, UHSAS [cm<span class="math inline">\(^{3}\)</span>s<span class="math inline">\(^{-1}\)</span>]<br />
-PFLWC = corrected sample flow rate, PCASP [cm<span class="math inline">\(^{3}\)</span>s<span class="math inline">\(^{-1}\)</span>]
+<a href="7-aerosol-particle-measurements.html#pflw">USFLWC</a> = corrected sample flow rate, UHSAS [cm<span class="math inline">\(^{3}\)</span>s<span class="math inline">\(^{-1}\)</span>]<br />
+<a href="7-aerosol-particle-measurements.html#pflw">PFLWC</a> = corrected sample flow rate, PCASP [cm<span class="math inline">\(^{3}\)</span>s<span class="math inline">\(^{-1}\)</span>]
 </p>
 <p class="box2">
 <span class="math display" id="eq:CONCUbox1">\[\begin{equation}
@@ -488,8 +488,8 @@ PFLWC = corrected sample flow rate, PCASP [cm<span class="math inline">\(^{3}\)<
 </div>
 <div class="footnotes">
 <hr />
-<ol start="50">
-<li id="fn50"><p>Prior to Dec. 2007 the conversion to ambient concentration was not made and concentration was reported for instrument conditions.<a href="7-aerosol-particle-measurements.html#fnref50" class="footnote-back">↩︎</a></p></li>
+<ol start="49">
+<li id="fn49"><p>Prior to Dec. 2007 the conversion to ambient concentration was not made and concentration was reported for instrument conditions.<a href="7-aerosol-particle-measurements.html#fnref49" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
