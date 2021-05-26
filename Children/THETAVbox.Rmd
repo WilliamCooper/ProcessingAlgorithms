@@ -1,6 +1,6 @@
 <p class=box>
-TVIR = virtual temperature [$^{\circ}\mathrm{C}$]  
-PSXC = ambient pressure [hPa]  
+[TVIR](#TVIR) = virtual temperature [$^{\circ}\mathrm{C}$]  
+[PSXC](#psx) = ambient pressure [hPa]  
 $R_{d}=$gas constant for dry air$^{\dagger}$  
 $c_{pd}=$specific heat at constant pressure for dry air$^{\dagger}$  
 $T_{0}=273.15\,$K  

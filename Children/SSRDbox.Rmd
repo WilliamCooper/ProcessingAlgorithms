@@ -1,7 +1,7 @@
 <p class=box>
-BDIFR = differential pressure between sideslip pressure ports, radome
+[BDIFR](#bdifr) = differential pressure between sideslip pressure ports, radome
 [hPa]  
-QCXC = dynamic pressure [hPa]  
+[QCXC](#qcx) = dynamic pressure [hPa]  
 $s_{0},\,s{}_{1}$ = empirical
 coefficients dependent on the aircraft and radome configuration  
 \ \ \ \ \  = {-0.000983, (1/0.08189) $^\circ$} for the

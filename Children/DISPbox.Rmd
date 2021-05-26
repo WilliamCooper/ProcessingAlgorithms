@@ -1,5 +1,5 @@
 <p class=box>
-\{DBARx\} = mean particle diameter [$\mu m$]  
+\{[DBARx](#mean-diameter)\} = mean particle diameter [$\mu m$]  
 \{Cy$_{i}$\}, i1, i2, $d_{i}$ as for mean diameter above    
 </p><p class=box2>
 \begin{equation}

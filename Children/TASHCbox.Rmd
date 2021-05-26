@@ -1,5 +1,5 @@
 <p class=box>
-$q$ = specific humidity (dimensionless) = SPHUM/1000.  
+$q$ = specific humidity (dimensionless) = [SPHUM]($sphum)/1000.  
 \ \ \ \ \ \  for SPHUM expressed in g/kg  
 $c=0.000304\,\mathrm{kg\,g^{-1}}=0.304$ (dimensionless)  
 </p><p class=box2>

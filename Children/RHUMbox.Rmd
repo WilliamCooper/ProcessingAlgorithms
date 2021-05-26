@@ -1,7 +1,7 @@
 
 <p class=box>
-EWX = atmospheric water vapor pressure (hPa)  
-ATX = ambient air temperature [$^{\circ}\mathrm{C}$]  
+[EWX](#ewx) = atmospheric water vapor pressure (hPa)  
+[ATX](#ambient-t) = ambient air temperature [$^{\circ}\mathrm{C}$]  
 $T_{0}=273.15$ K  
 $e_{s.w}(\mathrm{ATX+T_{0}})$ = equilibrium water vapor pressure
 at *dewpoint* ATX (hPa)  

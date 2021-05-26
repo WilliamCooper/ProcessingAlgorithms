@@ -131,10 +131,10 @@
 <ul>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#CRPC"><i class="fa fa-check"></i>Count Rate Per Channel: ACDP, AFSSP, AS100, AF300, AS200, APCAS, A200X, A260X, A200Y, AUHSAS</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#size-distribution"><i class="fa fa-check"></i>Size Distribution:</a></li>
-<li class="chapter" data-level="5.2.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#concentration-cm-3-concd-concf-conc3-concp-concu"><i class="fa fa-check"></i><b>5.2.1</b> Concentration (cm<span class="math inline"><em></em><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;</a></li>
+<li class="chapter" data-level="5.2.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#concentration-cm-3-concd-concf-conc3-concp-concu"><i class="fa fa-check"></i><b>5.2.1</b> Concentration (cm<span class="math inline"><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;</a></li>
 <li><a href="5-cloud-physics-variables.html#mean-diameter">Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#dispersion"><i class="fa fa-check"></i>Dispersion (dimensionless): DISPD, DISPF, DISP3, DISP6, DISPP, DISPX, DISPY, DISPU</a></li>
-<li><a href="5-cloud-physics-variables.html#PSD-LWC">Liquid Water Content (g m<strong><span class="math inline"><em></em><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</a></li>
+<li><a href="5-cloud-physics-variables.html#PSD-LWC">Liquid Water Content (g m<strong><span class="math inline"><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#DBZ"><i class="fa fa-check"></i>Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD</a></li>
 <li><a href="5-cloud-physics-variables.html#effective-radius">Effective Radius (<span class="math inline"><em>μ</em></span>m): REFFD, REFFF</a></li>
 <li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#fssp-range"><i class="fa fa-check"></i>FSSP-100 Range (dimensionless): FRNG, FRANGE</a></li>
@@ -223,86 +223,138 @@ When concentrations are recorded with units of “ppmv”, “ppbv” or “pptv
 </li>
 <li>In some cases, particularly for older data files, speed has been recorded in units of knots (= 0.514444 m/s) and distance in nautical miles <span class="math inline">≡</span> 1852 m).</li>
 </ol>
-In Appendix A there is a list of symbols.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> The next table defines some abbreviations and additional symbols used for units in this report, in addition to the standard abbreviations for the mks system of units:<span id="punch1.2" label="punch1.2">[punch1.2]</span><br />
-
-<table>
+<p>In Appendix A there is a list of symbols.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> The next table defines some abbreviations and additional symbols used for units in this report, in addition to the standard abbreviations for the mks system of units:<span id="punch1.2" label="punch1.2">[punch1.2]</span>
+<!-- It would be useful to translate the following table from html to Rmd: --></p>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:90%; ">
+<table class="table table-bordered" style="margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th style="text-align: center;">
-<strong>abbreviation/symbol</strong>
+<tr>
+<th style="text-align:center;">
+abbreviation or symbol
 </th>
-<th style="text-align: left;">
-<strong>definition</strong><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>
+<th style="text-align:center;">
+definition<span class="math inline">\(^a\)</span>
 </th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 º
 </td>
-<td style="text-align: left;">
-degree, angle measurement <span class="math inline">≡</span> (<span class="math inline"><em>π</em></span>/180) radian
+<td style="text-align:center;">
+degree, angle measurement ≡ <span class="math inline">\(\pi/180\)</span>
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 ft
 </td>
-<td style="text-align: left;">
-foot <span class="math inline">≡</span> 0.3048 m
+<td style="text-align:center;">
+foot ≡ 0.3048 m
 </td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 mb
 </td>
-<td style="text-align: left;">
-millibar <span class="math inline">≡</span> 100 Pa <span class="math inline">≡</span> 1 hPa
+<td style="text-align:center;">
+millibar ≡ 100 Pa ≡ 1 hPa
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 ppmv
 </td>
-<td style="text-align: left;">
+<td style="text-align:center;">
 parts per million by volume (see item 4 above)
 </td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 ppbv
 </td>
-<td style="text-align: left;">
-parts per billion (<span class="math inline">10<sup>9</sup>)</span> by volume (see item 4 above)
+<td style="text-align:center;">
+parts per billion (<span class="math inline">\(10^9\)</span>) by volume (see item 4 above)
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 pptv
 </td>
-<td style="text-align: left;">
-parts per trillion (<span class="math inline">10<sup>12</sup>)</span> by volume (see item 4 above)
+<td style="text-align:center;">
+parts per trillion by volume (see item 4 above)
 </td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">
-n mi
+<tr>
+<td style="text-align:center;">
+n mi
 </td>
-<td style="text-align: left;">
-nautical mile <span class="math inline">≡</span>1852 m
+<td style="text-align:center;">
+nautical mile ≡1852 m
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 kt
 </td>
-<td style="text-align: left;">
-knot (n mi/hour) <span class="math inline">≡</span> (1852/3600) m/s = 0.514444… m/s
+<td style="text-align:center;">
+knot (n mi/hour) ≡ (1852/3600) m/s = 0.514444… m/s
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>a</sup> where ≡ is used, the relation is exact by definition
+</td>
+</tr>
+</tfoot>
 </table>
+</div>
+<!-- <table> -->
+<!-- <thead> -->
+<!-- <tr class="header"> -->
+<!-- <th style="text-align: center;"><strong>abbreviation/symbol</strong></th> -->
+<!-- <th style="text-align: left;"><strong>definition</strong>^[where the symbol <span class="math inline">≡</span> is used, the relationship is exact by definition] -->
+<!-- </th> -->
+<!-- </tr> -->
+<!-- </thead> -->
+<!-- <tbody> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">º</td> -->
+<!-- <td style="text-align: left;">degree, angle measurement <span class="math inline">≡</span> (<span class="math inline"><em>π</em></span>/180) radian</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">ft</td> -->
+<!-- <td style="text-align: left;">foot <span class="math inline">≡</span> 0.3048 m</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">mb</td> -->
+<!-- <td style="text-align: left;">millibar <span class="math inline">≡</span> 100 Pa <span class="math inline">≡</span> 1 hPa</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">ppmv</td> -->
+<!-- <td style="text-align: left;">parts per million by volume (see item 4 above)</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">ppbv</td> -->
+<!-- <td style="text-align: left;">parts per billion (<span class="math inline">10<sup>9</sup>)</span> by volume (see item 4 above)</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">pptv</td> -->
+<!-- <td style="text-align: left;">parts per trillion (<span class="math inline">10<sup>12</sup>)</span> by volume (see item 4 above)</td> -->
+<!-- </tr> -->
+<!-- <tr class="odd"> -->
+<!-- <td style="text-align: center;">n mi</td> -->
+<!-- <td style="text-align: left;">nautical mile <span class="math inline">≡</span>1852 m</td> -->
+<!-- </tr> -->
+<!-- <tr class="even"> -->
+<!-- <td style="text-align: center;">kt</td> -->
+<!-- <td style="text-align: left;">knot (n mi/hour) <span class="math inline">≡</span> (1852/3600) m/s = 0.514444... m/s</td> -->
+<!-- </tr> -->
+<!-- </tbody> -->
+<!-- </table> -->
 <!-- % <h2 id="variables-used-to-denote-time">Variables Used To Denote Time</h2> -->
 </div>
 <div id="variables-used-to-denote-time" class="section level2" number="2.2">
@@ -313,12 +365,12 @@ knot (n mi/hour) <span class="math inline">≡</span> (1852/3600) m/s = 0.51444
 <em>The reference-time</em> counter <em>for the output data files,</em> used by data system versions beginning with ADS-3. It is an integer output at 1 Hz <em>and has an initial value of zero at the start of the flight</em>. Add this to the “Time:units” attribute found in the NETCDF header section to obtain the UTC time.
 </p>
 <p>
-Example attribute: <code></code> <br />
-<code></code><code>Time:units = “seconds since 2006-04-26 12:55:00 +0000” </code>;
+Example attribute:  <br />
+<code>Time:units = “seconds since 2006-04-26 12:55:00 +0000” </code>;
 </p>
 <p>
 For code examples that show how to use “Time” see:<br />
-<code></code><a href="http://www.eol.ucar.edu/raf/Software/TimeExamp.html">http://www.eol.ucar.edu/raf/Software/TimeExamp.html</a>
+<a href="http://www.eol.ucar.edu/raf/Software/TimeExamp.html">http://www.eol.ucar.edu/raf/Software/TimeExamp.html</a>
 </p>
 </div>
 <div id="base-time" class="section level4 unnumbered" number="">
@@ -355,7 +407,7 @@ For code examples that show how to use “Time” see:<br />
 </div>
 <div id="distinction-between-original-measurements-and-derived-variables" class="section level3" number="2.4.2">
 <h3><span class="header-section-number">2.4.2</span> Distinction Between Original Measurements and Derived Variables</h3>
-<p>Many of the variables in the data files and in this report are derived from combinations of measurements. The terms “raw” or “original” measurement are sometimes used for a minimally processed output received directly from a sensor or instrument. Such measurements may be converted to engineering units via calibration coefficients, but otherwise they are a direct representation of the output from a sensor.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>
+<p>Many of the variables in the data files and in this report are derived from combinations of measurements. The terms “raw” or “original” measurement are sometimes used for a minimally processed output received directly from a sensor or instrument. Such measurements may be converted to engineering units via calibration coefficients, but otherwise they are a direct representation of the output from a sensor.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>
 In contrast, derived variables (e.g., potential temperature) depend on one or more “raw” measurements and are not direct results of output from an instrument. For most derived measurements, a box that follows an introductory comment is used in this report to document the processing algorithm. The box has two parts; in the top are definitions used and explanations regarding variables that enter the calculation, while the bottom portion contains the equation, algorithm, or code segment that documents how the variable is calculated.<span id="punch1.4" label="punch1.4">[punch1.4]</span></p>
 </div>
 <div id="dimensions-in-equations" class="section level3" number="2.4.3">
@@ -368,8 +420,7 @@ In contrast, derived variables (e.g., potential temperature) depend on one or mo
 <hr />
 <ol start="4">
 <li id="fn4"><p>Some symbols used only once and defined where they are used are omitted from this list<a href="2-general-information-about-data-files.html#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p>where the symbol <span class="math inline">≡</span> is used, the relationship is exact by definition<a href="2-general-information-about-data-files.html#fnref5" class="footnote-back">↩︎</a></p></li>
-<li id="fn6"><p>Calibration coefficients, e.g. those used to convert from voltage output from an analog sensor to a measured quantity with physical units like <span class="math inline">º</span>C, are not included or discussed in this report. They are normally included in project reports and, in recent years, many are included in the header of the NETCDF file.<a href="2-general-information-about-data-files.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Calibration coefficients, e.g. those used to convert from voltage output from an analog sensor to a measured quantity with physical units like <span class="math inline">º</span>C, are not included or discussed in this report. They are normally included in project reports and, in recent years, many are included in the header of the NETCDF file.<a href="2-general-information-about-data-files.html#fnref5" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

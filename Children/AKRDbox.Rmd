@@ -1,7 +1,7 @@
 <p class=box>
-ADIFR = attack differential pressure, radome [hPa]  
-QCF = uncorrected dynamic pressure [hPa]  
-MACH = uncorrected Mach number based on QCF and PSF
+[ADIFR](#adifr) = attack differential pressure, radome [hPa]  
+[QCF](#qcx) = uncorrected dynamic pressure [hPa]  
+[MACH](#mach-number) = uncorrected Mach number based on QCF and PSF
 without humidity correction  
 $e_{0},\,e{}_{1},\,e_{2}$ = sensitivity
 coefficients determined empirically; typically:  

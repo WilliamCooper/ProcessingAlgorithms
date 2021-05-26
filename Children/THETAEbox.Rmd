@@ -2,10 +2,10 @@
 ```
 <p class=box>
 $T_{L}$= temperature at the lifted condensation level, K  
-ATX = ambient temperature [$^{\circ}\mathrm{C}$]  
-EDPC = water vapor pressure [hPa] -- now superceded by EWX  
-MR = mixing ratio [g/kg]  
-THETA = potential temperature [K]  
+[ATX](#ambient-t) = ambient temperature [$^{\circ}\mathrm{C}$]  
+EDPC = water vapor pressure [hPa] -- now superceded by [EWX](#ewx)  
+[MR](#MR) = mixing ratio [g/kg]  
+[THETA](#theta) = potential temperature [K]  
 </p><p class=box2>  
 \begin{equation}
 T_{L}=\frac{2840.}{3.5\ln(\mathrm{\{ATX\}+T_{0}})-\ln(\mathrm{\{EDPC\}})-4.805}+55

@@ -20,12 +20,12 @@
   }
 </style>
 <p class=box>
-LAT = latitude measured by the IRS  
-LON = longitude measured by the IRS  
-GGLAT = latitude measured by the GPS  
-GGLON = longitude measured by the GPS  
-VNSC = aircraft ground speed, north component, corrected  
-VEWC = aircraft ground speed, east component, corrected  
+[LAT](#latitude) = latitude measured by the IRS  
+[LON](#longitude) = longitude measured by the IRS  
+[GGLAT](#gglat) = latitude measured by the GPS  
+[GGLON](#gglon) = longitude measured by the GPS  
+[VNSC](#vewc-vnsc) = aircraft ground speed, north component, corrected  
+[VEWC](#vewc-vnsc) = aircraft ground speed, east component, corrected  
 </p><p class=box2>
 **1.** Initialize the corrected position at the IRS position at the start of the flight or after
 any large change (>5$^\circ$) in the IRS position.  <br><br>

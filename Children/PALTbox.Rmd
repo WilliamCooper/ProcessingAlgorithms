@@ -4,7 +4,7 @@
 $T_{0}^{\ddagger}$= 288.15 K, reference temperature  
 $\lambda_{a}^{\ddagger}$ \sindex[lis]{lambdaa@$\lambda_{a}$= tropospheric lapse rate, standard atmosphere}=
 -0.0065 $^{\circ}$C per geopotential meter = the lapse rate\index{International Standard Atmosphere!lapse rate} for the troposphere$^{\ddagger}$  
-$p$ = measured static (ambient) pressure, hPa, usually from PSXC  
+$p$ = measured static (ambient) pressure, hPa, usually from [PSXC](#psx)  
 $p_{0}^{\ddagger}$\sindex[lis]{P0star@$p_{0}^{\ddagger}$= reference pressure for zero altitude,
 ISA} = 1013.25 hPa, reference pressure for PALT=0 $^{\ddagger}$  
 $M_{d}^{\ddagger}$ = 28.9644 kg/kmol = molecular weight of dry

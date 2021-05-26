@@ -1,5 +1,5 @@
 <p class=box>
-IRxHTV = voltage from a platinum resistance thermometer attached to the housing
+[IRxHTV](#irxht) = voltage from a platinum resistance thermometer attached to the housing
 of the pyrgeometer [V]  
 {$a_4,\,a_5$} = calibration coefficients [$^\circ$C]  
 $V_1$ = 1 V (for consistency of units)
