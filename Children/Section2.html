@@ -390,8 +390,7 @@ r_{v}=\frac{n_{1}}{n_{2}}=\left(\frac{M_{2}}{M_{1}}\right)r_{m}
 </li>
 <li>In some cases, particularly for older data files, speed has been recorded in units of knots (= 0.514444 m/s) and distance in nautical miles <span class="math inline">≡</span> 1852 m).</li>
 </ol>
-In Appendix A there is a list of symbols.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> The next table defines some abbreviations and additional symbols used for units in this report, in addition to the standard abbreviations for the mks system of units:<span id="punch1.2" label="punch1.2">[punch1.2]</span><br />
-
+In Appendix A there is a list of symbols.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> The next table defines some abbreviations and additional symbols used for units in this report, in addition to the standard abbreviations for the mks system of units:<span id="punch1.2" label="punch1.2">[punch1.2]</span> <!-- It would be useful to translate the following table from html to Rmd: -->
 <table>
 <thead>
 <tr class="header">
@@ -480,10 +479,10 @@ knot (n mi/hour) <span class="math inline">≡</span> (1852/3600) m/s = 0.51444
 <em>The reference-time</em> counter <em>for the output data files,</em> used by data system versions beginning with ADS-3. It is an integer output at 1 Hz <em>and has an initial value of zero at the start of the flight</em>. Add this to the “Time:units” attribute found in the NETCDF header section to obtain the UTC time.
 </p>
 <p>
-Example attribute: <code></code> <br /> <code></code><code>Time:units = “seconds since 2006-04-26 12:55:00 +0000” </code>;
+Example attribute:  <br /> <code>Time:units = “seconds since 2006-04-26 12:55:00 +0000” </code>;
 </p>
 <p>
-For code examples that show how to use “Time” see:<br /> <code></code><a href="http://www.eol.ucar.edu/raf/Software/TimeExamp.html">http://www.eol.ucar.edu/raf/Software/TimeExamp.html</a>
+For code examples that show how to use “Time” see:<br /> <a href="http://www.eol.ucar.edu/raf/Software/TimeExamp.html">http://www.eol.ucar.edu/raf/Software/TimeExamp.html</a>
 </p>
 </div>
 <div id="base-time" class="section level4 unnumbered">
@@ -503,14 +502,11 @@ For code examples that show how to use “Time” see:<br /> <code></code><a hre
 <p>These three variables represent the date when the aircraft’s data system began recording data. They are repeated as 1 Hz variables but are NOT incremented if the time rolls over to the next day. Use base_time and time_offset for reference timing. Since ADS-3, this information is replaced by the “Time” variable and the “Time:units” attribute of that variable.</p>
 </div>
 </div>
-<div id="synchronication-of-measurements" class="section level2">
+<div id="synchronization-of-measurements" class="section level2">
 <h2>Synchronization of Measurements</h2>
-<p>
 <p>Measurements sampled under control of the “NIDAS” sampling system are acquired at 50 Hz. However, the standard archive files are produced at a rate of 1 Hz, and each sample is the average of 50 samples. Therefore, the time associated with measurements reported at 1 Hz is actually an average over the specified second, so the reference time for the averaged measurement is actually 0.5 s past the reported time. Analogous offsets apply to variables reported at other rates different from 50 Hz. Where it applies, electronic filters with cutoff frequency of 25 Hz are used with analog measurements. Higher-rate files are sometimes produced, standardized to 25 Hz but sometimes at other frequencies.</p>
-There are time shifts inherent in many of the measurements, and in some cases (e.g., those produced by inertial reference units) these time shifts arise because the information is transmitted from the measuring system at a time later than when it was sampled. In these cases, shifts (“lags”) are applied to the measurements. The lags may be either static or dynamic. Static lags are specified in a configuration file, saved for each project; dynamic lags provided as part of data sampling by specific instruments are recorded by NIDAS for use in processing. Dynamic lags are usually a difference in time from a gridded time value to the time it was actually acquired. e.g. for a 5-Hz parameter the expected or gridded millisecond offset into each second would be 0, 200, 400, 600, and 800. If the data actually were sampled or acquired at 50, 250, 450, 650, and 850 ms then the dynamic lag for this particular second would be -50 ms. Corrections for time lags are applied to measurements before conversion to one of the standard data rates.
-</p>
-<p>
-<p>Where data rates for particular measurements do not match the basic 50 Hz sampling rate, linear interpolation is used to obtain higher-rate values. For 1 Hz data files, measurements are then averaged within each second. For 25 Hz files, 50 Hz measurements are digitally filtered using a finite impulse response (FIR) filter, while data acquired at less than 25 Hz are linearly interpolated to 25 Hz and then FIR-filtered for smoothing.</p>
+<p>There are time shifts inherent in many of the measurements, and in some cases (e.g., those produced by inertial reference units) these time shifts arise because the information is transmitted from the measuring system at a time later than when it was sampled. In these cases, shifts (“lags”) are applied to the measurements. The lags may be either static or dynamic. Static lags are specified in a configuration file, saved for each project; dynamic lags provided as part of data sampling by specific instruments are recorded by NIDAS for use in processing. Dynamic lags are usually a difference in time from a gridded time value to the time it was actually acquired. e.g. for a 5-Hz parameter the expected or gridded millisecond offset into each second would be 0, 200, 400, 600, and 800. If the data actually were sampled or acquired at 50, 250, 450, 650, and 850 ms then the dynamic lag for this particular second would be -50 ms. Corrections for time lags are applied to measurements before conversion to one of the standard data rates.</p>
+<p><span id="elecFilter" label="elecFilter">Where data rates for particular measurements do not match the basic 50 Hz sampling rate, linear interpolation is used to obtain higher-rate values. For 1 Hz data files, measurements are then averaged within each second. For 25 Hz files, 50 Hz measurements are digitally filtered using a finite impulse response (FIR) filter, while data acquired at less than 25 Hz are linearly interpolated to 25 Hz and then FIR-filtered for smoothing.</span></p>
 <p>
 <span id="punch1.3" label="punch1.3">[punch1.3]</span>
 </p>
