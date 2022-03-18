@@ -1,14 +1,14 @@
 <p class=box>
-CNTS = particle counts per sample interval from the CN counter  
+[CNTS](#cnts) = particle counts per sample interval from the CN counter  
 $\Delta t$ = \sindex[lis]{Deltat@$\Delta t$=time interval}interval
 between recorded samples [s]  
 $t_{d}$ = cumulative dead time during the sampling interval [s]  
 $C_{flow}$ (see preceding box)    
-FCNC = corrected sample flow rate (VLPM) for instrument conditions  
-PCN = internal pressure of the CN counter [hPa]  
-CNTEMP = temperature of the optics block [$^{\circ}$C]  
-PSXC = corrected ambient pressure [hPa]  
-ATX = ambient temperature [$^{\circ}$C]  
+[FCNC](#fcnc) = corrected sample flow rate (VLPM) for instrument conditions  
+[PCN](#pcn) = internal pressure of the CN counter [hPa]  
+[CNTEMP](#cntemp) = temperature of the optics block [$^{\circ}$C]  
+[PSXC](./4-the-state-of-the-atmosphere.html#psx) = corrected ambient pressure [hPa]  
+[ATX](./4-the-state-of-the-atmosphere.html#ambient-t) = ambient temperature [$^{\circ}$C]  
 $T_{0}$ = 273.15\ K  
 </p><p class=box2>
 \begin{equation}

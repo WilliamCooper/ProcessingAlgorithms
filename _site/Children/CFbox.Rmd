@@ -1,10 +1,10 @@
 
 <p class=box>  
-VEW = IRS-measured east component
+[VEW](#vew) = IRS-measured east component
 of the aircraft ground speed    
-VNS = IRS-measured north component of the aircraft ground speed  
-GGVEW = GPS-measured east component of the aircraft ground speed  
-GGVNS = GPS-measured north component of the aircraft ground speed  
+[VNS](#vns) = IRS-measured north component of the aircraft ground speed  
+[GGVEW](#ggvew) = GPS-measured east component of the aircraft ground speed  
+[GGVNS](#ggvns) = GPS-measured north component of the aircraft ground speed  
 $F_{L}()$ = three-pole Butterworth low-pass recursive digital filter  
 </p>
 <p class=box2>

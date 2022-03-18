@@ -4,11 +4,11 @@
 $g_{1}$ = 9.780356 m\ s^-2^  
 $a_{1}$ = 0.31391116$\times 10$^-6^m^-1^  
 $a_{2}$ = .0052885 (dimensionless)  
-VEW (VNS) = eastward (northward) groundspeed of the aircraft (see
+[VEW](#vew) ([VNS](#vns)) = eastward (northward) groundspeed of the aircraft (see
 below)  
-LAT = latitude measured by the IRS [º]  
+[LAT](#latitude) = latitude measured by the IRS [º]  
 $C_{dr}=\pi/180^{\circ}$ = conversion factor, degrees to radians  
-PALT = pressure altitude of the aircraft  
+[PALT](#palt) = pressure altitude of the aircraft  
 $\Omega$ = angular rotation of the earth$^{\dagger}$ = 7.292116$\times10^{6}$
 radians/s  
 $R_{E}$ = radius of the Earth$^{\dagger}$ = 6.371229$\times10^{6}$

@@ -1,7 +1,7 @@
 
 <p class=box>
-LON$_{ref}$ = reference longitude (º)  
-LAT$_{ref}$ = reference latitude (º)  
+[LON](#longitude)$_{ref}$ = reference longitude (º)  
+[LAT](#latitude)$_{ref}$ = reference latitude (º)  
 $C_{deg2km}=$ conversion factor, degrees latitude to km\sindex[con]{conversion factor, degrees latitude to km} 
 $\equiv$ 111.12 km / $^{\circ}$  
 </p>

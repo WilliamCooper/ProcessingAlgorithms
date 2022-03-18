@@ -1,5 +1,5 @@
 <p class=box>
-IRx = raw pyrgeometer output [W$\,$m$^{-2}$]  
+[IRx](#irx) = raw pyrgeometer output [W$\,$m$^{-2}$]  
 $T_{D}$ = dome temperature [K]  
 $T_{S}$ = ``sink'' temperature (approx.\ the thermopile temperature)
 [K]  

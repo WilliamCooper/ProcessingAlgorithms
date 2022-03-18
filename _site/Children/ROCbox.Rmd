@@ -26,8 +26,8 @@ border-radius: 1px;
 $g^{\dagger}$ = acceleration of gravity (see Eq. \@ref(eq:gsublambda))  
 $R_{d}{}^{\dagger}$ = gas constant for dry air  
 $T_{K}$ = absolute temperature = (ATX + 273.15)  
-$a$ = ACINS = upward acceleration as measured by the INS [m\ s^-2^]  
-$p$ = PSXC = measured ambient pressure [hPa]  
+$a$ = [ACINS](#acins) = upward acceleration as measured by the INS [m\ s^-2^]  
+$p$ = [PSXC](#psx) = measured ambient pressure [hPa]  
 $\Delta p$ = difference between current and last value of PSXC  
 $\Delta t$ = time between samples (1/$f$ where $f$ is the sample
 frequency)  

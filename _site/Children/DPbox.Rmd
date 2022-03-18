@@ -1,14 +1,14 @@
 
 <p class=box>
-$T_{p}$ = DPx from instrument x [$^{\circ}$C], or alternately  
-RHO = water vapor density measurement
+$T_{p}$ = [DPx](#dew-point) from instrument x [$^{\circ}$C], or alternately  
+[RHO](#rho) = water vapor density measurement
 [$\mathrm{g\ }\mathrm{m}^{-3}$]; only one is used in any calculation  
-ATX = reference ambient temperature [$^{\circ}C$]    
+[ATX](#ambient-t) = reference ambient temperature [$^{\circ}C$]    
 $T_{K}$=ATX+$T_{0}$\ $^{\dagger}$ = ambient temperature [K]   
-$p$ = PSXC = reference ambient pressure [hPa]  
-$p_{h}$ = CAVP\_x = pressure in instrument "x" housing [hPa]  
+$p$ = [PSXC](#psx) = reference ambient pressure [hPa]  
+$p_{h}$ = [CAVP](#p-special)\_x = pressure in instrument "x" housing [hPa]  
 $e_{t}$ = intermediate vapor pressure used for calculation only  
-$e$ = EWx = water vapor pressure from source x [hPa]  
+$e$ = [EWx](#ewx) = water vapor pressure from source x [hPa]  
 $M_{w}$ = molecular weight of water$^{\dagger}$  
 $R_{0}$ = universal gas constant$^{\dagger}$  
 $f(p_{h},T_{p})$ = enhancement factor (cf. \@ref(eq:enhance))      
