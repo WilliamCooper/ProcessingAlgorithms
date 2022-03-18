@@ -7,6 +7,13 @@ output:
     lib_dir: assets
     split_by: chapter+number
     keep_tex: yes
+  html_document:
+    df_print: paged
+    keep_tex: yes
+    split_by: chapter+number
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
   html_document2:
     keep_tex: yes
     toc: yes
@@ -17,21 +24,14 @@ output:
     config:
       toolbar:
         position: static
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
   bookdown::html_book:
     lib_dir: assets
     split_by: chapter+number
     keep_tex: yes
     self_contained: true
-  html_document:
-    df_print: paged
-    keep_tex: yes
-    split_by: chapter+number
-    toc: yes
-    toc_depth: 2
-    toc_float: yes
-  pdf_document:
-    toc: yes
-    toc_depth: '2'
 documentclass: book
 site: bookdown::bookdown_site
 always_allow_html: true
