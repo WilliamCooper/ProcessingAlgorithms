@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 Cloud Physics Variables | RAF Technical Note: Processing Algorithms</title>
   <meta name="description" content="5 Cloud Physics Variables | RAF Technical Note: Processing Algorithms" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 Cloud Physics Variables | RAF Technical Note: Processing Algorithms" />
   <meta property="og:type" content="book" />
-  
   
   
   
@@ -32,7 +31,6 @@
   
 <link rel="prev" href="4-the-state-of-the-atmosphere.html"/>
 <link rel="next" href="6-air-chemistry-measurements.html"/>
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="site_libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,8 +48,9 @@
 
 
 
-<link href="site_libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="site_libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="site_libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="site_libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -70,112 +69,112 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="1-introduction.html"><a href="1-introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<li><a href="index.html#index">Preface<span></span></a></li>
+<li class="chapter" data-level="1" data-path="1-introduction.html"><a href="1-introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction<span></span></a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="1-introduction.html"><a href="1-introduction.html#background-information"><i class="fa fa-check"></i><b>1.1</b> Background Information</a></li>
-<li class="chapter" data-level="1.2" data-path="1-introduction.html"><a href="1-introduction.html#alphabetical-list-of-variables"><i class="fa fa-check"></i><b>1.2</b> Alphabetical List of Variables</a></li>
-<li class="chapter" data-level="1.3" data-path="1-introduction.html"><a href="1-introduction.html#constants-and-symbols"><i class="fa fa-check"></i><b>1.3</b> Constants and Symbols</a></li>
+<li class="chapter" data-level="1.1" data-path="1-introduction.html"><a href="1-introduction.html#background-information"><i class="fa fa-check"></i><b>1.1</b> Background Information<span></span></a></li>
+<li class="chapter" data-level="1.2" data-path="1-introduction.html"><a href="1-introduction.html#alphabetical-list-of-variables"><i class="fa fa-check"></i><b>1.2</b> Alphabetical List of Variables<span></span></a></li>
+<li class="chapter" data-level="1.3" data-path="1-introduction.html"><a href="1-introduction.html#constants-and-symbols"><i class="fa fa-check"></i><b>1.3</b> Constants and Symbols<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html"><i class="fa fa-check"></i><b>2</b> General Information About Data Files</a>
+<li class="chapter" data-level="2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html"><i class="fa fa-check"></i><b>2</b> General Information About Data Files<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#units-and-abbreviations"><i class="fa fa-check"></i><b>2.1</b> Units and Abbreviations</a></li>
-<li class="chapter" data-level="2.2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#variables-used-to-denote-time"><i class="fa fa-check"></i><b>2.2</b> Variables Used to Denote Time</a></li>
-<li class="chapter" data-level="2.3" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#synchronization-of-measurements"><i class="fa fa-check"></i><b>2.3</b> Synchronization of Measurements</a></li>
-<li class="chapter" data-level="2.4" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#other-comments-on-terminology"><i class="fa fa-check"></i><b>2.4</b> Other Comments on Terminology</a>
+<li class="chapter" data-level="2.1" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#units-and-abbreviations"><i class="fa fa-check"></i><b>2.1</b> Units and Abbreviations<span></span></a></li>
+<li class="chapter" data-level="2.2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#variables-used-to-denote-time"><i class="fa fa-check"></i><b>2.2</b> Variables Used to Denote Time<span></span></a></li>
+<li class="chapter" data-level="2.3" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#synchronization-of-measurements"><i class="fa fa-check"></i><b>2.3</b> Synchronization of Measurements<span></span></a></li>
+<li class="chapter" data-level="2.4" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#other-comments-on-terminology"><i class="fa fa-check"></i><b>2.4</b> Other Comments on Terminology<span></span></a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#variable-names-in-equations"><i class="fa fa-check"></i><b>2.4.1</b> Variable Names in Equations</a></li>
-<li class="chapter" data-level="2.4.2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#distinction-between-original-measurements-and-derived-variables"><i class="fa fa-check"></i><b>2.4.2</b> Distinction Between Original Measurements and Derived Variables</a></li>
-<li class="chapter" data-level="2.4.3" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#dimensions-in-equations"><i class="fa fa-check"></i><b>2.4.3</b> Dimensions in Equations</a></li>
+<li class="chapter" data-level="2.4.1" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#variable-names-in-equations"><i class="fa fa-check"></i><b>2.4.1</b> Variable Names in Equations<span></span></a></li>
+<li class="chapter" data-level="2.4.2" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#distinction-between-original-measurements-and-derived-variables"><i class="fa fa-check"></i><b>2.4.2</b> Distinction Between Original Measurements and Derived Variables<span></span></a></li>
+<li class="chapter" data-level="2.4.3" data-path="2-general-information-about-data-files.html"><a href="2-general-information-about-data-files.html#dimensions-in-equations"><i class="fa fa-check"></i><b>2.4.3</b> Dimensions in Equations<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html"><i class="fa fa-check"></i><b>3</b> The State of the Aircraft</a>
+<li class="chapter" data-level="3" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html"><i class="fa fa-check"></i><b>3</b> The State of the Aircraft<span></span></a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#inertial-reference-systems"><i class="fa fa-check"></i><b>3.1</b> Inertial Reference Systems</a>
+<li class="chapter" data-level="3.1" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#inertial-reference-systems"><i class="fa fa-check"></i><b>3.1</b> Inertial Reference Systems<span></span></a>
 <ul>
-<li class="chapter" data-level="3.1.1" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#standard-variables"><i class="fa fa-check"></i><b>3.1.1</b> Standard Variables</a></li>
-<li class="chapter" data-level="3.1.2" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#special-use-irs"><i class="fa fa-check"></i><b>3.1.2</b> Additional Special-Use Variables</a></li>
+<li class="chapter" data-level="3.1.1" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#standard-variables"><i class="fa fa-check"></i><b>3.1.1</b> Standard Variables<span></span></a></li>
+<li class="chapter" data-level="3.1.2" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#special-use-irs"><i class="fa fa-check"></i><b>3.1.2</b> Additional Special-Use Variables<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#global-positioning-systems"><i class="fa fa-check"></i><b>3.2</b> Global Positioning Systems</a></li>
-<li class="chapter" data-level="3.3" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#other-measurements-of-aircraft-altitude"><i class="fa fa-check"></i><b>3.3</b> Other Measurements of Aircraft Altitude</a></li>
-<li class="chapter" data-level="3.4" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#combining-irs-and-gps-measurements"><i class="fa fa-check"></i><b>3.4</b> Combining IRS and GPS Measurements</a></li>
+<li class="chapter" data-level="3.2" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#global-positioning-systems"><i class="fa fa-check"></i><b>3.2</b> Global Positioning Systems<span></span></a></li>
+<li class="chapter" data-level="3.3" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#other-measurements-of-aircraft-altitude"><i class="fa fa-check"></i><b>3.3</b> Other Measurements of Aircraft Altitude<span></span></a></li>
+<li class="chapter" data-level="3.4" data-path="3-the-state-of-the-aircraft.html"><a href="3-the-state-of-the-aircraft.html#combining-irs-and-gps-measurements"><i class="fa fa-check"></i><b>3.4</b> Combining IRS and GPS Measurements<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html"><i class="fa fa-check"></i><b>4</b> The State of the Atmosphere</a>
+<li class="chapter" data-level="4" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html"><i class="fa fa-check"></i><b>4</b> The State of the Atmosphere<span></span></a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#information-on-instruments-and-calibrations"><i class="fa fa-check"></i><b>4.1</b> Information on Instruments and Calibrations</a></li>
-<li class="chapter" data-level="4.2" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#variable-names"><i class="fa fa-check"></i><b>4.2</b> Variable Names</a></li>
-<li class="chapter" data-level="4.3" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#pressure"><i class="fa fa-check"></i><b>4.3</b> Pressure</a>
+<li class="chapter" data-level="4.1" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#information-on-instruments-and-calibrations"><i class="fa fa-check"></i><b>4.1</b> Information on Instruments and Calibrations<span></span></a></li>
+<li class="chapter" data-level="4.2" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#variable-names"><i class="fa fa-check"></i><b>4.2</b> Variable Names<span></span></a></li>
+<li class="chapter" data-level="4.3" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#pressure"><i class="fa fa-check"></i><b>4.3</b> Pressure<span></span></a>
 <ul>
-<li class="chapter" data-level="4.3.1" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#standard-pressure-measurements"><i class="fa fa-check"></i><b>4.3.1</b> Standard Pressure Measurements</a></li>
-<li class="chapter" data-level="" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#p-special"><i class="fa fa-check"></i>Special Pressure Measurements (hPa): PSDPx, CAVP, PCAB, PSURF</a></li>
+<li class="chapter" data-level="4.3.1" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#standard-pressure-measurements"><i class="fa fa-check"></i><b>4.3.1</b> Standard Pressure Measurements<span></span></a></li>
+<li><a href="4-the-state-of-the-atmosphere.html#p-special">Special Pressure Measurements (hPa): PSDPx, CAVP, PCAB, PSURF<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#temperature-section"><i class="fa fa-check"></i><b>4.4</b> Temperature</a></li>
-<li class="chapter" data-level="4.5" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#humidity"><i class="fa fa-check"></i><b>4.5</b> Humidity</a></li>
-<li class="chapter" data-level="4.6" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#derived-thermodynamic-variables"><i class="fa fa-check"></i><b>4.6</b> Derived Thermodynamic Variables</a>
+<li class="chapter" data-level="4.4" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#temperature-section"><i class="fa fa-check"></i><b>4.4</b> Temperature<span></span></a></li>
+<li class="chapter" data-level="4.5" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#humidity"><i class="fa fa-check"></i><b>4.5</b> Humidity<span></span></a></li>
+<li class="chapter" data-level="4.6" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#derived-thermodynamic-variables"><i class="fa fa-check"></i><b>4.6</b> Derived Thermodynamic Variables<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#thetav"><i class="fa fa-check"></i>Virtual Potential Temperature (K): THETAV</a></li>
+<li><a href="4-the-state-of-the-atmosphere.html#thetav">Virtual Potential Temperature (K): THETAV<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#wind"><i class="fa fa-check"></i><b>4.7</b> Wind</a>
+<li class="chapter" data-level="4.7" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#wind"><i class="fa fa-check"></i><b>4.7</b> Wind<span></span></a>
 <ul>
-<li class="chapter" data-level="4.7.1" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#relative-wind"><i class="fa fa-check"></i><b>4.7.1</b> Relative Wind</a></li>
-<li><a href="4-the-state-of-the-atmosphere.html#akrd">Attack Angle, Radome (<span class="math inline">º</span>): AKRD</a></li>
-<li class="chapter" data-level="4.7.2" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#wind-components-and-the-wind-vector"><i class="fa fa-check"></i><b>4.7.2</b> Wind Components and the Wind Vector</a></li>
+<li class="chapter" data-level="4.7.1" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#relative-wind"><i class="fa fa-check"></i><b>4.7.1</b> Relative Wind<span></span></a></li>
+<li><a href="4-the-state-of-the-atmosphere.html#akrd">Attack Angle, Radome (<span class="math inline">º</span>): AKRD<span></span></a></li>
+<li class="chapter" data-level="4.7.2" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#wind-components-and-the-wind-vector"><i class="fa fa-check"></i><b>4.7.2</b> Wind Components and the Wind Vector<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.8" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#special-use-remote"><i class="fa fa-check"></i><b>4.8</b> Special-Use Remote Sensors</a></li>
+<li class="chapter" data-level="4.8" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#special-use-remote"><i class="fa fa-check"></i><b>4.8</b> Special-Use Remote Sensors<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html"><i class="fa fa-check"></i><b>5</b> Cloud Physics Variables</a>
+<li class="chapter" data-level="5" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html"><i class="fa fa-check"></i><b>5</b> Cloud Physics Variables<span></span></a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#LWC"><i class="fa fa-check"></i><b>5.1</b> Measurements of Liquid Water Content</a></li>
-<li class="chapter" data-level="5.2" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#sensors-1-D-probes"><i class="fa fa-check"></i><b>5.2</b> Sensors Detecting Individual Hydrometeors (1-D Probes)</a>
+<li class="chapter" data-level="5.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#LWC"><i class="fa fa-check"></i><b>5.1</b> Measurements of Liquid Water Content<span></span></a></li>
+<li class="chapter" data-level="5.2" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#sensors-1-D-probes"><i class="fa fa-check"></i><b>5.2</b> Sensors Detecting Individual Hydrometeors (1-D Probes)<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#CRPC"><i class="fa fa-check"></i>Count Rate Per Channel: ACDP, AFSSP, AS100, AF300, AS200, APCAS, A200X, A260X, A200Y, AUHSAS</a></li>
-<li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#size-distribution"><i class="fa fa-check"></i>Size Distribution:</a></li>
-<li class="chapter" data-level="5.2.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#concentration-cm-3-concd-concf-conc3-concp-concu"><i class="fa fa-check"></i><b>5.2.1</b> Concentration (cm<span class="math inline"><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;</a></li>
-<li><a href="5-cloud-physics-variables.html#mean-diameter">Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU</a></li>
-<li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#dispersion"><i class="fa fa-check"></i>Dispersion (dimensionless): DISPD, DISPF, DISP3, DISP6, DISPP, DISPX, DISPY, DISPU</a></li>
-<li><a href="5-cloud-physics-variables.html#PSD-LWC">Liquid Water Content (g m<strong><span class="math inline"><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</a></li>
-<li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#DBZ"><i class="fa fa-check"></i>Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD</a></li>
-<li><a href="5-cloud-physics-variables.html#effective-radius">Effective Radius (<span class="math inline"><em>μ</em></span>m): REFFD, REFFF</a></li>
-<li class="chapter" data-level="" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#fssp-range"><i class="fa fa-check"></i>FSSP-100 Range (dimensionless): FRNG, FRANGE</a></li>
+<li><a href="5-cloud-physics-variables.html#CRPC">Count Rate Per Channel: ACDP, AFSSP, AS100, AF300, AS200, APCAS, A200X, A260X, A200Y, AUHSAS<span></span></a></li>
+<li><a href="5-cloud-physics-variables.html#size-distribution">Size Distribution:<span></span></a></li>
+<li class="chapter" data-level="5.2.1" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#concentration-cm-3-concd-concf-conc3-concp-concu"><i class="fa fa-check"></i><b>5.2.1</b> Concentration (cm<span class="math inline"><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;<span></span></a></li>
+<li><a href="5-cloud-physics-variables.html#mean-diameter">Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU<span></span></a></li>
+<li><a href="5-cloud-physics-variables.html#dispersion">Dispersion (dimensionless): DISPD, DISPF, DISP3, DISP6, DISPP, DISPX, DISPY, DISPU<span></span></a></li>
+<li><a href="5-cloud-physics-variables.html#PSD-LWC">Liquid Water Content (g m<strong><span class="math inline"><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY<span></span></a></li>
+<li><a href="5-cloud-physics-variables.html#DBZ">Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD<span></span></a></li>
+<li><a href="5-cloud-physics-variables.html#effective-radius">Effective Radius (<span class="math inline"><em>μ</em></span>m): REFFD, REFFF<span></span></a></li>
+<li><a href="5-cloud-physics-variables.html#fssp-range">FSSP-100 Range (dimensionless): FRNG, FRANGE<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#hydrometeor-imaging-probes"><i class="fa fa-check"></i><b>5.3</b> Hydrometeor Imaging Probes</a></li>
+<li class="chapter" data-level="5.3" data-path="5-cloud-physics-variables.html"><a href="5-cloud-physics-variables.html#hydrometeor-imaging-probes"><i class="fa fa-check"></i><b>5.3</b> Hydrometeor Imaging Probes<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="6-air-chemistry-measurements.html"><a href="6-air-chemistry-measurements.html"><i class="fa fa-check"></i><b>6</b> Air Chemistry Measurements</a>
+<li class="chapter" data-level="6" data-path="6-air-chemistry-measurements.html"><a href="6-air-chemistry-measurements.html"><i class="fa fa-check"></i><b>6</b> Air Chemistry Measurements<span></span></a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="6-air-chemistry-measurements.html"><a href="6-air-chemistry-measurements.html#variables-in-standard-data-files"><i class="fa fa-check"></i><b>6.1</b> Variables in Standard Data Files</a></li>
-<li class="chapter" data-level="6.2" data-path="6-air-chemistry-measurements.html"><a href="6-air-chemistry-measurements.html#awas-cims-qcls-toga"><i class="fa fa-check"></i><b>6.2</b> Variables in Special Data Sets</a></li>
+<li class="chapter" data-level="6.1" data-path="6-air-chemistry-measurements.html"><a href="6-air-chemistry-measurements.html#variables-in-standard-data-files"><i class="fa fa-check"></i><b>6.1</b> Variables in Standard Data Files<span></span></a></li>
+<li class="chapter" data-level="6.2" data-path="6-air-chemistry-measurements.html"><a href="6-air-chemistry-measurements.html#awas-cims-qcls-toga"><i class="fa fa-check"></i><b>6.2</b> Variables in Special Data Sets<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html"><i class="fa fa-check"></i><b>7</b> Aerosol Particle Measurements</a>
+<li class="chapter" data-level="7" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html"><i class="fa fa-check"></i><b>7</b> Aerosol Particle Measurements<span></span></a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html#condensation-nucleus-counter"><i class="fa fa-check"></i><b>7.1</b> Condensation Nucleus Counter</a></li>
-<li class="chapter" data-level="7.2" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html#aerosol-spec"><i class="fa fa-check"></i><b>7.2</b> Aerosol Spectrometers</a></li>
-<li class="chapter" data-level="7.3" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html#special-aerosol"><i class="fa fa-check"></i><b>7.3</b> Special Aerosol Measurements</a></li>
+<li class="chapter" data-level="7.1" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html#condensation-nucleus-counter"><i class="fa fa-check"></i><b>7.1</b> Condensation Nucleus Counter<span></span></a></li>
+<li class="chapter" data-level="7.2" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html#aerosol-spec"><i class="fa fa-check"></i><b>7.2</b> Aerosol Spectrometers<span></span></a></li>
+<li class="chapter" data-level="7.3" data-path="7-aerosol-particle-measurements.html"><a href="7-aerosol-particle-measurements.html#special-aerosol"><i class="fa fa-check"></i><b>7.3</b> Special Aerosol Measurements<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html"><i class="fa fa-check"></i><b>8</b> Radiation Variables</a>
+<li class="chapter" data-level="8" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html"><i class="fa fa-check"></i><b>8</b> Radiation Variables<span></span></a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html#measurements-of-irradiance-and-radiometric-temperature"><i class="fa fa-check"></i><b>8.1</b> Measurements of Irradiance and Radiometric Temperature</a></li>
-<li class="chapter" data-level="8.2" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html#harp"><i class="fa fa-check"></i><b>8.2</b> Spectral Irradiance and Actinic Flux</a></li>
-<li class="chapter" data-level="8.3" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html#solar-angles"><i class="fa fa-check"></i><b>8.3</b> Solar Angles</a></li>
+<li class="chapter" data-level="8.1" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html#measurements-of-irradiance-and-radiometric-temperature"><i class="fa fa-check"></i><b>8.1</b> Measurements of Irradiance and Radiometric Temperature<span></span></a></li>
+<li class="chapter" data-level="8.2" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html#harp"><i class="fa fa-check"></i><b>8.2</b> Spectral Irradiance and Actinic Flux<span></span></a></li>
+<li class="chapter" data-level="8.3" data-path="8-radiation-variables.html"><a href="8-radiation-variables.html#solar-angles"><i class="fa fa-check"></i><b>8.3</b> Solar Angles<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="9-experimental-variables.html"><a href="9-experimental-variables.html"><i class="fa fa-check"></i><b>9</b> Experimental Variables</a></li>
-<li class="chapter" data-level="10" data-path="10-obsolete-variables.html"><a href="10-obsolete-variables.html"><i class="fa fa-check"></i><b>10</b> Obsolete Variables</a></li>
-<li class="appendix"><span><b>Appendices</b></span></li>
-<li class="chapter" data-level="" data-path="appendix-a-list-of-symbols.html"><a href="appendix-a-list-of-symbols.html"><i class="fa fa-check"></i>Appendix A: List of Symbols</a></li>
-<li class="chapter" data-level="" data-path="appendix-b-variable-names.html"><a href="appendix-b-variable-names.html"><i class="fa fa-check"></i>Appendix B: Variable Names</a></li>
-<li class="chapter" data-level="" data-path="appendix-c-editing-the-t.n..html"><a href="appendix-c-editing-the-t.n..html"><i class="fa fa-check"></i>Appendix C: Editing The T.N.</a>
+<li class="chapter" data-level="9" data-path="9-experimental-variables.html"><a href="9-experimental-variables.html"><i class="fa fa-check"></i><b>9</b> Experimental Variables<span></span></a></li>
+<li class="chapter" data-level="10" data-path="10-obsolete-variables.html"><a href="10-obsolete-variables.html"><i class="fa fa-check"></i><b>10</b> Obsolete Variables<span></span></a></li>
+<li class="appendix"><span><b>Appendices<span></span></b></span></li>
+<li><a href="appendix-a-list-of-symbols.html#appendix-a-list-of-symbols">Appendix A: List of Symbols<span></span></a></li>
+<li><a href="appendix-b-variable-names.html#appendix-b-variable-names">Appendix B: Variable Names<span></span></a></li>
+<li><a href="appendix-c-editing-the-t.n..html#appendix-c-editing-the-t.n.">Appendix C: Editing The T.N.<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="appendix-c-editing-the-t.n..html"><a href="appendix-c-editing-the-t.n..html#notes-regarding-the-construction-and-structure-of-this-document"><i class="fa fa-check"></i>Notes regarding the construction and structure of this document:</a></li>
-<li class="chapter" data-level="" data-path="appendix-c-editing-the-t.n..html"><a href="appendix-c-editing-the-t.n..html#referencing-specific-sections-or-pages-of-this-document-lyx-version"><i class="fa fa-check"></i>Referencing Specific Sections or Pages of this Document (LyX version):</a>
+<li><a href="appendix-c-editing-the-t.n..html#notes-regarding-the-construction-and-structure-of-this-document">Notes regarding the construction and structure of this document:<span></span></a></li>
+<li><a href="appendix-c-editing-the-t.n..html#referencing-specific-sections-or-pages-of-this-document-lyx-version">Referencing Specific Sections or Pages of this Document (LyX version):<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="appendix-c-editing-the-t.n..html"><a href="appendix-c-editing-the-t.n..html#variables"><i class="fa fa-check"></i>Variables</a></li>
-<li class="chapter" data-level="" data-path="appendix-c-editing-the-t.n..html"><a href="appendix-c-editing-the-t.n..html#page-numbers-lyx-version"><i class="fa fa-check"></i>Page Numbers (LyX Version)</a></li>
-<li class="chapter" data-level="" data-path="appendix-c-editing-the-t.n..html"><a href="appendix-c-editing-the-t.n..html#sections-and-subsections"><i class="fa fa-check"></i>Sections and Subsections</a></li>
-<li class="chapter" data-level="" data-path="appendix-c-editing-the-t.n..html"><a href="appendix-c-editing-the-t.n..html#adding-new-targets"><i class="fa fa-check"></i>Adding New Targets</a></li>
+<li><a href="appendix-c-editing-the-t.n..html#variables">Variables<span></span></a></li>
+<li><a href="appendix-c-editing-the-t.n..html#page-numbers-lyx-version">Page Numbers (LyX Version)<span></span></a></li>
+<li><a href="appendix-c-editing-the-t.n..html#sections-and-subsections">Sections and Subsections<span></span></a></li>
+<li><a href="appendix-c-editing-the-t.n..html#adding-new-targets">Adding New Targets<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="appendix-c-editing-the-t.n..html"><a href="appendix-c-editing-the-t.n..html#referencing-specific-sections-of-this-document-rmarkdown-version"><i class="fa fa-check"></i>Referencing Specific Sections of this Document (RMarkdown version):</a></li>
+<li><a href="appendix-c-editing-the-t.n..html#referencing-specific-sections-of-this-document-rmarkdown-version">Referencing Specific Sections of this Document (RMarkdown version):<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="appendix-d-needing-attention.html"><a href="appendix-d-needing-attention.html"><i class="fa fa-check"></i>Appendix D: Needing Attention</a></li>
-<li class="chapter" data-level="A" data-path="A-index-1.html"><a href="A-index-1.html"><i class="fa fa-check"></i><b>A</b> Index</a></li>
+<li><a href="appendix-d-needing-attention.html#appendix-d-needing-attention">Appendix D: Needing Attention<span></span></a></li>
+<li class="chapter" data-level="A" data-path="A-index-1.html"><a href="A-index-1.html"><i class="fa fa-check"></i><b>A</b> Index<span></span></a></li>
 </ul>
 
       </nav>
@@ -193,18 +192,18 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="cloud-physics-variables" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Cloud Physics Variables</h1>
+<div id="cloud-physics-variables" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Cloud Physics Variables<a href="5-cloud-physics-variables.html#cloud-physics-variables" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <!-- <h2 id="measurements-of-liquid-water-content">Measurements of Liquid Water Content</h2> -->
-<div id="LWC" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Measurements of Liquid Water Content</h2>
-<div id="plwc" class="section level4 unnumbered">
-<h4>Power, PMS/CSIRO (King) Liquid Water Content (W): PLWC, PLWC1</h4>
+<div id="LWC" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Measurements of Liquid Water Content<a href="5-cloud-physics-variables.html#LWC" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="plwc" class="section level4 unnumbered hasAnchor">
+<h4>Power, PMS/CSIRO (King) Liquid Water Content (W): PLWC, PLWC1<a href="5-cloud-physics-variables.html#plwc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The power dissipated by the sensor of a PMS/CSIRO (King) liquid water probe (in watts).</em> PLWC is the power required to maintain constant temperature in a heated element as that element is cooled by convection and evaporation of impinging liquid water. The convective heat losses are determined by calibration in dry air over a range of airspeeds and temperatures, so that the remaining power can be related to the liquid water content. The instrument is described in <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a> and at <a href="http://www.eol.ucar.edu/instruments/king-csiro-liquid-water-sensor">this URL</a>. See the following
 description for the algorithm used to obtain liquid water content from this measurement of power.<br /><span id="punch:5-3" label="punch:5-3">[punch:5-3]</span></p>
 </div>
-<div id="plwcc" class="section level4 unnumbered">
-<h4>PMS/CSIRO (King) Liquid Water Content (g/m<span class="math inline"><sup>3</sup></span>): PLWCC, PLWCC1</h4>
+<div id="plwcc" class="section level4 unnumbered hasAnchor">
+<h4>PMS/CSIRO (King) Liquid Water Content (g/m<span class="math inline"><sup>3</sup></span>): PLWCC, PLWCC1<a href="5-cloud-physics-variables.html#plwcc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <em>The liquid water content</em> <em>measured by a King probe.</em> This is calculated by relating the power consumption required to maintain a constant temperature to the liquid water content, taking into account the effect of convective heat losses. The instrument and processing are described by King et al. (1978)<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a>
 and in a note available at <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PLWCCrev140214.pdf">this URL</a>. Because the temperature of the sensing wire is typically well above the boiling point of water, the assumption made in processing is that the water collected on the sensing wire is vaporized at the boiling point <span class="math inline"><em>T</em><sub><em>b</em></sub></span>. The boiling point is represented as a function of pressure as described below.<br />
 </p>
@@ -311,20 +310,20 @@ P_{W}=L\,d[L_{v}(T_{b})+c_{w}(T_{b}-T_{a})]\,U_{a}\chi
 In addition, a processing step is used to remove drift by calculating the offset required to zero measurements obtained outside cloud. This is done by adjusting the coefficient <span class="math inline"><em>a</em><sub>0</sub></span> by nudging toward the value required to give zero liquid water content outside cloud (as indicated by another instrument, often a CDP showing droplet concentration of &lt;1 cm<span class="math inline"><sup> − 3</sup></span>). Specifically, when out-of-cloud, Nu<span class="math inline"><sup>′</sup></span> is calculated from Nu<span class="math inline"><sup>′</sup> = {<em>PLWC</em>}/(<em>πLλ</em><sub><em>c</em></sub>(<em>T</em><sub><em>s</em></sub> − <em>T</em><sub><em>a</em></sub>))</span>. Then the value of <span class="math inline"><em>a</em><sub>0</sub></span> is updated via <span class="math inline"><em>a</em><sub>0</sub></span> += (Nu<span class="math inline"><sup>′</sup>/<em>Re</em><sup><em>a</em><sub>1</sub></sup> − <em>a</em><sub>0</sub>)/<em>τ</em></span> (using, for the GV, separate coefficients for each of the three branches). In this formula, <span class="math inline"><em>τ</em></span> should be the number of updates in a fixed period, e.g., for a 100 s time constant and for 25-Hz processing, <span class="math inline"><em>τ</em> = 100 × 25</span>. In addition, to avoid jumps when switching among the branches, the linear coefficients {<span class="math inline"><em>a</em><sub>0</sub></span>} are adjusted with each transition between branches to provide a continuous estimate of the zero value.
 </p>
 </div>
-<div id="plwcg" class="section level4 unnumbered">
-<h4>PVM-100 Liquid Water Content (g/m<sup>3</sup>): PLWCG</h4>
+<div id="plwcg" class="section level4 unnumbered hasAnchor">
+<h4>PVM-100 Liquid Water Content (g/m<sup>3</sup>): PLWCG<a href="5-cloud-physics-variables.html#plwcg" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <em>Cloud liquid water content for cloud droplets in the approximate size range from 3–50 <span class="math inline"><em>μ</em></span>m.</em> The PVM produces a measure of the liquid water content directly, but a baseline value is sometimes subtracted by reference to another cloud droplet instrument such as an FSSP or CDP, such that when the other instrument measures a very low droplet concentration the baseline value for the PVM-100 is updated at the corresponding time and that average is then subtracted from the measurements directly produced by the PVM-100.<span id="punch:5-1" label="punch:5-1">[punch:5-1]</span>
 </p>
 </div>
-<div id="rice" class="section level4 unnumbered">
-<h4>Rosemount Icing Detector Signal (V): RICE</h4>
+<div id="rice" class="section level4 unnumbered hasAnchor">
+<h4>Rosemount Icing Detector Signal (V): RICE<a href="5-cloud-physics-variables.html#rice" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <em>The voltage related to loading on the element of a Rosemount 871F ice-accretion probe.</em> This instrument (see <a href="https://www.eol.ucar.edu/instruments/rosemount-icing-detector">this URL</a>) consists of a rod set in vibration by a piezoelectric crystal. The oscillation frequency of the probe changes with ice loading, so in supercooled cloud ice accumulates on the sensor and the change in oscillation frequency is transmitted as a DC voltage. When the rod loads to a trigger point, the probe heats the rod to remove the ice. The rate of voltage change can be converted to an estimate of the supercooled liquid water content, as described in connection with the obsolete variable SCLWC. This calculation is no longer provided routinely but can be duplicated by a user on the basis of the SCLWC algorithm (see <a href="10-obsolete-variables.html#SCLWC">SCLWC</a> in Section <a href="10-obsolete-variables.html#obsolete-variables">10</a> for one example; there are several other published algorithms.)
 </p>
 <!-- <h2 id="sensors-of-individual-particles-1-d-probessubsec1dprobes">Measurements of Liquid Water Content<span id="subsec:1DProbes" label="subsec:1DProbes">[subsec:1DProbes]</span></h2> -->
 </div>
 </div>
-<div id="sensors-1-D-probes" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Sensors Detecting Individual Hydrometeors (1-D Probes)</h2>
+<div id="sensors-1-D-probes" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Sensors Detecting Individual Hydrometeors (1-D Probes)<a href="5-cloud-physics-variables.html#sensors-1-D-probes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The RAF operates a set of hydrometeor detectors that provide single-dimension measurements (i.e., not images) of individual particle sizes. <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a> contains extensive information on the operating principles and characteristics of some of the older instruments. Here the focus will be on the meanings of the variables in the archived data files.<span id="punch:5-2" label="punch:5-2">[punch:5-2]</span></p>
 <p><span id="VariableNames1DProbes" label="VariableNames1DProbes"></span>Four- and five-character variable names shown in this section are generic. The actual names appearing in NIMBUS-generated production output data sets have appended to them an underscore (_) and three or four more characters that indicate a probe’s specific aircraft mounting location. For example, AFSSP_RPI refers to a variable from an FSSP-100 probe mounted on the inboard, right-side pod. The codes presently in use are given in the following table. For the GV, there are 12 locations available, characterized by three letters. The first is the wing ({L,R} for {port,starboard}), the second is the pylon ({I,M,O} for inboard, middle, outboard}), the third is which of the two possible canister locations at the pylon is used ({I,O} for {inboard, outboard}).</p>
 <!-- The following HTML table is now converted to R Markdown: -->
@@ -981,8 +980,8 @@ OAP-260X
 <p>
 <br />
 </p>
-<div id="CRPC" class="section level3 unnumbered">
-<h3>Count Rate Per Channel: ACDP, AFSSP, AS100, AF300, AS200, APCAS, A200X, A260X, A200Y, AUHSAS</h3>
+<div id="CRPC" class="section level3 unnumbered hasAnchor">
+<h3>Count Rate Per Channel: ACDP, AFSSP, AS100, AF300, AS200, APCAS, A200X, A260X, A200Y, AUHSAS<a href="5-cloud-physics-variables.html#CRPC" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <em>The size distribution of the number of particles detected by a 1D hydrometeor probe per unit time.</em> These measurements have “vector” character in the NetCDF output files, with dimension equal to the number of channels in the table above and with one entry per channel. The first element in the vector is a historical remnant from a time when housekeeping information was stored here and should be ignored. For the size limits of the channels, see the netCDF attributes of the following variables for “Size Distribution”.
 </p>
 <strong><u><span id="punch:5-4" label="punch:5-4">[punch:5-4]</span><span id="punch:5-7" label="punch:5-7">[punch:5-7]</span></u></strong><br />
@@ -990,8 +989,8 @@ OAP-260X
 <strong></strong>
 </p>
 </div>
-<div id="size-distribution" class="section level3 unnumbered">
-<h3>Size Distribution:</h3>
+<div id="size-distribution" class="section level3 unnumbered hasAnchor">
+<h3>Size Distribution:<a href="5-cloud-physics-variables.html#size-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>
 <strong>Size Distribution</strong> (<span class="math inline"><em>cm</em><sup> − 3</sup></span>channel<span class="math inline"><sup> − 1</sup></span>)<strong>:</strong> <strong></strong> <strong><u>CFSSP</u>,</strong> <strong><u>CS100</u>,</strong> <strong><u>CF300</u>,</strong> <strong><u>CS200</u></strong>, <strong></strong> <strong><u>CPCAS</u>,</strong> <strong><u>CCDP</u>,</strong> <strong><u>CUHSAS</u></strong><br />
 <strong>Size Distribution</strong> (L<strong><span class="math inline"><sup> − 1</sup></span></strong>channel<span class="math inline"><sup> − 1</sup></span>): <strong></strong> <strong><u>C200X</u>,</strong> <strong><u>C260X</u>,</strong> <strong><u>C200Y</u></strong>
@@ -1004,14 +1003,14 @@ OAP-260X
 <strong></strong>
 </p>
 </div>
-<div id="concentration-cm-3-concd-concf-conc3-concp-concu" class="section level3" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> Concentration (cm<span class="math inline"><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;</h3>
+<div id="concentration-cm-3-concd-concf-conc3-concp-concu" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Concentration (cm<span class="math inline"><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU;<a href="5-cloud-physics-variables.html#concentration-cm-3-concd-concf-conc3-concp-concu" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>(L<strong><span class="math inline"><sup> − 1</sup></span>):</strong> CONCX, CONC6, CONCY {#concentration .unnumbered}</p>
 <em>The particle concentrations</em> <em>summed over all channels to give the total concentration in the size range of the probe.</em> For example, {CONCF} = <span class="math inline">∑<sub><em>i</em></sub>{<em>CFSSP</em>}<sub><em>i</em></sub></span>. For additional details, see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a>.<br />
 </p>
 </div>
-<div id="mean-diameter" class="section level3 unnumbered">
-<h3>Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU</h3>
+<div id="mean-diameter" class="section level3 unnumbered hasAnchor">
+<h3>Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU<a href="5-cloud-physics-variables.html#mean-diameter" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>The arithmetic average of all measured particle diameters from a particular probe.</em> This mean is calculated as follows:<br /></p>
 <p class="box">
 {Cy<span class="math inline">\(_{i}\)</span>} = concentration
@@ -1031,8 +1030,8 @@ size limits for the channel)
 \end{equation}\]</span>
 </p>
 </div>
-<div id="dispersion" class="section level3 unnumbered">
-<h3>Dispersion (dimensionless): DISPD, DISPF, DISP3, DISP6, DISPP, DISPX, DISPY, DISPU</h3>
+<div id="dispersion" class="section level3 unnumbered hasAnchor">
+<h3>Dispersion (dimensionless): DISPD, DISPF, DISP3, DISP6, DISPP, DISPX, DISPY, DISPU<a href="5-cloud-physics-variables.html#dispersion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>The ratio of the standard deviation of particle diameters to the mean particle diameter.</em><br /></p>
 <p class="box">
 {<a href="5-cloud-physics-variables.html#mean-diameter">DBARx</a>} = mean particle diameter [<span class="math inline">\(\mu m\)</span>]<br />
@@ -1045,8 +1044,8 @@ size limits for the channel)
 \end{equation}\]</span>
 </p>
 </div>
-<div id="PSD-LWC" class="section level3 unnumbered">
-<h3>Liquid Water Content (g m<strong><span class="math inline"><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY</h3>
+<div id="PSD-LWC" class="section level3 unnumbered hasAnchor">
+<h3>Liquid Water Content (g m<strong><span class="math inline"><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY<a href="5-cloud-physics-variables.html#PSD-LWC" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>The density of liquid water represented by the size distribution measured by a hydrometeor probe.</em> These variables are calculated from the measured concentration (CONCx) and the third moment of the particle diameter, with the assumption that the particle is a water drop. The following box describes the calculation in terms of an equivalent droplet diameter, the diameter that represents the mass in the detected particle. The equivalent droplet diameter is normally the measured diameter for liquid hydrometeors, but some processing has used other assumptions and this is a choice that can be made based on project needs. Using this definition allows for the approximate estimation of ice water content in cases where it is known that all hydrometeors are ice.<br /></p>
 <p class="box">
 <span class="math inline">\(d_{e,i}\)</span> = equivalent melted diameter for channel <span class="math inline">\(i\)</span> of probe x<br />
@@ -1063,8 +1062,8 @@ size limits for the channel)
 is in units of g<span class="math inline">\(\,\)</span>m<span class="math inline">\(^{-3}\)</span>)
 </p>
 </div>
-<div id="DBZ" class="section level3 unnumbered">
-<h3>Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD</h3>
+<div id="DBZ" class="section level3 unnumbered hasAnchor">
+<h3>Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD<a href="5-cloud-physics-variables.html#DBZ" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>The radar reflectivity factor</em> <em>calculated from the measured size distribution from a hydrometeor probe.</em> This is calculated from the measured concentration and the sixth moment of the size distribution, with the assumption that the particles are water drops. An equivalent radar reflectivity factor can be calculated from the hydrometeor size distribution if another assumption is made about composition of the particles, but this variable is not part of normal data files. The radar reflectivity factor is a characteristic only of the hydrometeor size distribution; it is <em>not</em> a measure of radar reflectivity, because the latter also depends on wavelength, dielectric constant, and other characteristics of the hydrometeors. The normally used radar reflectivity factor is measured on a logarithmic scale that depends on a particular choice of units, so (although it is not conventional) an appropriate scale factor <span class="math inline"><em>Z</em><sub><em>r</em></sub></span> is included in the following equation to satisfy the convention that arguments of logarithms should be dimensionless.<br /></p>
 <p class="box">
 <span class="math inline">\(d_{i}\)</span> = diameter for channel <span class="math inline">\(i\)</span> of probe x<br />
@@ -1081,8 +1080,8 @@ is in units of g<span class="math inline">\(\,\)</span>m<span class="math inline
 <span id="punch:5-5" label="punch:5-5">[punch:5-5]</span>
 </p>
 </div>
-<div id="effective-radius" class="section level3 unnumbered">
-<h3>Effective Radius (<span class="math inline"><em>μ</em></span>m): REFFD, REFFF</h3>
+<div id="effective-radius" class="section level3 unnumbered hasAnchor">
+<h3>Effective Radius (<span class="math inline"><em>μ</em></span>m): REFFD, REFFF<a href="5-cloud-physics-variables.html#effective-radius" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>One-half the ratio of the third moment of the diameter measurements to the second moment.</em> This variable is useful in some calculations that relate the liquid water content of a cloud layer to its optical properties.<br /></p>
 <p class="box">
 <span class="math inline">\(d_{i}\)</span> = diameter for channel <span class="math inline">\(i\)</span> of probe x<br />
@@ -1095,8 +1094,8 @@ is in units of g<span class="math inline">\(\,\)</span>m<span class="math inline
 \end{equation}\]</span>
 </p>
 </div>
-<div id="fssp-range" class="section level3 unnumbered">
-<h3>FSSP-100 Range (dimensionless): FRNG, FRANGE</h3>
+<div id="fssp-range" class="section level3 unnumbered hasAnchor">
+<h3>FSSP-100 Range (dimensionless): FRNG, FRANGE<a href="5-cloud-physics-variables.html#fssp-range" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <em>The size range in use for the FSSP-100</em> <em>probe</em>.
 </p>
 <table>
@@ -1168,8 +1167,8 @@ In recent NETCDF data files, the actual bin boundaries used for processing are r
 <!-- <h2 id="hydrometeor-imaging-probessubsechydrometeor-imaging-probes">Hydrometeor Imaging Probes<span id="subsec:Hydrometeor-Imaging-Probes"label="subsec:Hydrometeor-Imaging-Probes">[subsec:Hydrometeor-Imaging-Probes]</span></h2> -->
 </div>
 </div>
-<div id="hydrometeor-imaging-probes" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> Hydrometeor Imaging Probes</h2>
+<div id="hydrometeor-imaging-probes" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Hydrometeor Imaging Probes<a href="5-cloud-physics-variables.html#hydrometeor-imaging-probes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>
 Instruments used to obtain hydrometeor images include the two-dimensional imaging probes (<a href="https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud-probe">2DC</a> and <a href="https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-precipitation-probe">2DP</a>) and some others that require special processing and separate data records. The former are described in this subsection. The latter include a three-view cloud particle imager (<a href="https://www.eol.ucar.edu/instruments/three-view-cloud-particle-imager">3V-CPI</a>), a small ice detector (<a href="https://www.eol.ucar.edu/instruments/small-ice-detector-version-2-hiaper">SID-2H</a>), and a holographic imager (<a href="https://www.eol.ucar.edu/instruments/holographic-detector-clouds">HOLODEC</a>). For information regarding use of data from the latter set of instruments, consult EOL/RAF data management via <a href="mailto:mailto:raf-dm%40eol.ucar.edu">this email address</a>.
 </p>
@@ -1182,47 +1181,47 @@ Measurements based on the two 2D probes will be discussed together in this secti
 <p>
 For the images from the 2D probes, separate data files need to be used. RAF provides a routine “<a href="https://www.eol.ucar.edu/software/xpms2d">XPMS2D</a>” that can be used to view the images and calculate various properties of the hydrometeor population based on these separate files.
 </p>
-<div id="special-1d-nomenclature" class="section level4 unnumbered">
-<h4>Special 1D Nomenclature</h4>
+<div id="special-1d-nomenclature" class="section level4 unnumbered hasAnchor">
+<h4>Special 1D Nomenclature<a href="5-cloud-physics-variables.html#special-1d-nomenclature" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>
 <span id="Despite-the-&#39;1D&#39;" label="Despite-the-&#39;1D&#39;"></span>Despite the ’1D’ nomenclature, the following variables are measured by 2D instruments; the ’1D’ designation is used to indicate that this is the dimension that would be sized by an equivalent 1D probe using a test that requires unshadowed end diodes so that the full dimension of the particle can be determined. As a consequence, the effective sample volume becomes smaller as the measured dimension increases.
 </p>
 </div>
-<div id="a1dc-a1dp" class="section level4 unnumbered">
-<h4>2D Count Rate Per Channel (count per time interval): A1DC, A1DP</h4>
+<div id="a1dc-a1dp" class="section level4 unnumbered hasAnchor">
+<h4>2D Count Rate Per Channel (count per time interval): A1DC, A1DP<a href="5-cloud-physics-variables.html#a1dc-a1dp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The number of particles counted by a 2D probe in each of 62 size bins in a specified time interval, usually 1 s.</em> These are used to calculate the derived variables like CONC1DC, C1DC, and others that follow, but are provided to allow re-calculation if a user wants to use different sample volumes or sizing assumptions.<br /></p>
 </div>
-<div id="c1dc-c1dp" class="section level4 unnumbered">
-<h4>2D Size Distribution (L<span class="math inline"><sup> − 1</sup></span>channel<span class="math inline"><sup> − 1</sup></span>): C1DC, C1DP</h4>
+<div id="c1dc-c1dp" class="section level4 unnumbered hasAnchor">
+<h4>2D Size Distribution (L<span class="math inline"><sup> − 1</sup></span>channel<span class="math inline"><sup> − 1</sup></span>): C1DC, C1DP<a href="5-cloud-physics-variables.html#c1dc-c1dp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The concentration of particles measured by a 2D probe in each of 62 bins in a specified time interval, usually 1 s.</em> These are calculated from A1DC by application of an assumed size-dependent sample volume based on probe characteristics and the flight speed. These are provided in a 64-element array for historical convention; the first element should be ignored, and the technique requires that the end elements be unshadowed and so precludes any measurement with width of 63 bins, so the 64-element vector has valid information only in bins 1–63. The cell boundaries are specified in the netCDF header as an attribute of C1DC or C1DP, and they specify the end points of the bin; e.g,, in the 64-element array of provided cell boundaries, the first element is the lower size limit of the first data cell which is the second element in C1DC. For a typical 2DC with 25-<span class="math inline"><em>μ</em></span>m size resolution, the cell sizes increase by 25 <span class="math inline"><em>μ</em></span>m per bin for each of the C1DC bins. Also included as attributes with the netCDF variable C1DC or C1DP are the size-dependent depth of field (mm) and effective sample area<a href="#fn44" class="footnote-ref" id="fnref44"><sup>44</sup></a>
 (mm), the latter having values of zero for the first and last elements in the 64-value vector.<br /></p>
 </div>
-<div id="conc2d" class="section level4 unnumbered">
-<h4>2D Concentration (L<span class="math inline"><sup> − 1</sup></span>): CONC1DC, CONC1DC100, CONC1DC150, CONC1DP</h4>
+<div id="conc2d" class="section level4 unnumbered hasAnchor">
+<h4>2D Concentration (L<span class="math inline"><sup> − 1</sup></span>): CONC1DC, CONC1DC100, CONC1DC150, CONC1DP<a href="5-cloud-physics-variables.html#conc2d" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The total concentration of all particles detected by a 2D hydrometeor imager,</em> or in the case of CONC1DC100 or CONC1DC150, the concentration of all particles sized to be at least xxx <span class="math inline"><em>μ</em></span>m in the dimension perpendicular to the direction of flight, where xxx may be 100 150. These concentrations are the sum of the particle size distribution given below (C1DC or C1DP), with appropriate channels excluded for CONC1DC100 and CONC1DC150.<br /></p>
 </div>
-<div id="dt1dc" class="section level4 unnumbered">
-<h4>2D Dead Time (ms): DT1DC</h4>
+<div id="dt1dc" class="section level4 unnumbered hasAnchor">
+<h4>2D Dead Time (ms): DT1DC<a href="5-cloud-physics-variables.html#dt1dc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The time in the sample interval during which the data rate exceeded the recording capability of a 2DC probe.</em> This is used as a correction factor when concentrations like CONC1DC or C1DC are calculated. The variable does not apply to measurements from a 2DP probe.<br /></p>
 </div>
-<div id="dbar2d" class="section level4 unnumbered">
-<h4>2D Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBAR1DC, DBAR1DP</h4>
+<div id="dbar2d" class="section level4 unnumbered hasAnchor">
+<h4>2D Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBAR1DC, DBAR1DP<a href="5-cloud-physics-variables.html#dbar2d" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The mean diameter calculated from the measured size distribution.</em> In this calculation, the bin sizes are taken to be the averages of the lower and upper limits of the size bins<em>.</em> The calculation is as described by <a href="5-cloud-physics-variables.html#eq:DBARbox">(5.5)</a>. <br /></p>
 </div>
-<div id="disp2d" class="section level4 unnumbered">
-<h4>2D Dispersion (dimensionless): DISP1DC, DISP1DP</h4>
+<div id="disp2d" class="section level4 unnumbered hasAnchor">
+<h4>2D Dispersion (dimensionless): DISP1DC, DISP1DP<a href="5-cloud-physics-variables.html#disp2d" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The standard deviation in particle diameter divided by the mean diameter.</em> The formula used is given by <a href="5-cloud-physics-variables.html#eq:DISPbox">(5.6)</a>.<br /></p>
 </div>
-<div id="lwc2d" class="section level4 unnumbered">
-<h4>2D Liquid Water Content (g m<span class="math inline"><sup> − 3</sup></span>): PLWC1DC, PLWC1DP</h4>
+<div id="lwc2d" class="section level4 unnumbered hasAnchor">
+<h4>2D Liquid Water Content (g m<span class="math inline"><sup> − 3</sup></span>): PLWC1DC, PLWC1DP<a href="5-cloud-physics-variables.html#lwc2d" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The liquid water content (mass per volume) calculated from C1DC or C1DP.</em> The calculation is as described by <a href="5-cloud-physics-variables.html#eq:LWCbox">(5.7)</a>. To conform to common usage, the liquid water content is expressed in non-MKS units of g m<span class="math inline"><sup> − 3</sup></span>.<br /></p>
 </div>
-<div id="dbz2d" class="section level4 unnumbered">
-<h4>2D Radar Reflectivity Factor (dBZ): DBZ1DC, DBZ1DP</h4>
+<div id="dbz2d" class="section level4 unnumbered hasAnchor">
+<h4>2D Radar Reflectivity Factor (dBZ): DBZ1DC, DBZ1DP<a href="5-cloud-physics-variables.html#dbz2d" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The radar reflectivity factor calculated from the measured size distribution under the assumption that all particles are spherical water drops.</em> The calculation is as described by <a href="5-cloud-physics-variables.html#eq:DBZbox">(5.8)</a>.<br /></p>
 </div>
-<div id="reff2d" class="section level4 unnumbered">
-<h4>2D Effective Radius (<span class="math inline"><em>μ</em></span>m): REFF2DC, REFF2DP</h4>
+<div id="reff2d" class="section level4 unnumbered hasAnchor">
+<h4>2D Effective Radius (<span class="math inline"><em>μ</em></span>m): REFF2DC, REFF2DP<a href="5-cloud-physics-variables.html#reff2d" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <em>One-half the ratio of the third moment of the particle diameter to the second moment.</em> The formula used is given by <a href="5-cloud-physics-variables.html#eq:REFFbox">(5.9)</a>.<span id="punch:5-6" label="punch:5-6">[punch:5-6]</span><br />
 </p>
 </div>
