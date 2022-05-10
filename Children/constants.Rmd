@@ -1,5 +1,7 @@
+---
+
 ----
-<blockquote>
+
 <center> __[Values Used for "Constants"]{#constants-table}__ </center>  
 <br>
 $g$ = \label{-constant-g}acceleration
@@ -220,5 +222,4 @@ $\\sqrt{\\frac{g}{R_{E}}}$\\\\
 $\\sigma$ = Stephan-Boltzmann
 Constant\\index{Stephan-Boltzmann Constant} = 5.6704$\\times10^{-8}$W\\,m$^{-2}\\mathrm{K}^{-4}$~~$^{e}$%')
 ```
-</blockquote>
 ----

@@ -42,6 +42,7 @@ options(tinytex.verbose = TRUE)
 library(knitr)
 knitr::opts_chunk$set(echo = FALSE)
 library(kableExtra)
+library(magrittr)
 ```
 
 # Preface {-#index}
