@@ -221,7 +221,7 @@ When concentrations are recorded with units of “ppmv”, “ppbv” or “pptv
 </li>
 <li>In some cases, particularly for older data files, speed has been recorded in units of knots (= 0.514444 m/s) and distance in nautical miles <span class="math inline">≡</span> 1852 m).</li>
 </ol>
-<p>In Appendix A there is a list of symbols.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> The next table defines some abbreviations and additional symbols used for units in this report, in addition to the standard abbreviations for the mks system of units:<span id="punch1.2" label="punch1.2">[punch1.2]</span>
+<p>In Appendix A there is a list of symbols.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> The next table defines some abbreviations and additional symbols used for units in this report, in addition to the standard abbreviations for the mks system of units:<span id="punch1.2" label="punch1.2">[punch1.2]</span>
 <!-- It would be useful to translate the following table from html to Rmd: --></p>
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:90%; ">
 <table class="table table-bordered" style="margin-left: auto; margin-right: auto;">
@@ -405,7 +405,7 @@ For code examples that show how to use “Time” see:<br />
 </div>
 <div id="distinction-between-original-measurements-and-derived-variables" class="section level3 hasAnchor" number="2.4.2">
 <h3><span class="header-section-number">2.4.2</span> Distinction Between Original Measurements and Derived Variables<a href="2-general-information-about-data-files.html#distinction-between-original-measurements-and-derived-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Many of the variables in the data files and in this report are derived from combinations of measurements. The terms “raw” or “original” measurement are sometimes used for a minimally processed output received directly from a sensor or instrument. Such measurements may be converted to engineering units via calibration coefficients, but otherwise they are a direct representation of the output from a sensor.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>
+<p>Many of the variables in the data files and in this report are derived from combinations of measurements. The terms “raw” or “original” measurement are sometimes used for a minimally processed output received directly from a sensor or instrument. Such measurements may be converted to engineering units via calibration coefficients, but otherwise they are a direct representation of the output from a sensor.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>
 In contrast, derived variables (e.g., potential temperature) depend on one or more “raw” measurements and are not direct results of output from an instrument. For most derived measurements, a box that follows an introductory comment is used in this report to document the processing algorithm. The box has two parts; in the top are definitions used and explanations regarding variables that enter the calculation, while the bottom portion contains the equation, algorithm, or code segment that documents how the variable is calculated.<span id="punch1.4" label="punch1.4">[punch1.4]</span></p>
 </div>
 <div id="dimensions-in-equations" class="section level3 hasAnchor" number="2.4.3">
@@ -416,9 +416,9 @@ In contrast, derived variables (e.g., potential temperature) depend on one or mo
 </div>
 <div class="footnotes">
 <hr />
-<ol start="4">
-<li id="fn4"><p>Some symbols used only once and defined where they are used are omitted from this list<a href="2-general-information-about-data-files.html#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p>Calibration coefficients, e.g. those used to convert from voltage output from an analog sensor to a measured quantity with physical units like <span class="math inline">º</span>C, are not included or discussed in this report. They are normally included in project reports and, in recent years, many are included in the header of the NETCDF file.<a href="2-general-information-about-data-files.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<ol start="5">
+<li id="fn5"><p>Some symbols used only once and defined where they are used are omitted from this list<a href="2-general-information-about-data-files.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>Calibration coefficients, e.g. those used to convert from voltage output from an analog sensor to a measured quantity with physical units like <span class="math inline">º</span>C, are not included or discussed in this report. They are normally included in project reports and, in recent years, many are included in the header of the NETCDF file.<a href="2-general-information-about-data-files.html#fnref6" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
