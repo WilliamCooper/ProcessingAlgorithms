@@ -206,9 +206,9 @@ here.}\\\\
 $c_{v}$ = specific
 heat of dry air at constant volume\\index{specific heat!dry air!constant volume}
 = $\\frac{5}{2}R_{d}=$0.71766$\\times10^{3}$ J$\\,$kg$^{-1}$K$^{-1}$\\\\
-\\noindent\\parbox[t]{1\\textwidth}{%
+\\noindent\\parbox[t]{1\\textwidth}{
 \\hskip0.6cm(specific heat values are at 0$^{\\circ}$C; small variations
-with temperature are not included here)%
+with temperature are not included here)
 }\\\\
 $\\gamma$ = ratio
 of specific heats\\index{specific heat ratio, dry air}, $c_{p}/c_{v}$,
