@@ -1,19 +1,12 @@
 ---
 title: 'RAF Technical Note: Processing Algorithms'
 author: "RAF RSIG"
-date: "March 2021"
+date: "May 2022"
 output:
   bookdown::gitbook:
     lib_dir: assets
     split_by: chapter+number
     keep_tex: yes
-  html_document:
-    df_print: paged
-    keep_tex: yes
-    split_by: chapter+number
-    toc: yes
-    toc_depth: 2
-    toc_float: yes
   html_document2:
     keep_tex: yes
     toc: yes
@@ -29,6 +22,13 @@ output:
     split_by: chapter+number
     keep_tex: yes
     self_contained: true
+  html_document:
+    df_print: paged
+    keep_tex: yes
+    split_by: chapter+number
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
   pdf_document:
     toc: yes
     toc_depth: '2'

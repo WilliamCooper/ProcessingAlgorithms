@@ -544,8 +544,7 @@ See also <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/mas
 Beginning in 2017, a different strategy was used, as documented in more detail in <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/Recommendation161121.pdf">this memo</a>. Two variables were used to represent the angle of attack, $A$={ADIFR}/{QCF} and $q$={QCF}. However, each was filtered into complementary low-pass and high-pass components, with the cutoff frequency at (1/600) Hz, and the separate components were used to represent the separate components of angle of attack according to the following formula:<br />
 ```{r child='newAKRDbox.Rmd'}
 ```
-
-(This is sometimes named AKY instead of AKRD.)  
+****</p>
 
 #### Reference Attack Angle (<span class="math inline">º</span>): ATTACK {-#attack}
 

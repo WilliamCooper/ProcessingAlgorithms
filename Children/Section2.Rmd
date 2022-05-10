@@ -20,25 +20,25 @@ r_{v}=\frac{n_{1}}{n_{2}}=\left(\frac{M_{2}}{M_{1}}\right)r_{m}
 \end{equation}
 When concentrations are recorded with units of “ppmv”, “ppbv” or “pptv”, these units refer respectively to $10^6r_v$, $10^9r_v$, and $10^{12}r_v$ with $r_v$ given by the above equation.  
 5. The unit “hertz” (abbreviation Hz) is the proper unit for a periodic sampling frequency and will be used here in place of the more awkward “samples per second.” This usage is favored by the International Bureau of Weights and Measures (cf. <a href="http://www.bipm.org/en/si/si_brochure/chapter2/2-2/table3.html#notes">http://www.bipm.org/en/si/si_brochure/chapter2/2-2/table3.html#notes</a>) when the frequency represented refers to the rate of sampling.  
-6. In some cases, particularly for older data files, speed has been recorded in units of knots (= 0.514444 m/s) and distance in nautical miles $\\equiv$ 1852 m).  
+6. In some cases, particularly for older data files, speed has been recorded in units of knots (= 0.514444 m/s) and distance in nautical miles <span class="math inline">≡</span> 1852 m).  
 
 In Appendix A there is a list of symbols.^[Some symbols used only once and defined where they are used are omitted from this list] The next table defines some abbreviations and additional symbols used for units in this report, in addition to the standard abbreviations for the mks system of units:<span id="punch1.2" label="punch1.2">[punch1.2]</span>
 <!-- It would be useful to translate the following table from html to Rmd: -->
 ```{r tos, include=FALSE, echo=FALSE}
 SymbolTable <- data.frame("abbreviation-or-symbol"=c('º', 'ft', 'mb', 'ppmv', 'ppbv', 'pptv', 'n mi', 'kt'),
-                          "definition$^a$" = c('degree, angle measurement $\\equiv \\pi/180$', 'foot $\\equiv$ 0.3048 m',
-                                         'millibar $\\equiv$ 100 Pa $\\equiv$ 1 hPa',
+                          "definition$^a$" = c('degree, angle measurement ≡ $\\pi/180$', 'foot ≡ 0.3048 m',
+                                         'millibar ≡ 100 Pa ≡ 1 hPa',
                                          'parts per million by volume (see item 4 above)',
                                          'parts per billion ($10^9$) by volume (see item 4 above)',
                                          'parts per trillion by volume (see item 4 above)',
-                                         'nautical mile $\\equiv$ 1852 m',
-                                         'knot (n mi/hour) $\\equiv$ (1852/3600) m/s = 0.514444… m/s'))
+                                         'nautical mile ≡1852 m',
+                                         'knot (n mi/hour) ≡ (1852/3600) m/s = 0.514444… m/s'))
 names(SymbolTable) <- c('abbreviation or symbol', 'definition$^a$')
 ```
 
 ```{r include = TRUE}
 knitr::kable(SymbolTable, align=c('cc')) %>% kable_styling(bootstrap_options = 'bordered') %>%
-  add_footnote("'≡' indicates that the relation is exact by definition", notation="alphabet") %>%
+  add_footnote("where ≡ is used, the relation is exact by definition", notation="alphabet") %>%
   scroll_box(width='90%')
 ```
 
