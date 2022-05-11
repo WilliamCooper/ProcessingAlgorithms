@@ -28,7 +28,7 @@ In addition, a true letter ’X’ (not replaced by the above letters) may be ap
 
 ### Standard Pressure Measurements
 
-#### Static or Ambient Pressure (hPa): PSx, PSxC, PS_A, PSX, PSXC, PSFD, PSFRD {-#psx}
+#### Static or Ambient Pressure (hPa): PSx, PSxC, PS_A, PSX, PSXC, PSFD, PSFRD, PSTF {-#psx}
 
 *The atmospheric pressure at the flight level of the aircraft, measured by a calibrated absolute (barometric) transducer at location x.* PSx is the measured static or ambient pressure before correction, and it may be affected by local flow-field distortion. PS_A is the pressure measurement taken from the avionics system on the aircraft, processed via unknown algorithms in the avionics system that may smooth, correct, and perhaps delay the result. PSxC is PSx corrected for local flow-field distortion (see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8150">RAF Bulletin #21</a> and the discussion in <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PCOR.pdf">this memo</a> and <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/PcorCalculation.pdf">this supplement</a>), and PSXC is the preferred corrected measurement used for derived calculations. These measurements have been made using various sensors, so it is best to consult the project documentation for the transducer used. Recent measurements from both the C-130 and the GV have been made using a Paroscientific Model 1000 Digiquartz Transducer.
 
@@ -63,10 +63,12 @@ M=\left\{ \left(\frac{2c_{v}}{R}\right)\left[\left(\frac{p+q}{p}\right)^{R/c_{p}
 (\#eq:MachEquation)
 \end{equation}  
 
+The pressure PSTF is measured at the static-pressure port of a pitot-static tube mounted on the top of the fuselage. The correction to this pressure (leading to PSTFC) differs from the pressure corrections listed above in that it is based on an empirical fit to other measurements of static pressure. The airflow at that sensor is distorted by the fuselage, so that measurement is usually less reliable than other measures of static pressure. See <a href="https://github.com/WilliamCooper/ProcessingAlgorithms/blob/Rmd/www/WindInSOCRATES.pdf">this note</a> for additional discussion of this measurement.
+
 For additional information on these correction coefficients, see <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ARISTO-LAMS.pdf">this note</a> and Cooper et al. (2014).^[<a href="http://www.atmos-meas-tech.net/7/3215/2014/">Atmos. Meas. Tech., 7, 3215-3231</a>, 2014 doi:10.5194/amt-7-3215-2014.]
 <br />
 
-#### Dynamic Pressure (hPa): QCx, QCxC, QCX, QCXC, QC_A {-#qcx}
+#### Dynamic Pressure (hPa): QCx, QCxC, QCX, QCXC, QCTF, QCTFC, QC_A {-#qcx}
 
 *The pressure excess caused by bringing the airflow to rest relative to the aircraft.* These quantities represent the difference between the total pressure <span class="math inline">*p*<sub>*t*</sub></span> as measured at the inlet of a pitot tube or other forward-pointing port and the ambient pressure that would be present in the absence of motion through the air. The variable QC_A is provided by the avionic data system and is subject to an unknown delay and smoothing. The variables ending in “C” have been corrected for flow-distortion effects, mostly arising from errors in the measurement of static pressure. Since 2012, the corrections are based on measurements from the LAMS system as described for PSxC, and they have the same functional form as in \@ref(eq:PCORC130) and
 \@ref(eq:PCORforGV) except that the correction applied to <span class="math inline">*q*</span> is <span class="math inline"> − *Δp*</span> with reversed sign because <span class="math inline">*q* = *p*<sub>*t*</sub> − *p*<sub>*a*</sub></span> and the error arises primarily from the error in <span class="math inline">*p*<sub>*a*</sub></span>. The same correction is applied to QCR because it is also measured relative to the static pressure ports so errors in the pressure sensed at those ports affect QCR in the same way that QCF is affected. <span id="punch4.3" label="punch4.3">[punch4.3]</span>See the notes referenced in the preceding section, and also <a href="https://opensky.ucar.edu/islandora/object/archives%3A8150">RAF Bulletin 21</a> for the corrections applied to earlier data files.[^fnlabelspecial]
@@ -84,7 +86,9 @@ In the case of QCRC from the GV, one additional correction is applied (beginning
 (\#eq:PCORforQCR)
 \end{equation}
 
-where $\Delta p$ is given by \@ref(eq:PCORforGV) and the coefficients are {<span class="math inline">*b*<sub>0 − 3</sub></span>}={<span class="math inline"> − 0.5635</span>, <span class="math inline">0.9982</span>, 0.0273, <span class="math inline">0.0562</span>}. Some justification for this correction is contained in <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/Recommendation161107b.pdf">this note.</a> A similar correction is not made for measurements from the C-130 radome because they do not appear to be necessary, as discussed in that note.<br />
+where $\Delta p$ is given by \@ref(eq:PCORforGV) and the coefficients are {<span class="math inline">*b*<sub>0 − 3</sub></span>}={<span class="math inline"> − 0.5635</span>, <span class="math inline">0.9982</span>, 0.0273, <span class="math inline">0.0562</span>}. Some justification for this correction is contained in <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/Recommendation161107b.pdf">this note.</a> A similar correction is not made for measurements from the C-130 radome because they do not appear to be necessary, as discussed in that note.<br />  
+
+The measurement QCTF is made at the dynamic-pressure port of a pitot-static sensor mounted on the top of the fuselage. Because this is located in a region of airflow distortion around the fuselage of the GV, special processing is required. The method proposed in <a href="https://github.com/WilliamCooper/ProcessingAlgorithms/blob/Rmd/www/WindInSOCRATES.pdf">this note</a> is to calculate a corrected dynamic pressure from QCTFC=QCTF+PSTF-PSXC.^[This has not been implemented as of 2022; instead, the empirical fit in the referenced memo, attributed to Friesen and Lenschow, is being used.]  
 
 #### D-Value (m): DVALUE {-#dvalue}
 
@@ -254,7 +258,7 @@ From \@ref(eq:TaEQ),
 
 ## Humidity {#humidity}
 
-#### Dew/Frost Point (<span class="math inline">º</span>C): DPx, DP_x, MIRRTMP_DPx {-#dew-point}
+#### Dew/Frost Point (<span class="math inline">º</span>C): DPx, DP_x, DP_DPx, MIRRTMP_DPx {-#dew-point}
 
 *The mirror temperature measured directly by a dew-point sensor, without correction.* The dew point or frost point is measured by either an EG&amp;G Model 137, a General Eastern Model 1011B or a Buck Model 1011C dew-point hygrometer. Below 0**<span class="math inline"><sup>∘</sup></span>C** the instrument is assumed to be responding to the frost point, although occasionally in climbs there is a short transition near the freezing level before the condensate on the mirror of the instrument freezes and there may be a measurement error before the condensate freezes. The measurements are usually made within a housing where the pressure (<span class="math inline">*p*<sub>*h*</sub>)</span> may differ from the ambient pressure, so the pressure in the housing affects the measured dew point or frost point. The housing pressure is often adjusted to be near the ambient pressure by appropriate orientation of inlets, and recently the pressure in the housing is measured and a correction is applied, as discussed in the next paragraph.</p>
 
