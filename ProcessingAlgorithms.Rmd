@@ -10,21 +10,6 @@ output:
   bookdown::pdf_document2:
     toc: yes
     toc_depth: '2'
-  html_document2:
-    keep_tex: yes
-    toc: yes
-    toc_depth: 2
-    toc_float: yes
-    includes:
-      in_header: columns.tex
-    config:
-      toolbar:
-        position: static
-  bookdown::html_book:
-    lib_dir: assets
-    split_by: chapter+number
-    keep_tex: yes
-    self_contained: yes
   html_document:
     df_print: paged
     keep_tex: yes
@@ -32,6 +17,21 @@ output:
     toc: yes
     toc_depth: 2
     toc_float: yes
+  bookdown::html_document2:
+    keep_tex: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    config:
+      toolbar:
+        position: static
+  bookdown::html_book:
+    lib_dir: assets
+    split_by: chapter+number
+    keep_tex: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: true
   pdf_document:
     toc: yes
     toc_depth: '2'
