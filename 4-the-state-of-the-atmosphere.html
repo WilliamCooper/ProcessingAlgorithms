@@ -117,7 +117,6 @@
 <li class="chapter" data-level="4.7" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#wind"><i class="fa fa-check"></i><b>4.7</b> Wind<span></span></a>
 <ul>
 <li class="chapter" data-level="4.7.1" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#relative-wind"><i class="fa fa-check"></i><b>4.7.1</b> Relative Wind<span></span></a></li>
-<li><a href="4-the-state-of-the-atmosphere.html#akrd">Attack Angle, Radome (<span class="math inline">º</span>): AKRD<span></span></a></li>
 <li class="chapter" data-level="4.7.2" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#wind-components-and-the-wind-vector"><i class="fa fa-check"></i><b>4.7.2</b> Wind Components and the Wind Vector<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="4.8" data-path="4-the-state-of-the-atmosphere.html"><a href="4-the-state-of-the-atmosphere.html#special-use-remote"><i class="fa fa-check"></i><b>4.8</b> Special-Use Remote Sensors<span></span></a></li>
@@ -1332,9 +1331,8 @@ added a moisture correction to the true airspeed derived for dry air, as follows
 <em>The pressure difference between starboard and port pressure inlets of a radome gust-sensing system.</em> This measurement is used to determine the sideslip angle; see SSRD below. Obsolete variable <u>BDIF</u> is a similar variable used for old gust-boom systems or for Rosemount Model 858AJ flow-angle sensors.
 </p>
 </div>
-</div>
-<div id="akrd" class="section level3 unnumbered hasAnchor">
-<h3>Attack Angle, Radome (<span class="math inline">º</span>): AKRD<a href="4-the-state-of-the-atmosphere.html#akrd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="akrd" class="section level4 unnumbered hasAnchor">
+<h4>Attack Angle, Radome (<span class="math inline">º</span>): AKRD<a href="4-the-state-of-the-atmosphere.html#akrd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The angle of attack of the aircraft.</em> This derived measurement represents the angle between the longitudinal axis of the aircraft and the component of the relative wind vector in the plane of port-starboard symmetry of the aircraft. The tangent of the angle of attack is the ratio of the vertical to longitudinal component of the relative wind. Positive values indicate flow moving upward (in the aircraft reference frame) relative to the longitudinal axis. The calculation is based on ADIFR and a measurement of dynamic pressure, and so is the measurement produced by a radome gust-sensing system. Empirical sensitivity coefficients for each aircraft, determined from special flight maneuvers, are used; see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a> and this <a href="http://dx.doi.org/10.5065/D60G3HJ8">Technical Note</a> for more information. The sensitivity coefficients listed below have changed when the radomes were changed or refurbished, so the project documentation should be consulted for the values used in a particular project. For more information on the latest C-130 calibration, see <a href="https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ARISTO-LAMS.pdf">this note</a>.<br />
 Prior to 2017, the procedure was based on the following algorithm:<br /></p>
 <p class="box">
@@ -1378,6 +1376,7 @@ coefficients determined empirically; typically, for the GV,<br />
 </p>
 ****
 </p>
+</div>
 <div id="attack" class="section level4 unnumbered hasAnchor">
 <h4>Reference Attack Angle (<span class="math inline">º</span>): ATTACK<a href="4-the-state-of-the-atmosphere.html#attack" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <span id="punch:4-12" label="punch:4-12">[punch:4-12]</span><br />
@@ -1407,7 +1406,7 @@ __________<br />
 <sup>(a)</sup> The <a href="http://dx.doi.org/10.5065/D60G3HJ8">technical note on wind uncertainty</a>
 recommended using SSRD=<span class="math inline">\(e_{0}+e_{1}\)</span>{BDIFR}/{QCF} with <span class="math inline">\(e_{0}=0.008\)</span>
 and <span class="math inline">\(e_{1}=22.302\)</span>. This has not yet been used in processing as of
-March 2017.
+May 2022.
 </p>
 </div>
 <div id="sslip" class="section level4 unnumbered hasAnchor">
