@@ -1,4 +1,3 @@
----
 
 ----
 
@@ -33,8 +32,7 @@ constant for dry air\index{gas constant!dry air}
 $R_{w}$ = ($R_{0}/M_{w})$ = gas
 constant for water vapor\index{gas constant!water vapor}  
 $R_{E}$ = radius of
-the Earth\index{radius of the Earth} = 6.371229$\times 10^{6}$m\ \ $^{(f)}$\footnote{ discussed
-in \prettyref{sec:INS}}  
+the Earth\index{radius of the Earth} = 6.371229$\times 10^{6}$m\ \ $^{(f)}$\footnote{}  
 $c_{p}$ = specific
 heat of dry air at constant pressure\index{specific heat!dry air!constant pressure}
 = $\frac{7}{2}R_{d}$ = 1.00473$\times10^{3}$ J\ kg$^{-1}$K$^{-1}$\ \ $^{(g)}$\footnote{}  
@@ -85,8 +83,7 @@ constant for dry air\\index{gas constant!dry air}<br>',
 '$R_{w}$ = ($R_{0}/M_{w})$ = gas
 constant for water vapor\\index{gas constant!water vapor}<br>',
 '$R_{E}$ = radius of
-the Earth\\index{radius of the Earth} = 6.371229$\\times 10^{6}$m\ \ $^{(f)}$\\footnote{ discussed
-in \\prettyref{sec:INS}}<br>',
+the Earth\\index{radius of the Earth} = 6.371229$\\times 10^{6}$m\ \ $^{(f)}$\\footnote{}<br>',
 '$c_{p}$ = specific
 heat of dry air at constant pressure\\index{specific heat!dry air!constant pressure}
 = $\\frac{7}{2}R_{d}$ = 1.00473$\\times10^{3}$ J\ kg$^{-1}$K$^{-1}$\ \ $^{(g)}$\\footnote{}<br>',
@@ -191,7 +188,7 @@ constant for water vapor\\index{gas constant!water vapor}<br>
 $R_{E}$ = radius of
 the Earth\\index{radius of the Earth} = 6.371229$\\times$10$^{6}$
 m ~~~\\footnote{matching the value used by the inertial reference systems discussed
-in \\prettyref{sec:INS}} \\\\
+in the "INS" section} \\\\
 $c_{p}$ = specific
 heat of dry air at constant pressure\\index{specific heat!dry air!constant pressure}
 = $\\frac{7}{2}R_{d}=$1.00473$\\times10^{3}$ J$\\,$kg$^{-1}$K$^{-1}$~~~\\footnote{The specific heat of dry air at 1013 hPa and 250--280 K as given

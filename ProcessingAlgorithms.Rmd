@@ -5,7 +5,14 @@ date: "May 2022"
 output:
   bookdown::gitbook:
     lib_dir: assets
-    split_by: chapter+number
+    toc_depth: 2
+    keep_tex: yes
+  bookdown::word_document2:
+    toc: true
+    toc_depth: 2
+  bookdown::pdf_book:
+    lib_dir: assets
+    toc_depth: 2
     keep_tex: yes
   html_document:
     df_print: paged
@@ -14,14 +21,9 @@ output:
     toc: yes
     toc_depth: 2
     toc_float: yes
-  bookdown::html_document2:
-    keep_tex: yes
+  bookdown::pdf_document2:
     toc: yes
     toc_depth: 2
-    toc_float: yes
-    config:
-      toolbar:
-        position: static
   pdf_document:
     toc: yes
     toc_depth: '2'
@@ -32,9 +34,14 @@ output:
     toc: yes
     toc_depth: 2
     toc_float: true
-  bookdown::pdf_document2:
+  bookdown::html_document2:
+    keep_tex: yes
     toc: yes
-    toc_depth: '2'
+    toc_depth: 2
+    toc_float: yes
+    config:
+      toolbar:
+        position: static
 documentclass: book
 site: bookdown::bookdown_site
 always_allow_html: yes
