@@ -114,15 +114,15 @@ Variable Name | Variable Name | Variable Name | Variable Name | Variable Name
 * The original version is ProcessingAlgorithms.lyx, which needs ’LyX’, a user interface to TeX. It is available on EOL machines like tikal. Start it with “lyx ProcessingAlgorithms.lyx”. This version
 was last updated in Feb 2019. It can be obtained from the [GitHub site](https://github.com/WilliamCooper/ProcessingAlgorithms). Copy this to an RStudio project file to use this version.  
 * A revised version is written in RMarkdown to facilitate editing by others. It provides an HTML version of the document suitable for hosting on web servers. To obtain this version, download [this repository](https://github.com/WilliamCooper/ProcessingAlgorithms/tree/Rmd). This works best
-if output: bookdown::gitbook is selected. Download this branch to an RStudio project directory and use "the"knit" to construct the web site. The output will be in a directory names "_site" and can be moved from there to a web server. For example, if the web server delivers files from /var/www/html, make a new
-directory there called "ProcessingAlgorithms" and move all files from "_site" to "ProcessingAlgorithms".
+if output: bookdown::gitbook is selected. Download this branch to an RStudio project directory and use the "knit" button to construct the web site. The output will be html files that can be moved from there to a web server. The directories "assets" and "www" should also be transferred; the former contains CSS files and the latter some memos that are referenced in the document. For example, if the web server delivers files from /var/www/html, make a new
+directory there called "ProcessingAlgorithms" and move all .html files  and those two directories to "ProcessingAlgorithms".
 Then view the document via http://URL/ProcessingAlgorithms where URL is the appropriate reference for
 your web files.  
     + The R Markdown files have a mix of conventions including HTML, LaTeX formulas, and R Markdown
 conventions. At some point, it may be useful to become more consistent, e.g., by
 changine HTML references to R Markdown reference, changing HTML italics to R Markdown italics,
 changing table structures from HTML to R Markdown kable format, etc.  
-    + The R Markdown files do not produce a useful PDF file, at least in their present status.  
+    + The R Markdown files can produce a PDF file, but many features available in the HTML files will not be available, at least at present. PDF files can always be produced by printing from a web browser.    
 * The document is broken into many sections, referenced by the above file, so they must be present also. In the lyx version they have names like Section3.lyx. In the Rmd version, they reside as, e.g., Section3.Rmd in the "Children" directory.  
 * The lyx document generates three indices: a regular index, a list of symbols, and a list of variables. The references for these are embedded in the .lyx files, and they can be modified or more can be added via the “Insert -&gt; Index Entry” controls. These practices are useful when generating index entries:  
     + entries like ’wind!relative’ will generate index entries as subordinate entries with ’relative’ below ’wind’. 

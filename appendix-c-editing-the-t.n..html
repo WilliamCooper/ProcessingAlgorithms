@@ -163,8 +163,8 @@
 was last updated in Feb 2019. It can be obtained from the <a href="https://github.com/WilliamCooper/ProcessingAlgorithms">GitHub site</a>. Copy this to an RStudio project file to use this version.<br />
 </li>
 <li>A revised version is written in RMarkdown to facilitate editing by others. It provides an HTML version of the document suitable for hosting on web servers. To obtain this version, download <a href="https://github.com/WilliamCooper/ProcessingAlgorithms/tree/Rmd">this repository</a>. This works best
-if output: bookdown::gitbook is selected. Download this branch to an RStudio project directory and use “the”knit” to construct the web site. The output will be in a directory names “_site” and can be moved from there to a web server. For example, if the web server delivers files from /var/www/html, make a new
-directory there called “ProcessingAlgorithms” and move all files from “_site” to “ProcessingAlgorithms”.
+if output: bookdown::gitbook is selected. Download this branch to an RStudio project directory and use the “knit” button to construct the web site. The output will be html files that can be moved from there to a web server. The directories “assets” and “www” should also be transferred; the former contains CSS files and the latter some memos that are referenced in the document. For example, if the web server delivers files from /var/www/html, make a new
+directory there called “ProcessingAlgorithms” and move all .html files and those two directories to “ProcessingAlgorithms”.
 Then view the document via <a href="http://URL/ProcessingAlgorithms" class="uri">http://URL/ProcessingAlgorithms</a> where URL is the appropriate reference for
 your web files.
 <ul>
@@ -173,7 +173,7 @@ conventions. At some point, it may be useful to become more consistent, e.g., by
 changine HTML references to R Markdown reference, changing HTML italics to R Markdown italics,
 changing table structures from HTML to R Markdown kable format, etc.<br />
 </li>
-<li>The R Markdown files do not produce a useful PDF file, at least in their present status.<br />
+<li>The R Markdown files can produce a PDF file, but many features available in the HTML files will not be available, at least at present. PDF files can always be produced by printing from a web browser.<br />
 </li>
 </ul></li>
 <li>The document is broken into many sections, referenced by the above file, so they must be present also. In the lyx version they have names like Section3.lyx. In the Rmd version, they reside as, e.g., Section3.Rmd in the “Children” directory.<br />

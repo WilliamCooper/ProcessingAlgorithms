@@ -33,7 +33,7 @@ DSYS$start <- c('1984', '1992', '2005')
 DSYS$end <- c('1992', '2007', ' ')
 DSYS$aircraft <- c('King Air 200T, Sabreliner (1987), Electra (1991)', 'C-130', 'GV, C-130 after 2007')
 ```
-The data system has changed several times over the history of RAF. For a discussion of the history of the data systems, see [this note](https://github.com/NCAR/aircraft_ProcessingAlgorithms/blob/master/www/ADSHistory.pdf) written by Richard Friesen. The versions of data systems that produced most of the data still available were, approximately, as given in the following table: 
+The data system has changed several times over the history of RAF. For a discussion of the history of the data systems, see [this note](www/ADSHistory.pdf) written by Richard Friesen. The versions of data systems that produced most of the data still available were, approximately, as given in the following table: 
 ```{r include = TRUE}
 knitr::kable(DSYS, align=c('cccl')) %>% kable_styling(bootstrap_options = 'bordered') %>%
   scroll_box(width='80%')

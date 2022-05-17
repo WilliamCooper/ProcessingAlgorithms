@@ -6,7 +6,7 @@ $Z(H,\ \lambda)$ = aircraft geopotential height [m] (GEOPTH)
 $g_{0}$ = constant acceleration of gravity as defined for the International
 Standard Atmosphere  
 $g_{e},\,g_{1},\,g_{2},\,k_{i}$ as defined in the Table of Constants
-on p.~ \pageref{constants-table},  
+in Sect.\ \@ref(constants-and-symbols)   
 $\Delta$= height of the geoid above the WGS-84 reference ellipse
 (GGEOIDHT)  
 </p>

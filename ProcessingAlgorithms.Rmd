@@ -47,7 +47,7 @@ site: bookdown::bookdown_site
 always_allow_html: yes
 ---
 
-```{r setup, include=FALSE}
+```{r init, include=FALSE}
 options(tinytex.verbose = TRUE)
 library(knitr)
 knitr::opts_chunk$set(echo = FALSE)
