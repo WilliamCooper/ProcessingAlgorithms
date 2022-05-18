@@ -4,6 +4,14 @@ author: "RAF RSIG"
 date: "May 2022"
 output:
   bookdown::gitbook:
+    config:
+      toc:
+        collapse: section
+      fontsettings:
+        theme: sepia
+        family: serif
+        size: 2
+      download: true
     lib_dir: assets
     toc_depth: 2
     keep_tex: yes

@@ -1,14 +1,4 @@
-# Introduction
-```{r include=FALSE, eval=TRUE}
-## This isn't needed except to knit the section stand-alone
-options(tinytex.verbose = TRUE)
-library(knitr)
-knitr::opts_chunk$set(echo = FALSE)
-library(kableExtra)
-library(Ranadu)
-library(magrittr)
-library(kableExtra)
-```
+# Introduction  
 
 ## Background Information {#background-information}
 
