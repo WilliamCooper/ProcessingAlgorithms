@@ -3,7 +3,7 @@
 <p class=box>
 [TCNTU](#tcntu-tcntp) = total particle counts per sample interval, UHSAS  
 [TCNTP](#tcntu-tcntp) = total particle counts per sample interval, PCASP  
-$\Delta t$ = \sindex[lis]{Deltat@$\Delta t$=time interval}sample
+$\Delta t$ = sample
 interval [s]  
 [USFLWC](#pflw) = corrected sample flow rate, UHSAS [cm$^{3}$s$^{-1}$]  
 [PFLWC](#pflw) = corrected sample flow rate, PCASP [cm$^{3}$s$^{-1}$]  

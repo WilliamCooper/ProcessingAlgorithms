@@ -1,9 +1,9 @@
 <p class=box>
 CNTS = particle counts per sample interval from the CN counter\index{CNTS}  
-$\Delta t$ = \sindex[lis]{Deltat@$\Delta t$=time interval}interval
+$\Delta t$ = interval
 between recorded samples [s]  
 $D$ = scale factor (legacy; normally 1)  
-$C_{flow}$ = \sindex[lis]{Cflow@$C_{flow}$ = flow conversion factor}conversion
+$C_{flow}$ = conversion
 factor, (1000/60) cm$^{3}$L$^{-1}$min s$^{-1}$  
 FCNC = corrected sample flow rate (VLPM) for instrument conditions\index{FCNC}  
 $t_{vv}$ = average time a particle is in the view volume  

@@ -1,9 +1,9 @@
 
 <p class=box>
-A = \sindex[lis]{A=area}effective surface area of the probe [m$^{2}$]  
-$\Delta t$ = time interval\sindex[lis]{Deltat@$\Delta t$=time interval}\sindex[lis]{t@$t$=time}
+A = effective surface area of the probe [m$^{2}$]  
+$\Delta t$ = time interval
 during which an increment of mass accretes [s]  
-$\Delta m$ = mass\sindex[lis]{m@$m$=mass} of ice accreted on the
+$\Delta m$ = mass of ice accreted on the
 probe in the time interval $\Delta t$ [g]  
 $U_{a}$ = true airspeed [m/s]  
 </p><p class=box2>

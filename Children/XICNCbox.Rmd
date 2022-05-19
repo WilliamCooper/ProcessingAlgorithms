@@ -3,7 +3,7 @@
 [PCN](#pcn) = pressure at the inlet to the CN counter [hPa]  
 [CNTEMP](#cntemp) = temperature at the inlet of the sample tube [$^{\circ}$C]  
 $p_{std}$ = standard reference pressure, 1013.25 mb  
-$T_{std}$\sindex[lis]{Tr@$T_{std}$= absolute reference temperature, STP}
+$T_{std}$
 = 294.15 K   
 $T_{0}$ = 273.15\ K  
 </p><p class=box2>

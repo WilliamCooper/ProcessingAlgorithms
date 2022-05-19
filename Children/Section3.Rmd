@@ -28,7 +28,7 @@ after 6 h of flight. Values are provided by the INS at a frequency of 10 Hz.
 and the accuracy is reported by the manufacturer to be 0.164$^{\circ}$
 after 6 h of flight. Values are provided by the INS at a frequency of 10 Hz.  
 
-#### Aircraft True Heading ($^{\circ}$: THDG {#thdg .unnumbered}
+#### Aircraft True Heading ($^{\circ}$): THDG {#thdg .unnumbered}
 
 *The azimuthal angle between the center-line of the aircraft (pointing ahead, toward the nose) and a line of meridian.* This azimuthal angle is measured in a polar coordinate system oriented relative to the Earth with polar axis upward and azimuthal angle measured relative to true north. The heading thus indicates the orientation of the aircraft, not necessarily the direction in which the aircraft is traveling. The resolution is 0.00017$^{\circ}$
 and the uncertainty is quoted by the manufacturer as 0.2$^{\circ}$

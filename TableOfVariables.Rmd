@@ -1,0 +1,37 @@
+---
+title: "Table of Variables"
+author: "William A Cooper"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r include=FALSE, eval=TRUE}
+options(tinytex.verbose = TRUE)
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE)
+library(kableExtra)
+library(Ranadu)
+library(magrittr)
+library(kableExtra)
+```
+
+
+```{r tos, include=FALSE, echo=FALSE}
+SymbolTable <- data.frame("abbreviation-or-symbol"=c('º', 'ft', 'mb', 'ppmv', 'ppbv', 'pptv', 'n mi', 'kt'),
+                          "definition$^a$" = c('degree, angle measurement ≡ $\\pi/180$', 'foot ≡ 0.3048 m',
+                                         'millibar ≡ 100 Pa ≡ 1 hPa',
+                                         'parts per million by volume (see item 4 above)',
+                                         'parts per billion ($10^9$) by volume (see item 4 above)',
+                                         'parts per trillion by volume (see item 4 above)',
+                                         'nautical mile ≡1852 m',
+                                         'knot (n mi/hour) ≡ (1852/3600) m/s = 0.514444… m/s'))
+names(SymbolTable) <- c('abbreviation or symbol', 'definition$^a$')
+```
+
+```{r tov, include = TRUE}
+load('DVsave.Rdata')  # Load the list of variables in DV
+knitr::kable(DV[, -c(2:4, 6)], row.names=TRUE, align=c('cc')) %>% kable_styling(bootstrap_options = 'bordered') %>%
+  add_footnote("a footnote", notation="alphabet") %>%
+  scroll_box(width='90%')
+```
+

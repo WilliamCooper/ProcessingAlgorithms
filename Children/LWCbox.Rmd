@@ -1,8 +1,7 @@
 <p class=box>
-$d_{e,i}$\sindex[lis]{dei@$d_{e,i}$= equivalent melted diameter for channel i of a hydrometeor
-spectrometer} = equivalent melted diameter for channel $i$ of probe x  
+$d_{e,i}$ = equivalent melted diameter for channel $i$ of probe x  
 \{Cy$_{i}$\}, i1, i2 as for mean diameter above  
-$\varrho_{w}$\sindex[lis]{rhow@$\rho_{w}$= density of liquid water}
+$\varrho_{w}$
 = density of water [$10^{3}kg/m^{3}$]  
 </p><p class=box2>
 \begin{equation}

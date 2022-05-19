@@ -1,10 +1,10 @@
 <p class=box>
-\{Cy$_{i}$\} = concentration\sindex[lis]{Cyi@$Cy_{i}$= concentration from hydrometeor probe y in channel i}
+\{Cy$_{i}$\} = concentration
 from probe y in channel i
 \hspace{0.6cm}(e.g., y=[FSSP](#size-distribution) to calculate DBARF)  
 i1 = lowest usable channel for the probe  
 i2 = highest usable channel for the probe  
-$d_{i}$\sindex[lis]{di@$d_{i}$= diameter of hydrometeor in channel $i$}
+$d_{i}$
 = diameter of particles in channel i for this probe ($\mu m$)  
 \hspace*{0.6cm}(calculated as the average of the lower and upper
 size limits for the channel)  

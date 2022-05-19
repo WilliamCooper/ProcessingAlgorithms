@@ -1,6 +1,6 @@
 <p class=box>
 [CNTS](#cnts) = particle counts per sample interval from the CN counter  
-$\Delta t$ = \sindex[lis]{Deltat@$\Delta t$=time interval}interval
+$\Delta t$ = interval
 between recorded samples [s]  
 $t_{d}$ = cumulative dead time during the sampling interval [s]  
 $C_{flow}$ (see preceding box)    

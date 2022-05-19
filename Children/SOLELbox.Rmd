@@ -1,12 +1,12 @@
 <p class=box>
-$\theta_{G}$ = Greenwich hour angle\sindex[lis]{thetaG@$\theta_{G}$=Greenwich hour angle}
+$\theta_{G}$ = Greenwich hour angle
 [radians]  
-$\theta_{L}$ = local hour angle\sindex[lis]{thetaL@$\theta_{L}$=local hour angle}
+$\theta_{L}$ = local hour angle
 [radians]  
 $N$ = day number [see SOLDE box above]  
 $Y$ = year (format as in 1980)
-$\lambda$ = latitude\sindex[lis]{lambda@$\lambda$=latitude} [radians]  
-$\psi$ = longitude\sindex[lis]{psi@$\psi$=longitude} [radians]
+$\lambda$ = latitude [radians]  
+$\psi$ = longitude [radians]
 $h$ = fractional hour = (hour + minute/60. + second/3600.)  
 $\alpha$\ \ \ \ \ \ see \@ref(eq:SOLDEalpha) in the SOLDE box above  
 $\epsilon$\ \ \ \ \ \ see \@ref(eq:SOLDEeps) in the SOLDE box  

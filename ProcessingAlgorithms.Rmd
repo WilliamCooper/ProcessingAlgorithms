@@ -19,9 +19,11 @@ output:
     toc: true
     toc_depth: 2
   bookdown::pdf_book:
+    documentclass: book
     lib_dir: assets
     toc_depth: 2
     keep_tex: yes
+  bookdown::epub_book:
   html_document:
     df_print: paged
     keep_tex: yes
