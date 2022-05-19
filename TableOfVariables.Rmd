@@ -15,6 +15,17 @@ library(magrittr)
 library(kableExtra)
 ```
 
+The following table lists variables from the netCDF archives, and tries to classify them into these types:  
+* pa: in the ProcessingAlgorithms document  
+* a:  should be added to the ProcessingAlgorithms document, at least in the appendix.  
+* st: variables that provide status or housekeeping information. Some may be included in PA.  
+* sp: special-use variables from, e.g., user or non-standard instruments.  
+* v: an alternate version of a variable otherwise described.  
+* npa: not in PA document, and should not be (e.g., JHWRP variables from UW)
+* undefined: unable to classify because insufficient info in the netCDF files, or just not classified yet.  
+
+
+
 
 ```{r tos, include=FALSE, echo=FALSE}
 SymbolTable <- data.frame("abbreviation-or-symbol"=c('º', 'ft', 'mb', 'ppmv', 'ppbv', 'pptv', 'n mi', 'kt'),
