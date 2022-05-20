@@ -149,156 +149,46 @@ The probe type also is coded into each variable’s name, sometimes using four c
 Some of the probes discussed in this section are primarily aerosol spectrometers but are described here rather than in Section \@ref(aerosol-particle-measurements) because they are similar to the hydrometeor spectrometers and so are most economically discussed here. However, see Section \@ref(aerosol-particle-measurements) for the processing algorithms that lead to concentrations from the UHSAS and PCASP/SPP-200. The following table and discussion includes some obsolete variables (for the 200X and 200Y) for the same reason. The table also includes some variables derived from imaging spectrometers (the 2DC and 2DP probes) to highlight that the primary variables are similar to those discussed in this sub-section. Those variables are discussed in the next sub-section. In two cases, the FSSP and PCASP, two versions are listed, an obsolete version and a current version with a revised processing package (SPP-100 for the FSSP, SPP-200 for the PCASP). Both are included for historical completeness, but algorithms in this document discuss the current versions.  
 
 <p id='housekeeping'>The archived data files sometimes have “housekeeping” variables included that provide information on the operating state and data quality from the probes. For example, the CDP provides information on the average transit time, the voltage from the nominal 5-V source, the control board temperature, the laser block temperature, the laser current, the laser power monitor, the qualifier bandwidth, the qualifier baseline, the qualifier threshold, the sizer baseline, the wing-board temperature, an A-to-D overflow flag, and a count of particles rejected as being outside the depth of field. The netCDF variables and attributes should be consulted for this housekeeping information. The large number of housekeeping variables will not be included in this document, so appropriate manuals and the netCDF files should be consulted when interpreting this information.</p>
-**Probes that produce size distributions of particles (with links to descriptions):<span id="TableOfProbes" label="TableOfProbes"></span>**
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;">**Generic Name**</th>
-<th style="text-align: center;"></th>
-<th style="text-align: center;"><strong>Probe</strong>^[Probes without links are described at <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">this URL</a>.]
-</th>
-<th style="text-align: center;"><strong>Channels</strong></th>
-<th style="text-align: center;"><strong>Usable</strong>^[Channels may be unusable because the first channel is a historical carry-over and should be ignored, or because in the case of 2D probes the entire-in sizing technique reduces the number of bins where particles can be sized. Also, when some channels have been considered unreliable the netCDF header may specify that the usable bins are smaller than indicated here.]
-</th>
-<th style="text-align: center;"><strong>Diameter Range</strong></th>
-<th style="text-align: center;"><strong>Bin Width</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span>FSSP-100 original</span></td>
-<td style="text-align: center;"><span>F</span></td>
-<td style="text-align: center;"><span>FSSP-100</span>^[Now obsolete but present in many archived data sets.]
-</td>
-<td style="text-align: center;"><span>0–15</span></td>
-<td style="text-align: center;"><span>1--15</span></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">FSSP/SPP-100</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;"><a href="http://www.eol.ucar.edu/instruments/forward-scattering-spectrometer-probe-model-100">SPP-100</a></td>
-<td style="text-align: center;">0–30</td>
-<td style="text-align: center;">1--30</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">3 <span class="math inline">*μ*</span>m (typ.)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">UHSAS</td>
-<td style="text-align: center;">U</td>
-<td style="text-align: center;"><a href="https://www.eol.ucar.edu/instruments/ultra-high-sensitivity-aerosol-spectrometer">UHSAS</a></td>
-<td style="text-align: center;">0–99</td>
-<td style="text-align: center;">1--99</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">variable</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">CDP</td>
-<td style="text-align: center;">D</td>
-<td style="text-align: center;"><a href="https://www.eol.ucar.edu/instruments/cloud-droplet-probe">CDP</a></td>
-<td style="text-align: center;">0–30</td>
-<td style="text-align: center;">1—30</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">variable</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>F300</span></td>
-<td style="text-align: center;"><span>3</span></td>
-<td style="text-align: center;"><span><a href="https://www.eol.ucar.edu/instruments/forward-scattering-spectrometer-probe-model-300">FSSP-300</a><span class="math inline"><sup>*b*</sup></span></span></td>
-<td style="text-align: center;"><span>0–30</span></td>
-<td style="text-align: center;"><span>1--30</span></td>
-<td style="text-align: center;"><span>0.3–20.0 <span class="math inline">*μm*</span></span></td>
-<td style="text-align: center;"><span>variable</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">PCASP/original</td>
-<td style="text-align: center;">P</td>
-<td style="text-align: center;">PCASP<span class="math inline"><sup>*b*</sup></span></td>
-<td style="text-align: center;">0–15</td>
-<td style="text-align: center;">1--15</td>
-<td style="text-align: center;">0.1–3.0 <span class="math inline">*μ*</span>m</td>
-<td style="text-align: center;">variable</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">PCASP/SPP-200</td>
-<td style="text-align: center;">P</td>
-<td style="text-align: center;"><span><a href="https://www.eol.ucar.edu/instruments/signal-processing-package-200-passive-cavity-aerosol-spectrometer-probe">SPP-200</a></span></td>
-<td style="text-align: center;"><span>0–30</span></td>
-<td style="text-align: center;"><span>1--30</span></td>
-<td style="text-align: center;"><span>0.1–3.0 <span class="math inline">*μm*</span></span></td>
-<td style="text-align: center;"><span>variable</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>200X</span></td>
-<td style="text-align: center;"><span>X</span></td>
-<td style="text-align: center;">OAP-200X<span><span class="math inline"><sup>*b*</sup></span></span></td>
-<td style="text-align: center;"><span>0–15</span></td>
-<td style="text-align: center;"><span>1--15</span></td>
-<td style="text-align: center;"><span>40–280 <span class="math inline">*μm*</span></span></td>
-<td style="text-align: center;"><span>10 <span class="math inline">*μm*</span></span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>260X</span></td>
-<td style="text-align: center;"><span>6</span></td>
-<td style="text-align: center;">OAP-260X</td>
-<td style="text-align: center;"><span>0-63</span></td>
-<td style="text-align: center;"><span>3--62</span></td>
-<td style="text-align: center;"><span>40-620 <span class="math inline">*μm*</span></span></td>
-<td style="text-align: center;"><span>10 <span class="math inline">*μm*</span></span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>200Y</span></td>
-<td style="text-align: center;"><span>Y</span></td>
-<td style="text-align: center;"><span>OAP-200Y<span class="math inline"><sup>*b*</sup></span></span></td>
-<td style="text-align: center;"><span>0-15</span></td>
-<td style="text-align: center;"><span>1--15</span></td>
-<td style="text-align: center;"><span>300–4500 <span class="math inline">*μm*</span></span></td>
-<td style="text-align: center;"><span>300 <span class="math inline">*μm*</span></span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">1DC^[See [here](#special-1d-nomenclature) for an explanation of this name convention.]
-</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">2DC<span class="math inline"><sup>*b*,</sup></span>^[Measurements from this and the next three 2D probes are discussed in Section\ \@ref(hydrometeor-imaging-probes).]
-(old)</td>
-<td style="text-align: center;">0-32</td>
-<td style="text-align: center;">1-30<span class="math inline"><sup>*e*</sup></span></td>
-<td style="text-align: center;">25–800 <span class="math inline">*μ*</span>m</td>
-<td style="text-align: center;">25 <span class="math inline">*μ*</span>m</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1DP</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;">2DP<span class="math inline"><sup>*b*</sup></span> (old)</td>
-<td style="text-align: center;">0-32</td>
-<td style="text-align: center;">1-30</td>
-<td style="text-align: center;">200–6400 <span class="math inline">*μ*</span>m</td>
-<td style="text-align: center;">200 <span class="math inline">*μ*</span>m</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">1DC</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud-probe">2DC</a> (fast)</td>
-<td style="text-align: center;">0-63</td>
-<td style="text-align: center;">1-62^[Some of the lowest channels are often considered unreliable and excluded in processing.]
-</td>
-<td style="text-align: center;">25–1600 <span class="math inline">*μ*</span>m</td>
-<td style="text-align: center;">25 <span class="math inline">*μ*</span>m</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1DP</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><a href="https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-precipitation-probe">2DP</a> (new)</td>
-<td style="text-align: center;">0-63</td>
-<td style="text-align: center;">1-62</td>
-<td style="text-align: center;">100–6400 <span class="math inline">*μ*</span>m</td>
-<td style="text-align: center;">100 <span class="math inline">*μ*</span>m</td>
-</tr>
-</tbody>
-</table>
-<p><br />
-</p>
+**Probes that produce size distributions of particles (with links to descriptions):<span id="TableOfProbes" label="TableOfProbes"></span>**  
+```{r TProbes, include = TRUE}
+
+PROBES <- data.frame(
+  Probe = c("FSSP-100^(b)^", '[SPP-100](http://www.eol.ucar.edu/instruments/forward-scattering-spectrometer-probe-model-100)', 
+            '[UHSAS](https://www.eol.ucar.edu/instruments/ultra-high-sensitivity-aerosol-spectrometer)', 
+            '[CDP](https://www.eol.ucar.edu/instruments/cloud-droplet-probe)', 
+            '[FSSP-300](https://www.eol.ucar.edu/instruments/forward-scattering-spectrometer-probe-model-300)', 
+            'PCASP-orig^(c)^', 
+            '[PCASP/SPP-200](https://www.eol.ucar.edu/instruments/signal-processing-package-200-passive-cavity-aerosol-spectrometer-probe)', 
+            'OAP-200X^(c)^', 
+            'OAP260X^(c)^', 
+            'OAP-200Y^(c)^', 
+            '2DC (old)^(c)(e)^', 
+            '2DP (old)^(c)^', 
+            '[2DC (fast)](https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud-probe)^(f)^', 
+            '[2DP (new)](https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-precipitation-probe)'),
+  Lab = c('F', 'F', 'U', 'D', '3', 'P', 'P', 'X', '6', 'Y', '', '', '', ''),
+  Channels = c(15, 30, 99, 30, 30, 15, 30, 15, 64, 15, 32, 32, 64, 64),
+  Diameter = c('2--30', '3--45', '0.05--1', '3--45', 
+               '0.3--20', '0.1--3.0', '0.1--3.0', '40--280',
+               '40-620','300--4500', '25--800', '200-6400',
+               '25--1600', '100--6400'),
+  BinW = c('2', '3 (typ)', 'variable', 'variable', 'variable', 
+           'variable', 'variable', '10', '10', '300', '25', '200',
+           '25', '100')
+)
+nm <- names(PROBES)
+nm[1] <- '**probe**^(a)^'
+nm[2] <- 'label'
+nm[3] <- 'channels^(d)^'
+nm[4] <- 'diameter [$\\mu m$]'
+nm[5] <- 'bins [$\\mu m$]'
+names(PROBES) <- nm
+knitr::kable(PROBES, row.names=FALSE, align=c('cc')) %>% kable_styling(bootstrap_options = 'bordered') %>%
+  add_footnote(c("see the links for descriptions of these instruments.", "this probe is obsolete but measurements still appear in some older project archives.", "for descriptions of these probes, see [this URL](https://opensky.ucar.edu/islandora/object/archives%3A8155)",
+  "Prior to 2022 the channels included an unusable bin-0, so for example the FSSP-100 measurements were stored in bins 1-15 following a placeholder bin-0. The 16 bin sizes were recorded as the bin upper limits, excluding the first. Beginning in May 2020 the convention was changed so that, for example, the 30 measurements from the CDP are stored in bins 0-29 and the 31 cell-sizes are low limits to the sizes of the bins, except the 31st which is the upper limit to the size of the 30th bin. That 30th bin is called bin-29 to be consistent with C indexing conventions. There are other cases where the usable bins are less than listed here, for example where the entire-in sizing technique for 2D probes reduces the number of valid bins or where some channels have been considered unreliable. The netCDF header will specify when the usable bins are smaller than indicated here.", "Measurements from this and the next three 2D probes are discussed in the following section on hydrometeor imaging probes.", "Size distributions from the 2DC are often recorded with the name 1DC. See [here](#special-1d-nomenclature) for an explanation of this name convention."), notation="alphabet") %>%
+  add_footnote(, notation="alphabet") %>%
+  scroll_box(width='90%')
+```
 
 ### Count Rate Per Channel: ACDP, AFSSP, AS100, AF300, AS200, APCAS, A200X, A260X, A200Y, AUHSAS {#CRPC .unnumbered}
 
