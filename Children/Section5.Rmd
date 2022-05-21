@@ -42,7 +42,7 @@ The RAF operates a set of hydrometeor detectors that provide single-dimension me
 
 <!-- The following HTML table is now converted to R Markdown: -->
 ```{r include=TRUE, echo=FALSE}
-A <- read.csv('../A.csv')
+A <- read.csv('LocationTable.csv')
 VNames1d <- data.frame("suffix"=A$Code, "location"=A$Location, "aircraft"=A$Aircraft)
 knitr::kable(VNames1d, align=c('ccc')) %>% kable_styling(bootstrap_options = 'bordered') %>%
   scroll_box(width='80%')
@@ -291,7 +291,7 @@ In recent NETCDF data files, the actual bin boundaries used for processing are r
 
 #### 2D Count Rate Per Channel (count per time interval): A1DC, A1DP {-#a1dc-a1dp}
 
-*The number of particles counted by a 2D probe in each of 62 size bins in a specified time interval, usually 1 s.* These are used to calculate the derived variables like CONC1DC, C1DC, and others that follow, but are provided to allow re-calculation if a user wants to use different sample volumes or sizing assumptions.<br />
+*The number of particles counted by a 2D probe in each of 62 size bins in a specified time interval, usually 1 s.* These are used to calculate the derived variables like CONC1DC, C1DC, and others that follow, but are provided to allow re-calculation if a user wants to use different sample volumes or sizing assumptions. Two other variables are sometimes included, A1DCA and A1DCR, representing different processing schemes that accept all particles (A) or restrict the calculations to only round particles (R).
 
 #### 2D Size Distribution (L<span class="math inline"><sup> − 1</sup></span>channel<span class="math inline"><sup> − 1</sup></span>): C1DC, C1DP {-#c1dc-c1dp} 
 

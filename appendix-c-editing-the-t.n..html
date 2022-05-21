@@ -163,8 +163,8 @@
 was last updated in Feb 2019. It can be obtained from the <a href="https://github.com/WilliamCooper/ProcessingAlgorithms">GitHub site</a>. Copy this to an RStudio project file to use this version.<br />
 </li>
 <li>A revised version is written in RMarkdown to facilitate editing by others. It provides an HTML version of the document suitable for hosting on web servers. To obtain this version, download <a href="https://github.com/WilliamCooper/ProcessingAlgorithms/tree/Rmd">this repository</a>. This works best
-if output: bookdown::gitbook is selected. Download this branch to an RStudio project directory and use the “knit” button to construct the web site. The output will be html files that can be moved from there to a web server. The directories “assets” and “www” should also be transferred; the former contains CSS files and the latter some memos that are referenced in the document. For example, if the web server delivers files from /var/www/html, make a new
-directory there called “ProcessingAlgorithms” and move all .html files and those two directories to “ProcessingAlgorithms”.
+if output: bookdown::gitbook is selected. Download this branch to an RStudio project directory and use the [knit]button to construct the web site. The output will be html files that can be moved from there to a web server. The directories [assets]and [www]should also be transferred; the former contains CSS files and the latter some memos that are referenced in the document. For example, if the web server delivers files from /var/www/html, make a new
+directory there called [ProcessingAlgorithms]and move all .html files and those two directories to [ProcessingAlgorithms[.
 Then view the document via <a href="http://URL/ProcessingAlgorithms" class="uri">http://URL/ProcessingAlgorithms</a> where URL is the appropriate reference for
 your web files.
 <ul>
@@ -176,7 +176,7 @@ changing table structures from HTML to R Markdown kable format, etc.<br />
 <li>The R Markdown files can produce a PDF file, but many features available in the HTML files will not be available, at least at present. PDF files can always be produced by printing from a web browser.<br />
 </li>
 </ul></li>
-<li>The document is broken into many sections, referenced by the above file, so they must be present also. In the lyx version they have names like Section3.lyx. In the Rmd version, they reside as, e.g., Section3.Rmd in the “Children” directory.<br />
+<li>The document is broken into many sections, referenced by the above file, so they must be present also. In the lyx version they have names like Section3.lyx. In the Rmd version, they reside as, e.g., Section3.Rmd in the [Children]directory.<br />
 </li>
 <li>The lyx document generates three indices: a regular index, a list of symbols, and a list of variables. The references for these are embedded in the .lyx files, and they can be modified or more can be added via the “Insert -&gt; Index Entry” controls. These practices are useful when generating index entries:
 <ul>
@@ -206,7 +206,7 @@ the LyX version: “INS|see {Inertial Navigation System}” where the part in br
 <li>For the Rmd version:
 <ul>
 <li>In place of the Table of Symbols, there is Appendix A. It is a .gif copy of the LyX-generated table, and there is no easy way to update it except vis LyX.</li>
-<li>In place of the “Variable Names” index, there is Appendix B that lists the variable names and includes links to appropriate references to variables in the technical note. This is not generated automatically, so when a new variable is added to the document a new entry with appropriate links should be added to Appendix B. Follow the style in “Children/Appendices.Rmd” and add an appropriate target for the link to the new discussion of the variable, which should be a 4th-level or higher heading.</li>
+<li>In place of the <a href="the-state-of-the-atmosphere.html#variable-names">Variable Names</a>index, there is Appendix B that lists the variable names and includes links to appropriate references to variables in the technical note. This is not generated automatically, so when a new variable is added to the document a new entry with appropriate links should be added to Appendix B. Follow the style in [Children/Appendices.Rmd]and add an appropriate target for the link to the new discussion of the variable, which should be a 4th-level or higher heading.</li>
 </ul></li>
 </ul>
 </div>
@@ -217,7 +217,7 @@ the LyX version: “INS|see {Inertial Navigation System}” where the part in br
 <p>
 The document includes named destinations for each variable name, so when used in a URL that destination can be reached. This is done differently in different browsers or PDF viewers:
 </p>
-<ul class="incremental">
+<ul class="[incremental[">
 <li>
 <p>
 For a web browser like Chrome or Firefox, use the “nameddest” reference; e.g., for the discussion of variable ATX, use<br />
@@ -235,34 +235,34 @@ For a pdf viewer like evince, use this syntax:<br />
 Most variable names can be used in these URL modifiers. Here is a list of available targets by section in the report:
 </p>
 <p>
-<u>Section 1:</u> Time
+<span class="[underline[">Section 1:</span> Time
 </p>
 <p>
-<u>Section 2:</u> <span>[</span>none<span>]</span>
+<span class="[underline[">Section 2:</span> <span>[</span>none<span>]</span>
 </p>
 <p>
-<u>Section 3:</u> ACINS ALT BLATA BLONA BNORMA BPITCHR BROLLR BYAWR DEI DNI FXAZIM FXDIST GGALT GGLAT GGLON GGNSAT GGOIDHT GGSPD GGSTATUS GGTRK GGVEW GGVNS GGVSPD GGWUAL GMODE GSF HGM HGM232 HGME HI3 LAT LATC LON LONC PALT PITCH ROLL THDG VEW VEWC VNS VNSC VSPD
+<span class="[underline[">Section 3:</span> ACINS ALT BLATA BLONA BNORMA BPITCHR BROLLR BYAWR DEI DNI FXAZIM FXDIST GGALT GGLAT GGLON GGNSAT GGOIDHT GGSPD GGSTATUS GGTRK GGVEW GGVNS GGVSPD GGWUAL GMODE GSF HGM HGM232 HGME HI3 LAT LATC LON LONC PALT PITCH ROLL THDG VEW VEWC VNS VNSC VSPD
 </p>
 <p>
-<u>Section 4:</u> ADIFR AKRD AT_ITR ATx ATX ATxD ATxJ BDIFR CAVP_x CONCH_UVH CONCV_VXL DP_CR2C DP_VXL DPx DP_x DPxC DPXC DVALUE EDPC EW_UHV EWx EWX FP_CR2 MACHx MACHX MIRRORT_CR2 MIRRTMP_DPX MR MRCR MRLA MRLH MRVCL OAT PCAB PS_A PSDPx PSFD PSFRD PSURF PSx PSX PSxC PSXC QCx QCX QCxC QCXC RAWCONC_VXL RHOx RHUM RHUMI RTHRx RTx RTX RTxH SPHUM SSLIP TASHC TASx TASX TASxD THETA THETAE THETAP THETAQ THETAV TVIR UI UIC UX UXC VI VIC VY VYC WD WDC WI WIC WS WSC XSIGV_UHV
+<span class="[underline[">Section 4:</span> ADIFR AKRD AT_ITR ATx ATX ATxD ATxJ BDIFR CAVP_x CONCH_UVH CONCV_VXL DP_CR2C DP_VXL DPx DP_x DPxC DPXC DVALUE EDPC EW_UHV EWx EWX FP_CR2 MACHx MACHX MIRRORT_CR2 MIRRTMP_DPX MR MRCR MRLA MRLH MRVCL OAT PCAB PS_A PSDPx PSFD PSFRD PSURF PSx PSX PSxC PSXC QCx QCX QCxC QCXC RAWCONC_VXL RHOx RHUM RHUMI RTHRx RTx RTX RTxH SPHUM SSLIP TASHC TASx TASX TASxD THETA THETAE THETAP THETAQ THETAV TVIR UI UIC UX UXC VI VIC VY VYC WD WDC WI WIC WS WSC XSIGV_UHV
 </p>
 <p>
-<u>Section 5:</u> A1DC A1DP A200X A200Y A260X ACDP AF300 AFSSP APCAS AS100 AUHSAS C1DC C1DP C200X C200Y C260X CCDP CF300 CFSSP COMCP CONC1DC CONC1DC100 CONC1DC150 CONC1DP CONC3 CONC6 CONCD CONCF CONCU CONCX CONCY CPCAS CS100 CUHSAS DBAR1DC DBAR1DP DBAR3 DBAR6 DBARD DBARF DBARP DBARU DBARX DBARY DBZ DBZ1DC DBZ1DP DISP1DC DISP1DP DISP3 DISP6 DISPD DISPF DISPP DISPU DISPX DISPY DT1DC FRANGE FRNG PLWC1 PLWC1DC PLWC1DP PLWC6 PLWCC PLWCC1 PLWCD PLWCF PLWCG PLWCX PLWCY REFF2DC REFF2DP REFFD REFFF RICE
+<span class="[underline[">Section 5:</span> A1DC A1DP A200X A200Y A260X ACDP AF300 AFSSP APCAS AS100 AUHSAS C1DC C1DP C200X C200Y C260X CCDP CF300 CFSSP COMCP CONC1DC CONC1DC100 CONC1DC150 CONC1DP CONC3 CONC6 CONCD CONCF CONCU CONCX CONCY CPCAS CS100 CUHSAS DBAR1DC DBAR1DP DBAR3 DBAR6 DBARD DBARF DBARP DBARU DBARX DBARY DBZ DBZ1DC DBZ1DP DISP1DC DISP1DP DISP3 DISP6 DISPD DISPF DISPP DISPU DISPX DISPY DT1DC FRANGE FRNG PLWC1 PLWC1DC PLWC1DP PLWC6 PLWCC PLWCC1 PLWCD PLWCF PLWCG PLWCX PLWCY REFF2DC REFF2DP REFFD REFFF RICE
 </p>
 <p>
-<u>Section 6:</u> CO2_PIC COMR_AL CORAW_AL FO3_ACD FO3_CL O3MR_CL TEO3 TEO3C TEO3P TEP TET XFO3FNO XFO3FS XFO3P XNCLF XNMBT XNO XNOCAL XNOCF XNOSF XNOY XNOYP XNOZA XNSAF XNST XNYCAL XNZAF XO3
+<span class="[underline[">Section 6:</span> CO2_PIC COMR_AL CORAW_AL FO3_ACD FO3_CL O3MR_CL TEO3 TEO3C TEO3P TEP TET XFO3FNO XFO3FS XFO3P XNCLF XNMBT XNO XNOCAL XNOCF XNOSF XNOY XNOYP XNOZA XNSAF XNST XNYCAL XNZAF XO3
 </p>
 <p>
-<u>Section 7:</u> CNTEMP CNTS CONCN CONCP CONCU CONCU100 CONCU500 FCN FCNC PCN PFLW PFLWC TCHTP TCNTL TEMP1 TEMP2 UPRESS USFLWC USMPFLW XICN XICNC
+<span class="[underline[">Section 7:</span> CNTEMP CNTS CONCN CONCP CONCU CONCU100 CONCU500 FCN FCNC PCN PFLW PFLWC TCHTP TCNTL TEMP1 TEMP2 UPRESS USFLWC USMPFLW XICN XICNC
 </p>
 <p>
-<u>Section 8:</u> IRxHT IRxV RSTx SPxPitch SPxRoll TRSTx VISxC VISxHT VISxV
+<span class="[underline[">Section 8:</span> IRxHT IRxV RSTx SPxPitch SPxRoll TRSTx VISxC VISxHT VISxV
 </p>
 <p>
-<u>Section 9:</u> <span>[</span>none<span>]</span>
+<span class="[underline[">Section 9:</span> <span>[</span>none<span>]</span>
 </p>
 <p>
-<u>Section 10:</u> OBSOLETE
+<span class="[underline[">Section 10:</span> OBSOLETE
 </p>
 </div>
 <div id="page-numbers-lyx-version" class="section level3 unnumbered hasAnchor">
@@ -287,7 +287,7 @@ Targets have not been provided for other parts of the document, but the above me
 <div id="adding-new-targets" class="section level3 unnumbered hasAnchor">
 <h3>Adding New Targets<a href="appendix-c-editing-the-t.n..html#adding-new-targets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>
-<p>When a new variable is added, a new anchor point can be added by inserting, in LaTeX mode, “\nop{LAT}” at the appropriate point in the LyX document. (“\nop” has been defined to use \hypertarget but displace the reference upward one line.) In addition, when a new variable is added, entries should be made in the index items and the variable-names list, following the pattern used for existing variables, and if appropriate any new symbols used in discussing the algorithm should be added to the similar symbols list.</p>
+<p>When a new variable is added, a new anchor point can be added by inserting, in LaTeX mode, [\nop{LAT}]at the appropriate point in the LyX document. ([\nop]has been defined to use \hypertarget but displace the reference upward one line.) In addition, when a new variable is added, entries should be made in the index items and the variable-names list, following the pattern used for existing variables, and if appropriate any new symbols used in discussing the algorithm should be added to the similar symbols list.</p>
 </div>
 </div>
 <div id="referencing-specific-sections-of-this-document-rmarkdown-version" class="section level2 unnumbered hasAnchor">

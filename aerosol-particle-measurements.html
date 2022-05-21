@@ -186,23 +186,19 @@ border-radius: 1px;
 <!-- <h2 id="condensation-nucleus-counters">Condensation Nucleus Counters</h2> -->
 <div id="condensation-nucleus-counter" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Condensation Nucleus Counter<a href="aerosol-particle-measurements.html#condensation-nucleus-counter" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>
-RAF uses two modified TSI, Inc. <a href="http://www.eol.ucar.edu/instruments/condensation-nucleus-counter-water-or-butanol">condensation nucleus counters</a> to measure the total concentration of ultrafine particles in the atmosphere, a 3760A using n-butyl alcohol and a water-based 3786 WCN (water condensation nucleus) counter. Both are sensitive to particles in the approximate diameter range from 0.010–3 <span lang="el">m</span>m.<br />
-</p>
+<p>RAF uses two modified TSI, Inc. <a href="http://www.eol.ucar.edu/instruments/condensation-nucleus-counter-water-or-butanol">condensation nucleus counters</a> to measure the total concentration of fine or ultrafine particles in the atmosphere, a 3760A using n-butyl alcohol and a water-based 3786 WCN (water condensation nucleus) counter. Both are sensitive to particles in the approximate diameter range from <span class="math inline">\(0.010–3\,\mu\mathrm{m}\)</span>.</p>
 <div id="pcn" class="section level4 unnumbered hasAnchor">
 <h4>CN Counter Inlet Pressure (hPa): PCN<a href="aerosol-particle-measurements.html#pcn" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-]
-<em>The absolute pressure inside the inlet tube of the instrument.</em> It as measured by a Heise Model 623 pressure sensor for the 3760A, and internally by the 3786 WCN.. The measurement is used to convert the measured mass flow (FCN or XICN) to volumetric flow and to convert measured particle concentration to equivalent ambient concentration.
-</p>
+<p><em>The absolute pressure inside the inlet tube of the instrument.</em> It as measured by a Heise Model 623 pressure sensor for the 3760A, and internally by the 3786 WCN. The measurement is used to convert the measured mass flow (FCN or XICN) to volumetric flow and to convert measured particle concentration to equivalent ambient concentration.</p>
 </div>
 <div id="cntemp" class="section level4 unnumbered hasAnchor">
-<h4>CN Counter Inlet Temperature (<span class="math inline"><em></em><sup>∘</sup></span>C): CNTEMP, TEMP1, TEMP2<a href="aerosol-particle-measurements.html#cntemp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<h4>CN Counter Inlet Temperature (<span class="math inline">\(^\circ\mathrm{C}\)</span>): CNTEMP, TEMP1, TEMP2<a href="aerosol-particle-measurements.html#cntemp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <em>The sample air temperature measured at the intake of the 3760A or within the 3786.</em> The value is used to convert the measured mass flow (FCN or XICN) to true volumetric flow and to convert measured particle concentration to equivalent ambient concentration.
 </p>
 </div>
 <div id="fcnc" class="section level4 unnumbered hasAnchor">
 <h4>Raw and Corrected CN Counter Sample Flow Rate (SLPM, VLPM): FCN, FCNC<a href="aerosol-particle-measurements.html#fcnc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><em>The raw and corrected sample flows in the CN counters</em> are treated differently for the two models of CN counter. In the 3760A, FCN is measured in standard liters per minute (SLPM) with a mass flow meter. The flow meter gives the volumetric flow rate that would apply under standard conditions of 1013.25 hPa and 21<span class="math inline"><em></em><sup>∘</sup></span>C. FCNC is the corrected sample flow rate in volumetric liters per minute (VLPM) <em>at instrument pressure and temperature</em>. For the 3760A:<br /></p>
+<p><em>The raw and corrected sample flows in the CN counters</em> are treated differently for the two models of CN counter. In the 3760A, FCN is measured in standard liters per minute (SLPM) with a mass flow meter. The flow meter gives the volumetric flow rate that would apply under standard conditions of 1013.25 hPa and <span class="math inline">\(21^\circ\mathrm{C}\)</span>. FCNC is the corrected sample flow rate in volumetric liters per minute (VLPM) <em>at instrument pressure and temperature</em>. <strong>For the 3760A:</strong></p>
 <style>
 p.box {
 background-color: #F8F8F8;
@@ -245,12 +241,11 @@ reference temperature, 294.15 K<br />
 \tag{7.1}
 \end{equation}\]</span>
 </p>
-In the 3786, flows are determined in volumetric cm<span class="math inline"><span class="math inline">\(^{3}\thinspace\mathrm{min}^{-1}\)</span></span> from the pressure drop across an orifice. The 3786 firmware makes density corrections internally, so its reported sample flow is brought directly into the variable FCNC in units of VLPM.<br />
-</p>
+<p><strong>In the 3786</strong>, flows are determined in volumetric <span class="math inline">\(\mathrm{cm}^3\mathrm{min}^{-1}\)</span> from the pressure drop maintained across an orifice. The 3786 firmware makes density corrections internally, so its reported sample flow is brought directly into the variable FCNC in units of VLPM.</p>
 </div>
 <div id="xicnc" class="section level4 unnumbered hasAnchor">
 <h4>Raw and Corrected CN Isokinetic Side Flow Rate (SLPM, VLPM): XICN, XICNC<a href="aerosol-particle-measurements.html#xicnc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><em>XICN is the raw isokinetic side flow rate in standard liters per minute (SLPM) measured with a mass flow meter, and XICNC is that flow corrected for pressure and temperature to be the true volumetric flow.</em> The side flow is adjusted for isokinetic sampling at the inlet, but it is not used further in processing.<br /></p>
+<p><em>XICN is the raw isokinetic side flow rate in standard liters per minute (SLPM) measured with a mass flow meter, and XICNC is that flow corrected for pressure and temperature to be the true volumetric flow.</em> The side flow is adjusted for isokinetic sampling at the inlet, but it is not used further in processing.</p>
 <p class="box">
 <a href="aerosol-particle-measurements.html#xicnc">XICN</a> = side-flow rate [SLPM]<br />
 <a href="aerosol-particle-measurements.html#pcn">PCN</a> = pressure at the inlet to the CN counter [hPa]<br />
@@ -268,18 +263,15 @@ In the 3786, flows are determined in volumetric cm<span class="math inline"><spa
 </p>
 </div>
 <div id="cnts" class="section level4 unnumbered hasAnchor">
-<h4>CN Counter Output (counts per sample interval): CNTS<a href="aerosol-particle-measurements.html#cnts" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<em>The raw output count from the condensation nucleus counter.</em> For the 3760A condensation nucleus counter, the project-dependent sample rate may be chosen in the range from 1–50 Hz but it is typically 10 Hz. In some unusual cases the counts are divided by a selected power of two to keep the counter from overflowing; see project documentation. The 3786 WCN may be programmed to report data at intervals from 0.1–3600 s.<span id="punch:7-1" label="punch:7-1">[punch:7-1]</span>
+<h4>CN Counter Output (counts per sample interval): CNTS, CNT1, CNCNTS<a href="aerosol-particle-measurements.html#cnts" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<em>The raw output count from a condensation nucleus counter.</em> For the 3760A condensation nucleus counter, the project-dependent sample rate may be chosen in the range from 1–50 Hz but it is typically 10 Hz. In some unusual cases the counts are divided by a selected power of two to keep the counter from overflowing; see project documentation. The 3786 WCN may be programmed to report data at intervals from 0.1–3600 s.<span id="punch:7-1" label="punch:7-1">[punch:7-1]</span>
 </p>
 </div>
 <div id="concn" class="section level4 unnumbered hasAnchor">
-<h4>Condensation Nucleus (CN) Concentration (cm<sup>-3</sup>): CONCN<a href="aerosol-particle-measurements.html#concn" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<em>The number concentration of condensation nuclei</em> in units of particles per cm<span class="math inline"><em></em><sup>3</sup></span> <em>in the ambient air</em> at flight level. <em></em> The calculation leading to CONCN includes two corrections. The first accounts for coincidence of particles in the viewing volume at high concentrations and is handled differently in the two types of CN counter. For the 3760A, a statistical adjustment is made based on the average time of a particle in the viewing volume. This correction increases from about 1% at a total concentration of 10<span class="math inline"><em></em><sup>3</sup></span> cm<span class="math inline"><em></em><sup> − 3</sup></span> to nearly 11% at 10<span class="math inline"><em></em><sup>4</sup></span> cm<span class="math inline"><em></em><sup> − 3</sup></span>, but for concentrations above about 210<span class="math inline"><em></em><sup>4</sup></span> cm<span class="math inline"><em></em><sup> − 3</sup></span> significant uncertainty remains. The 3786 instead measures the time each detected particle occupies the viewing volume, and this <em></em> accumulated “dead time” in each sampling interval is subtracted from the elapsed time yielding a “live time” for the determination of sample volume. With this correction an accuracy of 12%, not including statistical counting error, is specified by the manufacturer at concentrations up to 10<span class="math inline"><em></em><sup>5</sup></span> cm<span class="math inline"><em></em><sup> − 3</sup></span>. The second correction, applied to all CN counters, is a conversion from instrument to ambient conditions.<a href="#fn43" class="footnote-ref" id="fnref43"><sup>43</sup></a>
-In the following formulae, the corrected flow FCNC in VLPM is explicitly converted to cm<span class="math inline"><em></em><sup>3</sup></span>s<span class="math inline"><em></em><sup> − 1</sup></span> by the factor (1000/60).<em></em><br />
-<em></em><br />
-</p>
-<p>
-<p><strong>For the 3760A:</strong><br /></p>
+<h4>Condensation Nucleus (CN) Concentration (cm<sup>-3</sup>): CONCN, CNCONC<a href="aerosol-particle-measurements.html#concn" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>The number concentration of condensation nuclei</em> in units of particles per cm<sup>3</sup> <em>in the ambient air</em> at flight level. The calculation leading to CONCN includes two corrections. The first accounts for coincidence of particles in the viewing volume at high concentrations and is handled differently in the two types of CN counter. For the 3760A, a statistical adjustment is made based on the average time of a particle in the viewing volume. This correction increases from about 1% at a total concentration of 10<sup>3</sup>cm<sup>-3</sup> to nearly 11% at 10<sup>4</sup>cm<sup>-3</sup>, but for measurements above about 2x10<sup>4</sup>cm<sup>-3</sup> significant uncertainty remains because the validity of the coincidence correction is not reliable. The 3786 instead measures the time each detected particle occupies the viewing volume, and this accumulated “dead time” in each sampling interval is subtracted from the elapsed time yielding a “live time” for the determination of sample volume. With this correction an accuracy of 12%, not including statistical counting error, is specified by the manufacturer at concentrations up to 10<sup>5</sup>cm<sup>-3</sup>. The second correction, applied to all CN counters, is a conversion from instrument to ambient conditions.<a href="#fn43" class="footnote-ref" id="fnref43"><sup>43</sup></a>
+In the following formulae, the corrected flow FCNC in VLPM is explicitly converted to cm<sup>3</sup>s<sup>-1</sup> by the factor (1000/60).</p>
+<p><strong>For the 3760A:</strong></p>
 <p class="box">
 CNTS = particle counts per sample interval from the CN counter<br />
 <span class="math inline">\(\Delta t\)</span> = interval
@@ -313,8 +305,7 @@ and the concentration under ambient conditions is<br />
 \tag{7.5}
 \end{equation}\]</span>
 </p>
-<p>
-<p><strong>For the 3786 WCN:</strong><br /></p>
+<p><strong>For the 3786 WCN:</strong></p>
 <p class="box">
 <a href="aerosol-particle-measurements.html#cnts">CNTS</a> = particle counts per sample interval from the CN counter<br />
 <span class="math inline">\(\Delta t\)</span> = interval
@@ -338,23 +329,19 @@ between recorded samples [s]<br />
 \tag{7.7}
 \end{equation}\]</span>
 </p>
-</p>
 <!-- <h2 id="aerosol-spectrometers">Aerosol Spectrometers</h2> -->
 </div>
 </div>
 <div id="aerosol-spec" class="section level2 hasAnchor" number="7.2">
 <h2><span class="header-section-number">7.2</span> Aerosol Spectrometers<a href="aerosol-particle-measurements.html#aerosol-spec" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>
-For size-resolved measurements of the concentration of aerosol particles, RAF deploys two instruments. The <a href="https://www.eol.ucar.edu/instruments/ultra-high-sensitivity-aerosol-spectrometer">Ultra High Sensitivity Aerosol Spectrometer</a> (UHSAS) sizes particles in 99 bins from 0.06 to 1.0 <span lang="el">m</span>m diameter, and the <a href="http://www.eol.ucar.edu/instruments/passive-cavity-aerosol-spectrometer-probe">Passive Cavity Aerosol Spectrometer Probe</a> (PCASP) has 30 channels covering the diameter range 0.1 to 3 <span lang="el">m</span>m. Flow and total concentration variables for these instruments are described in this section, while additional variables are covered along with other 1-D probes in Sect. <a href="cloud-physics-variables.html#sensors-1-D-probes">5.2</a>, “Sensors Detecting Individual Hydrometeors (1-D Probes).”
-</p>
+<p>For size-resolved measurements of the concentration of aerosol particles, RAF deploys two instruments. The <a href="https://www.eol.ucar.edu/instruments/ultra-high-sensitivity-aerosol-spectrometer">Ultra High Sensitivity Aerosol Spectrometer</a> (UHSAS) sizes particles in 99 bins from 0.06 to 1.0 <span class="math inline">\(\mu\mathrm{m}\)</span> diameter, and the <a href="http://www.eol.ucar.edu/instruments/passive-cavity-aerosol-spectrometer-probe">Passive Cavity Aerosol Spectrometer Probe</a> (PCASP) has 30 channels covering the diameter range 0.1 to 3 <span class="math inline">\(\mu\mathrm{m}\)</span>. Flow and total concentration variables for these instruments are described in this section, while additional variables are covered along with other 1-D probes in Sect. <a href="cloud-physics-variables.html#sensors-1-D-probes">5.2</a>, “Sensors Detecting Individual Hydrometeors (1-D Probes).”</p>
 <div id="upress" class="section level4 unnumbered hasAnchor">
 <h4>UHSAS Absolute Pressure in Optics Block (kPa): UPRESS<a href="aerosol-particle-measurements.html#upress" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-The pressure internal to the UHSAS instrument. This is an analog measurement with calibration coefficients as recorded in the attributes for the variable.<span id="punch:7-2" label="punch:7-2">[punch:7-2]</span>
-</p>
+<p><em>The pressure internal to the UHSAS instrument.</em> This is an analog measurement with calibration coefficients as recorded in the attributes for the variable.<span id="punch:7-2" label="punch:7-2">[punch:7-2]</span></p>
 </div>
 <div id="pflw" class="section level4 unnumbered hasAnchor">
 <h4>Raw and Corrected Sample Flow Rate (cm<sup>3</sup>s<sup>-1</sup>): USMPFLW or PFLW; USFLWC or PFLWC<a href="aerosol-particle-measurements.html#pflw" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Unlike the other 1-d probes, both UHSAS and PCASP have internal pumps so their sample volumes are determined from the measured flows and do not depend on true air speed. The UHSAS measures volumetric flow directly, and it is adjusted to ambient conditions for the calculation of ambient concentration. The PCASP returns a mass flow referenced to standard conditions, and this also is converted to equivalent ambient volumetric flow.<br /></p>
+<p>Unlike the other 1-d probes, both UHSAS and PCASP have internal pumps so their sample volumes are determined from the measured flows and do not depend on true air speed. The UHSAS measures volumetric flow directly, and it is adjusted to ambient conditions for the calculation of ambient concentration. The PCASP returns a mass flow referenced to standard conditions, and this also is converted to equivalent ambient volumetric flow.</p>
 <p class="box">
 <a href="aerosol-particle-measurements.html#upress">UPRESS</a> = internal UHSAS pressure [kPa]<br />
 <a href="aerosol-particle-measurements.html#pflw">USMPFLW</a> = measured volumetric sample flow [cm<span class="math inline">\(^{3}\)</span>s<span class="math inline">\(^{-1}\)</span>]<br />
@@ -379,11 +366,11 @@ The pressure internal to the UHSAS instrument. This is an analog measurement wit
 </div>
 <div id="tcntu-tcntp" class="section level4 unnumbered hasAnchor">
 <h4>Total particle counts per sample interval, UHSAS or PCASP: TCNTU, TCNTP<a href="aerosol-particle-measurements.html#tcntu-tcntp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The total particle counts in each sample interval for, respectively, the UHSAS and PCASP instruments. These values are the sum of counts in all cells of the spectrometers, as represented in the vector variables CUHSAS or CS200. See the discussion of these variables in Sect. <a href="cloud-physics-variables.html#sensors-1-D-probes">5.2</a>.</p>
+<p><em>The total particle counts in each sample interval</em> for, respectively, the UHSAS and PCASP instruments. These values are the sum of counts in all cells of the spectrometers, as represented in the vector variables CUHSAS or CS200. See the discussion of these variables in Sect. <a href="cloud-physics-variables.html#sensors-1-D-probes">5.2</a>.</p>
 </div>
 <div id="concu-concp" class="section level4 unnumbered hasAnchor">
 <h4>Concentration, sum over all channels (cm<sup>-3</sup>s<sup>-1</sup>): CONCU, CONCP, CONCU100, CONCU500<a href="aerosol-particle-measurements.html#concu-concp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><em>The particle concentrations summed over all or a subset of channels.</em> CONCU and CONCP are summed over all channels in the UHSAS and PCASP, respectively, and are calculated as in the following boxed equations. CONCU100 and CONCU500 are concentrations summed over channels in the UHSAS giving particle concentrations for diameters greater than or equal to 100 nm and 500 nm, respectively, and are calculated as for CONCU except with TCNTU replaced by the sum over the appropriate channels.<br /></p>
+<p><em>The particle concentrations summed over all or a subset of channels.</em> CONCU and CONCP are summed over all channels in the UHSAS and PCASP, respectively, and are calculated as in the following boxed equations. CONCU100 and CONCU500 are concentrations summed over channels in the UHSAS giving particle concentrations for diameters greater than or equal to 100 nm and 500 nm, respectively, and are calculated as for CONCU except with TCNTU replaced by the sum over the appropriate channels.</p>
 <style>
 p.box {
 background-color: #F8F8F8;
@@ -434,11 +421,9 @@ interval [s]<br />
 </div>
 <div id="special-aerosol" class="section level2 hasAnchor" number="7.3">
 <h2><span class="header-section-number">7.3</span> Special Aerosol Measurements<a href="aerosol-particle-measurements.html#special-aerosol" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>
-<p>Data from an aerosol mass spectrometer, a scanning mobility particle spectrometer, and a giant nucleus impactor are recorded by these instruments in separate data files and are not recorded by the aircraft data system. The <a name=anc_data>ancillary data sets</a> are not merged into the netCDF archives produced by EOL, so the special data files must be used for these measurements. The data formats are described with the instruments at the references given below:<br />
-<br /></p>
+<p>Data from an aerosol mass spectrometer, a scanning mobility particle spectrometer, and a giant nucleus impactor are recorded by these instruments in separate data files and are not recorded by the aircraft data system. The <a name=anc_data>ancillary data sets</a> are not merged into the netCDF archives produced by EOL, so the special data files must be used for these measurements. The data formats are described with the instruments at the references given below:</p>
 <ul>
-<li><strong>Aerosol Mass Spectrometer (AMS) data files</strong> contain size-segregated chemical composition of non-refractory, submicron aerosol particles. The instrument is described here: <a href="https://www.eol.ucar.edu/instruments/time-flight-aerosol-mass-spectrometer">AMS</a>.<br />
+<li><strong>Aerosol Mass Spectrometer (AMS) data files&lt;</strong> contain size-segregated chemical composition of non-refractory, submicron aerosol particles. The instrument is described here: <a href="https://www.eol.ucar.edu/instruments/time-flight-aerosol-mass-spectrometer">AMS</a>.<br />
 </li>
 <li><strong>Scanning Mobility Particle Spectrometer (SMPS) files</strong> contain fine particle differential size distributions. The number of channels and covered size range are variable. Diameter ranges from about 7.5 nm up to about 500 nm (pressure-dependent), and 15 size bins are typical. The instrument is described here: <a href="https://www.eol.ucar.edu/instruments/scanning-mobility-particle-spectrometer">SMPS</a>.<br />
 </li>
