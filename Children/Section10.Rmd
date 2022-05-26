@@ -140,7 +140,11 @@ for saturation vapor pressure with respect to a plane ice surface. This vapor pr
 
 #### Voltage Output From the Lyman-alpha Sensor (V): VLA {-#vla}
 
-<em>The voltage output from the Lyman-alpha absorption hygrometer</em>. This instrument provided fast-response, high-resolution measurements of water vapor density. (If a second sensor was used, a 1 was added to the variable name associated with the second sensor.) The sensors are now obsolete.</p>
+<em>The voltage output from the Lyman-alpha absorption hygrometer</em>. This instrument provided fast-response, high-resolution measurements of water vapor density. (If a second sensor was used, a 1 was added to the variable name associated with the second sensor.) The sensors are now obsolete.  
+
+#### Dew Point From the Lyman-alpha Sensor (V): DPLA {-#dpla}
+
+*The dewpoint* calculated from the measurements of a Lyman-alpha hygrometer.  
 
 #### Voltage Output from the UV Hygrometer (V): XUVI {-#xuvi}
 

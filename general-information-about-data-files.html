@@ -109,8 +109,9 @@
 </ul></li>
 <li class="chapter" data-level="6" data-path="air-chemistry-measurements.html"><a href="air-chemistry-measurements.html"><i class="fa fa-check"></i><b>6</b> Air Chemistry Measurements<span></span></a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="air-chemistry-measurements.html"><a href="air-chemistry-measurements.html#variables-in-standard-data-files"><i class="fa fa-check"></i><b>6.1</b> Variables in Standard Data Files<span></span></a></li>
-<li class="chapter" data-level="6.2" data-path="air-chemistry-measurements.html"><a href="air-chemistry-measurements.html#awas-cims-qcls-toga"><i class="fa fa-check"></i><b>6.2</b> Variables in Special Data Sets<span></span></a></li>
+<li class="chapter" data-level="6.1" data-path="air-chemistry-measurements.html"><a href="air-chemistry-measurements.html#a-comment-regarding-units"><i class="fa fa-check"></i><b>6.1</b> A Comment Regarding Units<span></span></a></li>
+<li class="chapter" data-level="6.2" data-path="air-chemistry-measurements.html"><a href="air-chemistry-measurements.html#variables-in-standard-data-files"><i class="fa fa-check"></i><b>6.2</b> Variables in Standard Data Files<span></span></a></li>
+<li class="chapter" data-level="6.3" data-path="air-chemistry-measurements.html"><a href="air-chemistry-measurements.html#awas-cims-qcls-toga"><i class="fa fa-check"></i><b>6.3</b> Variables in Special Data Sets<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="aerosol-particle-measurements.html"><a href="aerosol-particle-measurements.html"><i class="fa fa-check"></i><b>7</b> Aerosol Particle Measurements<span></span></a>
 <ul>
@@ -160,7 +161,7 @@
 <h2><span class="header-section-number">2.1</span> Units and Abbreviations<a href="general-information-about-data-files.html#units-and-abbreviations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This report uses the SI system of units, but with many exceptions. Among them are the following:</p>
 <ol style="list-style-type: decimal">
-<li>The millibar (mb), equal to one hectopascal (hPa), was used for pressure with some older variables.<br />
+<li>The millibar (mb), equal to one hectopascal (hPa), was used for pressure with some older variables. This report favors hPa, but pressure units in some archived data sets are still in mb.<br />
 </li>
 <li>Many variables are presented in the units most often used for that variable, even when they involve CGS units or mixed CGS-MKS units, as for example [g m<sup>-3</sup>] for liquid water content or
 [cm<sup>-3</sup>] for droplet concentration.<br />
@@ -322,10 +323,8 @@ knot (n mi/hour) ≡ (1852/3600) m/s = 0.514444… m/s
 <p>Although there are some exceptions in old archived data files, the data in all modern output files are referenced to Coordinated Universal Time (UTC). The time and date of the data acquisition system are synchronized to time from the Global Positioning System (GPS) at the beginning of each flight, and for data acquired by the present ADS-3 (NIDAS) data acquisition system time is synchronized continuously with the GPS time. Time variables vary for older archived data files; some of the following are obsolete, but are included here for reference because they are important to those wanting to use those archives.</p>
 <div id="time" class="section level4 unnumbered hasAnchor">
 <h4>Time (s): Time<a href="general-information-about-data-files.html#time" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<em>The reference-time</em> counter <em>for the output data files,</em> used by data system versions beginning with ADS-3. It is an integer output at 1 Hz <em>and has an initial value of zero at the start of the flight</em>. Add this to the “Time:units” attribute found in the NETCDF header section to obtain the UTC time.
-</p>
-<p>
-Example attribute:  <br />
+<p><em>The reference-time counter for the output data files,</em> used by data system versions beginning with ADS-3. It is an integer output at 1 Hz and has an initial value of zero at the start of the flight. Add this to the “Time:units” attribute found in the NETCDF header section to obtain the UTC time.</p>
+<strong>Example attribute:</strong><br />
 <code>Time:units = “seconds since 2006-04-26 12:55:00 +0000” </code>;
 </p>
 <p>

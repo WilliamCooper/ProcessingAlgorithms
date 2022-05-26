@@ -1,0 +1,44 @@
+---
+title: "Problems"
+author: "William A Cooper"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Some problems encountered when trying to update the ProcessingAlgorithms document to include all variables appearing in netCDF files. For the record, the procedure used was this:  
+
+1. Search for variable names using constructVarTable.R. I ran this on my local computer and also on barolo, searching both /scr/raf_data and /scr/raf/Prod_Data.  
+2. This script also tried to do some preliminary classification into types, including 'pa' (in ProcessingAlgorithms), 'st' (status or housekeeping), 'a' (needs addition to ProcessingAlgorithms), 'sp' (special use and therefore not needed in ProcessingAlgorithms).  
+3. The resulting data.frame, with unique variable names, was saved as DVALL.Rdata.  
+4. I then merged the resulting 'a' variables into Appendix B and tried to link to appropriate descriptions, which had to be added in most cases.  
+5. In the process, I also did lots of editing to remove remnant HTML code and make the document more consistent with RMarkdown. This mostly involved changing the reference and link style, recording tables to use kable instead of HTML, and removing lots of <p>-</p> tags while ending paragraphs with two spaces.  
+
+The following lists some unresolved problems:  
+
+1. Some variables appeared only in SCMS files so they have been omitted as too old to be needed here. The archived data frame DV includes a few 'SCMS' types for this reason.  
+2. I have been unable to learn how BAROCOR is used. It has values around 1013 for some cases but unrealistic ranges for others. It probably refers to the baro-loop correction applied to ALT to obtain pressure altitude, or maybe it is like an altimeter setting. I have omitted it.  
+3. DOFOR has conflicting definitions, in some cases (OTREC, WCR-TEST) DOF Reject Count, in others (SPICULE, WECAN) 2DC Shadow OR Count. I decided to reclassify it as 'st' and omit it from Appendix B.  
+4. BLONA appeared in the search but not in the EOL search so I omitted it and replaced BLONGA iN the PA document.  
+5. DMS appeared only in VOCALS so I classified it as 'sp' and omitted it from Appendix B.  
+6. GGALTC is defined is "Corrected GPS Altitude" but I can't find where there is any difference from GGALT. It lists PALT among dependies, which is worrisome. I have omitted it pending clarification of the algorithm and its usefulness.  
+7. GGALTF (GPS Altitude in Feet, Corrected) occurs only in ORCAS, I think. I have omitted it.  
+8. I decided to omit GGALTSD and re-type it is 'st'. Also, GGLATSD and GGLONSD.  
+9. GGLATB and GGLONB were only in FRAPPE so I omitted them as evidently the same info as GGLAT/GGLON.  
+10. GGSF_A was only in CONTRAST so I omitted it.  
+11. GLATF_A and GLONF_A (Avionics GPS Latitude and Longitude Fine) were only in CONTRAST so I omitted them.  
+12. Many projects (including NOMADSS, WECAN, WCR-TEST, WINTER) had 'Hybrid' INS variables. My memory from an early test is that I wasn't convinced these were an improvement. I have omitted them pending revisit of my earlier study, which I don't remember well. I have left their status as 'a' though.  
+13. GVSPD_A appears only in CONTRAST, among projects since about 2010, but I included it anyway as an alternate to GGVSPD.  
+14. H2O_PIC{2311, 2402, CU} have been widely used, but there was no description of them in ProcessingAlgorithms. I added them (and CO_PIC) to the description for CO2/CH4_PIC. Maybe these entries should have their own paragraphs?  
+15. I omitted HNO3 and XHNO3 (FRAPPE and NOMADSS), guessing that they are better classified as special-use or user-supplied instruments. One (HNO3_GTCIMS) is listed as an ion rate; another (XHNO3) as vdc; a third (HNO3_AERO) as "Aerodyne Nitric Acid".  
+16. IWC1DC is apparently present only in DC3 and WCR-TEST. It is based on assumptions about ice density, not specified, so it seems best to omit it and classify it "sp" for now. If I can learn what algorithm is used, I can add this.  
+17. LATF_A/G and LONF_A/G appear to essentially duplicate LAT_A and LON_A, so I have not added what distinguishes them to the descriptions. If I learn more, I should update them.  
+18. LI8202 and LI8203 appear only in IDEASG and are "Licor Methane Mixing Ratio" so I have typed them and 'sp' and omitted them from PA.  
+19. MRH2O_CU appears only in IDEAS-4-C130, so it appears to be a special-test instrument and has been classified 'sp' and omitted from PA.  
+20. I omitted NH3_AERO as likely user-supplied? It doesn't appear in our instrument inventory, and was used only in FRAPPE.  
+21. NOY_ACD appears occasionally (e.g., WINTER) and NOY_CL appears in START08. Neither lists any dependencies. The current description of the instrument calls is an no-no2 or no-noy instrument, so it appears that NOY_ACD should be added to the list. WINTER lists NOY (total reactive nitrogen) as a measurement, but all other uses list NO2 as the other product (with NO) from this instrument. I have left NOY_ACD in the appendix, linked to the NO-NO2 instrument description, and have added NOY_ACD to that description. This may need clarification. I omitted NOY_CL and NOYO3_CL as special-use, and NOY_ARN also; I'm guessing the former are Clemson instruments and the latter was apparently from a NOAA instrument called ARNOLD that was operated by Steve Brown?      
+22. The final product from the NO-NO2 instrument was listed as XNOCAL/XNYCAL, but I don't find those variables in any recent files.  
+

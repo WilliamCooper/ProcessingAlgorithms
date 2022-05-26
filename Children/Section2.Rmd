@@ -1,10 +1,10 @@
-# General Information About Data Files
+# General Information About Data Files {#general-information}
 
 ## Units and Abbreviations {#units-and-abbreviations}
 
 This report uses the SI system of units, but with many exceptions. Among them are the following:  
 
-1. The millibar (mb), equal to one hectopascal (hPa), was used for pressure with some older variables.  
+1. The millibar (mb), equal to one hectopascal (hPa), was used for pressure with some older variables. This report favors hPa, but pressure units in some archived data sets are still listed as mb.    
 2. Many variables are presented in the units most often used for that variable, even when they involve CGS units or mixed CGS-MKS units, as for example [g m^-3^] for liquid water content or
 [cm^-3^] for droplet concentration.  
 3. Flow rates are often quoted in liters per minute (LPM) or standard liters per minute (SLPM) because those terms are linked to properties of commercially available instruments with flow control. One liter is 10^-3^m^3^. Standard temperature and pressure are respectively 273.15 K and 1013.25 hPa. However, there is considerable ambiguity in the definition of “standard” conditions (mostly regarding the choice of the reference temperature) because some flow controllers and flowmeters specify a different “standard” temperature, so the particular usage will be documented when this term is used. Mass flow meters provide a measure of the flow of mass but usually report the measurement in terms of the volume flow that would be present under standard conditions (e.g.., SLPM). Therefore, to convert to volumetric flow at other conditions, if the fluid density is $\rho$ and the mass flow rate in units of mass per time is denoted by $\dot{m}^\prime$, the volumetric flow is $Q=\dot{m}^\prime/\rho$. Then the mass flow rate in units of standard volume per time is $\dot{m}=\dot{m}^\prime/\rho_s$ where $\rho_s$ is the density of the fluid under standard conditions. To convert to volumetric flow under other conditions, $Q(p,T)=\dot{m}^\prime/\rho$ = $\dot{m}\rho_s/\rho$ = $\dot{m}p_{s}T/(p\thinspace T_{s})$ where $p$ and $T$ are the pressure and absolute temperature for the desired measurement and $p_s$ amd $T_s$ are the corresponding values for standard conditions.  
@@ -93,31 +93,32 @@ Although there are some exceptions in old archived data files, the data in all m
 
 #### Time (s): Time {-#time} 
 
-<em>The reference-time</em> counter <em>for the output data files,</em> used by data system versions beginning with ADS-3. It is an integer output at 1 Hz <em>and has an initial value of zero at the start of the flight</em>. Add this to the “Time:units” attribute found in the NETCDF header section to obtain the UTC time.</p>
-<p>Example attribute:  <br />
+*The reference-time counter for the output data files,* used by data system versions beginning with ADS-3. It is an integer output at 1 Hz and has an initial value of zero at the start of the flight. Add this to the “Time:units” attribute found in the NETCDF header section to obtain the UTC time.  
+
+**Example attribute:**  
 <code>Time:units = “seconds since 2006-04-26 12:55:00 +0000” </code>;</p>
 <p>For code examples that show how to use “Time” see:<br />
 <a href="http://www.eol.ucar.edu/raf/Software/TimeExamp.html">http://www.eol.ucar.edu/raf/Software/TimeExamp.html</a></p>
 
 #### Reference Start Time (s): base_time (<em>Obsolete; versions before ADS-3 only</em>) {-#base-time}
 
-<em>The reference time for the netCDF output data files for data system versions before ADS-3.</em> It represents the time of the first data record. Its format is Unix time (elapsed seconds after midnight 1 January 1970). Add time_offset (below) to obtain the time for each data record. (Note: base_time is a single scalar, not a “record” variable, so it occurs just once in the output file.)
+*The reference time for the netCDF output data files for data system versions before ADS-3.* It represents the time of the first data record. Its format is Unix time (elapsed seconds after midnight 1 January 1970). Add time_offset (below) to obtain the time for each data record. (Note: base_time is a single scalar, not a “record” variable, so it occurs just once in the output file.)  
 
 #### Time Offset from Reference Start Time (s): time_offset (<em>Obsolete)</em> {-#time-offset}
 
-*The time offset from base_time of each data record used for the NETCDF output files produced by data system versions before ADS-3.* It starts at zero (0) and increments each second, so it can also be thought of as a record counter. Use this measurement and add base_time to obtain the time for each data record.
+*The time offset from base_time of each data record used for the NETCDF output files produced by data system versions before ADS-3.* It starts at zero (0) and increments each second, so it can also be thought of as a record counter. Use this measurement and add base_time to obtain the time for each data record.  
 
 #### Raw Tape Time (h, min, s): HOUR, MINUTE, SECOND (*Obsolete*) {-#hms}
 
-These three time variables are recorded directly from the aircraft’s data system. Since ADS-3, this information is replaced by the “Time” variable and the “Time:units” attribute of that variable.
+These three time variables are recorded directly from the aircraft’s data system. Since ADS-3, this information is replaced by the “Time” variable and the “Time:units” attribute of that variable.  
 
 #### Date (m, d, y): MONTH, DAY, YEAR (*Obsolete*) {-#mdy}
 
-These three variables represent the date when the aircraft’s data system began recording data. They are repeated as 1 Hz variables but are NOT incremented if the time rolls over to the next day. Use base_time and time_offset for reference timing. Since ADS-3, this information is replaced by the “Time” variable and the “Time:units” attribute of that variable.
+These three variables represent the date when the aircraft’s data system began recording data. They are repeated as 1 Hz variables but are NOT incremented if the time rolls over to the next day. Use base_time and time_offset for reference timing. Since ADS-3, this information is replaced by the “Time” variable and the “Time:units” attribute of that variable.  
 
 ## Synchronization of Measurements {#synchronization-of-measurements}
 
-Measurements sampled under control of the “NIDAS” sampling system are acquired at 50 Hz. However, the standard archive files are produced at a rate of 1 Hz, and each sample is the average of 50 samples. Therefore, the time associated with measurements reported at 1 Hz is actually an average over the specified second, so the reference time for the averaged measurement is actually 0.5 s past the reported time. Analogous offsets apply to variables reported at other rates different from 50 Hz. Where it applies, electronic filters with cutoff frequency of 25 Hz are used with analog measurements. Higher-rate files are sometimes produced, standardized to 25 Hz but sometimes at other frequencies.
+Measurements sampled under control of the “NIDAS” sampling system are acquired at 50 Hz. However, the standard archive files are produced at a rate of 1 Hz, and each sample is the average of 50 samples. Therefore, the time associated with measurements reported at 1 Hz is actually an average over the specified second, so the reference time for the averaged measurement is actually 0.5 s past the reported time. Analogous offsets apply to variables reported at other rates different from 50 Hz. Where it applies, electronic filters with cutoff frequency of 25 Hz are used with analog measurements. Higher-rate files are sometimes produced, standardized to 25 Hz but sometimes at other frequencies.  
   
 There are time shifts inherent in many of the measurements, and in some cases (e.g., those produced by inertial reference units) these time shifts arise because the information is transmitted from the measuring system at a time later than when it was sampled. In these cases, shifts (“lags”) are applied to the measurements. The lags may be either static or dynamic. Static lags are specified in a configuration file, saved for each project; dynamic lags provided as part of data sampling by specific instruments are recorded by NIDAS for use in processing. Dynamic lags are usually a difference in time from a gridded time value to the time it was actually acquired. e.g. for a 5-Hz parameter the expected or gridded millisecond offset into each second would be 0, 200, 400, 600, and 800. If the data actually were sampled or acquired at 50, 250, 450, 650, and 850 ms then the dynamic lag for this particular second would be -50 ms. Corrections for time lags are applied to measurements before conversion to one of the standard data rates.  
 

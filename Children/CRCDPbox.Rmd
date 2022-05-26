@@ -2,7 +2,7 @@
 <p class=box>
 [VCRH](#cryo-hygro) = frost point inside the cryogenic hygrometer [$^{\circ}$C]    
 [CRHP](#cryo-hygro) = pressure inside the chamber of the cryogenic hygrometer [hPa]  
-[PSXC](./4-the-state-of-the-atmosphere.html#psx) = reference ambient pressure [hPa]  
+[PSXC](./the-state-of-the-atmosphere.html#psx) = reference ambient pressure [hPa]  
 f$_{i}$ = enhancement factor (see Appendix C of Bulletin 9)  
 $F_{1}$($T_{d}$) =Goff-Gratch formula for vapor pressure at dew
 point $T_{d}$  

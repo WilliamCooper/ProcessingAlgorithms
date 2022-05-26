@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output: html_document
 ---
 
-```{r include=FALSE, eval=TRUE}
+```{r include = FALSE, echo = FALSE}
 options(tinytex.verbose = TRUE)
 library(knitr)
 knitr::opts_chunk$set(echo = FALSE)
@@ -16,12 +16,13 @@ library(kableExtra)
 ```
 
 The following table lists variables from the netCDF archives, and tries to classify them into these types:  
+
 * pa: in the ProcessingAlgorithms document  
 * a:  should be added to the ProcessingAlgorithms document, at least in the appendix.  
 * st: variables that provide status or housekeeping information. Some may be included in PA.  
 * sp: special-use variables from, e.g., user or non-standard instruments.  
 * v: an alternate version of a variable otherwise described.  
-* npa: not in PA document, and should not be (e.g., JHWRP variables from UW)
+* npa: not in PA document, and should not be (e.g., JHWRP variables from UW)  
 * undefined: unable to classify because insufficient info in the netCDF files, or just not classified yet.  
 
 
@@ -40,8 +41,10 @@ names(SymbolTable) <- c('abbreviation or symbol', 'definition$^a$')
 ```
 
 ```{r tov, include = TRUE}
-load('DVsave.Rdata')  # Load the list of variables in DV
-knitr::kable(DV[, -c(2:4, 6)], row.names=TRUE, align=c('cc')) %>% kable_styling(bootstrap_options = 'bordered') %>%
+load('DVALL.Rdata')  # Load the list of variables in DV
+# Display only 'a' type:
+DVS <- DV[DV$type == 'a',]
+knitr::kable(DVS[, -c(2:4, 6)], row.names=FALSE, align=c('cc')) %>% kable_styling(bootstrap_options = 'bordered') %>%
   add_footnote("a footnote", notation="alphabet") %>%
   scroll_box(width='90%')
 ```

@@ -76,12 +76,12 @@
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#alphabetical-list-of-variables"><i class="fa fa-check"></i><b>1.2</b> Alphabetical List of Variables<span></span></a></li>
 <li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#constants-and-symbols"><i class="fa fa-check"></i><b>1.3</b> Constants and Symbols<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="general-information-about-data-files.html"><a href="general-information-about-data-files.html"><i class="fa fa-check"></i><b>2</b> General Information About Data Files<span></span></a>
+<li class="chapter" data-level="2" data-path="general-information.html"><a href="general-information.html"><i class="fa fa-check"></i><b>2</b> General Information About Data Files<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="general-information-about-data-files.html"><a href="general-information-about-data-files.html#units-and-abbreviations"><i class="fa fa-check"></i><b>2.1</b> Units and Abbreviations<span></span></a></li>
-<li class="chapter" data-level="2.2" data-path="general-information-about-data-files.html"><a href="general-information-about-data-files.html#variables-used-to-denote-time"><i class="fa fa-check"></i><b>2.2</b> Variables Used to Denote Time<span></span></a></li>
-<li class="chapter" data-level="2.3" data-path="general-information-about-data-files.html"><a href="general-information-about-data-files.html#synchronization-of-measurements"><i class="fa fa-check"></i><b>2.3</b> Synchronization of Measurements<span></span></a></li>
-<li class="chapter" data-level="2.4" data-path="general-information-about-data-files.html"><a href="general-information-about-data-files.html#other-comments-on-terminology"><i class="fa fa-check"></i><b>2.4</b> Other Comments on Terminology<span></span></a></li>
+<li class="chapter" data-level="2.1" data-path="general-information.html"><a href="general-information.html#units-and-abbreviations"><i class="fa fa-check"></i><b>2.1</b> Units and Abbreviations<span></span></a></li>
+<li class="chapter" data-level="2.2" data-path="general-information.html"><a href="general-information.html#variables-used-to-denote-time"><i class="fa fa-check"></i><b>2.2</b> Variables Used to Denote Time<span></span></a></li>
+<li class="chapter" data-level="2.3" data-path="general-information.html"><a href="general-information.html#synchronization-of-measurements"><i class="fa fa-check"></i><b>2.3</b> Synchronization of Measurements<span></span></a></li>
+<li class="chapter" data-level="2.4" data-path="general-information.html"><a href="general-information.html#other-comments-on-terminology"><i class="fa fa-check"></i><b>2.4</b> Other Comments on Terminology<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="the-state-of-the-aircraft.html"><a href="the-state-of-the-aircraft.html"><i class="fa fa-check"></i><b>3</b> The State of the Aircraft<span></span></a>
 <ul>
@@ -109,8 +109,9 @@
 </ul></li>
 <li class="chapter" data-level="6" data-path="air-chemistry-measurements.html"><a href="air-chemistry-measurements.html"><i class="fa fa-check"></i><b>6</b> Air Chemistry Measurements<span></span></a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="air-chemistry-measurements.html"><a href="air-chemistry-measurements.html#variables-in-standard-data-files"><i class="fa fa-check"></i><b>6.1</b> Variables in Standard Data Files<span></span></a></li>
-<li class="chapter" data-level="6.2" data-path="air-chemistry-measurements.html"><a href="air-chemistry-measurements.html#awas-cims-qcls-toga"><i class="fa fa-check"></i><b>6.2</b> Variables in Special Data Sets<span></span></a></li>
+<li class="chapter" data-level="6.1" data-path="air-chemistry-measurements.html"><a href="air-chemistry-measurements.html#a-comment-regarding-units"><i class="fa fa-check"></i><b>6.1</b> A Comment Regarding Units<span></span></a></li>
+<li class="chapter" data-level="6.2" data-path="air-chemistry-measurements.html"><a href="air-chemistry-measurements.html#variables-in-standard-data-files"><i class="fa fa-check"></i><b>6.2</b> Variables in Standard Data Files<span></span></a></li>
+<li class="chapter" data-level="6.3" data-path="air-chemistry-measurements.html"><a href="air-chemistry-measurements.html#awas-cims-qcls-toga"><i class="fa fa-check"></i><b>6.3</b> Variables in Special Data Sets<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="aerosol-particle-measurements.html"><a href="aerosol-particle-measurements.html"><i class="fa fa-check"></i><b>7</b> Aerosol Particle Measurements<span></span></a>
 <ul>
@@ -514,7 +515,7 @@ From <a href="the-state-of-the-atmosphere.html#eq:TaEQ">(4.18)</a>,
 <h2><span class="header-section-number">4.5</span> Humidity<a href="the-state-of-the-atmosphere.html#humidity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="dew-point" class="section level4 unnumbered hasAnchor">
 <h4>Dew/Frost Point (<span class="math inline">º</span>C): DPx, DP_x, DP_DPx, MIRRTMP_DPx<a href="the-state-of-the-atmosphere.html#dew-point" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><em>The mirror temperature measured directly by a dew-point sensor, without correction.</em> The dew point or frost point is measured by either an EG&amp;G Model 137, a General Eastern Model 1011B or a Buck Model 1011C dew-point hygrometer. A status variable BALNC sometimes records the quality of the balance maintaned by the thermoelectric coolers and the target coverage of condensate on the sensing mirrors. Below 0<sup>o</sup>C the instrument is assumed to be responding to the frost point, although occasionally in climbs there is a short transition near the freezing level before the condensate on the mirror of the instrument freezes and there may be a measurement error before the condensate freezes. The measurements are usually made within a housing where the pressure (<span class="math inline"><em>p</em><sub><em>h</em></sub>)</span> may differ from the ambient pressure, so the pressure in the housing affects the measured dew point or frost point. The housing pressure is often adjusted to be near the ambient pressure by appropriate orientation of inlets, and recently the pressure in the housing is measured and a correction is applied, as discussed in the next paragraph.</p>
+<p><em>The mirror temperature measured directly by a dew-point sensor</em> without correction. The dew point or frost point is measured by either an EG&amp;G Model 137, a General Eastern Model 1011B or a Buck Model 1011C dew-point hygrometer. Variables DPx (like DPB) haven’t been used since 2008. A status variable BALNC sometimes records the quality of the balance maintaned by the thermoelectric coolers and the target coverage of condensate on the sensing mirrors. Below 0<sup>o</sup>C the instrument is assumed to be responding to the frost point, although occasionally in climbs there is a short transition near the freezing level before the condensate on the mirror of the instrument freezes and there may be a measurement error before the condensate freezes. The measurements are usually made within a housing where the pressure (<span class="math inline"><em>p</em><sub><em>h</em></sub>)</span> may differ from the ambient pressure, so the pressure in the housing affects the measured dew point or frost point. The housing pressure is often adjusted to be near the ambient pressure by appropriate orientation of inlets, and recently the pressure in the housing is measured and a correction is applied, as discussed in the next paragraph.</p>
 </div>
 <div id="dewpt-corrected" class="section level4 unnumbered hasAnchor">
 <h4>Corrected Dew Point (<span class="math inline">º</span>C): DPXC, DPxC<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a><a href="the-state-of-the-atmosphere.html#dewpt-corrected" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -777,14 +778,13 @@ __________<br />
 <span class="math display">\[Z=\frac{\ln((\mathrm{\{ATX\}}+273.15)\,\mathrm{\{RHO\}}}{1322.3}\]</span><br />
 <span class="math display">\[\mathrm{\{DPxC\}}=\frac{273.0\,Z}{(22.51-Z)}\]</span>
 </p>
-<p>For other instruments that measure vapor density, such as a Lyman-alpha or tunable diode laser hygrometers (including the Vertical Cavity Surface Emitting Laser (VCSEL) hygrometer), a similar conversion is made from vapor density to dew point, as described in the next paragraph.<br /></p>
+<p>For other instruments that measure water vapor density, such as a Lyman-alpha or the UV hygrometer or the tunable diode laser hygrometers (including the Vertical Cavity Surface Emitting Laser (VCSEL) hygrometer), a similar conversion is made from vapor density to dew point, as described in the next paragraph.</p>
 </div>
 <div id="vcsel-dp" class="section level4 unnumbered hasAnchor">
-<h4>Dew Point Determined from the VCSEL Hygrometer (<span class="math inline"><sup>∘</sup></span>C): DP_VXL<a href="the-state-of-the-atmosphere.html#vcsel-dp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<em>The dew point temperature determined from the measured water vapor density from the VCSEL hygrometer.</em> The calculation is as described at the bottom of the box immediately above this paragraph (above the footnote). The water vapor density converted from a molecular density [molecules<span class="math inline">\(\,\)</span>cm<span class="math inline">\(^{-3}\)</span>] to a mass density [g<span class="math inline">\(\,\)</span>m<span class="math inline">\(^{-3}\)</span>] via<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a>
+<h4>Dew Point Determined from the VCSEL or UV Hygrometer (<span class="math inline"><sup>∘</sup></span>C): DP_VXL, DP_UVH<a href="the-state-of-the-atmosphere.html#vcsel-dp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>The dew point temperature</em> determined from the measured water vapor density from the VCSEL or UV hygrometer. The calculation is as described at the bottom of the box immediately above this paragraph (above the footnote). The water vapor density converted from a molecular density [molecules<span class="math inline">\(\,\)</span>cm<span class="math inline">\(^{-3}\)</span>] to a mass density [g<span class="math inline">\(\,\)</span>m<span class="math inline">\(^{-3}\)</span>] via<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a>
 {CONCV_VXL} * <span class="math inline">\(2.9915\times 10^{17}\)</span>
-is used for {RHO}. DP_VXL is given by DPxC on the last line of that algorithm box. See CONCV_VXL below.
-</p>
+is used for {RHO}. DP_VXL is given by DPxC from this equation in that algorithm box: <a href="the-state-of-the-atmosphere.html#eq:DPxC2">(4.29)</a>. See CONCV_VXL and CONCH_UV below.</p>
 </div>
 <div id="mirror-cr2" class="section level4 unnumbered hasAnchor">
 <h4>Frost Point Temperature from the CR2 Cryogenic Hygrometer (<span class="math inline"><sup>∘</sup></span>C): FP_CR2, MIRRORT_CR2<a href="the-state-of-the-atmosphere.html#mirror-cr2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -797,14 +797,13 @@ is used for {RHO}. DP_VXL is given by DPxC on the last line of that algorithm bo
 </p>
 </div>
 <div id="vcsel-uncor" class="section level4 unnumbered hasAnchor">
-<h4>Uncorrected Water Vapor Number Density from the VCSEL Hygrometer (molecules cm<span class="math inline"><sup> − 3</sup></span>): &gt;RAWCONC_VXL<a href="the-state-of-the-atmosphere.html#vcsel-uncor" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<h4>Uncorrected Water Vapor Number Density from the VCSEL Hygrometer (molecules cm<sup>-3</sup>): RAWCONC_VXL<a href="the-state-of-the-atmosphere.html#vcsel-uncor" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <em>The uncorrected water vapor number density reported by the VCSEL hygrometer.</em> This is determined by comparing the measured absorption peak height against a reference spectrum generated using the HITRAN spectral parameters, the ambient temperature and the ambient pressure.<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a>
 </p>
 </div>
 <div id="vcsel-corr" class="section level4 unnumbered hasAnchor">
-<h4>Corrected Water Vapor Concentration from the VCSEL Hygrometer (molecules cm<span class="math inline"><sup> − 3</sup></span>): CONCV_VXL<a href="the-state-of-the-atmosphere.html#vcsel-corr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<em>The corrected water vapor number density produced by the VCSEL hygrometer,</em> after minor corrections for ambient temperature, pressure, laser intensity and water vapor concentration.<span id="punch:4-8" label="punch:4-8">[punch:4-8]</span> For more information on calibration and data processing for this instrument, see the <a href="https://www.eol.ucar.edu/instruments/vertical-cavity-surface-emitting-laser-vcsel-hygrometer">instrument web page</a> and additional documentation there.
-</p>
+<h4>Corrected Water Vapor Concentration from the VCSEL Hygrometer (molecules cm<sup>-3</sup>): CONCV_VXL, CONC_H2O_VXL, CONCV_VXL2<a href="the-state-of-the-atmosphere.html#vcsel-corr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>The corrected water vapor number density produced by the VCSEL hygrometer,</em> after minor corrections for ambient temperature, pressure, laser intensity and water vapor concentration.<span id="punch:4-8" label="punch:4-8">[punch:4-8]</span> For more information on calibration and data processing for this instrument, see the <a href="https://www.eol.ucar.edu/instruments/vertical-cavity-surface-emitting-laser-vcsel-hygrometer">instrument web page</a> and additional documentation there. A new version, VCSEL2, produces CONCV_VXL2. The variable name CONC_H2O_VXL has not been used since 2011.</p>
 </div>
 <div id="uvh-voltage" class="section level4 unnumbered hasAnchor">
 <h4>Voltage Output from the UV Hygrometer (V): XSIGV_UVH<a href="the-state-of-the-atmosphere.html#uvh-voltage" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -812,12 +811,12 @@ is used for {RHO}. DP_VXL is given by DPxC on the last line of that algorithm bo
 </p>
 </div>
 <div id="uvh-n" class="section level4 unnumbered hasAnchor">
-<h4>Water Vapor Number Density from the UV Hygrometer (molecules cm<span class="math inline"><sup> − 3</sup></span>): CONCH_UVH<a href="the-state-of-the-atmosphere.html#uvh-n" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<em>Water vapor number density (or concentration of molecules) measured by the UV Hygrometer.</em> This is the direct measurement from the instrument. Its calculation relies on a bench calibration that fits the water vapor number density to the Beers-Lambert absorption law and corrects for output offsets and the effect of UV absorption by atmospheric constituents other than water vapor. See also the discussion of EW_UVH in the paragraph that immediately follows.
+<h4>Water Vapor Number Density from the UV Hygrometer (molecules cm<sup>-3</sup>): CONCH_UVH<a href="the-state-of-the-atmosphere.html#uvh-n" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<em>Water vapor molecular density</em> (concentration of water molecules) measured by the UV Hygrometer. This is the direct measurement from the instrument. Its calculation relies on a bench calibration that fits the water vapor number density to the Beers-Lambert absorption law and corrects for output offsets and the effect of UV absorption by atmospheric constituents other than water vapor. See also the discussion of EW_UVH in the paragraph that immediately follows.
 </p>
 </div>
 <div id="ewx" class="section level4 unnumbered hasAnchor">
-<h4>Water Vapor Pressure (hPa): EWx, EWX, EW_UVH, EW_VXL, EDPC (obsolete)<a href="the-state-of-the-atmosphere.html#ewx" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<h4>Water Vapor Pressure (hPa): EWx, EWX, EW_UVH, EW_VXL, EDPC (obsolete), EDPUV (obsolete)<a href="the-state-of-the-atmosphere.html#ewx" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The ambient vapor pressure of water,</em> also used in the calculation of several derived variables. It is often obtained from an instrument measuring dew point or water vapor density. In the case where it is derived from a measurement of dew point (DPx), a correction is applied for the enhancement factor that influences dew point or frost point measurements.<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a>
 The formula for obtaining the ambient water vapor pressure as a function of dew point is given in the discussion of DPxC above, Eqs. <a href="the-state-of-the-atmosphere.html#eq:MKw">(4.23)</a> and <a href="the-state-of-the-atmosphere.html#eq:enhance">(4.24)</a>, where the calculation of the variables EWx and EWX are also discussed. EWX (or previously EDPC) is the preferred variable that is selected from among the possibilities {EWx} for subsequent calculation of derived variables.<br />
 <br />
@@ -1202,21 +1201,12 @@ T_{1}=\mathrm{(\{ATX\}}+T_{0})\left\{ \frac{p_{0}}{(\mathrm{\{PSXC\}}-\mathrm{\{
 </div>
 <div id="wind" class="section level2 hasAnchor" number="4.7">
 <h2><span class="header-section-number">4.7</span> Wind<a href="the-state-of-the-atmosphere.html#wind" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>
-<a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a> documents the calculation of wind components, both with respect to the earth (UI, VI, WI, WS and WD) and with respect to the aircraft (UX and VY). In data processing, a separate function (GUSTO in GENPRO, gust.c in NIMBUS) is used to derive these wind components. That function uses the measurements from an Inertial Navigation System (INS) as well as aircraft true <a name=airspeed5>airspeed</a>, aircraft angle of attack, and aircraft sideslip angle. The wind components calculated in GUSTO/gust.c are used to derive the wind direction (WD) and wind speed (WS). Additional variables UIC, VIC, WSC, WDC, UXC, and VYC are also calculated based on the variables VNSC, VEWC discussed in Section <a href="the-state-of-the-aircraft.html#combining-irs-and-gps-measurements">3.4</a>, which combine INS and GPS information to obtain improved measurements of the aircraft motion. Those are usually the highest-quality measurements of wind because the merged INS/GPS variables combine the high-frequency response of the INS with the long-term accuracy of the GPS.
-</p>
-<p>
-There is an extensive discussion of the wind-sensing system and the uncertainties associated with measurements of wind in this <a href="http://dx.doi.org/10.5065/D60G3HJ8">Technical Note</a>. The details contained therein and in Bulletin 23 will not be repeated here, so those documents should be consulted for additional information. There are two exceptions that are discussed in more detail here:
-</p>
-<ol class="incremental">
-<li>
-<p>
-The calculation of vertical wind is described in more detail below for the variables WI and WIC.
-</p>
+<p><a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a> documents the calculation of wind components, both with respect to the earth (UI, VI, WI, WS and WD) and with respect to the aircraft (UX and VY). In data processing, a separate function (GUSTO in GENPRO, gust.c in NIMBUS) is used to derive these wind components. That function uses the measurements from an Inertial Navigation System (INS) as well as aircraft true <a name=airspeed5>airspeed</a>, aircraft angle of attack, and aircraft sideslip angle. The wind components calculated in GUSTO/gust.c are used to derive the wind direction (WD) and wind speed (WS). Additional variables UIC, VIC, WSC, WDC, UXC, and VYC are also calculated based on the variables VNSC, VEWC discussed in Section <a href="the-state-of-the-aircraft.html#combining-irs-and-gps-measurements">3.4</a>, which combine INS and GPS information to obtain improved measurements of the aircraft motion. Those are usually the highest-quality measurements of wind because the merged INS/GPS variables combine the high-frequency response of the INS with the long-term accuracy of the GPS.</p>
+<p>There is an extensive discussion of the wind-sensing system and the uncertainties associated with measurements of wind in this <a href="http://dx.doi.org/10.5065/D60G3HJ8">Technical Note</a>. The details contained therein and in Bulletin 23 will not be repeated here, so those documents should be consulted for additional information. There are two exceptions that are discussed in more detail here:</p>
+<ol style="list-style-type: decimal">
+<li>The calculation of vertical wind is described in more detail below for the variables WI and WIC.<br />
 </li>
-<li>
-<p>
-Because measurements obtained by a GPS receiver are often used, the motion of the GPS receiving antenna relative to the IRU must be considered. Standard processing corrects for the motion of the gust system relative to the IRU arising from aircraft rotation, but a similar correction is needed because the GPS antenna is displaced from the IRU. The displacement is almost entirely along the longitudinal axis of the aircraft, so GPS-measured velocities like GGVNS, GGVEW, and GGVSPD (denoted here <span class="math inline">\(v_n\)</span>, <span class="math inline">\(v_e\)</span>, <span class="math inline">\(v_u\)</span>) need correction as follows to give measurements that apply at the location of the IRU. Then these variables can be used in place of or to complement similar measurements from the IRU in the processing algorithms. The equations are:<br />
+<li>Because measurements obtained by a GPS receiver are often used, the motion of the GPS receiving antenna relative to the IRU must be considered. Standard processing corrects for the motion of the gust system relative to the IRU arising from aircraft rotation, but a similar correction is needed because the GPS antenna is displaced from the IRU. The displacement is almost entirely along the longitudinal axis of the aircraft, so GPS-measured velocities like GGVNS, GGVEW, and GGVSPD (denoted here <span class="math inline">\(v_n\)</span>, <span class="math inline">\(v_e\)</span>, <span class="math inline">\(v_u\)</span>) need correction as follows to give measurements that apply at the location of the IRU. Then these variables can be used in place of or to complement similar measurements from the IRU in the processing algorithms. The equations are:<br />
 <span class="math display" id="eq:deltav">\[\begin{align}\begin{split}
 \delta v_{u} = &amp; -L_{G}\dot{\theta}\notag \\
 \delta v_{e} = &amp; -L_{G}\dot{\psi}\,{\cos\psi}\notag \\
@@ -1224,32 +1214,23 @@ Because measurements obtained by a GPS receiver are often used, the motion of th
 \end{split}
 \tag{4.54}
 \end{align}\]</span><br />
-where <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\psi\)</span> respectively are the pitch and heading angles and <span class="math inline">\(L_G\)</span> is the distance forward along the longitudinal axis from the IRU to the GPS antenna (<span class="math inline">\(−4.30\)</span> m for the GV and <span class="math inline">\(-9.88\)</span> m for the C-130 during and after 2015). The negative signs indicate that the GPS antennas are behind the IRUs. The dots over the attitude-angle symbols represent time derivatives, so for example <span class="math inline">\(\dot{\theta}\)</span> is the rate of change of the pitch angle. All angles are expressed in radians. The correction terms should be added to the GPS-measured velocity components so that they represent the motion of the IRU relative to the Earth. This is done for the vertical wind, beginning in 2017, but for horizontal wind the complementary filter (discussed below) removes high-frequency fluctuations from the GPS-derived measurements so incorporation of these changes would have negligible effect. For more information, see <a href="www/Recommendation161107.pdf">this note</a>.
-</p>
-</li>
+where <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\psi\)</span> respectively are the pitch and heading angles and <span class="math inline">\(L_G\)</span> is the distance forward along the longitudinal axis from the IRU to the GPS antenna (<span class="math inline">\(−4.30\)</span> m for the GV and <span class="math inline">\(-9.88\)</span> m for the C-130 during and after 2015). The negative signs indicate that the GPS antennas are behind the IRUs. The dots over the attitude-angle symbols represent time derivatives, so for example <span class="math inline">\(\dot{\theta}\)</span> is the rate of change of the pitch angle. All angles are expressed in radians. The correction terms should be added to the GPS-measured velocity components so that they represent the motion of the IRU relative to the Earth. This is done for the vertical wind, beginning in 2017, but for horizontal wind the complementary filter (discussed below) removes high-frequency fluctuations from the GPS-derived measurements so incorporation of these changes would have negligible effect. For more information, see <a href="www/Recommendation161107.pdf">this note</a>.</li>
 </ol>
-<p>
-The variables pertaining to the relative wind are described in the next subsection, and the variables characterizing the wind are then described briefly in the last subsection. Some additional detail is included in cases where procedures are not documented in that earlier bulletin.
-</p>
-<!-- <h3 id="relative-wind">Relative Wind</h3> -->
+<p>The variables pertaining to the relative wind are described in the next subsection, and the variables characterizing the wind are then described briefly in the last subsection. Some additional detail is included in cases where procedures are not documented in that earlier bulletin.<br />
+<!-- <h3 id="relative-wind">Relative Wind</h3> --></p>
 <div id="relative-wind" class="section level3 hasAnchor" number="4.7.1">
 <h3><span class="header-section-number">4.7.1</span> Relative Wind<a href="the-state-of-the-atmosphere.html#relative-wind" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>
-Wind is measured by adding two vectors, the measured air motion relative to the aircraft (called the relative wind) and the motion of the aircraft relative to the Earth. The following are the measurements used to determine the relative wind. The motion of the aircraft relative to the ground was discussed in Section <a href="the-state-of-the-aircraft.html#inertial-reference-systems">3.1</a>, and the combination of these two vectors to measure the wind is described in <a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a>.
-</p>
-<p>
-RAF uses the radome<span id="radome gust-sensing system" label="radome gust-sensing system"></span> gust-sensing technique<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a>
-to measure incidence angles of the relative wind (i.e., angles of attack and sideslip). The pressure difference between sensing ports above and below the center line of the radome is used, along with the dynamic pressure measured at a pitot tube and referenced to the static pressure source, to determine the angle of attack. The sideslip angle is determined similarly using the pressure ports on the starboard and port sides of the radome. A Rosemount Model 858AJ gust probe has occasionally been used for specialized measurements. The radome measurements are made by differential pressure sensors located in the nose area of the aircraft and connected to the radome by semi-rigid tubing.
-</p>
+<p>Wind is measured by adding two vectors, the measured air motion relative to the aircraft (called the relative wind) and the motion of the aircraft relative to the Earth. The following are the measurements used to determine the relative wind. The motion of the aircraft relative to the ground was discussed in Section <a href="the-state-of-the-aircraft.html#inertial-reference-systems">3.1</a>, and the combination of these two vectors to measure the wind is described in <a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a>.</p>
+<p>RAF uses the radome<span id="radome gust-sensing system" label="radome gust-sensing system"></span> gust-sensing technique<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a>
+to measure incidence angles of the relative wind (i.e., angles of attack and sideslip). The pressure difference between sensing ports above and below the center line of the radome is used, along with the dynamic pressure measured at a pitot tube and referenced to the static pressure source, to determine the angle of attack. The sideslip angle is determined similarly using the pressure ports on the starboard and port sides of the radome. A Rosemount Model 858AJ gust probe has occasionally been used for specialized measurements. The radome measurements are made by differential pressure sensors located in the nose area of the aircraft and connected to the radome by semi-rigid tubing.</p>
 <div id="mach-number" class="section level4 unnumbered hasAnchor">
 <h4>Mach Number (dimensionless): MACHx, MACHX<a href="the-state-of-the-atmosphere.html#mach-number" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<em>The Mach Number that characterizes the flight speed.</em> The Mach number is defined as the ratio of the flight speed (or the magnitude of the relative wind) to the speed of sound.
-See Eq. <a href="the-state-of-the-atmosphere.html#eq:M2">(4.17)</a> for the equation used. Many relatively old archived data files have instead a variable XMACH2, which is the square of MACHx.
-</p>
+<p><em>The Mach Number that characterizes the flight speed.</em> The Mach number is defined as the ratio of the flight speed (or the magnitude of the relative wind) to the speed of sound.
+See Eq. <a href="the-state-of-the-atmosphere.html#eq:M2">(4.17)</a> for the equation used. Many relatively old archived data files have instead a variable XMACH2, which is the square of MACHx.</p>
 </div>
 <div id="true-airspeed" class="section level4 unnumbered hasAnchor">
-<h4>Aircraft True Airspeed (m/s): TASx, TASxD, TASX<a href="the-state-of-the-atmosphere.html#true-airspeed" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><em>The flight speed of the aircraft relative to the atmosphere.</em> This derived measurement of the flight speed of the aircraft relative to the atmosphere is based on the Mach number calculated from both the dynamic pressure at location x and the static pressure. See the derivation for ATx . The different variables for TASx (TASF, TASR, etc) use different measurements of QCxC in the calculation of Mach number. The variable TASxD is the result of calculations for which the Mach number, air temperature, and true airspeed are determined for dry instead of humid air. See the discussion of <a href="#ATX">ATX</a> for an explanation of how humidity is handled in the calculation of true airspeed.<br /></p>
+<h4>Aircraft True Airspeed (m/s): TASx, TASxD, TASX, TAS_A<a href="the-state-of-the-atmosphere.html#true-airspeed" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>The flight speed of the aircraft relative to the atmosphere.</em> This derived measurement of the flight speed of the aircraft relative to the atmosphere is based on the Mach number calculated from both the dynamic pressure at location x and the static pressure. See the derivation for ATx . The different variables for TASx (TASF, TASR, etc) use different measurements of QCxC in the calculation of Mach number. The variable TASxD is the result of calculations for which the Mach number, air temperature, and true airspeed are determined for dry instead of humid air. See the discussion of <a href="#ATX">ATX</a> for an explanation of how humidity is handled in the calculation of true airspeed. An alternate measure of true airspeed provided directly by the aircraft avionics system is TAS_A; this variable is apparently filtered in the avionic system and therefore is missing some of the high-frequency signal present in TASx from the research data system. The avionics system also provides a variable called CAS_A, which represents “Calibrated Airspeed”. That variable applies calibrations to the “indicated airspeed,” which is determined from the difference between dynamic pressure sensed at a pitot tube and static pressure sensed by static sources on the fuselage. Calibrated airspeed represents the flight speed that, for standard flight conditions of 1013.25 hPa and 15<sup>o</sup>C, would produce the measured pressure difference after calibration for measurement errors.</p>
 <p class="box">
 (see <a href="the-state-of-the-atmosphere.html#eq:M2">(4.17)</a> and <a href="the-state-of-the-atmosphere.html#eq:TaEQ">(4.18)</a> for MACHx and ATX)<br />
 Note dependence of MACHx on choices for QCXC and PSXC<br />
@@ -1269,7 +1250,7 @@ TASx depends on <a href="the-state-of-the-atmosphere.html#qcx">QCXC</a>, <a href
 <p>This derived measurement of true airspeed accounted for deviations of specific heats of moist air from those of dry air. See List, 1971, pp 295, 331-339, and Khelif, et al., 1999. This variable is no longer used because the standard
 calculation of TASX (documented in the preceding paragraph) now uses moist-air
 values of the specific heats and gas constant. The equation previously used for this variable, given by Khelif et al. 1999,<a href="#fn36" class="footnote-ref" id="fnref36"><sup>36</sup></a>
-added a moisture correction to the true airspeed derived for dry air, as follows:<br /></p>
+added a moisture correction to the true airspeed derived for dry air, as follows:</p>
 <p class="box">
 <span class="math inline">\(q\)</span> = specific humidity (dimensionless) = <a href="$sphum">SPHUM</a>/1000.<br />
        for SPHUM expressed in g/kg<br />
@@ -1283,18 +1264,17 @@ added a moisture correction to the true airspeed derived for dry air, as follows
 </p>
 </div>
 <div id="adifr" class="section level4 unnumbered hasAnchor">
-<h4>Attack Angle Differential Pressure (mb): ADIFR<a href="the-state-of-the-atmosphere.html#adifr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<h4>Attack Angle Differential Pressure (hPa): ADIFR<a href="the-state-of-the-atmosphere.html#adifr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The pressure difference between the top and bottom pressure ports of a radome gust-sensing system.</em> This measurement is used to determine the angle of attack; see AKRD below. **** Obsolete variable <u>ADIF</u> is a similar variable used for old gust-boom systems or for Rosemount Model 858AJ flow-angle sensors, and ADIFF has also been used in some archived projects.</p>
 </div>
 <div id="bdifr" class="section level4 unnumbered hasAnchor">
-<h4>Sideslip Angle Differential Pressure (mb): BDIFR<a href="the-state-of-the-atmosphere.html#bdifr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<em>The pressure difference between starboard and port pressure inlets of a radome gust-sensing system.</em> This measurement is used to determine the sideslip angle; see SSRD below. Obsolete variable <u>BDIF</u> is a similar variable used for old gust-boom systems or for Rosemount Model 858AJ flow-angle sensors.
-</p>
+<h4>Sideslip Angle Differential Pressure (hPa): BDIFR<a href="the-state-of-the-atmosphere.html#bdifr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>The pressure difference between starboard and port pressure inlets of a radome gust-sensing system.</em> This measurement is used to determine the sideslip angle; see SSRD below. Obsolete variable <u>BDIF</u> is a similar variable used for old gust-boom systems or for Rosemount Model 858AJ flow-angle sensors.</p>
 </div>
 <div id="akrd" class="section level4 unnumbered hasAnchor">
-<h4>Attack Angle, Radome (<span class="math inline">º</span>): AKRD<a href="the-state-of-the-atmosphere.html#akrd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><em>The angle of attack of the aircraft.</em> This derived measurement represents the angle between the longitudinal axis of the aircraft and the component of the relative wind vector in the plane of port-starboard symmetry of the aircraft. The tangent of the angle of attack is the ratio of the vertical to longitudinal component of the relative wind. Positive values indicate flow moving upward (in the aircraft reference frame) relative to the longitudinal axis. The calculation is based on ADIFR and a measurement of dynamic pressure, and so is the measurement produced by a radome gust-sensing system. Empirical sensitivity coefficients for each aircraft, determined from special flight maneuvers, are used; see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a> and this <a href="http://dx.doi.org/10.5065/D60G3HJ8">Technical Note</a> for more information. The sensitivity coefficients listed below have changed when the radomes were changed or refurbished, so the project documentation should be consulted for the values used in a particular project. For more information on the latest C-130 calibration, see <a href="www/ARISTO-LAMS.pdf">this note</a>.<br />
-Prior to 2017, the procedure was based on the following algorithm:<br /></p>
+<h4>Attack Angle, Radome (º): AKRD<a href="the-state-of-the-atmosphere.html#akrd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>The angle of attack of the aircraft.</em> This derived measurement represents the angle between the longitudinal axis of the aircraft and the component of the relative wind vector in the plane of port-starboard symmetry of the aircraft. The tangent of the angle of attack is the ratio of the vertical to longitudinal component of the relative wind. Positive values indicate flow moving upward (in the aircraft reference frame) relative to the longitudinal axis. The calculation is based on ADIFR and a measurement of dynamic pressure, and so is the measurement produced by a radome gust-sensing system. Empirical sensitivity coefficients for each aircraft, determined from special flight maneuvers, are used; see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a> and this <a href="http://dx.doi.org/10.5065/D60G3HJ8">Technical Note</a> for more information. The sensitivity coefficients listed below have changed when the radomes were changed or refurbished, so the project documentation should be consulted for the values used in a particular project. For more information on the latest C-130 calibration, see <a href="www/ARISTO-LAMS.pdf">this note</a>.</p>
+<p>Prior to 2017, the procedure was based on the following algorithm:</p>
 <p class="box">
 <a href="the-state-of-the-atmosphere.html#adifr">ADIFR</a> = attack differential pressure, radome [hPa]<br />
 <a href="the-state-of-the-atmosphere.html#qcx">QCF</a> = uncorrected dynamic pressure [hPa]<br />
@@ -1314,10 +1294,8 @@ __________<br />
 \tag{4.57}
 \end{equation}\]</span>
 </p>
-<p><br />
-See also <a href="www/AKRDC130.pdf">this memo</a>.<br />
-<br />
-Beginning in 2017, a different strategy was used, as documented in more detail in <a href="www/Recommendation161121.pdf">this memo</a>. Two variables were used to represent the angle of attack, <span class="math inline">\(A\)</span>={ADIFR}/{QCF} and <span class="math inline">\(q\)</span>={QCF}. However, each was filtered into complementary low-pass and high-pass components, with the cutoff frequency at (1/600) Hz, and the separate components were used to represent the separate components of angle of attack according to the following formula:<br /></p>
+<p>See also <a href="www/AKRDC130.pdf">this memo</a>.</p>
+<p>Beginning in 2017, a different strategy was used, as documented in more detail in <a href="www/Recommendation161121.pdf">this memo</a>. Two variables were used to develop empirical representations of the angle of attack, <span class="math inline">\(A\)</span>={ADIFR}/{QCF} and <span class="math inline">\(q\)</span>={QCF}. However, each was filtered into complementary low-pass and high-pass components, with the cutoff frequency at (1/600) Hz, and the separate components were used to represent the separate components of angle of attack according to the following formula:</p>
 <p class="box">
 <a href="the-state-of-the-atmosphere.html#adifr">ADIFR</a> = attack differential pressure, radome [hPa]<br />
 <a href="the-state-of-the-atmosphere.html#qcx">QCF</a> = uncorrected dynamic pressure [hPa]<br />
@@ -1334,19 +1312,15 @@ coefficients determined empirically; typically, for the GV,<br />
 \tag{4.58}
 \end{equation}\]</span>
 </p>
-****
-</p>
 </div>
 <div id="attack" class="section level4 unnumbered hasAnchor">
-<h4>Reference Attack Angle (<span class="math inline">º</span>): ATTACK<a href="the-state-of-the-atmosphere.html#attack" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<span id="punch:4-12" label="punch:4-12">[punch:4-12]</span><br />
-<em>The reference angle of attack used to calculate derived variables.</em> This variable is the reference selected from other measurements of angle of attack in the data set. In most projects, it is equal to AKRD. It is used where attack angle is needed for other derived calculations (e.g., wind measurements).
-</p>
+<h4>Reference Attack Angle (º): ATTACK<a href="the-state-of-the-atmosphere.html#attack" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><span id="punch:4-12" label="punch:4-12">[punch:4-12]</span><br />
+<em>The reference angle of attack used to calculate derived variables.</em> This variable is the reference selected from other measurements of angle of attack in the data set. In most projects, it is equal to AKRD. It is used where attack angle is needed for other derived calculations (e.g., wind measurements).</p>
 </div>
 <div id="ssrd" class="section level4 unnumbered hasAnchor">
-<h4>Sideslip Angle (Differential Pressure) (<span class="math inline">º</span>): SSRD<a href="the-state-of-the-atmosphere.html#ssrd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<em>The angle of sideslip of the aircraft.</em> This derived measurement represents the angle between the longitudinal axis of the aircraft and the projection of the relative wind onto the plane determined by the longitudinal and lateral axes. Positive values indicate airflow from the starboard side. This variable is derived from BDIFR and a dynamic pressure using a sensitivity function that has been determined empirically for each aircraft.<br />
-</p>
+<h4>Sideslip Angle (Differential Pressure) (º): SSRD<a href="the-state-of-the-atmosphere.html#ssrd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>The angle of sideslip of the aircraft.</em> This derived measurement represents the angle between the longitudinal axis of the aircraft and the projection of the relative wind onto the plane determined by the longitudinal and lateral axes. Positive values indicate airflow from the starboard side. This variable is derived from BDIFR and a dynamic pressure using a sensitivity function that has been determined empirically for each aircraft.</p>
 <p class="box">
 <a href="the-state-of-the-atmosphere.html#bdifr">BDIFR</a> = differential pressure between sideslip pressure ports, radome
 [hPa]<br />
@@ -1370,9 +1344,8 @@ May 2022.
 </p>
 </div>
 <div id="sslip" class="section level4 unnumbered hasAnchor">
-<h4>Reference Sideslip Angle (<span class="math inline">º</span>): SSLIP<a href="the-state-of-the-atmosphere.html#sslip" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<em>The reference sideslip angle used to calculate derived variables</em>. This variable is the reference selected from other measurements of sideslip angle in the data set. In most projects, it is equal to SSRD. It is used where sideslip angle is needed for other derived calculations (e.g., wind measurements).
-</p>
+<h4>Reference Sideslip Angle (º): SSLIP<a href="the-state-of-the-atmosphere.html#sslip" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>The reference sideslip angle used to calculate derived variables</em>. This variable is the reference selected from other measurements of sideslip angle in the data set. In most projects, it is equal to SSRD. It is used where sideslip angle is needed for other derived calculations (e.g., wind measurements).</p>
 <!-- <h3 id="wind-components-and-the-wind-vector">Wind Components and the Wind Vector</h3> -->
 </div>
 </div>

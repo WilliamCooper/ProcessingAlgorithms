@@ -19,17 +19,17 @@ The instruments are described in the “Radiation” section on <a href="https:/
 
 #### Pyrgeometer Output (V): IRxV {-#irxv}
 
-<em>The voltage representing long-wave irradiance,</em> from a pyrgeometer manufactured by Kipp &amp; Zonen. The CGR4 model used on the GV and C-130 includes a meniscus dome that provides a 180º field of view with negligible directional response error over the spectral range of 4.2 to 45 m. The thermal stability of the dome construction and coupling to the instrument body eliminates the need for dome temperature measurements or dome shading. It is calibrated at the Naval Research Lab over a range of temperatures encountered during flight according to procedures specified by Bucholtz et al. (2008).^[Bucholtz , Anthony, Robert T. Bluth , Ben Kelly, Scott Taylor, Keir Batson, Anthony W. Sarto , Tim P. Tooman , Robert F. McCoy, 2008: The Stabilized Radiometer Platform (STRAP) — An Actively Stabilized Horizontally Level Platform for Improved Aircraft Irradiance Measurements. <em>J. Atmos. Oceanic Technol.</em> , <strong>25,</strong> 2161 – 2175.]
+*The voltage representing long-wave irradiance,* from a pyrgeometer manufactured by Kipp &amp; Zonen. The CGR4 model used on the GV and C-130 includes a meniscus dome that provides a 180º field of view with negligible directional response error over the spectral range of 4.2 to 45 $\mu\mathrm{m}$. The thermal stability of the dome construction and coupling to the instrument body eliminates the need for dome temperature measurements or dome shading. It is calibrated at the Naval Research Lab over a range of temperatures encountered during flight according to procedures specified by Bucholtz et al. (2008).^[Bucholtz , Anthony, Robert T. Bluth , Ben Kelly, Scott Taylor, Keir Batson, Anthony W. Sarto , Tim P. Tooman , Robert F. McCoy, 2008: The Stabilized Radiometer Platform (STRAP) — An Actively Stabilized Horizontally Level Platform for Improved Aircraft Irradiance Measurements. *J. Atmos. Oceanic Technol.,^ **25,** 2161 – 2175.]
 The pyrgeometers are usually flown in pairs, one looking upward and one looking downward. The letter ’x’ denotes location on either bottom (B) or top (T) of the aircraft. The primary derived variable from this instrument is IRxC, below.
 
-#### Pyrgeometer Housing Temperature (<span class="math inline"><em></em><sup>∘</sup></span>C): IRxHT {-#irxht}
+#### Pyrgeometer Housing Temperature (^∘^C): IRxHT {-#irxht}
 
-<em>The temperature of the modified pyrgeometer housing,</em> measured by a platinum resistance temperature sensor. The calibrated temperature (IRxHT) is derived from the raw signal (IRxHTV) as described below:<br />
+*The temperature of the modified pyrgeometer housing,* measured by a platinum resistance temperature sensor. The calibrated temperature (IRxHT) is derived from the raw signal (IRxHTV) as described below:  
 
 #### Calibrated Infrared Irradiance (W m^-2^): IRxC {-#irxc}
 
-<em>The infrared irradiance measured by a Kipp &amp; Zonen CGR4 instrument,</em>^[Prior to 2009, IRx and IRxC were used to denote measurements from Eppley pyrgeometers. Processing methods for these obsolete variables are described in Section\ \@ref(obsolete-variables).]
-<em></em> after application of a calibration function. The relationship between IRxV (V) and IRxC (W m<span class="math inline"><em></em><sup> − 2</sup></span>) is determined by a calibration in which the CGR4 views a NIST-referenced source over a range of sensor temperatures controlled by a cold bath. The processing algorithm is described in the following box:<br />
+*The infrared irradiance* measured by a Kipp &amp; Zonen CGR4 instrument,^[Prior to 2009, IRx and IRxC were used to denote measurements from Eppley pyrgeometers. Processing methods for these obsolete variables are described in Section\ \@ref(obsolete-variables).]
+<em></em> after application of a calibration function. (The uncorrected measurements are often present also, with names IRx.) The relationship between IRxV (V) and IRxC (W m^-2^) is determined by a calibration in which the CGR4 views a NIST-referenced source over a range of sensor temperatures controlled by a cold bath. The processing algorithm is described in the following box:  
 ```{r child='IRxHTbox.Rmd'}
 ```
 
