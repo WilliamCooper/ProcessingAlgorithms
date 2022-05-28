@@ -122,9 +122,17 @@ The raw output of the IRU pitch rate gyro. Positive values indicate the nose mov
 
 The raw output of the IRU roll rate gyro. Positive values indicate starboard wing moving down and refer to rotation about the aircraft center line. The sample rate is 50 Hz with a resolution of 0.0039<span class="math inline">º</span>/s.  
 
-#### Raw Body Yaw Rate (<span class="math inline">º</span>/s): BYAWR {#byawr .unnumbered}
+#### Raw Body Yaw Rate (º/s): BYAWR {#byawr .unnumbered}
 
-The raw output of the IRU yaw rate. Positive values represent the nose turning to the starboard and refer to rotation about the aircraft’s vertical axis. The sample rate is 50 Hz with a resolution of 0.0039<span class="math inline">º</span>/s.  
+The raw output of the IRU yaw rate. Positive values represent the nose turning to the starboard and refer to rotation about the aircraft’s vertical axis. The sample rate is 50 Hz with a resolution of 0.0039º/s.  
+
+#### Track Angle Rate (º/s): TKAR {-#tkar}
+
+*The rate of change of the track angle,* with positive representing a right turn.  
+
+#### Weight-on-Wheels (1 indicates on-the-ground): WOW_A {-#wow}  
+
+*An indicator of weight-on-wheels* that can be useful for determining the periods when the aircraft is in flight (and WOW_A is zero).  
 
 ## Global Positioning Systems {#global-positioning-systems}
 
@@ -189,10 +197,10 @@ where <span class="math inline">*L*<sub>*G*</sub> =  − 4.30</span> m 
 *The aircraft geopotential altitude above mean sea level.* If <span class="math inline">*g*(*z*, *λ*)</span> is the acceleration of gravity as represented by the formula in the Table of Constants in Section \@ref(constants-and-symbols), then the formula used for calculation of GEOPTH is obtained by integrating that formula from the reference surface for MSL (the geoid, <span class="math inline">*Δ*</span> above the WGS84 reference ellipse) to the geometric altitude <span class="math inline">*H*</span>, which is <span class="math inline">*H* + *Δ*</span> above the reference ellipse. The result is normally close (within about 0.5 m) to that obtained with <span class="math inline">*Δ* = 0</span>. There are additional details in <a href="www/RecommendationReGEOPHT.pdf">this memo</a>.<br />
 ```{r child='GEOPTbox.Rmd'}
 ```
+  
+#### GPS Aircraft Track Angle (º): GGTRK, TKAT, TKAT_A, TKAT_G, GTKAT_A  {#ggtrk .unnumbered}
 
-#### GPS Aircraft Track Angle (º): GGTRK, TKAT_G, GTKAT_A  {#ggtrk .unnumbered}
-
-*The direction of the aircraft track (degrees clockwise from true north)* as measured by a data-system global positioning system (GGTRK) or an avionics-system GPS (TKAT_G or GTKET_A).  
+*The direction of the aircraft track (degrees clockwise from true north)* as measured by a data-system global positioning system (GGTRK), a data-system INS (TKAT), or an avionics-system GPS (TKAT_A, TKAT_G or GTKET_A). Occasionally a variable TKAM from the data-system INS is also recorded; that variable represents the direction of the aircraft track in magnetic-north coordinates.   
 
 #### GPS Height of the Geoid (m): GGEOIDHT {#ggeoidht .unnumbered}
 
@@ -230,13 +238,13 @@ The status of the GPS receiver. A value of 1 indicates that the receiver is oper
 
 *The distance to the surface below the aircraft, measured by a radar altimeter.* There are two outputs from an APN-159 radar altimeter, one with coarse resolution (CHGME) and one with fine resolution (HGME). Both raw outputs cycle through the range 0-360 degrees, where one cycle corresponds to 4,000 feet for HGME and to 100,000 feet for CHGME. To resolve the ambiguity arising from these cycles, 4,000-foot increments are added to HGME to maintain agreement with CHGME. This preserves the fine resolution of HGME (1.86 m) throughout the altitude range of the APN-159.  
 
-#### Geometric Radar Altitude (Extended Range) APN-232 (m): HGM232 {#hgm-232 .unnumbered}
+#### Geometric Radar Altitude (Extended Range) APN-232 (m): RALT, HGM232 {#hgm-232 .unnumbered}
 
 *Altitude above the ground* as measured by an APN-232 <a name=radar-altimeter>radar altimeter</a>.  
 
 #### Height Above Terrain (m): ALTG {#altg .unnumbered}
 
-*The aircraft altitude above the Earth’s surface* as represented by the next variable. If GGALT is the altitude above mean sea level, ALTG=GGALT<span class="math inline">−</span>SFC.  
+*The aircraft altitude above the Earth’s surface* as represented by the next variable. If GGALT is the altitude above mean sea level, ALTG=GGALT−SFC.  
  
 #### Height of the Earth’s Surface (m MSL): SFC {#sfc .unnumbered}
 
@@ -246,9 +254,9 @@ The status of the GPS receiver. A value of 1 indicates that the receiver is oper
 
 *The aircraft altitude obtained from the twice-integrated IRU acceleration (ACINS), pressure-adjusted to obtain long-term agreement with PALT.* Note that this variable has mixed character, producing short-term variations that accurately track the inertial system changes but with adjustment to the pressure altitude, which is not a true altitude. The variable is not appropriate for estimates of true altitude, but proves useful in the updating algorithm used with the LTN-51 INS for vertical wind. See the discussion of WP3. This variable is now obsolete.  
 
-#### ISA Pressure Altitude (m): PALT {#palt .unnumbered}
+#### ISA Pressure Altitude (m): PALT, (PALTF) {#palt .unnumbered}
 
-*The geopotential altitude in the International Standard Atmosphere where the pressure is equal to the reference barometric (ambient) pressure (PSXC).*^[See “U.S. Standard Atmosphere, 1976”, NASA-TM-A-74335, available for download at <a href="http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19770009539_1977009539.pdf">this URL</a>.]
+*The geopotential altitude in the International Standard Atmosphere where the pressure is equal to the reference barometric (ambient) pressure (PSXC).*^[See “U.S. Standard Atmosphere, 1976”, NASA-TM-A-74335, available for download at <a href="http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19770009539_1977009539.pdf">this URL</a>.] PALTF is the corresponding variable expressed in units of feet. 
 The pressure altitude is best interpreted as a variable equivalent to the measured pressure, not as a geometric altitude. In the following description of the algorithm, some constants (identified by the symbol <span class="math inline"><sup>‡</sup></span>) are specified as part of the ISA and so should not be “improved” to more modern values such as those given in the table of constants in Section \@ref(constants-and-symbols) (e.g., <span class="math inline">*R*<sub>0</sub><sup>‡</sup>).</span>^[Prior to and including some projects in 2010, processing used slightly different coefficients: for aircraft other than the GV, <span class="math inline">*T*<sub>0</sub>/*λ*</span> was represented by -43308.83, the reference pressure <span class="math inline">*p*<sub>0</sub></span> was taken to be 1013.246, and the exponent <span class="math inline">*x*</span> was represented numerically by 0.190284. For the GV, the value of <span class="math inline">*T*<sub>0</sub>/*λ*</span> was taken to be 44308.0, the transition pressure <span class="math inline">*p*<sub>*T*</sub></span> was 226.1551 hPa, <span class="math inline">*x*</span> = 0.190284, and coefficient <span class="math inline">$\frac{R_{0}^{\prime}T_{T}}{gM_{d}}$</span> was taken to be 6340.70 m instead of 6341.620 m as obtained below. The difference between these older values and the ones recommended below is everywhere less than 10 m and so is small compared to the expected uncertainty in pressure measurements, because 1 hPa change in pressure leads to a change in pressure altitude that varies from about 8–40 m over the altitude range of the GV.]
 A note at <a href="www/PressureAltitude.pdf">this link</a> describes the pressure altitude in more detail and documents the change that was made in November 2010.<br />
 ```{r child = 'PALTbox.Rmd'}

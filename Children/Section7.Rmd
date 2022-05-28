@@ -7,7 +7,7 @@
 
 RAF uses two modified TSI, Inc. [condensation nucleus counters](http://www.eol.ucar.edu/instruments/condensation-nucleus-counter-water-or-butanol) to measure the total concentration of fine or ultrafine particles in the atmosphere, a 3760A using n-butyl alcohol and a water-based 3786 WCN (water condensation nucleus) counter. Both are sensitive to particles in the approximate diameter range from $0.010–3\,\mu\mathrm{m}$.  
 
-#### CN Counter Inlet Pressure (hPa): PCN {-#pcn}
+#### CN Counter Inlet Pressure (hPa): PCN, PACN {-#pcn}
 
 *The absolute pressure inside the inlet tube of the instrument.* It as measured by a Heise Model 623 pressure sensor for the 3760A, and internally by the 3786 WCN. The measurement is used to convert the measured mass flow (FCN or XICN) to volumetric flow and to convert measured particle concentration to equivalent ambient concentration.  
 
@@ -54,15 +54,15 @@ For size-resolved measurements of the concentration of aerosol particles, RAF de
 
 *The pressure internal to the UHSAS instrument.* This is an analog measurement with calibration coefficients as recorded in the attributes for the variable.<span id="punch:7-2" label="punch:7-2">[punch:7-2]</span>  
 
-#### Raw and Corrected Sample Flow Rate (cm^3^s^-1^): USMPFLW or PFLW; USFLWC or PFLWC {-#pflw}
+#### Measured and Corrected Sample Flow Rates (units, USMPFLW and PFLW: cm^3^min^-1^; UFLWC and PFLWC: ambient cm^3^s^-1^): USMPFLW, PFLW, UFLWC, PFLWC  {-#pflw}
 
-Unlike the other 1-d probes, both UHSAS and PCASP have internal pumps so their sample volumes are determined from the measured flows and do not depend on true air speed. The UHSAS measures volumetric flow directly, and it is adjusted to ambient conditions for the calculation of ambient concentration. The PCASP returns a mass flow referenced to standard conditions, and this also is converted to equivalent ambient volumetric flow.  
+Unlike the other 1-d probes, both UHSAS and PCASP have internal pumps so their sample volumes are determined from the measured flows and do not depend on true air speed. The UHSAS measures volumetric flow directly, as USMPFLW, and it is adjusted to ambient conditions as UFLWC for the calculation of ambient concentration. The PCASP returns a mass flow referenced to standard conditions (PFLW) and this also is converted to equivalent ambient volumetric flow (PFLWC).  
 ```{r child='PFLWCbox.Rmd'}
 ```
 
 #### Total particle counts per sample interval, UHSAS or PCASP: TCNTU, TCNTP {-#tcntu-tcntp}
 
-*The total particle counts in each sample interval* for, respectively, the UHSAS and PCASP instruments. These values are the sum of counts in all cells of the spectrometers, as represented in the vector variables CUHSAS or CS200. See the discussion of these variables in Sect.\ \@ref(sensors-1-D-probes).  
+*The total particle counts in each sample interval* for, respectively, the UHSAS and PCASP instruments. These values are the sum of counts in all cells of the spectrometers, as represented in the vector variables AUHSAS or AS200. See the [discussion of these variables](./cloud-physics-variables.html#tcnt) in Sect.\ \@ref(sensors-1-D-probes). The UHSAS also provided a total count, UACC ("UHSAS Accumulation"). 
 
 #### Concentration, sum over all channels (cm^-3^s^-1^): CONCU, CONCP, CONCU100, CONCU500 {-#concu-concp}
 

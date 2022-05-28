@@ -242,8 +242,12 @@ These variables are calculated from UI and VI, the east and north components of 
 <p>AKFXx and SSFXx are the respective angles of attack and sideslip computed from AFIXx or BFIXx and QCx (either boom or gust dynamic pressure). An empirically derived function, HSSATK, is used to determine the attack pr sideslip angle based on wind tunnel test data.</p>
 </div>
 <div id="qcb" class="section level4 unnumbered hasAnchor">
-<h4>Dynamic Pressure (Boom or Gust Probe) (mb): QCB or QCBC; QCG or QCGC<a href="obsolete-variables.html#qcb" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<h4>Dynamic Pressure (Boom or Gust Probe) (hPa): QCB or QCBC; QCG or QCGC<a href="obsolete-variables.html#qcb" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>These variables, measured by a differential pressure gauge, record the difference between a pitot (total) pressure and a static pressure. The QCBC and QCGC values are corrected for local flow-field distortion. The boom and gust probe measurements referred to the same aircraft structure. The different designations used for those measurements specified the transducer used and its location. In the gust probe dynamic pressure measurement (QCG), a Rosemount Model 1332 differential pressure transducer was located closer to the sensor in the gust probe itself, whereas in the boom measurement (QCB), a Rosemount Model 1221 pressure transducer was typically located in the aircraft nose.</p>
+</div>
+<div id="aqratio" class="section level4 unnumbered hasAnchor">
+<h4>Pressure Ratio Used to Correct Dynamic and Static Pressure (hPa): AQRATIO<a href="obsolete-variables.html#aqratio" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>An intermediate variable used in empirical formulas represented corrections to the measured static and dynamic pressure. This variable has not been used since 2014 and is a remnant in later project archives.</p>
 </div>
 <div id="atc" class="section level4 unnumbered hasAnchor">
 <h4>Ambient Temperature (<span class="math inline"><em></em><sup>∘</sup><em>C</em></span>): ATC<a href="obsolete-variables.html#atc" class="anchor-section" aria-label="Anchor link to header"></a></h4>

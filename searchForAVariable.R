@@ -19,6 +19,31 @@ VarSearch <- 'MHDG3'  # variable or pattern to find
 VarSearch <- 'MRLH'  # variable or pattern to find
 VarSearch <- 'NO_ACD'  # variable or pattern to find
 # VarSearch <- 'XNOCAL'  # variable or pattern to find
+VarSearch <- 'O3_ACD'  # variable or pattern to find
+VarSearch <- 'O3MR'  # variable or pattern to find
+VarSearch <- 'PDRY'  # variable or pattern to find
+VarSearch <- 'PSTRB'  # variable or pattern to find
+VarSearch <- 'PT_A'  # variable or pattern to find
+VarSearch <- 'PVOL'  # variable or pattern to find
+VarSearch <- 'RALT'  # variable or pattern to find
+VarSearch <- 'REFFF2DC'  # variable or pattern to find
+VarSearch <- 'REJAT'  # variable or pattern to find
+VarSearch <- 'RHOD'  # variable or pattern to find
+VarSearch <- 'SWB'  # variable or pattern to find
+VarSearch <- 'AT*D'  # variable or pattern to find
+VarSearch <- 'AQRATIO'  # variable or pattern to find
+VarSearch <- 'AT.H'  # variable or pattern to find
+VarSearch <- 'TKE'  # variable or pattern to find
+VarSearch <- 'TSURF'  # variable or pattern to find
+VarSearch <- 'UACC'  # variable or pattern to find
+VarSearch <- 'UFLW'  # variable or pattern to find
+VarSearch <- 'USFLW'  # variable or pattern to find
+VarSearch <- 'UVT'  # variable or pattern to find
+VarSearch <- 'VISHB'  # variable or pattern to find
+VarSearch <- 'VMR_VXL'  # variable or pattern to find
+VarSearch <- 'XCO_AL'  # variable or pattern to find
+VarSearch <- 'Gerber'  # variable or pattern to find
+VarSearch <- 'HONO'  # variable or pattern to find
 PDirs <- list.dirs(path='/scr/raf/Prod_Data', recursive = FALSE)
 PDirs <- list.dirs(path='/Data/Prod_Data', recursive = FALSE)
 Dirs <- list.dirs(path=DataDirectory(), recursive = FALSE)
@@ -94,6 +119,10 @@ for (D in Dirs) {
     # if (any(VarSearch == VS$Variables)) {
       print (sprintf ('search matches in %s file %s from %s', D, F, VS$End))
       system(sprintf('ncdump -h %s/%s |grep %s', D, F, VarSearch))
+    }
+    if (any(grepl(VarSearch, VS$LongNames))) {
+      print (sprintf ('search matches longname in %s file %s from %s', D, F, VS$End))
+      system(sprintf('ncdump -h %s/%s |grep %s', D, F, VarSearch))    
     }
   }
 }

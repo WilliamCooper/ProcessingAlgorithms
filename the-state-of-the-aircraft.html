@@ -183,7 +183,7 @@ after 6 h of flight. Values are provided by the INS at a frequency of 10 Hz.</p>
 <h4>Aircraft True Heading (<span class="math inline">\(^{\circ}\)</span>): THDG<a href="the-state-of-the-aircraft.html#thdg" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The azimuthal angle between the center-line of the aircraft (pointing ahead, toward the nose) and a line of meridian.</em> This azimuthal angle is measured in a polar coordinate system oriented relative to the Earth with polar axis upward and azimuthal angle measured relative to true north. The heading thus indicates the orientation of the aircraft, not necessarily the direction in which the aircraft is traveling. The resolution is 0.00017<span class="math inline">\(^{\circ}\)</span>
 and the uncertainty is quoted by the manufacturer as 0.2<span class="math inline">\(^{\circ}\)</span>
-after 6 h of flight. Values are provided by the INS at a frequency of 25 Hz. “True” distinguishes the heading from the magnetic heading, the heading that would be measured by a magnetic compass. For more information on the coordinate system used, see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a>.<span id="punch3.2" label="punch3.2">[punch3.2]</span></p>
+after 6 h of flight. Values are provided by the INS at a frequency of 25 Hz. “True” distinguishes the heading from the magnetic heading, the heading that would be measured by a magnetic compass. (The IRS also provides a variable MHDG which gives the magnetic heading in degrees.) For more information on the coordinate system used, see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8152">RAF Bulletin 23</a>.<span id="punch3.2" label="punch3.2">[punch3.2]</span></p>
 </div>
 <div id="pitch" class="section level4 unnumbered hasAnchor">
 <h4>Aircraft Pitch Attitude Angle (<span class="math inline">\(^{\circ}\)</span>): PITCH<a href="the-state-of-the-aircraft.html#pitch" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -385,8 +385,16 @@ result.
 <p>The raw output of the IRU roll rate gyro. Positive values indicate starboard wing moving down and refer to rotation about the aircraft center line. The sample rate is 50 Hz with a resolution of 0.0039<span class="math inline">º</span>/s.</p>
 </div>
 <div id="byawr" class="section level4 unnumbered hasAnchor">
-<h4>Raw Body Yaw Rate (<span class="math inline">º</span>/s): BYAWR<a href="the-state-of-the-aircraft.html#byawr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>The raw output of the IRU yaw rate. Positive values represent the nose turning to the starboard and refer to rotation about the aircraft’s vertical axis. The sample rate is 50 Hz with a resolution of 0.0039<span class="math inline">º</span>/s.</p>
+<h4>Raw Body Yaw Rate (º/s): BYAWR<a href="the-state-of-the-aircraft.html#byawr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The raw output of the IRU yaw rate. Positive values represent the nose turning to the starboard and refer to rotation about the aircraft’s vertical axis. The sample rate is 50 Hz with a resolution of 0.0039º/s.</p>
+</div>
+<div id="tkar" class="section level4 unnumbered hasAnchor">
+<h4>Track Angle Rate (º/s): TKAR<a href="the-state-of-the-aircraft.html#tkar" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>The rate of change of the track angle,</em> with positive representing a right turn.</p>
+</div>
+<div id="wow" class="section level4 unnumbered hasAnchor">
+<h4>Weight-on-Wheels (1 indicates on-the-ground): WOW_A<a href="the-state-of-the-aircraft.html#wow" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>An indicator of weight-on-wheels</em> that can be useful for determining the periods when the aircraft is in flight (and WOW_A is zero).</p>
 </div>
 </div>
 </div>
@@ -399,13 +407,12 @@ The accuracy of velocity measurements is 0.03 m/s RMS for all axes. All variable
 Likewise, velocity measurements are within 0.2 m/s for all axes. Measurement resolution is that of 4-byte IEEE format (about 6 significant digits). All variables were provided by the Trimble receivers at 1 Hz.</p>
 <p>A special correction is needed for variables GGVEW, GGVNS, and GGVSPD, which measure the motion <em>at the GPS antenna</em> relative to the Earth. The conventional wind calculation addresses the difference between the motion at the radome (where the relative wind is measured) and the INS (where variables VEW, VNS, VSPD are measured) arising from rotation of the aircraft. However, if GGVSPD is used instead of VSPD for vertical wind or GGVEW and GGVNS are used (perhaps via the complementary filter) for the horizontal wind, an additional correction is needed for the displacement between the GPS antenna and the INS receiver. On the GV, this distance is -4.30 m. A correction for aircraft rotation is therefore applied to GGVSPD, as described below.</p>
 <div id="gglat" class="section level4 unnumbered hasAnchor">
-<h4>GPS Latitude (<span class="math inline">º</span>): GGLAT, LAT_G; also formerly GLAT<a href="the-state-of-the-aircraft.html#gglat" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<em>The aircraft latitude measured by a global positioning system.</em> Positive values are north of the equator; negative values are south. These variables are recorded in netCDF files as single-precision values. GGLAT is provided by the data-system GPS; LAT_G and LATF_G are from the avionics system GPS. LATF_G is a fine-resolution measurement that requires special processing.
-</p>
+<h4>GPS Latitude (<span class="math inline">º</span>): GGLAT, LAT_G, LAT_A, LATF_G, LATF_A; also formerly GLAT<a href="the-state-of-the-aircraft.html#gglat" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>The aircraft latitude measured by a global positioning system.</em> Positive values are north of the equator; negative values are south. These variables are recorded in netCDF files as single-precision values. GGLAT is provided by the data-system GPS; LAT_G and LAT_A are from the avionics system GPS. LATF_A and LATF_G are fine-resolution measurements from the avionics system that meet special requirements form GPS navigation.</p>
 </div>
 <div id="gglon" class="section level4 unnumbered hasAnchor">
-<h4>GPS Longitude (<span class="math inline">º</span>): GGLON, LON_G; also formerly GLON<a href="the-state-of-the-aircraft.html#gglon" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><em>The aircraft longitude measured by a global positioning system.</em> Positive values are east of the prime meridian; negative are west. GGLON is provided by the (or a) data-system GPS; LON_G and LONF_G are from the avionics system GPS. LONF_G is a fine-resolution measurement that requires special processing. <span id="punch:3-12" label="punch:3-12">[punch:3-12]</span></p>
+<h4>GPS Longitude (<span class="math inline">º</span>): GGLON, LON_G, LON_A, LONF_G, LONF_A; also formerly GLON<a href="the-state-of-the-aircraft.html#gglon" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>The aircraft longitude measured by a global positioning system.</em> Positive values are east of the prime meridian; negative are west. GGLON is provided by the (or a) data-system GPS; LON_G and LON_A are from the avionics system GPS. LONF_G and LONF_A are fine-resolution measurements from the avionics system that meet special requirements form GPS navigation. <span id="punch:3-12" label="punch:3-12">[punch:3-12]</span></p>
 </div>
 <div id="ggspd" class="section level4 unnumbered hasAnchor">
 <h4>GPS Ground Speed (m/s): GGSPD, GSF_G, GSPD_A<a href="the-state-of-the-aircraft.html#ggspd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -469,8 +476,8 @@ in Sect. <a href="introduction.html#constants-and-symbols">1.3</a><br />
 </p>
 </div>
 <div id="ggtrk" class="section level4 unnumbered hasAnchor">
-<h4>GPS Aircraft Track Angle (º): GGTRK, TKAT_G, GTKAT_A<a href="the-state-of-the-aircraft.html#ggtrk" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><em>The direction of the aircraft track (degrees clockwise from true north)</em> as measured by a data-system global positioning system (GGTRK) or an avionics-system GPS (TKAT_G or GTKET_A).</p>
+<h4>GPS Aircraft Track Angle (º): GGTRK, TKAT, TKAT_A, TKAT_G, GTKAT_A<a href="the-state-of-the-aircraft.html#ggtrk" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>The direction of the aircraft track (degrees clockwise from true north)</em> as measured by a data-system global positioning system (GGTRK), a data-system INS (TKAT), or an avionics-system GPS (TKAT_A, TKAT_G or GTKET_A). Occasionally a variable TKAM from the data-system INS is also recorded; that variable represents the direction of the aircraft track in magnetic-north coordinates.</p>
 </div>
 <div id="ggeoidht" class="section level4 unnumbered hasAnchor">
 <h4>GPS Height of the Geoid (m): GGEOIDHT<a href="the-state-of-the-aircraft.html#ggeoidht" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -557,12 +564,12 @@ Fully locked-in OmniSTAR XP, usually starting after about 20 minutes of tracking
 <p><em>The distance to the surface below the aircraft, measured by a radar altimeter.</em> There are two outputs from an APN-159 radar altimeter, one with coarse resolution (CHGME) and one with fine resolution (HGME). Both raw outputs cycle through the range 0-360 degrees, where one cycle corresponds to 4,000 feet for HGME and to 100,000 feet for CHGME. To resolve the ambiguity arising from these cycles, 4,000-foot increments are added to HGME to maintain agreement with CHGME. This preserves the fine resolution of HGME (1.86 m) throughout the altitude range of the APN-159.</p>
 </div>
 <div id="hgm-232" class="section level4 unnumbered hasAnchor">
-<h4>Geometric Radar Altitude (Extended Range) APN-232 (m): HGM232<a href="the-state-of-the-aircraft.html#hgm-232" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<h4>Geometric Radar Altitude (Extended Range) APN-232 (m): RALT, HGM232<a href="the-state-of-the-aircraft.html#hgm-232" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>Altitude above the ground</em> as measured by an APN-232 <a name=radar-altimeter>radar altimeter</a>.</p>
 </div>
 <div id="altg" class="section level4 unnumbered hasAnchor">
 <h4>Height Above Terrain (m): ALTG<a href="the-state-of-the-aircraft.html#altg" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><em>The aircraft altitude above the Earth’s surface</em> as represented by the next variable. If GGALT is the altitude above mean sea level, ALTG=GGALT<span class="math inline">−</span>SFC.</p>
+<p><em>The aircraft altitude above the Earth’s surface</em> as represented by the next variable. If GGALT is the altitude above mean sea level, ALTG=GGALT−SFC.</p>
 </div>
 <div id="sfc" class="section level4 unnumbered hasAnchor">
 <h4>Height of the Earth’s Surface (m MSL): SFC<a href="the-state-of-the-aircraft.html#sfc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -573,8 +580,8 @@ Fully locked-in OmniSTAR XP, usually starting after about 20 minutes of tracking
 <p><em>The aircraft altitude obtained from the twice-integrated IRU acceleration (ACINS), pressure-adjusted to obtain long-term agreement with PALT.</em> Note that this variable has mixed character, producing short-term variations that accurately track the inertial system changes but with adjustment to the pressure altitude, which is not a true altitude. The variable is not appropriate for estimates of true altitude, but proves useful in the updating algorithm used with the LTN-51 INS for vertical wind. See the discussion of WP3. This variable is now obsolete.</p>
 </div>
 <div id="palt" class="section level4 unnumbered hasAnchor">
-<h4>ISA Pressure Altitude (m): PALT<a href="the-state-of-the-aircraft.html#palt" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><em>The geopotential altitude in the International Standard Atmosphere where the pressure is equal to the reference barometric (ambient) pressure (PSXC).</em><a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>
+<h4>ISA Pressure Altitude (m): PALT, (PALTF)<a href="the-state-of-the-aircraft.html#palt" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><em>The geopotential altitude in the International Standard Atmosphere where the pressure is equal to the reference barometric (ambient) pressure (PSXC).</em><a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a> PALTF is the corresponding variable expressed in units of feet.
 The pressure altitude is best interpreted as a variable equivalent to the measured pressure, not as a geometric altitude. In the following description of the algorithm, some constants (identified by the symbol <span class="math inline"><sup>‡</sup></span>) are specified as part of the ISA and so should not be “improved” to more modern values such as those given in the table of constants in Section <a href="introduction.html#constants-and-symbols">1.3</a> (e.g., <span class="math inline"><em>R</em><sub>0</sub><sup>‡</sup>).</span><a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a>
 A note at <a href="www/PressureAltitude.pdf">this link</a> describes the pressure altitude in more detail and documents the change that was made in November 2010.<br /></p>
 <style>

@@ -10,24 +10,24 @@ library(kableExtra)
 
 ## Measurements of Liquid Water Content {#LWC}
 
-#### Power, PMS/CSIRO (King) Liquid Water Content (W): PLWC, PLWC1 {-#plwc}
+#### Power, PMS/CSIRO (King) Liquid Water Content (W): PLWC, PLWC1, PDRY {-#plwc}
 
-*The power dissipated by the sensor of a PMS/CSIRO (King) liquid water probe (in watts).* PLWC is the power required to maintain constant temperature in a heated element as that element is cooled by convection and evaporation of impinging liquid water. The convective heat losses are determined by calibration in dry air over a range of airspeeds and temperatures, so that the remaining power can be related to the liquid water content. The instrument is described in <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a> and at <a href="http://www.eol.ucar.edu/instruments/king-csiro-liquid-water-sensor">this URL</a>. See the following
-description for the algorithm used to obtain liquid water content from this measurement of power.<br /><span id="punch:5-3" label="punch:5-3">[punch:5-3]</span>
+*The power dissipated by the sensor of a PMS/CSIRO (King) liquid water probe (in watts).* PLWC is the power required to maintain constant temperature in a heated element as that element is cooled by convection and evaporation of impinging liquid water. PDRY is the calculated power expected to be dissipated in the absence of impinging hydrometeors. The convective heat losses leading to PDRY are determined by calibration in dry air over a range of airspeeds and temperatures, so that the remaining power can be related to the liquid water content. The instrument is described in [RAF Bulletin 24](https://opensky.ucar.edu/islandora/object/archives%3A8155) and at [this URL](http://www.eol.ucar.edu/instruments/king-csiro-liquid-water-sensor). See the following
+description for the algorithm used to obtain liquid water content from this measurement of power.<br /><span id="punch:5-3" label="punch:5-3">[punch:5-3]</span>  
 
-#### PMS/CSIRO (King) Liquid Water Content (g/m<span class="math inline"><sup>3</sup></span>): PLWCC, PLWCC1 {-#plwcc}
+#### PMS/CSIRO (King) Liquid Water Content (g/m^3^): PLWCC, PLWCC1 {-#plwcc}
 
 *The liquid water content* *measured by a King probe.* This is calculated by relating the power consumption required to maintain a constant temperature to the liquid water content, taking into account the effect of convective heat losses. The instrument and processing are described by King et al. (1978)^[King, W. D., D. A. Parkin and R. J. Handsworth, 1978: A hot-wire liquid water device having fully calculable response characteristics. J. Appl. Meteorol., 17, 1809–1813. See also Bradley, S. G., and W. D. King, 1979 Frequency response of the CSIRO Liquid Water Probe. J. Appl. Meteorol., 18, 361–366.]
-and in a note available at <a href="www/PLWCCrev140214.pdf">this URL</a>. Because the temperature of the sensing wire is typically well above the boiling point of water, the assumption made in processing is that the water collected on the sensing wire is vaporized at the boiling point <span class="math inline">*T*<sub>*b*</sub></span>. The boiling point is represented as a function of pressure as described below.<br /></p>  
+and in a note available at [this URL](www/PLWCCrev140214.pdf). Because the temperature of the sensing wire is typically well above the boiling point of water, the assumption made in processing is that the water collected on the sensing wire is vaporized at the boiling point *T~b~*. The boiling point is represented as a function of pressure as described below.    
 
 ```{r child='PLWCCbox.Rmd'}
 ```
 
 In addition, a processing step is used to remove drift by calculating the offset required to zero measurements obtained outside cloud. This is done by adjusting the coefficient <span class="math inline">*a*<sub>0</sub></span> by nudging toward the value required to give zero liquid water content outside cloud (as indicated by another instrument, often a CDP showing droplet concentration of &lt;1 cm<span class="math inline"><sup> − 3</sup></span>). Specifically, when out-of-cloud, Nu<span class="math inline"><sup>′</sup></span> is calculated from Nu<span class="math inline"><sup>′</sup> = {*PLWC*}/(*πLλ*<sub>*c*</sub>(*T*<sub>*s*</sub> − *T*<sub>*a*</sub>))</span>. Then the value of <span class="math inline">*a*<sub>0</sub></span> is updated via <span class="math inline">*a*<sub>0</sub></span> += (Nu<span class="math inline"><sup>′</sup>/*Re*<sup>*a*<sub>1</sub></sup> − *a*<sub>0</sub>)/*τ*</span> (using, for the GV, separate coefficients for each of the three branches). In this formula, <span class="math inline">*τ*</span> should be the number of updates in a fixed period, e.g., for a 100 s time constant and for 25-Hz processing, <span class="math inline">*τ* = 100 × 25</span>. In addition, to avoid jumps when switching among the branches, the linear coefficients {<span class="math inline">*a*<sub>0</sub></span>} are adjusted with each transition between branches to provide a continuous estimate of the zero value.</p>
 
-#### PVM-100 Liquid Water Content (g/m^3^): PLWCG {-#plwcg}
+#### PVM-100 Liquid Water Content (g/m^3^): PLWCG, XGLWC {-#plwcg}
 
-*Cloud liquid water content for cloud droplets in the approximate size range from 3–50 <span class="math inline">*μ*</span>m.* The PVM produces a measure of the liquid water content directly, but a baseline value is sometimes subtracted by reference to another cloud droplet instrument such as an FSSP or CDP, such that when the other instrument measures a very low droplet concentration the baseline value for the PVM-100 is updated at the corresponding time and that average is then subtracted from the measurements directly produced by the PVM-100.<span id="punch:5-1" label="punch:5-1">[punch:5-1]</span></p>
+*Cloud liquid water content for cloud droplets in the approximate size range from 3–50 <span class="math inline">*μ*</span>m.* The PVM (described at [this URL](https://www.eol.ucar.edu/instruments/gerber-liquid-water-probe)) produces a measure of the liquid water content directly, but a baseline value is sometimes subtracted by reference to another cloud droplet instrument such as an FSSP or CDP, such that when the other instrument measures a very low droplet concentration the baseline value for the PVM-100 is updated at the corresponding time and that average is then subtracted from the measurements directly produced by the PVM-100. The instrument also produces a measurement of the droplet effective radius in $\mu\mathrm{m}$, XGRFF, and droplet surface area in cm^2^m^-3^, XGSFC.<span id="punch:5-1" label="punch:5-1">[punch:5-1]</span></p>
 
 #### Rosemount Icing Detector Signal (V): RICE {-#rice}
 
@@ -201,13 +201,17 @@ knitr::kable(PROBES, row.names=FALSE, align=c('cc')) %>% kable_styling(bootstrap
 
 bin units=cm^-3^: **CFSSP, CS100, CS200, CS300, CPCAS, CCDP, CUHSAS**   
 bin units=L^-1^: **C200X, C260X, C200Y**  
-*The particle concentrations* in each usable bin of the probe. These netCDF variables have “vector” character with dimension equal to the number of channels in the table above. The first vector member should be ignored. For some scattering spectrometer probes (FSSP-100, FSSP-300, PCASP) the concentration value is modified by the probe activity (FACT, PACT) as described below. The concentration is obtained from the total number of particles detected and a calculated, probe-dependent sample volume that is specified in recent projects by attributes (e.g., depth of field and beam diameter) of this variable in the netCDF file. For additional details, see the links in the table or, for older probes, [RAF Bulletin 24](https://opensky.ucar.edu/islandora/object/archives%3A8155"). See also the related size distribution variables C1DC and C1DP in Sect.\ \@ref(#c1dc-c1dp).    
+*The particle concentrations* in each usable bin of the probe. These netCDF variables have “vector” character with dimension equal to the number of channels in the table above. The first vector member should be ignored. For some scattering spectrometer probes (FSSP-100, FSSP-300, PCASP) the concentration value is modified by the probe activity (FACT, PACT) as described below. The concentration is obtained from the total number of particles detected and a calculated, probe-dependent sample volume. For some probes (CDP, FSSP) that is dependent on TASX and additional attributes specified by attributes (e.g., depth of field and beam diameter) of the corresponding variable in the netCDF file. For others (UHSAS, PCAS) a separate measure of flow (UFLWC, PFLWC) is used. For all, the size distribution is reported as the ambient concentration in air at the pressure and temperature at flight level. For additional details, see the links in the table or, for older probes, [RAF Bulletin 24](https://opensky.ucar.edu/islandora/object/archives%3A8155"). See also the related size distribution variables C1DC and C1DP in Sect.\ \@ref(#c1dc-c1dp).    
 
-### Concentration (cm<span class="math inline"><sup> − 3</sup></span>): CONCD, CONCF, CONC3, CONCP, CONCU; 
-(L<strong><span class="math inline"><sup> − 1</sup></span>):</strong> CONCX, CONC6, CONCY {#concentration .unnumbered}
+### Concentration (cm^−3^): CONCD, CONCF, CONC3, CONCP, CONCU; 
+**(L^−1^) CONCX, CONC6, CONCY** {#concentration .unnumbered}
 
-*The particle concentrations* *summed over all channels to give the total concentration in the size range of the probe.* For example, {CONCF} = <span class="math inline">∑<sub>*i*</sub>{*CFSSP*}<sub>*i*</sub></span>. For additional details, see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a>.<br />
-</p>
+*The particle concentrations* *summed over all channels to give the total concentration in the size range of the probe.* For example, {CONCF} = $\sum_i CFSSP_i$. For additional details, see [RAF Bulletin 24](https://opensky.ucar.edu/islandora/object/archives%3A8155).   
+ 
+
+### Counts per sampling interval (usually 1 s) (counts per time): TCNTx {-#tcnt}  
+
+*The particle or hydrometeor count, all cells.* The instrument may be in FSSP-300, FSSP-100, CDP, PCAS, 260X, or UHSAS, denoted by respective suffixes 3, F, D, P, 6 or U.  
 
 ### Mean Diameter (<span class="math inline">*μ*</span>m): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU {#mean-diameter .unnumbered}
 
@@ -228,7 +232,8 @@ bin units=L^-1^: **C200X, C260X, C200Y**
 
 ### Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD {#DBZ .unnumbered}
 
-*The radar reflectivity factor* *calculated from the measured size distribution from a hydrometeor probe.* This is calculated from the measured concentration and the sixth moment of the size distribution, with the assumption that the particles are water drops. An equivalent radar reflectivity factor can be calculated from the hydrometeor size distribution if another assumption is made about composition of the particles, but this variable is not part of normal data files. The radar reflectivity factor is a characteristic only of the hydrometeor size distribution; it is *not* a measure of radar reflectivity, because the latter also depends on wavelength, dielectric constant, and other characteristics of the hydrometeors. The normally used radar reflectivity factor is measured on a logarithmic scale that depends on a particular choice of units, so (although it is not conventional) an appropriate scale factor <span class="math inline">*Z*<sub>*r*</sub></span> is included in the following equation to satisfy the convention that arguments of logarithms should be dimensionless.<br />  
+*The radar reflectivity factor* *calculated from the measured size distribution from a hydrometeor probe.* This is calculated from the measured concentration and the sixth moment of the size distribution, with the assumption that the particles are water drops. An equivalent radar reflectivity factor can be calculated from the hydrometeor size distribution if another assumption is made about composition of the particles, but this variable is not part of normal data files. The radar reflectivity factor is a characteristic only of the hydrometeor size distribution; it is *not* a measure of radar reflectivity, because the latter also depends on wavelength, dielectric constant, and other characteristics of the hydrometeors. The normally used radar reflectivity factor is measured on a logarithmic scale that depends on a particular choice of units, so (although it is not conventional) an appropriate scale factor *Z~r~* is included in the following equation to satisfy the convention that arguments of logarithms should be dimensionless.  
+
 ```{r child='DBZbox.Rmd'}
 ```
 
@@ -236,9 +241,16 @@ bin units=L^-1^: **C200X, C260X, C200Y**
 
 ### Effective Radius (<span class="math inline">*μ*</span>m): REFFD, REFFF {#effective-radius .unnumbered}
 
-*One-half the ratio of the third moment of the diameter measurements to the second moment.* This variable is useful in some calculations that relate the liquid water content of a cloud layer to its optical properties.<br />  
+*One-half the ratio of the third moment of the diameter measurements to the second moment.* This variable is useful in some calculations that relate the liquid water content of a cloud layer to its optical properties.  
+
 ```{r child='REFFbox.Rmd'}
 ```
+
+### Aerosol Equivalent Volume ($\mu\mathrm{m}$^3^m^-3^) PVOL3, PVOLP, PVOLU {-#pvol}  
+
+*The equivalent volume of aerosol particles* measured by either the F300, PCASP, or UHSAS instruments.  
+
+
 
 ### FSSP-100 Range (dimensionless): FRNG, FRANGE {#fssp-range .unnumbered}
 
@@ -297,6 +309,11 @@ For the images from the 2D probes, separate data files need to be used. RAF prov
 
 *The number of particles accepted* in the sampling time (usually 1 s). "x" further identifies the probe and criteria: CA or CR (fast 2DC, All or Round), 3A or 3R (3V-CPI, All or Round), SA or SR (2D-S All or Round). To be classified as Round the image must meet a test restricting acceptance to circular images. The 2D-S variables will also have an additional suffix "_2H" or "_2V" designating the horizontal or vertical view of the 2D-S. There are similar counts NREJECT2Dx that record the number of particles rejected in the sampling time.  
 
+### 2D Shadow-Or Count (counts per sample interval, usual 1 s): SHDOW_x, SHDORC, SHDORP {-#shadow-or}  
+
+The count of events in a fast 2D probe where at least one diode was shadowed.  
+
+
 ### 2D Count Rate Per Channel (count per time interval per channel): A1DC, A1DP {-#a1dc-a1dp}
 
 *The number of particles counted by a 2D probe* in each of 62 size bins in a specified time interval, usually 1 s. These are used to calculate the derived variables like CONC1DC, C1DC, and others that follow, but are provided to allow re-calculation if a user wants to use different sample volumes or sizing assumptions. Two other variables are sometimes included, A1DCA and A1DCR, representing different processing schemes that accept all particles (A) or restrict the calculations to only round particles (R). See the comment on bin sizes for the following variable (Sect. \@ref(#c1dc-c1dp)).
@@ -336,8 +353,5 @@ For the images from the 2D probes, separate data files need to be used. RAF prov
 
 ### 2D Effective Radius (<span class="math inline">*μ*</span>m): REFF2DC, REFF2DP {-#reff2d}
 
-*One-half the ratio of the third moment of the particle diameter to the second moment.* The formula used is given by \@ref(eq:REFFbox). Special processing sometimes includes REFF2DCA and REFF2DCR; "A" refers to the reflectivity calculated from all images processed via the 260-emulation method (i.e., center-in where the end diodes are not shadowed), while "R" refers to the corresponding reflectivity based only on images that pass a "roundness" test.<span id="punch:5-6" label="punch:5-6">[punch:5-6]</span>  
-
-
-
+*One-half the ratio of the third moment of the particle diameter to the second moment.* The formula used is given by \@ref(eq:REFFbox). Special processing sometimes includes REFF2DCA and REFF2DCR; "A" refers to the reflectivity calculated from all images processed via the 260-emulation method (i.e., center-in where the end diodes are not shadowed), while "R" refers to the corresponding reflectivity based only on images that pass a "roundness" test. Occasionally an additional variable named REFFD2DC or REFFF2DC has been added to represent the effective radius calculated from, respectively, the combined 1DC and CDP size distributions or the combined 1DC and FSSP-100 size distributions.<span id="punch:5-6" label="punch:5-6">[punch:5-6]</span>  
 
