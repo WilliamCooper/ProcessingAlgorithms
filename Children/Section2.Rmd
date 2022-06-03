@@ -5,9 +5,8 @@
 This report uses the SI system of units, but with many exceptions. Among them are the following:  
 
 1. The millibar (mb), equal to one hectopascal (hPa), was used for pressure with some older variables. This report favors hPa, but pressure units in some archived data sets are still listed as mb.    
-2. Many variables are presented in the units most often used for that variable, even when they involve CGS units or mixed CGS-MKS units, as for example [g m^-3^] for liquid water content or
-[cm^-3^] for droplet concentration.  
-3. Flow rates are often quoted in liters per minute (LPM) or standard liters per minute (SLPM) because those terms are linked to properties of commercially available instruments with flow control. One liter is 10^-3^m^3^. Standard temperature and pressure are respectively 273.15 K and 1013.25 hPa. However, there is considerable ambiguity in the definition of “standard” conditions (mostly regarding the choice of the reference temperature) because some flow controllers and flowmeters specify a different “standard” temperature, so the particular usage will be documented when this term is used. Mass flow meters provide a measure of the flow of mass but usually report the measurement in terms of the volume flow that would be present under standard conditions (e.g.., SLPM). Therefore, to convert to volumetric flow at other conditions, if the fluid density is $\rho$ and the mass flow rate in units of mass per time is denoted by $\dot{m}^\prime$, the volumetric flow is $Q=\dot{m}^\prime/\rho$. Then the mass flow rate in units of standard volume per time is $\dot{m}=\dot{m}^\prime/\rho_s$ where $\rho_s$ is the density of the fluid under standard conditions. To convert to volumetric flow under other conditions, $Q(p,T)=\dot{m}^\prime/\rho$ = $\dot{m}\rho_s/\rho$ = $\dot{m}p_{s}T/(p\thinspace T_{s})$ where $p$ and $T$ are the pressure and absolute temperature for the desired measurement and $p_s$ amd $T_s$ are the corresponding values for standard conditions.  
+2. Many variables are presented in the units most often used for that variable, even when they involve CGS units or mixed CGS-MKS units, as for example [g m^-3^] for liquid water content or [cm^-3^] for droplet concentration.  
+3. Flow rates are often quoted in liters per minute (LPM) or standard liters per minute (SLPM) because those terms are linked to properties of commercially available instruments with flow control. One liter is 10^-3^m^3^. Standard temperature and pressure are respectively 273.15 K and 1013.25 hPa. However, there is considerable ambiguity in the definition of “standard” conditions (mostly regarding the choice of the reference temperature) because some flow controllers and flowmeters specify a different standard temperature, so the particular usage will be documented when this term is used. Mass flow meters provide a measure of the flow of mass but usually report the measurement in terms of the volume flow that would be present under standard conditions (e.g.., SLPM). Therefore, to convert to volumetric flow at other conditions, if the fluid density is $\rho$ and the mass flow rate in units of mass per time is denoted by $\dot{m}^\prime$, the volumetric flow is $Q=\dot{m}^\prime/\rho$. Then the mass flow rate in units of standard volume per time is $\dot{m}=\dot{m}^\prime/\rho_s$ where $\rho_s$ is the density of the fluid under standard conditions. To convert to volumetric flow under other conditions, $Q(p,T)=\dot{m}^\prime/\rho$ = $\dot{m}\rho_s/\rho$ = $\dot{m}p_{s}T/(p\thinspace T_{s})$ where $p$ and $T$ are the pressure and absolute temperature for the desired measurement and $p_s$ amd $T_s$ are the corresponding values for standard conditions.  
 4. The International Bureau of Weights and Measures recommends against use of units like percent or parts per million, but these are in common use in atmospheric chemistry and elsewhere so data files continue to use those units for relative humidity or the concentration of chemical species. Proper SI units for a volumetric mixing ratio would be, e.g., $\mu$mol\ mol^-1^, nmol\ mol^-1^, or pmol\ mol^-1^, but variables are instead often assigned the respective units of ppmv, ppbv or pptv for parts per million, billion or trillion by volume. Care must be taken to interpret ppbv especially, because “billion” has different meaning in different languages and different countries; herein, 1 ppbv means a volumetric ratio of 1:10^9^. Many measurements produce native results in terms of a mass ratio, often described as a mixing ratio $r_m$ that specifies the mass of the measured gas per unit mass of “air” (where the mass of the “air” does not include the variable constituents, usually only significant for water vapor). The perfect gas law relates the density ratio of two gases $(\rho_1:\rho_2)$ to the ratio of their partial pressures $(p_1:p_2)$ or number densities $(n_1:n_2)$ as follows:  
 \begin{align}
 r_{m}=\frac{\rho_{1}}{\rho_{2}}=\frac{p_{1}M_{1}}{p_{2}M_{2}}=\frac{n_{1}M_{1}}{n_{2}M_{2}}
@@ -19,10 +18,10 @@ r_{v}=\frac{n_{1}}{n_{2}}=\left(\frac{M_{2}}{M_{1}}\right)r_{m}
 (\#eq:rv)
 \end{equation}
 When concentrations are recorded with units of “ppmv”, “ppbv” or “pptv”, these units refer respectively to $10^6r_v$, $10^9r_v$, and $10^{12}r_v$ with $r_v$ given by the above equation.  
-5. The unit “hertz” (abbreviation Hz) is the proper unit for a periodic sampling frequency and will be used here in place of the more awkward “samples per second.” This usage is favored by the International Bureau of Weights and Measures (cf. <a href="http://www.bipm.org/en/si/si_brochure/chapter2/2-2/table3.html#notes">http://www.bipm.org/en/si/si_brochure/chapter2/2-2/table3.html#notes</a>) when the frequency represented refers to the rate of sampling.  
-6. In some cases, particularly for older data files, speed has been recorded in units of knots (= 0.514444 m/s) and distance in nautical miles <span class="math inline">≡</span> 1852 m).  
+5. The unit “hertz” (abbreviation Hz) is the unit used here for a periodic sampling frequency, vs.\ the more awkward “samples per second.”  
+6. In some cases, particularly for older data files, speed has been recorded in units of knots (= 0.514444 m/s) and distance in nautical miles ≡ <span class="math inline">≡</span> 1852 m).  
 
-In Appendix A there is a list of symbols.^[Some symbols used only once and defined where they are used are omitted from this list] The next table defines some abbreviations and additional symbols used for units in this report, in addition to the standard abbreviations for the mks system of units:<span id="punch1.2" label="punch1.2">[punch1.2]</span>
+In Appendix A there is a list of symbols.^[Some symbols used only once and defined where they are used are omitted from this list] The next table defines some abbreviations and additional symbols used for units in this report, in addition to the standard abbreviations for the mks system of units:  
 <!-- It would be useful to translate the following table from html to Rmd: -->
 ```{r tos, include=FALSE, echo=FALSE}
 SymbolTable <- data.frame("abbreviation-or-symbol"=c('º', 'ft', 'mb', 'ppmv', 'ppbv', 'pptv', 'n mi', 'kt'),
@@ -42,51 +41,6 @@ knitr::kable(SymbolTable, align=c('cc')) %>% kable_styling(bootstrap_options = '
   scroll_box(width='90%')
 ```
 
-<!-- <table> -->
-<!-- <thead> -->
-<!-- <tr class="header"> -->
-<!-- <th style="text-align: center;"><strong>abbreviation/symbol</strong></th> -->
-<!-- <th style="text-align: left;"><strong>definition</strong>^[where the symbol <span class="math inline">≡</span> is used, the relationship is exact by definition] -->
-<!-- </th> -->
-<!-- </tr> -->
-<!-- </thead> -->
-<!-- <tbody> -->
-<!-- <tr class="odd"> -->
-<!-- <td style="text-align: center;">º</td> -->
-<!-- <td style="text-align: left;">degree, angle measurement <span class="math inline">≡</span> (<span class="math inline"><em>π</em></span>/180) radian</td> -->
-<!-- </tr> -->
-<!-- <tr class="even"> -->
-<!-- <td style="text-align: center;">ft</td> -->
-<!-- <td style="text-align: left;">foot <span class="math inline">≡</span> 0.3048 m</td> -->
-<!-- </tr> -->
-<!-- <tr class="odd"> -->
-<!-- <td style="text-align: center;">mb</td> -->
-<!-- <td style="text-align: left;">millibar <span class="math inline">≡</span> 100 Pa <span class="math inline">≡</span> 1 hPa</td> -->
-<!-- </tr> -->
-<!-- <tr class="even"> -->
-<!-- <td style="text-align: center;">ppmv</td> -->
-<!-- <td style="text-align: left;">parts per million by volume (see item 4 above)</td> -->
-<!-- </tr> -->
-<!-- <tr class="odd"> -->
-<!-- <td style="text-align: center;">ppbv</td> -->
-<!-- <td style="text-align: left;">parts per billion (<span class="math inline">10<sup>9</sup>)</span> by volume (see item 4 above)</td> -->
-<!-- </tr> -->
-<!-- <tr class="even"> -->
-<!-- <td style="text-align: center;">pptv</td> -->
-<!-- <td style="text-align: left;">parts per trillion (<span class="math inline">10<sup>12</sup>)</span> by volume (see item 4 above)</td> -->
-<!-- </tr> -->
-<!-- <tr class="odd"> -->
-<!-- <td style="text-align: center;">n mi</td> -->
-<!-- <td style="text-align: left;">nautical mile <span class="math inline">≡</span>1852 m</td> -->
-<!-- </tr> -->
-<!-- <tr class="even"> -->
-<!-- <td style="text-align: center;">kt</td> -->
-<!-- <td style="text-align: left;">knot (n mi/hour) <span class="math inline">≡</span> (1852/3600) m/s = 0.514444... m/s</td> -->
-<!-- </tr> -->
-<!-- </tbody> -->
-<!-- </table> -->
-<!-- % <h2 id="variables-used-to-denote-time">Variables Used To Denote Time</h2> -->
-
 ## Variables Used to Denote Time
 
 Although there are some exceptions in old archived data files, the data in all modern output files are referenced to Coordinated Universal Time (UTC). The time and date of the data acquisition system are synchronized to time from the Global Positioning System (GPS) at the beginning of each flight, and for data acquired by the present ADS-3 (NIDAS) data acquisition system time is synchronized continuously with the GPS time. Time variables vary for older archived data files; some of the following are obsolete, but are included here for reference because they are important to those wanting to use those archives.
@@ -96,9 +50,11 @@ Although there are some exceptions in old archived data files, the data in all m
 *The reference-time counter for the output data files,* used by data system versions beginning with ADS-3. It is an integer output at 1 Hz and has an initial value of zero at the start of the flight. Add this to the “Time:units” attribute found in the NETCDF header section to obtain the UTC time.  
 
 **Example attribute:**  
-<code>Time:units = “seconds since 2006-04-26 12:55:00 +0000” </code>;</p>
-<p>For code examples that show how to use “Time” see:<br />
-<a href="http://www.eol.ucar.edu/raf/Software/TimeExamp.html">http://www.eol.ucar.edu/raf/Software/TimeExamp.html</a></p>
+```
+Time:units = “seconds since 2006-04-26 12:55:00 +0000”
+```
+For code examples that show how to use “Time” see:\
+https://www.eol.ucar.edu/raf/Software/TimeExamp.html
 
 #### Reference Start Time (s): base_time (<em>Obsolete; versions before ADS-3 only</em>) {-#base-time}
 
@@ -124,7 +80,7 @@ There are time shifts inherent in many of the measurements, and in some cases (e
 
 <span id="elecFilter" label="elecFilter">Where data rates for particular measurements do not match the basic 50 Hz sampling rate, linear interpolation is used to obtain higher-rate values. For 1 Hz data files, measurements are then averaged within each second. For 25 Hz files, 50 Hz measurements are digitally filtered using a finite impulse response (FIR) filter, while data acquired at less than 25 Hz are linearly interpolated to 25 Hz and then FIR-filtered for smoothing.</span>  
 
-<p><span id="punch1.3" label="punch1.3">[punch1.3]</span></p>
+<p><span id="punch2.3" label="punch2.3">`r ifelse(PToDo,"[ToDo2.3]","")`</span></p>
 
 ## Other Comments on Terminology
 
@@ -135,9 +91,11 @@ This report often uses variable names in equations, and sometimes there is poten
 ### Distinction Between Original Measurements and Derived Variables
   
 Many of the variables in the data files and in this report are derived from combinations of measurements. The terms “raw” or “original” measurement are sometimes used for a minimally processed output received directly from a sensor or instrument. Such measurements may be converted to engineering units via calibration coefficients, but otherwise they are a direct representation of the output from a sensor.^[Calibration coefficients, e.g. those used to convert from voltage output from an analog sensor to a measured quantity with physical units like <span class="math inline">º</span>C, are not included or discussed in this report. They are normally included in project reports and, in recent years, many are included in the header of the NETCDF file.]
-In contrast, derived variables (e.g., potential temperature) depend on one or more “raw” measurements and are not direct results of output from an instrument. For most derived measurements, a box that follows an introductory comment is used in this report to document the processing algorithm. The box has two parts; in the top are definitions used and explanations regarding variables that enter the calculation, while the bottom portion contains the equation, algorithm, or code segment that documents how the variable is calculated.<span id="punch1.4" label="punch1.4">[punch1.4]</span>  
+In contrast, derived variables (e.g., potential temperature) depend on one or more “raw” measurements and are not direct results of output from an instrument. For most derived measurements, a box that follows an introductory comment is used in this report to document the processing algorithm. The box has two parts; in the top are definitions used and explanations regarding variables that enter the calculation, while the bottom portion contains the equation, algorithm, or code segment that documents how the variable is calculated.<span id="punch2.4" label="punch2.4">`r ifelse(PToDo,"[ToDo2.4]","")`</span>  
 
 ### Dimensions in Equations
 
 An effort has been made to avoid dimensions in equations except where it would be awkward otherwise. Some scale factors are introduced for only this purpose (e.g., to avoid dimensions in arguments to logarithmic or exponential functions), and some effort was made to isolate dimensions to defined constants rather than requiring that variables in equations be used with specific units. However, some exceptions remain to be consistent with historical usage.
 
+***  
+### Footnotes: {.unnumbered}

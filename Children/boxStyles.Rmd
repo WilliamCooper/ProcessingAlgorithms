@@ -19,6 +19,18 @@ margin-right: 10px;
 border-radius: 1px;
 }
 </style>
+
+<style>
+h3.box {
+background-color: #F8F8F8;
+padding: 10px;
+border: 2px solid blue;
+margin-left: 10px;
+margin-right: 10px;
+border-radius: 1px;
+}
+</style>
+
 ```{css, include = TRUE, echo = FALSE}
 .box-out {
   background-color: palegrey;

@@ -7,7 +7,7 @@
 
 Many of the variables in this section defined as mixing ratios have units like ppmv or pptv, and measured flows are often expressed in units like SLPM. Additional information on these non-SI units is contained in Section \@ref(units-and-abbreviations); see items 3 and 4 in the list at the head of this section.  
 
-<!-- <h2 id="variables-in-standard-data-filespunch6-1">Variables in Standard Data Files<span id="punch:6-1" label="punch:6-1">[punch:6-1]</span></h2> -->
+<!-- <h2 id="variables-in-standard-data-filespunch6-1">Variables in Standard Data Files<span id="punch:6-1" label="punch:6-1">[ToDo:6-1]</span></h2> -->
 ## Variables in Standard Data Files
 
 #### Carbon Monoxide Preliminary Mixing Ratio (ppbv): CORAW_AL {-#coraw-al}
@@ -50,7 +50,7 @@ Some archives have an additional variable, denoted "Corrected" and named FO3C.
 
 #### Uncorrected TECO Ozone Mixing Ratio (ppb): TEO3 {-#te03}
 
-*The uncorrected ozone mixing ratio* from the TECO model 49c UV ozone analyzer. See TEO3C.  
+*The uncorrected ozone mixing ratio* from the TECO model 49c UV ozone analyzer. See [TEO3C](#te03c).  
 
 #### Internal TECO Ozone Sampling Pressure (hPa): TEP, TEO3P {-#tep}
 
@@ -62,28 +62,27 @@ Some archives have an additional variable, denoted "Corrected" and named FO3C.
 
 #### Corrected TECO Ozone Mixing Ratio (ppbv): TEO3C {-#te03c}
 
-*The ozone mixing ratio* (by volume) determined by the TECO model 49c UV ozone analyzer (cf. [this description](https://www.eol.ucar.edu/instruments/thermo-environmental-instruments-model-49-ozone-analyzer)) after correction for the pressure and temperature in the cell by application of the ideal gas law. Because the basic measurement is ozone density in the chamber, this measurement must be converted to a mixing ratio by dividing by the air density, calculated from the pressure and temperature measured in the chamber (TEP and TET respectively).<span id="punch:6-3" label="punch:6-3">[punch:6-3]</span> The instrument provides output only each ten seconds, and measurements are collected in the 3 s preceding the update. The measurements may be artificially high or low when rapid changes in humidity are present, as may occur when crossing the top of the boundary layer or when going through clouds. In operation on the ground prior to takeoff or immediately after landing, a high concentration of hydrocarbons can cause spuriously high measurements. The detection limit is 1 ppbv with an uncertainty of $\pm 5$%. This instrument is seldom used as of 2014 and may soon be classified as obsolete.  
+*The ozone mixing ratio* (by volume) determined by the TECO model 49c UV ozone analyzer (cf. [this description](https://www.eol.ucar.edu/instruments/thermo-environmental-instruments-model-49-ozone-analyzer)) after correction for the pressure and temperature in the cell by application of the ideal gas law. Because the basic measurement is ozone density in the chamber, this measurement must be converted to a mixing ratio by dividing by the air density, calculated from the pressure and temperature measured in the chamber (TEP and TET respectively).<span id="punch6.3" label="punch6.3">`r ifelse(PToDo,"[ToDo6.3]","")`</span> The instrument provides output only each ten seconds, and measurements are collected in the 3 s preceding the update. The measurements may be artificially high or low when rapid changes in humidity are present, as may occur when crossing the top of the boundary layer or when going through clouds. In operation on the ground prior to takeoff or immediately after landing, a high concentration of hydrocarbons can cause spuriously high measurements. The detection limit is 1 ppbv with an uncertainty of $\pm 5$%. This instrument is seldom used as of 2014 and may soon be classified as obsolete.  
 
 #### NO, NO~2~, NO~y~ Variables: {-#no-no2}
 
-<!-- There apparently is no Rmarkdown underline, so left these as html: -->
-**NO Raw Counts (counts per sample interval): <span class="underline">XNO</span>**   
-**NOy Raw Counts (counts per sample interval): <span class="underline">XNOY</span>**  
-**NO Calibration Flow (SLPM): <span class="underline">XNOCF</span>**  
-**NOy Calibration Flow (SLPM): <span class="underline">XNCLF</span>**  
-**NO, NOy Measurement Status (dimensionless): <span class="underline">XNST</span>**  
-**NO Zero Air Flow (SLPM): <span class="underline">XNOZA</span>**  
-**NOy Zero Air Flow (SLPM): <span class="underline">XNZAF</span>**  
-**NO Sample Flow (SLPM): <span class="underline">XNOSF</span>**  
-**NOy Sample Flow (SLPM): <span class="underline">XNSAF</span>**  
-**NOy Reaction Chamber Pressure (hPa): <span class="underline">XNOYP</span>**  
-**Gold NOy Converter Temperature (ºC): <span class="underline">XNMBT</span>**  
+**NO Raw Counts (counts per sample interval): [XNO]{.underline}**   
+**NOy Raw Counts (counts per sample interval): [XNOY]{.underline}**  
+**NO Calibration Flow (SLPM): [XNOCF]{.underline}**  
+**NOy Calibration Flow (SLPM): [XNCLF]{.underline}**  
+**NO, NOy Measurement Status (dimensionless): [XNST]{.underline}**  
+**NO Zero Air Flow (SLPM): [XNOZA]{.underline}**  
+**NOy Zero Air Flow (SLPM): [XNZAF]{.underline}**  
+**NO Sample Flow (SLPM): [XNOSF]{.underline}**  
+**NOy Sample Flow (SLPM): [XNSAF]{.underline}**  
+**NOy Reaction Chamber Pressure (hPa): [XNOYP]{.underline}**  
+**Gold NOy Converter Temperature (ºC): [XNMBT]{.underline}**  
 
-*The measurements provided by the NO-NO~2~ instrument,* which is described at [this link](https://www.eol.ucar.edu/instruments/2-channel-chemiluminescence-instrument-no-no2-or-no-noy). XNO and XNOY are the raw data counts from the NO and NO~2~ instruments, respectively, and XNCLF and XNOCF are the respective calibration flows for these instruments. <span id="punch:6-2" label="punch:6-2">[punch:6-2]</span> XNST records the status for both instruments: In measurement mode, XNST is 0, while XNST is 5 when the instruments are in zero mode and 10 when the instruments are in calibration mode. XNOZA and XNZAF are flow rates for zero air used to back flush inlets, typically at takeoff and landing, and for calibration using “zero” air. Even if the status, XNST, is 0, indicating the instrument is in the measurement mode, when XNOZA and XNZAF are approximately 1 SLPM the instrument is measuring zero air and not ambient air. <span id="punch:6-4" label="punch:6-4">[punch:6-4]</span> XNOSF and XNSAF are the sample flow rates through the NO and NO~2~ instruments respectively. These values are typically about 1 SLPM. XNMBT is the temperature of the gold NO~2~ converter.  
+*The measurements provided by the NO-NO~2~ instrument,* which is described at [this link](https://www.eol.ucar.edu/instruments/2-channel-chemiluminescence-instrument-no-no2-or-no-noy). XNO and XNOY are the raw data counts from the NO and NO~2~ instruments, respectively, and XNCLF and XNOCF are the respective calibration flows for these instruments. <span id="punch6.2" label="punch6.2">`r ifelse(PToDo,"[ToDo6.2]","")`</span> XNST records the status for both instruments: In measurement mode, XNST is 0, while XNST is 5 when the instruments are in zero mode and 10 when the instruments are in calibration mode. XNOZA and XNZAF are flow rates for zero air used to back flush inlets, typically at takeoff and landing, and for calibration using “zero” air. Even if the status, XNST, is 0, indicating the instrument is in the measurement mode, when XNOZA and XNZAF are approximately 1 SLPM the instrument is measuring zero air and not ambient air. <span id="punch6.4" label="punch6.4">`r ifelse(PToDo,"[ToDo6.4]","")`</span> XNOSF and XNSAF are the sample flow rates through the NO and NO~2~ instruments respectively. These values are typically about 1 SLPM. XNMBT is the temperature of the gold NO~2~ converter.  
 
 #### Corrected NO and NO~2~ Mixing Ratios (pptv): NO_ACD, NO2_ACD, NOY_ACD, (Obsolate:) XNOCAL, XNYCAL {-#mr-no-no2}
 
-*The calibrated NO, NO~2~, or NO~y~ volumetric mixing ratio,* respectively, measured by the NO-NO~2~ instrument. See [this link](https://www.eol.ucar.edu/instruments/2-channel-chemiluminescence-instrument-no-no2-or-no-noy) for a description of the instrument.<span id="punch:6-5" label="punch:6-5">[punch:6-5]</span> The NO, NO~2~ and NO~y~ data are represented by a cubic spline for baseline subtraction, and then the calibration coefficients are applied and the measurements are converted to units of pptv. The quality of the data can be assessed by examining the accuracy of the zero correction. This instrument <span id="punch:6-6" label="punch:6-6">[punch:6-6]</span> adds water vapor to the sample stream to reduce the effect of ambient water on the final signal. The water vapor addition is not sufficient to saturate the sample stream, but enough to remove much of the interference. The detection limits of the NO and NO~2~ instruments are 50 ppbv for a one-second averaging time. The uncertainty is  $\pm 5$%.
+*The calibrated NO, NO~2~, or NO~y~ volumetric mixing ratio,* respectively, measured by the NO-NO~2~ instrument. See [this link](https://www.eol.ucar.edu/instruments/2-channel-chemiluminescence-instrument-no-no2-or-no-noy) for a description of the instrument.<span id="punch6.5" label="punch6.5">`r ifelse(PToDo,"[ToDo6.5]","")`</span> The NO, NO~2~ and NO~y~ data are represented by a cubic spline for baseline subtraction, and then the calibration coefficients are applied and the measurements are converted to units of pptv. The quality of the data can be assessed by examining the accuracy of the zero correction. This instrument <span id="punch6.6" label="punch6.6">`r ifelse(PToDo,"[ToDo6.6]","")`</span> adds water vapor to the sample stream to reduce the effect of ambient water on the final signal. The water vapor addition is not sufficient to saturate the sample stream, but enough to remove much of the interference. The detection limits of the NO and NO~2~ instruments are 50 ppbv for a one-second averaging time. The uncertainty is  $\pm 5$%.
 
 <!-- <h2 id="variables-in-special-data-sets">Variables in Special Data Sets</h2> -->
 ## Variables in Special Data Sets {#awas-cims-qcls-toga}
@@ -92,14 +91,8 @@ Research projects often incorporate user-supplied instruments into payloads, and
 ```{r child='SpecChembox.Rmd'}
 ```
 
-<!-- * \setlength{\itemsep}{-1\parsep}Advanced Whole Air Sampler [AWAS](https://www.eol.ucar.edu/instruments/advanced-whole-air-sampler) -->
-<!-- * Chemical Ionization Mass Spectrometer [CIMS](https://www.eol.ucar.edu/instruments/georgia-tech-chemical-ionization-mass-spectrometer) -->
-<!-- * Quantum Cascade Laser Spectrometer [QCLS](https://www.eol.ucar.edu/instruments/quantum-cascade-laser-spectrometer) -->
-<!-- * Trace Organic Gas Analyzer [TOGA](https://www.eol.ucar.edu/instruments/trace-organic-gas-analyzer)   -->
-<!-- * Airborne Oxygen Instrument [AO2](https://www.eol.ucar.edu/instruments/airborne-oxygen-instrument)   -->
-<!-- </p>   -->
-
-<!-- <br /> -->
-  
 Follow the links in the box to descriptions of these instruments on the EOL web site. Those descriptions include brief explanations of how data are acquired and handled. The process varies with instrument; The CIMS and QCLS instruments produce variables that are often merged into the standard netCDF archived data files for projects, the AWAS and Medusa samples are later analyzed using ground-based instruments and result in special dataset sdependent on analysis technique and sample location and duration, while the TOGA is usually analyzed to produce dozens of trace-gas measurements, some of which can be merged into standard netCDF files. Measurements from the AO2 instrument, AO2O2 and AO2CO2, are included in the production archives for relevant projects.  
 Users interested in using these measurements should contact <a href="mailto:mailto:raf-dm%40eol.ucar.edu">EOL/RAF data management</a> for data access and assistance.  
+
+***  
+### Footnotes: {.unnumbered}

@@ -1,0 +1,13 @@
+```{r child='boxStyles.Rmd'}
+```
+<p class=box>
+-> Advanced Whole Air Sampler [AWAS](https://www.eol.ucar.edu/instruments/advanced-whole-air-sampler)  
+-> Chemical Ionization Mass Spectrometer [CIMS](https://www.eol.ucar.edu/instruments/georgia-tech-chemical-ionization-mass-spectrometer)  
+-> Quantum Cascade Laser Spectrometer [QCLS](https://www.eol.ucar.edu/instruments/quantum-cascade-laser-spectrometer)  
+-> Trace Organic Gas Analyzer [TOGA](https://www.eol.ucar.edu/instruments/trace-organic-gas-analyzer)    
+-> Airborne Oxygen Instrument [AO2](https://www.eol.ucar.edu/instruments/airborne-oxygen-instrument) -- providing these variables in some project archives:  
+\ \ \ \ \ \ \ \ **AO2O2:** Concentration of atmospheric oxygen relative to atmospheric nitrogen.  
+\ \ \ \ \ \ \ \ \ \ Units: per meg deviation from a reference value.  
+\ \ \ \ \ \ \ \ **AO2CO2:** Concentration of atmospheric carbon dioxide as mole fraction in dry air in ppm.  
+-> NCAR/Scripps Airborne Flask Sampler [Medusa](https://www.eol.ucar.edu/instruments/ncar-scripps-airborne-flask-sampler)  
+</p>

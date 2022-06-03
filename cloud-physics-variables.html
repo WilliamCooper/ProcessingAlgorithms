@@ -57,6 +57,7 @@
 
 
 
+<link rel="stylesheet" href="my.css" type="text/css" />
 </head>
 
 <body>
@@ -104,8 +105,8 @@
 <li class="chapter" data-level="5" data-path="cloud-physics-variables.html"><a href="cloud-physics-variables.html"><i class="fa fa-check"></i><b>5</b> Cloud Physics Variables<span></span></a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="cloud-physics-variables.html"><a href="cloud-physics-variables.html#LWC"><i class="fa fa-check"></i><b>5.1</b> Measurements of Liquid Water Content<span></span></a></li>
-<li class="chapter" data-level="5.2" data-path="cloud-physics-variables.html"><a href="cloud-physics-variables.html#sensors-1-D-probes"><i class="fa fa-check"></i><b>5.2</b> Sensors Detecting Individual Hydrometeors (1-D Probes)<span></span></a></li>
-<li class="chapter" data-level="5.3" data-path="cloud-physics-variables.html"><a href="cloud-physics-variables.html#hydrometeor-imaging-probes"><i class="fa fa-check"></i><b>5.3</b> Hydrometeor Imaging Probes<span></span></a></li>
+<li class="chapter" data-level="5.2" data-path="cloud-physics-variables.html"><a href="cloud-physics-variables.html#sensors-1-D-probes"><i class="fa fa-check"></i><b>5.2</b> Size Distributions (1-D Probes)<span></span></a></li>
+<li class="chapter" data-level="5.3" data-path="cloud-physics-variables.html"><a href="cloud-physics-variables.html#hydrometeor-imaging-probes"><i class="fa fa-check"></i><b>5.3</b> Hydrometeor Images<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="air-chemistry-measurements.html"><a href="air-chemistry-measurements.html"><i class="fa fa-check"></i><b>6</b> Air Chemistry Measurements<span></span></a>
 <ul>
@@ -163,12 +164,12 @@
 <div id="plwc" class="section level4 unnumbered hasAnchor">
 <h4>Power, PMS/CSIRO (King) Liquid Water Content (W): PLWC, PLWC1, PDRY<a href="cloud-physics-variables.html#plwc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The power dissipated by the sensor of a PMS/CSIRO (King) liquid water probe (in watts).</em> PLWC is the power required to maintain constant temperature in a heated element as that element is cooled by convection and evaporation of impinging liquid water. PDRY is the calculated power expected to be dissipated in the absence of impinging hydrometeors. The convective heat losses leading to PDRY are determined by calibration in dry air over a range of airspeeds and temperatures, so that the remaining power can be related to the liquid water content. The instrument is described in <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a> and at <a href="http://www.eol.ucar.edu/instruments/king-csiro-liquid-water-sensor">this URL</a>. See the following
-description for the algorithm used to obtain liquid water content from this measurement of power.<br /><span id="punch:5-3" label="punch:5-3">[punch:5-3]</span></p>
+description for the algorithm used to obtain liquid water content from this measurement of power.</p>
 </div>
 <div id="plwcc" class="section level4 unnumbered hasAnchor">
 <h4>PMS/CSIRO (King) Liquid Water Content (g/m<sup>3</sup>): PLWCC, PLWCC1<a href="cloud-physics-variables.html#plwcc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><em>The liquid water content</em> <em>measured by a King probe.</em> This is calculated by relating the power consumption required to maintain a constant temperature to the liquid water content, taking into account the effect of convective heat losses. The instrument and processing are described by King et al. (1978)<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a>
-and in a note available at <a href="www/PLWCCrev140214.pdf">this URL</a>. Because the temperature of the sensing wire is typically well above the boiling point of water, the assumption made in processing is that the water collected on the sensing wire is vaporized at the boiling point <em>T<sub>b</sub></em>. The boiling point is represented as a function of pressure as described below.</p>
+<p><em>The liquid water content measured by a King probe.</em> This is calculated by relating the power consumption required to maintain a constant temperature to the liquid water content, taking into account the effect of convective heat losses. The instrument and processing are described by King et al. (1978)<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a>
+and further discusseion in a note available at <a href="www/PLWCCrev140214.pdf">this URL</a>. Because the temperature of the sensing wire is typically well above the boiling point of water, the assumption made in processing is that the water collected on the sensing wire is vaporized at the boiling point <em>T<sub>b</sub></em>. The boiling point is represented as a function of pressure as described below.</p>
 <style>
 p.box {
 background-color: #F8F8F8;
@@ -184,6 +185,16 @@ p.box2 {
 background-color: #FFFFFF;
 padding: 10px;
 border: 2px solid red;
+margin-left: 10px;
+margin-right: 10px;
+border-radius: 1px;
+}
+</style>
+<style>
+h3.box {
+background-color: #F8F8F8;
+padding: 10px;
+border: 2px solid blue;
 margin-left: 10px;
 margin-right: 10px;
 border-radius: 1px;
@@ -269,30 +280,24 @@ P_{W}=L\,d[L_{v}(T_{b})+c_{w}(T_{b}-T_{a})]\,U_{a}\chi
 \tag{5.4}
 \end{equation}\]</span>
 </p>
-In addition, a processing step is used to remove drift by calculating the offset required to zero measurements obtained outside cloud. This is done by adjusting the coefficient <span class="math inline"><em>a</em><sub>0</sub></span> by nudging toward the value required to give zero liquid water content outside cloud (as indicated by another instrument, often a CDP showing droplet concentration of &lt;1 cm<span class="math inline"><sup> − 3</sup></span>). Specifically, when out-of-cloud, Nu<span class="math inline"><sup>′</sup></span> is calculated from Nu<span class="math inline"><sup>′</sup> = {<em>PLWC</em>}/(<em>πLλ</em><sub><em>c</em></sub>(<em>T</em><sub><em>s</em></sub> − <em>T</em><sub><em>a</em></sub>))</span>. Then the value of <span class="math inline"><em>a</em><sub>0</sub></span> is updated via <span class="math inline"><em>a</em><sub>0</sub></span> += (Nu<span class="math inline"><sup>′</sup>/<em>Re</em><sup><em>a</em><sub>1</sub></sup> − <em>a</em><sub>0</sub>)/<em>τ</em></span> (using, for the GV, separate coefficients for each of the three branches). In this formula, <span class="math inline"><em>τ</em></span> should be the number of updates in a fixed period, e.g., for a 100 s time constant and for 25-Hz processing, <span class="math inline"><em>τ</em> = 100 × 25</span>. In addition, to avoid jumps when switching among the branches, the linear coefficients {<span class="math inline"><em>a</em><sub>0</sub></span>} are adjusted with each transition between branches to provide a continuous estimate of the zero value.
-</p>
+<p>In addition, a processing step is used to remove drift by calculating the offset required to zero measurements obtained outside cloud. This is done by adjusting the coefficient <span class="math inline">\(a_0\)</span> by nudging toward the value required to give zero liquid water content outside cloud (as indicated by another instrument, often a CDP showing droplet concentration of <span class="math inline">\(&lt;1\,\mathrm{cm}^{-3}\)</span>. Specifically, when out-of-cloud, <span class="math inline">\(\mathrm{Nu}^\prime\)</span> is calculated from <span class="math inline">\(\{\mathrm{PLWC}\}/(\pi L\lambda_c(T_s-T_a))\)</span>. Then the value of <span class="math inline">\(a_0\)</span> is updated via <span class="math inline">\(a_0+=(\mathrm{Nu}^\prime/\mathrm{Re}^{a_1}-a_0)/\tau\)</span> (using, for the GV, separate coefficients for each of the three branches). In this formula, <span class="math inline">\(\tau\)</span> should be the number of updates in a fixed period, e.g., for a 100 s time constant and for 25-Hz processing, <span class="math inline">\(\tau=100\times 25\)</span>. In addition, to avoid jumps when switching among the branches, the linear coefficients {<span class="math inline">\(a_0\)</span>} are adjusted with each transition between branches to provide a continuous estimate of the zero value.</p>
 </div>
 <div id="plwcg" class="section level4 unnumbered hasAnchor">
-<h4>PVM-100 Liquid Water Content (g/m<sup>3</sup>): PLWCG<a href="cloud-physics-variables.html#plwcg" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<em>Cloud liquid water content for cloud droplets in the approximate size range from 3–50 <span class="math inline"><em>μ</em></span>m.</em> The PVM produces a measure of the liquid water content directly, but a baseline value is sometimes subtracted by reference to another cloud droplet instrument such as an FSSP or CDP, such that when the other instrument measures a very low droplet concentration the baseline value for the PVM-100 is updated at the corresponding time and that average is then subtracted from the measurements directly produced by the PVM-100.<span id="punch:5-1" label="punch:5-1">[punch:5-1]</span>
+<h4>PVM-100 Liquid Water Content (g/m<sup>3</sup>): PLWCG, XGLWC<a href="cloud-physics-variables.html#plwcg" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<em>Cloud liquid water content</em> for cloud droplets in the approximate size range from 3–50 μm. The PVM (described at <a href="https://www.eol.ucar.edu/instruments/gerber-liquid-water-probe">this URL</a>) produces a measure of the liquid water content directly, but a baseline value is sometimes subtracted by reference to another cloud droplet instrument such as an FSSP or CDP, such that when the other instrument measures a very low droplet concentration the baseline value for the PVM-100 is updated at the corresponding time and that average is then subtracted from the measurements directly produced by the PVM-100. The instrument also produces a measurement of the droplet effective radius in <span class="math inline">\(\mu\mathrm{m}\)</span>, XGRFF, and droplet surface area in cm<sup>2</sup>m<sup>-3</sup>, XGSFC.<span id="punch5.1" label="punch5.1">[ToDo5.1]</span>
 </p>
-</div>
-<div id="glwc" class="section level4 unnumbered hasAnchor">
-<h4>Gerber Liquid Water Content (g.m<sup>-3</sup>): XGLWC<a href="cloud-physics-variables.html#glwc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><em>The liquid water content</em> in cloud droplets with diameters up to about <span class="math inline">\(50\,\mu\mathrm{m}\)</span>, as measured by a PVM-100 instrument. See the description at <a href="https://www.eol.ucar.edu/instruments/gerber-liquid-water-probe">this URL</a>.</p>
 </div>
 <div id="rice" class="section level4 unnumbered hasAnchor">
 <h4>Rosemount Icing Detector Signal (V): RICE<a href="cloud-physics-variables.html#rice" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<em>The voltage related to loading on the element of a Rosemount 871F ice-accretion probe.</em> This instrument (see <a href="https://www.eol.ucar.edu/instruments/rosemount-icing-detector">this URL</a>) consists of a rod set in vibration by a piezoelectric crystal. The oscillation frequency of the probe changes with ice loading, so in supercooled cloud ice accumulates on the sensor and the change in oscillation frequency is transmitted as a DC voltage. When the rod loads to a trigger point, the probe heats the rod to remove the ice. The rate of voltage change can be converted to an estimate of the supercooled liquid water content, as described in connection with the obsolete variable SCLWC. This calculation is no longer provided routinely but can be duplicated by a user on the basis of the SCLWC algorithm (see <a href="obsolete-variables.html#SCLWC">SCLWC</a> in Section <a href="obsolete-variables.html#obsolete-variables">10</a> for one example; there are several other published algorithms.)
-</p>
-<!-- <h2 id="sensors-of-individual-particles-1-d-probessubsec1dprobes">Measurements of Liquid Water Content<span id="subsec:1DProbes" label="subsec:1DProbes">[subsec:1DProbes]</span></h2> -->
+<p><em>The voltage related to loading on the element of a Rosemount 871F ice-accretion probe.</em> This instrument (see <a href="https://www.eol.ucar.edu/instruments/rosemount-icing-detector">this URL</a>) consists of a rod set in vibration by a piezoelectric crystal. The oscillation frequency of the probe changes with ice loading, so in supercooled cloud ice accumulates on the sensor and the change in oscillation frequency is transmitted as a DC voltage. When the rod loads to a trigger point, the probe heats the rod to remove the ice. The rate of voltage change can be converted to an estimate of the supercooled liquid water content, as described in connection with the obsolete variable SCLWC. This calculation is no longer provided routinely but can be duplicated by a user on the basis of the SCLWC algorithm (see <a href="obsolete-variables.html#SCLWC">SCLWC</a> in Section <a href="obsolete-variables.html#obsolete-variables">10</a>. There are several other published algorithms.<br />
+<!-- <h2 id="sensors-of-individual-particles-1-d-probessubsec1dprobes">Measurements of Liquid Water Content<span id="subsec:1DProbes" label="subsec:1DProbes">[subsec:1DProbes]</span></h2> --></p>
 </div>
 </div>
 <div id="sensors-1-D-probes" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Sensors Detecting Individual Hydrometeors (1-D Probes)<a href="cloud-physics-variables.html#sensors-1-D-probes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The RAF operates a set of hydrometeor detectors that provide single-dimension measurements (i.e., not images) of individual particle sizes. <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a> contains extensive information on the operating principles and characteristics of some of the older instruments. Here the focus will be on the meanings of the variables in the archived data files.<span id="punch:5-2" label="punch:5-2">[punch:5-2]</span></p>
+<h2><span class="header-section-number">5.2</span> Size Distributions (1-D Probes)<a href="cloud-physics-variables.html#sensors-1-D-probes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The RAF operates a set of hydrometeor detectors that provide single-dimension measurements (i.e., not images) of individual particle sizes. <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a> contains extensive information on the operating principles and characteristics of some of the older instruments. Here the focus will be on the meanings of the variables in the archived data files.<span id="punch5.2" label="punch5.2">[ToDo5.2]</span></p>
 <p><span id="VariableNames1DProbes" label="VariableNames1DProbes"></span>Four- and five-character variable names shown in this section are generic. The actual names appearing in NIMBUS-generated production output data sets have appended to them an underscore (_) and three or four more characters that indicate a probe’s specific aircraft mounting location. For example, AFSSP_RPI refers to a variable from an FSSP-100 probe mounted on the inboard, right-side pod. The codes presently in use are given in the following table. For the GV, there are 12 locations available, characterized by three letters. The first is the wing ({L,R} for {port,starboard}), the second is the pylon ({I,M,O} for inboard, middle, outboard}), the third is which of the two possible canister locations at the pylon is used ({I,O} for {inboard, outboard}).</p>
-<!-- The following HTML table is now converted to R Markdown: -->
+<!-- The previous HTML table here is now converted to R Markdown: -->
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:80%; ">
 <table class="table table-bordered" style="margin-left: auto; margin-right: auto;">
 <thead>
@@ -499,103 +504,7 @@ GV
 </tbody>
 </table>
 </div>
-<!-- <table> -->
-<!-- <thead> -->
-<!-- <tr class="header"> -->
-<!-- <th style="text-align: center;"><strong>Code</strong></th> -->
-<!-- <th style="text-align: center;"><strong>Location</strong></th> -->
-<!-- <th style="text-align: center;"><strong>Aircraft</strong></th> -->
-<!-- </tr> -->
-<!-- </thead> -->
-<!-- <tbody> -->
-<!-- <tr class="odd"> -->
-<!-- <td style="text-align: center;">OBL</td> -->
-<!-- <td style="text-align: center;">Outboard Left</td> -->
-<!-- <td style="text-align: center;">C-130Q</td> -->
-<!-- </tr> -->
-<!-- <tr class="even"> -->
-<!-- <td style="text-align: center;">IBL</td> -->
-<!-- <td style="text-align: center;">Inboard Left</td> -->
-<!-- <td style="text-align: center;">C-130Q</td> -->
-<!-- </tr> -->
-<!-- <tr class="odd"> -->
-<!-- <td style="text-align: center;">OBR</td> -->
-<!-- <td style="text-align: center;">Outboard Right</td> -->
-<!-- <td style="text-align: center;">C-130Q</td> -->
-<!-- </tr> -->
-<!-- <tr class="even"> -->
-<!-- <td style="text-align: center;">IBR</td> -->
-<!-- <td style="text-align: center;">Inboard Right</td> -->
-<!-- <td style="text-align: center;">C-130Q</td> -->
-<!-- </tr> -->
-<!-- <tr class="odd"> -->
-<!-- <td style="text-align: center;">LPO</td> -->
-<!-- <td style="text-align: center;">Left Pod Outboard</td> -->
-<!-- <td style="text-align: center;">C-130Q</td> -->
-<!-- </tr> -->
-<!-- <tr class="even"> -->
-<!-- <td style="text-align: center;">LPI</td> -->
-<!-- <td style="text-align: center;">Left Pod Inboard</td> -->
-<!-- <td style="text-align: center;">C-130Q</td> -->
-<!-- </tr> -->
-<!-- <tr class="odd"> -->
-<!-- <td style="text-align: center;">LPC</td> -->
-<!-- <td style="text-align: center;">Left Pod Center</td> -->
-<!-- <td style="text-align: center;">C-130Q</td> -->
-<!-- </tr> -->
-<!-- <tr class="even"> -->
-<!-- <td style="text-align: center;">RPO</td> -->
-<!-- <td style="text-align: center;">Right Pod Outboard</td> -->
-<!-- <td style="text-align: center;">C-130Q</td> -->
-<!-- </tr> -->
-<!-- <tr class="odd"> -->
-<!-- <td style="text-align: center;">RPI</td> -->
-<!-- <td style="text-align: center;">Right Pod Inboard</td> -->
-<!-- <td style="text-align: center;">C-130Q</td> -->
-<!-- </tr> -->
-<!-- <tr class="even"> -->
-<!-- <td style="text-align: center;">RPC</td> -->
-<!-- <td style="text-align: center;">Right Pod Center</td> -->
-<!-- <td style="text-align: center;">C-130Q</td> -->
-<!-- </tr> -->
-<!-- <tr class="odd"> -->
-<!-- <td style="text-align: center;">OBL</td> -->
-<!-- <td style="text-align: center;">Left Wing</td> -->
-<!-- <td style="text-align: center;">Electra</td> -->
-<!-- </tr> -->
-<!-- <tr class="even"> -->
-<!-- <td style="text-align: center;">IBL</td> -->
-<!-- <td style="text-align: center;">Left Pylon</td> -->
-<!-- <td style="text-align: center;">Electra</td> -->
-<!-- </tr> -->
-<!-- <tr class="odd"> -->
-<!-- <td style="text-align: center;">WDL</td> -->
-<!-- <td style="text-align: center;">Window Left</td> -->
-<!-- <td style="text-align: center;">Electra</td> -->
-<!-- </tr> -->
-<!-- <tr class="even"> -->
-<!-- <td style="text-align: center;">OBR</td> -->
-<!-- <td style="text-align: center;">Right Wing</td> -->
-<!-- <td style="text-align: center;">Electra</td> -->
-<!-- </tr> -->
-<!-- <tr class="odd"> -->
-<!-- <td style="text-align: center;">IBR</td> -->
-<!-- <td style="text-align: center;">Right Pylon</td> -->
-<!-- <td style="text-align: center;">Electra</td> -->
-<!-- </tr> -->
-<!-- <tr class="even"> -->
-<!-- <td style="text-align: center;">WDR</td> -->
-<!-- <td style="text-align: center;">Window Right</td> -->
-<!-- <td style="text-align: center;">Electra</td> -->
-<!-- </tr> -->
-<!-- <tr class="odd"> -->
-<!-- <td style="text-align: center;">{L,R}W{I,M,O}{I,O}</td> -->
-<!-- <td style="text-align: center;">see discussion above</td> -->
-<!-- <td style="text-align: center;">GV</td> -->
-<!-- </tr> -->
-<!-- </tbody> -->
-<!-- </table> -->
-<p>The probe type also is coded into each variable’s name, sometimes using four characters, sometimes only one: FSSP-100 (FSSP or F), FSSP-300 (F300 or 3), CDP (CDP or D), UHSAS (UHSAS or U), PCASP (PCAS or P), OAP-200X (200X or X), OAP-260X (260X or 6) and OAP-200Y (200Y or Y). Prefix letters are used to identify the type of measurement (A=accumulated particle counts per time interval per channel, C = concentration per channel, CONC = Concentration from all channels, DBAR = mean diameter, DISP = dispersion, PLWC =liquid water content, DBZ = radar reflectivity factor).</p>
+<p>The probe type also is coded into each variable’s name, sometimes using four characters, sometimes only one: FSSP-100 (FSSP or F), FSSP-300 (F300 or 3), CDP (CDP or D), UHSAS (UHSAS or U), PCASP (PCAS or P), OAP-200X (200X or X), OAP-260X (260X or 6) and OAP-200Y (200Y or Y). Prefix letters are used to identify the type of measurement (A=accumulated particle counts per time interval per channel, C = concentration per channel, CONC = Concentration from all channels, DBAR = mean diameter, DISP = dispersion, PLWC =liquid water content, DBZ = radar reflectivity factor, REFF = effective radius).</p>
 <p>Some of the probes discussed in this section are primarily aerosol spectrometers but are described here rather than in Section <a href="aerosol-particle-measurements.html#aerosol-particle-measurements">7</a> because they are similar to the hydrometeor spectrometers and so are most economically discussed here. However, see Section <a href="aerosol-particle-measurements.html#aerosol-particle-measurements">7</a> for the processing algorithms that lead to concentrations from the UHSAS and PCASP/SPP-200. The following table and discussion includes some obsolete variables (for the 200X and 200Y) for the same reason. The table also includes some variables derived from imaging spectrometers (the 2DC and 2DP probes) to highlight that the primary variables are similar to those discussed in this sub-section. Those variables are discussed in the next sub-section. In two cases, the FSSP and PCASP, two versions are listed, an obsolete version and a current version with a revised processing package (SPP-100 for the FSSP, SPP-200 for the PCASP). Both are included for historical completeness, but algorithms in this document discuss the current versions.</p>
 <p>The archived data files sometimes have “housekeeping” or status variables included that provide information on the operating state and data quality from the probes. For example, the CDP provides information on the average transit time, the voltage from the nominal 5-V source, the control board temperature, the laser block temperature, the laser current, the laser power monitor, the qualifier bandwidth, the qualifier baseline, the qualifier threshold, the sizer baseline, the wing-board temperature, an A-to-D overflow flag, and a count of particles rejected as being outside the depth of field. The netCDF variables and attributes should be consulted for this housekeeping information. The large number of housekeeping variables will not be included in this document, so appropriate manuals and the netCDF files should be consulted when interpreting this information.</p>
 <strong>Probes that produce size distributions of particles (with links to descriptions):<span id="TableOfProbes" label="TableOfProbes"></span></strong><br />
@@ -891,33 +800,41 @@ Y
 </tfoot>
 </table>
 </div>
+<div id="bins" class="section level3 unnumbered hasAnchor">
+<h3>Note Regarding Bin Conventions:<a href="cloud-physics-variables.html#bins" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="the-current-convention-after-may-2022" class="section level4 unnumbered hasAnchor">
+<h4>The current convention (after May 2022):<a href="cloud-physics-variables.html#the-current-convention-after-may-2022" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For an instrument that provides the size distribution in N bins, the size distribution is now provided in an N-element vector with a netCDF attribute “CellSizes” that has N+1 elements. The CellSizes are the lower limits to the diameters included in the corresponding bins, except the N+1 CellSize which is the upper limit to the last size bin. Following C conventions, the netCDF attributes denote the bins as bin-0 to bin-(N-1). For example, the CDP has 30 size bins, so the attributes say that the first bin is 0 and the last bin is 29, and there are 31 elements in the CellSizes attribute. The vector size distributions have a netCDF attribute called “CellSizeNote” as follows: “CellSizes are lower bin limits as diameter.” This note can be used to identify cases following the new convention. Another distinguishing feature is that the size-distribution array has dimension one less than the dimension of the CellSizes attribute, whereas the dimensions are equal in the old convention. Although the convention changed in May 2022, it is possible that reprocessing will follow this new convention if older datasets are reprocessed so it is important to check which convention was followed.</p>
+</div>
+<div id="the-convention-prior-to-may-2022" class="section level4 unnumbered hasAnchor">
+<h4>The convention prior to May 2022:<a href="cloud-physics-variables.html#the-convention-prior-to-may-2022" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Formerly, the first element in the size distribution (bin-0 in C index convention) was a remnant placeholder and should be ignored. The size distribution containing N measurements was provided in N subsequent bins, so the array size was N+1. There were also N+1 elements in the CellSizes attribute, but the values were the upper-limit diameters to the corresponding bins in the size distribution, except the first CellSize which was the lower limit to the first valid bin; i.e., CellSize[0] was the minimum diameter entering bin-1 of the size distribution. The size-distribution array had a netCDF attribute “CellSizeNote” that was “CellSizes are upper bin limits as diameter”. This note can be used to recognize the old-convention size distributions. They also can be identified by the dimension of the size-distribution array, which was equal to the dimension of the CellSizes attribute.</p>
+</div>
+</div>
 <div id="CRPC" class="section level3 unnumbered hasAnchor">
 <h3>Count Rate Per Channel: ACDP, AFSSP, AS100, AF300, AS200, APCAS, A200X, A260X, A200Y, AUHSAS<a href="cloud-physics-variables.html#CRPC" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<em>The size distribution of the number of particles detected by a 1D hydrometeor probe per unit time.</em> These measurements have “vector” character in the NetCDF output files, with dimension equal to the number of channels in the table above and with one entry per channel. The first element in the vector is a historical remnant from a time when housekeeping information was stored here and should be ignored. For the size limits of the channels, see the netCDF attributes of the following variables for “Size Distribution”.
+<em>The size distribution of the number of particles detected by a 1D hydrometeor probe per unit time.</em> These measurements have “vector” character in the NetCDF output files, with dimension equal to the number of channels in the table above and with one entry per channel. See <a href="cloud-physics-variables.html#bins">this explanation</a> of the bins in the size arrays. For the size limits of the channels, see the netCDF attributes of the “Size Distribution” variables described below, esp. the attribute “CellSizes”.
 </p>
-<strong><u><span id="punch:5-4" label="punch:5-4">[punch:5-4]</span><span id="punch:5-7" label="punch:5-7">[punch:5-7]</span></u></strong><br />
-<p>
-<strong></strong>
-</p>
+<p><span id="punch5.4" label="punch5.4">[ToDo5.4]</span></p>
 </div>
 <div id="size-distribution" class="section level3 unnumbered hasAnchor">
 <h3>Size Distribution:<a href="cloud-physics-variables.html#size-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>bin units=cm<sup>-3</sup>: <strong>CFSSP, CS100, CS200, CS300, CPCAS, CCDP, CUHSAS</strong><br />
 bin units=L<sup>-1</sup>: <strong>C200X, C260X, C200Y</strong><br />
-<em>The particle concentrations</em> in each usable bin of the probe. These netCDF variables have “vector” character with dimension equal to the number of channels in the table above. The first vector member should be ignored. For some scattering spectrometer probes (FSSP-100, FSSP-300, PCASP) the concentration value is modified by the probe activity (FACT, PACT) as described below. The concentration is obtained from the total number of particles detected and a calculated, probe-dependent sample volume. For some probes (CDP, FSSP) that is dependent on TASX and additional attributes specified by attributes (e.g., depth of field and beam diameter) of the corresponding variable in the netCDF file. For others (UHSAS, PCAS) a separate measure of flow (UFLWC, PFLWC) is used. For all, the size distribution is reported as the ambient concentration in air at the pressure and temperature at flight level. For additional details, see the links in the table or, for older probes, <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155%22">RAF Bulletin 24</a>. See also the related size distribution variables C1DC and C1DP in Sect. @ref(#c1dc-c1dp).</p>
+<em>The particle concentrations</em> in each size bin of the probe. These netCDF variables have “vector” character with dimension equal to the number of channels in the table above. See <a href="cloud-physics-variables.html#bins">this explanation</a> of the bins in the size arrays. For the size limits of the channels, see the netCDF attributes, esp. the attribute “CellSizes”. For some scattering spectrometer probes (FSSP-100, FSSP-300, PCASP) the concentration value is modified by the probe activity (FACT, PACT) as described below. The concentration is obtained from the total number of particles detected and a calculated, probe-dependent sample rate [volume per bin per time]. For some probes (CDP, FSSP) that sample rate is dependent on TASX and additional attributes specified by attributes (e.g., depth of field and beam diameter) of the corresponding variable in the netCDF file. For others (UHSAS, PCAS) a separate measure of flow (UFLWC, PFLWC) is used. For all, the size distribution is reported as the ambient concentration in air at the pressure and temperature at flight level. For additional details, see the links in the table or, for older probes, <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155%22">RAF Bulletin 24</a>. See also the related size distribution variables C1DC and C1DP in Sect. @ref(#c1dc-c1dp).</p>
 </div>
 <div id="concentration-cm3-concd-concf-conc3-concp-concu" class="section level3 hasAnchor" number="5.2.1">
 <h3><span class="header-section-number">5.2.1</span> Concentration (cm<sup>−3</sup>): CONCD, CONCF, CONC3, CONCP, CONCU;<a href="cloud-physics-variables.html#concentration-cm3-concd-concf-conc3-concp-concu" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>(L<sup>−1</sup>) CONCX, CONC6, CONCY</strong> {#concentration .unnumbered}</p>
-<p><em>The particle concentrations</em> <em>summed over all channels to give the total concentration in the size range of the probe.</em> For example, {CONCF} = <span class="math inline">\(\sum_i CFSSP_i\)</span>. For additional details, see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a>.</p>
+<p><em>The particle concentrations summed over all channels</em> to give the total concentration in the size range of the probe. For example, {CONCD} = <span class="math inline">\(\sum_i \{CCDP\}_i\)</span>. For additional details, see <a href="https://opensky.ucar.edu/islandora/object/archives%3A8155">RAF Bulletin 24</a>.</p>
 </div>
 <div id="tcnt" class="section level3 unnumbered hasAnchor">
 <h3>Counts per sampling interval (usually 1 s) (counts per time): TCNTx<a href="cloud-physics-variables.html#tcnt" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>The particle or hydrometeor count, all cells.</em> The instrument may be in FSSP-300, FSSP-100, CDP, PCAS, 260X, or UHSAS, denoted by respective suffixes 3, F, D, P, 6 or U.</p>
 </div>
 <div id="mean-diameter" class="section level3 unnumbered hasAnchor">
-<h3>Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU<a href="cloud-physics-variables.html#mean-diameter" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><em>The arithmetic average of all measured particle diameters from a particular probe.</em> This mean is calculated as follows:<br /></p>
+<h3>Mean Diameter (μm): DBARD, DBARF, DBAR3, DBAR6, DBARP, DBARX, DBARY, DBARU<a href="cloud-physics-variables.html#mean-diameter" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>The arithmetic average of all measured particle diameters from a particular probe.</em> This mean is calculated as follows:</p>
 <p class="box">
 {Cy<span class="math inline">\(_{i}\)</span>} = concentration
 from probe y in channel i
@@ -938,7 +855,7 @@ size limits for the channel)
 </div>
 <div id="dispersion" class="section level3 unnumbered hasAnchor">
 <h3>Dispersion (dimensionless): DISPD, DISPF, DISP3, DISP6, DISPP, DISPX, DISPY, DISPU<a href="cloud-physics-variables.html#dispersion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><em>The ratio of the standard deviation of particle diameters to the mean particle diameter.</em><br /></p>
+<p><em>The ratio of the standard deviation of particle diameters to the mean particle diameter.</em></p>
 <p class="box">
 {<a href="cloud-physics-variables.html#mean-diameter">DBARx</a>} = mean particle diameter [<span class="math inline">\(\mu m\)</span>]<br />
 {Cy<span class="math inline">\(_{i}\)</span>}, i1, i2, <span class="math inline">\(d_{i}\)</span> as for mean diameter above
@@ -951,8 +868,8 @@ size limits for the channel)
 </p>
 </div>
 <div id="PSD-LWC" class="section level3 unnumbered hasAnchor">
-<h3>Liquid Water Content (g m<strong><span class="math inline"><sup> − 3</sup></span></strong>): PLWCD, PLWCF, PLWCX, PLWC6, PLWCY<a href="cloud-physics-variables.html#PSD-LWC" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><em>The density of liquid water represented by the size distribution measured by a hydrometeor probe.</em> These variables are calculated from the measured concentration (CONCx) and the third moment of the particle diameter, with the assumption that the particle is a water drop. The following box describes the calculation in terms of an equivalent droplet diameter, the diameter that represents the mass in the detected particle. The equivalent droplet diameter is normally the measured diameter for liquid hydrometeors, but some processing has used other assumptions and this is a choice that can be made based on project needs. Using this definition allows for the approximate estimation of ice water content in cases where it is known that all hydrometeors are ice.<br /></p>
+<h3>Liquid Water Content (g m<sup>-3</sup>: PLWCD, PLWCF, PLWCX, PLWC6, PLWCY<a href="cloud-physics-variables.html#PSD-LWC" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>The density of liquid water</em> represented by the size distribution measured by a hydrometeor probe. These variables are calculated from the measured concentration (CONCx) and the third moment of the particle diameter, with the assumption that the particle is a water drop. The following box describes the calculation in terms of an equivalent droplet diameter, the diameter that represents the mass in the detected particle. The equivalent droplet diameter is normally the measured diameter for liquid hydrometeors, but some processing has used other assumptions and this is a choice that can be made based on project needs. Using this definition allows for the approximate estimation of ice water content in cases where it is known that all hydrometeors are ice.</p>
 <p class="box">
 <span class="math inline">\(d_{e,i}\)</span> = equivalent melted diameter for channel <span class="math inline">\(i\)</span> of probe x<br />
 {Cy<span class="math inline">\(_{i}\)</span>}, i1, i2 as for mean diameter above<br />
@@ -970,7 +887,7 @@ is in units of g<span class="math inline">\(\,\)</span>m<span class="math inline
 </div>
 <div id="DBZ" class="section level3 unnumbered hasAnchor">
 <h3>Radar Reflectivity Factor (dbZ): DBZF, DBZX, DBZ6, DBZY, DBZD<a href="cloud-physics-variables.html#DBZ" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><em>The radar reflectivity factor</em> <em>calculated from the measured size distribution from a hydrometeor probe.</em> This is calculated from the measured concentration and the sixth moment of the size distribution, with the assumption that the particles are water drops. An equivalent radar reflectivity factor can be calculated from the hydrometeor size distribution if another assumption is made about composition of the particles, but this variable is not part of normal data files. The radar reflectivity factor is a characteristic only of the hydrometeor size distribution; it is <em>not</em> a measure of radar reflectivity, because the latter also depends on wavelength, dielectric constant, and other characteristics of the hydrometeors. The normally used radar reflectivity factor is measured on a logarithmic scale that depends on a particular choice of units, so (although it is not conventional) an appropriate scale factor <em>Z<sub>r</sub></em> is included in the following equation to satisfy the convention that arguments of logarithms should be dimensionless.</p>
+<p><em>The radar reflectivity factor</em> calculated from the measured size distribution from a hydrometeor probe. This is calculated from the measured concentration and the sixth moment of the size distribution, with the assumption that the particles are water drops. An equivalent radar reflectivity factor can be calculated from the hydrometeor size distribution if another assumption is made about composition of the particles, but this variable is not part of normal data files. The radar reflectivity factor is a characteristic only of the hydrometeor size distribution; it is <em>not</em> a measure of radar reflectivity, because the latter also depends on wavelength, dielectric constant, and other characteristics of the hydrometeors. The normally used radar reflectivity factor is measured on a logarithmic scale that depends on a particular choice of units, so (although it is not conventional) an appropriate scale factor <span class="math inline">\(Z_r\)</span> is included in the following equation to satisfy the convention that arguments of logarithms should be dimensionless.</p>
 <p class="box">
 <span class="math inline">\(d_{i}\)</span> = diameter for channel <span class="math inline">\(i\)</span> of probe x<br />
 {Cy<span class="math inline">\(_{i}\)</span>}, i1, and i2 as for mean diameter above<br />
@@ -982,12 +899,9 @@ is in units of g<span class="math inline">\(\,\)</span>m<span class="math inline
 \tag{5.8}
 \end{equation}\]</span>
 </p>
-<p>
-<span id="punch:5-5" label="punch:5-5">[punch:5-5]</span>
-</p>
 </div>
 <div id="effective-radius" class="section level3 unnumbered hasAnchor">
-<h3>Effective Radius (<span class="math inline"><em>μ</em></span>m): REFFD, REFFF<a href="cloud-physics-variables.html#effective-radius" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3>Effective Radius (μm): REFFD, REFFF<a href="cloud-physics-variables.html#effective-radius" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>One-half the ratio of the third moment of the diameter measurements to the second moment.</em> This variable is useful in some calculations that relate the liquid water content of a cloud layer to its optical properties.</p>
 <p class="box">
 <span class="math inline">\(d_{i}\)</span> = diameter for channel <span class="math inline">\(i\)</span> of probe x<br />
@@ -995,7 +909,7 @@ is in units of g<span class="math inline">\(\,\)</span>m<span class="math inline
 </p>
 <p class="box2">
 <span class="math display" id="eq:REFFbox">\[\begin{equation}
-\mathrm{\{REFFx\}}=\frac{1}{2}\frac{\sum{\displaystyle {\displaystyle \left\{ \mathrm{Cy}_{i}\right\} d_{i}^{3}}}}{\sum{\displaystyle {\displaystyle \left\{ \mathrm{Cy}_{i}\right\} d_{i}^{2}}}}
+\mathrm{\{REFFx\}}=\frac{1}{2}\frac{\sum_{i=i1}^{i2}{\displaystyle {\displaystyle \left\{ \mathrm{Cy}_{i}\right\} d_{i}^{3}}}}{\sum_{i=i1}^{i2}{\displaystyle {\displaystyle \left\{ \mathrm{Cy}_{i}\right\} d_{i}^{2}}}}
 \tag{5.9}
 \end{equation}\]</span>
 </p>
@@ -1006,80 +920,75 @@ is in units of g<span class="math inline">\(\,\)</span>m<span class="math inline
 </div>
 <div id="fssp-range" class="section level3 unnumbered hasAnchor">
 <h3>FSSP-100 Range (dimensionless): FRNG, FRANGE<a href="cloud-physics-variables.html#fssp-range" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<em>The size range in use for the FSSP-100</em> <em>probe</em>.
-</p>
-<table>
+<p><em>The size range in use for the FSSP-100 probe</em>.</p>
+<table class="table table-bordered" style="margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th style="text-align: center;">
+<tr>
+<th style="text-align:center;">
 Range
 </th>
-<th style="text-align: center;">
-<strong>Nominal Size Range</strong>
+<th style="text-align:center;">
+Nominal Sizes [μm]
 </th>
-<th style="text-align: center;">
-<strong>Nominal Bin Width</strong>
+<th style="text-align:center;">
+Nominal Bin Width [μm]
 </th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 0
 </td>
-<td style="text-align: center;">
-2–47 <span class="math inline"><em>μm</em></span>
+<td style="text-align:center;">
+2-47
 </td>
-<td style="text-align: center;">
-3 <span class="math inline"><em>μm</em></span>
+<td style="text-align:center;">
+3.0
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 1
 </td>
-<td style="text-align: center;">
-2–32 <span class="math inline"><em>μm</em></span>
+<td style="text-align:center;">
+2-32
 </td>
-<td style="text-align: center;">
-2 <span class="math inline"><em>μm</em></span>
+<td style="text-align:center;">
+2.0
 </td>
 </tr>
-<tr class="odd">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 2
 </td>
-<td style="text-align: center;">
-1–15 <span class="math inline"><em>μm</em></span>
+<td style="text-align:center;">
+1-15
 </td>
-<td style="text-align: center;">
-1 <span class="math inline"><em>μm</em></span>
+<td style="text-align:center;">
+1.0
 </td>
 </tr>
-<tr class="even">
-<td style="text-align: center;">
+<tr>
+<td style="text-align:center;">
 3
 </td>
-<td style="text-align: center;">
-0.5–7.5 <span class="math inline"><em>μm</em></span>
+<td style="text-align:center;">
+0.5-7.5
 </td>
-<td style="text-align: center;">
-0.5 <span class="math inline"><em>μm</em></span>
+<td style="text-align:center;">
+0.5
 </td>
 </tr>
 </tbody>
 </table>
-<p>
-<p><br />
-<br />
-In recent NETCDF data files, the actual bin boundaries used for processing are recorded in the header. That header should be consulted because processing sometimes uses non-standard sizes selected to adjust for Mie scattering, which causes departures from the nominal linear bins. Recent projects have all used range 0, but other choices have been made in some older projects and other ranges are still available to future projects.</p>
-<!-- <h2 id="hydrometeor-imaging-probessubsechydrometeor-imaging-probes">Hydrometeor Imaging Probes<span id="subsec:Hydrometeor-Imaging-Probes"label="subsec:Hydrometeor-Imaging-Probes">[subsec:Hydrometeor-Imaging-Probes]</span></h2> -->
+<p>In recent NETCDF data files, the actual bin boundaries used for processing are recorded in the header. That header should be consulted because processing sometimes uses non-standard sizes selected to adjust for Mie scattering, which causes departures from the nominal linear bins. Recent projects have all used range 0, but other choices have been made in some older projects and other ranges are still available to future projects. See <a href="cloud-physics-variables.html#bins">this note</a> regarding bin conventions.</p>
 </div>
 </div>
 <div id="hydrometeor-imaging-probes" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Hydrometeor Imaging Probes<a href="cloud-physics-variables.html#hydrometeor-imaging-probes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Instruments used to obtain hydrometeor images include the two-dimensional imaging probes (<a href="https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud-probe">2DC</a> and <a href="https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-precipitation-probe">2DP</a> and some others that require special processing and separate data records. The former are described in this subsection. The latter include a three-view cloud particle imager (<a href="https://www.eol.ucar.edu/instruments/three-view-cloud-particle-imager">3V-CPI</a>), a small ice detector (<a href="https://www.eol.ucar.edu/instruments/small-ice-detector-version-2-hiaper">SID-2H</a>), and a holographic imager (<a href="https://www.eol.ucar.edu/instruments/holographic-detector-clouds">HOLODEC</a>). Some projects have used a <a href="https://journals.ametsoc.org/view/journals/atot/23/11/jtech1927_1.x">2D-S</a> probe. For information regarding use of data from the latter set of instruments, consult EOL/RAF data management via <a href="mailto:mailto:raf-dm%40eol.ucar.edu">this email address</a>.</p>
-<p>In addition to the standard processing that produces the variables in this subsection, an alternate processor is available that provides some additional options and capabilities, including the production of two sets of variables that include either all particles or all particles that pass a roundness test. Additional options include different ways of defining the particle size (including circle fitting or sizing based on the dimension along the direction of flight. Corrections to sizing are made to account for diffraction, and a shattering correction can be applied based on interarrival times. Some categories of spurious images (e.g., “streakers”) can be recognized and rejected. This processing is described in <a href="www/Bansemer2DProcessing.pdf">this document</a> and at <a href="https://www.eol.ucar.edu/software/process2d">this web page&lt;</a> and is made available by special arrangement.</p>
+<h2><span class="header-section-number">5.3</span> Hydrometeor Images<a href="cloud-physics-variables.html#hydrometeor-imaging-probes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Instruments used to obtain hydrometeor images include the two-dimensional imaging probes (<a href="https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud-probe">2DC</a> and <a href="https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-precipitation-probe">2DP</a> and some others that require special processing and separate data records. The former are described in this subsection. The latter include a three-view cloud particle imager (<a href="https://www.eol.ucar.edu/instruments/three-view-cloud-particle-imager">3V-CPI</a>), a small ice detector (<a href="https://www.eol.ucar.edu/instruments/small-ice-detector-version-2-hiaper">SID-2H</a>), and a holographic imager (<a href="https://www.eol.ucar.edu/instruments/holographic-detector-clouds">HOLODEC</a>). Some projects have used a <a href="https://journals.ametsoc.org/view/journals/atot/23/11/jtech1927_1.x">2D-S</a> probe. For information regarding use of data from the latter set of instruments, consult EOL/RAF data management at <a href="mailto:raf-dm@eol.ucar.edu" class="email">raf-dm@eol.ucar.edu</a>.</p>
+<p>In addition to the standard processing that produces the variables in this subsection, an alternate processor is available that provides some additional options and capabilities, including the production of two sets of variables that include either all particles or all particles that pass a roundness test. Additional options include different ways of defining the particle size (including circle fitting or sizing based on the dimension along the direction of flight. Corrections to sizing are made to account for diffraction, and a shattering correction can be applied based on interarrival times. Some categories of spurious images (e.g., “streakers”) can be recognized and rejected. This processing is described in <a href="www/Bansemer2DProcessing.pdf">this document</a> and at <a href="https://www.eol.ucar.edu/software/process2d">this web page</a> and is made available by special arrangement. Contact <a href="mailto:dm-raf@eol.ucar.edu" class="email">dm-raf@eol.ucar.edu</a>.</p>
 <p>Measurements based on the two 2D probes will be discussed together in this section because the 2DC and 2DP probes function similarly, differing primarily in the size resolution (typically 25 μm or less for the 2DC and 100 or 200 μm for the 2DP). The following variables have names like CONC1DC or CONC1DP to designate the two types of hydrometeor imagers. In addition, variables normally have location designations like ’_LWIO’ as described at the beginning of section @ref(#sensors-1-D-probes). In the following ’y’ is sometimes used to designate either ’C’ or ’P’.</p>
 <p>For the images from the 2D probes, separate data files need to be used. RAF provides <a href="https://www.eol.ucar.edu/software/xpms2d">XPMS2D</a> that can be used to view the images and calculate various properties of the hydrometeor population based on these separate files.</p>
 <div id="special-1d-nomenclature" class="section level3 unnumbered hasAnchor">
@@ -1102,12 +1011,12 @@ In recent NETCDF data files, the actual bin boundaries used for processing are r
 </div>
 <div id="c1dc-c1dp" class="section level3 unnumbered hasAnchor">
 <h3>2D Size Distribution (L<sup>-1</sup> channel^-1): C1DC, C1DCA, C1DCR, C1DP<a href="cloud-physics-variables.html#c1dc-c1dp" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><em>The concentration of particles measured by a 2D probe</em> in each of 62 bins in a specified time interval, usually 1 s. These are calculated from A1DC or A1DP by application of an assumed size-dependent sample volume based on probe characteristics and the flight speed. The convention for bin sizes changed in May 2022. After that date, the size array is provided in a a 63-element vector that has an associated attribute with 64 elements giving the lower size limits of the corresponding bins, except the 64th which is the upper size limit of the 63rd bin. (Following C indexing conventions, these bins are called bin-0 to bin=62.) Some projects reprocessed after that date may also follow this new convention. The sizing technique requires that the end elements be unshadowed and so precludes any measurement with width of 63 elements, so the last bin is always zero. Prior to May 2022, these sizes were provided in a 64-element array (following long-established historical convention). In these cases the first element should be ignored, so the 64-element vector has valid information only in the following 62 bins (called bins 1–62 following C indexing conventions). The cell boundaries specified in the netCDF header as an attribute of these variables they specify the end points of the bin; e.g,, in the 64-element array of provided cell boundaries, the first element is the lower size limit of the first data cell which is the second element in C1DC. For a typical 2DC with 25-μm size resolution, the cell sizes increase by 25 μm per bin for each of the C1DC bins. Also included as attributes with the netCDF variable C1DC or C1DP are the size-dependent depth of field (mm) and effective sample area<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a>
+<p><em>The concentration of particles measured by a 2D probe</em> in each of 62 bins in a specified time interval, usually 1 s. These are calculated from A1DC or A1DP by application of an assumed size-dependent sample volume based on probe characteristics and the flight speed. The convention for bin sizes changed in May 2022, as explained <a href="cloud-physics-variables.html#bins">here</a>. After that date, the size array is provided in a a 63-element vector that has an associated attribute with 64 elements giving the lower size limits of the corresponding bins, except the 64th which is the upper size limit of the 63rd bin. (Following C indexing conventions, these bins are called bin-0 to bin=62.) Some projects reprocessed after that date may also follow this new convention. The sizing technique requires that the end elements be unshadowed and so precludes any measurement with width of 63 elements, so the last bin is always zero. Prior to May 2022, these sizes were provided in a 64-element array (following long-established historical convention). In these cases the first element should be ignored, so the 64-element vector has valid information only in the following 62 bins (called bins 1–62 following C indexing conventions). The cell boundaries specified in the netCDF header as an attribute of these variables they specify the end points of the bin; e.g,, in the 64-element array of provided cell boundaries, the first element is the lower size limit of the first data cell which is the second element in C1DC. For a typical 2DC with 25-μm size resolution, the cell sizes increase by 25 μm per bin for each of the C1DC bins. Also included as attributes with the netCDF variable C1DC or C1DP are the size-dependent depth of field (mm) and effective sample area<a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a>
 (mm), the latter having values of zero for the first and last elements in the 64-value vector. Attributes specify the valid bin sizes, often excluding the first bin to suggest that those measurements of concentration are unreliable.</p>
 </div>
 <div id="conc2d" class="section level3 unnumbered hasAnchor">
 <h3>2D Concentration (L<sup>-1</sup>): CONC2C, CONC2P, CONC1DC, CONC1DC100, CONC1DC150, CONC1DP, CONC1DCA, CONC1DCR, CONC2DCA, CONC2DCR (obsolete: CON2C)<a href="cloud-physics-variables.html#conc2d" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><em>The total concentration of all particles</em> detected by a 2D hydrometeor imager, or (in the case of CONC1DC100 or CONC1DC150) the concentration of all particles sized to be at least xxx μm in the dimension perpendicular to the direction of flight, where xxx may be 100 or 150. These concentrations are the sum of the particle size distribution given above (C1DC or C1DP), with appropriate channels excluded for CONC1DC100 and CONC1DC150. “C” refers to the 2DC probe and “P” to the 2DP probe; both modern versions are described at <a href="https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud-probe">this link</a>. Special processing sometimes includes CONC1DCA and CONC1DCR or CONC2DCA and CONC2DCR; “A” refers to the concentrations in all cells processed via the 260-emulation method (i.e., center-in where the end diodes are not shadowed), while “R” refers to the total concentration determined only from images that pass a “roundness” test.</p>
+<p><em>The total concentration of all particles</em> detected by a 2D hydrometeor imager, or (in the case of CONC1DC100 or CONC1DC150) the concentration of all particles sized to be at least xxx μm in the dimension perpendicular to the direction of flight, where xxx may be 100 or 150. These concentrations are the sum of the particle size distribution given above (C1DC or C1DP), with appropriate channels excluded for CONC1DC100 and CONC1DC150. Last letter “C” refers to the 2DC probe and “P” to the 2DP probe; both modern versions are described at <a href="https://www.eol.ucar.edu/instruments/two-dimensional-optical-array-cloud-probe">this link</a>. Special processing sometimes includes CONC1DCA and CONC1DCR or CONC2DCA and CONC2DCR; “A” refers to the concentrations in all cells processed via the 260-emulation method (i.e., center-in where the end diodes are not shadowed), while “R” refers to the total concentration determined only from images that pass a “roundness” test.</p>
 </div>
 <div id="dt1dc" class="section level3 unnumbered hasAnchor">
 <h3>2D Dead Time (ms): DT1DC<a href="cloud-physics-variables.html#dt1dc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1118,8 +1027,8 @@ In recent NETCDF data files, the actual bin boundaries used for processing are r
 <p><em>The sum of the shadowed area represented by images recorded in the sample period,</em> usually 1 s. The estimated ice water content (IWC1DC), when present, is based on AREA and TASX.</p>
 </div>
 <div id="dbar2d" class="section level3 unnumbered hasAnchor">
-<h3>2D Mean Diameter (<span class="math inline"><em>μ</em></span>m): DBAR1DC, DBAR1DP<a href="cloud-physics-variables.html#dbar2d" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><em>The mean diameter calculated from the measured size distribution.</em> In this calculation, the bin sizes are taken to be the averages of the lower and upper limits of the size bins<em>.</em> The calculation is as described by <a href="cloud-physics-variables.html#eq:DBARbox">(5.5)</a>. Special processing sometimes produces additional related variables: DBAR1DCA and DBAR1DCR on DBAR2DCA and DBAR2DCR. “A” refers to the diameters processed via the 260-emulation method (i.e., center-in where the end diodes are not shadowed), while “R” refers to the diameters only of images that pass a “roundness” test.</p>
+<h3>2D Mean Diameter (μm): DBAR1DC, DBAR1DP<a href="cloud-physics-variables.html#dbar2d" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>The mean diameter calculated from the measured size distribution.</em> In this calculation, the bin sizes are taken to be the averages of the lower and upper limits of the size bins. The calculation is as described by <a href="cloud-physics-variables.html#eq:DBARbox">(5.5)</a>. Special processing sometimes produces additional related variables: DBAR1DCA and DBAR1DCR on DBAR2DCA and DBAR2DCR. “A” refers to the diameters processed via the 260-emulation method (i.e., center-in where the end diodes are not shadowed), while “R” refers to the diameters only of images that pass a “roundness” test.</p>
 </div>
 <div id="disp2d" class="section level3 unnumbered hasAnchor">
 <h3>2D Dispersion (dimensionless): DISP1DC, DISP1DP<a href="cloud-physics-variables.html#disp2d" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1134,16 +1043,20 @@ In recent NETCDF data files, the actual bin boundaries used for processing are r
 <p><em>The radar reflectivity factor</em> calculated from the measured size distribution under the assumption that all particles are spherical water drops. The calculation is as described by <a href="cloud-physics-variables.html#eq:DBZbox">(5.8)</a>. Special processing sometimes includes DBZ2DCA and DBZ2DCR; “A” refers to the reflectivity calculated from all images processed via the 260-emulation method (i.e., center-in where the end diodes are not shadowed), while “R” refers to the corresponding reflectivity based only on images that pass a “roundness” test.</p>
 </div>
 <div id="reff2d" class="section level3 unnumbered hasAnchor">
-<h3>2D Effective Radius (<span class="math inline"><em>μ</em></span>m): REFF2DC, REFF2DP<a href="cloud-physics-variables.html#reff2d" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><em>One-half the ratio of the third moment of the particle diameter to the second moment.</em> The formula used is given by <a href="cloud-physics-variables.html#eq:REFFbox">(5.9)</a>. Special processing sometimes includes REFF2DCA and REFF2DCR; “A” refers to the reflectivity calculated from all images processed via the 260-emulation method (i.e., center-in where the end diodes are not shadowed), while “R” refers to the corresponding reflectivity based only on images that pass a “roundness” test. Occasionally an additional variable named REFFD2DC or REFFF2DC has been added to represent the effective radius calculated from, respectively, the combined 1DC and CDP size distributions or the combined 1DC and FSSP-100 size distributions.<span id="punch:5-6" label="punch:5-6">[punch:5-6]</span></p>
+<h3>2D Effective Radius (μm): REFF2DC, REFF2DP<a href="cloud-physics-variables.html#reff2d" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>One-half the ratio of the third moment of the particle diameter to the second moment.</em> The formula used is given by <a href="cloud-physics-variables.html#eq:REFFbox">(5.9)</a>. Special processing sometimes includes REFF2DCA and REFF2DCR; “A” refers to the reflectivity calculated from all images processed via the 260-emulation method (i.e., center-in where the end diodes are not shadowed), while “R” refers to the corresponding reflectivity based only on images that pass a “roundness” test. Occasionally an additional variable named REFFD2DC or REFFF2DC has been added to represent the effective radius calculated from, respectively, the combined 1DC and CDP size distributions or the combined 1DC and FSSP-100 size distributions.<span id="punch5.6" label="punch5.6">[ToDo5.6]</span></p>
+<hr />
+</div>
+<div id="footnotes-4" class="section level3 unnumbered hasAnchor">
+<h3>Footnotes:<a href="cloud-physics-variables.html#footnotes-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="37">
-<li id="fn37"><p>King, W. D., D. A. Parkin and R. J. Handsworth, 1978: A hot-wire liquid water device having fully calculable response characteristics. J. Appl. Meteorol., 17, 1809–1813. See also Bradley, S. G., and W. D. King, 1979 Frequency response of the CSIRO Liquid Water Probe. J. Appl. Meteorol., 18, 361–366.<a href="cloud-physics-variables.html#fnref37" class="footnote-back">↩︎</a></p></li>
-<li id="fn38"><p>commonly called “EffectiveAreaWidth” in the netCDF files<a href="cloud-physics-variables.html#fnref38" class="footnote-back">↩︎</a></p></li>
+<ol start="38">
+<li id="fn38"><p>King, W. D., D. A. Parkin and R. J. Handsworth, 1978: A hot-wire liquid water device having fully calculable response characteristics. <em>J. Appl. Meteorol.,</em> <strong>17,</strong> 1809–1813. See also Bradley, S. G., and W. D. King, 1979: Frequency response of the CSIRO Liquid Water Probe. <em>J. Appl. Meteorol.,</em> <strong>18,</strong> 361–366.<a href="cloud-physics-variables.html#fnref38" class="footnote-back">↩︎</a></p></li>
+<li id="fn39"><p>commonly called “EffectiveAreaWidth” in the netCDF files<a href="cloud-physics-variables.html#fnref39" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -1178,8 +1091,8 @@ gitbook.start({
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
-"theme": "sepia",
-"family": "serif",
+"theme": "white",
+"family": "sans",
 "size": 2
 },
 "edit": {

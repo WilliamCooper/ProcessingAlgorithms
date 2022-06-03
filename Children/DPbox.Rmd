@@ -33,8 +33,8 @@ vapor pressure $e$:
 (\#eq:DPxCbox)
 \end{equation}
 - - - - - - - - - - - - - - - - - - - -    
-For other instruments producing measurements of vapor density (RHO
-[g\ m$^{-3}$]:^(a)^  
+For other instruments producing measurements of vapor density (RHO,
+[g\ m$^{-3}$]):^(a)^  
 \ \ \ \ find the water vapor pressure in units of hPa:
 \begin{equation}
 e = (\mathrm{\{RHO\}}\,R_{0}\,T_{K}\,/\,M_{w})\times 10^{-5}

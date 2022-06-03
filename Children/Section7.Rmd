@@ -30,7 +30,7 @@ RAF uses two modified TSI, Inc. [condensation nucleus counters](http://www.eol.u
 
 #### CN Counter Output (counts per sample interval): CNTS, CNT1, CNCNTS {-#cnts}
 
-*The raw output count from a condensation nucleus counter.* For the 3760A condensation nucleus counter, the project-dependent sample rate may be chosen in the range from 1–50 Hz but it is typically 10 Hz. In some unusual cases the counts are divided by a selected power of two to keep the counter from overflowing; see project documentation. The 3786 WCN may be programmed to report data at intervals from 0.1–3600 s.<span id="punch:7-1" label="punch:7-1">[punch:7-1]</span></p>
+*The raw output count from a condensation nucleus counter.* For the 3760A condensation nucleus counter, the project-dependent sample rate may be chosen in the range from 1–50 Hz but it is typically 10 Hz. In some unusual cases the counts are divided by a selected power of two to keep the counter from overflowing; see project documentation. The 3786 WCN may be programmed to report data at intervals from 0.1–3600 s.<span id="punch7.1" label="punch7.1">`r ifelse(PToDo,"[ToDo7.1]","")`</span></p>
 
 #### Condensation Nucleus (CN) Concentration (cm^-3^): CONCN, CNCONC, CONCNI {-#concn}
 
@@ -48,11 +48,11 @@ In the following formulae, the corrected flow FCNC in VLPM is explicitly convert
 <!-- <h2 id="aerosol-spectrometers">Aerosol Spectrometers</h2> -->
 ## Aerosol Spectrometers {#aerosol-spec}
 
-For size-resolved measurements of the concentration of aerosol particles, RAF deploys two instruments. The [Ultra High Sensitivity Aerosol Spectrometer](https://www.eol.ucar.edu/instruments/ultra-high-sensitivity-aerosol-spectrometer) (UHSAS) sizes particles in 99 bins from 0.06 to 1.0 $\mu\mathrm{m}$ diameter, and the [Passive Cavity Aerosol Spectrometer Probe](http://www.eol.ucar.edu/instruments/passive-cavity-aerosol-spectrometer-probe) (PCASP) has 30 channels covering the diameter range 0.1 to 3 $\mu\mathrm{m}$. Flow and total concentration variables for these instruments are described in this section, while additional variables are covered along with other 1-D probes in Sect.\ \@ref(sensors-1-D-probes), “Sensors Detecting Individual Hydrometeors (1-D Probes).”  
+For size-resolved measurements of the concentration of aerosol particles, RAF deploys two instruments. The [Ultra High Sensitivity Aerosol Spectrometer](https://www.eol.ucar.edu/instruments/ultra-high-sensitivity-aerosol-spectrometer) (UHSAS) sizes particles in 99 bins from 0.06 to 1.0 $\mu\mathrm{m}$ diameter, and the [Passive Cavity Aerosol Spectrometer Probe](http://www.eol.ucar.edu/instruments/passive-cavity-aerosol-spectrometer-probe) (PCASP) has 30 channels covering the diameter range 0.1 to 3 $\mu\mathrm{m}$. Flow and total concentration variables for these instruments are described in this section, while additional variables are covered along with other 1-D probes in Sect.\ \@ref(sensors-1-D-probes), “Size Distributions (1-D Probes).”  
 
 #### UHSAS Absolute Pressure in Optics Block (kPa): UPRESS {-#upress}
 
-*The pressure internal to the UHSAS instrument.* This is an analog measurement with calibration coefficients as recorded in the attributes for the variable.<span id="punch:7-2" label="punch:7-2">[punch:7-2]</span>  
+*The pressure internal to the UHSAS instrument.* This is an analog measurement with calibration coefficients as recorded in the attributes for the variable.  
 
 #### Measured and Corrected Sample Flow Rates (units, USMPFLW and PFLW: cm^3^min^-1^; UFLWC and PFLWC: ambient cm^3^s^-1^): USMPFLW, PFLW, UFLWC, PFLWC  {-#pflw}
 
@@ -78,3 +78,6 @@ Data from an aerosol mass spectrometer, a scanning mobility particle spectromete
 * **Aerosol Mass Spectrometer (AMS) data files** contain size-segregated chemical composition of non-refractory, submicron aerosol particles. The instrument is described here: [AMS](https://www.eol.ucar.edu/instruments/time-flight-aerosol-mass-spectrometer).  
 * **Scanning Mobility Particle Spectrometer (SMPS) files** contain fine particle differential size distributions. The number of channels and covered size range are variable. Diameter ranges from about 7.5 nm up to about 500 nm (pressure-dependent), and 15 size bins are typical. The instrument is described here: [SMPS](https://www.eol.ucar.edu/instruments/scanning-mobility-particle-spectrometer).  
 * **Auto-GNI, GNI Giant Nuclei Impactor (GNI) files** contain dry differential particle size distributions. The instrument is described here: [GNI](https://www.eol.ucar.edu/instruments/giant-nuclei-impactor).  
+
+***  
+### Footnotes: {.unnumbered}
