@@ -1,0 +1,117 @@
+---
+title: "sphCoord.Rmd"
+author: "William A Cooper"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+always_allow_html: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(kableExtra)
+```
+
+To obtain cartesian coordinates from spherical {$r$, $\theta$, $\phi$}:  
+$x=r\cos \phi \sin \theta$\
+$y=r\sin \phi \sin \theta$\
+$z=r\cos \theta$\
+
+However, latitude is $\lambda=\pi/2-\theta$ so 
+$$\sin(\theta)=\sin(\pi/2-\lambda)=\sin(\pi/2)\cos(\lambda)-\sin(\lambda)\cos(\pi/2)=\cos(\lambda)$$ $$\cos(\theta)=\cos(\pi/2-\lambda)=\cos(\pi/2)\cos(\lambda)+\sin(\pi/2)\sin(\lambda)=\sin(\lambda)$$ 
+
+Then the cartesian coordinates are:
+
+$$x=r\cos\lambda\cos\phi$$
+$$y=r\cos\lambda\sin\phi$$
+$$z=r\sin\lambda$$
+
+For $r$ equal to $R$, the radius of the (assumed spherical) Earth, the differences in Cartesian coordinates between two points are:  
+$$\Delta x=R(\cos\lambda_2\cos\phi_2-\cos\lambda_1\cos\phi_1)$$
+$$\Delta y=R(\cos\lambda_2\sin\phi_2-\cos\lambda_1\sin\phi_1)$$
+$$\Delta z=R(\sin\lambda_2-\sin\lambda_1)$$
+However, this does not translate to the units desired for variables like {DNI} and {DEI} or the equivalent {FXDIST} and {FXAZIM}, which could be used to navigate relative to a fixed point on the surface of the Earth. Instead, {FXDIST} should be based on the angular difference between vectors from the center of the Earth to the two points:  
+$\{\mathrm{FXDIST}\}=R\alpha$ where $\cos\alpha=\mathbf{V_1\cdot V_2}/R^2$ so
+$$\{\mathrm{FXDIST}\}=R\arccos(\cos\lambda_1\cos\phi_1\cos\lambda_2\cos\phi_2+\cos\lambda_1\sin\phi_1\cos\lambda_2\sin\phi_2+\sin\lambda_1\sin\lambda_2)$$
+In the case where $\phi_1=\phi_2$, this reduces to $R(\lambda_2-\lambda_1)$ as expected. For $\lambda_1=\lambda_2$, the result is $R\arccos(\cos^2\lambda_1(\cos(\phi_2-\phi_1))+\sin^2\lambda_1)$ vs.\ the expected approximation $R\cos\lambda_1(\phi_2-\phi_2)$. The following figure shows that these two equations evaluate to the same result for equal latitudes, to near machine precision.  
+```{r}
+l2 <- 0
+p2 <- 0
+l1 <- seq(-pi/2, pi/2, by=pi/100)
+p1 <- seq(-pi, pi, by=pi/100)
+dl <- length(l1)
+dp <- length(p1)
+F1 <- FS <- rep(0, dl*dp)
+dim(F1) <- c(dl,dp)
+dim(FS) <- c(dl,dp)
+for (il in 1:length(l1)) {
+  l <- l1[il]
+  for (ip in 1:length(p1)) {
+    p <- p1[ip]
+    F1[il,ip] <- cos(l)*cos(p)*cos(l2)*cos(p2)+cos(l)*sin(p)*cos(l2)*sin(p2)+sin(l)*sin(l2)
+    F1[il,ip] <- acos(F1[il,ip])
+    FX <- cos(l)*(p2 - p)
+    FY <- (l2 - l)
+    FS[il,ip] <- sqrt(FX^2 + FY^2)
+  }
+}
+DF <- F1-FS
+plot(180/pi*F1[51,], 180/pi*DF[51,], type='l', xlab='spherical angle [degrees]', ylab='error in angle difference [degrees]')
+title('difference between F1 and FS')
+```
+
+Unresolved, then, is the angle {FXAZIM}. This should be the heading that would take the aircraft along the great circle back to the initial point. That heading, however, is not constant along the great-circle segment. The best value for {FXAZIM} is the initial heading, although that would change along the great-circle segment. That initial heading is the angle between the great-circle segment connecting the two points and the great-circle through the aircraft location and the north pole of the coordinate system. The latter is the meridian with longitude equal to that of the aircraft. Spherical-triangle formulas then give the initial heading to point 1 as:
+$$\alpha=\pi+\arctan2(-(\cos \lambda _{1}\sin (\phi _2 - \phi _1)),\ (\cos \lambda _{2}\sin \lambda _{1}-\sin \lambda _{2}\cos \lambda _{1}\cos (\phi _2 - \phi_1)))$$
+$$\{FXAZIM\}=\frac{180}{\pi}\alpha$$
+This variable could be useful beyond indicating position relative to a reference point, because it would indicate the heading to fly to follow a great-circle route to that reference point. As the aircraft moved along the great circle, the heading would update to indicate the shortest course to that point.  
+```{r echo=FALSE}
+fxdist <- function(lambda, phi) {
+  lambda <- lambda * pi / 180
+  phi <- phi * pi / 180
+  Re <- Ranadu::StandardConstant('Re')
+  X <- cos(lambda[1])*cos(phi[1])*cos(lambda[2])*cos(phi[2]) + 
+    cos(lambda[1])*sin(phi[1])*cos(lambda[2])*sin(phi[2])+sin(lambda[1])*sin(lambda[2])
+  D <- Re * acos(X)
+  A <- atan2((cos(lambda[1]) * sin (phi[2] - phi[1])), 
+             (-cos(lambda[2]) * sin (lambda[1]) + 
+                sin(lambda[2]) * cos(lambda[1]) * cos (phi[2] - phi[1])))
+  A <- A * 180 / pi + 180
+  if (A < 0) {A <- A + 360}
+  D <- D * 0.001  # to km
+  return(c(D, A))
+}
+oldfx <- function(lambda, phi) {
+  lambda <- lambda * pi / 180
+  phi <- phi * pi / 180
+  Re <- Ranadu::StandardConstant('Re')
+  dei <- Re * (phi[2] - phi[1]) * cos(lambda[1])
+  dni <- Re * (lambda[2] - lambda[1])
+  D <- sqrt(dei^2 + dni^2) * 0.001
+  A <- 180 / pi * atan2(-dei, -dni)
+  if (A < 0) {A <- A + 360}
+  return(c(D, A))
+}
+latp <- c(30, 45);lonp <- c(-100, -90)
+```
+
+Some checks: consider the aircraft flying at {lat,long} of `r sprintf('%.0f, %.0f', latp[2], lonp[2])` and a reference point of `r sprintf('%.0f, %.0f', latp[1], lonp[1])`. The above equations lead to a distance and heading to the reference point of `r FX = fxdist(latp, lonp);sprintf('%.1f and %.1f', FX[1], FX[2])`. In contrast, the current rectilinear coordinate system would yield `r FS = oldfx(latp, lonp);sprintf('%.1f and %.1f', FS[1], FS[2])`. The following table includes some additional results, showing that the differences can be significant for large separation between the points. In this table, lat/lon values are in degrees, *D* is the distance in km and *A* is the heading angle in degrees for the two methods, first using spherical geometry and second listing the results from the present cartesian code.
+
+```{r include=TRUE}
+options(digits = 3)
+latAC <- c(20, 80, -50, -20, 20)
+lonAC <- c(100, -105, 30, -45, 45)
+latREF <- c(50, -10, 30, 20, 85)
+lonREF <- c(90, 20, 50, 50, 40)
+FX <- rep(0, 2*length(latAC));dim(FX) <- c(length(latAC), 2)
+FS <- rep(0, 2*length(latAC));dim(FS) <- c(length(latAC), 2)
+for (i in 1:5) {
+  FX[i,] <- fxdist(c(latREF[i], latAC[i]), c(lonREF[i], lonAC[i]))
+  FS[i,] <- oldfx(c(latREF[i], latAC[i]), c(lonREF[i], lonAC[i]))
+  # print(sprintf(' lat/lon AC and REF: %.0f %.0f %.0f %.0f sph D/A %.1f %.1f cart D/A %.1f %.1f',
+  #               latAC[i], lonAC[i], latREF[i], lonREF[i], FX[i,1], FX[i,2], FS[i,1], FS[i,2]))
+}
+DT <- data.frame(latAC, lonAC, latREF, lonREF, FX[,1], FS[,1], FX[,2], FS[,2])
+names(DT) <- c('AC lat', 'AC lon', 'REF lat', 'REF lon', 'sph D', 'sph A', 'cart D', 'cart A')
+knitr::kable(DT, row.names=FALSE) %>% kable_styling(bootstrap_options = 'bordered')
+```

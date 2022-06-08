@@ -1,0 +1,20 @@
+```{css, include=TRUE}
+
+body {
+  background-color: lightyellow;
+}
+
+blockquote { 
+        background-color: #FFDEAD;  
+        border: 2px solid;  
+        border-color: #D2D4E9;
+        border-radius: 4px;  
+        margin-right: 25px;
+}
+
+.emphasized {
+   font-size: 2.2em;
+   background-color: red;
+}
+
+```  

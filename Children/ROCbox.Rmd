@@ -1,25 +1,3 @@
-<style>
-p.box {
-background-color: #F8F8F8;
-padding: 10px;
-border: 2px solid black;
-margin-left: 20px;
-margin-right: 20px;
-border-radius: 5px;
-}
-</style>
-
-<style>
-p.box2 {
-background-color: #FFFFFF;
-padding: 10px;
-border: 2px solid red;
-margin-left: 10px;
-margin-right: 10px;
-border-radius: 1px;
-}
-</style>
-
 <!-- \fbox{\begin{minipage}[t]{0.95\textwidth}% -->
 
 <p class=box>  
@@ -31,7 +9,7 @@ $p$ = [PSXC](#psx) = measured ambient pressure [hPa]
 $\Delta p$ = difference between current and last value of PSXC  
 $\Delta t$ = time between samples (1/$f$ where $f$ is the sample
 frequency)  
-$F_{L}$ = low-pass Butterworth filter (cf.\ p.\ \pageref{compFilter}).  
+$F_{L}$ = low-pass Butterworth filter (cf.\ [this discussion](#vewc-vnsc)).  
 </p><p class=box2>
 \ 1. From consecutive measurements of pressure, estimate the rate of climb
 from the hydrostatic equation:  

@@ -32,7 +32,7 @@ border-radius: 1px;
 </style>
 
 ```{css, include = TRUE, echo = FALSE}
-.box-out {
+.blockquote {
   background-color: palegrey;
   border: 2px solid darkgrey;
   font-size: 10pt;

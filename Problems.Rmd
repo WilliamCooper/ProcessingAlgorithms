@@ -2,20 +2,27 @@
 title: "Problems"
 author: "William A Cooper"
 date: "`r Sys.Date()`"
-output: html_document
+output:
+  pdf_document
 ---
 
 ```{r setup, include=FALSE}
+library(knitr)
+library(tinytex)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 Some problems encountered when trying to update the ProcessingAlgorithms document to include all variables appearing in netCDF files. For the record, the procedure used was this:  
+<!-- Note: used rmarkdown::render("Problems.Rmd", output_format = 'pdf_document') to get pdf. -->
 
 1. Search for variable names using constructVarTable.R. I ran this on my local computer and also on barolo, searching both /scr/raf_data and /scr/raf/Prod_Data.  
 2. This script also tried to do some preliminary classification into types, including 'pa' (in ProcessingAlgorithms), 'st' (status or housekeeping), 'a' (needs addition to ProcessingAlgorithms), 'sp' (special use and therefore not needed in ProcessingAlgorithms).  
 3. The resulting data.frame, with unique variable names, was saved as DVALL.Rdata.  
 4. I then merged the resulting 'a' variables into Appendix B and tried to link to appropriate descriptions, which had to be added in most cases.  
-5. In the process, I also did lots of editing to remove remnant HTML code and make the document more consistent with RMarkdown. This mostly involved changing the reference and link style, recording tables to use kable instead of HTML, and removing lots of <p>-</p> tags while ending paragraphs with two spaces.  
+5. In the process, I also did lots of editing to remove remnant HTML code and make the document more consistent with RMarkdown. This mostly involved changing the reference and link style, recording tables to use kable instead of HTML, and removing lots of \<p\>-\</p\> tags while ending paragraphs with two spaces. I left some HTML, however, notably the box-paragraph styles used for algorithm boxes. There are probably some remnants I missed.  
+6. I also edited Appendix C to update how the document should be edited.  
+7. I then combined the list of problems below and the former "punch list", making it a separate document stored in the www directory so it could be edited easily and referenced apart from the TN.  I updated this list where possible.  
+
 
 The following lists some unresolved problems:  
 
@@ -49,10 +56,12 @@ The following lists some unresolved problems:
 28. Regarding humidity-corrected TASX, there should be some dependence on humidity, probably EWX. That should be an additional dependency attributed to MACHX/MACHF.  
 29. I omitted TKE and classified its type as "sp". I think this is a useful variable and I have argued for its addition, but to date it only appeared in TREX from 2006 so it's not appropriate to include it.  
 30. The former descriptions listed USFLWC as the corrected UHSAS sample flow, but that variable does not appear in any of the processed archives. Instead, the corrected flow is UFLWC. The variable name has therefore been changed. The units are given in the attributes as sccm (standard cubic cm per minute) but are given in PA as cm^3^s^-1^; I have changed this to cm^3^min^-1^.   
-31. In TI3GER the dependencies for UFLWC include UVFLIN, not USMPFLW; UVFLIN has no dependencies but apparently refers to a different method of flow control using an Alicat mass-flow controller? The name given for UVFLIN is "Sample (inlet) volume flow calculated from dPinlet" so that would be volumetric flow like USMPFLW, making it reasonable to substitute UVFLIN for USMPFLW in the algorithm? However, units of UVFLIN are "ccs" (should that be sccs?) and typical values are near 1, USMPFLW (sccm) is near 50, so some change in the algorithm is needed. There are no dependencies for UVFLIN and no dPinlet variable, but cal coefficients are given so this must be the direct measurement of flow? Does the Alicat (a mass-flow meter) provide a volumetric-flow output? This needs further clarification and revision. Also, USMPFLW and PFLW have units of "sccm" but UFLWC and PFLWC are in ccs so I have introduced a factor of 60 for this conversion.    
+31. In TI3GER the dependencies for UFLWC include UVFLIN, not USMPFLW; UVFLIN has no dependencies but apparently refers to a different method of flow control using an Alicat mass-flow controller? The name given for UVFLIN is "Sample (inlet) volume flow calculated from dPinlet" so that would be volumetric flow like USMPFLW, making it reasonable to substitute UVFLIN for USMPFLW in the algorithm? However, units of UVFLIN are "ccs" (should that be sccs?) and typical values are near 1, USMPFLW (sccm) is near 50, so some change in the algorithm is needed. There are no dependencies for UVFLIN and no dPinlet variable, but cal coefficients are given so this must be the direct measurement of flow? The Alicat (a mass-flow meter) probably provides an output representing standard-conditions flow? This needs further clarification and revision. Also, USMPFLW and PFLW have units of "sccm" but UFLWC and PFLWC are in ccs so I have introduced a factor of 60 for this conversion.    
 32. CUHSAS attributes include a dependence on USCAT but this is not included in the description of the algorithm. This dependence needs to be added to the documentation.  
 33. VISHB only appears in C-130TEST, with no long-name defined and units of "V". I omitted it.  
 34. DC3 and NOMADDS include a variable XCO_AL with units ppmv and long_name "Carbon Monoxide". It does not include the expected processed variable from CORAW_AL, COMR_AL, for which units are expected to be ppbv. I omitted XCO_AL for that reason. I didn't find XCO_AL in any other project since 2013. XCOMR has also been used for CO mixing ratio, but in that case it has the expected units of ppbv so I left a reference to it.    
 35. I omitted XGREFF ("Gerber PV-100 Effective Droplet Radius") as recorded on TEST-C130 because it had units of "V". I kept a reference to XGRFF, which had units of "um", because it also occurred in VOCALS archives.  
-36. 
-35. 
+36. I spent a lot of time trying to get footnotes (that appear at the end of each section) to have superscript numbers, but the bookdown CSS specifies a normal number followed by a period. I learned that this is also the recommendation of the Chicago Manual of Style, so I finally gave up. There is probably a way to do this by modifying CSS.  
+37. Regarding the VCSEL: CONCV_VXL indicates dependencies on PSXC, ATX, SMPLSRINT_VXL, MODE_VXL, and PREGAIN_VXL. This is unclear to me, and the use of these variables in the processing algorithm needs clarification. The basic measurement is RAWCONC_VXL, which is the sensed molecular density. This needs adjustment to ambient conditions, so the adjustment should at least reference the pressure and temperature in the sensed volume in addition to the ambient pressure and temperature, but those measurements are not included in the dependencies. How are the last three dependencies used. An updated processing algorithm is needed to clarify this.  
+38. AT_VXL in netCDF files has units of "degK". The proper unit is "kelvin" (with lower-case k) or, abbreviated, "K".  
+39.  

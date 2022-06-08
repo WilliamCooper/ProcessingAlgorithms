@@ -6,9 +6,9 @@ The primary sources of information on the location and motion of the aircraft ar
 
 An Inertial Navigation System (INS) or Inertial Reference Unit (IRU) provides measurements of aircraft position, velocity relative to the Earth, acceleration and attitude or orientation. The IRU provides basic measurements of acceleration and angular rotation rate, while the INS integrates those measurements to track the position, altitude, velocity, and orientation of the aircraft. For the GV, the system is a Honeywell Laseref IV HG2001 GD03 Inertial Reference System; for the C-130, it is a Honeywell Model HG1095-AC03 Laseref V SM Inertial Reference System. These systems are described on the EOL web site, at [this URL](http://www.eol.ucar.edu/instruments/inertial-navigation-system-aka-inertial-reference-unit). Data from the IRS come via a serial digital bit stream (the ARINC digital bus) to the <a name='ads'>ADS</a> (Aircraft Data System). Because there is some delay in transmission and recording of these variables, adjustments for this delay are made when the measurements are merged into the processed data files, as documented in the NetCDF header files and as discussed in Section \@ref(synchronization-of-measurements). Typical delays are about 80 ms for variables including ACINS, PITCH, ROLL, and THDG.  
 
-Some variables from the inertial reference systems are recorded only on the original “raw” data tapes and are not usually included in final archived data files; these are discussed at the end of this subsection. See also the discussion in Section \@ref(obsolete-variables) for information on results from inertial systems that were used prior to installation of the present Honeywell systems.<span id="punch3.1" label="punch3.1">`r ifelse(PToDo,"[ToDo3.1]","")`</span>  
+Some variables from the inertial reference systems are recorded only on the original “raw” data tapes and are not usually included in final archived data files; these are discussed at the end of this subsection. See also the discussion in Section \@ref(obsolete-variables) for information on results from inertial systems that were used prior to installation of the present Honeywell systems.`r ToDoLink('3.1')` 
 
-An Inertial Navigation System “aligns”, while the aircraft is stationary ,by measurement of the variations in its reference frame caused by the rotation of the Earth. Small inaccuracy in that alignment leads to a “Schuler oscillation” that produces oscillatory errors in position and other measurements, with a period $\tau_{Sch}$ of about 84 minutes ($\tau_{Sch}=2\pi\sqrt{R_{E}/g}$). Position errors of less than $1.0\,$n mi/h are within normal operating specifications. See Section \@ref(combining-irs-and-gps-measurements) for discussion of additional variables, similar to the following, for which corrections are made for these errors via reference to data from a Global Positioning System.  
+An Inertial Navigation System “aligns” before flight, while the aircraft is stationary, by measurement of the variations in its reference frame caused by the rotation of the Earth. Small inaccuracy in that alignment leads to a “Schuler oscillation” that produces oscillatory errors in position and other measurements, with a period $\tau_{Sch}$ of about 84 minutes ($\tau_{Sch}=2\pi\sqrt{R_{E}/g}$). Position errors of less than $1.0\,$n mi/h are within normal operating specifications. See Section \@ref(combining-irs-and-gps-measurements) for discussion of additional variables, similar to the following, for which corrections are made for these errors via reference to data from a Global Positioning System.  
 
 Some projects have used smaller Systron Donner C-MIGITS Inertial Navigation Systems with GPS coupling, usually in connection with special instruments like a wing-mounted wind-sensing system. For these units, variable names usually begin with the letter C but otherwise have names matching the following variables (e.g., CLAT). GPS coupling via a Kalman filter is incorporated in the measurements from these units. They are described at [this web address](https://www.eol.ucar.edu/instruments/c-migits-insgps-system). These measurements and variables are linked to non-standard instruments, so the are not documented in this technical report.  
 
@@ -57,7 +57,7 @@ Positive values are upward. The sample rate is 50 Hz and the resolution is 0.002
 
 #### Aircraft Rate of Climb (m/s): ROC (new 2017) {#roc .unnumbered}
 
-*The rate of climb or upward speed of the aircraft,* as measured by the INS with correction so as to represent the derivative of the geometric height. This variable is calculated by integration of the variable ACINS and then addition of the low-pass-filtered difference between that integral and the climb rate determined from the hydrostatic equation. The result retains the high-frequency response from the INS while matching the low-frequency average value determined from the hydrostatic equation, and so represents change in geometric height. [This memo](www/Recommendation161107f.pdf)> contains additional background information on this variable.  
+*The rate of climb or upward speed of the aircraft,* as measured by the INS with correction so as to represent the derivative of the geometric height. This variable is calculated by integration of the variable ACINS and then addition of the low-pass-filtered difference between that integral and the climb rate determined from the hydrostatic equation. The result retains the high-frequency response from the INS while matching the low-frequency average value determined from the hydrostatic equation, and so represents change in geometric height. [This memo](www/Recommendation161107f.pdf) contains additional background information on this variable.  
 ```{r child = 'ROCbox.Rmd'}
 ```
 
@@ -70,7 +70,7 @@ Positive values are upward. The sample rate is 50 Hz and the resolution is 0.002
 
 #### Inertial Altitude (m): ALT, BALT1_A {#alt .unnumbered}
 
-*The altitude of the aircraft as provided by an INS*, with pressure damping applied within the INS to the integrated aircraft vertical velocity to avoid the accumulation of errors. The value is updated to the pressure altitude, not the geometric altitude, and should be regarded as a measurement of pressure altitude that has short-term variations as provided by the INS. The sample rate is 25 Hz with a resolution of 0.038 m. Another variable named "ADC BARO ALTITUDE" (BALT1_A) is provided by the aircraft avionics system; it is also updated to pressure altitude, whereas ALT_A represents GPS altitude as provided by the avionics system. In some projects ALT also referred to the altitude from the avionics GPS system; the preferred and current variable name for that is ALT_G.<span id="punch3.10" label="punch3.10">`r ifelse(PToDo,"[ToDo3.10]","")`</span>  
+*The altitude of the aircraft as provided by an INS*, with pressure damping applied within the INS to the integrated aircraft vertical velocity to avoid the accumulation of errors. The value is updated to the pressure altitude, not the geometric altitude, and should be regarded as a measurement of pressure altitude that has short-term variations as provided by the INS. The sample rate is 25 Hz with a resolution of 0.038 m. Another variable named "ADC BARO ALTITUDE" (BALT1_A) is provided by the aircraft avionics system; it is also updated to pressure altitude, whereas ALT_A represents GPS altitude as provided by the avionics system. In some projects ALT also referred to the altitude from the avionics GPS system; the preferred and current variable name for that is ALT_G.`r ToDoLink('3.10')`  
 
 #### Aircraft Ground Speed (m/s): GSF, GSPD {-#gsf}
 
@@ -86,7 +86,8 @@ Positive values are upward. The sample rate is 50 Hz and the resolution is 0.002
 
 #### Distance East/North of a Reference (km): DEI, DNI {#dei-dni .unnumbered}
 
-*Distance east or north of a project-dependent reference point.* These are derived outputs obtained by subtracting a fixed reference position from the current position. The values are determined from measurements of latitude and longitude and converted from degrees to distance in a rectilinear coordinate system. The reference position can be either the starting location of the flight or a user-defined reference point (e.g., the location of a project radar). The accuracy of these values is dependent on the accuracy of the source of latitude and longitude measurements (see LAT and LON), and the calculations are only appropriate for short distances because they do not take into account the spherical geometry of the Earth.<span id="punch3.11" label="punch3.11">`r ifelse(PToDo,"[ToDo3.11]","")`</span><br />  
+*Distance east or north of a project-dependent reference point.* These are derived outputs obtained by subtracting a fixed reference position from the current position. The values are determined from measurements of latitude and longitude and converted from degrees to distance in a rectilinear coordinate system. The reference position can be either the starting location of the flight or a user-defined reference point (e.g., the location of a project radar). The accuracy of these values is dependent on the accuracy of the source of latitude and longitude measurements (see LAT and LON), and the calculations are only appropriate for short distances because they do not take into account the spherical geometry of the Earth.`r ToDoLink('3.11')`  
+
 ```{r child='DNSbox.Rmd'}
 ```
 
@@ -140,7 +141,7 @@ Primary GPS variables specifying the position and velocity of the aircraft are p
 The uncertainty of the position measurements is specified by the manufacturer to be 1.5 m CEP horizontal (3.3 m 95% CEP).^[CEP is the Circular Error Probability, the radius of a circle that contains 50% of the measurements; 95% CEP contains 95% of the measurements. When OnmiSTAR corrections are available (involving extra cost and not available in all areas of the globe, so not available for all projects) the uncertainty decreases to 0.15 m 95% CEP. The vertical uncertainty is about twice as great as the horizontal uncertainty. Because variables are stored as 4-byte single-precision floating point numbers, the inherent storage precision can limit the precision of the recorded position to about 1 m.]
 The accuracy of velocity measurements is 0.03 m/s RMS for all axes. All variables are provided by the GPS receivers at 5 Hz. Latitude and longitude are recorded in a special log file (called the GPGGA log) with a resolution of 0.0001 degree, while Earth-relative velocity is recorded in the GPRMC log with resolution of 0.1 m/s. Starting in January 2014 new logs (named BESTPOS and BESTVEL) have also been recorded to preserve more significant digits in the measurements. The BESTPOS log has a position resolution of $10^{-11}\,^{\circ}$, while the BESTVEL log is recorded with 0.0001 m/s resolution.  
 
-Some of the following variables are also available from alternate Garmin GPS16 receivers, for which the variable name is qualified by the name of that unit; e.g., GGLAT_GMN for GGLAT as measured by a Garmin GPS unit. In addition, some of the measurements from the GPS units that are part of the aircraft avionics systems are recorded; these are denoted by a suffix “_G” or “_A”. Measurements from before about 2000 used Trimble TANS-III receivers, <span id="punch3.3" label="punch3.3">`r ifelse(PToDo,"[ToDo3.3]","")`</span>with the ability to track up to 6 satellites at a time but needing only 4 to provide 3-dimensional position and velocity data (3 satellites for 2-dimensions). The accuracy of the position measurements for that unit was stated to be 25 meters (horizontal) and 35 meters (vertical) under “steady-state conditions.”^[The GPS signals at one time suffered from “selective availability,” a US DOD term for a perturbed signal that degraded GPS absolute accuracy to 100 meters. This was especially noticeable in the altitude measurement, so GALT normally was not useful. As of 1 May 2000, selective availability was deactivated to allow everyone to obtain better position measurements. See the Interagency GPS Executive Board web site for more information on selective availability and GPS measurements prior to 2000.]
+Some of the following variables are also available from alternate Garmin GPS16 receivers, for which the variable name is qualified by the name of that unit; e.g., GGLAT_GMN for GGLAT as measured by a Garmin GPS unit. In addition, some of the measurements from the GPS units that are part of the aircraft avionics systems are recorded; these are denoted by a suffix “_G” or “_A”. Measurements from before about 2000 used Trimble TANS-III receivers, `r ToDoLink('3.3')`with the ability to track up to 6 satellites at a time but needing only 4 to provide 3-dimensional position and velocity data (3 satellites for 2-dimensions). The accuracy of the position measurements for that unit was stated to be 25 meters (horizontal) and 35 meters (vertical) under “steady-state conditions.”^[The GPS signals at one time suffered from “selective availability,” a US DOD term for a perturbed signal that degraded GPS absolute accuracy to 100 meters. This was especially noticeable in the altitude measurement, so GALT normally was not useful. As of 1 May 2000, selective availability was deactivated to allow everyone to obtain better position measurements. See the Interagency GPS Executive Board web site for more information on selective availability and GPS measurements prior to 2000.]
 Likewise, velocity measurements are within 0.2 m/s for all axes. Measurement resolution is that of 4-byte IEEE format (about 6 significant digits). All variables were provided by the Trimble receivers at 1 Hz.  
 
 A special correction is needed for variables GGVEW, GGVNS, and GGVSPD, which measure the motion *at the GPS antenna* relative to the Earth. The conventional wind calculation addresses the difference between the motion at the radome (where the relative wind is measured) and the INS (where variables VEW, VNS, VSPD are measured) arising from rotation of the aircraft. However, if GGVSPD is used instead of VSPD for vertical wind or GGVEW and GGVNS are used (perhaps via the complementary filter) for the horizontal wind, an additional correction is needed for the displacement between the GPS antenna and the INS receiver. On the GV, this distance is -4.30 m. A correction for aircraft rotation is therefore applied to GGVSPD, as described below.   
@@ -151,7 +152,7 @@ A special correction is needed for variables GGVEW, GGVNS, and GGVSPD, which mea
 
 #### GPS Longitude (º): GGLON, LON_G, LON_A, LONF_G, LONF_A; also formerly GLON {#gglon .unnumbered}
 
-*The aircraft longitude measured by a global positioning system.* Positive values are east of the prime meridian; negative are west. GGLON is provided by the (or a) data-system GPS; LON_G and LON_A are from the avionics system GPS. LONF_G and LONF_A are fine-resolution measurements from the avionics system that meet special requirements form GPS navigation. <span id="punch3.12" label="punch3.12">`r ifelse(PToDo,"[ToDo3.12]","")`</span>   
+*The aircraft longitude measured by a global positioning system.* Positive values are east of the prime meridian; negative are west. GGLON is provided by the (or a) data-system GPS; LON_G and LON_A are from the avionics system GPS. LONF_G and LONF_A are fine-resolution measurements from the avionics system that meet special requirements form GPS navigation.`r ToDoLink('3.12')`  
 
 #### GPS Ground Speed (m/s): GGSPD, GSF_G, GSPD_A {#ggspd .unnumbered}
 
@@ -177,7 +178,7 @@ where GGVNSA is the corrected value used in the wind calculation, $\psi$ and $\p
 
 #### GPS-Measured Aircraft Vertical Velocity (m/s): GGVSPD; also GVSPD_A and (obsolete) VSPD_G and GVZI {#ggvspd .unnumbered}
 
-*The aircraft vertical velocity provided by a GPS unit.* GGVSPD is provided by a data-system GPS; GVSPD_A is provided by an avionics-system GPS. Positive values are upward.<span id="punch3.9" label="punch3.9">`r ifelse(PToDo,"[ToDo3.9]","")`</span> When GGVSPD is used in the calculation of vertical wind, the following correction (omitted before 2017) is applied:<span id="punch3.13" label="punch3.13">`r ifelse(PToDo,"[ToDo3.13]","")`</span>
+*The aircraft vertical velocity provided by a GPS unit.* GGVSPD is provided by a data-system GPS; GVSPD_A is provided by an avionics-system GPS. Positive values are upward.`r ToDoLink('3.9')` When GGVSPD is used in the calculation of vertical wind, the following correction (omitted before 2017) is applied:`r ToDoLink('3.13')`
 \begin{equation}
 \mathrm{\{GGVSPDA\}} = \mathrm{\{GGVSPD\}}-L_{G}\dot{\theta}
 (\#eq:GGVSPDA)
@@ -190,7 +191,7 @@ where $L_G=-4.30\,\mathrm{m}$ for the GV and $\dot{\theta}$ is the rate-of-chang
 
 #### GPS Altitude above the WGS94 reference ellipse (m): GGHWGS {#gghwgs .unnumbered}
 
-*The aircraft altitude above the ellipse that is the reference for the WGS-84 coordinate system.* This variable is defined as GGHWGS=GGALT+GGEOIDHT.<span id="punch3.4" label="punch3.4">`r ifelse(PToDo,"[ToDo3.4]","")`</span>  
+*The aircraft altitude above the ellipse that is the reference for the WGS-84 coordinate system.* This variable is defined as GGHWGS=GGALT+GGEOIDHT.`r ToDoLink('3.4')`  
 
 #### GPS Geopotential Altitude (m): GEOPTH {#geoph .unnumbered}
 
@@ -218,13 +219,13 @@ where $L_G=-4.30\,\mathrm{m}$ for the GV and $\dot{\theta}$ is the rate-of-chang
 
 #### GPS Mode: GMODE (obsolete) {#gmode .unnumbered}
 
-This is the former output from the Trimble GPS indicating the mode of operation. The normal value is 4, indicating automatic (not manual) mode and that the receiver is operating in 4-satellite (as opposed to fewer) mode.<span id="punch3.5" label="punch3.5">`r ifelse(PToDo,"[ToDo3.5]","")`</span>  
+This is the former output from the Trimble GPS indicating the mode of operation. The normal value is 4, indicating automatic (not manual) mode and that the receiver is operating in 4-satellite (as opposed to fewer) mode.`r ToDoLink('3.5')`  
 
 #### GPS Status: GGSTATUS, GSTAT_G, GSTAT {#ggstatus .unnumbered}
 
 The status of the GPS receiver. A value of 1 indicates that the receiver is operating normally; a value of 0 indicates a warning regarding data quality. GGSTATUS indicates the status of the data-system GPS; GSTAT_G indicates the status of the avionics-system GPS. The obsolete variable GSTAT, formerly used for the same purpose, has the reverse meaning: A value of 0 indicates normal operation and any other code indicates a malfunction or warning regarding poor data accuracy.  
 
-<span id="punch3.14" label="punch3.14">`r ifelse(PToDo,"[ToDo3.14]","")`</span>
+`r ToDoLink('3.14')`
 
 <!-- <h2 id="other-measurements-of-aircraft-altitude">Other Measurements of Aircraft Altitude</h2> -->
 
@@ -289,7 +290,7 @@ The net result then is the sum of these two filtered signals, calculated as desc
 ```
   
 This result is used as long as the GPS signals are continuous and flagged as being valid. When that is not the case, some means is needed to avoid sudden discontinuities in velocity (and hence wind speed), which would introduce spurious effects into variance spectra and other properties dependent on a continuously valid measurement of wind. To extrapolate measurements through periods when the GPS signals are lost (as sometimes occurs, for example, in turns) a fit is determined to the difference between the best-estimate variables {VNSC,VEWC} and the IRS variables {VNS,VEW} for the period before GPS reception was lost, and that fit is used to extrapolate through periods when GPS reception is not available. The procedure is as described below:  
-<span id="punch3.15" label="punch3.15">`r ifelse(PToDo,"[ToDo3.15]","")`</span>  
+`r ToDoLink('3.15')`  
 
 <p class=box>
 \ 1. If GPS reception has never been valid earlier in the flight, use the INS values without correction.<br />
@@ -302,7 +303,7 @@ $dvy^\prime=\eta\ dvy+(1-\eta)\Delta$ where $dvy^\prime$ is the sequentially adj
 
 #### GPS-Corrected Inertial Latitude and Longitude (º): LATC, LONC {#latc-lonc .unnumbered}
 
-*Combined GPS and IRS output of latitude and longitude.* Positive values are north and east, respectively.<span id="punch3.16" label="punch3.16">`r ifelse(PToDo,"[ToDo3.16]","")`</span> These variables are the best estimate of position, obtained by the following approach:   
+*Combined GPS and IRS output of latitude and longitude.* Positive values are north and east, respectively.`r ToDoLink('3.16')` These variables are the best estimate of position, obtained by the following approach:   
 ```{r child='LATLONbox.Rmd'}
 ```
 

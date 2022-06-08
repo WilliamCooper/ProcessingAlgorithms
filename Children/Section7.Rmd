@@ -30,7 +30,7 @@ RAF uses two modified TSI, Inc. [condensation nucleus counters](http://www.eol.u
 
 #### CN Counter Output (counts per sample interval): CNTS, CNT1, CNCNTS {-#cnts}
 
-*The raw output count from a condensation nucleus counter.* For the 3760A condensation nucleus counter, the project-dependent sample rate may be chosen in the range from 1–50 Hz but it is typically 10 Hz. In some unusual cases the counts are divided by a selected power of two to keep the counter from overflowing; see project documentation. The 3786 WCN may be programmed to report data at intervals from 0.1–3600 s.<span id="punch7.1" label="punch7.1">`r ifelse(PToDo,"[ToDo7.1]","")`</span></p>
+*The raw output count from a condensation nucleus counter.* For the 3760A condensation nucleus counter, the project-dependent sample rate may be chosen in the range from 1–50 Hz but it is typically 10 Hz. In some unusual cases the counts are divided by a selected power of two to keep the counter from overflowing; see project documentation. The 3786 WCN may be programmed to report data at intervals from 0.1–3600 s.`r ToDoLink('7.1')`  
 
 #### Condensation Nucleus (CN) Concentration (cm^-3^): CONCN, CNCONC, CONCNI {-#concn}
 

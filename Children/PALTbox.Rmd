@@ -17,7 +17,6 @@ $x=-R_{0}^{\ddagger}\lambda_{a}^{\ddagger}/(M_{d}^{\ddagger}g^{\ddagger})$
 $\approx$ 0.1902632 (dimensionless)\footnote{This is the value, rounded to seven significant figures, that is used for data processing.}  
 </p>
 <p class=box2>
-
 For pressure > 226.3206 hPa (equivalent to a pressure altitude < $z_{T}$):
 \begin{equation}
 \mathrm{PALT}=-\left(\frac{T_{0}^{\ddagger}}{\lambda^{\ddagger}}\right)\left(1-\left(\frac{p}{p_{0}^{\ddagger}}\right)^{x}\right)
@@ -25,7 +24,7 @@ For pressure > 226.3206 hPa (equivalent to a pressure altitude < $z_{T}$):
 \end{equation}  
 otherwise, if $T_{T}$
 and $p_{T}$
-are respectively the temperature and pressure at the altitude\index{International Standard Atmosphere!tropopause} $z_{T}$:  
+are respectively the temperature and pressure at the altitude\index{International Standard Atmosphere!tropopause} $z_{T}$:\
 $$T_{T}=T_{0}+\lambda^{\ddagger}z_{T}^{\ddagger}=216.65\,\mathrm{K}$$
 $$p_{T}=p_{0}^{\ddagger}\Bigl(\frac{T_{0}^{\ddagger}}{T_{T}}\Bigr)^{\frac{g^{\ddagger}M_{d}^{\ddagger}}{\lambda^{\ddagger}R_{0}^{\ddagger}}}=226.3206\,\mathrm{hPa}$$
 \begin{equation}
@@ -33,17 +32,16 @@ $$p_{T}=p_{0}^{\ddagger}\Bigl(\frac{T_{0}^{\ddagger}}{T_{T}}\Bigr)^{\frac{g^{\dd
 (\#eq:PALT2)
 \end{equation}  
 which, after conversion from natural to base-10 logarithm, is coded
-to be equivalent to the following:</p>
-```{r include = TRUE, echo = TRUE, eval = FALSE, results = 'asis', highlight=FALSE}
-       ## transition pressure at the assumed ISA tropopause:
-       #define ISAP1 226.3206
-       ## reference pressure for standard atmosphere:
-       #define ISAP0 1013.25
-       if (psxc > ISAP1) {
-         palt = 44330.77 * (1.0 - pow(psxc / ISAP0, 0.1902632))
-       } else {
-         palt = 11000.0 + 14602.12 * log10(ISAP1 / psxc)
-       }
-```
+to be equivalent to the following:<code>\
+\ \ \ \ \       ## transition pressure at the assumed ISA tropopause:\
+\ \ \ \ \       #define ISAP1 226.3206\
+\ \ \ \ \       ## reference pressure for standard atmosphere:\
+\ \ \ \ \       #define ISAP0 1013.25\
+\ \ \ \ \       if (psxc > ISAP1) {\
+\ \ \ \ \ \ \        palt = 44330.77 * (1.0 - pow(psxc / ISAP0, 0.1902632))\
+\ \ \ \ \       } else {\
+\ \ \ \ \ \ \        palt = 11000.0 + 14602.12 * log10(ISAP1 / psxc)\
+\ \ \ \ \       }\
+</code>
 </p>
   

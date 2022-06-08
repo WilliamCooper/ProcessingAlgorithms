@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>sphCoord.Rmd</title>
+  <meta name="description" content="sphCoord.Rmd" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="sphCoord.Rmd" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="sphCoord.Rmd" />
+  
+  
+  
+
+<meta name="author" content="William A Cooper" />
+
+
+<meta name="date" content="2022-06-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+<link rel="stylesheet" href="my.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">sphCoord.Rmd</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">sphCoord.Rmd</h1>
+<p class="author"><em>William A Cooper</em></p>
+<p class="date"><em>2022-06-08</em></p>
+</div>
+<p>To obtain cartesian coordinates from spherical {<span class="math inline">\(r\)</span>, <span class="math inline">\(\theta\)</span>, <span class="math inline">\(\phi\)</span>}:<br />
+<span class="math inline">\(x=r\cos \phi \sin \theta\)</span><br />
+<span class="math inline">\(y=r\sin \phi \sin \theta\)</span><br />
+<span class="math inline">\(z=r\cos \theta\)</span><br />
+</p>
+<p>However, latitude is <span class="math inline">\(\lambda=\pi/2-\theta\)</span> so
+<span class="math display">\[\sin(\theta)=\sin(\pi/2-\lambda)=\sin(\pi/2)\cos(\lambda)-\sin(\lambda)\cos(\pi/2)=\cos(\lambda)\]</span> <span class="math display">\[\cos(\theta)=\cos(\pi/2-\lambda)=\cos(\pi/2)\cos(\lambda)+\sin(\pi/2)\sin(\lambda)=\sin(\lambda)\]</span></p>
+<p>Then the cartesian coordinates are:</p>
+<p><span class="math display">\[x=r\cos\lambda\cos\phi\]</span>
+<span class="math display">\[y=r\cos\lambda\sin\phi\]</span>
+<span class="math display">\[z=r\sin\lambda\]</span></p>
+<p>For <span class="math inline">\(r\)</span> equal to <span class="math inline">\(R\)</span>, the radius of the (assumed spherical) Earth, the differences in Cartesian coordinates between two points are:<br />
+<span class="math display">\[\Delta x=R(\cos\lambda_2\cos\phi_2-\cos\lambda_1\cos\phi_1)\]</span>
+<span class="math display">\[\Delta y=R(\cos\lambda_2\sin\phi_2-\cos\lambda_1\sin\phi_1)\]</span>
+<span class="math display">\[\Delta z=R(\sin\lambda_2-\sin\lambda_1)\]</span>
+However, this does not translate to the units desired for variables like {DNI} and {DEI} or the equivalent {FXDIST} and {FXAZIM}, which could be used to navigate relative to a fixed point on the surface of the Earth. Instead, {FXDIST} should be based on the angular difference between vectors from the center of the Earth to the two points:<br />
+<span class="math inline">\(\{\mathrm{FXDIST}\}=R\alpha\)</span> where <span class="math inline">\(\cos\alpha=\mathbf{V_1\cdot V_2}/R^2\)</span> so
+<span class="math display">\[\{\mathrm{FXDIST}\}=R\arccos(\cos\lambda_1\cos\phi_1\cos\lambda_2\cos\phi_2+\cos\lambda_1\sin\phi_1\cos\lambda_2\sin\phi_2+\sin\lambda_1\sin\lambda_2)\]</span>
+In the case where <span class="math inline">\(\phi_1=\phi_2\)</span>, this reduces to <span class="math inline">\(R(\lambda_2-\lambda_1)\)</span> as expected. For <span class="math inline">\(\lambda_1=\lambda_2\)</span>, the result is <span class="math inline">\(R\arccos(\cos^2\lambda_1(\cos(\phi_2-\phi_1))+\sin^2\lambda_1)\)</span> vs. the expected approximation <span class="math inline">\(R\cos\lambda_1(\phi_2-\phi_2)\)</span>. The following figure shows that these two equations evaluate to the same result for equal latitudes, to near machine precision.<br />
+<img src="sphCoord_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Unresolved, then, is the angle {FXAZIM}. This should be the heading that would take the aircraft along the great circle back to the initial point. That heading, however, is not constant along the great-circle segment. The best value for {FXAZIM} is the initial heading, although that would change along the great-circle segment. That initial heading is the angle between the great-circle segment connecting the two points and the great-circle through the aircraft location and the north pole of the coordinate system. The latter is the meridian with longitude equal to that of the aircraft. Spherical-triangle formulas then give the initial heading to point 1 as:
+<span class="math display">\[\alpha=\pi+\arctan2(-(\cos \lambda _{1}\sin (\phi _2 - \phi _1)),\ (\cos \lambda _{2}\sin \lambda _{1}-\sin \lambda _{2}\cos \lambda _{1}\cos (\phi _2 - \phi_1)))\]</span>
+<span class="math display">\[\{FXAZIM\}=\frac{180}{\pi}\alpha\]</span>
+This variable could be useful beyond indicating position relative to a reference point, because it would indicate the heading to fly to follow a great-circle route to that reference point. As the aircraft moved along the great circle, the heading would update to indicate the shortest course to that point.</p>
+<p>Some checks: consider the aircraft flying at {lat,long} of 45, -90 and a reference point of 30, -100. The above equations lead to a distance and heading to the reference point of 1883.4 and 211.1. In contrast, the current rectilinear coordinate system would yield 1926.0 and 210.0. The following table includes some additional results, showing that the differences can be significant for large separation between the points. In this table, lat/lon values are in degrees, <em>D</em> is the distance in km and <em>A</em> is the heading angle in degrees for the two methods, first using spherical geometry and second listing the results from the present cartesian code.</p>
+<table class="table table-bordered" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+AC lat
+</th>
+<th style="text-align:right;">
+AC lon
+</th>
+<th style="text-align:right;">
+REF lat
+</th>
+<th style="text-align:right;">
+REF lon
+</th>
+<th style="text-align:right;">
+sph D
+</th>
+<th style="text-align:right;">
+sph A
+</th>
+<th style="text-align:right;">
+cart D
+</th>
+<th style="text-align:right;">
+cart A
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+100
+</td>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:right;">
+90
+</td>
+<td style="text-align:right;">
+3451
+</td>
+<td style="text-align:right;">
+3412
+</td>
+<td style="text-align:right;">
+347.5
+</td>
+<td style="text-align:right;">
+347.9
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+80
+</td>
+<td style="text-align:right;">
+-105
+</td>
+<td style="text-align:right;">
+-10
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+11744
+</td>
+<td style="text-align:right;">
+16957
+</td>
+<td style="text-align:right;">
+56.9
+</td>
+<td style="text-align:right;">
+126.2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+-50
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:right;">
+9112
+</td>
+<td style="text-align:right;">
+9102
+</td>
+<td style="text-align:right;">
+17.4
+</td>
+<td style="text-align:right;">
+12.2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+-20
+</td>
+<td style="text-align:right;">
+-45
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+50
+</td>
+<td style="text-align:right;">
+11251
+</td>
+<td style="text-align:right;">
+10878
+</td>
+<td style="text-align:right;">
+72.6
+</td>
+<td style="text-align:right;">
+65.9
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+7230
+</td>
+<td style="text-align:right;">
+7228
+</td>
+<td style="text-align:right;">
+359.5
+</td>
+<td style="text-align:right;">
+359.6
+</td>
+</tr>
+</tbody>
+</table>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "section"
+},
+"lib_dir": "assets",
+"toc_depth": 2,
+"keep_tex": true,
+"highlight": "tango"
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -39,10 +39,9 @@ by the aircraft as follows:
 \mathrm{\{acz\}}=a_{z}=\mathrm{\{ACINS\}}+G_{L}-g_{f}+a_{c}
 (\#eq:acz)
 \end{equation}
-\ \ \ Use a feedback loop to update the integrated value of the acceleration.  
-\ \ \ The following code segment uses *acz* to represent acceleration $a_{z}$,  
-\ \ \ "deltaT" to represent the time between updates, and "hx" and "hxx"
-to store the feedback terms:  
+\ \ \ Use a feedback loop to update the integrated value of the acceleration.\
+\ \ \ The following code segment uses "*acz*" for acceleration $a_{z}$. "deltaT" for time between updates,\
+\ \ \ and "hx" and "hxx" to store the feedback terms:  
 \ \ \ \ \ wp3[FeedBack] += (acz - C[1] * hx[FeedBack] -- C[2] * hxx[FeedBack]) * deltaT[FeedBack]  
 \ 3. Update the feedback terms (using "hi3" for storage):  
 \ \ \ \ \ hi3[FeedBack] = hi3[FeedBack] + (wp3[FeedBack] -- C[0] * hx[FeedBack]) * deltaT[FeedBack];  
