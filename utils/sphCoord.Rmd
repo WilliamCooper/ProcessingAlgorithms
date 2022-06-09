@@ -9,6 +9,8 @@ always_allow_html: true
 ---
 
 ```{r setup, include=FALSE}
+library(knitr)
+library(Ranadu)
 knitr::opts_chunk$set(echo = FALSE)
 library(kableExtra)
 ```
@@ -18,7 +20,7 @@ $x=r\cos \phi \sin \theta$\
 $y=r\sin \phi \sin \theta$\
 $z=r\cos \theta$\
 
-However, latitude is $\lambda=\pi/2-\theta$ so 
+However, latitude is $\lambda=(\pi/2-\theta)$\ so 
 $$\sin(\theta)=\sin(\pi/2-\lambda)=\sin(\pi/2)\cos(\lambda)-\sin(\lambda)\cos(\pi/2)=\cos(\lambda)$$ $$\cos(\theta)=\cos(\pi/2-\lambda)=\cos(\pi/2)\cos(\lambda)+\sin(\pi/2)\sin(\lambda)=\sin(\lambda)$$ 
 
 Then the cartesian coordinates are:
@@ -34,8 +36,9 @@ $$\Delta z=R(\sin\lambda_2-\sin\lambda_1)$$
 However, this does not translate to the units desired for variables like {DNI} and {DEI} or the equivalent {FXDIST} and {FXAZIM}, which could be used to navigate relative to a fixed point on the surface of the Earth. Instead, {FXDIST} should be based on the angular difference between vectors from the center of the Earth to the two points:  
 $\{\mathrm{FXDIST}\}=R\alpha$ where $\cos\alpha=\mathbf{V_1\cdot V_2}/R^2$ so
 $$\{\mathrm{FXDIST}\}=R\arccos(\cos\lambda_1\cos\phi_1\cos\lambda_2\cos\phi_2+\cos\lambda_1\sin\phi_1\cos\lambda_2\sin\phi_2+\sin\lambda_1\sin\lambda_2)$$
-In the case where $\phi_1=\phi_2$, this reduces to $R(\lambda_2-\lambda_1)$ as expected. For $\lambda_1=\lambda_2$, the result is $R\arccos(\cos^2\lambda_1(\cos(\phi_2-\phi_1))+\sin^2\lambda_1)$ vs.\ the expected approximation $R\cos\lambda_1(\phi_2-\phi_2)$. The following figure shows that these two equations evaluate to the same result for equal latitudes, to near machine precision.  
-```{r}
+In the case where $\phi_1=\phi_2$, this reduces to $R(\lambda_2-\lambda_1)$ as expected. For $\lambda_1=\lambda_2$, the result is $R\arccos(\cos^2\lambda_1(\cos(\phi_2-\phi_1))+\sin^2\lambda_1)$ vs.\ the expected approximation $R\cos\lambda_1(\phi_2-\phi_2)$. The following figure shows that these two equations evaluate to the same result for equal latitudes, to near machine precision. 
+
+```{r FIG1, fig.cap='Difference between spnerical geometry and cartesian geometry.'}
 l2 <- 0
 p2 <- 0
 l1 <- seq(-pi/2, pi/2, by=pi/100)
@@ -57,8 +60,11 @@ for (il in 1:length(l1)) {
   }
 }
 DF <- F1-FS
+# cairo_pdf(filename='sphCoordFig1.pdf')
 plot(180/pi*F1[51,], 180/pi*DF[51,], type='l', xlab='spherical angle [degrees]', ylab='error in angle difference [degrees]')
-title('difference between F1 and FS')
+# title('difference between F1 and FS')
+# invisible(dev.off())
+# include_graphics('sphCoordFig1.pdf')
 ```
 
 Unresolved, then, is the angle {FXAZIM}. This should be the heading that would take the aircraft along the great circle back to the initial point. That heading, however, is not constant along the great-circle segment. The best value for {FXAZIM} is the initial heading, although that would change along the great-circle segment. That initial heading is the angle between the great-circle segment connecting the two points and the great-circle through the aircraft location and the north pole of the coordinate system. The latter is the meridian with longitude equal to that of the aircraft. Spherical-triangle formulas then give the initial heading to point 1 as:
@@ -112,6 +118,6 @@ for (i in 1:5) {
   #               latAC[i], lonAC[i], latREF[i], lonREF[i], FX[i,1], FX[i,2], FS[i,1], FS[i,2]))
 }
 DT <- data.frame(latAC, lonAC, latREF, lonREF, FX[,1], FS[,1], FX[,2], FS[,2])
-names(DT) <- c('AC lat', 'AC lon', 'REF lat', 'REF lon', 'sph D', 'sph A', 'cart D', 'cart A')
+names(DT) <- c('AC lat', 'AC lon', 'REF lat', 'REF lon', 'sph D', 'cart D', 'sph A', 'cart A')
 knitr::kable(DT, row.names=FALSE) %>% kable_styling(bootstrap_options = 'bordered')
 ```
