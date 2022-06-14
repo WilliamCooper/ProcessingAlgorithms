@@ -249,7 +249,7 @@ The status of the GPS receiver. A value of 1 indicates that the receiver is oper
  
 #### Height of the Earth’s Surface (m MSL): SFC {#sfc .unnumbered}
 
-*The altitude of the Earth’s surface* at a location directly below the aircraft. The data source is the Shuttle Radar Topography Mission of 2000. The height estimate is described in [this memo](www/HeightOfTerrain.pdf).  
+*The altitude of the Earth’s surface* at a location directly below the aircraft. The data source is the Shuttle Radar Topography Mission of 2000. The height estimate is described in [this memo](www/HeightOfTerrain.pdf). The reference is the WGS84/EGM96 geoid.
 
 #### Pressure-Damped Inertial Altitude (m): HI3 (obsolete) {#hi3 .unnumbered}
 
