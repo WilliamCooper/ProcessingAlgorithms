@@ -59,11 +59,11 @@ VEW and VNS are the east and north projections of this ground speed, derived usi
 
 #### Wind Speed and Direction (m/s, º): WSPD, WDRCTN {-#wspd}
 
-These variables are calculated from UI and VI, the east and north components of the wind determined as described in RAF Bulletin No. 23 and summarized in Section\ \@ref(wind):`r ToDoLink('10.1')`  
+These variables were calculated from UI and VI, the east and north components of the wind determined as described in RAF Bulletin No. 23 and summarized in Section\ \@ref(wind):`r ToDoLink('10.1')`  
 <p class=box2>
 \begin{align}
-\mathrm{WS} = & \sqrt{\mathrm{\{UI\}^{2}+\{VI\}^{2}}} (\#eq:WSobs)\\
-\mathrm{WD} = & \mathrm{\frac{180^{\circ}}{\pi}atan2(-\{UI\},}-\{VI\})+180^{\circ}
+\mathrm{\{WSPD\}} = & \sqrt{\mathrm{\{UI\}^{2}+\{VI\}^{2}}} (\#eq:WSobs)\\
+\mathrm{\{WDRCTN\}} = & \frac{180^{\circ}}{\pi}\mathrm{atan2(\{UI\},\,\{VI\})}+180^{\circ}
 (\#eq:WDobs)
 \end{align}
 </p>

@@ -285,12 +285,12 @@ These variables have the same names as the modern variables for ground speed. (C
 </div>
 <div id="wspd" class="section level4 unnumbered hasAnchor">
 <h4>Wind Speed and Direction (m/s, º): WSPD, WDRCTN<a href="obsolete-variables.html#wspd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-These variables are calculated from UI and VI, the east and north components of the wind determined as described in RAF Bulletin No. 23 and summarized in Section <a href="the-state-of-the-atmosphere.html#wind">4.7</a>:<span id="punch10.1" label="punch10.1"></span><br />
+These variables were calculated from UI and VI, the east and north components of the wind determined as described in RAF Bulletin No. 23 and summarized in Section <a href="the-state-of-the-atmosphere.html#wind">4.7</a>:<span id="punch10.1" label="punch10.1"></span><br />
 
 <p class="box2">
 <span class="math display" id="eq:WDobs" id="eq:WSobs">\[\begin{align}
-\mathrm{WS} = &amp; \sqrt{\mathrm{\{UI\}^{2}+\{VI\}^{2}}} \tag{10.2}\\
-\mathrm{WD} = &amp; \mathrm{\frac{180^{\circ}}{\pi}atan2(-\{UI\},}-\{VI\})+180^{\circ}
+\mathrm{\{WSPD\}} = &amp; \sqrt{\mathrm{\{UI\}^{2}+\{VI\}^{2}}} \tag{10.2}\\
+\mathrm{\{WDRCTN\}} = &amp; \frac{180^{\circ}}{\pi}\mathrm{atan2(\{UI\},\,\{VI\})}+180^{\circ}
 \tag{10.3}
 \end{align}\]</span>
 </p>

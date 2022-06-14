@@ -1487,11 +1487,11 @@ The calculation of WI differs from the description in Bulletin 23 because the ou
 <h4>Wind Speed and Direction (m/s and º): WS, WD<a href="the-state-of-the-atmosphere.html#ws-wd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><em>The magnitude and direction of the horizontal wind.</em> These variables are obtained in a straightforward manner from UI and VI. The resulting wind direction is relative to true north and represents the direction <em>from which</em> the wind blows. That is the reason that 180<sup>∘</sup> appears in the following algorithm. The INS also produces an independent estimate of the wind, recorded in variables IWS and IWD, but those are usually less-reliable estimates because they don’t account for the measured fluctuations in the relative wind.</p>
 <p class="box">
-<a href="the-state-of-the-atmosphere.html#ui-vi-wi">UI</a> = easterly component of the horizontal wind<br />
-<a href="the-state-of-the-atmosphere.html#ui-vi-wi">VI</a> = northerly component of the horizontal wind<br />
+<a href="the-state-of-the-atmosphere.html#ui-vi-wi">UI</a> = eastward component of the horizontal wind<br />
+<a href="the-state-of-the-atmosphere.html#ui-vi-wi">VI</a> = northward component of the horizontal wind<br />
 atan2 = 4-quadrant arc-tangent function producing output in radians
 from -<span class="math inline">\(\pi\)</span> to <span class="math inline">\(\pi\)</span><br />
-<span class="math inline">\(C_{rd}\)</span> = conversion factor, radians to degrees, = 180/<span class="math inline">\(\pi\)</span> [units: <span class="math inline">\(^{\circ}\)</span>,/,radian]
+<span class="math inline">\(C_{rd}\)</span> = conversion factor, radians to degrees, = 180/<span class="math inline">\(\pi\)</span> [units: <span class="math inline">\(^{\circ}\,/\,\mathrm{radian}\)</span>]
 </p>
 <p class="box2">
 <span class="math display" id="eq:WD" id="eq:WS">\[\begin{align}
