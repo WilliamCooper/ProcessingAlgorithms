@@ -14,7 +14,7 @@ Currently, the data acquisition process on the research aircraft of the Research
 4. Following the flight, *nimbus* again processes the data. At this stage, measurements can be re-sampled with averaging and/or interpolation to produce various data rates, usually 1 Hz or 25 Hz, and known lags in measurements can be introduced to adjust measurements to a common time basis. As part of this processing, *nimbus* applies calibration coefficients where appropriate to convert recorded values (e.g., voltage) to engineering units (e.g., $^\circ$C). Determining or checking these calibration coefficients is part of the pre-flight and post-flight procedures for each project.  
 5. The output from *nimbus* is the data file that is the permanent archive from the experiment, often after merging additional data sets from users that are not recorded in the original data file produced by *NIDAS.* These files, in NetCDF format, have headers that contain metadata on each measurement (such as the calibration coefficients, the instrument that produced the measurement, etc.). Many of the variables in these files are discussed in this technical note, but the files may also include additional project-specific measurements for which the NetCDF header and the project reports will be the primary documentation.  
 
-For assistance accessing data from RAF-supported projects, contact the RAF data management group via <a href="mailto:raf-dm%40eol.ucar.edu">this email address</a>.  
+For assistance accessing data from RAF-supported projects, contact the RAF data management group at [this email address](mailto:raf-dm@eol.ucar.edu).  
 
 ```{r include = TRUE, echo = FALSE}
 ## construct data.frame for the following table:

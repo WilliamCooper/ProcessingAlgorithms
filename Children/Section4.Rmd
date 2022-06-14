@@ -590,13 +590,21 @@ Beginning in 2017, a different strategy was used, as documented in more detail i
 <!-- <h3 id="wind-components-and-the-wind-vector">Wind Components and the Wind Vector</h3> -->
 ### Wind Components and the Wind Vector
 
+The wind vector discussed in this subsection is determined from the vector sum of the relative wind and the motion of the aircraft as determined from an inertial reference system. The wind components are determined in a reference frame call the "*l*" reference frame, a local cartesian system that rotates with the Earth and has positive values of the three components toward the east, north, and upward. This reference frame is described in detail in the technical note referenced below. Possible errors in the initial alignment of the inertial reference system, or similar errors that accumulate during flight, lead to errors in the reference system that oscillate with a Schuler oscillation. This is discussed in detail in [this NCAR Technical Note](Cooper, W. A. (2017). A Kalman Filter to Improve Measurements of Wind from NSF/NCAR Research Aircraft (No. NCAR/TN-540+STR). doi:10.5065/D61N7ZTS). The effects of the Schuler-oscillation errors can be minimized by employing one of these three correction schemes:  
+
+1. The horizontal components of the wind can be improved by reference to measurements from a Global Positioning System unit, as described in Sect.\ \@ref(combining-irs-and-gps-measurements). This, however, does not lead to any improvement in the vertical wind.  
+2. R routines are available that fit the Schuler oscillation to the errors between INS-provided vs.\ GPS-provided measurements of aircraft motion and use that fit to estimate the errors present in PITCH and ROLL. Two functions in the [Ranadu](http://doi.org/10.5281/zenodo.3830427) package for R, "CorrectPitch.R" and "CorrectRoll.R", can be used to determine these corrections.  
+3. The full Kalman-filter approach documented in the above NCAR Technical Note can be used. Details regarding running this processor are in that Technical Note, or this processing can be added to standard archives upon request to [the RAF data-management group](mailto:raf-dm@eol.ucar.edu).
+
+The last two methods can estimate the error present in PITCH and provide a correction. That improvement in the sensed orientation of the platform can lead to an improvement in the measured vertical wind by correcting for the error in pitch.  
+
 #### Wind Vector Components (m/s): UI, VI, WI {-#ui-vi-wi}
 
-*The three-dimensional wind vector with respect to the earth,* as determined from the inertial reference systems. UI is the east-west component with positive values <span class="underline">toward</span> the east, VI is the north-south component with positive values <span class="underline">toward</span> the north, and WI is the vertical component with positive values toward the zenith.<br />
+*The three-dimensional wind vector with respect to the earth,* as determined from the inertial reference systems. UI is the east-west component with positive values <span class="underline">toward</span> the east, VI is the north-south component with positive values <span class="underline">toward</span> the north, and WI is the vertical component with positive values toward the zenith.
 The calculation of WI differs from the description in Bulletin 23 because the output from the inertial reference system is different for the modern units now in use. The vertical wind is the sum of the vertical gust component (represented approximately by TASX sin((ATTACK-PITCH)$\pi$/180) if ATTACK and PITCH have dimensions of degrees) and the motion of the aircraft as measured by VSPD (discussed in Section \@ref(inertial-reference-systems)). Bulletin 23 describes the historical calculation of the vertical motion of the aircraft via a barometric-inertial feedback loop, but equivalent calculations (including pressure damping to the pressure altitude) are incorporated into current IRS units so VSPD already is the product of such a calculation. To calculate WI, VSPD is therefore used in place of the obsolete variable WP3 that was discussed in Bulletin 23.
-<br />
-WIC should usually be used instead of WI because VSPD, entering WI, is updated to the pressure altitude and so can have false variations in baroclinic conditions. WIC uses GGVSPD (or in some cases older GPS-based rate-of-climb variables) in place of VSPD and so is more reliable.<br />
-</p>
+
+WIC should usually be used instead of WI because VSPD, entering WI, is updated to the pressure altitude and so can have false variations in baroclinic conditions. WIC uses GGVSPD (or in some cases older GPS-based rate-of-climb variables) in place of VSPD and so is more reliable.
+
 
 #### Wind Speed and Direction (m/s and º): WS, WD {-#ws-wd}
 
