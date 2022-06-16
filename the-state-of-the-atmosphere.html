@@ -619,7 +619,7 @@ e_{s,i}(T_{FP})= b_{0}^{\prime}\exp(b_{1}\frac{(T_{0}-T_{FP})}{T_{0}T_{FP}}+b_{2
 \tag{4.22}
 \end{equation}\]</span>
 <span class="math display" id="eq:MKw">\[\begin{equation}
-e_{s,w}(T_{DP})=c_{0}\exp\left((\alpha-1)c_{6}+d_{2}(\frac{T_{0}-T_{DP}}{T_{DP}T_{0}})\right)+d_{3}\ln(\frac{T_{DP}}{T_{0}})+d_{4}(T_{DP}-T_{0})
+e_{s,w}(T_{DP})=c_{0}\exp\left((\alpha-1)c_{6}+d_{2}(\frac{T_{0}-T_{DP}}{T_{DP}T_{0}})+d_{3}\ln(\frac{T_{DP}}{T_{0}})+d_{4}(T_{DP}-T_{0})\right)
 \tag{4.23}
 \end{equation}\]</span>
 <span class="math display" id="eq:enhance">\[\begin{equation}
@@ -627,7 +627,7 @@ f(p, T_P)= 1 + p(f_1 + f_2T_P + f_3T_P^2)
 \tag{4.24}
 \end{equation}\]</span>
 where <span class="math inline">\(e\)</span> is the water vapor pressure, <span class="math inline">\(T_{FP}\)</span> or <span class="math inline">\(T_{DP}\)</span> is the frost or dew point, respectively, expressed in kelvin, <span class="math inline">\(T_0\)</span> = 273.15 K, <span class="math inline">\(e_{s,i}(T_{FP})\)</span> is the equilibrium vapor pressure over a plane ice surface at the temperature <span class="math inline">\(T_{FP}\)</span>, <span class="math inline">\(e_{s,w}(T_{DP})\)</span> is the equilibrium vapor pressure over a plane water surface at the temperature <span class="math inline">\(T_{DP}\)</span> (above or below <span class="math inline">\(T_0\)</span>), and <span class="math inline">\(f(p,T_P)\)</span> is the enhancement factor at total air pressure <span class="math inline">\(p\)</span> and temperature <span class="math inline">\(T_P\)</span>, with <span class="math inline">\(T_P\)</span> equal to <span class="math inline">\(T_{DP}−T_0\)</span> when above <span class="math inline">\(T_0\)</span> and <span class="math inline">\(T_{FP}−T_0\)</span> when below <span class="math inline">\(0^\circ\)</span>C.</p>
-<p>The coefficients used in the above formulas are given in the following tables, with the additional definitions that <span class="math inline">\(\alpha_T=\tanh(c_5(T-T_x))\)</span>, <span class="math inline">\(T_X=218.8\)</span> K, and <span class="math inline">\(d_i=c_i+\alpha_Tc_{i+5}\)</span> for i = {2,3,4}:</p>
+<p>The coefficients used in the above formulas are given in the following tables, with the additional definitions that <span class="math inline">\(\alpha_T=\tanh(c_5(T_{DP}-T_x))\)</span>, <span class="math inline">\(T_x=218.8\)</span> K, and <span class="math inline">\(d_i=c_i+\alpha_Tc_{i+5}\)</span> for i = {2,3,4}:</p>
 <p>
 <center>
 <table class="kable_wrapper">

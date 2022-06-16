@@ -288,7 +288,7 @@ e_{s,i}(T_{FP})= b_{0}^{\prime}\exp(b_{1}\frac{(T_{0}-T_{FP})}{T_{0}T_{FP}}+b_{2
 (\#eq:MKi)
 \end{equation}
 \begin{equation}
-e_{s,w}(T_{DP})=c_{0}\exp\left((\alpha-1)c_{6}+d_{2}(\frac{T_{0}-T_{DP}}{T_{DP}T_{0}})\right)+d_{3}\ln(\frac{T_{DP}}{T_{0}})+d_{4}(T_{DP}-T_{0})
+e_{s,w}(T_{DP})=c_{0}\exp\left((\alpha-1)c_{6}+d_{2}(\frac{T_{0}-T_{DP}}{T_{DP}T_{0}})+d_{3}\ln(\frac{T_{DP}}{T_{0}})+d_{4}(T_{DP}-T_{0})\right)
 (\#eq:MKw)
 \end{equation}
 \begin{equation}
@@ -297,7 +297,7 @@ f(p, T_P)= 1 + p(f_1 + f_2T_P + f_3T_P^2)
 \end{equation}
 where $e$ is the water vapor pressure, $T_{FP}$ or $T_{DP}$ is the frost or dew point, respectively, expressed in kelvin, $T_0$ = 273.15 K, $e_{s,i}(T_{FP})$ is the equilibrium vapor pressure over a plane ice surface at the temperature $T_{FP}$, $e_{s,w}(T_{DP})$ is the equilibrium vapor pressure over a plane water surface at the temperature $T_{DP}$ (above or below $T_0$), and $f(p,T_P)$ is the enhancement factor at total air pressure $p$ and temperature $T_P$, with $T_P$ equal to $T_{DP}−T_0$ when above $T_0$ and $T_{FP}−T_0$ when below $0^\circ$C.    
 
-The coefficients used in the above formulas are given in the following tables, with the additional definitions that $\alpha_T=\tanh(c_5(T-T_x))$, $T_X=218.8$\ K, and $d_i=c_i+\alpha_Tc_{i+5}$ for i = {2,3,4}:
+The coefficients used in the above formulas are given in the following tables, with the additional definitions that $\alpha_T=\tanh(c_5(T_{DP}-T_x))$, $T_x=218.8$\ K, and $d_i=c_i+\alpha_Tc_{i+5}$ for i = {2,3,4}:
 
 <p><center>
 ```{r MKcoef, echo = FALSE}
